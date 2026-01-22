@@ -1,0 +1,12 @@
+# Ignorer le dossier node_modules
+node_modules/
+
+# Ignorer les fichiers de log
+*.log
+
+# Ignorer les fichiers de cache
+.cache/
+
+# Ignorer les fichiers temporaires ou système
+*.tmp
+Thumbs.db
