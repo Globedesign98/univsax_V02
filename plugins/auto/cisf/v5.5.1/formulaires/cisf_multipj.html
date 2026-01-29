@@ -1,0 +1,78 @@
+[(#SET{cibigup,[(#VAL|cisf_utiliser_bigup)]})]
+#SET{citab,'[]'}
+
+[(#ENV{editable})
+<div class='formulaire_spip [(#GET{cibigup}|oui)formulaire_spip_cisf_bigup] formulaire_joindre formulaire_joindre_document' id='formulaire_joindre_document-#ENV{id,new}'>
+	<span class="image_loading"></span>
+	[<div class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</div>]
+	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+	
+	<form action="#ENV{action}#formulaire_joindre_document-#ENV{id,new}" method="post" enctype='multipart/form-data'>
+            <div>
+		[(#ACTION_FORMULAIRE{#ENV{action}})]
+
+            [(#GET{cibigup}|oui)    
+                <div class="editer-groupe">
+                            <:medias:bouton_download_depuis:> <:medias:bouton_download_local:>
+                    <div class='editer editer_fichier_upload[ (#ENV*{erreurs}|table_valeur{fichier_upload}|oui)erreur]'>
+                        <label for='fichier_upload#ENV{domid}'[(#GET{cibigup}|oui) style="display: none;"]><:bouton_upload:></label>[
+                        <span class='erreur_message'>(#ENV*{erreurs}|table_valeur{fichier_upload})</span>
+                        ]<input class='file[(#ENV{multi}|=={non}|non) multi]' type="file" name="fichier_upload#GET{citab}" value='[(#ENV{fichier_upload}|is_array|?{'', #ENV{fichier_upload}})]' id="fichier_upload#ENV{domid}" size='11' />
+                        <!--editer_fichier_upload-->
+                    </div>
+                </div>
+
+                <div class="cadrevalider">
+		<div class='cadrevalider'><input class='submit' type="submit" name="joindre_upload" value="<:medias:bouton_upload:>"/></div>
+                </div>
+            ]
+                
+            [(#GET{cibigup}|non)    
+                
+                <label for='cifichier1'><:medias:info_telecharger:></label>
+                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{cifichier1})</span>]
+		<div class='multipj'><input name='cifichier1' id='cifichier1' type='File' class='fondl' size='55'></div>
+                
+                <label for='cifichier2'><:medias:info_telecharger:></label>
+                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{cifichier2})</span>]
+		<div class='multipj'><input name='cifichier2' id='cifichier2' type='File' class='fondl' size='55'></div>
+                
+                <label for='cifichier3'><:medias:info_telecharger:></label>
+                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{cifichier3})</span>]                
+		<div class='multipj'><input name='cifichier3' id='cifichier3' type='File' class='fondl' size='55'></div>
+                
+                <label for='cifichier4'><:medias:info_telecharger:></label>
+                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{cifichier4})</span>]
+		<div class='multipj'><input name='cifichier4' id='cifichier4' type='File' class='fondl' size='55'></div>
+                
+                <label for='cifichier5'><:medias:info_telecharger:></label>
+                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{cifichier5})</span>]
+		<div class='multipj'><input name='cifichier5' id='cifichier5' type='File' class='fondl' size='55'></div>
+                
+                <label for='cifichier6'><:medias:info_telecharger:></label>
+                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{cifichier6})</span>]
+		<div class='multipj'><input name='cifichier6' id='cifichier6' type='File' class='fondl' size='55'></div>
+                
+                <label for='cifichier7'><:medias:info_telecharger:></label>
+                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{cifichier7})</span>]
+		<div class='multipj'><input name='cifichier7' id='cifichier7' type='File' class='fondl' size='55'></div>
+                
+                <label for='cifichier8'><:medias:info_telecharger:></label>
+                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{cifichier8})</span>]
+		<div class='multipj'><input name='cifichier8' id='cifichier8' type='File' class='fondl' size='55'></div>
+                
+                <label for='cifichier9'><:medias:info_telecharger:></label>
+                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{cifichier9})</span>]
+		<div class='multipj'><input name='cifichier9' id='cifichier9' type='File' class='fondl' size='55'></div>
+                
+                <label for='cifichier10'><:medias:info_telecharger:></label>
+                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{cifichier10})</span>]
+		<div class='multipj'><input name='cifichier10' id='cifichier10' type='File' class='fondl' size='55'></div>
+		
+		<div class='cadrevalider'><input class='submit' type="submit" name="joindre_upload" value="<:medias:bouton_upload:>"/></div>
+            ]
+		
+	</div>
+        </form>
+
+</div>]

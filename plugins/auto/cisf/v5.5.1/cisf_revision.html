@@ -1,0 +1,76 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<title>[(#VAL{cisf:eq_histo_modif}|_T|html2unicode|unicode2charset)]</title>
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+
+#INSERT_HEAD
+#SET{paramcss,#REM|cisf_parametres_css_prive}
+<INCLURE{fond=prive/squelettes/inclure/head,paramcss=#GET{paramcss}}>
+
+</head>
+<body>
+[(#REM) <!-- droit de voir les revisions -->]    
+#SET{ciok,#ENV{id_article}|cisf_autorise_modifier_article{voirrevisions}}
+    
+<div id="pageRevision">
+<div class="largeur">
+
+    [(#GET{ciok}|=={oui}|oui)
+    <INCLURE{fond=noisettes/cisf_fil_ariane,env}>
+    ]
+
+<div id="milieu">
+	<div id="ext-main">
+		<div class="main">
+
+  			<div id="contenu2">
+			<div class="main-content">
+			
+				<BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+				<div id="boxcentrale"><div class="innercentrale">
+					<h2><:cisf:eq_historique_lien:></h2>
+					<div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+					
+[(#GET{ciok}|=={oui}|oui)
+		<div class="" id="conteneur">
+			<div role="contentinfo" id="navigation">
+			<INCLURE{fond=prive/squelettes/navigation/revision,objet=article,id_objet=#ID_ARTICLE,env} />
+			</div>
+			<div role="main" id="contenu">
+			<INCLURE{fond=contenu/cisf_revision,objet=article,id_objet=#ID_ARTICLE,env}{ajax} />
+			</div>
+		</div>
+]					
+				
+				</div></div>
+				</BOUCLE_article>	
+
+				[(#GET{ciok}|=={non}|oui)
+					[(#REM) <!-- Auteur non connecte ou visiteur -->]
+		  			<div id="contenu">
+					<INCLURE{fond=cisf_altern,env}>
+					</div>
+				]
+
+			</div>
+			</div>
+			<div class='clearer'>&nbsp;</div>	
+		</div>
+	</div>
+</div>
+
+<div class="clearer">&nbsp;</div>
+<div id="pied">
+[(#GET{ciok}|=={oui}|oui)
+    <div id="cisf_copyright">[(#NOM_SITE_SPIP)]</div>
+]
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

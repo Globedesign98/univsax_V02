@@ -1,0 +1,37 @@
+#CACHE{0}
+[<p class='formulaire_ok'>(#ENV*{message_ok})</p>]
+[<p class='formulaire_erreur'>(#ENV*{message_erreur})</p>]
+    <form action='#ENV{action}' method='post' name="formulaire">
+
+            <BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+            <div id="boxcentrale"><div class="innercentrale">
+                <div class="entete-formulaire">        
+                    <h1><:forum:info_fonctionnement_forum:></h1>
+
+                    <div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+                </div>
+
+                <div class="formulaire_spip">
+
+
+
+                        <fieldset class="motcle">
+                                <legend class="motcle"><:forum:forum:></legend>
+
+                                #ENV*{_choix_moderation_article}
+                        </fieldset>
+
+                        [(#REM) declarer les hidden qui declencheront le service du formulaire 
+                        parametre : url d'action ]
+                        #ACTION_FORMULAIRE{#ENV{action}}
+
+                        <div class="cadrevalider">
+                        <input type="submit" name="enregistrer" value="<:bouton_enregistrer:>" class="bouton_valider">
+                        <input type="submit" name="annuler" value="<:cisf:eq_annuler:>" class="bouton_valider">
+                        </div>
+
+                </div>
+            </div></div>
+            </BOUCLE_article>
+
+    </form>

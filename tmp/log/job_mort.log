@@ -1,0 +1,26 @@
+2026-01-27 07:58:44 127.0.0.1 (pid 4132) :Pub:ERREUR: queue_close_job car _JQ_PENDING depuis +180s : Array
+(
+    [id_job] => 331812
+    [descriptif] => Tâche CRON mail (toutes les 86400 s)
+    [fonction] => mail
+    [args] => a:1:{i:0;i:1764638215;}
+    [md5args] => 6ae7e089b960ed8db896f1e80ebed6f2
+    [inclure] => genie/
+    [priorite] => 0
+    [date] => 2026-01-27 05:58:32
+    [status] => 0
+)
+
+2026-01-29 00:16:13 127.0.0.1 (pid 27084) :Pub:ERREUR: queue_close_job car _JQ_PENDING depuis +180s : Array
+(
+    [id_job] => 331828
+    [descriptif] => Tâche CRON svp_actualiser_depots (toutes les 21600 s)
+    [fonction] => svp_actualiser_depots
+    [args] => a:1:{i:0;i:1769550545;}
+    [md5args] => 067ccdb7df9c3dec2f408ef3936b7c8b
+    [inclure] => genie/
+    [priorite] => 0
+    [date] => 2026-01-28 22:15:21
+    [status] => 0
+)
+

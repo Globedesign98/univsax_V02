@@ -1,0 +1,82 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<title>[(#VAL{cisf:eq_vign}|_T|html2unicode|unicode2charset)]</title>
+
+[<script src="(#CHEMIN{javascript/medias_edit.js})"></script>]
+[<script src="(#CHEMIN{javascript/jquery.multifile.js})"></script>]
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+
+[(#SET{cibigup,[(#VAL|cisf_utiliser_bigup)]})]
+
+[(#GET{cibigup}|oui)
+#INSERT_HEAD
+]
+
+</head>
+<body>
+#SET{ciok,#ENV{id_article}|cisf_autorise_modifier_article}
+    
+<div id="pagedocument">
+
+<div class="largeur">
+
+
+    [(#GET{ciok}|=={oui}|oui)
+    <INCLURE{fond=noisettes/cisf_fil_ariane,env}>
+    ]
+
+<div id="milieu">
+	<div id="ext-main">
+		<div class="main">
+
+  			<div id="contenu">
+			<div class="main-content">
+			
+				<BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+				<div id="boxcentrale"><div class="innercentrale">
+
+                                [(#GET{ciok}|=={oui}|oui)
+                                    <div class="entete-formulaire">        
+                                        <h1>[(#CHEMIN_IMAGE{image-24.png}|balise_img{'',cadre-icone})] <:medias:label_fichier_vignette:></h1>
+                                        <div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+                                        
+                                        [(#VAL|cisf_lien_ancien_upload)]
+
+                                        <div class="poidsmax"></div>
+                                    </div>
+                                
+                                    #FORMULAIRE_CISF_ILLUSTRER_DOCUMENT{#ENV{id_document}}
+
+				]
+
+				</div></div>
+				</BOUCLE_article>
+				
+				
+				[(#GET{ciok}|=={non}|oui)
+					[(#REM) <!-- Auteur non connecte ou visiteur -->]
+		  			<div id="contenu">
+					<INCLURE{fond=cisf_altern,env}>
+					</div>
+				]
+				
+			</div>
+			</div>
+			<div class='clearer'>&nbsp;</div>	
+		</div>
+	</div>
+</div>
+<div id="pied">
+        [(#GET{ciok}|=={oui}|oui)
+            <div><:cisf:plugin_cisf:></div>
+            <div id="cisf_copyright">[(#NOM_SITE_SPIP)]</div>
+        ]
+</div>
+
+</div>
+</div>
+</body>
+</html>

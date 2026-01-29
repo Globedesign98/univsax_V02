@@ -1,0 +1,162 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<title>[(#VAL{cisf:mediatheque}|_T|html2unicode|unicode2charset)] [(#ENV**|cisf_title_pagination{10})]</title>
+
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+
+[<link href="(#CHEMIN{_css/cisf_rechercheoptions.css})" rel="stylesheet" type="text/css" />]
+[<link href="(#CHEMIN{_css/cisf_datepicker.css})" rel="stylesheet" type="text/css" />]
+
+[<script src="(#CHEMIN{prive/javascript/jquery.js})"></script>]
+
+[(#LANG|cisf_datepicker_js)]
+
+<script>
+function cilien(valeur){
+	document.getElementById("cilieninput").value = valeur;
+	document.getElementById("formulaire").submit();
+}
+</script>
+
+<script>
+$(function() {
+	$("#datedebut").datepicker({ showOn: 'button', buttonText: '<:bouton_choisir:>', dateFormat: 'dd/mm/yy', onClose : function(){$( '#datedebut' ).focus();} });
+	$("#datefin").datepicker({ showOn: 'button', buttonText: '<:bouton_choisir:>', dateFormat: 'dd/mm/yy', onClose : function(){$( '#datefin' ).focus();} });
+	$("#datedebutg").datepicker({ showOn: 'button', buttonText: '<:bouton_choisir:>', dateFormat: 'dd/mm/yy', onClose : function(){$( '#datedebutg' ).focus();} });
+	$("#datefing").datepicker({ showOn: 'button', buttonText: '<:bouton_choisir:>', dateFormat: 'dd/mm/yy', onClose : function(){$( '#datefing' ).focus();} });
+        
+	// Interdiction de la navigation au clavier dans le composant
+	$('#datedebut').next().attr('tabindex', '-1');
+	$('#datefin').next().attr('tabindex', '-1');
+	$('#datedebutg').next().attr('tabindex', '-1');
+	$('#datefing').next().attr('tabindex', '-1');
+        
+        // Masquage du composant pour les technologies d'assistance
+	$('#ui-datepicker-div').attr('aria-hidden', 'true');
+	$('#ui-datepicker-div :focusable').attr('tabindex', '-1');
+});
+
+function ci_show_hide(id,id2) {
+	if (document.getElementById) {
+                var n = document.getElementById(id);
+                var n2 = document.getElementById(id2);
+		if (n.style.display == "none"){
+			n.style.display = "block";
+                        n2.setAttribute('aria-expanded', 'true');        
+                } else {
+			n.style.display = "none";
+                        n2.setAttribute('aria-expanded', 'false');        
+                }
+ 	}
+}
+
+$( window ).load(function() {
+    var attr1 = $("#a_recherche_options_h").attr("aria-expanded");
+    var attr2 = $("#a_ciperiode").attr("aria-expanded");
+
+    if (typeof attr1 === typeof undefined || attr1 === false) {
+        $('#a_recherche_options_h').attr("aria-expanded","false");
+        $('#a_recherche_options_h').attr("aria-controls","recherche_options_h");
+    }
+    if (typeof attr2 === typeof undefined || attr2 === false) {
+        $('#a_ciperiode').attr("aria-expanded","false");
+        $('#a_ciperiode').attr("aria-controls","ciperiode");
+    }
+});
+</script>
+    
+
+</head>
+<body>
+#SET{ciok,#ENV{id_article}|cisf_autorise_modifier_article}
+    
+<div id="pagechoixdocument">
+<div class="largeur">
+    
+    [(#GET{ciok}|=={oui}|oui)
+    <INCLURE{fond=noisettes/cisf_fil_ariane,env}>
+    ]
+    
+    
+<div id="milieu">
+	<div id="ext-main">
+		<div class="main">
+
+  			<div id="contenu">
+			<div class="main-content">
+
+				<BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+				<div id="boxcentrale"><div class="innercentrale">
+                                [(#GET{ciok}|=={oui}|oui)
+
+                                    <h1<:cisf:mediatheque:></h1>
+                                    <div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+				
+					[(#SET{cirecherche,[(#RECHERCHE|cisf_filtrer_recherche)]})]
+					<div class="texte">
+					<form action="[(#SELF)]" method="get">
+						<INCLURE{fond=noisettes/cisf_doc_options,env}>
+						<div id="docrecherche_h">
+							<input type="hidden" name="page" value="cisf_choix_document" />
+							[<input type="hidden" name="lang" value="(#LANG)" />
+							<input type="hidden" name="forcer_lang" value="true" />]
+							<label for="recherche" class="visually-hidden"><:cisf:recherche:></label>
+							<input type="text" class="recherche" name="recherche" id="recherche" value="[(#GET{cirecherche}|entites_html|interdire_scripts)]" />
+							<input type="submit" class="submit" value="<:cisf:rechercher:>" title="<:cisf:rechercher:>" />
+						</div>
+					</form>
+					</div>
+					<div class="clearer"></div>
+				
+[(#RECHERCHE|cisf_recherche_autorise|=={oui}|oui)
+
+	#SET{cimode,'document'}
+	[(#ENV{cisf_ajout}|=={image}|oui)
+		#SET{cimode,'image'}
+	]
+	[(#ENV{ins_image}|oui)
+		#SET{cimode,'image'}
+	]
+	[(#GET{cimode}|=={image}|oui)
+	#FORMULAIRE_CISF_CHOIX_DOCUMENT{#ID_ARTICLE,#ID_RUBRIQUE,'image',#ENV{debut_documents},#ENV{recherche}}
+	]
+	[(#GET{cimode}|=={image}|non)
+	#FORMULAIRE_CISF_CHOIX_DOCUMENT{#ID_ARTICLE,#ID_RUBRIQUE,'document',#ENV{debut_documents},#ENV{recherche}}
+	]
+]	
+[(#RECHERCHE|cisf_recherche_autorise|=={oui}|non)
+	<div class="recherche_non_autorise"><:cisf:recherche_non_autorise:></div>
+]
+				]
+								
+				</div></div>
+				</BOUCLE_article>
+				
+				
+				[(#GET{ciok}|=={non}|oui)
+					[(#REM) <!-- Auteur non connecte ou visiteur -->]
+		  			<div id="contenu">
+					<INCLURE{fond=cisf_altern,env}>
+					</div>
+				]
+				
+			</div>
+			</div>
+			<div class='clearer'>&nbsp;</div>	
+		</div>
+	</div>
+</div>
+<div id="pied">
+        [(#GET{ciok}|=={oui}|oui)
+            <div><:cisf:plugin_cisf:></div>
+            <div id="cisf_copyright">[(#NOM_SITE_SPIP)]</div>
+        ]
+</div>
+ 
+</div>
+</div>
+</body>
+</html>

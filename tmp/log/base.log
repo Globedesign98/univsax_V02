@@ -1,0 +1,15 @@
+2026-01-27 05:35:33 127.0.0.1 (pid 4132) :Pri:!INFO: trouver_table: table inconnue '' 'spip_mots_articles'
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: Vider 32 tables sur serveur '' : spip_articles, spip_auteurs, spip_auteurs_liens, spip_breves, spip_depots, spip_depots_plugins, spip_documents, spip_documents_liens, spip_forum, spip_groupes_mots, spip_jobs, spip_jobs_liens, spip_messages, spip_meta, spip_mots, spip_mots_liens, spip_paquets, spip_petitions, spip_plugins, spip_referers, spip_referers_articles, spip_rubriques, spip_signatures, spip_syndic, spip_syndic_articles, spip_transactions, spip_types_documents, spip_urls, spip_versions, spip_versions_fragments, spip_visites, spip_visites_articles
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: trouver_table: table inconnue '' 'spip_breves'
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: trouver_table: table inconnue '' 'spip_messages'
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: trouver_table: table inconnue '' 'spip_petitions'
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: trouver_table: table inconnue '' 'spip_signatures'
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: trouver_table: table inconnue '' 'spip_transactions'
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: trouver_table: table inconnue 'dump' 'breves'
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: trouver_table: table inconnue 'dump' 'messages'
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: trouver_table: table inconnue 'dump' 'petitions'
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: trouver_table: table inconnue 'dump' 'signatures'
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: trouver_table: table inconnue 'dump' 'transactions'
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: Vider 1 tables sur serveur '' : spip_auteurs
+2026-01-27 06:06:25 127.0.0.1 (pid 4132) :Pub:!INFO: trouver_table: table inconnue '' 'BREVES'
+2026-01-27 06:07:41 127.0.0.1 (pid 4132) :Pub:!INFO: trouver_table: table inconnue '' 'BREVES'

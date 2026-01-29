@@ -1,0 +1,88 @@
+[(#SET{cibigup,[(#VAL|cisf_utiliser_bigup)]})]
+#SET{citab,'[]'}
+#SET{domid,_#ENV{mode}|concat{'_',#ENV{id,new}}}
+
+<div class='formulaire_spip [(#GET{cibigup}|oui)formulaire_spip_cisf_bigup] formulaire_editer formulaire_editer_document formulaire_editer_document-#ENV{id_document,nouveau}'>
+	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
+	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+	[(#ENV{editable})
+	<form method='post' action='#ENV{action}' enctype='multipart/form-data'>
+		[(#REM) declarer les hidden qui declencheront le service du formulaire 
+		parametre : url d'action ]
+		#ACTION_FORMULAIRE{#ENV{action}}
+                <input type='hidden' name='id_document' value='#ENV{id_document}' />
+                
+            [(#GET{cibigup}|non)
+		[(#REM) un bouton submit pour enregistrer qui sera declenche par le return
+		il ne doit pas etre hidden pour marcher dans safari
+		]
+                <div style="position:absolute;left:-10000px;"><input type='submit' class='submit' value='<:bouton_enregistrer:>' /></div>
+
+                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{fichier})</span>]
+                <p class='actions'>
+                [(#ENV{distant}|=={oui}|et{#TAILLE|<{#VAL{_COPIE_LOCALE_MAX_SIZE}|constant}}|oui)  <input type='submit' class='submit' name='copier_local' value='<:medias:bouton_copier_local|attribut_html:>' />]			
+                [(#PIPELINE{editer_document_actions,#ARRAY{args,#ARRAY{id_document,#ENV{id_document,nouveau}},data,''}})]
+                </p>
+                <div id='changer_fichier_document'>
+                [(#INCLURE{fond=formulaires/cisf_inc-replace_document, env, joindre_upload=oui})]
+                </div>
+
+                [(#REM) ajouter les saisies supplementaires : extra et autre, a cet endroit ]
+                <!--extra-->
+            ]
+            
+            [(#GET{cibigup}|oui)
+                <div class="editer-groupe">
+                            <:medias:bouton_download_depuis:> <:medias:bouton_download_local:>
+                    <div class='editer editer_fichier_upload[ (#ENV*{erreurs}|table_valeur{fichier_upload}|oui)erreur]'>
+                        <label for='fichier_upload#ENV{domid}'[(#GET{cibigup}|oui) style="display: none;"]><:bouton_upload:></label>[
+                        <span class='erreur_message'>(#ENV*{erreurs}|table_valeur{fichier_upload})</span>
+                        ]<input class='file' type="file" name="fichier_upload#GET{citab}" value='[(#ENV{fichier_upload}|is_array|?{'', #ENV{fichier_upload}})]' id="fichier_upload#ENV{domid}" size='11' />
+                        <!--editer_fichier_upload-->
+                    </div>
+                    <p class='boutons'><input class='submit' type="submit" name="joindre_upload" value="<:medias:bouton_upload:>"/></p>
+                </div>
+
+
+		[(#REM) Formulaire pour upload ftp]
+		[<div class="editer-groupe">
+			
+			<:medias:bouton_download_depuis:> <:medias:bouton_download_par_ftp:>	
+			<div>
+				<div class='editer_cheminftp[ (#ENV*{erreurs}|table_valeur{cheminftp}|oui)erreur]'>
+					<label for='cheminftp#GET{domid}'>[(#VAL{info_selectionner_fichier}|_T{#ARRAY{upload,#ENV*{_dir_upload_ftp}}})]</label>[
+					<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{cheminftp})</span>
+					]<select name='cheminftp' id='cheminftp#GET{domid}' size='1'>
+					<option value=''>&gt;&gt;</option>
+					(#ENV*{_options_upload_ftp})
+					</select>
+				</div>
+			</div>][(#ENV{_dir_upload_ftp}|et{#ENV{_options_upload_ftp}|non}|oui)
+			<p class="infos">
+			[(#VAL{info_installer_ftp}|_T{#ARRAY{upload,#ENV*{_dir_upload_ftp}}})] #AIDER{ins_upload}
+			</p>
+			]
+			[<p class='boutons'>
+				(#ENV*{_options_upload_ftp}|oui)
+				<input class='submit' type="submit" name="joindre_ftp" value="<:bouton_choisir:>"/>
+				
+			</p>
+		</div>]
+		
+            
+                <div class="editer-groupe">
+                            <:medias:bouton_download_depuis:> <:cisf:bouton_download_sur_le_web:>
+                    <div class='editer editer_url[ (#ENV*{erreurs}|table_valeur{url}|oui)erreur]'>
+                        <label for='url#ENV{domid}'><:medias:info_referencer_doc_distant:></label>[
+                        <span class='erreur_message'>(#ENV*{erreurs}|table_valeur{url})</span>
+                        ]<input class='text' placeholder="https://" type="text" name="url" value='#ENV{url}' id="url#ENV{domid}"/>
+                        <!--editer_url-->
+                    </div>
+                        <p class='boutons'><input class='submit' type="submit" name="joindre_distant" value="<:bouton_choisir:>"/></p>
+                </div>
+            ]
+            
+            
+	</form>
+	]
+</div>

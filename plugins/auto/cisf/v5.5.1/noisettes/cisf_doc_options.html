@@ -1,0 +1,164 @@
+#CACHE{0}
+
+#SET{cioptions,''}	
+
+[(#REM) Afficher ou non les options ]
+[(#ENV{recherche_avancee}|=={oui}|oui)#SET{cioptions,'oui'}]
+
+[(#ENV{media}|oui)#SET{cioptions,'oui'}]
+[(#ENV{extension}|oui)#SET{cioptions,'oui'}]
+[(#ENV{datedebut}|oui)#SET{cioptions,'oui'}]
+[(#ENV{datefin}|oui)#SET{cioptions,'oui'}]
+[(#ENV{recherche}|non)
+	[(#ENV{tri}|oui)#SET{cioptions,'oui'}]
+	[(#ENV{ordre}|oui)#SET{cioptions,'oui'}]
+]
+[(#ENV{recherche}|oui)#SET{cioptions,'oui'}]
+
+#SET{ci_selectmedia,''}
+#SET{ci_typedoc,''}
+#SET{ci_tri,''}
+#SET{ci_ordre,''}
+#SET{ci_datedebut,''}
+#SET{ci_datefin,''}
+#SET{ci_ajout,''}
+
+#SET{tableau_media, #ARRAY{0,file,1,image,2,audio,3,video,4,document,5,tous}} 
+#SET{tableau_media_strict, #ARRAY{0,file,1,image,2,audio,3,video}} 
+#SET{tableau_tri, #ARRAY{0,titre,1,date,2,taille,3,id_document}} 
+#SET{tableau_tri_inverse, #ARRAY{0,titredesc,1,datedesc,2,tailledesc,3,id_documentdesc}} 
+#SET{tableau_ajout, #ARRAY{0,document,1,image}} 
+#SET{tableau_ins, #ARRAY{0,text_area,1,descriptif}} 
+
+[(#ENV{cisf_ajout}|in_array{#GET{tableau_ajout}}|oui)
+        #SET{ci_ajout,#ENV{cisf_ajout}}
+]
+[(#ENV{media}|in_array{#GET{tableau_media}}|oui)
+	#SET{ci_selectmedia,#ENV{media}}
+]
+[(#ENV{media}|non)
+	[(#GET{ci_ajout}|oui)
+		#SET{ci_selectmedia,#GET{ci_ajout}}
+	]
+	[(#ENV{ins_document}|oui)
+		#SET{ci_selectmedia,'document'}
+	]
+	[(#ENV{ins_image}|oui)
+		#SET{ci_selectmedia,'image'}
+	]
+]
+[(#ENV{extension}|cisf_extension_est_utilisee|oui)
+	#SET{ci_typedoc,#ENV{extension}}
+]
+
+<BOUCLE_typesdoc1(TYPES_DOCUMENTS){extension}>
+[(#ENV{media}|in_array{#GET{tableau_media_strict}}|oui)
+	[(#ENV{media}|=={#MEDIA_DEFAUT}|non)
+		#SET{ci_selectmedia,'tous'}
+	]
+]
+[(#ENV{media}|=={document}|oui)
+	[(#MEDIA_DEFAUT|=={image}|oui)
+		#SET{ci_selectmedia,'tous'}
+	]
+]
+</BOUCLE_typesdoc1>
+
+[(#ENV{tri}|in_array{#GET{tableau_tri}}|oui)
+	#SET{ci_tri,#ENV{tri}}
+]
+[(#ENV{tri}|in_array{#GET{tableau_tri_inverse}}|oui)
+	[(#SET{citriinverse,[(#ENV{tri}|substr{0,-4})]})]
+]
+[(#ENV{datedebut}|oui)
+	#SET{ci_datedebut,#ENV{datedebut}|cisf_verifier_et_convertir_date}
+]
+[(#ENV{datefin}|oui)
+	#SET{ci_datefin,#ENV{datefin}|cisf_verifier_et_convertir_date}
+]
+
+[(#SET{cirecherche,[(#RECHERCHE|cisf_filtrer_recherche)]})]
+
+<a id="a_doc_options_h" href="[(#GET{cioptions}|oui)[(#SELF|parametre_url{recherche_avancee,non})]][(#GET{cioptions}|non)[(#SELF|parametre_url{recherche_avancee,oui}|parametre_url{'recherche',#GET{cirecherche}}|parametre_url{'media',#GET{ci_selectmedia}}|parametre_url{'extension',#GET{ci_typedoc}}|parametre_url{'tri',#GET{ci_tri}}|parametre_url{'ordre',#GET{ci_ordre}}|parametre_url{'datedebut',#GET{ci_datedebut}}|parametre_url{'datefin',#GET{ci_datefin}})]]" onclick="Javascript:ci_show_hide('doc_options_h','a_doc_options_h'); return false;"><:cisf:filtrer_et_trier:></a>
+
+<div id="doc_options_h" [(#GET{cioptions}|non)style="display: none;"]>
+
+			<div class="options">
+					<label for="media" class="labeloption"><:cisf:media:></label>
+					<select id="media" name="media">
+						<option value="tous" [(#GET{ci_selectmedia}|non)selected="selected"]><:cisf:tous:></option>
+						<option value="file" [(#GET{ci_selectmedia}|=={file}|oui)selected="selected"]><:cisf:media_file:></option>
+						<option value="image" [(#GET{ci_selectmedia}|=={image}|oui)selected="selected"]><:cisf:media_image:></option>
+						<option value="audio" [(#GET{ci_selectmedia}|=={audio}|oui)selected="selected"]><:cisf:media_audio:></option>
+						<option value="video" [(#GET{ci_selectmedia}|=={video}|oui)selected="selected"]><:cisf:media_video:></option>
+						<option value="document" [(#GET{ci_selectmedia}|=={document}|oui)selected="selected"]><:cisf:media_document:></option>
+					</select>
+			</div>
+			
+			<div class="options">
+					<label for="typedoch" class="labeloption"><:cisf:format:></label>
+					<select id="typedoch" name="extension">
+						<option value="" [(#ENV{extension}|non)selected="selected"]><:cisf:tous:></option>
+					<BOUCLE_typesdoc(DOCUMENTS){fusion extension}>
+						[<option value="#EXTENSION" [(#ENV{extension}|=={#EXTENSION}?{selected="selected"})]>(#EXTENSION|unique)</option>]
+					</BOUCLE_typesdoc>	
+					</select>
+					<div class='clearer'></div>	
+			</div>
+		
+			<div class="options">
+					<label class="labeloption" for="tri"><:cisf:tri:></label>
+					<select id="tri" name="tri">
+						<option value="id_documentdesc" [(#ENV{tri}|=={id_documentdesc}?{selected="selected"})]><:cisf:par_id_documentdesc:></option>
+						<option value="id_document" [(#ENV{tri}|=={id_document}?{selected="selected"})]><:cisf:par_id_document:></option>
+						<option value="titredesc" [(#ENV{tri}|=={titredesc}?{selected="selected"})]><:cisf:par_titredesc:></option>
+						<option value="titre" [(#ENV{tri}|=={titre}?{selected="selected"})]><:cisf:par_titre:></option>
+						<option value="datedesc" [(#ENV{tri}|=={datedesc}?{selected="selected"})]><:cisf:par_datedesc:></option>
+						<option value="date" [(#ENV{tri}|=={date}?{selected="selected"})]><:cisf:par_date:></option>
+						<option value="tailledesc" [(#ENV{tri}|=={tailledesc}?{selected="selected"})]><:cisf:par_tailledesc:></option>
+						<option value="taille" [(#ENV{tri}|=={taille}?{selected="selected"})]><:cisf:par_taille:></option>
+					</select>
+					<div class='clearer'></div>	
+			</div>
+			
+			<div class="options">
+				<div><:cisf:docperiode:></div>
+				<label for="datedebut" class="labeloption datedebut"><:cisf:docdebut:></label>
+				<input type='text' name='datedebut' id='datedebut' value="[(#ENV{datedebut}|cisf_verifier_date)]" size='10' maxlength='10' >
+				
+			<div class='clearer'></div>	
+				<label for="datefin" class="labeloption datefin"><:cisf:docfin:></label>
+				<input type='text' name='datefin' id='datefin' value="[(#ENV{datefin}|cisf_verifier_date)]" size='10' maxlength='10' >
+				<div class='clearer'></div>	
+			</div>
+		
+			<div class="options">
+				<input name="id_article" type="hidden" value="#ENV{id_article}">
+				<input type="submit" class="submit" value="<:cisf:appliquer:>" title="<:cisf:appliquer:>" />
+				#SET{ci_appliquer,''}
+				[(#GET{ci_ajout}|oui)
+				<a href="[(#URL_PAGE{cisf_choix_document}|parametre_url{id_article,[(#ENV{id_article}|intval)]}|parametre_url{cisf_ajout,[(#GET{ci_ajout})]})]"><:cisf:reset:></a>
+				<input name="cisf_ajout" type="hidden" value="#GET{ci_ajout}">
+				#SET{ci_appliquer,'oui'}
+				]
+				[(#GET{ci_ajout}|non)
+					[(#ENV{ins_image}|in_array{#GET{tableau_ins}}|oui)
+					<a href="[(#URL_PAGE{cisf_choix_document}|parametre_url{id_article,[(#ENV{id_article}|intval)]}|parametre_url{ins_image,[(#ENV{ins_image})]})]"><:cisf:reset:></a>
+					<input name="ins_image" type="hidden" value="#ENV{ins_image}">
+					#SET{ci_appliquer,'oui'}
+					]
+					[(#ENV{ins_document}|in_array{#GET{tableau_ins}}|oui)
+					<a href="[(#URL_PAGE{cisf_choix_document}|parametre_url{id_article,[(#ENV{id_article}|intval)]}|parametre_url{ins_document,[(#ENV{ins_document})]})]"><:cisf:reset:></a>
+					<input name="ins_document" type="hidden" value="#ENV{ins_document}">
+					#SET{ci_appliquer,'oui'}
+					]
+				]
+				[(#GET{ci_appliquer}|non)
+				<a href="[(#URL_PAGE{cisf_choix_document}|parametre_url{id_article,[(#ENV{id_article}|intval)]})]"><:cisf:reset:></a>
+				]
+
+			</div>
+			
+			<div class='clearer'></div>	
+	
+</div>

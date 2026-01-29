@@ -1,0 +1,1 @@
+ (<a href="#URL_LOGOUT{spip.php?rubrique7}">Log out</a>)

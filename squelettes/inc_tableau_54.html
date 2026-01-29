@@ -1,0 +1,228 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="txt_blc11">
+  <tr>
+    <td width="63%" align="left" valign="top">
+    <B_student0>
+    [<strong>TOTAL ETUDIANT : </strong><strong class="txt_yellow txt_13">(#TOTAL_BOUCLE)</strong>]
+<BOUCLE_student0(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}>
+    </BOUCLE_student0>
+    </B_student0></td>
+    <td width="37%" align="left" valign="top">&nbsp;</td>
+  </tr>
+</table>
+<br>
+<table width="985" border="0" cellspacing="0" cellpadding="0">
+  <tr class="txt_blc11">
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Nom</strong></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Prénom</strong></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Email</strong></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Téléphone</strong></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Pays</strong></div></td>
+    <td align="center" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Sexe</strong></div></td>
+    <td align="center" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Age</strong></div></td>
+    <td align="center" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Veg</strong></div></td>
+    <td align="center" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Log</strong></div></td>
+    <td align="center" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Paiement</strong></div></td>
+    <td align="center" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Date</strong></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"></div></td>
+  </tr>
+  <tr>
+    <td width="156" align="left" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}><div class="border1">[<strong>(#TITRE)</strong><br>]</div></BOUCLE_student></td>
+    <td width="131" align="left" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student2(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}><div class="border1">[(#PRENOM)<br>]</div></BOUCLE_student2></td>
+    <td width="164" align="left" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student3(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}>
+    <BOUCLE3(AUTEURS){id_article}><div class="border1">[<a href="mailto:#EMAIL" class="a_gris_underline">(#EMAIL)</a><br>]</div></BOUCLE3></BOUCLE_student3></div></td>
+    <td width="136" align="left" valign="middle" nowrap bgcolor="#FFFFFF"><BOUCLE_student4(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}><div class="border1">[(#PHONE)<br>]</div></BOUCLE_student4></td>
+    <td width="121" align="left" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student5(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}><div class="border1">[(#PAYS)<br>]</div></BOUCLE_student5></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#FFFFFF"><BOUCLE_student6(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}><div class="border1">[(#SEXO|couper{1})<br>]</div></BOUCLE_student6></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student7(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}><div class="border1">[(#AGE)<br>]</div></BOUCLE_student7></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#FFFFFF"><BOUCLE_student8(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}><div class="border1">[(#VEGETARIEN)<br>]</div></BOUCLE_student8></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student9(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}{auditeur==^[nN]}><div class="border1">[(#HEBERGEMENT)<br>]</div></BOUCLE_student9></td>
+    <td width="81" align="center" valign="middle" nowrap bgcolor="#FFFFFF"><BOUCLE_student10(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}><div class="border1">[(#PAIEMENT)<br>]</div></BOUCLE_student10></td>
+    <td width="81" align="center" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student11(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}><div class="border1">[(#DATE|affdate{'d/m/y'})<br>]</div></BOUCLE_student11></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student12(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}>
+    <div class="border1"><a href="#URL_ARTICLE" target="_blank"><img src="images/zoom.png" alt="Voir la fiche" title="Voir la fiche" width="16" height="16" border="0"></a><br></div></BOUCLE_student12></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student13(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}>
+    <div class="border1"><a href="spip.php?page=cisf_article&id_article=#ID_ARTICLE" target="_blank"><img src="images/edit.png" alt="Modifier la fiche" title="Modifier la fiche" width="16" height="16" border="0"></a><br></div></BOUCLE_student13></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student14(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}>
+    <div class="border1"><a href="spip.php?page=imprimir_articulo&id_article=#ID_ARTICLE" target="_blank"><img src="images/icon_print.png" alt="Imprimer la fiche" title="Imprimer la fiche" width="16" height="16" border="0"></a><br></div></BOUCLE_student14></td>
+  </tr>
+</table>
+<br>
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="txt_blc11">
+  <tr>
+    <td width="63%" align="left" valign="top"><strong>TOTAL AUDITEUR LIBRE :</strong> <B_audit>
+      [<strong class="txt_yellow txt_13">(#TOTAL_BOUCLE)</strong>]
+      <BOUCLE_audit(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}>
+</BOUCLE_audit>
+</B_audit>
+<strong class="txt_yellow txt_13">0</strong>
+<//B_audit>
+</td>
+    <td width="37%" align="left" valign="top">&nbsp;</td>
+  </tr>
+</table>
+<br>
+<table width="985" border="0" cellspacing="0" cellpadding="0">
+  <tr class="txt_blc11">
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Nom</strong></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Prénom</strong></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Email</strong></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Téléphone</strong></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Pays</strong></div></td>
+    <td align="center" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Sexe</strong></div></td>
+    <td align="center" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Age</strong></div></td>
+    <td align="center" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Veg</strong></div></td>
+    <td align="center" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Log</strong></div></td>
+    <td align="center" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Paiement</strong></div></td>
+    <td align="center" valign="top" bgcolor="#302F2F"><div class="border2"><strong>Date</strong></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"></div></td>
+    <td align="left" valign="top" bgcolor="#302F2F"><div class="border2"></div></td>
+  </tr>
+  <tr>
+    <td width="156" align="left" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student100(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}><div class="border1">[<strong>(#TITRE)</strong><br>]</div></BOUCLE_student100></td>
+    <td width="131" align="left" valign="middle" nowrap bgcolor="#FFFFFF"><BOUCLE_student102(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}><div class="border1">[(#PRENOM)<br>]</div></BOUCLE_student102></td>
+    <td width="164" align="left" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student103(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}>
+    <BOUCLE103(AUTEURS){id_article}><div class="border1">[<a href="mailto:#EMAIL" class="a_gris_underline">(#EMAIL)</a><br>]</div></BOUCLE103></BOUCLE_student103></div></td>
+    <td width="136" align="left" valign="middle" nowrap bgcolor="#FFFFFF"><BOUCLE_student104(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}><div class="border1">[(#PHONE)<br>]</div></BOUCLE_student104></td>
+    <td width="121" align="left" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student105(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}><div class="border1">[(#PAYS)<br>]</div></BOUCLE_student105></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#FFFFFF"><BOUCLE_student106(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}><div class="border1">[(#SEXO|couper{1})<br>]</div></BOUCLE_student106></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student107(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}><div class="border1">[(#AGE)<br>]</div></BOUCLE_student107></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#FFFFFF"><BOUCLE_student108(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}><div class="border1">[(#VEGETARIEN)<br>]</div></BOUCLE_student108></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student109(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}><div class="border1">[(#HEBERGEMENT)<br>]</div></BOUCLE_student109></td>
+    <td width="81" align="center" valign="middle" nowrap bgcolor="#FFFFFF"><BOUCLE_student1010(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}><div class="border1">[(#PAIEMENT)<br>]</div></BOUCLE_student1010></td>
+    <td width="81" align="center" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student1011(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}><div class="border1">[(#DATE|affdate{'d/m/y'})<br>]</div></BOUCLE_student1011></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student1012(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}>
+    <div class="border1"><a href="#URL_ARTICLE" target="_blank"><img src="images/zoom.png" alt="Voir la fiche" title="Voir la fiche" width="16" height="16" border="0"></a><br></div></BOUCLE_student1012></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student1013(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}>
+    <div class="border1"><a href="spip.php?page=cisf_article&id_article=#ID_ARTICLE" target="_blank"><img src="images/edit.png" alt="Modifier la fiche" title="Modifier la fiche" width="16" height="16" border="0"></a><br></div></BOUCLE_student1013></td>
+    <td width="20" align="center" valign="middle" nowrap bgcolor="#f9f9f9"><BOUCLE_student1014(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}>
+    <div class="border1"><a href="spip.php?page=imprimir_articulo&id_article=#ID_ARTICLE" target="_blank"><img src="images/icon_print.png" alt="Imprimer la fiche" title="Imprimer la fiche" width="16" height="16" border="0"></a><br></div></BOUCLE_student1014></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="26%" align="left" valign="top"><table width="232" border="0" cellspacing="1" cellpadding="5" class="txt_blc12">
+      <tr>
+        <td width="151" bgcolor="#302F2F">&nbsp;&nbsp; <strong>Total Etudiants :</strong></td>
+        <td width="40" align="center" bgcolor="#3b3a3a">
+        <B_student0b>
+    [<strong class="txt_yellow txt_13">(#TOTAL_BOUCLE)</strong>]
+<BOUCLE_student0b(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[nN]}>
+    </BOUCLE_student0b>
+    </B_student0b>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#302F2F"><strong>&nbsp;&nbsp; Total Auditeurs libres :</strong></td>
+        <td width="40" align="center" bgcolor="#3b3a3a">
+        <B_audit2>
+[<strong class="txt_yellow txt_13">(#TOTAL_BOUCLE)</strong>]
+<BOUCLE_audit2(ARTICLES){id_rubrique IN 5,7}{par titre}{auditeur==^[oO]}>
+</BOUCLE_audit2>
+</B_audit2>
+<strong class="txt_yellow txt_13">0</strong>
+<//B_audit2>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#302F2F">&nbsp;</td>
+        <td width="40" align="center" bgcolor="#3b3a3a">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#302F2F"><strong>&nbsp;&nbsp; Femmes :</strong></td>
+        <td width="40" align="center" bgcolor="#3b3a3a"><B_student0c>
+[<strong class="txt_yellow txt_13">(#TOTAL_BOUCLE)</strong>]
+<BOUCLE_student0c(ARTICLES){id_rubrique IN 5,7}{par titre}{sexo==^[fF]}>
+</BOUCLE_student0c>
+</B_student0c>
+<strong class="txt_yellow txt_13">0</strong>
+<//B_student0c>
+</td>
+      </tr>
+      <tr>
+        <td bgcolor="#302F2F"><strong>&nbsp;&nbsp; Hommes :</strong></td>
+        <td width="40" align="center" bgcolor="#3b3a3a"><B_student0d>
+[<strong class="txt_yellow txt_13">(#TOTAL_BOUCLE)</strong>]
+<BOUCLE_student0d(ARTICLES){id_rubrique IN 5,7}{par titre}{sexo==^[mM]}>
+</BOUCLE_student0d>
+</B_student0d></td>
+      </tr>
+    </table></td>
+    <td width="26%" align="left" valign="top"><table width="232" border="0" cellspacing="1" cellpadding="5" class="txt_blc12">
+      <tr>
+        <td width="151" bgcolor="#302F2F"><strong>&nbsp;&nbsp; Paiement :</strong></td>
+        <td width="40" align="center" bgcolor="#3b3a3a">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#302F2F">&nbsp;</td>
+        <td width="40" align="center" bgcolor="#3b3a3a">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="#302F2F">&nbsp;&nbsp; Carte bancaire :</td>
+        <td width="40" align="center" bgcolor="#3b3a3a"><B_student0e>
+[<strong class="txt_yellow txt_13">(#TOTAL_BOUCLE)</strong>]
+<BOUCLE_student0e(ARTICLES){id_rubrique IN 5,7}{par titre}{paiement==^[pP]}>
+</BOUCLE_student0e>
+</B_student0e></td>
+      </tr>
+      <tr>
+        <td bgcolor="#302F2F">&nbsp;&nbsp; Virement bancaire :</td>
+        <td width="40" align="center" bgcolor="#3b3a3a"><B_student0f>
+[<strong class="txt_yellow txt_13">(#TOTAL_BOUCLE)</strong>]
+<BOUCLE_student0f(ARTICLES){id_rubrique IN 5,7}{par titre}{paiement==^[vV]}>
+</BOUCLE_student0f>
+</B_student0f>
+<strong class="txt_yellow txt_13">0</strong>
+<//B_student0f>
+</td>
+      </tr>
+      <tr>
+        <td bgcolor="#302F2F">&nbsp;&nbsp; Chèque :</td>
+        <td width="40" align="center" bgcolor="#3b3a3a"><B_student0g>
+[<strong class="txt_yellow txt_13">(#TOTAL_BOUCLE)</strong>]
+<BOUCLE_student0g(ARTICLES){id_rubrique IN 5,7}{par titre}{paiement==^[cC]}>
+</BOUCLE_student0g>
+</B_student0g>
+<strong class="txt_yellow txt_13">0</strong>
+<//B_student0g>
+</td>
+      </tr>
+    </table></td>
+    <td width="48%" align="left" valign="top"><table width="232" border="0" cellspacing="1" cellpadding="5" class="txt_blc12">
+      <tr>
+        <td width="151" bgcolor="#302F2F"><strong>&nbsp;&nbsp; Hébergement :</strong></td>
+        <td width="40" align="center" bgcolor="#3b3a3a"><B_student0h>
+          [<strong class="txt_yellow txt_13">(#TOTAL_BOUCLE)</strong>]
+  <BOUCLE_student0h(ARTICLES){id_rubrique IN 5,7}{par titre}{hebergement==^[oO]}>
+  </BOUCLE_student0h>
+  </B_student0h></td>
+        </tr>
+      <tr>
+        <td bgcolor="#302F2F"><strong>&nbsp;&nbsp; Végétarien :</strong></td>
+        <td width="40" align="center" bgcolor="#3b3a3a"><B_student0i>
+          [<strong class="txt_yellow txt_13">(#TOTAL_BOUCLE)</strong>]
+  <BOUCLE_student0i(ARTICLES){id_rubrique IN 5,7}{par titre}{vegetarien==^[oO]}>
+  </BOUCLE_student0i>
+  </B_student0i>
+  <strong class="txt_yellow txt_13">0</strong>
+  <//B_student0i></td>
+        </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td align="center">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="52" colspan="2" align="center" bgcolor="#302F2F"><strong>Tableau complet :</strong> <a href="spip.php?rubrique9">cliquez ici</a></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<br>
+<br>
+<br>

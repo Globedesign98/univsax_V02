@@ -1,0 +1,60 @@
+#CACHE{0}
+#SET{domid,_#ENV{mode}|concat{'_',#ENV{id,new}}}
+[(#SET{cibigup,[(#VAL|cisf_utiliser_bigup)]})]
+#SET{citab,'[]'}
+
+<div class='formulaire_spip [(#GET{cibigup}|oui)formulaire_spip_cisf_bigup] formulaire_illustrer_document' id='formulaire_illustrer_document-#ENV{id,new}'>
+	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
+	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+	[(#ENV{editable})
+	<form action="#ENV{action}#formulaire_illustrer_document-#ENV{id,new}" method="post" enctype='multipart/form-data'><div>
+		#ACTION_FORMULAIRE
+                
+                [(#GET{cibigup}|oui)
+                
+		[(#REM) Formulaire d'upload de fichier]
+                <div class="editer-groupe">
+                    <:medias:bouton_download_depuis:> <:medias:bouton_download_local:>
+                    <div class='editer editer_fichier_upload[ (#ENV*{erreurs}|table_valeur{fichier_upload}|oui)erreur]'>
+                        <label for='fichier_upload#ENV{domid}'[(#GET{cibigup}|oui) style="display: none;"]><:medias:info_telecharger:></label>[
+                        <span class='erreur_message'>(#ENV*{erreurs}|table_valeur{fichier_upload})</span>
+                        ]<input class='file[(#ENV{multi}|=={non}|non) multi]' type="file" name="fichier_upload#GET{citab}" value='[(#ENV{fichier_upload}|is_array|?{'', #ENV{fichier_upload}})]' id="fichier_upload#ENV{domid}" size='11' />
+                        <!--editer_fichier_upload-->
+                    </div>
+                    <p class='boutons'><input class='submit' type="submit" name="joindre_upload" value="<:medias:bouton_upload:>"/></p>
+                </div>
+                ]
+                
+                [(#GET{cibigup}|non)
+			<div class="editer_fichier[ (#ENV*{erreurs}|table_valeur{fichier}|oui)erreur]">
+				[<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{fichier})</span>]
+				<span class='image_loading'>&nbsp;</span>
+
+				<div id='illustrer_document'>
+				[(#ENV{id_vignette}|oui|et{#AUTORISER{supprimer,document,#ENV{id_vignette}}})  <input type='submit' class='submit' name='supprimer' value='<:medias:bouton_supprimer|attribut_html:>' />]
+				[(#ENV{id_vignette}|non)
+				
+					[(#SET{domid,_#ENV{mode}|concat{'_',#ENV{id,new}}})]
+					
+					<div id="defaultsubmit#GET{domid}" class="none"></div>
+					[(#REM) Formulaire d'upload de fichier]                                        
+                                        <div[(#GET{cibigup}|oui) class="editer-groupe"][(#GET{cibigup}|non) class='joindre_mode__new' id='joindre_upload#GET{domid}']>
+                                                        <:medias:bouton_download_depuis:> <:medias:bouton_download_local:>
+                                            <div class='editer editer_fichier_upload[ (#ENV*{erreurs}|table_valeur{fichier_upload}|oui)erreur]'>
+                                                <label for='fichier_upload#ENV{domid}'[(#GET{cibigup}|oui) style="display: none;"]><:medias:info_telecharger:></label>[
+                                                <span class='erreur_message'>(#ENV*{erreurs}|table_valeur{fichier_upload})</span>
+                                                ]<input class='file' type="file" name="fichier_upload#GET{citab}" value='[(#ENV{fichier_upload}|is_array|?{'', #ENV{fichier_upload}})]' id="fichier_upload#GET{domid}" size='11' />
+                                                <!--editer_fichier_upload-->
+                                            </div>
+                                            <p class='boutons'><input class='submit' type="submit" name="joindre_upload" value="<:medias:bouton_upload:>"/></p>
+                                        </div>
+                                        
+				]							
+				</div>
+		    </div>
+                ]
+                
+	</div></form>
+        ]
+</div>
+

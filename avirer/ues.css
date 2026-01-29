@@ -1,0 +1,554 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+body {
+	margin:0;
+	padding:0;
+	border:0;
+	position:absolute;
+	height:100%;
+	width:100%;
+	z-index:0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #302f2f;
+}
+
+.roboto {font-family: 'Roboto', sans-serif;text-shadow: 0px 2px 2px #000;font-weight: 400;color: #FFF; }
+#roboto_menu a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-shadow: 0px 0px 0px #000;
+    text-transform: uppercase;
+}
+.formulaire_inscription .explication, .formulaire_inscription .editer label, .formulaire_login label	{
+	font-size: 12px;	
+}
+#txt_bot_acc > a {
+    color: #999;
+}
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:hover {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.a_jaune:link {
+	color: #A2A2A2;
+	text-decoration: none;
+}
+.a_jaune:visited {
+	color: #A2A2A2;
+	text-decoration: none;
+}
+.a_jaune:hover {
+	color: #E8E800;
+	text-decoration: none;
+}
+.a_jaune2:active {
+	color: #A2A2A2;
+	text-decoration: none;
+}
+.a_jaune2:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.a_jaune2:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.a_jaune2:hover {
+	color: #E8E800;
+	text-decoration: none;
+}
+.a_jaune2:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.a_bleu:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.a_bleu:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.a_bleu:hover {
+	color: #80aed0;
+	text-decoration: none;
+}
+.a_bleu:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.a_gris:link {
+	color: #666666;
+	text-decoration: none;
+}
+.a_gris:visited {
+	color: #666666;
+	text-decoration: none;
+}
+.a_gris:hover {
+	color: #E8E800;
+	text-decoration: underline;
+}
+.a_gris:active {
+	color: #666666;
+	text-decoration: none;
+}
+.a_gris_underline:link {
+	color: #666666;
+	text-decoration: none;
+}
+.a_gris_underline:visited {
+	color: #666666;
+	text-decoration: none;
+}
+.a_gris_underline:hover {
+	color: #666666;
+	text-decoration: underline;
+}
+.a_gris_underline:active {
+	color: #666666;
+	text-decoration: none;
+}
+.table_gris {	
+	background-color: #2b2a2a;
+	margin: 0 0 5px;
+}
+.txt_blc12 {	color: #FFFFFF;
+	font-size: 12px;
+}
+.txt_blc13 {	color: #FFFFFF;
+	font-size: 13px;
+}
+.txt_blc11 {	color: #FFFFFF;
+	font-size: 11px;
+}
+.txt_15 {	
+	font-size: 15px;
+}
+.txt_20 {	
+	font-size: 20px;
+	font-weight: 700;
+}
+.txt_27 {	
+	font-size: 27px;
+	font-weight: 700;
+}
+.txt_gris10 {
+	color: #666666;
+	font-size: 10px;
+}
+.bg_33 {background-color:#333;}
+.editer_texte {
+    display: none;
+}
+.margin_right20 {
+    padding-right: 20px;
+}
+.fancybox img, .mediabox img{
+    border: thin solid #3c3c3c;
+    padding: 3px;
+	margin: 2px;
+}
+.inscription .formulaire_login, .inscription .formulaire_inscription {
+
+}
+.bt_plus {
+	    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 0 3px #FFFFFF inset;
+    color: #CCC;
+    cursor: pointer;
+    display: inline-block;
+    filter: none;
+    font: bold 11px/15px Sans-Serif;
+    padding: 5px 10px;
+    vertical-align: middle;
+    white-space: nowrap;
+	margin: 10px 10px 0;
+	-moz-border-radius: 3px !important;
+	-webkit-border-radius: 3px !important;
+	border-radius: 3px !important;
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	filter:none;
+   -pie-background:      linear-gradient(top, white, #E0E0E0);
+   box-shadow:         0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;
+   border:0;
+   background: url("../../images/menu_bg_hover4.png") repeat scroll 0 0 transparent;
+ }
+.bt_plus a:hover {
+	color: #ffe720;
+}
+.txt_gris11 {
+	color: #666666;
+	font-size: 11px;
+}
+.txt_jaune {
+	color: #BCBCBC;
+}
+.txt_blc {	color: #FFFFFF;
+}
+
+.txt_yellow {
+	color: #FFE720;
+}
+.txt_blue {
+	color: #66ccff;
+}
+.txt_jaune_gras {
+	color: #FFE720;
+	font-weight: bold;
+	font-size:11px;
+}
+.txt_jaune11b {
+	color: #FFE720;
+	font-weight: bold;
+	font-size:11px;
+}
+.txt_red12b {
+	font-size: 12px;
+	font-weight: bold;
+	color: #DC0F0A;
+}
+.txt_red16b {
+	font-size: 16px;
+	font-weight: bold;
+	color: #DC0F0A;
+}
+.txt_red {
+	color: #DC0F0A;
+}
+.txt_13 {
+	font-size: 13px;
+}
+.txt_12 {
+	font-size: 12px;
+}
+.txt_11 {
+	font-size: 11px;
+}
+
+.bg_cadrec02 {
+	background-image: url(../images/c_c02.jpg);
+	background-repeat:repeat-x;
+}
+
+.bg_traitx {
+	background-image: url(../images/bg_trait.jpg);
+	background-repeat:repeat-x;
+}
+div.txt_gris10 {
+    color: #666;
+    padding: 16px 0 0;
+}
+div.txt_gris10 .a_gris:hover {
+	color: #66ccff;
+    padding: 16px 0 0;
+}
+.margin_top5 { margin-top:5px;}
+#roll01 {
+	background-image: url(../images/m_accueil01.jpg);
+	background-repeat:no-repeat;
+	position:relative;
+	height: 73px;
+	width: 450px;
+}
+#roll01:hover {
+	background-image: url(../images/m_accueil02.jpg);
+	height: 73px;
+	width: 450px;
+	background-repeat: no-repeat;
+}
+#roll02 {
+	background-image: url(../images/m_accueil03.jpg);
+	background-repeat:no-repeat;
+	position:relative;
+	height: 73px;
+	width: 450px;
+}
+#roll02:hover {
+	background-image: url(../images/m_accueil04.jpg);
+	height: 73px;
+	width: 450px;
+	background-repeat: no-repeat;
+}
+#roll03 {
+	background-image: url(../images/m_accueil05.jpg);
+	background-repeat:no-repeat;
+	position:relative;
+	height: 73px;
+	width: 450px;
+}
+#roll03:hover {
+	background-image: url(../images/m_accueil06.jpg);
+	height: 73px;
+	width: 450px;
+	background-repeat: no-repeat;
+}
+#roll04 {
+	background-image: url(../images/m_inscription01.jpg);
+	background-repeat:no-repeat;
+	position:relative;
+	height: 36px;
+	width: 450px;
+}
+#roll04:hover {
+	background-image: url(../images/m_inscription02.jpg);
+	height: 36px;
+	width: 450px;
+	background-repeat: no-repeat;
+}
+.retrait { margin-left: 15px;}
+#roll01_eng {
+	background-image: url(../images/m_accueil01_eng.jpg);
+	background-repeat:no-repeat;
+	position:relative;
+	height: 73px;
+	width: 450px;
+}
+#roll01_eng:hover {
+	background-image: url(../images/m_accueil02_eng.jpg);
+	height: 73px;
+	width: 450px;
+	background-repeat: no-repeat;
+}
+#roll02_eng {
+	background-image: url(../images/m_accueil03_eng.jpg);
+	background-repeat:no-repeat;
+	position:relative;
+	height: 73px;
+	width: 450px;
+}
+#roll02_eng:hover {
+	background-image: url(../images/m_accueil04_eng.jpg);
+	height: 73px;
+	width: 450px;
+	background-repeat: no-repeat;
+}
+#roll03_eng {
+	background-image: url(../images/m_accueil05_eng.jpg);
+	background-repeat:no-repeat;
+	position:relative;
+	height: 73px;
+	width: 450px;
+}
+#roll03_eng:hover {
+	background-image: url(../images/m_accueil06_eng.jpg);
+	height: 73px;
+	width: 450px;
+	background-repeat: no-repeat;
+}
+#roll04_eng {
+	background-image: url(../images/m_inscription02_eng.jpg);
+	background-repeat:no-repeat;
+	position:relative;
+	height: 36px;
+	width: 450px;
+}
+#roll04_eng:hover {
+	background-image: url(../images/m_inscription01_eng.jpg);
+	height: 36px;
+	width: 450px;
+	background-repeat: no-repeat;
+}
+a.roll img { opacity: 1.0; filter:alpha(opacity=100); 
+		border: 0px;
+    border-color: #FFFFFF;
+}
+a.roll:hover img {opacity: 0.85;filter:alpha(opacity= 85);
+	border: 0px;
+}
+.border1 {
+	height: 20px;
+	margin: 0;
+	padding: 5px 4px 0 5px;
+	border: 1px solid #212020;
+}
+.border2 {
+	height: 20px;
+	margin: 0;
+	padding: 8px 0 0 5px;
+}
+.border3 {
+    border: 1px solid #212020;
+    height: 20px;
+    margin: 0;
+    padding: 5px 4px 0 5px;
+    width: 300px;
+}
+.bg_menu_jaune {
+	background-image: url(../images/bg_menu_forum.jpg);
+	background-repeat: repeat-x;
+	height: 35px;
+	margin: 0;
+	padding: 0;
+}
+
+.bg_menu_border {
+	background-image: url(../images/bg_barre.jpg);
+	background-repeat: repeat-x;
+	height: 18px;
+	margin: 0;
+	padding: 0;	
+	background-color: #212020;
+}
+.bg_top_saxo {
+	background-image: url(../images/top02.jpg);
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;	
+}
+#bouton {
+	position:relative;
+	height: 20px;
+	width: 100%;
+	background-color: #262626;
+	font-size: 11px;
+	color: #FFFFFF;
+}
+#bouton:hover {
+	height: 20px;
+	width: 100%;
+	background-color: #2F2F2F;
+}
+.search_query { 
+	width: 13em;
+	margin:0;
+	font-size : 11px;
+	color: #454449 }
+
+input.search_query {
+	vertical-align: middle;
+	padding: 2px 0 0 5px; }
+
+select.forml {
+	width: 15.9em;
+	padding: 2px 0 0 5px; 
+	margin : 8px 0 0;
+	font-size : 11px;
+	color: #454449
+}
+.marge_bottom10 {
+	margin : 0 0 10px;
+}
+.marge_top10 {
+	margin : 15px 0 0;
+}
+.margin_top10 {
+	margin : 10px 0 0;
+}
+.margin_top6 {
+	margin : 8px 15px 0;
+}
+
+.bloc {
+	display:block;
+	float:left;
+	width:100%;
+	height:35px;
+	cursor: pointer;
+}
+.mbg{
+}
+.mbg:hover{
+	background-image: url(../images/bg_menu_forum2.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+.a_menu:link {
+	font-size: 13px;
+	font-weight: bold;
+	color: #4b5255;
+	text-decoration: none;
+}
+.a_menu:visited {
+	font-size: 13px;
+	font-weight: bold;
+	color: #4b5255;
+	text-decoration: none;
+}
+.a_menu:hover {
+	font-size: 13px;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: none;
+}
+.a_menu:active {
+	font-size: 13px;
+	font-weight: bold;
+	color: #4b5255;
+	text-decoration: none;
+}
+.marge_top{
+	padding: 9px 15px 0;
+}
+.ues_trait {
+	border-top-width: thin;
+	border-top-style: dotted;
+	border-top-color: #444444;
+	margin: 5px 0;
+}
+.ues_trait_titre {
+	border-top-width: thin;
+	border-top-style: solid;
+	border-top-color: #444444;
+	margin: 0px 0 10px;
+}
+h2 {margin:0; padding:0;}
+h1 {margin:0; padding:0; color:#FFF; font-size:15px; text-transform:uppercase;}
+.cadre_color {
+	background-color: #2F2F2F;
+	border: thin solid #444444;
+	-moz-box-sizing: border-box;
+	border-radius: 14px;
+	padding: 10px 20px;
+	background-image: url(../images/bg_cadre.jpg);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+}
+.cadre_color.log_aut {
+    height: 306px;
+    padding: 25px 20px 0 40px;
+}
+
+.formulaire_inscription .boutons, .formulaire_login .boutons {
+    padding: 0;
+}
+.formulaire_login .choix {
+    display: none;
+}
+
+.formulaire_inscription .boutons .submit, .formulaire_login .boutons .submit {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    color: #333;
+    font-family: roboto;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    padding: 3px 17px;
+}
+.img_wrap {
+    display: inline-block;
+    padding: 2px;
+    border: 1px solid #444;
+    margin: 0px 0px;
+}
+.cadre_bg {
+	background-image: url(../images/c_c02.jpg);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+}
+li.editer_contact #contact, li.editer_choix #choix {display:none;}

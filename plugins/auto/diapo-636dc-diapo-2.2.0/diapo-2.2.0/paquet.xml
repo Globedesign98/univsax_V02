@@ -1,0 +1,19 @@
+<paquet
+	prefix="diapo"
+	categorie="multimedia"
+	version="2.2.0"
+	etat="stable"
+	compatibilite="[3.0.0;4.*]"
+	logo="prive/themes/spip/images/diapo-xx.svg"
+	documentation="https://contrib.spip.net/Plugin-Diapo"
+>
+	<nom>Diapo</nom>
+
+	<auteur>bill, Jean-Christophe Villeneuve</auteur>
+	<credit lien="http://www.elastick.net">Anne-lise Martenot</credit>
+	<licence lien="http://www.gnu.org/licenses/gpl-3.0.html">GNU/GPL</licence>
+
+	<pipeline nom="insert_head" inclure="diapo_pipelines.php" />
+	<pipeline nom="header_prive" inclure="diapo_pipelines.php" />
+
+</paquet>

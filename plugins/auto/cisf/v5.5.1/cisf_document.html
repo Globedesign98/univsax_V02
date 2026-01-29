@@ -1,0 +1,115 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+#SET{cimode,'document'}
+[(#ENV{cisf_ajout}|=={image}|oui)
+        #SET{cimode,'image'}
+]
+[(#ENV{ins_image}|oui)
+        #SET{cimode,'image'}
+]
+[(#GET{cimode}|=={image}|oui)
+<title>[(#VAL{cisf:eq_ajout_img}|_T|html2unicode|unicode2charset)]</title>
+]
+[(#GET{cimode}|=={image}|non)
+<title>[(#VAL{cisf:eq_ajout_doc}|_T|html2unicode|unicode2charset)]</title>
+]
+
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+
+[(#PLUGIN{uploadhtml5}|oui)
+#INSERT_HEAD
+]
+
+[(#SET{cibigup,[(#VAL|cisf_utiliser_bigup)]})]
+
+[(#GET{cibigup}|oui)
+#INSERT_HEAD
+]
+
+</head>
+<body>
+#SET{ciok,#ENV{id_article}|cisf_autorise_modifier_article}
+
+<div id="pagedocument">
+
+<div class="largeur">
+    
+    [(#GET{ciok}|=={oui}|oui)
+    <INCLURE{fond=noisettes/cisf_fil_ariane,env}>
+    ]
+    
+    <div id="milieu">
+    <div id="ext-main">
+    <div class="main">
+    <div id="contenu">
+    <div class="main-content">
+
+        <BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+        <div id="boxcentrale"><div class="innercentrale">
+        [(#GET{ciok}|=={oui}|oui)
+
+            <div class="entete-formulaire">        
+            [(#GET{cibigup}|oui)
+                [(#ENV|cisf_mode_document|non)
+                <h1>[(#CHEMIN_IMAGE{image-24.png}|balise_img{'',cadre-icone})][(#ENV{id,new}|intval|?{<:medias:bouton_remplacer_image:>,<:medias:bouton_ajouter_image:>}) #AIDER{ins_img}]</h1>
+                ]
+                [(#ENV|cisf_mode_document|oui)
+                <h1>[(#CHEMIN_IMAGE{doc-24.png}|balise_img{'',cadre-icone})][(#ENV{id,new}|intval|?{<:medias:bouton_remplacer_document:>,<:medias:bouton_ajouter_document:>}) #AIDER{ins_doc}]</h1>
+                ]
+            ]
+            [(#GET{cibigup}|non)
+                [(#ENV|cisf_mode_document|non)
+                <h1>[(#CHEMIN_IMAGE{image-24.png}|balise_img{'',cadre-icone})][(#ENV{id,new}|intval|?{<:medias:bouton_remplacer_image:>,<:medias:bouton_ajouter_image:>})]</h1>
+                ]
+                [(#ENV|cisf_mode_document|oui)
+                <h1>[(#CHEMIN_IMAGE{doc-24.gif}|balise_img{'',cadre-icone})][(#ENV{id,new}|intval|?{<:medias:bouton_remplacer_document:>,<:medias:bouton_ajouter_document:>})]</h1>
+                ]
+            ]
+            <div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+
+            [(#VAL|cisf_lien_ancien_upload)]
+
+            [<div class="poidsmax"><:cisf:eq_poidsmax:><span id="cisf_poids"> (#ID_ARTICLE|cisf_upload_max_filesize)</span></div>]
+            
+            </div>
+
+            [(#PLUGIN{uploadhtml5}|oui)
+            <INCLURE{fond=prive/squelettes/inclure/uploadhtml5,type=article,id=#ID_ARTICLE}>
+            ]
+
+            #FORMULAIRE_CISF_JOINDRE_DOCUMENT{new,#ID_ARTICLE,'article'}
+
+        ]
+
+        </div></div>
+        </BOUCLE_article>
+
+
+        [(#GET{ciok}|=={non}|oui)
+                [(#REM) <!-- Auteur non connecte ou visiteur -->]
+                <div id="contenu">
+                <INCLURE{fond=cisf_altern,env}>
+                </div>
+        ]
+
+    </div>
+    </div>
+    <div class='clearer'>&nbsp;</div>	
+    </div>
+    </div>
+    </div>
+    
+    <div id="pied">
+        [(#GET{ciok}|=={oui}|oui)
+            <div><:cisf:plugin_cisf:></div>
+            <div id="cisf_copyright">[(#NOM_SITE_SPIP)]</div>
+        ]
+    </div>
+ 
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<title>[(#VAL{cisf:eq_propriete_doc}|_T|html2unicode|unicode2charset)]</title>
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+
+[(#CONFIG{documents_date}|=={oui}|oui)
+
+[<link href="(#CHEMIN{_css/cisf_datepicker.css})" rel="stylesheet" type="text/css" />]
+
+[<script src="(#CHEMIN{prive/javascript/jquery.js})"></script>]
+
+[(#SPIP_VERSION|>={4}|oui)	
+[<script src="(#CHEMIN{prive/javascript/ajaxCallback.js})"></script>]
+[<script src="(#CHEMIN{prive/javascript/jquery.placeholder-label.js})"></script>]
+]
+
+[(#SPIP_VERSION|>={4}|non)	
+[(#LANG|cisf_datepicker_js)]
+
+<script>
+$(function() {
+	$("#date_doc").datepicker({ showOn: 'button', buttonText: '<:bouton_choisir:>', dateFormat: 'dd/mm/yy', onClose : function(){$( '#date_doc' ).focus();} });
+        
+	// Interdiction de la navigation au clavier dans le composant
+	$('#date_doc').next().attr('tabindex', '-1');
+        
+        // Masquage du composant pour les technologies d'assistance
+	$('#ui-datepicker-div').attr('aria-hidden', 'true');
+	$('#ui-datepicker-div :focusable').attr('tabindex', '-1');
+});
+</script>
+]
+
+]
+
+<script>
+function cisf_init2() {
+    document.getElementById('titre').focus(); 
+}
+
+function cilien(valeur){
+	document.getElementById("cilieninput").value = valeur;
+	document.getElementById("formulaire").submit() ;
+}
+window.onload = cisf_init2; 
+</script>
+
+</head>
+<body>
+#SET{ciok,#ENV{id_article}|cisf_autorise_modifier_article}
+
+<div id="page">
+<div class="largeur">
+
+    [(#GET{ciok}|=={oui}|oui)
+    <INCLURE{fond=noisettes/cisf_fil_ariane,env}>
+    ]
+    
+    <div id="milieu">
+    <div id="ext-main">
+    <div class="main">
+    <div id="contenu">
+    <div class="main-content">
+		
+            <BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+            [(#GET{ciok}|=={oui}|oui)
+            <div id="boxcentrale"><div class="innercentrale">
+                <div class="entete-formulaire">        
+                    <h1><:cisf:eq_propriete_doc:></h1>
+                    <div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+                </div>
+
+                <div class="formulaire_spip">
+								
+                    #SET{ciok,''}
+                    [(#AUTORISER{modifier,document,#ENV{show_docs}}|oui)
+                            #SET{ciok,'oui'}
+                    ]
+                    [(#GET{ciok}|non)
+                            <h3><:cisf:pas_droit_modifier_doc:></h3>
+                    ]
+
+                    [(#GET{ciok}|oui)
+                            #FORMULAIRE_CISF_DOC_MODIFIER{#ENV{show_docs}, #ID_ARTICLE, #ID_RUBRIQUE, #URL_PAGE{cisf_article,id_article=#ID_ARTICLE&id_rubrique=#ID_RUBRIQUE},#ENV{ins_document},#ENV{ins_image},#ENV{align_image}}
+                    ]
+
+                </div>
+            </div></div>
+            ]
+            </BOUCLE_article>
+
+            [(#GET{ciok}|=={non}|oui)
+                    [(#REM) <!-- Auteur non connecte ou visiteur -->]
+                    <div id="contenu">
+                    <INCLURE{fond=cisf_altern,env}>
+                    </div>
+            ]
+				
+    </div>
+    </div>
+    <div class='clearer'>&nbsp;</div>	
+    </div>
+    </div>
+    </div>
+<div id="pied">
+        [(#GET{ciok}|=={oui}|oui)
+            <div><:cisf:plugin_cisf:></div>
+            <div id="cisf_copyright">[(#NOM_SITE_SPIP)]</div>
+        ]
+</div>
+ 
+</div>
+</div>
+</body>
+</html>

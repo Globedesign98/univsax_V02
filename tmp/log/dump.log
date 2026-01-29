@@ -1,0 +1,100 @@
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: Copier 32 tables de 'dump' vers ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: Conserver copieur dans id_auteur=1 pour le serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_articles' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_articles' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_articles 400
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_articles 800
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_articles 1104
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_auteurs_liens' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_auteurs_liens' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_auteurs_liens 223
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_breves' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_depots' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_depots' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_depots 1
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_depots_plugins' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_depots_plugins' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_depots_plugins 400
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_depots_plugins 730
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_documents' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_documents' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_documents 144
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_documents_liens' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_documents_liens' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_documents_liens 156
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_forum' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_forum' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_forum 195
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_groupes_mots' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_groupes_mots' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_jobs' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_jobs' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_jobs 9
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_jobs_liens' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_jobs_liens' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_messages' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_mots' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_mots' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_mots_liens' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_mots_liens' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_paquets' sur serveur ''
+2026-01-27 05:42:20 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_paquets' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_paquets 400
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_paquets 800
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_paquets 1089
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_petitions' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_plugins' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_plugins' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_plugins 400
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_plugins 750
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_referers' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_referers' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_referers_articles' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_referers_articles' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_rubriques' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_rubriques' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_rubriques 14
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_signatures' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_syndic' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_syndic' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_syndic_articles' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_syndic_articles' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_transactions' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_types_documents' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_types_documents' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_types_documents 173
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_urls' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_urls' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_urls 400
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_urls 800
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_urls 1200
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_urls 1527
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_versions' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_versions' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions 400
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions 800
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions 1013
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_versions_fragments' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_versions_fragments' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 400
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 800
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 1200
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 1600
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 2000
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 2400
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 2800
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 3200
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 3600
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 4000
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 4400
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 4800
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 5200
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: recopie spip_versions_fragments 5353
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_visites' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_visites' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: drop table 'spip_visites_articles' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_visites_articles' sur serveur ''
+2026-01-27 05:42:21 127.0.0.1 (pid 4132) :Pri:!INFO: creation 'spip_auteurs' sur serveur ''
+2026-01-27 05:42:22 127.0.0.1 (pid 4132) :Pri:!INFO: base_inserer_copie : 0 insertions au lieu de 64. On retente 1 par 1
+2026-01-27 05:42:22 127.0.0.1 (pid 4132) :Pri:ERREUR: base_inserer_copie : 63 insertions au lieu de 64 apres insertion 1 par 1
+2026-01-27 05:42:22 127.0.0.1 (pid 4132) :Pri:ERREUR: Erreur fatale dans base_inserer_copie table spip_auteurs

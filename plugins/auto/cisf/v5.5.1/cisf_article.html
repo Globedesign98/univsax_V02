@@ -1,0 +1,238 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+#SET{ci_id_rubrique,0}
+#SET{ci_mon_id_article,0}
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}{statut IN (prepa,prive,publie,new)}>
+#SET{ci_id_rubrique,#ID_RUBRIQUE}
+</BOUCLE_rubrique>
+<BOUCLE_titre_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+#SET{ci_id_rubrique,#ID_RUBRIQUE}
+#SET{ci_mon_id_article,#ID_ARTICLE}
+[(#SET{ci_titre_article,[(#TITRE|textebrut)]})]
+<title><:admin_modifier_article:>[ - (#TITRE|textebrut)]</title>
+</BOUCLE_titre_article>
+</B_titre_article>
+<title><:icone_ecrire_article:></title>
+<//B_titre_article>
+
+<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
+<meta name="DC.Format" content="text/html">
+<meta name="DC.Language" content="#LANG">
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+
+#SET{ci_init,''}
+
+[(#PLUGIN{porte_plume}|non)
+	[(#PLUGIN{ckeditor}|oui)
+<script src="prive/javascript/jquery.js"></script>
+	]
+]
+[(#PLUGIN{porte_plume}|oui)
+[(#INSERT_HEAD|cisf_param_porte_plume)]
+#SET{ci_init,'oui'}
+
+[(#PLUGIN{cibloc}|oui)
+[<script src="(#CHEMIN{javascript/jquery.colorbox.js})"></script>]
+[<script src="(#CHEMIN{javascript/spip.mediabox.js})"></script>]
+
+<script>
+if (typeof box_settings == "undefined") {
+    var box_settings = {trans:"elastic",speed:"200",ssSpeed:"2500",maxW:"90%",maxH:"95%",minW:"700px",minH:"300px",opa:"0.5",str_close:"Fermer",splash_url:""};
+    var box_settings_splash_width = "700px";
+    var box_settings_splash_height = "95%";
+    var box_settings_iframe = true;
+} else {    
+    box_settings = {trans:"elastic",speed:"200",ssSpeed:"2500",maxW:"90%",maxH:"95%",minW:"700px",minH:"300px",opa:"0.5",str_close:"Fermer",splash_url:""};
+    box_settings_splash_width = "700px";
+    box_settings_splash_height = "95%";
+    box_settings_iframe = true;
+}    
+</script>
+
+[<link rel="stylesheet" href="(#CHEMIN{colorbox/white-shadow/colorbox.css})" type="text/css">]    
+
+<style>
+#cboxClose{border:0;padding:0;margin:0;overflow:visible;text-indent:-9999px;width:20px;height:20px;position:absolute;top:-3px;background:url('[(#CHEMIN{prive/colorbox/white-shadow/images/controls.png})]') no-repeat 0 0;}
+#cboxClose:active{outline:0}
+#cboxClose{background-position:-50px 0;right:0}
+#cboxClose:hover{background-position:-50px -25px}
+#cboxLoadedContent {margin:0;}
+#cboxOverlay {background-color: #000;}
+#cboxWrapper { border: 1px solid #888; background-color: #FFF;}
+#cboxTopLeft {background: none;height:10px;}
+#cboxTopCenter {background: none;height:10px;}
+#cboxTopRight {background: none;height:10px;}
+#cboxMiddleLeft {background: none;height:10px;}
+#cboxMiddleRight {background: none;height:10px;}
+#cboxBottomLeft {background: none;height:10px;}
+#cboxBottomCenter {background: none;height:10px;}
+#cboxBottomRight {background: none;height:10px;}
+#cboxTitle {display: none !important;}
+</style>
+
+]
+
+#SET{ci_porte_plume_texte_uniquement,''}
+[(#VAL{_CISF_PORTE_PLUME_TEXTE_UNIQUEMENT}|defined|oui)
+        [(#VAL{_CISF_PORTE_PLUME_TEXTE_UNIQUEMENT}|constant|=={oui}|oui)
+        #SET{ci_porte_plume_texte_uniquement,'oui'}
+        ]
+]
+
+<script>
+(function($){
+$(document).ready(function(){
+  [(#GET{ci_descriptif_sans_porte_plume}|=={oui}|non)
+	function addbarre(){
+	$('.formulaire_spip').not('.formulaire_spip_compact')
+		.find('.editer_descriptif')
+		.find('textarea')
+		.barre_outils('edition');
+	}
+	]
+  [(#GET{ci_porte_plume_texte_uniquement}|=={oui}|oui)
+	function addbarre(){
+	$('.formulaire_spip').not('.formulaire_spip_compact')
+		.find('textarea\[name=texte\]')
+		.barre_outils('edition');
+	}
+	]
+	cisf_init();
+	addbarre();
+	onAjaxLoad(addbarre);
+});
+})(jQuery);
+</script>	
+]
+
+<script src="#CHEMIN{_js/cisf_barre.js}"></script>
+<script>
+function cisf_init() {
+	var citest = document.getElementById('cisf_aide');
+ 	if (typeof (citest) != undefined && citest!= null) {
+		document.getElementById('cisf_aide').innerHTML = '<div class="aidecadregris">[(#VAL{cisf:btaide}|_T|texte_script)]</div><div class="aidecadregris">[(#VAL{cisf:btaide3}|_T|texte_script)]</div>';
+		document.getElementById('titre').focus(); 
+ 	}
+}
+
+function monurl() {
+	return escape("[(#URL_PAGE{cisf_article}|url_absolue)]&id_article=#GET{ci_mon_id_article}&id_rubrique=#GET{ci_id_rubrique}");
+}
+
+function chainemail(titreobjet) {
+	[(#GET{ci_mon_id_article}|>{0}|oui)
+		chaine_mail = "mailto:?subject=" + titreobjet;
+		chaine_mail += "&body=<:cisf:eq_je_recommande_page:> " + titreobjet;
+		chaine_mail += ". <:cisf:eq_pour_la_consulter_cliquer:>" + monurl();
+		location.href = chaine_mail;
+	]
+	[(#GET{ci_mon_id_article}|=={0}|oui)
+		alert("<:cisf:eq_enregistrer_article:>");
+	]
+}
+
+function chainemailvalideur(titreobjet) {	
+	chaine_mail = "mailto:?subject=<:cisf:eq_mail_valideur_sujet:>" + titreobjet;
+	chaine_mail += "&body=<:cisf:eq_mail_valideur_texte1:> " + titreobjet;
+	chaine_mail += ". <:cisf:eq_mail_valideur_texte2:>" + monurl();
+	location.href = chaine_mail;	
+}
+
+function chainemailreponse(name, domain, titreobjet) {
+	var aro = "@";
+	chaine_mail = "mailto:"+ name + aro + domain +"?subject=<:cisf:eq_mail_sujet:>" + titreobjet;
+	chaine_mail += "&body=<:cisf:eq_mail_texte1:> " + titreobjet;
+	chaine_mail += ". <:cisf:eq_mail_texte2:>" + monurl();
+	location.href = chaine_mail;
+}
+
+function cilien(valeur){
+	document.getElementById("cilieninput").value = valeur;
+	document.getElementById("formulaire").submit() ;
+}
+
+function ouvreAide(url) {
+	window.open(url,'spip_aide', 'scrollbars=yes, resizable=yes, width=740, height=580');
+}
+
+function cisf_toggle(element){
+
+        if ($( element ).attr('aria-controls')){
+            var $ciwidget_info =  $('#' + $( element ).attr('aria-controls'));
+            if ($ciwidget_info.css('display')==='none'){
+                $ciwidget_info.css('display','block');
+                $( element ).attr('aria-expanded', 'true');
+                $( element ).attr('aria-pressed', 'true');
+                $( element ).text($( element ).attr('data-show'));
+            } else if ($ciwidget_info.css('display')==='block'){
+                $ciwidget_info.css('display','none');
+                $( element ).attr('aria-expanded', 'false');
+                $( element ).attr('aria-pressed', 'false');
+                $( element ).text($( element ).attr('data-hide'));
+            }
+        }
+        return false;
+};
+
+
+[(#GET{ci_init}|non)
+window.onload = cisf_init; 
+]
+</script>
+
+[(#VAL|cisf_prism)]
+
+</head>
+
+<body>
+<div id="page">
+<div class="largeur">
+
+
+		#SET{cisession,'non'}
+		#SET{ciok,'non'}
+		[(#SESSION{id_auteur}|!={''}|oui)
+			[(#SESSION{statut}|!={6forum}|oui)
+			#SET{cisession,'oui'}
+			]
+		]
+
+		<BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>				
+		[(#GET{cisession}|=={oui}|oui)
+		[(#AUTORISER{modifier,article,#ID_ARTICLE})
+			#SET{ciok,'oui'}
+			#FORMULAIRE_CISF_ARTICLE{#ID_ARTICLE, #GET{ci_id_rubrique}, #URL_PAGE{cisf_article,id_article=#ID_ARTICLE&id_rubrique=#GET{ci_id_rubrique}}}
+                ]
+		]
+		</BOUCLE_article>
+		</B_article>
+		[(#GET{cisession}|=={oui}|oui)
+		[(#AUTORISER{creerarticledans,rubrique,#GET{ci_id_rubrique}})
+			#SET{ciok,'oui'}
+			#FORMULAIRE_CISF_ARTICLE{"new", #GET{ci_id_rubrique}, #URL_PAGE{cisf_article,id_rubrique=#GET{ci_id_rubrique}}}
+                ]
+		]
+		<//B_article>
+		
+		[(#GET{ciok}|=={non}|oui)
+			[(#REM) <!-- Auteur non connecte ou visiteur -->]
+  			<div id="contenu">
+			<INCLURE{fond=cisf_altern,env}>
+			</div>
+		]
+
+<div id="pied">
+	<div id="outils">
+	[(#SESSION{id_auteur}|!={''}|oui)
+	<INCLURE{fond=cisf_pied}{self=#SELF}{lang}>
+	]
+        </div>
+</div>
+                
+</div>
+</div>
+</body>
+</html>

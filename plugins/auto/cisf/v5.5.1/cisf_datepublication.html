@@ -1,0 +1,79 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<title>[(#VAL{cisf:date_publication}|_T|html2unicode|unicode2charset)]</title>
+
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+    
+[<script src="(#CHEMIN{prive/javascript/jquery.js})"></script>]
+
+[(#SPIP_VERSION|>={4}|non)	
+
+[<link href="(#CHEMIN{_css/cisf_datepicker.css})" rel="stylesheet" type="text/css" />]
+
+[(#LANG|cisf_datepicker_js)]
+
+<script>
+$(function() {
+	$("#datepublication").datepicker({ showOn: 'button', buttonText: '<:bouton_choisir:>', dateFormat: 'dd/mm/yy', onClose : function(){$( '#datepublication' ).focus();} });
+        
+	// Interdiction de la navigation au clavier dans le composant
+	$('#datepublication').next().attr('tabindex', '-1');
+        
+        // Masquage du composant pour les technologies d'assistance
+	$('#ui-datepicker-div').attr('aria-hidden', 'true');
+	$('#ui-datepicker-div :focusable').attr('tabindex', '-1');
+});
+</script>
+    
+]
+
+</head>
+<body>
+#SET{ciok,#ENV{id_article}|cisf_autorise_modifier_article}
+    
+<div id="pageDatePublication">
+<div class="largeur">
+
+    [(#GET{ciok}|=={oui}|oui)
+    <INCLURE{fond=noisettes/cisf_fil_ariane,env}>
+    ]
+    
+    
+<div id="milieu">
+	<div id="ext-main">
+		<div class="main">
+
+  			<div id="contenu">
+			<div class="main-content">
+			
+                                [(#GET{ciok}|=={oui}|oui)
+					#FORMULAIRE_CISF_DATEPUBLICATION{#ID_ARTICLE, #ID_RUBRIQUE, #URL_PAGE{cisf_article,id_article=#ID_ARTICLE&id_rubrique=#ID_RUBRIQUE}}
+				]
+						
+				[(#GET{ciok}|=={non}|oui)
+					[(#REM) <!-- Auteur non connecte ou visiteur -->]
+		  			<div id="contenu">
+					<INCLURE{fond=cisf_altern,env}>
+					</div>
+				]
+				
+			</div>
+			</div>
+			<div class='clearer'>&nbsp;</div>	
+		</div>
+	</div>
+</div>
+<div id="pied">
+        [(#GET{ciok}|=={oui}|oui)
+            <div><:cisf:plugin_cisf:></div>
+            <div id="cisf_copyright">[(#NOM_SITE_SPIP)]</div>
+        ]
+</div>
+ 
+</div>
+</div>
+</body>
+</html>

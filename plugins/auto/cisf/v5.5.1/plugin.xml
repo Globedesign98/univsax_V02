@@ -1,0 +1,49 @@
+<plugin>
+	<nom>cisf : Saisie facile</nom>
+	<auteur>&#169; C. Imberti</auteur>
+	<icon>pyramides-32.png</icon>
+	<licence>[GNU/GPLv3->http://www.gnu.org/licenses/gpl-3.0.html]</licence>
+
+	<lien></lien>
+	<version>5.5.1</version>
+	<etat>stable</etat>
+    <slogan>Saisie facile</slogan>
+    <description>
+    Auteur : Ministère de la Transition écologique et de la Cohésion des Territoires (MTECT) - C. Imberti<br />
+    Ce plugin permet de cr&#233;er et modifier un article directement sur le site public.
+	</description>
+	<prefix>cisf</prefix>
+	<fonctions>cisf_fonctions.php</fonctions>
+	<options>cisf_options.php</options>
+	<pipeline>
+		<nom>porte_plume_barre_pre_charger</nom>
+		<inclure>inc/cisf_porte_plume.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>porte_plume_barre_charger</nom>
+		<inclure>inc/cisf_porte_plume.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>formulaire_charger</nom>
+		<inclure>inc/cisf_pipeline.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>affichage_final_prive</nom>
+		<inclure>inc/cisf_pipeline.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>affichage_final</nom>
+		<inclure>inc/cisf_pipeline.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>post_insertion</nom>
+		<inclure>inc/cisf_pipeline.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>post_edition</nom>
+		<inclure>inc/cisf_pipeline.php</inclure>
+	</pipeline>
+
+	<necessite id="SPIP" version='[4.0.0;4.*]' />
+
+</plugin>

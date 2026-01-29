@@ -1,0 +1,62 @@
+#CACHE{0}
+[<p class='formulaire_ok'>(#ENV*{message_ok})</p>]
+[<p class='formulaire_erreur'>(#ENV*{message_erreur})</p>]
+	<form action='#ENV{action}' method='post' name="formulaire">
+
+		<BOUCLE_article(ARTICLES){id_article}{statut IN (prepa,prop,publie,poubelle,refuse,archive)}>
+			[(#REM) declarer les hidden qui declencheront le service du formulaire 
+			parametre : url d'action ]
+			#ACTION_FORMULAIRE{#ENV{action}}
+                    
+		<div id="boxcentrale"><div class="innercentrale">
+                <div class="entete-formulaire">        
+                    <h1><:cisf:date_publication:></h1>
+                    <div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+                </div>
+
+                <div class="formulaire_spip">
+
+#SET{cimodif,''}
+[(#STATUT|=={publie}|oui)
+	#SET{cimodif,'oui'}
+]
+[(#STATUT|=={prop}|oui)
+	[(#CONFIG{post_dates}|=={non}|oui)
+	#SET{cimodif,'oui'}
+	]
+]
+		
+                    [(#GET{cimodif}|=={oui}|oui)
+                            <fieldset class="motcle">
+                            <legend class="motcle"><:cisf:date_publication:></legend>
+                            <div>
+                                <div class="editer_parent[ (#ENV*{erreurs}|table_valeur{datepublication}|oui)erreur]"></div>
+                                <div>
+                                <label for="datepublication"><:cisf:eq_date_format:> <em class="aide">#AIDER{artdate}</em></label>
+                                <input [(#SPIP_VERSION|>={4}|oui)class='date formo'] type='text' name='datepublication' id='datepublication' value="[(#DATE|affdate{'d/m/Y'})]" size='10' maxlength='10' >
+                                </div>
+                                <div>
+                                <label for='heurepublication'><:cisf:eq_heure_format:> </label>
+                                <input type='text' name='heurepublication' id='heurepublication' class='fondl[(#SPIP_VERSION|>={4}|oui) formo heure]' value="[(#DATE|affdate{'H:i'})]" size='5' maxlength='5' >
+                                </div>
+                            </div>  
+                            </fieldset>
+
+                            <div class="cadrevalider">
+                            <input type="submit" name="enregistrer" value="<:bouton_enregistrer:>" class="bouton_valider">
+                            <input type="submit" name="annuler" value="<:cisf:eq_annuler:>" class="bouton_valider">
+                            </div>
+                    ]
+
+                    [(#GET{cimodif}|=={oui}|non)
+                    <div class="texte"><:cisf:eq_article_non_publie:></div>
+                    ]
+                </div>
+		
+		</div></div>
+		</BOUCLE_article>
+		
+	</form>	
+[(#SPIP_VERSION|>={4}|oui)	
+<INCLURE{fond=formulaires/dateur/inc-dateur,heure_pas} />
+]

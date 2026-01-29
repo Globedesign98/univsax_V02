@@ -1,0 +1,48 @@
+#CACHE{0}
+
+<B_widgets>
+<div id="tableauwidget">
+<table class="forme" aria-label="<:cisf:widget_article:>">
+        <thead>
+        <tr>
+                <th id="colw1" class="forme"><:cisf:widget_article:></th>
+                <th id="colw2" class="forme"><:cisf:eq_raccourci:></th>
+                <th id="colw3" class="forme"><:cisf:eq_action:></th>
+        </tr>
+        </thead>
+        <BOUCLE_widgets(CIWIDGET ciwidget_liens){id_objet}{objet}{par id_widget}{statut?}>
+                #SET{ci_type_inclus,'non'}
+                <BOUCLE_type_document(TYPES_DOCUMENTS){extension}>
+                #SET{ci_type_inclus,#INCLUS}
+                </BOUCLE_type_document>					
+        <tr>
+                <td headers="colw1" class="formecoltexte">
+                <div class="presentation">    
+                    <div class="vignette">
+                        [(#TYPE_WIDGET|ciwidget_vignette_type_widget)]
+                    </div>
+                    <div class="description">    
+                        [(#VU|=={oui}|oui)<span class="vu"><img src='#CHEMIN_IMAGE{cisf-vu-16-10.png}' width='16' height='10' alt='<:medias:document_vu|attribut_html:>' /></span> ]
+                        <span class="titre [(#EDIT{titre})]">
+                                [(#TITRE|oui)#TITRE]
+                                [(#TITRE|non)
+                                        <i class="sanstitre"><:info_sans_titre:></i>
+                                ]
+                        </span>
+                    </div>
+                </div>
+                </td>
+                <td headers="colw2" class="forme">
+		[(#ID_WIDGET|cisf_ciwidget_raccourcis_widget{#TYPE_WIDGET})]
+                </td>
+                <td headers="colw3" class="forme formecolw3">
+                <div class="bloc_action_pj">
+                <a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_widget_modifier[-(#TYPE_WIDGET)][-(#ID_WIDGET)]})]" onclick="cilien('bt_widget_modifier[-(#TYPE_WIDGET)][-(#ID_WIDGET)]'); return false;" class="bouton_doc_modifier"><:cisf:eq_modifier:></a>
+                <a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_widget_supprimer#ID_WIDGET})]" onclick="cilien('bt_widget_supprimer#ID_WIDGET'); return false;" class="bouton_doc_supprimer"><:cisf:eq_supprimer:></a>
+                </div>
+                </td>
+        </tr>
+        </BOUCLE_widgets>
+</table>
+</div>
+</B_widgets>

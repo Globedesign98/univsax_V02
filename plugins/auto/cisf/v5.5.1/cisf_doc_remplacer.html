@@ -1,0 +1,127 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<title>[(#VAL{cisf:eq_remplacer_ce_doc}|_T|html2unicode|unicode2charset)]</title>
+
+[(#SET{cibigup,[(#VAL|cisf_utiliser_bigup)]})]
+
+[(#GET{cibigup}|oui)
+#INSERT_HEAD
+]
+
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+</head>
+<body>
+#SET{ciok,#ENV{id_article}|cisf_autorise_modifier_article}
+
+<div id="pagedocument">
+
+<div class="largeur">
+
+    [(#GET{ciok}|=={oui}|oui)
+    <INCLURE{fond=noisettes/cisf_fil_ariane,env}>
+    ]
+
+    <div id="milieu">
+    <div id="ext-main">
+    <div class="main">
+    <div id="contenu">
+    <div class="main-content">
+
+            [(#GET{ciok}|=={oui}|non)
+                    [(#REM) <!-- Auteur non connecte -->]
+                    <div id="contenu">
+                    <INCLURE{fond=cisf_altern,env}>
+                    </div>
+            ]
+
+            <BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+
+            #SET{ci_distant,'non'}
+
+            <div id="boxcentrale"><div class="innercentrale">
+            [(#GET{ciok}|=={oui}|oui)
+                <div class="entete-formulaire">        
+                    <h1><:cisf:eq_remplacer_ce_doc:></h1>
+                    <div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+
+                    [(#VAL|cisf_lien_ancien_upload)]
+
+                </div>
+            ]
+            
+            <div class="chapo_formulaire">
+            <B_documents>
+            <BOUCLE_documents(DOCUMENTS){id_document}{tout}>
+                    #SET{ci_type_inclus,'non'}
+                    <BOUCLE_type_document(TYPES_DOCUMENTS){extension}>
+                    #SET{ci_type_inclus,#INCLUS}
+                    </BOUCLE_type_document>
+
+                    #SET{ci_distant,#DISTANT}
+
+                    <div class="texte">						
+                    [(#GET{ciok}|=={oui}|oui)
+                            [(#GET{ci_type_inclus}|=={image}|oui)
+                            <a href="[(#URL_PAGE{cisf_affiche_image}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_document,#ID_DOCUMENT})]" class="spip_out" onclick="window.open(this.href, 'affiche_image', 'height=[(#HAUTEUR)], width=[(#LARGEUR)], top=20, left=20, toolbar=no, menubar=no, location=no, resizable=yes, scrollbars=yes, status=no'); return false;"  title="<:cisf:eq_lien_image_gd_format:>"><img class="image_reduite" src="[(#LOGO_DOCUMENT|image_reduire{600,0}|extraire_attribut{'src'})]" alt=""></a>
+                            <a href="[(#URL_PAGE{cisf_affiche_image}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_document,#ID_DOCUMENT})]" class="document gisehleft" onclick="window.open(this.href, 'affiche_image', 'height=[(#HAUTEUR)], width=[(#LARGEUR)], top=20, left=20, toolbar=no, menubar=no, location=no, resizable=yes, scrollbars=yes, status=no'); return false;" title="<:cisf:eq_lien_image_gd_format:>">[(#TITRE|supprimer_numero)]</a> ([(#FICHIER|basename)][ - <:cisf:eq_format:> (#TYPE_DOCUMENT)][ - (#TAILLE|taille_en_octets)])
+                            ]
+                            [(#GET{ci_type_inclus}|=={embed}|oui)
+                            <a href="[(#URL_DOCUMENT|attribut_url)]" class="spip_out" title="<:cisf:eq_ouvre_document:> [(#TITRE|supprimer_numero)] <:cisf:eq_dans_fenetre:>"><img class="image_reduite" src="[(#LOGO_DOCUMENT|image_reduire{600,0}|extraire_attribut{'src'})]" alt=""></a>
+                            <a href="[(#URL_DOCUMENT|attribut_url)]" class="document gisehleft" title="<:cisf:eq_ouvre_document:> [(#TITRE|supprimer_numero)] <:cisf:eq_dans_fenetre:>">[(#TITRE|supprimer_numero)]</a> ([(#FICHIER|basename)][ - <:cisf:eq_format:> (#TYPE_DOCUMENT)][ - (#TAILLE|taille_en_octets)])
+                            ]
+                            [(#GET{ci_type_inclus}|=={non}|oui)
+                            <a href="[(#URL_DOCUMENT|attribut_url)]" class="document gisehleft" title="<:cisf:eq_ouvre_document:> [(#TITRE|supprimer_numero)] <:cisf:eq_dans_fenetre:>" target="_blank">[(#TITRE|supprimer_numero)]</a> ([(#FICHIER|basename)][ - <:cisf:eq_format:> (#TYPE_DOCUMENT)][ - (#TAILLE|taille_en_octets)])
+                            ]
+                    ]
+                    </div>
+            </BOUCLE_documents>
+            </B_documents>
+					
+[(#GET{ciok}|=={oui}|oui)
+	[(#GET{ci_distant}|=={oui}|non)
+		[<div class="poidsmax"><:cisf:eq_poidsmax:><span id="cisf_poids"> (#ID_ARTICLE|cisf_upload_max_filesize)</span></div>]
+	]
+            </div>
+        
+
+
+        #SET{ciok,''}
+        [(#AUTORISER{modifier,document,#ID_DOCUMENT}|oui)
+                #SET{ciok,'oui'}
+        ]
+        [(#GET{ciok}|non)
+                <h3><:cisf:pas_droit_modifier_doc:></h3>
+        ]
+        [(#GET{ciok}|oui)
+                <div class="cadre-formulaire-editer[(#ENV{popin,''}|oui)popin]">
+                <div class="ajax">
+                #FORMULAIRE_CISF_EDITER_DOCUMENT{#ID_DOCUMENT,#ENV{parent,''},#ENV{redirect,''},#ENV{lier_trad}}
+                </div>
+                </div>
+        ]
+	
+]
+		
+
+				</div></div>
+				</BOUCLE_article>	
+    </div>
+    </div>
+    <div class='clearer'>&nbsp;</div>	
+    </div>
+    </div>
+    </div>
+<div id="pied">
+        [(#GET{ciok}|=={oui}|oui)
+            <div><:cisf:plugin_cisf:></div>
+            <div id="cisf_copyright">[(#NOM_SITE_SPIP)]</div>
+        ]
+</div>
+ 
+</div>
+</div>
+</body>
+</html>

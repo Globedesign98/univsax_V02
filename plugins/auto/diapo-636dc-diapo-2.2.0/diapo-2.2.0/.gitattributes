@@ -1,0 +1,17 @@
+* text=auto !eol
+/diapo.css -text
+/diapo.css.html -text
+/diapo.html -text
+/diapo.js.html -text
+/diapo_img.html -text
+/diapo_options.php -text
+/diapo_pipelines.php -text
+formulaires/configurer_diapo.html -text
+images/loading.gif -text
+img_pack/loading.gif -text
+lang/diapo_de.php -text
+lang/diapo_en.php -text
+lang/diapo_fr.php -text
+modeles/diapo.html -text
+/paquet.xml -text
+prive/squelettes/contenu/configurer_diapo.html -text

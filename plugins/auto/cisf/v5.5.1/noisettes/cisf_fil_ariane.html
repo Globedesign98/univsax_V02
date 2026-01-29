@@ -1,0 +1,24 @@
+#CACHE{0}
+    <div id="bando_haut">
+        <div id="cisf_bando">
+            <nav role="navigation" aria-label="<:cisf:vous_etes_ici:>">
+                    [(#SET{ci_previsu_rub,'preview'})]
+                    <BOUCLE_rub_previsu(RUBRIQUES){id_rubrique}{statut=publie}>
+                    [(#SET{ci_previsu_rub,''})]
+                    </BOUCLE_rub_previsu>
+
+                    <div id="boxnavpath"><div id="navpath">
+                            <a href="[(#URL_PAGE{sommaire}|parametre_url{var_mode,#GET{ci_previsu_rub}})]"><:cisf:eq_accueil:></a>
+                            <BOUCLE_chem_nav(HIERARCHIE){id_article}>
+                            &gt; <a href="[(#URL_RUBRIQUE|parametre_url{var_mode,#GET{ci_previsu_rub}})]">[(#TITRE|supprimer_numero)]</a>
+                            </BOUCLE_chem_nav>
+                            <BOUCLE_entete_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+                            [&gt; <span aria-current="page">(#TITRE|supprimer_numero)</span>]
+                            </BOUCLE_entete_article>    
+                    </div></div>
+            </nav>
+            <div id="cisf_plugin" aria-hidden="true">
+                <:cisf:plugin_cisf:>
+            </div>    
+        </div>
+    </div>

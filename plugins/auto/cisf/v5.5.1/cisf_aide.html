@@ -1,0 +1,49 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<title>[(#VAL{cisf:aide_titre1}|_T|html2unicode|unicode2charset)]</title>
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+</head>
+<body>
+<div id="page">
+
+<div id="milieuf2">
+	<div id="ext-main">
+		<div class="main">
+
+  			<div id="contenu">
+			<div class="main-content">
+				<h1 class="invisible"><:cisf:eq_contenu:></h1>
+        		    	<div class="texte"><a href="javascript:window.close()"><:cisf:eq_fermer_fenetre:></a></div>
+
+                                <h2><:cisf:aide_titre1:></h2>
+                                <div class="texte">
+                                    <div><:cisf:aide_texte1:></div>
+                                    <br/>
+                                    [(#PLUGIN{porte_plume}|oui)
+                                    <div><:barreoutils:barre_intertitre:> : CTRL + H</div>
+                                    <div><:barreoutils:barre_gras:> : CTRL + B</div>
+                                    <div><:barreoutils:barre_italic:> : CTRL + I</div>
+                                    ]
+                                    <div><:cisf:barre_cisf_tableau:> : CTRL + T</div>
+                                    <div><:cisf:eq_ajout_doc:> : CTRL + D</div>
+                                    <div><:cisf:eq_ajout_img:> : CTRL + M</div>
+                                    [(#PLUGIN{porte_plume}|oui)
+                                    <div><:barreoutils:barre_lien:> : CTRL + L</div>
+                                    <div><:barreoutils:barre_quote:> : CTRL + Q</div>
+                                    ]
+                                </div>
+			</div>
+			</div>
+			<div class='clearer'>&nbsp;</div>	
+		</div>
+	</div>
+</div>
+<div id="pied">
+</div>
+ 
+</div>
+</body>
+</html>

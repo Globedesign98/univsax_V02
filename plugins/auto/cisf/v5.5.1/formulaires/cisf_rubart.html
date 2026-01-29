@@ -1,0 +1,43 @@
+#CACHE{0}
+[<p class='formulaire_ok'>(#ENV*{message_ok})</p>]
+[<p class='formulaire_erreur'>(#ENV*{message_erreur})</p>]
+	<form action='#ENV{action}' method='post' name="formulaire">
+
+		<BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+		<div id="boxcentrale"><div class="innercentrale">
+                <div class="entete-formulaire">        
+                    <h1><:cisf:eq_rubart:></h1>
+                    <div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+                </div>
+
+                <div class="formulaire_spip">
+		
+			<fieldset class="motcle">
+			<legend class="motcle">Rubrique de rattachement de l'article</legend>
+			<div id="rubart">
+	[<ul><li class="editer_parent[ (#ENV*{erreurs}|table_valeur{id_rubrique}|oui)erreur]">
+				(#VAL|cisf_chercher_rubrique{#ENV{id_article},#ID_RUBRIQUE,'article',#ENV{id_secteur},#CONFIG{restreint},0,form_simple})
+	    </li></ul>]
+			</div>
+			</fieldset>
+			
+	
+			[(#REM) declarer les hidden qui declencheront le service du formulaire 
+			parametre : url d'action ]
+			#ACTION_FORMULAIRE{#ENV{action}}
+
+			<input name='id_article' type="hidden" value='#ID_ARTICLE'>
+			<input name='id_rubrique' type="hidden" value='#ID_RUBRIQUE'>
+			
+			<div class="cadrevalider">
+			<input type="submit" name="enregistrer" value="Enregistrer" class="bouton_valider">
+
+			<input type="submit" name="annuler" value="Annuler" class="bouton_valider">
+			</div>
+			
+			
+                </div>
+		</div></div>
+		</BOUCLE_article>
+		
+	</form>	

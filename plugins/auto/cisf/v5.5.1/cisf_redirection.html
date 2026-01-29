@@ -1,0 +1,74 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<title>[(#VAL{info_redirection}|_T|html2unicode|unicode2charset)]</title>
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+</head>
+<body>
+#SET{ciok,#ENV{id_article}|cisf_autorise_modifier_article}
+    
+<div id="page">
+<div class="largeur">
+
+    [(#GET{ciok}|=={oui}|oui)
+    <INCLURE{fond=noisettes/cisf_fil_ariane,env}>
+    ]
+
+<div id="milieu">
+	<div id="ext-main">
+		<div class="main">
+
+  			<div id="contenu">
+			<div class="main-content">
+			
+				<BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+                                [(#GET{ciok}|=={oui}|oui)
+                                        #FORMULAIRE_CISF_REDIRECTION{#ID_ARTICLE, #ID_RUBRIQUE, #URL_PAGE{cisf_article,id_article=#ID_ARTICLE&id_rubrique=#ID_RUBRIQUE}}
+				]
+                                
+                                #SET{ciredirection,#VIRTUEL*}
+				</BOUCLE_article>
+
+				[(#GET{ciok}|=={non}|oui)
+					[(#REM) <!-- Auteur non connecte ou visiteur -->]
+		  			<div id="contenu">
+					<INCLURE{fond=cisf_altern,env}>
+					</div>
+				]
+
+			</div>
+			</div>
+			<div class='clearer'>&nbsp;</div>	
+		</div>
+		
+		[(#GET{ciok}|=={oui}|oui)
+		<div id="droite">
+			<div id="menu2">				
+				<div class="aidecadregris">
+				<:cisf:eq_redirection_aide:> 
+				</div>
+				[(#GET{ciredirection}|!={''}|oui)
+				<div class="aidecadregris">
+				<:cisf:eq_redirection_supprimer:>
+				</div>
+				]
+				
+			</div>
+		</div>
+		]
+		
+	</div>
+</div>
+<div id="pied">
+        [(#GET{ciok}|=={oui}|oui)
+            <div><:cisf:plugin_cisf:></div>
+            <div id="cisf_copyright">[(#NOM_SITE_SPIP)]</div>
+        ]
+</div>
+ 
+</div>
+</div>
+</body>
+</html>

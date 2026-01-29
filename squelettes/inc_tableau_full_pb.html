@@ -1,0 +1,147 @@
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Nom</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Prénom</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Email</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Téléphone</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Adresse</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Code</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Ville</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Pays</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Sexe</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Age</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Santé</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Végétarien</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Hebergement</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Auditeur</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Paiement</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Date</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Contact</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Prénom</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Adresse</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Téléphone</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Ecole</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Prof</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Préparation</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Saxophone</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Bec</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Quatuor</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Ensemble</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Painting</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Impovisation</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Remarques</strong></div></td>
+  </tr>
+  <tr>
+    <td width="156" align="left" valign="top" nowrap="nowrap" bgcolor="#f9f9f9"><BOUCLE_student(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}>
+      <div class="border1">[<strong>(#TITRE)</strong><br />
+        ]</div>
+      </BOUCLE_student></td>
+    <td width="131" align="left" valign="top" nowrap="nowrap" bgcolor="#f9f9f9"><BOUCLE_student2(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}>
+      <div class="border1">[(#PRENOM)<br />
+        ]</div>
+      </BOUCLE_student2></td>
+    <td width="164" align="left" valign="top" nowrap="nowrap" bgcolor="#f9f9f9"><BOUCLE_student3(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}> <BOUCLE3(AUTEURS){id_article}>
+      <div class="border1">[<a href="mailto:#EMAIL" class="a_gris_underline">(#EMAIL)</a>
+        ]</div>
+      </BOUCLE3>
+      </BOUCLE_student3>
+      </div></td>
+    <td width="136" align="left" valign="top" nowrap="nowrap" bgcolor="#FFFFFF"><BOUCLE_student4(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}>
+      <div class="border1">[(#PHONE)<br />
+        ]</div>
+      </BOUCLE_student4></td>
+      
+    <td width="200px" align="left" valign="top" bgcolor="#f9f9f9">
+    <BOUCLE_student123(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border3">[(#ADRESSE) ]</div>
+     </BOUCLE_student123></td>
+    <td width="2%" align="left" valign="top" bgcolor="#FFFFFF">
+    <BOUCLE_student124(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border1">[(#POSTAL) ]</div>
+     </BOUCLE_student124></td>
+    <td width="2%" align="left" valign="top" bgcolor="#f9f9f9">
+    <BOUCLE_student125(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border1">[(#VILLE) ]</div>
+     </BOUCLE_student125></td>
+    
+    <td width="121" align="left" valign="top" nowrap="nowrap" bgcolor="#f9f9f9"><BOUCLE_student55(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}>
+      <div class="border1">[(#PAYS)<br />
+        ]</div>
+      </BOUCLE_student55></td>
+    <td width="20" align="center" valign="top" nowrap="nowrap" bgcolor="#FFFFFF"><BOUCLE_student6(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}>
+      <div class="border1">[(#SEXO|couper{1})<br />
+        ]</div>
+      </BOUCLE_student6></td>
+    <td width="20" align="center" valign="top" nowrap="nowrap" bgcolor="#f9f9f9"><BOUCLE_student7(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}>
+      <div class="border1">[(#AGE)<br />
+        ]</div>
+      </BOUCLE_student7></td>
+    <td width="2%" align="left" valign="top" bgcolor="#f9f9f9">
+    <BOUCLE_student130(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}>
+    <div class="border3">[(#SANTE) ]</div>
+    </BOUCLE_student130></td>
+    <td width="20" align="center" valign="top" nowrap="nowrap" bgcolor="#FFFFFF"><BOUCLE_student8(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}>
+      <div class="border1">[(#VEGETARIEN)<br />
+        ]</div>
+      </BOUCLE_student8></td>
+    <td width="20" align="center" valign="top" nowrap="nowrap" bgcolor="#f9f9f9"><BOUCLE_student9(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{auditeur==^[nN]}{0,80}>
+      <div class="border1">[(#HEBERGEMENT)<br />
+        ]</div>
+      </BOUCLE_student9></td>
+    <td width="1%" align="left" valign="top" bgcolor="#FFFFFF">
+    <BOUCLE_student126(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border1">[(#AUDITEUR) ]</div>
+    </BOUCLE_student126></td>
+    <td width="81" align="center" valign="top" nowrap="nowrap" bgcolor="#FFFFFF"><BOUCLE_student10(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}>
+      <div class="border1">[(#PAIEMENT)<br />
+        ]</div>
+      </BOUCLE_student10></td>
+    <td width="81" align="center" valign="top" nowrap="nowrap" bgcolor="#f9f9f9"><BOUCLE_student11(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}>
+      <div class="border1">[(#DATE|affdate{'d/m/y'})<br />
+        ]</div>
+      </BOUCLE_student11></td>
+      
+      
+    <td width="5%" align="left" valign="top" bgcolor="#f9f9f9">
+    <BOUCLE_student110(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border1">[(#CONTACT_NOM) ]</div>
+    </BOUCLE_student110></td>
+    <td width="5%" align="left" valign="top" bgcolor="#FFFFFF">
+    <BOUCLE_student111(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border1">[(#CONTACT_PRENOM) ]</div>
+    </BOUCLE_student111></td>
+    <td width="8%" align="left" valign="top" bgcolor="#f9f9f9">
+    <BOUCLE_student112(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border3">[(#CONTACT_ADRESSE) ]</div>
+    </BOUCLE_student112></td>
+    <td width="6%" align="left" valign="top" bgcolor="#FFFFFF">
+      <BOUCLE_student113(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border1">[(#CONTACT_TEL) ]</div>
+    </BOUCLE_student113></td>
+    <td width="5%" align="left" valign="top" bgcolor="#FFFFFF">
+      <BOUCLE_student115(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border3">[(#ECOLE) ]</div>
+    </BOUCLE_student115></td>
+    <td width="7%" align="left" valign="top" bgcolor="#f9f9f9">
+    <BOUCLE_student116(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border3">[(#PROF) ]</div>
+    </BOUCLE_student116></td>
+    <td width="11%" align="left" valign="top" bgcolor="#FFFFFF">
+    <BOUCLE_student117(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border3">[(#PIECE)]</div>
+    </BOUCLE_student117><br /></td>
+    <td width="7%" align="left" valign="top" bgcolor="#f9f9f9">
+    <BOUCLE_student118(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}>
+    <div class="border3">[(#TYPE_SAXO) ]</div>
+    </BOUCLE_student118></td>
+    <td width="7%" align="left" valign="top" bgcolor="#f9f9f9">
+    <BOUCLE_student1180(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}>
+    <div class="border3">[(#TYPE_BEC) ]</div>
+    </BOUCLE_student1180></td>
+    <td width="1%" align="left" valign="top" bgcolor="#FFFFFF">
+    <BOUCLE_student119(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border1">[(#QUATUOR) ]</div>
+    </BOUCLE_student119></td>
+    <td width="1%" align="left" valign="top" bgcolor="#FFFFFF">
+    <BOUCLE_student120(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border1">[(#ENSEMBLE) ]</div>
+    </BOUCLE_student120></td>
+    <td align="left" valign="top" bgcolor="#FFFFFF">
+      <BOUCLE_student121(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border1">[(#PAINTING) ]</div>
+    </BOUCLE_student121></td>
+    <td align="left" valign="top" bgcolor="#FFFFFF">
+      <BOUCLE_student1210(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border1">[(#IMPRO) ]</div>
+    </BOUCLE_student1210></td>
+    <td align="left" valign="top" bgcolor="#FFFFFF">
+    <BOUCLE_student1211(ARTICLES){id_rubrique IN 5,7}{par date}{auditeur==^[nN]}{0,80}><div class="border1">[(#REMARQUE) ]</div>
+    </BOUCLE_student1211></td>
+  </tr>
+</table>
+</BOUCLE_student500>

@@ -1,0 +1,318 @@
+<BOUCLE_principale(ARTICLES) {id_article}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG" dir="#LANG_DIR">
+<head>
+<title>[(#TITRE|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+[<meta name="description" content="(#INTRODUCTION{150}|textebrut)" />]
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="css/modif_public.css" rel="stylesheet" type="text/css" />
+	<meta name="robots" content="none" />
+<INCLURE{fond=inc-head}>
+<?php include('head-content.php'); ?>
+<link rel="shortcut icon" href="images/favicon.ico" >
+<link href="css/ues.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	background-image: url(images/bg_top_rub.jpg);
+	background-repeat: repeat-x;
+}
+.inscription .spip-previsu {
+    display: none;
+}
+input#champ_pub_auteurs {
+    float: left;
+}
+  .pro_bouton{
+	display:inline-block;
+   border: 1px solid #DDD;
+   border-radius: 3px;
+   text-shadow: 0 1px 1px white;
+   box-shadow:0 1px 1px #fff;
+   font: bold 11px Sans-Serif;
+   line-height:15px;
+   padding: 2px 10px;
+   white-space: nowrap;
+   vertical-align: middle;
+   color: #666;
+   background: transparent;
+   cursor: pointer;
+   border-color: #ddd;
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	filter:none;
+   background-color:#E0E0E0;
+   background: -webkit-linear-gradient(top, white, #E0E0E0);
+   background:    -moz-linear-gradient(top, white, #E0E0E0);
+   background:     -ms-linear-gradient(top, white, #E0E0E0);
+   background:      -o-linear-gradient(top, white, #E0E0E0);
+   background:      linear-gradient(top, white, #E0E0E0);
+   -pie-background:      linear-gradient(top, white, #E0E0E0);
+   box-shadow:         0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;}
+   .pro_bouton:hover{ box-shadow:inset 0 0 3px #fff;border-color: #D6D4D4; text-decoration:none;}
+.cadre_box {
+    background-color: #f0eeee;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin: 3px 0;
+    padding: 20px;
+    position: relative;
+    width: 94%;
+}
+.editer_statut.statut_prepa {
+    float: left;
+    padding: 0;
+    text-align: left;
+    width: 220px;
+}
+.formulaire_spip ul li.valide {
+    clear: none;
+    float: left;
+    width: 250px;
+}
+.menu_pub {
+    margin: 10px 25px 15px 0;
+    text-align: right;
+}
+.menu_pub .pro_btn {
+    font-size: 12px;
+    padding: 5px 25px;
+}
+#ok .spip-previsu {
+    display: none;
+}
+.xxx #cboxLoadedContent {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.txt_10 {
+    color: #666;
+    font-size: 10px;
+}
+</style>
+</head>
+<body onload="MM_preloadImages('images/bt_form.jpg')" class="inscription">
+<div align="center">
+<?php include('includes/bloc_rub_forum.php'); ?>
+<INCLURE{fond=inc-menu2012}>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="985" valign="top" class="bg_menu_border">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#212020"><table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top">
+        <table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top"><table width="485" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="485">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><img src="images/titre_inscriptions.jpg" alt="Inscription &agrave; l'Universit&eacute; de Saxophone" width="136" height="23" /></td>
+          </tr>
+          <tr>
+            <td class="txt_jaune11b">Inscription &agrave; l'Universit&eacute; Europ&eacute;enne de Saxophone - 2025
+          </td></tr>
+          <tr>
+            <td valign="top" class="txt_blc12"><div align="justify"><br>
+              </div></td>
+          </tr>
+          <tr>
+            <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+            
+           </td>
+          </tr>
+          <tr>
+            <td>
+            
+            <div class="modifier" align="left">
+<?php if ($auteur_session) { ?>
+<div class="">
+ #FORMULAIRE_EDITER_ARTICLE{#ID_ARTICLE,#ID_RUBRIQUE, spip.php?page=inscription_ok&amp;#ENV{id_article}&amp;var_mode=preview}</div>
+<?php } else { ?>
+<p class="txt_blc">Pour compléter le formulaire d'inscription, vous devez vous identifier.</p>
+<?php } ?>
+<div class="spacer"> </div>
+</div>
+            
+            
+            </td>
+          </tr>
+          
+        </table></td>
+        <td align="right" valign="top"><table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="right" valign="top" class="txt_gris10" ><table width="447" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="207" align="left">[(#SESSION{auth}|?{' '})
+                          [<strong>Bonjour</strong> (#SESSION{nom}|typo)]
+                          [(#SESSION{prenom}|typo)] (<a href="#URL_LOGOUT{spip.php?rubrique7}">Log out</a>)
+                          ]</td>
+    <td width="240" align="right"><script language="JavaScript">
+navvers = navigator.appVersion.substring(0,1);
+if (navvers > 3)
+   navok = true;
+else
+   navok = false;
+
+today = new Date;
+jour = today.getDay();
+numero = today.getDate();
+if (numero<10)
+   numero = "0"+numero;
+mois = today.getMonth();
+if (navok)
+   annee = today.getFullYear();
+else
+   annee = today.getYear();
+TabJour = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
+TabMois = new Array("janvier","f&eacute;vrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","d&eacute;cembre");
+messageDate = TabJour[jour] + " " + numero + " " + TabMois[mois] + " " + annee;
+   </script>
+     <script language="JavaScript">
+document.write(messageDate);
+     </script> &nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+          </tr>
+          <tr>
+            <td><img src="images/trans.gif" alt="Saxo" width="5" height="10" /></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><table width="446" border="0" cellpadding="0" cellspacing="0" class="bg_cadrec02">
+              <tr>
+                <td align="left"><img src="images/c_c01.jpg" alt="UES" width="21" height="115" /></td>
+                <td align="left" valign="top"><img src="images/UES_encard5.jpg" alt="24ème Edition UES" width="404" height="115" /></td>
+                <td align="right"><img src="images/c_c03.jpg" alt="UES Saxo" width="21" height="115" /></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><table width="446" border="0" cellpadding="0" cellspacing="0"  class="bg_cadrec02 marge_top10">
+              <tr>
+                <td width="23" align="left" valign="top"><img src="images/c_c01.jpg" alt="UES" width="21" height="115"></td>
+                <td width="424" align="left" valign="top"><table width="99%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="left" background="images/t_ibg.jpg"><img src="images/t_ues.jpg" alt="Intervenants &agrave;  l'Universit&eacute; de Saxophone" width="241" height="37"></td>
+                    </tr>
+                  <tr>
+                    <td align="left"><img src="images/trans.gif" alt="UES" width="14" height="13"></td>
+                    </tr>
+                  <tr>
+                    <td align="left"><table width="93%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="58%"><span class="txt_blc12">14 chemin de Vigneaux - Romette <br>
+                          05000 Gap FRANCE</span></td>
+                        <td width="42%">&nbsp;</td>
+                        </tr>
+                      <tr>
+                        <td colspan="2"><img src="images/trans.gif" alt="Saxo" width="5" height="8"></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                  </table></td>
+                <td width="24" align="right" valign="top"><img src="images/c_c03.jpg" alt="UES Saxo" width="21" height="115"></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><?php if ($auteur_session) { ?>
+              <br />
+              <table width="447" border="0" cellpadding="15" cellspacing="0">
+                <tr>
+                  <td align="left" valign="baseline" bgcolor="#363434"><span class="txt_blc12"><INCLURE{fond=inc_txt_register}></span></td>
+                </tr>
+  </table>
+              <?php } else { ?>
+              <?php } ?></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><table width="447" border="0" align="right" cellpadding="8" cellspacing="0">
+              <tr>
+                <td colspan="2" align="left"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+              </tr>
+              <tr>
+                <td width="37" align="center" valign="baseline" bgcolor="#363434"><span class="txt_blc12"><strong class="txt_red12b"><img src="images/Sarning.png" alt="" width="32" height="32" /></strong></span></td>
+                <td width="378" bgcolor="#363434"><span class="txt_blc12">
+                  <INCLURE{fond=inc_txt_age18}>
+                </span>                  </td>
+              </tr>
+              <tr>
+                <td colspan="2" align="left"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+              </tr>
+              <tr>
+                <td align="center" valign="baseline" bgcolor="#363434" class="txt_red12b"><strong class="txt_red12b"><img src="images/Sarning.png" alt="" width="32" height="32" /></strong></td>
+                <td bgcolor="#363434"><span class="txt_blc12">
+                  <INCLURE{fond=inc_txt_paypal}>
+                </span>
+                  </td>
+              </tr>
+          </table></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top">&nbsp;</td>
+          </tr>
+          </table></td>
+      </tr>
+    </table>
+        <?php if ($auteur_session) { ?>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                  </table>
+                  
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="marge_15">
+          <tr>
+            <td valign="top" class="txt_blc"><div style="float:left; margin:0;" class="bt_plus"><a href="spip.php?page=reglement_2023" class="mediabox boxIframe boxWidth-90% boxHeight-90%'">Règlement / Rules 2025</a>
+</div><br />
+<br /><br /><br /></td>
+          </tr>
+      </table>
+        <?php } else { ?>
+        
+        <table width="100%" border="0" cellspacing="0" cellpadding="15">
+          <tr>
+            <td class="txt_jaune11b"> You need   to register :</td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="15" cellpadding="0">
+          <tr>
+            <td width="42%" align="left" valign="top" class="txt_12blc">
+            <div class="cadre_color log_aut">[(#LOGIN_PUBLIC)]</div></td>
+            <td width="58%" align="left" valign="top"  class="txt_12blc">
+            <div class="cadre_color log_aut">[(#FORMULAIRE_INSCRIPTION)]</div></td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+        <?php } ?></td>
+        </tr>
+    </table>
+   </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/bg_bottom.jpg">
+  <tr>
+    <td><?php include('includes/menu_bas.php'); ?></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+</BOUCLE_principale>

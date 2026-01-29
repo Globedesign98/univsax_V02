@@ -1,0 +1,43 @@
+#CACHE{0}
+
+[<p class='formulaire_ok'>(#ENV*{message_ok})</p>]
+[<p class='formulaire_erreur'>(#ENV*{message_erreur})</p>]
+	<form action='#ENV{action}' method='post' name="formulaire">
+
+		<BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+		<div id="boxcentrale"><div class="innercentrale">
+                <div class="entete-formulaire">        
+                    <h1><:info_redirection:></h1>
+                    <div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+                </div>
+
+                <div class="formulaire_spip">
+		
+			
+			<div class='redirection'>
+				<div class="editer_parent[ (#ENV*{erreurs}|table_valeur{id_rubrique}|oui)erreur]">
+				<label for="virtuel"><:info_redirection:><em class="aide">#AIDER{artvirt}</em></label>
+				<input id='virtuel' name='virtuel' size='94' class='fondo' value='[(#ENV**{virtuel}|!={''}|non)http://][(#ENV**{virtuel})]' >
+			    </div>
+			</div>
+			
+			<input type="hidden" name="changer_virtuel" value="oui" >
+			<input type="hidden" name="id_article" value="#ID_ARTICLE" />
+				
+			[(#REM) declarer les hidden qui declencheront le service du formulaire 
+			parametre : url d'action ]
+			#ACTION_FORMULAIRE{#ENV{action}}
+			
+			<div class="cadrevalider">
+			<input type="submit" name="enregistrer" value="<:bouton_enregistrer:>" class="bouton_valider">
+			[(#ENV**{virtuel}|!={''}|oui)
+				<input type="submit" name="supprimer" value="<:lien_supprimer:>" class="bouton_valider">
+			]
+			<input type="submit" name="annuler" value="<:cisf:eq_annuler:>" class="bouton_valider">
+			</div>
+			
+                </div>
+		</div></div>
+		</BOUCLE_article>
+
+	</form>	

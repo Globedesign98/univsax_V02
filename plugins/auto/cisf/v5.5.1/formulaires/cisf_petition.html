@@ -1,0 +1,111 @@
+#CACHE{0}
+[<p class='formulaire_ok'>(#ENV*{message_ok})</p>]
+[<p class='formulaire_erreur'>(#ENV*{message_erreur})</p>]
+	<form action='#ENV{action}' method='post' name="formulaire">
+
+		<BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+		<div id="boxcentrale"><div class="innercentrale">
+                    <div class="entete-formulaire">        
+                        <h1><:cisf:lien_petitions:></h1>
+                        <div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+                    </div>
+
+                    <div class="formulaire_spip">
+
+			<form method="POST" name="formulaire" action="./_giseh.php?cipage=article&amp;id_rubrique=[(#ID_RUBRIQUE)][&amp;id_article=(#ID_ARTICLE)]">
+			
+			<fieldset class="motcle">
+			<legend class="motcle"><:cisf:lien_petitions:></legend>
+			<div>
+			<div class='texte'>&nbsp;</div>
+			  
+			<BOUCLE_petition(PETITIONS){id_article}>
+			<div class='texte'>
+			<input type='checkbox' name='email_unique' value='oui' id='emailunique' [(#EMAIL_UNIQUE*|=={oui}|oui)checked]>
+			<label for='emailunique'><:cisf:bouton_checkbox_signature_unique_email:></label>
+			</div>
+
+			[(#CISF_CIFORM|!={oui}|oui)
+			<div class='texte'>
+			<input type='checkbox' name='site_obli' value='oui' id='siteobli' [(#SITE_OBLI*|=={oui}|oui)checked]>
+			<label for='siteobli'><:cisf:bouton_checkbox_indiquer_site:></label>
+			</div>
+
+			<div class='texte'>
+			<input type='checkbox' name='site_unique' value='oui' id='siteunique' [(#SITE_OBLI*|=={oui}|oui)checked]>
+			<label for='siteunique'><:cisf:bouton_checkbox_signature_unique_site:></label>
+			</div>
+			]
+
+			<div class='texte'>
+			<input type='checkbox' name='message' value='oui' id='message' [(#MESSAGE*|=={oui}|oui)checked]>
+			<label for='message'><:cisf:bouton_checkbox_envoi_message:></label>
+			</div>
+			
+			<div class='texte'>&nbsp;</div>
+
+			[(#CISF_CIFORM|=={oui}|oui)
+			<div class='texte'><label for='texte_petition'><:cisf:eq_texte_descriptif_petition:></label></div>
+			]
+			[(#CISF_CIFORM|!={oui}|oui)
+			<div class='texte'><label for='texte_petition'><:cisf:texte_descriptif_petition:></label></div>
+			]
+			<TEXTAREA NAME='texte_petition'id='texte_petition' CLASS='forml' ROWS='1' COLS='10' >#TEXTE*</TEXTAREA>	
+			</BOUCLE_petition>
+			</B_petition>
+			<div class='texte'>
+			<input type='checkbox' name='email_unique' value='oui' id='emailunique'>
+			<label for='emailunique'><:cisf:bouton_checkbox_signature_unique_email:></label>
+			</div>
+			
+			[(#CISF_CIFORM|!={oui}|oui)
+			<div class='texte'>
+			<input type='checkbox' name='site_obli' value='oui' id='siteobli'>
+			<label for='siteobli'><:cisf:bouton_checkbox_indiquer_site:></label>
+			</div>
+			
+			<div class='texte'>
+			<input type='checkbox' name='site_unique' value='oui' id='siteunique'>
+			<label for='siteunique'><:cisf:bouton_checkbox_signature_unique_site:></label>
+			</div>
+			]
+			
+			<div class='texte'>
+			<input type='checkbox' name='message' value='oui' id='message'>			
+			<label for='message'><:cisf:bouton_checkbox_envoi_message:></label>
+			</div>
+			
+			<div class='texte'>&nbsp;</div>
+			[(#CISF_CIFORM|=={oui}|oui)
+			<div class='texte'><label for='texte_petition'><:cisf:eq_texte_descriptif_petition:></label></div>
+			]
+			[(#CISF_CIFORM|!={oui}|oui)
+			<div class='texte'><label for='texte_petition'><:cisf:texte_descriptif_petition:></label></div>
+			]
+			<TEXTAREA NAME='texte_petition'id='texte_petition' CLASS='forml' ROWS='1' COLS='10' ></TEXTAREA>	
+			<//B_petition>
+
+			</div>  
+			</fieldset>
+			
+			[(#REM) declarer les hidden qui declencheront le service du formulaire 
+			parametre : url d'action ]
+			#ACTION_FORMULAIRE{#ENV{action}}
+			
+			
+			<input name="cimodif_img_avant" type="hidden" value="">
+			<input name="formulaire" type="hidden" value="petition">
+			<input name="id_article" type="hidden" value="#ID_ARTICLE">
+			<input type="hidden" name="mode" value="changer_petition" >
+			<input type="hidden" name="ciaction" value="editer_article_petition" >
+			<div class="cadrevalider">
+			<input type="submit" name="enregistrer" value="<:bouton_enregistrer:>" class="bouton_valider">
+			<input type="submit" name="supprimer" value="<:lien_supprimer:>" class="bouton_valider">
+			<input type="submit" name="annuler" value="<:cisf:eq_annuler:>" class="bouton_valider">
+			</div>
+			</form>
+
+                    </div>
+		</div></div>
+		</BOUCLE_article>	
+	</form>	

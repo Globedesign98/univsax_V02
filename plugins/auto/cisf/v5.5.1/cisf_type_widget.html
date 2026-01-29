@@ -1,0 +1,84 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html lang="#LANG" dir="#LANG_DIR">
+<head>
+<title>[(#VAL{cisf:eq_ajout_widget}|_T|html2unicode|unicode2charset)]</title>
+
+[(#PLUGIN{ciwidget}|oui)
+#SET{paramcss,#REM|cisf_parametres_css_prive}
+#PIPELINE{header_prive,#INCLURE{fond=prive/squelettes/inclure/head,titre,minipres,paramcss=#GET{paramcss}}}
+<link rel="stylesheet" href="#CHEMIN{prive/ciwidget_modal.css}" type="text/css" />    
+]
+
+<meta name="robots" content="noindex, nofollow">
+[<link href="(#CHEMIN{_css/cisf_style_5.css})" rel="stylesheet" type="text/css">]
+
+<style>
+html, body {background-color:#FFFFFF;}
+</style>        
+    
+</head>
+<body>
+#SET{ciok,#ENV{id_article}|cisf_autorise_modifier_article}
+    
+<div id="pageciwidget">
+<div class="largeur">
+
+    [(#GET{ciok}|=={oui}|oui)
+    <INCLURE{fond=noisettes/cisf_fil_ariane,env}>
+    ]
+    
+<div id="milieu">
+	<div id="ext-main">
+		<div class="main">
+
+  			<div id="contenu">
+			<div class="main-content">
+			
+				<BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+                                    
+				<div id="boxcentrale"><div class="innercentrale">
+                                [(#GET{ciok}|=={oui}|oui)
+                                <br>
+				<div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+
+                                    [(#PLUGIN{ciwidget}|oui)
+                                        <h1>Choisir un widget</h1>
+                                        <div class="ciwidget_type_widget_info">
+                                            <:ciwidget:info_clic_widget:>
+                                        </div>
+                                        <div id="ciwidget_type_widget" class="ciwidget_type_widget">
+                                            [(#VAL{article}|cisf_ciwidget_affiche_types_widget{#ID_ARTICLE,#ID_RUBRIQUE})]
+                                        </div>
+                                    ]
+				]
+								
+				</div></div>
+				</BOUCLE_article>
+				
+				
+				[(#GET{ciok}|=={non}|oui)
+					[(#REM) <!-- Auteur non connecte ou visiteur -->]
+		  			<div id="contenu">
+					<INCLURE{fond=cisf_altern,env}>
+					</div>
+				]
+				
+			</div>
+			</div>
+			<div class='clearer'>&nbsp;</div>	
+		</div>
+	</div>
+</div>
+<div id="pied">
+        [(#GET{ciok}|=={oui}|oui)
+            <div><:cisf:plugin_cisf:></div>
+            <div id="cisf_copyright">[(#NOM_SITE_SPIP)]</div>
+        ]
+</div>
+ 
+</div>
+</div>
+</body>
+</html>

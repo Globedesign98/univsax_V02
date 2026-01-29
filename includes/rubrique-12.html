@@ -1,0 +1,163 @@
+[(#REM)
+	Un cache plus court, pour la boucle syndic_articles
+]#CACHE{3600}
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
+<head>
+
+<title>[(#NOM_SITE_SPIP|textebrut)][ - (#TITRE|textebrut)]</title>
+
+<INCLURE{fond=inc-head}>
+<?php include('head-content.php'); ?>
+<link rel="shortcut icon" href="images/favicon.ico" >
+<style type="text/css">
+<!--
+body {
+	background-image: url(images/bg_top_rub.jpg);
+	background-repeat: repeat-x;
+}
+-->
+</style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+</script>
+<link href="css/ues.css" rel="stylesheet" type="text/css" />
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+</head>
+
+<body>
+
+<div align="center">
+<?php include('includes/bloc_rub_forum.php'); ?>
+<INCLURE{fond=inc-menu2012}>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/bg_top_rub02.jpg">
+  <tr>
+    <td height="70" align="center" valign="top"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="950" height="70" hspace="0" vspace="0">
+      <param name="movie" value="swf/ues_ban02.swf" />
+      <param name="quality" value="high" />
+      <param name="SCALE" value="exactfit" />
+      <embed src="swf/ues_ban02.swf" width="950" height="70" hspace="0" vspace="0" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit"></embed>
+    </object></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="985" valign="top" class="bg_menu_border">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#212020"><table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top">
+        <table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top"><table width="466" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="475">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="475"><h1 class="roboto"><span class="txt_yellow txt_27">P</span>hotos UES</h1>
+                 </td>
+                </tr>
+              </table>
+              <div class="ues_trait_titre"></div>
+              </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="txt_blc txt_12"><br>
+              <BOUCLE_ruby(ARTICLES){id_rubrique}{par titre}{inverse}>
+  <h3 class="roboto font_400 txt_yellow">#TITRE</h3>
+  <div class="margin_top10"></div>
+<BOUCLE_portfolio(DOCUMENTS){id_article}{extension==jpg|png|gif}{mode=document}{doublons}{par date}>
+[<a href="#URL_DOCUMENT" class="mediabox" rel="group6" alt="">(#LOGO_DOCUMENT||image_reduire{140,0}|image_recadre{140,79})</a>]
+</BOUCLE_portfolio>
+<div class="clear"></div>
+<br />
+<br />
+<div class="ues_trait_titre"></div><br /> <br />
+  </BOUCLE_ruby><br />
+<br />
+</td>
+          </tr>
+          </table></td>
+        <td align="right" valign="top"><table width="450" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="450" align="right" valign="top" class="txt_gris10" ><script language="JavaScript">
+navvers = navigator.appVersion.substring(0,1);
+if (navvers > 3)
+   navok = true;
+else
+   navok = false;
+
+today = new Date;
+jour = today.getDay();
+numero = today.getDate();
+if (numero<10)
+   numero = "0"+numero;
+mois = today.getMonth();
+if (navok)
+   annee = today.getFullYear();
+else
+   annee = today.getYear();
+TabJour = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
+TabMois = new Array("janvier","f&eacute;vrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","d&eacute;cembre");
+messageDate = TabJour[jour] + " " + numero + " " + TabMois[mois] + " " + annee;
+        </script>
+                  <script language="JavaScript">
+document.write(messageDate);
+          </script>
+                &nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+              <td><img src="images/trans.gif" alt="Saxo" width="5" height="10"></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/c_c02.jpg">
+                <tr>
+                  <td width="5%" align="left"><img src="images/c_c01.jpg" alt="UES" width="21" height="115"></td>
+                  <td width="90%" align="left" valign="top"><img src="images/UES_encard.jpg" alt="20&egrave;me Edition UES" width="404" height="115"></td>
+                  <td width="5%" align="right"><img src="images/c_c03.jpg" alt="UES Saxo" width="21" height="115"></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><img src="images/trans.gif" alt="Saxo" width="5" height="23"></td>
+            </tr>
+            <tr>
+              <td><?php include('includes/con_sonsax.php'); ?></td>
+            </tr>
+            <tr>
+              <td><img src="images/trans.gif" alt="Saxo" width="5" height="23"></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top"><?php include('includes/con_concerts.php'); ?></td>
+            </tr>
+          </table>
+            <br>
+            <br></td>
+      </tr>
+    </table>
+</td>
+        </tr>
+    </table>
+   </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/bg_bottom.jpg">
+  <tr>
+    <td><?php include('includes/menu_bas.php'); ?></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+</BOUCLE_rubrique>

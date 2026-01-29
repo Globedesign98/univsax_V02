@@ -1,0 +1,32 @@
+#CACHE{0}
+
+[<p class='formulaire_ok'>(#ENV{message_ok})</p>]
+[<p class='formulaire_erreur'>(#ENV{message_erreur})</p>]
+	<form action='#ENV{action}' method='post' name="formulaire">
+	
+			<div class="editerdocument">
+		    <div>
+			<label for="titre" class="ftitre1"><span class="gras"><:info_titre:></span></label>			
+			[<span class='erreur_message'>(#ENV{erreurs}|table_valeur{titre})</span>]
+			<input type='text' class='formo' name='titre' id='titre' size="80"[ lang='(#LANGUE)'] value="[(#ENV**{titre})]"/>
+			</div><div>			
+			<label for="descriptif" class="ftitre1"><span class="gras"><:texte_descriptif_rapide:></span></label>
+			[<span class='erreur_message'>(#ENV{erreurs}|table_valeur{descriptif})</span>]
+			<textarea name='descriptif' id='descriptif'[ lang='(#LANGUE)'] class='forml' rows='3' cols='40'>[(#ENV**{descriptif})]</textarea>
+			</div>
+			</div>
+
+		
+		[(#REM) declarer les hidden qui declencheront le service du formulaire 
+		parametre : url d'action ]
+		#ACTION_FORMULAIRE{#ENV{action}}
+			<input type="hidden" name="ciaction" value="editer_logo" >
+			<input name='formulaire' type="hidden" value='logo_modifier'>
+			<input type="hidden" name="id_article" value=#ID_ARTICLE >
+			
+			<div class="cadrevaliderdocmodif">
+			<input type="submit" name="enregistrer" value="<:bouton_enregistrer:>" class="bouton_valider">
+			<input type="submit" name="annuler" value="<:cisf:eq_annuler:>" class="bouton_valider">
+			</div>
+
+	</form>

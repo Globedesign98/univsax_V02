@@ -1,0 +1,112 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<title>[(#VAL{cisf:eq_suivi_petition}|_T|html2unicode|unicode2charset)] [(#ENV**|cisf_title_pagination{10})]</title>
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+
+</head>
+<body>
+[(#REM) <!-- droit de voir les moderer petition -->]    
+#SET{ciok,#ENV{id_article}|cisf_autorise_modifier_article{modererpetition}}
+    
+<div id="page">
+<div class="largeur">
+
+    [(#GET{ciok}|=={oui}|oui)
+    <INCLURE{fond=noisettes/cisf_fil_ariane,env}>
+    ]
+
+<div id="milieu">
+	<div id="ext-main">
+		<div class="main">
+
+  			<div id="contenu">
+			<div class="main-content">
+			
+[(#GET{ciok}|=={oui}|non)
+	[(#REM) <!-- Auteur non connecte -->]
+        <div id="contenu">
+	<INCLURE{fond=cisf_altern,env}>
+	</div>
+]
+
+				<div id="boxcentrale"><div class="innercentrale">
+				<BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+				#SET{ci_id_article,#ID_ARTICLE}
+                [(#GET{ciok}|=={oui}|oui)
+                                <div class="entete-formulaire">        
+					<h1><:cisf:eq_suivi_petition:> : #TITRE</h1>
+					<div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+                                </div>
+
+                                <div class="formulaire_spip">
+
+	  			<div id="cisf_suiviforum">
+					
+		]				
+
+<B_signatures>
+[<div class="pagination">(#PAGINATION)</div>]
+<div>
+<ul class="forum-total">
+<BOUCLE_signatures(SIGNATURES){id_article}{pagination 10}{par id_signature}{inverse}>
+	<li>
+	<div class="forum-fil">
+                [(#GET{ciok}|=={oui}|oui)
+		<div class="com">
+			<div class="ligne-com">
+			<div class="titresujet">&nbsp;[(#NOM_EMAIL|sinon{<:petitions:sans_nom:>})]<a href="[(#URL_SITE|attribut_url)]" title="<:cisf:eq_visiter_site:> [(#NOM_SITE)] <:cisf:eq_ouvre_fenetre:>)" class="spip_out">[ (#NOM_SITE|supprimer_numero)]</a>, <:cisf:eq_le:> [(#DATE|affdate)]<:cisf:eq_a:>[(#DATE|heures)]h[(#DATE|minutes)]</div>
+			[<div class="textesujet">(#AD_EMAIL)</div>]
+			[<div class="textesujet">(#MESSAGE)</div>]
+			<div class="repondre">
+				[(#STATUT|=={poubelle}|oui)
+				 #GET{action}#SET{action,''}
+				 [(#BOUTON_ACTION{<:petitions:icone_valider_signature:>,#URL_ACTION_AUTEUR{valider_signature,#ID_SIGNATURE,#SELF|ancre_url{signature#ID_SIGNATURE}},'ajax valider'})]
+				]
+				[(#STATUT|!={poubelle}|oui)
+				 #GET{action}#SET{action,''}
+				 [(#BOUTON_ACTION{<:petitions:icone_supprimer_signature:>,#URL_ACTION_AUTEUR{supprimer_signature,#ID_SIGNATURE,#SELF|ancre_url{signature#ID_SIGNATURE}},'ajax supprimer'})]
+				]
+				[(#STATUT|in_any{#ARRAY{1,publie,2,poubelle}}|non)
+				 #GET{action}#SET{action,''}
+				 [(#BOUTON_ACTION{<:petitions:icone_relancer_signataire:>,#URL_ACTION_AUTEUR{relancer_signature,#ID_SIGNATURE,#SELF|ancre_url{signature#ID_SIGNATURE}},'ajax'})]
+				]
+			</div>
+			</div>
+		</div>
+		]
+	</div>
+	</li>
+</BOUCLE_signatures>
+</ul>
+</div>
+</B_signatures>
+				
+				
+				</div>
+				</div>
+				
+				<div class='texte'>&nbsp;</div>					
+				
+				</BOUCLE_article>	
+				</div></div>
+				
+			</div>
+			</div>
+			<div class='clearer'>&nbsp;</div>	
+		</div>
+	</div>
+</div>
+<div id="pied">
+        [(#GET{ciok}|=={oui}|oui)
+            <div><:cisf:plugin_cisf:></div>
+            <div id="cisf_copyright">[(#NOM_SITE_SPIP)]</div>
+        ]
+</div>
+ 
+</div>
+</div>
+</body>
+</html>

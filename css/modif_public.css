@@ -1,0 +1,1186 @@
+
+
+body {
+
+    background: #ffffff url("../images/background.png") repeat scroll 0 0;
+
+    margin: 20px 30px 10px;
+
+    text-align: center;
+
+}
+
+#formulaire_login label {
+
+    background: transparent none repeat scroll 0 0;
+
+    color: #fff;
+
+    padding: 0 0 3px;
+
+    width: 100%;
+
+}
+
+input.text, textarea {
+
+    background-color: #eee;
+
+    border: 1px solid #dfded7;
+
+    border-radius: 5px;
+
+    box-sizing: border-box;
+
+    color: #666666;
+
+    font-size: 12px;
+
+    padding: 5px 0 5px 10px;
+
+    width: 100%;
+
+}
+
+#documents_joints {
+
+    margin-top: 25px;
+
+}
+
+#formulaire_inscription .explication {
+
+    color: #ccc;
+
+    font-size: 12px;
+
+    margin: 0 0 20px;
+
+    padding: 0;
+
+}
+
+.margin_top20 {
+
+    margin: 20px 0 0;
+
+}
+
+.formulaire_spip.formulaire_editer.formulaire_editer_article.formulaire_editer_article-oui div ul {
+
+    list-style: outside none none;
+
+    margin: 0;
+
+    padding: 0 0 0 15px;
+
+}
+
+.annonce2 div#img_normal {
+
+    width: 200px;
+
+}
+
+#documents_joints .item {
+
+    border: 1px solid #88ab0f;
+
+    margin-bottom: 25px;
+
+    overflow: visible;
+
+    padding: 0;
+
+    text-align: center;
+
+}
+
+#champ_membre_permanents, #champ_membre_associes, #champ_membre_doctorants {
+
+    width: 541px;
+
+}
+
+#documents_joints .item {
+
+    background: #ffffff none repeat scroll 0 0;
+
+    float: left;
+
+    height: 250px;
+
+    margin: 5px;
+
+    width: 172px;
+
+}
+
+#documents_joints .item.document {
+
+    background: #dddddd none repeat scroll 0 0;
+
+}
+
+#documents_joints .item .infos {
+
+    padding: 3px 20px 20px 10px;
+
+    text-align: left;
+
+}
+
+#documents_joints .item .titrem {
+
+    background: #88ab0f none repeat scroll 0 0;
+
+    font-size: x-small;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+
+    margin-top: 0;
+
+    padding: 2px 5px 5px 17px;
+
+    position: relative;
+
+    text-align: left;
+
+}
+
+#documents_joints .item .titrem .fichier {
+
+    color: #ffffff;
+
+    display: block;
+
+    overflow: hidden;
+
+}
+
+#documents_joints .item .titrem .titre {
+
+    color: #fff;
+
+    display: block;
+
+}
+
+#documents_joints .item .titrem .image_loading {
+
+    bottom: -20px;
+
+    position: absolute;
+
+    right: 0;
+
+}
+
+#documents_joints .item .type {
+
+    font-size: x-small;
+
+}
+
+#documents_joints .item .raccourcis {
+
+    font-size: x-small;
+
+    padding: 2px;
+
+}
+
+#documents_joints .item .raccourcis span {
+
+    display: block;
+
+    font-weight: 700;
+
+    text-align: left;
+
+}
+
+#documents_joints .item div.mode {
+
+    text-align: right;
+
+}
+
+#documents_joints .item .actions {
+
+    display: block;
+
+    font-size: x-small;
+
+    margin: 10px 0 0;
+
+    padding: 0;
+
+    text-align: center;
+
+}
+
+#documents_joints .item .actions span {
+
+    display: none;
+
+}
+
+.lte7 #documents_joints .item div.mode button, .lte7 #documents_joints .item .actions button {
+
+    font-size: 11px;
+
+}
+
+#documents_joints .item .tourner {
+
+    display: none;
+
+    float: right;
+
+}
+
+#documents_joints .item .tourner button {
+
+    border: 1px solid #eeeeee;
+
+    display: block;
+
+    padding: 1px;
+
+}
+
+#documents_joints .item .tourner button img {
+
+    margin: 0;
+
+}
+
+#documents_joints .item .actions > *, #documents_joints .item .tourner, #documents_joints .item .mode {
+
+    opacity: 0.1;
+
+}
+
+#documents_joints .item .actions a.editbox {
+
+    font-weight: 700;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    width: 129px;
+
+}
+
+#documents_joints .item:hover .actions > *, #documents_joints .item:hover .tourner, #documents_joints .item:hover .mode, #documents_joints .item.hover .actions > *, #documents_joints .item.hover .tourner, #documents_joints .item.hover .mode {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.spacer {
+
+    clear: both;
+
+}
+
+.txt_15 {
+
+    font-size: 15px;
+
+}
+
+.txt_vert {
+
+    color: #88ab0f;
+
+}
+
+.modifier {
+
+    font-family: roboto;
+
+}
+
+li.editer label {
+
+    background-color: #333;
+
+    border-radius: 5px;
+
+    float: left;
+
+    font-size: 13px;
+
+    margin: 0 5px 0 0;
+
+    padding: 5px 0 5px 8px;
+
+    width: 88px;
+
+}
+
+.formulaire_spip input.text {
+
+    margin: 0;
+
+    width: 607px;
+
+}
+
+li.editer_descriptif {
+
+    display: none;
+
+}
+
+.editer.editer_surface_habitable.saisie_input > label {
+
+    width: 150px;
+
+}
+
+label {
+
+    color: #333333;
+
+    display: block;
+
+}
+
+#text_area, #champ_complement {
+
+    border: 1px solid #dfded7;
+
+}
+
+.aide {
+
+    display: none;
+
+}
+
+.editer.editer_parent {
+
+    display: none;
+
+}
+
+#champ_prix, #champ_surface_habitable, #champ_jardin, #champ_terrain, #champ_quartier, #champ_sdb, #champ_cuisine, #champ_balcon, #champ_package, #champ_aem, #joindre_distant__new {
+
+    margin: 0;
+
+    width: 99%;
+
+}
+
+.formulaire_spip .explication {
+
+    color: #999999;
+
+    font-size: 10px;
+
+    margin: 0;
+
+    padding: 0 0 0 11px;
+
+}
+
+.formulaire_spip select {
+
+    border: 1px solid #dfded7;
+
+    border-radius: 5px;
+
+    color: #666666;
+
+    float: none;
+
+    margin: 0;
+
+    padding: 3px 6px;
+
+    width: 615px;
+
+}
+
+.editer.editer_pub_auteurs.saisie_input > label, .editer.editer_pub_pages.saisie_input > label {
+
+    margin-bottom: 18px;
+
+}
+
+li.editer p.explication {
+
+    margin: 3px 23px 3px 0;
+
+}
+
+.editer.editer_prix.saisie_input > label {
+
+    width: 21px;
+
+}
+
+.editer.editer_jardin.saisie_input > label {
+
+    width: 85px;
+
+}
+
+.editer.editer_quartier.saisie_input > label {
+
+    width: 50px;
+
+}
+
+.editer.editer_sdb.saisie_input > label {
+
+    width: 74px;
+
+}
+
+.editer.editer_cuisine.saisie_input > label {
+
+    width: 45px;
+
+}
+
+.editer.editer_complement.saisie_textarea > label {
+
+    width: 250px;
+
+}
+
+.editer.editer_package.saisie_input > label {
+
+    width: 50px;
+
+}
+
+.joindre_mode__new.none-js {
+
+    display: none;
+
+}
+
+.sourceup {
+
+    display: none;
+
+}
+
+.none {
+
+}
+
+#defaultsubmit__new {
+
+    display: none;
+
+}
+
+.editer.editer_fichier_upload > label {
+
+    display: none;
+
+}
+
+.formulaire_spip .boutons {
+
+    clear: both;
+
+    margin: 20px 0 40px 12px;
+
+    padding: 0;
+
+    text-align: left;
+
+}
+
+.editer.editer_fichier_upload > div {
+
+    margin: 13px;
+
+}
+
+.raccourcis {
+
+    display: none;
+
+}
+
+h1 {
+
+    color: #666;
+
+    font-family: "Roboto",sans-serif;
+
+    font-size: 24px;
+
+    margin: 0;
+
+    text-shadow: 0 1px 2px #fff;
+
+}
+
+.bg_cadreptt {
+
+    background-color: #397a9d;
+
+    border-radius: 5px;
+
+    margin: 0 0 14px;
+
+}
+
+.instituer_objet .boutons input {
+
+    margin-right: 7px;
+
+    padding: 4px 10px;
+
+    text-align: left;
+
+}
+
+.editer_statut > label {
+
+    display: none;
+
+}
+
+.show .statut {
+
+    background-position: 10px 13px;
+
+    background-repeat: no-repeat;
+
+    height: 35px;
+
+    margin: 8px 0 0;
+
+    padding: 0 0 0 9px;
+
+    width: 100%;
+
+}
+
+.editer_statut {
+
+    margin: 0;
+
+    padding: 0;
+
+    text-align: right;
+
+}
+
+.instituer_objet .boutons {
+
+    margin: 6px 0 7px;
+
+    padding: 0;
+
+    text-align: left;
+
+}
+
+.show .statut option {
+
+    background-position: 3px 3px;
+
+    background-repeat: no-repeat;
+
+}
+
+.formulaire_editer_article .boutons .submit {
+
+    font-family: roboto;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin: 0;
+
+    padding: 20px 115px;
+
+    width: 460px;
+
+}
+
+.inscription .formulaire_spip .boutons {
+
+    padding: 0;
+
+}
+
+#joindre_upload__new .editer_fichier_upload {
+
+    background-color: #88ab0f;
+
+    border-radius: 5px;
+
+    color: #fff;
+
+    margin: 15px 12px;
+
+    padding: 20px;
+
+}
+
+.mode .bouton_action_post div button.submit {
+
+    display: none;
+
+}
+
+.actions .bouton_action_post div button.submit {
+
+    font-size: 11px;
+
+    margin: 0 0 5px;
+
+    padding: 0;
+
+    width: 152px;
+
+}
+
+.clear {
+
+    clear: both;
+
+}
+
+hr {
+
+    border: 1px dotted #666;
+
+}
+
+.cadre-icone {
+
+    display: none;
+
+}
+
+.bt_manage {
+
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #615f60, #615f60) repeat scroll 0 0;
+
+    border: 1px solid #ddd;
+
+    border-radius: 4px;
+
+    box-shadow: 1px 1px 4px #999;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    filter: none;
+
+    font-size: 12px;
+
+    line-height: 15px;
+
+    margin: 0 0 5px;
+
+    padding: 3px 6px;
+
+    text-decoration: none;
+
+    vertical-align: middle;
+
+    white-space: nowrap;
+
+}
+
+#admin .bt_manage:hover, .bt_manage:hover {
+
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , white, #e0e0e0) repeat scroll 0 0;
+
+    border-color: #d6d4d4;
+
+    box-shadow: 0 0 3px #fff inset;
+
+    color: #166181;
+
+    filter: none;
+
+    text-decoration: none;
+
+}
+
+.pro_btn, .pro_description-light, .pro_exampletip {
+
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #b4ce26, #9eb80f) repeat scroll 0 0;
+
+    border: 1px solid #ddd;
+
+    border-radius: 3px;
+
+    box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.25), 0 0 3px #a7c215 inset;
+
+    color: #666;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    font: bold 11px/15px sans-serif;
+
+    padding: 8px 10px;
+
+    text-shadow: 0 1px 7px #666;
+
+    vertical-align: middle;
+
+    white-space: nowrap;
+
+}
+
+.pro_btn.pro_small {
+
+    font-size: 12px;
+
+}
+
+.pro_btn:hover, .pro_description-light:hover, .pro_exampletip:hover {
+
+    border-color: #d6d4d4;
+
+    box-shadow: 0 0 3px #fff inset;
+
+    color: #fff;
+
+    text-decoration: none;
+
+}
+
+.pro_bouton {
+
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , white, #e0e0e0) repeat scroll 0 0;
+
+    border: 1px solid #ddd;
+
+    border-radius: 3px;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 0 3px #fff inset;
+
+    color: #666;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    filter: none;
+
+    font: bold 11px/15px sans-serif;
+
+    padding: 2px 10px;
+
+    text-shadow: 0 1px 1px white;
+
+    vertical-align: middle;
+
+    white-space: nowrap;
+
+}
+
+.pro_bouton:hover {
+
+    border-color: #d6d4d4;
+
+    box-shadow: 0 0 3px #fff inset;
+
+    text-decoration: none;
+
+}
+
+.cadre_box {
+
+    background-color: #f0eeee;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    margin: 3px 0;
+
+    padding: 20px;
+
+    position: relative;
+
+    width: 94%;
+
+}
+
+.editer_statut.statut_prepa {
+
+    float: left;
+
+    padding: 0;
+
+    text-align: left;
+
+    width: 220px;
+
+}
+
+.formulaire_spip ul li.valide {
+
+    clear: none;
+
+    float: left;
+
+    width: 250px;
+
+}
+
+.menu_pub {
+
+    margin: 10px 25px 15px 0;
+
+    text-align: right;
+
+}
+
+.menu_pub .pro_btn {
+
+    font-size: 12px;
+
+    padding: 5px 25px;
+
+}
+
+#ok .spip-previsu {
+
+    display: none;
+
+}
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+
+.choix.choix_Masculin, .choix.choix_Féminin {
+
+    margin: 8px 0;
+
+    padding: 0 0 0 17px;
+
+}
+
+.choix.choix_Masculin > label, .choix.choix_Féminin > label {
+
+    margin: 0 6px 16px 2px;
+
+    padding: 2px 3px 2px 4px;
+
+    width: 65px;
+
+}
+
+.inscription .radio {
+
+    float: left;
+
+    margin: 5px 6px 0 0;
+
+    padding: 0;
+
+}
+
+.editer.saisie_input {
+
+    margin: 8px 0;
+
+}
+
+.inscription .champs_extras .text {
+
+    width: 363px;
+
+}
+
+.editer.editer_vegetarien.saisie_radio > label, .editer.editer_auditeur.saisie_radio > label, .editer.editer_hebergement.saisie_radio > label {
+
+    margin: 5px 8px 0 0;
+
+    width: 200px;
+
+}
+
+.choix.choix_oui {
+
+    margin: 0;
+
+    padding: 5px 0 0;
+
+}
+
+.editer.editer_saxophone.saisie_textarea > label, .editer.editer_piece.saisie_textarea > label, .editer.editer_prof.saisie_textarea > label, .editer.editer_ecole.saisie_textarea > label,.editer.editer_adresse.saisie_textarea > label , .editer.editer_lieu.saisie_textarea > label, .editer.editer_contact.saisie_textarea > label,.editer.editer_sante.saisie_textarea > label{
+
+    margin: 8px 0 0;
+
+    width: 460px;
+
+}
+
+.editer.editer_reglement.saisie_checkbox > label, .editer.editer_paiement.saisie_radio > label {
+
+    margin: 15px 0 5px;
+
+    width: 100%;
+
+}
+
+.choix.choix_Lu.et.accepté > label {
+
+    margin: 0 0 25px;
+
+    width: 230px;
+
+}
+.editer.saisie_selection {
+  margin-top: 15px;
+}
+.inscription .checkbox {
+
+
+    margin: 7px 8px 0 10px;
+
+    padding: 0;
+
+}
+.rag {
+
+  margin: 20px 0 0 0;
+}
+
+.editer.editer_contact.saisie_textarea > textarea {
+
+    display: none;
+
+}
+
+.editer.editer_contact.saisie_textarea > label {
+
+    margin: 15px 0 5px;
+
+}
+
+.editer.editer_type_bec.saisie_checkbox > label, .editer.editer_type_saxo.saisie_checkbox > label, .editer.editer_paiement.saisie_radio > label, .editer.editer_remarque.saisie_textarea > label, .editer.editer_choix.saisie_input > label {
+
+    margin: 8px 0;
+
+    width: 460px;
+
+}
+
+.inscription .editer_choix .text {
+
+    display: none;
+
+}
+
+.editer.editer_impro.saisie_selection > label, .editer.editer_painting.saisie_selection > label, .editer.editer_ensemble.saisie_selection > label, .editer.editer_quatuor.saisie_selection > label, .editer.editer_musichambre.saisie_selection > label {
+
+    width: 144px;
+
+}
+
+.editer.editer_impro.saisie_selection > select, .editer.editer_painting.saisie_selection > select, .editer.editer_ensemble.saisie_selection > select, .editer.editer_quatuor.saisie_selection > select, .editer.editer_musichambre.saisie_selection > select {
+
+    width: 55px;
+
+}
+.editer.editer_tradition.saisie_selection > label {
+    width: 83%;
+}
+.editer.editer_tradition.saisie_selection > select {
+    width: 55px;
+}
+
+.editer.editer_painting.saisie_selection, .editer.editer_ensemble.saisie_selection {
+
+    margin: 2px 0;
+
+}
+
+
+
+.editer_type_saxo .editer label {
+
+    width: 55px;
+
+}
+
+li.editer_type_bec .choix label, li.editer_type_saxo .choix label {
+
+    background: transparent none repeat scroll 0 0;
+
+    margin: 0 0 10px;
+
+    padding: 5px 12px 0 0;
+
+    width: 46px;
+
+}
+
+.choix.choix_Lu.et.accepté > label, .choix.choix_Cheque > label, .choix.choix_Virement > label, .choix.choix_Paypa > label {
+
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+
+}
+
+.choix.choix_Paypa {
+
+    margin: 0 0 0 10px;
+
+}
+
+.inscription .editer_titre .text {
+
+    width: 363px;
+
+}
+
+.editer.editer_lieu.saisie_textarea > label {
+
+    margin: 15px 0 0;
+
+}
+
+.editer.editer_contact_tel.obligatoire.saisie_input {
+
+    margin: 8px 0 15px;
+
+}
+
+.inscription .marg_ins {
+
+    margin: 10px 0 0;
+
+    padding: 20px;
+
+}
+
+
+
+.inscription .txt_12 > strong {
+
+    color: #ffe720;
+
+}
+
+.inscription strong.txt_12 {
+
+    color: #ffe720;
+
+}
+
+
+
+.inscription .editer > textarea {
+
+    width: 466px;
+
+}
+
+
+
+.editer.editer_remarque.saisie_textarea {
+
+    margin: 0 0 10px;
+
+}
+
+.inscription .editer_paiement .choix label {
+
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+
+    width: 150px;
+
+}
+
+.inscription .choix.choix_Paypa > label {
+
+    width: 73px;
+
+}
+
+.editer.editer_reglement.obligatoire.saisie_case > label {
+
+    margin: 10px 0 0;
+
+    width: 460px;
+
+}
+
+.inscription .editer_reglement .choix label {
+
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+
+    margin: 0 0 45px;
+
+    width: 90%;
+
+}
+
+
+
+.inscription .choix.choix_Cheque > label {
+
+    width: 100px;
+
+}
+
+.editer.editer_hebergement.saisie_selection > label, .editer.editer_paiement.saisie_selection > label, .editer.editer_auditeur.saisie_selection > label, .editer.editer_vegetarien.saisie_selection > label {
+
+    margin: 0 5px 7px 0;
+
+    width: 300px;
+
+}
+
+.editer.editer_hebergement.saisie_selection > select, .editer.editer_paiement.saisie_selection > select, .editer.editer_auditeur.saisie_selection > select, .editer.editer_vegetarien.saisie_selection > select {
+
+    width: 93px;
+
+}
+
+.editer.editer_impro.saisie_selection {
+
+    margin: 0 0 10px;
+
+}
+
+.formulaire_instituer p.boutons .submit {
+
+    color: #333;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin: 5px 0 0;
+
+    padding: 6px 20px;
+
+}

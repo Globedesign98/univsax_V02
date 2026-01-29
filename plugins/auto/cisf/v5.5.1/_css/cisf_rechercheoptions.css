@@ -1,0 +1,174 @@
+/* -------------------------------
+* Formulaire de recherche
+----------------------------------*/
+
+div.radiov {
+	display: block;
+    margin: 5px 5px 5px 5px;
+    padding:0px 0px 3px 0px;
+}
+
+* html div.radiov {
+	margin: 1px 2px 1px 1px;  /* hack uniquement interpr�t� par IE Win+Mac */
+}
+
+.gras {
+	font-weight: bold;
+}
+
+.recherche_non_autorise {
+	font-weight: bold;
+	font-size: 0.7em;
+	color: red;
+}
+
+
+/* -------------------------------
+* Pour noisettes/cisf_doc_options.html
+----------------------------------*/
+
+#recherche_options_h .options {
+	margin: 10px 0 0px 0;
+	padding:0 0 10px 0;
+	color:#484848;
+	font-weight:normal;
+	border-bottom: 1px solid #C0C0C0;
+}
+
+#recherche_options_h .dates_perso {margin:0 0 5px 0;}
+
+#recherche_options_h select {font-size:1em; width:160px;}
+
+#recherche_options_h .bouton_option_recherche {font-size:1em;}
+
+#recherche_options_h .pict_calendar {vertical-align:middle;}
+
+#recherche_options_h .submit {float: right; margin: 0 20px 0 0;}
+#recherche_options_h .submit:hover {background: #ebebeb;}
+
+#recherche_options_h input.date {
+	font-size: 1em;
+    margin: 0 5px 0 0px;
+    width: 124px;
+    display: inline;
+    vertical-align: middle;
+}
+
+#recherche_options_h  .labeloption {
+	display: block;
+	width: 220px;
+	float: left;
+}
+
+#recherche_options_h label.datedebut {
+	display: block;
+	width: 220px;
+	float: left;
+    margin: 5px 0 2px 0;
+}
+
+#recherche_options_h label.datefin {
+	display: block;
+	width: 220px;
+	float: left;
+    margin: 5px 0 2px 0;
+}
+
+
+#recherche_options_h span.formatdate {
+    margin: 2px 20px 0 5px;
+	vertical-align:middle; 
+}
+
+
+/* -------------------------------
+* Pour la case recherche figurant dans documents.html
+----------------------------------*/
+#docrecherche_h {
+    float: right; 
+    margin: 1em 0 1em 0;
+}
+#docrecherche_h input.recherche {
+    padding: 0.5rem;
+    line-height: 1.3rem;
+    width: 280px;
+}
+
+/* -------------------------------
+* Pour le formulaire noisettes/doc_options_h.html
+----------------------------------*/
+
+#doc_options_h .options {
+	margin: 10px 0 0px 0;
+	padding: 10px 0 0px 0;
+	color:#484848;
+	font-weight:normal;
+	border-top: 1px solid #C0C0C0;
+}
+
+#doc_options_h .col_g {float: left; width:220px; margin-top:2px;}
+#doc_options_h .col_d {float: left; width:220px; margin-top:2px;}
+
+#doc_options_h .dates_perso {margin:0 0 5px 0;}
+
+#doc_options_h select {font-size:1em; width:160px;}
+
+#doc_options_h .bouton_option_recherche {font-size:1em;}
+
+#doc_options_h .pict_calendar {vertical-align:middle;}
+
+#doc_options_h .submit {float: right; margin: 0 20px 0 0;}
+
+#doc_options_h input.date {
+	font-size: 1em;
+    margin: 0px;
+    width: 124px;
+    display: inline;
+    vertical-align: middle;
+}
+
+#doc_options_h  .labeloption {
+	display: block;
+	width: 60px;
+	float: left;
+}
+
+#doc_options_h label.datedebut {
+    margin: 5px 0 2px 0;
+}
+
+#doc_options_h label.datefin {
+    margin: 5px 0 2px 0;
+}
+
+
+#doc_options_h span.formatdate {
+    margin: 2px 20px 0 5px;
+    vertical-align:middle; 
+}
+
+#doc_options_h .submit {
+    float: left;
+}
+
+#doc_options_h a.lienbtn {
+    display: inline-block;
+    padding: 0px;
+    height: 1.4em;
+    width: 6.5em;
+    line-height: 1.4em;
+    border-left: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    color: #000;
+    background: #D4D0C8;
+    text-align: center;
+    text-decoration: none;
+    font-family: MS Shell Dlg;
+    font-size: 1.1em;
+}
+
+#doc_options_h a.lienbtn:hover {
+	background: #EBEBEB;
+}

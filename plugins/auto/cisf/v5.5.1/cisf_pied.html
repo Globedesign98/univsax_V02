@@ -1,0 +1,8 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<a href="#EVAL{_DIR_RESTREINT_ABS}"><:cisf:eq_gestion_site:></a> 
+[(#SESSION{id_auteur}|?{' '})| <a href="#URL_LOGOUT" rel="nofollow"><:cisf:eq_deconnexion:></a> [(#SESSION{login})] ]
+[(#SESSION{id_auteur}|?{'',' '})| <a href="[(#URL_PAGE{login}|parametre_url{url,#SELF})]" rel="nofollow"><:cisf:eq_authentification:></a>]
+	</div>
+        <div><:cisf:plugin_cisf:></div>
+	<div id="cisf_copyright">[(#NOM_SITE_SPIP)]</div>

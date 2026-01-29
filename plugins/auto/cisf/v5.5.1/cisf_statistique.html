@@ -1,0 +1,100 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<title>[(#VAL{cisf:eq_stat}|_T|html2unicode|unicode2charset)]</title>
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+
+#INSERT_HEAD
+#SET{paramcss,#REM|cisf_parametres_css_prive}
+#PIPELINE{header_prive,#INCLURE{fond=prive/squelettes/inclure/head,titre,minipres,paramcss=#GET{paramcss}}}
+
+</head>
+<body>
+[(#REM) <!-- droit de voir les stats -->]    
+#SET{ciok,#ENV{id_article}|cisf_autorise_modifier_article{voirstats}}
+    
+<div id="page">
+<div class="largeur">
+
+    [(#GET{ciok}|=={oui}|oui)
+    <INCLURE{fond=noisettes/cisf_fil_ariane,env}>
+    ]
+
+<div id="milieu">
+	<div id="ext-main">
+		<div class="main">
+
+  			<div id="contenu2">
+
+			<div class="main-content">
+			
+				<div id="boxcentrale"><div class="innercentrale">
+				<BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+					<h2>Statistiques</h2>
+					<div class="retour"><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:cisf:eq_retour_article:></a></div>
+				</BOUCLE_article>	
+
+				<BOUCLE_articlepublie(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+	  			<div id="cisf_stat">
+				
+                                [(#GET{ciok}|=={oui}|oui)
+                                    [(#BOITE_OUVRIR{[(#CHEMIN_IMAGE{statistique-24.png}|balise_img{'',cadre-icone})]<h1><:statistiques:titre_evolution_visite:></h1>,'simple stats'})]
+                                    
+                                    #BOITE_OUVRIR{'','note'}
+                                            <:statistiques:titre_page_statistiques_visites:> <:info_pour:>
+                                            <h2 class='objet_titre'>#TITRE</h2>
+                                    #BOITE_FERMER
+                                    
+                                    [(#SPIP_VERSION|>={4}|oui)
+                                    
+                                    <INCLURE{fond=prive/squelettes/inclure/stats-visites-data, env} />
+                                    ]
+                                    
+                                    [(#SPIP_VERSION|>={4}|non)
+                                    <INCLURE{fond=prive/squelettes/inclure/stats-visites-jours,ajax,env} />
+                                    <INCLURE{fond=prive/squelettes/inclure/stats-visites-mois,ajax,env} />
+                                    ]
+                                    
+                                    #BOITE_FERMER
+
+                                    <INCLURE{fond=prive/squelettes/inclure/stats-visites-populaires} />
+
+                                    <INCLURE{fond=prive/stats/visites} />
+				]
+
+				</div>
+				
+				<div class='texte'>&nbsp;</div>					
+				
+				</BOUCLE_articlepublie>	
+				</B_articlepublie>	
+				<div class="texte"><:cisf:eq_article_non_publie:></div>
+				<//B_articlepublie>
+
+				</div></div>
+
+				[(#GET{ciok}|=={non}|oui)
+					[(#REM) <!-- Auteur non connecte ou visiteur -->]
+		  			<div id="contenu">
+					<INCLURE{fond=cisf_altern,env}>
+					</div>
+				]
+
+			</div>
+			</div>
+			<div class='clearer'>&nbsp;</div>	
+		</div>
+	</div>
+</div>
+<div id="pied">
+        [(#GET{ciok}|=={oui}|oui)
+            <div id="cisf_copyright">[(#NOM_SITE_SPIP)]</div>
+        ]
+</div>
+
+</div>
+</div>
+</body>
+</html>

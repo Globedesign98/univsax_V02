@@ -1,0 +1,438 @@
+[(#REM)
+	Un cache plus court, pour la boucle syndic_articles
+]#CACHE{3600}
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique=5}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
+<head>
+
+<title>[(#NOM_SITE_SPIP|textebrut)][ - (#TITRE|textebrut)]</title>
+
+<INCLURE{fond=inc-head}>
+<?php include('head-content.php'); ?>
+<link rel="shortcut icon" href="images/favicon.ico" >
+<link href="css/ues.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	background-image: url(images/bg_top_rub.jpg);
+	background-repeat: repeat-x;
+}
+-->
+</style>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<link href="css/ues.css" rel="stylesheet" type="text/css" />
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+</head>
+
+<body onload="MM_preloadImages('images/bt_form.jpg')" class="inscription">
+<div align="center">
+<?php include('includes/bloc_rub_forum.php'); ?>
+<INCLURE{fond=inc-menu2012}>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="985" valign="top" class="bg_menu_border">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#212020"><table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top">
+        <table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top"><table width="485" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="485">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><img src="images/titre_inscriptions.jpg" alt="Inscription &agrave; l'Universit&eacute; de Saxophone" width="136" height="23"></td>
+          </tr>
+          <tr>
+            <td class="txt_jaune11b">Inscription à l'Université Européenne de Saxophone - 2018</td>
+          </tr>
+          <tr>
+            <td valign="top" class="txt_blc12"><div align="justify"><br>
+            </div></td>
+          </tr>
+          <tr>
+            <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+            <B_inscription_01><BOUCLE_inscription_01(ARTICLES){id_auteur=#SESSION{id_auteur}}{id_rubrique IN 5,7}{0,1}>
+            <div class="txt_blc12">Votre inscription a bien été <strong>enregistrée</strong>. Elle sera valid&eacute;e :<br />
+<br />
+1. d&egrave;s r&eacute;ception des sommes dues
+<br />
+2. d&egrave;s r&eacute;ception du formulaire d'inscription signé (adresse d'expédition en bas de page).<br />
+<br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="32%" align="left"><a href="#URL_ARTICLE"><img src="images/bt_voir.jpg" alt="" width="164" height="40" border="0" /></a></td>
+    <td width="68%" align="left">#IMPRIMIR_DOCUMENTO**</td>
+    </tr>
+</table>
+                  <br />
+                  <br />
+
+<strong class="txt_jaune"><span class="txt_yellow">&nbsp;&nbsp; Informations sur votre compte :</span></strong><br />
+             <br />
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="63%" align="left" valign="top">&nbsp;&nbsp; [(#TITRE)] [(#PRENOM)]<br />
+<br />
+&nbsp;&nbsp; [(#ADRESSE)]<br />
+&nbsp;&nbsp; [(#POSTAL)] [(#VILLE)]<br />
+&nbsp;&nbsp; [(#PAYS)]<br />
+<br />
+&nbsp;&nbsp; Tel: [(#PHONE)]<br />
+&nbsp;&nbsp; Email: [(#SESSION{auth}|?{' '})
+                          [(#SESSION{email}|typo)]]<br />
+<br />
+<br /></td>
+    <td width="37%" align="right" valign="top">[(#LOGO_ARTICLE|image_reduire{130,0})]</td>
+  </tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                  </table>
+                    <br />
+                    <div class="txt_yellow"><strong>Mode de paiement :</strong></div>
+                    <br />
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td><a href="spip.php?page=inscriptions_etape_virement"><img src="images/bt_virement.jpg" alt="Virement" width="155" height="40" border="0" /></a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="spip.php?page=inscriptions_etape_cheque"><img src="images/bt_cheque.jpg" alt="Chèque" width="155" height="40" border="0" /></a><a href="spip.php?page=inscriptions_etape_virement"></a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="spip.php?page=inscriptions_etape_cb"><img src="images/bt_cb.jpg" alt="Carte bancaire" width="155" height="40" border="0" /></a></td>
+                      </tr>
+                    </table>
+                    <br />
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                </table>
+                  <div class="txt_11 txt_gris"><span class="txt_gris11">Si vous rencontrez des problèmes lors de votre inscription, n'hésitez pas à contacter un <a href="mailto:inscription@univsax.com" class="a_gris"><u>administrateur</u></a> (inscription@univsax.com).</span><br /></div>
+             <a href="spip.php?page=cisf_article&id_article=#ID_ARTICLE"></a>
+            
+             
+            </div>
+</BOUCLE_inscription_01>
+            </B_inscription_01>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                <?php if ($auteur_session) { ?>
+                <div align="justify">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                    <td width="6%" align="left"><img src="images/1a.gif" alt="Formulaire d'inscription" width="22" height="21" border="0" /></td>
+                    <td width="94%" align="left" class="txt_yellow txt_13"><strong>Paiement</strong></td>
+                  </tr>
+              </table>
+                  <div class="txt_blc12"><br />
+                    Votre inscription sera valid&eacute;e d&egrave;s r&eacute;ception des sommes dues. Pour toutes autres questions et/ou autres modes de paiement, n'h&eacute;sitez pas &agrave; nous <a href="contact.php"><u>contacter</u></a>. <br />
+                    <br />
+                    Choisir son mode de paiement : 
+                    <br />
+                    <br />
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td><a href="spip.php?page=inscriptions_etape_virement"><img src="images/bt_virement.jpg" alt="Virement" width="155" height="40" border="0" /></a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="spip.php?page=inscriptions_etape_cheque"><img src="images/bt_cheque.jpg" alt="Chèque" width="155" height="40" border="0" /></a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="spip.php?page=inscriptions_etape_cb"><img src="images/bt_cb.jpg" alt="Carte bancaire" width="155" height="40" border="0" /></a></td>
+                      </tr>
+                    </table>
+                  </div>
+                  <br />
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="7%" align="left"><img src="images/2a.gif" alt="Mode de paiement" width="22" height="21" border="0" /><a href="inscriptions_etape_01.php"></a></td>
+                      <td width="93%" align="left" class="txt_yellow txt_13"><strong>Formulaire d'inscription</strong></td>
+                    </tr>
+                  </table>
+                  <br />
+                  <span class="txt_blc12">Lors de cette seconde &eacute;tape, vous devez compléter le formulaire et cliquer sur le bouton en bas de ce formulaire &quot;Envoyer votre inscription&quot;. Un administrateur de l'UES validera votre formulaire. Il vous faudra ensuite imprimer une copie et nous la renvoyer par la poste.</span><br />
+                  <br />
+                  <a href="spip.php?page=inscription&id_rubrique=5" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image21','','images/bt_form.jpg',1)"><img src="images/bt_form02.jpg" alt="Ouvrir le document" width="206" height="40" border="0" id="Image" /></a><br />
+                  <br />
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="7%" align="left"><img src="images/3a.gif" alt="Confirmation inscription" width="22" height="21" /><a href="inscriptions_etape_01.php"></a></td>
+                      <td width="93%" align="left" class="txt_yellow txt_13"><strong>Confirmation (formulaire inscription)</strong></td>
+                    </tr>
+                  </table>
+                  <div class="txt_blc12"><br />
+                    Un mail  comprenant votre bulletin d'inscription vous sera envoyé dès la validation de votre formulaire d'inscription par l'UES (72h). N'oubliez pas de nous le renvoyer sign&eacute; avant le<strong>15 mai 2021</strong>. Tout dossier envoy&eacute; apr&egrave;s cette date (cachet de la poste faisant foi) pourra &ecirc;tre rejet&eacute;. <br />
+                    <br />
+                    <br />
+                  </div>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+                  <div class="txt_11 txt_gris"><span class="txt_gris11">Si vous rencontrez des problèmes lors de votre inscription, n'hésitez pas à contacter un <a href="mailto:inscription@univsax.com" class="a_gris"><u>administrateur</u></a> (inscription@univsax.com).</span><br /></div>
+                    <?php } else { ?>
+                  
+                  <div class="txt_blc12">Les inscriptions seront prises en compte jusqu&rsquo;au 7 juin<strong> 2020</strong>, dans la limite des places disponibles. <br>
+              La vingt quatrième &eacute;dition de l&rsquo;Universit&eacute; Europ&eacute;enne de Saxophone se d&eacute;roulera du 16 au 27 Juillet 2019. <br>
+                <br>
+                <strong>TARIFS : 890 &euro;</strong><br>  
+                <br>
+                Le tarif comprend les droits d&rsquo;inscription au cours p&eacute;dagogiques (500&euro;), ainsi que l&rsquo;h&eacute;bergement (facultatif) en pension compl&egrave;te au Foyer Des Jeunes Travailleurs de Gap, pendant la dur&eacute;e de l&rsquo;Universit&eacute; (390&euro;). <br>
+                <br>
+                <strong>TARIFS : 500&euro;</strong> (sans l'h&eacute;bergement)<br>
+                <br>
+                <strong>TARIFS : 250&euro;</strong> (Auditeurs libres)<br>
+                <br>
+                En cas de d&eacute;sistement, un remboursement pourra &ecirc;tre effectu&eacute; (avec une retenue de 130 &euro; pour les frais de dossier).  Il n'y aura aucun remboursement apr&egrave;s le 04 juin 2019. <br>
+                <br>
+                </div>
+                <?php } ?>
+                </div></td>
+              </tr>
+            </table>
+            <//B_inscription_01>
+           </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          
+        </table></td>
+        <td align="right" valign="top"><table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="right" valign="top" class="txt_gris10" ><table width="447" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="207" align="left">[(#SESSION{auth}|?{' '})
+                          [<strong>Bonjour</strong> (#SESSION{nom}|typo)]
+                          [(#SESSION{prenom}|typo)] (<a href="[(#URL_LOGOUT{#SELF})]">Se déconnecter</a>)
+                          ]</td>
+    <td width="240" align="right"><script type="text/javascript">
+navvers = navigator.appVersion.substring(0,1);
+if (navvers > 3)
+   navok = true;
+else
+   navok = false;
+
+today = new Date;
+jour = today.getDay();
+numero = today.getDate();
+if (numero<10)
+   numero = "0"+numero;
+mois = today.getMonth();
+if (navok)
+   annee = today.getFullYear();
+else
+   annee = today.getYear();
+TabJour = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
+TabMois = new Array("janvier","f&eacute;vrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","d&eacute;cembre");
+messageDate = TabJour[jour] + " " + numero + " " + TabMois[mois] + " " + annee;
+          </script>
+              <script type="text/javascript">
+document.write(messageDate);
+            </script>
+              &nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+          </tr>
+          <tr>
+            <td><img src="images/trans.gif" alt="Saxo" width="5" height="10" /></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><table width="446" border="0" cellpadding="0" cellspacing="0" class="bg_cadrec02">
+              <tr>
+                <td align="left"><img src="images/c_c01.jpg" alt="UES" width="21" height="115" /></td>
+                <td align="left" valign="top"><img src="images/UES_encard.jpg" alt="24ème Edition UES" width="404" height="115" /></td>
+                <td align="right"><img src="images/c_c03.jpg" alt="UES Saxo" width="21" height="115" /></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><table width="446" border="0" cellpadding="0" cellspacing="0"  class="bg_cadrec02 marge_top10">
+              <tr>
+                <td width="23" align="left" valign="top"><img src="images/c_c01.jpg" alt="UES" width="21" height="115"></td>
+                <td width="424" align="left" valign="top"><table width="99%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="left" background="images/t_ibg.jpg"><img src="images/t_ues.jpg" alt="Intervenants &agrave;  l'Universit&eacute; de Saxophone" width="241" height="37"></td>
+                    </tr>
+                  <tr>
+                    <td align="left"><img src="images/trans.gif" alt="UES" width="14" height="13"></td>
+                    </tr>
+                  <tr>
+                    <td align="left"><table width="93%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="58%"><span class="txt_blc12">14 chemin de Vigneaux - Romette <br>
+                          05000 Gap FRANCE</span></td>
+                        <td width="42%">&nbsp;</td>
+                        </tr>
+                      <tr>
+                        <td colspan="2"><img src="images/trans.gif" alt="Saxo" width="5" height="8"></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                  </table></td>
+                <td width="24" align="right" valign="top"><img src="images/c_c03.jpg" alt="UES Saxo" width="21" height="115"></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><?php if ($auteur_session) { ?>
+              <br />
+              <table width="447" border="0" cellpadding="15" cellspacing="0">
+                <tr>
+                  <td align="left" valign="baseline" bgcolor="#363434"><span class="txt_blc12">Les inscriptions seront prises en compte jusqu&rsquo;au 7 juin<strong> 2020</strong>, dans la limite des places disponibles. <br />
+                    La trente-deuxième&eacute;dition de l&rsquo;Universit&eacute; Europ&eacute;enne de Saxophone se d&eacute;roulera du 19 au 30 juillet 2021. <br />
+  <br />
+  <strong>TARIFS : 890 &euro;</strong><br />
+  <br />
+                    Le tarif comprend les droits d&rsquo;inscription au cours p&eacute;dagogiques (500&euro;), ainsi que l&rsquo;h&eacute;bergement (facultatif) en pension compl&egrave;te au Foyer Des Jeunes Travailleurs de Gap, pendant la dur&eacute;e de l&rsquo;Universit&eacute; (390&euro;). <br />
+  <br />
+  <strong>TARIFS : 500&euro;</strong> (sans l'h&eacute;bergement)<br />
+  <br />
+  <strong>TARIFS : 250&euro;</strong> (Auditeurs libres)<br />
+  <br />
+                    En cas de d&eacute;sistement, un remboursement pourra &ecirc;tre effectu&eacute; (avec une retenue de 130 &euro; pour les frais de dossier).  Il n'y aura aucun remboursement apr&egrave;s le 11 juin 2021.</span></td>
+                </tr>
+  </table>
+              <?php } else { ?>
+              <?php } ?></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><table width="447" border="0" align="right" cellpadding="8" cellspacing="0">
+              <tr>
+                <td colspan="2" align="left"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+              </tr>
+              <tr>
+                <td width="37" align="center" valign="baseline" bgcolor="#363434"><span class="txt_blc12"><strong class="txt_red12b"><img src="images/Sarning.png" alt="" width="32" height="32" /></strong></span></td>
+                <td width="378" bgcolor="#363434"><div align="justify"><span class="txt_blc12">Les &eacute;tudiants doivent avoir au moins 18 ans le 20 juillet 2021</span></div></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="left"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+              </tr>
+              <tr>
+                <td align="center" valign="baseline" bgcolor="#363434" class="txt_red12b"><strong class="txt_red12b"><img src="images/Sarning.png" alt="" width="32" height="32" /></strong></td>
+                <td bgcolor="#363434"><div align="justify"><span class="txt_blc12">Les &eacute;tudiants, qui r&egrave;glent le montant de leur inscription par carte bancaire, doivent rajouter 38&euro; aux tarifs ci-dessus. Cette somme forfaitaire correspond aux frais bancaires et &agrave; la commission du syst&egrave;me Paypal et ne sera donc plus &agrave; payer lors de leur arriv&eacute;e &agrave; Gap.<br />
+                </span></div></td>
+              </tr>
+          </table></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top">&nbsp;</td>
+          </tr>
+          </table></td>
+      </tr>
+    </table>
+        
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                  </table>
+                  <?php if ($auteur_session) { ?>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="marge_15">
+          <tr>
+            <td valign="top" class="txt_blc"></td>
+          </tr>
+      </table>
+        <?php } else { ?>
+        
+        <table width="100%" border="0" cellspacing="0" cellpadding="15">
+          <tr>
+            <td class="txt_jaune11b"> Pour vous inscrire à l'Université Européenne de Saxophone 2019, vous devez posséder un compte :</td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="15" cellpadding="0">
+          <tr>
+            <td align="left" valign="top" bgcolor="#363434"><span class="txt_12blc">[(#LOGIN_PUBLIC)] </span></td>
+            <td align="left" valign="top" bgcolor="#363434"><span class="txt_12blc">[(#FORMULAIRE_INSCRIPTION)] </span></td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+        <?php } ?></td>
+        </tr>
+    </table>
+   </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/bg_bottom.jpg">
+  <tr>
+    <td><?php include('includes/menu_bas.php'); ?></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+</BOUCLE_rubrique>

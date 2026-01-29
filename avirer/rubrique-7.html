@@ -1,0 +1,394 @@
+[(#REM)
+	Un cache plus court, pour la boucle syndic_articles
+]#CACHE{3600}
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
+<head>
+
+<title>[(#NOM_SITE_SPIP|textebrut)][ - (#TITRE|textebrut)]</title>
+
+<INCLURE{fond=inc-head}>
+<?php include('head-content.php'); ?>
+<link rel="shortcut icon" href="images/favicon.ico" >
+<style type="text/css">
+<!--
+body {
+	background-image: url(images/bg_top_rub.jpg);
+	background-repeat: repeat-x;
+}
+-->
+</style>
+<link href="css/ues.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="inscription">
+<div align="center">
+<?php include('includes/bloc_rub_forum.php'); ?>
+<INCLURE{fond=inc-menu2012_eng}>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="985" valign="top" class="bg_menu_border">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#212020"><table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top">
+        <table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top"><table width="485" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="485">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><img src="images/titre_reg.jpg" alt="Inscription &agrave; l'Universit&eacute; de Saxophone" width="342" height="23"></td>
+          </tr>
+          <tr>
+            <td class="txt_jaune11b">Registration to the "Université de Saxophone" 2025</td>
+          </tr>
+          <tr>
+            <td valign="top" class="txt_blc12"><div align="justify"><br>
+            </div></td>
+          </tr>
+          <tr>
+            <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+            <B_inscription_01><BOUCLE_inscription_01(ARTICLES){id_auteur=#SESSION{id_auteur}}{id_rubrique IN 5,7}{0,1}>
+            
+            <div class="txt_blc12">
+Your registration will be validated from reception of your payment. For all other questions and/or other method of payment, do not hesitate to contact us.
+
+Do not forget to return us  your registration form duly signed. <br />
+<br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="32%" align="left"><a href="#URL_ARTICLE"><img src="images/bt_voir_eng.jpg" alt="" width="164" height="40" border="0" /></a></td>
+    <td width="68%" align="left">#IMPRIMIR_DOCUMENTO**</td>
+    </tr>
+</table>
+                  <br />
+                  <br />
+
+<strong class="txt_jaune"><span class="txt_yellow">&nbsp;&nbsp; Information about your registration:</span></strong><br />
+             <br />
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="63%" align="left" valign="top"> [(#TITRE)] [(#PRENOM)]<br />
+<br />
+ [(#ADRESSE)]<br />
+ [(#POSTAL)] [(#VILLE)]<br />
+ [(#PAYS)]<br />
+<br />
+ Tel: [(#PHONE)]<br />
+ Email: [(#SESSION{auth}|?{' '})
+                          [(#SESSION{email}|typo)]]<br />
+<br />
+<br /></td>
+    <td width="37%" align="right" valign="top">[(#LOGO_ARTICLE|image_reduire{130,0})]</td>
+  </tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                  </table>
+                    <br />
+                    <br />
+                    <div class="txt_yellow"><strong>Method of payment :</strong> </div>
+                    <br />
+                    We will keep you informed before May 15th. If the course is maintained, payment for your registration must be made before May 22, 2025.<br />
+
+                    <br />
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                </table>
+                  <div class="txt_11 txt_gris">Your registration will be validated from reception of your payment. For   all other questions and/or other method of payment, do not hesitate to   <a href="ontact_eng.php">contact us</a>. <br />
+                <br /></div>
+             
+            
+             
+            </div>
+</BOUCLE_inscription_01>
+            </B_inscription_01>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                <?php if ($auteur_session) { ?>
+                <div align="justify">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                    <td width="6%" align="left"><img src="images/1a.gif" alt="Formulaire d'inscription" width="22" height="21" border="0" /></td>
+                    <td width="94%" align="left" class="txt_yellow txt_13"><strong>Payment</strong></td>
+                  </tr>
+              </table>
+                  <div class="txt_blc12"><br />
+                    Your registration will be validated from reception of your payment. For all other questions and/or other method of payment, do not hesitate to <a href="ontact_eng.php">contact us</a>.
+<br />
+                    <br />
+                    Method of payment : <br />
+                  We will keep you informed before May 15th. If the course is maintained, payment for your registration must be made before May 22, 2025.<br />
+<br />
+</div>
+                  <br />
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="7%" align="left"><img src="images/2a.gif" alt="Mode de paiement" width="22" height="21" border="0" /><a href="inscriptions_etape_01.php"></a></td>
+                      <td width="93%" align="left" class="txt_yellow txt_13"><strong>Registration form</strong></td>
+                    </tr>
+                  </table>
+                  <br />
+
+                  <span class="txt_blc12">Fill in the form and click on &quot;send the form&quot;. <br />
+                  The administrator will validate your form. </span><br />
+                  <br />
+                  <a href="spip.php?page=inscription_ues_eng&id_rubrique=7" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image21','','images/bt_form.jpg',1)"><img src="images/bt_form02_eng.jpg" alt="Ouvrir le document" width="173" height="40" border="0" id="Image" /></a><br />
+                  <br />
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="7%" align="left"><img src="images/3a.gif" alt="Confirmation inscription" width="22" height="21" /><a href="inscriptions_etape_01.php"></a></td>
+                      <td width="93%" align="left" class="txt_yellow txt_13"><strong>Confirmation (Registration form)</strong></td>
+                    </tr>
+                  </table>
+                  <div class="txt_blc12"><br />
+                    After validation by administrator, you must print and send the form, duly signed, to   the university address.<br />
+                    <br />
+                    <br />
+                  </div>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table>
+                  <div style="float:left; margin:0;" class="bt_plus"><a href="spip.php?page=reglement_2024" class="mediabox boxIframe boxWidth-90% boxHeight-90%'">Règlement / Rules 2025</a></div><br /><br><br>
+                  <div class="txt_11 txt_gris"><span class="txt_gris11">For   all other questions and/or other method of payment, do not hesitate to <a href="contact_eng.php">contact us</a> (contact@univsax.com).</span><br /></div>
+                    <?php } else { ?>
+                    <br />
+<br />
+<div class="txt_blc12">
+The Université Européenne de Saxophone usually  takes place in the    second half of July, and lasts 12 days.  Inscriptions will be taken into   account until the 22th May 2025, subject to availability.<em><br />
+                      <br />
+                  </em><strong>RATE : 920 €</strong><em><br />
+                  </em><br />
+Rate includes registration fees for teaching classes   (500€), as well as housing and food (breakfast, lunch and dinner) at the   Foyer des Jeunes Travailleurs in the city centre of Gap, during the   duration of the University (420€). <em><br />
+<br />
+</em><strong>RATE : 500 € </strong>(without housing)<br />
+<br />
+<strong>RATE : 250 € </strong>(auditors)<br />
+<br />
+In case of cancellation, the EUS will proceed to a refund (the   cancellation fee is 130 €). Please note there will be no refund after   June 11th.<br>
+                <br>
+                <div style="float:left; margin:0;" class="bt_plus"><a href="spip.php?page=reglement_2024" class="mediabox boxIframe boxWidth-90% boxHeight-90%'">Règlement / Rules 2025</a></div><br />
+                <?php } ?>
+                </div></td>
+              </tr>
+            </table>
+            <//B_inscription_01>
+           </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          
+        </table></td>
+        <td align="right" valign="top"><table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="right" valign="top" class="txt_gris10" ><table width="447" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="207" align="left">[(#SESSION{auth}|?{' '})
+                          [<strong>Bonjour</strong> (#SESSION{nom}|typo)]
+                          [(#SESSION{prenom}|typo)] (<a href="#URL_LOGOUT{spip.php?rubrique7}">Log out</a>)
+                          ]</td>
+    <td width="240" align="right"><script language="JavaScript">
+navvers = navigator.appVersion.substring(0,1);
+if (navvers > 3)
+   navok = true;
+else
+   navok = false;
+
+today = new Date;
+jour = today.getDay();
+numero = today.getDate();
+if (numero<10)
+   numero = "0"+numero;
+mois = today.getMonth();
+if (navok)
+   annee = today.getFullYear();
+else
+   annee = today.getYear();
+TabJour = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
+TabMois = new Array("janvier","f&eacute;vrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","d&eacute;cembre");
+messageDate = TabJour[jour] + " " + numero + " " + TabMois[mois] + " " + annee;
+   </script>
+     <script language="JavaScript">
+document.write(messageDate);
+     </script> &nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+          </tr>
+          <tr>
+            <td><img src="images/trans.gif" alt="Saxo" width="5" height="10" /></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><table width="446" border="0" cellpadding="0" cellspacing="0" class="bg_cadrec02">
+              <tr>
+                <td align="left"><img src="images/c_c01.jpg" alt="UES" width="21" height="115" /></td>
+                <td align="left" valign="top"><img src="images/UES_encard_eng.jpg" alt="24ème Edition UES" width="404" height="115" /></td>
+                <td align="right"><img src="images/c_c03.jpg" alt="UES Saxo" width="21" height="115" /></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><table width="446" border="0" cellpadding="0" cellspacing="0"  class="bg_cadrec02 marge_top10">
+              <tr>
+                <td width="23" align="left" valign="top"><img src="images/c_c01.jpg" alt="UES" width="21" height="115"></td>
+                <td width="424" align="left" valign="top"><table width="99%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="left" background="images/t_ibg.jpg"><img src="images/t_ues.jpg" alt="Intervenants &agrave;  l'Universit&eacute; de Saxophone" width="241" height="37"></td>
+                    </tr>
+                  <tr>
+                    <td align="left"><img src="images/trans.gif" alt="UES" width="14" height="13"></td>
+                    </tr>
+                  <tr>
+                    <td align="left"><table width="93%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="58%"><span class="txt_blc12">14 chemin de Vigneaux - Romette <br>
+                          05000 Gap FRANCE</span></td>
+                        <td width="42%">&nbsp;</td>
+                        </tr>
+                      <tr>
+                        <td colspan="2"><img src="images/trans.gif" alt="Saxo" width="5" height="8"></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                  </table></td>
+                <td width="24" align="right" valign="top"><img src="images/c_c03.jpg" alt="UES Saxo" width="21" height="115"></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><?php if ($auteur_session) { ?>
+              <br />
+              <table width="447" border="0" cellpadding="15" cellspacing="0">
+                <tr>
+                  <td align="left" valign="baseline" bgcolor="#363434"><span class="txt_blc12"><INCLURE{fond=inc_txt_register_eng}></span></td>
+                </tr>
+  </table>
+              <?php } else { ?>
+              <?php } ?></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><table width="447" border="0" align="right" cellpadding="8" cellspacing="0">
+              <tr>
+                <td colspan="2" align="left"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+              </tr>
+              <tr>
+                <td width="37" align="center" valign="baseline" bgcolor="#363434"><span class="txt_blc12"><strong class="txt_red12b"><img src="images/Sarning.png" alt="" width="32" height="32" /></strong></span></td>
+                <td width="378" bgcolor="#363434"><span class="txt_blc12">
+                  <INCLURE{fond=inc_txt_age18_eng}>
+                </span>                  </td>
+              </tr>
+              <tr>
+                <td colspan="2" align="left"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+              </tr>
+              <tr>
+                <td align="center" valign="baseline" bgcolor="#363434" class="txt_red12b"><strong class="txt_red12b"><img src="images/Sarning.png" alt="" width="32" height="32" /></strong></td>
+                <td bgcolor="#363434"><span class="txt_blc12">
+                  <INCLURE{fond=inc_txt_paypal_eng}>
+                </span>
+                  </td>
+              </tr>
+          </table></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top">&nbsp;</td>
+          </tr>
+          </table></td>
+      </tr>
+    </table>
+        
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                  </table>
+                  <?php if ($auteur_session) { ?>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="marge_15">
+          <tr>
+            <td valign="top" class="txt_blc"></td>
+          </tr>
+      </table>
+        <?php } else { ?>
+        
+        <table width="100%" border="0" cellspacing="0" cellpadding="15">
+          <tr>
+            <td class="txt_jaune11b"> You need   to register :</td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="15" cellpadding="0">
+          <tr>
+            <td width="42%" align="left" valign="top" class="txt_12blc">
+            <div class="cadre_color log_aut">[(#LOGIN_PUBLIC)]</div></td>
+            <td width="58%" align="left" valign="top"  class="txt_12blc">
+            <div class="cadre_color log_aut">[(#FORMULAIRE_INSCRIPTION)]</div></td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+        <?php } ?></td>
+        </tr>
+    </table>
+   </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/bg_bottom.jpg">
+  <tr>
+    <td><?php include('includes/menu_bas_eng.php'); ?></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+</BOUCLE_rubrique>

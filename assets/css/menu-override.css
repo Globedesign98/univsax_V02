@@ -1,0 +1,258 @@
+/* ==========================================================================
+   MENU OVERRIDE — UES
+   (Ce fichier est chargé en dernier : overrides finaux)
+   ========================================================================== */
+
+/* --- Navbar (inchangé) --------------------------------------------------- */
+.ues-nav, .navbar.ues-nav, .ues-header .ues-nav{
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+body.scrolled .ues-nav, body.scrolled .navbar.ues-nav, body.scrolled .ues-header .ues-nav{
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ==========================================================================
+   UES — CONTACT (objectif : proche de "Contact OIB" + tes couleurs)
+   IMPORTANT : on neutralise les contraintes de largeur héritées (sinon "50%")
+   ========================================================================== */
+
+#contact.ues-contact{
+  background:#fff !important;
+}
+
+/* Layout global : limiter l'étalement (comme OIB) */
+#contact.ues-contact .ues-contact__wrap{
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Pas d'effet "carte" : rendu flat */
+#contact.ues-contact .ues-contact__info,
+#contact.ues-contact .ues-contact__form{
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* --------- TITRES (kicker + ligne) -------------------------------------- */
+#contact.ues-contact .ues-contact__kicker{
+  display:flex;
+  align-items:center;
+  gap: 18px;
+  font-size: .78rem;
+  letter-spacing: .18em;
+  font-weight: 700;
+  color: rgba(0,0,0,.55);
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+#contact.ues-contact .ues-contact__kicker::after{
+  content:"";
+  height: 2px;
+  width: 90px;
+  background: #2b445c;
+  border-radius: 999px;
+  display:block;
+}
+#contact.ues-contact .ues-contact__title{
+  margin: 0 !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: #2b445c !important;
+}
+
+/* --------- COLONNE GAUCHE (adresse / email) ------------------------------ */
+#contact.ues-contact .ues-contact__item{
+  display:grid;
+  grid-template-columns: 52px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 18px 0;
+  border: 0 !important;
+}
+#contact.ues-contact .ues-contact__icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display:grid;
+  place-items:center;
+  background: #8b2f2f;
+  color: #fff;
+}
+#contact.ues-contact .ues-contact__item i{
+  font-size: 1.05rem;
+  color: #fff !important;
+  padding: 0 !important;
+}
+#contact.ues-contact .ues-contact__item h4{
+  margin: 2px 0 6px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2b445c;
+  text-transform: none;
+  letter-spacing: 0;
+}
+#contact.ues-contact .ues-contact__item p{
+  margin: 0;
+  color: rgba(0,0,0,.70);
+  line-height: 1.35;
+  font-size: .95rem;
+  text-align: left;
+}
+#contact.ues-contact .ues-contact__item a{
+  color: rgba(0,0,0,.70);
+  text-decoration: none;
+  font-weight: normal;
+}
+#contact.ues-contact .ues-contact__item a:hover{ text-decoration: underline; }
+
+/* --------- COLONNE DROITE : titre + formulaire --------------------------- */
+#contact.ues-contact .ues-contact__formtitle{
+  text-align: left !important;
+  font-weight: 800;
+  color: #2b445c;
+  margin: 0 0 14px !important;
+  font-size: 1.4rem;
+}
+
+/* IMPORTANT : enlever toute contrainte de largeur héritée (cause du "50%") */
+#contact.ues-contact .ues-contact__form,
+#contact.ues-contact .ajax-form-container,
+#contact.ues-contact .ajax-form-container .ajax,
+#contact.ues-contact .formulaire_spip,
+#contact.ues-contact .formulaire_spip form,
+#contact.ues-contact .formulaire_spip fieldset,
+#contact.ues-contact .formulaire_spip .editer-groupe{
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* On cache le legend SPIP (tu as déjà le H3 "Envoyer un message") */
+#contact.ues-contact .formulaire_spip legend{ display:none !important; }
+
+/* Sécurité : le champ texte avait été masqué dans ues.css */
+#contact.ues-contact .formulaire_spip .editer_texte{
+  display:block !important;
+}
+
+/* --------- GRILLE 2 colonnes (structure SPIP réelle : .editer-groupe) ---- */
+#contact.ues-contact .formulaire_spip .editer-groupe{
+  display:grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 14px 28px !important;
+  align-items:start;
+}
+
+/* Par défaut : un champ = une colonne */
+#contact.ues-contact .formulaire_spip .editer{
+  grid-column: auto;
+}
+
+/* Pleine largeur : destinataire (1er bloc), sujet, texte, pièces jointes, boutons */
+#contact.ues-contact .formulaire_spip .editer-groupe > .editer.obligatoire:first-child,
+#contact.ues-contact .formulaire_spip .editer_sujet,
+#contact.ues-contact .formulaire_spip .editer_texte,
+#contact.ues-contact .formulaire_spip .pieces_jointes,
+#contact.ues-contact .formulaire_spip .boutons{
+  grid-column: 1 / -1 !important;
+}
+
+/* Prénom et Nom restent en 2 colonnes */
+#contact.ues-contact .formulaire_spip .editer_prenom,
+#contact.ues-contact .formulaire_spip .editer_nom{
+  grid-column: auto !important;
+}
+
+/* Email : à droite (comme OIB).
+   Si tu préfères mail en pleine largeur, remplace par grid-column: 1 / -1 */
+#contact.ues-contact .formulaire_spip .editer_mail{
+  grid-column: 2 !important;
+}
+
+/* --------- Champs : style simple (comme OIB) ----------------------------- */
+#contact.ues-contact .formulaire_spip label{
+  display:block;
+  font-size: .86rem;
+  font-weight: 700;
+  color: rgba(0,0,0,.70);
+  margin: 0 0 6px;
+}
+
+#contact.ues-contact .formulaire_spip input[type="text"],
+#contact.ues-contact .formulaire_spip select,
+#contact.ues-contact .formulaire_spip textarea{
+  width: 100% !important;
+  border: 1px solid #cfcfcf !important;
+  border-radius: 4px !important;
+  padding: 10px 10px !important;
+  background:#fff !important;
+  color:#111 !important;
+  outline:none;
+  box-shadow:none !important;
+  box-sizing: border-box;
+}
+
+#contact.ues-contact .formulaire_spip textarea{
+  min-height: 240px !important;
+  resize: vertical;
+}
+
+/* Destinataire : barre pleine (ta couleur) */
+#contact.ues-contact .formulaire_spip #destinataire{
+  background: #2b445c !important;
+  color: #fff !important;
+  border-color: #2b445c !important;
+  border-radius: 10px !important;
+  padding: 11px 14px !important;
+  font-weight: 800;
+}
+
+/* Pièce jointe : proche du rendu OIB */
+#contact.ues-contact .formulaire_spip .pieces_jointes ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 6px 0 0;
+}
+#contact.ues-contact .formulaire_spip .pieces_jointes li{ margin: 0; }
+
+/* Bouton envoyer : en bas à droite (surtout PAS fixed) */
+#contact.ues-contact .formulaire_spip .boutons{
+  display:flex !important;
+  justify-content:flex-end !important;
+  position: static !important;
+  margin-top: 6px !important;
+}
+#contact.ues-contact .formulaire_spip .boutons .submit,
+#contact.ues-contact .formulaire_spip input[type="submit"]{
+  position: static !important;
+  float: none !important;
+  background: #2b445c !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  padding: 10px 18px !important;
+  font-weight: 800 !important;
+  box-shadow: 0 10px 18px rgba(0,0,0,.18) !important;
+}
+
+/* Responsive */
+@media (max-width: 991.98px){
+  #contact.ues-contact .formulaire_spip .editer-groupe{
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  #contact.ues-contact .formulaire_spip .editer_mail{
+    grid-column: 1 / -1 !important;
+  }
+}

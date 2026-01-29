@@ -1,0 +1,675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG" dir="#LANG_DIR">
+<head>
+<title>[(#TITRE|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+[<meta name="description" content="(#INTRODUCTION{150}|textebrut)" />]
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="css/modif_public.css" rel="stylesheet" type="text/css" />
+	<meta name="robots" content="none" />
+<INCLURE{fond=inc-head}>
+<?php include('head-content.php'); ?>
+<link rel="shortcut icon" href="images/favicon.ico" >
+<link href="css/ues.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	background-image: url(images/bg_top_rub.jpg);
+	background-repeat: repeat-x;
+}
+.inscription .spip-previsu {
+    display: none;
+}
+input#champ_pub_auteurs {
+    float: left;
+}
+  .pro_bouton{
+	display:inline-block;
+   border: 1px solid #DDD;
+   border-radius: 3px;
+   text-shadow: 0 1px 1px white;
+   box-shadow:0 1px 1px #fff;
+   font: bold 11px Sans-Serif;
+   line-height:15px;
+   padding: 2px 10px;
+   white-space: nowrap;
+   vertical-align: middle;
+   color: #666;
+   background: transparent;
+   cursor: pointer;
+   border-color: #ddd;
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	filter:none;
+   background-color:#E0E0E0;
+   background: -webkit-linear-gradient(top, white, #E0E0E0);
+   background:    -moz-linear-gradient(top, white, #E0E0E0);
+   background:     -ms-linear-gradient(top, white, #E0E0E0);
+   background:      -o-linear-gradient(top, white, #E0E0E0);
+   background:      linear-gradient(top, white, #E0E0E0);
+   -pie-background:      linear-gradient(top, white, #E0E0E0);
+   box-shadow:         0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;}
+   .pro_bouton:hover{ box-shadow:inset 0 0 3px #fff;border-color: #D6D4D4; text-decoration:none;}
+.cadre_box {
+    background-color: #f0eeee;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin: 3px 0;
+    padding: 20px;
+    position: relative;
+    width: 94%;
+}
+.editer_statut.statut_prepa {
+    float: left;
+    padding: 0;
+    text-align: left;
+    width: 220px;
+}
+.formulaire_spip ul li.valide {
+    clear: none;
+    float: left;
+    width: 250px;
+}
+.menu_pub {
+    margin: 10px 25px 15px 0;
+    text-align: right;
+}
+.menu_pub .pro_btn {
+    font-size: 12px;
+    padding: 5px 25px;
+}
+#ok .spip-previsu {
+    display: none;
+}
+.xxx #cboxLoadedContent {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.txt_10 {
+    color: #666;
+    font-size: 10px;
+}
+.pro_btn,.pro_description-light,.pro_exampletip{
+	display:inline-block;
+   border: 1px solid #DDD;
+   border-radius: 3px;
+   text-shadow: 0 1px 1px white;
+   box-shadow:0 1px 1px #fff;
+   font: bold 11px Sans-Serif;
+   line-height:15px;
+   padding: 8px 10px;
+   white-space: nowrap;
+   vertical-align: middle;
+   color: #666;
+   background: transparent;
+   cursor: pointer;
+   border-color: #ddd;
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	filter:none;
+   background-color:#E0E0E0;
+   background: -webkit-linear-gradient(top, white, #E0E0E0);
+   background:    -moz-linear-gradient(top, white, #E0E0E0);
+   background:     -ms-linear-gradient(top, white, #E0E0E0);
+   background:      -o-linear-gradient(top, white, #E0E0E0);
+   background:      linear-gradient(top, white, #E0E0E0);
+   -pie-background:      linear-gradient(top, white, #E0E0E0);
+   box-shadow:         0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;}
+  .pro_btn.pro_small{ font-size:12px;}
+  .pro_btn:hover,.pro_description-light:hover,.pro_exampletip:hover{ box-shadow:inset 0 0 3px #fff;border-color: #D6D4D4; text-decoration:none;}
+  .pro_bouton{
+	display:inline-block;
+   border: 1px solid #DDD;
+   border-radius: 3px;
+   text-shadow: 0 1px 1px white;
+   box-shadow:0 1px 1px #fff;
+   font: bold 11px Sans-Serif;
+   line-height:15px;
+   padding: 2px 10px;
+   white-space: nowrap;
+   vertical-align: middle;
+   color: #666;
+   background: transparent;
+   cursor: pointer;
+   border-color: #ddd;
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	filter:none;
+   background-color:#E0E0E0;
+   background: -webkit-linear-gradient(top, white, #E0E0E0);
+   background:    -moz-linear-gradient(top, white, #E0E0E0);
+   background:     -ms-linear-gradient(top, white, #E0E0E0);
+   background:      -o-linear-gradient(top, white, #E0E0E0);
+   background:      linear-gradient(top, white, #E0E0E0);
+   -pie-background:      linear-gradient(top, white, #E0E0E0);
+   box-shadow:         0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;}
+   .pro_bouton:hover{ box-shadow:inset 0 0 3px #fff;border-color: #D6D4D4; text-decoration:none;}
+.cadre_box {
+    background-color: #f0eeee;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin: 3px 0;
+    padding: 20px;
+    position: relative;
+    width: 94%;
+}
+.editer_statut {
+    float: left;
+    padding: 0;
+    text-align: left;
+    width: 220px;
+	list-style: outside none none;
+}
+.editer_statut > label {
+    display: none;
+}
+.formulaire_spip ul li.valide {
+    clear: none;
+    float: left;
+    width: 250px;
+}
+
+.formulaire_spip.formulaire_editer ul {
+    margin: 10px 0 0;
+    padding: 0;
+}
+#ok .spip-previsu {
+    display: none;}
+	.list-categories {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.list-categories li {
+	font-size: 12px;
+	line-height: 8px;
+	font-family: 'Roboto', sans-serif;
+	max-width: 100%;
+	margin-bottom: 2px;
+	
+}
+.list-categories li a {
+	color: #FFF;
+	display: block;
+	padding: 13px 31px;
+	font-size: 15px;
+	font-weight: bold;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	text-align: left;
+	text-decoration:none;
+	background-attachment: scroll;
+	background-color: #333333;
+	background-image: url(../images/arrow_blc.png);
+	background-repeat: no-repeat;
+	background-position: 16px 15px;
+}
+.list-categories li a:hover {
+  color: #FFF;
+  text-decoration: none;
+  background-color: #292929;
+}
+#ok .spip-previsu {
+    display: none;
+}
+div.statut_prop {
+    color: #e42121;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 10px 0 0 17px;
+	font-style: italic;
+}
+
+div.statut_prepa {
+    background-image: url("../images/Sarning.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: #ffe720;
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 2px 0 0 17px;
+    padding: 6px 0 19px 48px;
+}
+div.statut_supp {
+	background-image: url(../images/delete.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	color: #000;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 10px 0 0 17px;
+	font-style: italic;
+}
+
+div.statut_propo {
+    background-image: url("../images/prop.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: #ff7e00;
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 2px 0 0 17px;
+    padding: 6px 0 19px 48px;
+}
+div.statut_publie {
+    background-image: url("../images/ok.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: #0093d5;
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 1px 0 0 17px;
+    padding: 5px 0 17px 37px;
+}
+.txt_gris11 {
+    font-size: 11px;
+    line-height: 14px;
+}
+.small { display:none;}
+#ok #cboxLoadedContent {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.margin_top10 {
+    margin-top: 10px;
+}
+.a_titre {
+    color: #454545;
+}
+.formulaire_spip p.boutons {
+    clear: none;
+    margin: 0;
+    padding: 9px 0 0;
+    text-align: left;
+}
+</style>
+</head>
+<body class="inscription">
+<div align="center">
+<?php include('includes/bloc_rub_forum.php'); ?>
+<INCLURE{fond=inc-menu2012}>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="985" valign="top" class="bg_menu_border">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#212020"><table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top">
+        <table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top"><table width="485" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="485">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><img src="images/titre_inscriptions.jpg" alt="Inscription &agrave; l'Universit&eacute; de Saxophone" width="136" height="23" /></td>
+          </tr>
+          <tr>
+            <td class="txt_jaune11b">Inscription &agrave; l'Universit&eacute; Europ&eacute;enne de Saxophone - 2025
+          </td></tr>
+          <tr>
+            <td valign="top" class="txt_blc12"><div align="justify"><br>
+            </div></td>
+          </tr>
+          <tr>
+            <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+            
+           </td>
+          </tr>
+          <tr>
+            <td>
+            
+            <div align="left">
+<table width="91%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left">
+<br />
+<?php if ($auteur_session) { ?>
+  <span class="txt_blc txt_12">Pour <strong>proposer votre candidature à l'Université de Saxophone 2025</strong>, modifier le statut ci-dessous en "proposé à l'évaluation" . Cliquer sur CHANGER pour valider votre choix. </span><br />
+<div class=""><div class="annonce2" align="center">
+<div class="annonce2" align="center">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="margin_top5">
+        <tr>
+          <td width="95%" align="left" valign="top">[(#SESSION{statut}|=={1comite}|oui)
+          #FORMULAIRE_INSTITUER_OBJET{article,#ID_ARTICLE,#SELF|parametre_url{var_mode,preview}}
+          ]
+          [(#SESSION{statut}|=={0minirezo}|oui)
+          #FORMULAIRE_INSTITUER_OBJET{article,#ID_ARTICLE,#SELF|parametre_url{var_mode,preview}}
+          ]
+            </td>
+        </tr>
+      </table>
+</div>
+<BOUCLE_statut(ARTICLES){id_article}>
+  [(#STATUT|=={publie}|oui)<balise99><div class="statut_publie">Formulaire validé</div><balise99>]
+  [(#STATUT|=={prop}|oui)<balise99><div class="statut_propo">Formulaire proposé à l'évaluation</div><balise99>]
+     [(#STATUT|=={prepa}|oui)<balise99><div class="statut_prepa">Formulaire actuellement en cours de rédaction</div><balise99>] 
+     [(#STATUT|=={poubelle}|oui)<balise99><div class="statut_supp">Formulaire supprimée</div><balise99>]                  
+  </BOUCLE_statut>
+<br />
+<br />
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td class="bg_traitx"><img width="11" height="15" src="images/bg_trait.jpg"></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody></table>
+<ul class="list-categories">
+
+<li><a href="spip.php?page=inscription_modifier&id_article=#ENV{id_article}&var_mode=preview" class="">Modifier le formulaire d'inscription</a></li>
+
+<li><a href="spip.php?rubrique5&var_mode=recalcul" target="_parent" class="">Terminer</a></li>
+</ul>
+<br />      
+        <?php } else { ?>
+<p class="txt_blc">Pour compléter le formulaire d'inscription, vous devez vous identifier.</p>
+<?php } ?>
+       </div>
+       
+</div>
+</td>
+  </tr>
+</table></div>
+            
+            
+            </td>
+          </tr>
+          
+        </table></td>
+        <td align="right" valign="top"><table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="right" valign="top" class="txt_gris10" ><table width="447" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="207" align="left">[(#SESSION{auth}|?{' '})
+                          [<strong>Bonjour</strong> (#SESSION{nom}|typo)]
+                          [(#SESSION{prenom}|typo)] (<a href="#URL_LOGOUT{spip.php?rubrique7}">Log out</a>)
+                          ]</td>
+    <td width="240" align="right"><script language="JavaScript">
+navvers = navigator.appVersion.substring(0,1);
+if (navvers > 3)
+   navok = true;
+else
+   navok = false;
+
+today = new Date;
+jour = today.getDay();
+numero = today.getDate();
+if (numero<10)
+   numero = "0"+numero;
+mois = today.getMonth();
+if (navok)
+   annee = today.getFullYear();
+else
+   annee = today.getYear();
+TabJour = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
+TabMois = new Array("janvier","f&eacute;vrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","d&eacute;cembre");
+messageDate = TabJour[jour] + " " + numero + " " + TabMois[mois] + " " + annee;
+   </script>
+     <script language="JavaScript">
+document.write(messageDate);
+     </script> &nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><?php if ($auteur_session) { ?>
+              <div class="cadre_color marg_ins">
+              <BOUCLE_mission2(ARTICLES){id_article}>
+              <table width="100%" border="0" cellspacing="2" cellpadding="3" class="txt_blc">
+                  <tr>
+                    <td width="22%" align="left" valign="top"  class="bg_33 txt_12"><strong>Nom</strong></td>
+                    <td width="78%" align="left" valign="top" class="txt_12">&nbsp;&nbsp; #TITRE</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top"  class="bg_33 txt_12"><strong>Pr&eacute;nom </strong></td>
+                    <td align="left" valign="top" class="txt_12">&nbsp;&nbsp; #PRENOM</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top"  class="bg_33 txt_12"><strong>Sexe </strong></td>
+                    <td align="left" valign="top" class="txt_12">&nbsp;&nbsp; #SEXO</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top"  class="bg_33 txt_12"><strong>Age</strong></td>
+                    <td align="left" valign="top" class="txt_12">&nbsp;&nbsp; #AGE</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top" class="txt_12">&nbsp;</td>
+                    <td align="left" valign="top" class="txt_12">&nbsp;</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top"  class="bg_33 txt_12"><strong>Adresse</strong></td>
+                    <td align="left" valign="top" class="txt_12">&nbsp;&nbsp; #ADRESSE</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top"  class="bg_33 txt_12"><strong>Code postal</strong></td>
+                    <td align="left" valign="top" class="txt_12">&nbsp;&nbsp;#POSTAL</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top"  class="bg_33 txt_12"><strong>Ville</strong></td>
+                    <td align="left" valign="top" class="txt_12">&nbsp;&nbsp; #VILLE</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top"  class="bg_33 txt_12"><strong>Pays</strong></td>
+                    <td align="left" valign="top" class="txt_12">&nbsp;&nbsp; #PAYS</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top"  class="bg_33 txt_12"><strong>T&eacute;l&eacute;phone</strong></td>
+                    <td align="left" valign="top" class="txt_12">&nbsp;&nbsp;#PHONE</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top"  class="bg_33 txt_12"><strong>Email</strong></td>
+                    <td align="left" valign="top" class="txt_12"><BOUCLE3(AUTEURS){id_article}>[&nbsp;&nbsp; (#EMAIL)]</BOUCLE3></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top">&nbsp;</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="bg_33"><strong class="txt_12">Particularités sanitaires (allergies, asthme, etc.) à signer absolument :</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">&nbsp;&nbsp; #SANTE</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="bg_33"><strong class="txt_12">Personne à joindre en cas d'hospitalisation ou de force majeure, à signaler absolument :</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">&nbsp;&nbsp; #CONTACT_NOM<br />
+&nbsp;&nbsp; #CONTACT_PRENOM<br />
+&nbsp;&nbsp; #CONTACT_ADRESSE<br />
+&nbsp;&nbsp; #CONTACT_TEL</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top"><br />
+                      <table width="100%" border="0" cellspacing="2" cellpadding="5">
+                        <tr>
+                          <td width="69%" align="left" valign="top"  class="bg_33 txt_12"><strong>
+Végétarien(ne) :</strong></td>
+                          <td width="31%" align="left" valign="top" class="txt_12">&nbsp;&nbsp; #VEGETARIEN</td>
+                          </tr>
+                        <tr>
+                          <td align="left" valign="top"  class="bg_33 txt_12"><strong>Hébergement au Foyer Des Jeunes Travailleurs :</strong></td>
+                          <td align="left" valign="top" class="txt_12">&nbsp;&nbsp; #HEBERGEMENT</td>
+                          </tr>
+                        <tr>
+                          <td align="left" valign="top"  class="bg_33 txt_12"><strong>Auditeur libre (tarif 250&euro;) :</strong></td>
+                          <td align="left" valign="top" class="txt_12">&nbsp;&nbsp; #AUDITEUR</td>
+                          </tr>
+                        </table>
+                      <br /></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="bg_33"><strong class="txt_12">Nom et lieu de votre &eacute;cole de musique :</strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#ECOLE</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="bg_33"><strong class="txt_12">Nom de votre professeur :</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#PROF</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="bg_33"><strong class="txt_12">Pi&egrave;ce pr&eacute;par&eacute;e pour l&rsquo;Universit&eacute; Europ&eacute;enne de Saxophone :</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#PIECE</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="bg_33"><strong class="txt_12">Quel saxophone apportez-vous ?</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#TYPE_SAXO</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="bg_33"><strong class="txt_12">Quel  bec apportez-vous ?</strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#TYPE_BEC</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top"><strong class="txt_12"><br />
+                      Choix de pratique d&rsquo;ensemble :</strong><br />
+                      <br />
+                      <table width="100%" border="0" cellspacing="2" cellpadding="5">
+                        <tr>
+                          <td width="30%" class="bg_33 txt_12">Musique de chambre :</td>
+                          <td width="70%" align="left" class="txt_12">&nbsp;&nbsp; #MUSICHAMBRE</td>
+                        </tr>
+                        <tr>
+                          <td class="bg_33 txt_12">Ensemble de Sax :</td>
+                          <td align="left" class="txt_12">&nbsp;&nbsp; #ENSEMBLE</td>
+                        </tr>
+                        <tr>
+                          <td class="bg_33 txt_12">Initiation :</td>
+                          <td align="left" class="txt_12">&nbsp;&nbsp; #TRADITION</td>
+                        </tr>
+                        </table>
+                      <br /></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top"  class="bg_33 txt_12"><strong>Etes-vous compositeur ? </strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">&nbsp;&nbsp; #OUI_NON_2</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top"  class="txt_12">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top"  class="bg_33 txt_12"><strong>Etes-vous inscrit auprès d'un organisme de droits d'auteur ? </strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">&nbsp;&nbsp; #OUI_NON_1</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top"  class="txt_12">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top"  class="bg_33 txt_12"><strong>Mode de paiement choisi par l&rsquo;&eacute;tudiant  : </strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">&nbsp;&nbsp; #PAIEMENT</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top"  class="bg_33 txt_12"><strong>R&egrave;glement 2025 : </strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">&nbsp;&nbsp; OK (#PRENOM #TITRE)</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top"  class="bg_33 txt_12"><strong>Remarques : </strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#REMARQUE</td>
+                  </tr>
+                  </table>
+                  </BOUCLE_mission2>
+              </div>
+              <?php } else { ?>
+              Oups!
+              <?php } ?></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top">&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="left" valign="top">&nbsp;</td>
+          </tr>
+          </table></td>
+      </tr>
+    </table>
+        <?php if ($auteur_session) { ?>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                  </table>
+                  
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="marge_15">
+          <tr>
+            <td valign="top" class="txt_blc"></td>
+          </tr>
+      </table>
+        <?php } else { ?>
+        
+        <table width="100%" border="0" cellspacing="0" cellpadding="15">
+          <tr>
+            <td class="txt_jaune11b"> You need   to register :</td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="15" cellpadding="0">
+          <tr>
+            <td width="42%" align="left" valign="top" class="txt_12blc">
+            <div class="cadre_color log_aut">[(#LOGIN_PUBLIC)]</div></td>
+            <td width="58%" align="left" valign="top"  class="txt_12blc">
+            <div class="cadre_color log_aut">[(#FORMULAIRE_INSCRIPTION)]</div></td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+        <?php } ?></td>
+        </tr>
+    </table>
+   </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/bg_bottom.jpg">
+  <tr>
+    <td><?php include('includes/menu_bas.php'); ?></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

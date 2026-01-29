@@ -1,0 +1,39 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<title>[(#NOM_SITE_SPIP|textebrut) - ]<BOUCLE_titre_image(DOCUMENTS) {id_document}>[(#TITRE|textebrut)]</BOUCLE_titre_image></title>
+<meta http-equiv="Content-Type" content="text/html; charset=#CHARSET">
+<!--
+<style type="text/css" media="screen">
+body {
+	margin: 0px;
+	background-color: #ffffff;
+}
+-->
+</style>
+</head>
+
+<body>
+#SET{ciok,#ENV{id_article}|cisf_autorise_modifier_article}
+
+    <BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>				
+    <BOUCLE_image(DOCUMENTS){id_document}{tout}>
+    [(#GET{ciok}|=={oui}|oui)
+        <img src="[(#URL_DOCUMENT|attribut_url)]" />
+    ]
+    </BOUCLE_image>
+    </BOUCLE_article>
+    </B_article>
+
+    [(#GET{ciok}|=={non}|oui)
+            [(#REM) <!-- Auteur non connecte ou visiteur -->]
+            <div id="contenu">
+            <INCLURE{fond=cisf_altern,env}>
+            </div>
+    ]
+		
+</body>
+</html>
+

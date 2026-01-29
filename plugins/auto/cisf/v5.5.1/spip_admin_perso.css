@@ -1,0 +1,15 @@
+/* Les boutons d'admin survolent la page (sauf # FORMULAIRE_ADMIN) */
+.spip-admin-float { position: absolute; right: 20px; top: 0; background-color: #FFFFFF; z-index: 100; }
+
+/* Couleurs et design des boutons d'admin */
+a.spip-admin-boutons { border-top: 1px solid #cecece; border-bottom: 2px solid #4A4A4A; border-left: 1px solid #cecece; border-right: 1px solid #cecece; text-decoration: none; text-align: center; margin: 0; padding: 1px .5em; font-family: helvetica,arial, sans-serif; font-size: 10px; font-weight: bold; background-color: #fff; color: #0C479D; }
+a:hover.spip-admin-boutons { background-color: #fc3; border-bottom: 2px solid #36F; }
+a:active.spip-admin-boutons { background-color: #ccc; border-bottom: 2px solid #f00; }
+
+
+/* Couleurs et design de la previsu : n'existe pas sous SPIP 2.0 */
+.spip-previsu { background-color: #111111; color: #eeeeee; font-size: 18px; position: absolute; padding-right: 5px; padding-top: 2px; padding-bottom: 5px;top: 0px; left: 0px;}
+.spip-previsu img {display:inline;}
+
+/* Le bouton de previsualisation s'affiche derrière le bandeau */
+.spip-previsu { z-index: 99; }

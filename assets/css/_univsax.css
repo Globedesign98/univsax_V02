@@ -1,0 +1,277 @@
+/* ==========================================================================
+   UES (univsax.com) — overrides Bootstrap/template
+   Place ce fichier en: assets/css/univsax.css
+   ========================================================================== */
+
+:root{
+  --ues-yellow: #f2d100;
+  --ues-black: #0a0a0a;
+  --ues-white: #ffffff;
+  --ues-muted: rgba(255,255,255,.78);
+  --ues-line: rgba(242,209,0,.55);
+  --ues-blue: #86b6ff;
+}
+
+/* Base */
+.ues-page{
+  font-family: Montserrat, Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  background: var(--ues-black);
+  color: var(--ues-white);
+}
+
+.ues-main{
+  /* hauteur header = topbar (~52) + nav (~86) => on laisse de la marge */
+  padding-top: 140px;
+}
+
+/* Topbar */
+.ues-topbar{
+  background: var(--ues-yellow);
+  color: #111;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+.ues-topbar-inner{
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 8px 18px;
+}
+
+.ues-topbar-title{
+  font-weight: 600;
+  letter-spacing: .3px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.ues-topbar-actions{
+  position: absolute;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ues-topbar-link{
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+.ues-topbar-link:hover{ text-decoration: underline; }
+
+.ues-lang{
+  display: flex;
+  gap: 6px;
+}
+
+.ues-lang-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 34px;
+  background: rgba(255,255,255,.92);
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .85rem;
+  border: 1px solid rgba(0,0,0,.25);
+}
+.ues-lang-btn.is-active{
+  background: #fff;
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.15);
+}
+
+/* Nav */
+.ues-nav{
+  background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,0));
+  padding: 14px 0 18px;
+}
+
+.ues-nav-inner{
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.ues-brand img{
+  height: 92px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,.55));
+}
+
+.ues-toggler{
+  border: 1px solid rgba(255,255,255,.35);
+}
+.ues-toggler .navbar-toggler-icon{
+  filter: invert(1);
+}
+
+.ues-menu .nav-link{
+  color: rgba(255,255,255,.88);
+  font-weight: 600;
+  letter-spacing: .3px;
+  padding: 12px 14px;
+}
+.ues-menu .nav-link:hover{ color: #fff; }
+
+.ues-menu .nav-link.active{
+  color: var(--ues-yellow);
+  position: relative;
+}
+.ues-menu .nav-link.active::after{
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 6px;
+  height: 3px;
+  background: var(--ues-yellow);
+  border-radius: 10px;
+}
+
+/* Hero background (remplace l'image par ton visuel)
+   -> mets ton image sax ici: assets/img/ues/hero-sax.jpg
+*/
+.ues-hero{
+  min-height: calc(100vh - 140px);
+  padding: 26px 0 70px;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(242,209,0,.20), rgba(0,0,0,0) 55%),
+    linear-gradient(to right, rgba(0,0,0,.55) 0%, rgba(0,0,0,.78) 50%, rgba(0,0,0,.92) 100%),
+    url("../img/ues/hero-sax.jpg");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+/* CTA inscriptions */
+.ues-cta-wrap{ margin-bottom: 14px; }
+
+.ues-cta{
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid var(--ues-yellow);
+  color: var(--ues-yellow);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: .3px;
+  background: rgba(0,0,0,.35);
+}
+.ues-cta:hover{
+  background: rgba(242,209,0,.10);
+  color: var(--ues-yellow);
+}
+
+/* Panel central */
+.ues-panel{
+  border: 1px solid var(--ues-line);
+  background: rgba(0,0,0,.55);
+  box-shadow: 0 24px 60px rgba(0,0,0,.55);
+  padding: 26px 26px 22px;
+}
+
+.ues-panel-title{
+  color: var(--ues-blue);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.ues-panel-text{
+  color: var(--ues-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  max-width: 46ch;
+}
+
+.ues-quicklinks{
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.ues-quicklinks a{
+  color: rgba(255,255,255,.88);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+.ues-quicklinks a:hover{ text-decoration: underline; }
+
+.ues-x{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 99px;
+  border: 1px solid rgba(255,255,255,.28);
+  color: rgba(255,255,255,.92);
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Poster */
+.ues-poster{
+  width: 100%;
+  max-width: 460px;
+  display: block;
+  margin-left: auto;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 18px 45px rgba(0,0,0,.55);
+  background: #fff;
+}
+
+/* Partners */
+.ues-partners{
+  margin-top: 22px;
+}
+.ues-partners-title{
+  color: rgba(255,255,255,.65);
+  font-weight: 600;
+  letter-spacing: .2px;
+  font-size: .9rem;
+}
+
+.ues-partner-card{
+  height: 72px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.ues-partner-card img{
+  max-height: 46px;
+  max-width: 100%;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,.25));
+}
+
+/* Responsive tweaks */
+@media (max-width: 991.98px){
+  .ues-main{ padding-top: 158px; }
+  .ues-brand img{ height: 78px; }
+  .ues-panel-text{ max-width: none; }
+  .ues-poster{ margin-left: 0; max-width: 100%; }
+  .ues-topbar-actions{ right: 12px; gap: 12px; }
+  .ues-topbar-title{ font-size: .9rem; padding: 0 140px 0 12px; }
+}
+
+@media (max-width: 575.98px){
+  .ues-topbar-inner{ justify-content: flex-start; }
+  .ues-topbar-title{ text-align: left; padding-right: 0; }
+  .ues-topbar-actions{ position: static; margin-left: auto; }
+}

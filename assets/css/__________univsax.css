@@ -1,0 +1,920 @@
+/* ==========================================================================
+   UES (univsax.com) — overrides BootstrapMade template (clean version)
+   ========================================================================== */
+
+:root{
+  --ues-yellow: #f2d100;
+  --ues-black: #0a0a0a;
+  --ues-white: #ffffff;
+  --ues-muted: rgba(255,255,255,.78);
+  --ues-line: rgba(242,209,0,.55);
+  --ues-blue: #86b6ff;
+  --ues-logo-big: 140px;
+  --ues-logo-small: 58px;
+}
+
+
+/* Base */
+.ues-page{
+  font-family: Montserrat, Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  background: var(--ues-black);
+  color: var(--ues-white);
+}
+
+/* Header is fixed (topbar + nav). Reserve space. */
+.ues-main{
+  padding-top: 140px;
+}
+
+/* ---------------------------
+   TOPBAR (barre jaune)
+   --------------------------- */
+.ues-topbar{
+  background: var(--ues-yellow);
+  color: #111;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+  position: relative;
+  z-index: 1200;
+}
+
+.ues-topbar-inner{
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;            /* always one line */
+  gap: 12px;
+  padding: 6px 12px;
+}
+
+.ues-topbar-title{
+  flex: 1 1 auto;
+  min-width: 0;                 /* needed for ellipsis */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  letter-spacing: .2px;
+  font-size: .80rem;
+  text-align: left;
+}
+
+.ues-topbar-actions{
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  margin-left: auto;            /* actions on the right */
+}
+
+/* FB icon (no background/border) */
+.ues-social{
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: #111;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ues-social i {
+    font-size: 25px;
+    line-height: 1;
+    margin: 0 11px 0 0;
+    color: #000;
+}
+
+/* Language pill (HTML uses .ues-lang-pill / .ues-lang-pill-btn) */
+.ues-lang-pill{
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(0,0,0,.14);
+  border: 1px solid rgba(0,0,0,.18);
+}
+
+.ues-lang-pill-btn{
+  height: 26px;
+  min-width: 44px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: .78rem;
+  letter-spacing: .2px;
+}
+
+.ues-lang-pill-btn.is-active{
+  background: #111;
+  color: var(--ues-yellow);
+}
+
+/* ---------------------------
+   NAV (logo + menu)
+   --------------------------- */
+.ues-header{
+  z-index: 1100;
+}
+
+/* Default (over hero): subtle dark gradient */
+.ues-nav{
+  background: linear-gradient(to bottom, rgba(0,0,0,.70), rgba(0,0,0,0));
+  padding: 0;
+}
+
+/* Outside hero: solid dark so it doesn't look "white" over next sections */
+.ues-header.is-outside-hero .ues-nav{
+  background: rgba(0,0,0,.90);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.45);
+}
+
+.ues-nav-inner{
+  align-items: center;          /* prevents logo/menu overlap */
+padding-left: 49px;
+    padding-right: 80px;
+}
+
+.ues-brand{
+  margin: 0;                    /* IMPORTANT: remove hard offsets */
+  padding: 0;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ues-brand img{
+  height: 140px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,.55));
+}
+
+.ues-toggler{
+  border: 1px solid rgba(255,255,255,.35);
+  margin: 0 0 32px 0;
+}
+.ues-toggler .navbar-toggler-icon{
+  filter: invert(1);
+}
+
+/* Menu */
+.navbar-collapse{ justify-content: flex-end; }
+
+.ues-menu{
+  gap: 10px;
+  margin-top: 64px;               /* IMPORTANT: no extra push */
+  transform: none;              /* IMPORTANT: remove translate hacks */
+}
+
+.ues-menu .nav-link{
+  color: rgba(255,255,255,.90);
+  font-weight: 600;
+  letter-spacing: .3px;
+  padding: 10px 12px;
+  white-space: nowrap;
+}
+
+.ues-menu .nav-link:hover{ color: #fff; }
+
+.ues-menu .nav-link.active{
+  color: var(--ues-yellow);
+  position: relative;
+}
+.ues-menu .nav-link.active::after{
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 3px;
+  background: var(--ues-yellow);
+  border-radius: 10px;
+}
+
+/* ---------------------------
+   HERO (video ONLY inside hero, scrolls away)
+   --------------------------- */
+.ues-hero{
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 140px);
+  padding: 26px 0 70px;
+
+  /* fallback image if video fails */
+  background:
+    radial-gradient(circle at 25% 20%, rgba(242,209,0,.20), rgba(0,0,0,0) 55%),
+    linear-gradient(to right, rgba(0,0,0,.25) 0%, rgba(0,0,0,.65) 55%, rgba(0,0,0,.82) 100%),
+    url("../img/ues/hero-sax.jpg");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.ues-hero-video{
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.ues-hero-overlay{
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(242,209,0,.18), rgba(0,0,0,0) 60%),
+    linear-gradient(to right, rgba(0,0,0,.45) 0%, rgba(0,0,0,.70) 55%, rgba(0,0,0,.88) 100%);
+}
+
+.ues-hero-content{
+  position: relative;
+  z-index: 2;
+}
+
+/* CTA inscriptions */
+.ues-cta-wrap{ margin-bottom: 14px; }
+
+.ues-cta {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid var(--ues-line);
+    color: var(--ues-yellow);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .3px;
+    background: rgba(0, 0, 0, .35);
+    border-radius: 10px;
+}
+.ues-cta:hover{
+  background: rgba(242,209,0,.10);
+  color: var(--ues-yellow);
+}
+
+/* Panel central */
+.ues-panel{
+  background: rgba(0,0,0,.55);
+  box-shadow: 0 24px 60px rgba(0,0,0,.55);
+  padding: 26px 26px 22px;
+  border-radius: 10px;
+}
+
+.ues-panel-title{
+  color: var(--ues-blue);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.ues-panel-text{
+  color: var(--ues-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  max-width: 46ch;
+}
+.ues-qi {
+    font-size: 2rem;
+    line-height: 1;
+    margin-right: 10px;
+    color: #5a83a8;
+}
+i.bi.bi-music-note-list {
+    padding-right: 10px;
+}
+.ues-quicklinks{
+  list-style: none;
+  padding: 0;
+  margin: 35px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.ues-quicklinks a{
+  color: rgba(255,255,255,.88);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+.ues-quicklinks a:hover{  }
+
+.ues-x{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 99px;
+  border: 1px solid rgba(255,255,255,.28);
+  color: rgba(255,255,255,.92);
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Poster */
+.ues-poster {
+    width: 100%;
+    max-width: 460px;
+    display: block;
+    margin-left: auto;
+    border: 1px solid var(--ues-line);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .55);
+    border-radius: 6px;
+    padding: 7px;
+}
+
+/* Partners */
+.ues-partners{ margin-top: 22px; }
+.ues-partners-title{
+  color: rgba(255,255,255,.65);
+  font-weight: 600;
+  letter-spacing: .2px;
+  font-size: .9rem;
+}
+
+.ues-partner-card{
+  height: 72px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.ues-partner-card img{
+  max-height: 52px;
+  max-width: 100%;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,.25));
+}
+
+/* ---------------------------
+   Responsive
+   --------------------------- */
+@media (max-width: 991.98px){
+  .ues-main{ padding-top: 158px; }
+  .ues-brand img{ height: 84px; }
+  .ues-panel-text{ max-width: none; }
+  .ues-poster{ margin-left: 0; max-width: 100%; }
+}
+
+@media (max-width: 576px){
+  .ues-topbar-title{ font-size: .70rem; }
+  .ues-lang-pill-btn{ min-width: 40px; padding: 0 10px; height: 24px; }
+}
+/* ===== Suppression du blanc derrière logo/menu au scroll ===== */
+html, body{
+  background: #000 !important; /* le site ne "redevient" jamais blanc derrière le header */
+}
+
+/* Le header/nav reste transparent par défaut */
+.ues-header,
+.ues-nav{
+  background: transparent !important;
+}
+
+/* Si tu utilises la classe ajoutée au scroll (is-outside-hero),
+   on force un fond noir (pas blanc) */
+.ues-header.is-outside-hero .ues-nav{
+  background: rgba(0,0,0,.92) !important;
+  backdrop-filter: blur(6px);
+}
+
+/* Évite que le contenu clair des sections "remonte" derrière le header */
+.ues-main{
+  background: transparent !important;
+}
+/* ===== HERO derrière le header + NAV transparente sur le hero ===== */
+
+/* Hauteur header (topbar + nav). Ajuste si besoin */
+:root{
+  --ues-header-h: 140px;
+}
+
+/* Utilise la variable partout */
+.ues-main{
+  padding-top: var(--ues-header-h) !important;
+}
+
+/* Remonte le hero sous le header (la vidéo passe derrière logo/menu) */
+.ues-hero{
+  margin-top: calc(-1 * var(--ues-header-h)) !important;
+  padding-top: calc(var(--ues-header-h) + 26px) !important; /* 26px = ton padding actuel */
+  min-height: 100vh !important; /* prend tout l'écran, header inclus */
+}
+
+/* NAV/HEADER transparents quand on est sur le hero */
+#header.ues-header,
+#header.ues-header .ues-nav,
+#header.ues-header .navbar{
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Optionnel : un léger dégradé très subtil (si tu veux aider la lisibilité)
+   -> sinon supprime ce bloc
+*/
+#header.ues-header .ues-nav{
+  background: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,0)) !important;
+}
+
+/* Hors hero, on remet un fond noir (pour éviter "blanc derrière le header") */
+#header.ues-header.is-outside-hero .ues-nav{
+  background: rgba(0,0,0,.90) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Mobile: header un peu plus haut */
+@media (max-width: 991.98px){
+  :root{ --ues-header-h: 158px; }
+}
+p {
+    text-align: justify;
+}
+/* ===== Centrer visuellement le bloc texte (desktop seulement) ===== */
+@media (min-width: 992px){
+  /* on décale la colonne texte vers le centre */
+  .ues-panel .col-lg-6:first-child{
+    padding-left: 30px;  /* augmente à 40/50px si tu veux */
+  }
+
+  /* optionnel: limite la largeur du texte pour un rendu plus "centré" */
+  .ues-panel-text{
+    max-width: 52ch;     /* ajuste: 48ch / 56ch */
+    margin-left: auto;   /* centre le bloc de texte dans sa colonne */
+    margin-right: auto;
+  }
+
+  /* optionnel: aligne aussi le titre avec le texte */
+  .ues-panel-title{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 52ch;
+  }
+}
+/* ===== Menu: éviter que ça ne déborde avec des titres plus longs ===== */
+
+/* Entre 1200 et 1399px : un peu plus compact */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+  .ues-menu .nav-link{
+    padding: 10px 10px;
+    font-size: .92rem;
+    white-space: nowrap;
+  }
+  .ues-brand img{ height: 140px; } /* un poil plus petit si besoin */
+}
+
+/* Entre 992 et 1199px (si tu gardes expand-lg) : encore plus compact */
+@media (min-width: 992px) and (max-width: 1199.98px){
+  .ues-menu .nav-link{
+    padding: 8px 8px;
+    font-size: .84rem;
+    white-space: nowrap;
+  }
+  .ues-brand img{ height: 78px; margin: -3px 0 0 -78px !important; }
+}
+.ues-quicklinks li {
+
+}
+.col-lg-7, .d-flex.gap-3.mt-4.flex-wrap, .container-xxl {
+    padding-right: calc(var(--bs-gutter-x) * 2.5);
+    padding-left: calc(var(--bs-gutter-x) * 2.5);
+}
+.ues-histo-text{
+  text-align: justify;
+  line-height: 1.55;
+}
+
+/* Image en haut à droite + texte qui entoure */
+.ues-histo-float-img{
+      float: right;
+    width: 525px;
+    max-width: 55%;
+    height: auto;
+    margin: 0 0 14px 50px;
+    padding: 6px;
+}
+
+/* Sur mobile : on enlève le float pour éviter un rendu serré */
+@media (max-width: 768px){
+  .ues-histo-float-img{
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 14px 0;
+  }
+}
+
+
+/* ============================
+   UES — OVERRIDES HEADER (topbar + logo)
+   Objectif : obtenir le rendu "desktop" (titre à gauche + logo sur la barre noire)
+   À laisser TOUT EN FIN DE FICHIER pour écraser ues.css / menu-override.css si besoin.
+   ============================ */
+
+/* Topbar : alignement et marge pour ne pas passer sous le logo */
+#header .ues-topbar-inner{
+  justify-content: flex-start !important;
+  padding-left: 105px; /* laisse de la place au logo à gauche */
+      border-bottom: 2px solid #CCC;
+}
+
+/* Logo : rester dans la navbar noire, avec un léger chevauchement de la topbar */
+#header .navbar-brand.ues-brand{
+  margin-top: 0px; /* ajuste le chevauchement */
+}
+.ues-cta strong {
+    color: #7aa3c9;
+}
+
+/* ===========================================================
+   UES — Header (scroll) : le logo reste sous la topbar (dans la navbar)
+   - Pas de logo dans la bannière jaune (topbar)
+   - Au scroll : logo plus petit, toujours dans la barre noire
+   =========================================================== */
+
+/* Si un logo existe dans la topbar, on le masque (il ne doit pas être "dans" la bannière jaune) */
+#header .ues-topbar-brand{
+  display: none !important;
+}
+
+/* Logo dans la navbar : grand en haut de page */
+#header .ues-nav .ues-brand img{
+  height: var(--ues-logo-big) !important;
+  width: auto !important;
+  transition: height .35s ease;
+}
+
+/* Au scroll : logo plus petit, MAIS il reste visible dans la navbar */
+#header.ues-header--compact .ues-nav .ues-brand img{
+  height: var(--ues-logo-small) !important;
+  margin: 30px 0 0 -78px;
+}
+
+/* Sécurité : empêcher tout "fade/slide out" du logo navbar au scroll (au cas où une règle existe ailleurs) */
+#header.ues-header--compact .ues-nav .ues-brand{
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto !important;
+  animation: none !important;
+}
+
+/* (Optionnel) Navbar un peu plus compacte quand le header est en mode compact */
+#header.ues-header--compact .navbar{
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
+
+/* Mobile : tailles adaptées */
+@media (max-width: 991px){
+  :root{
+    --ues-logo-big: 84px;
+    --ues-logo-small: 54px;
+  }
+}
+.ues-logo-strip__row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: 40px; /* valeur desktop */
+}
+
+.ues-logo-strip__row img {
+  max-height: 100px;     /* Ajuste selon ton design */
+  height: auto;
+  width: auto;
+  flex-shrink: 1;       /* Autorise le rétrécissement */
+}
+@media (max-width: 600px) {
+  .ues-logo-strip__row img {
+    max-height: 45px;
+  }
+}
+@media (max-width: 992px) {
+  .ues-logo-strip__row {
+            gap: 20px !important;
+  }
+}
+@media (max-width: 600px) { .ues-logo-strip__row { gap: 8px; } }
+
+#uesNav { position: relative; top: -33px; /* monte l'élément */ left: -25px; /* le rapproche du logo */ }
+.ues-team .ues-person__img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    min-width: 0;
+    border-radius: 6px;
+    margin: 0 0 18px;
+}
+p.ues-person__role.mb-3 {
+    font-size: 0.85rem;
+    color: #454545;
+    margin: -6px 0 13px 0 !important;
+}
+section#ues-team {
+    background-color: #eae7d8;
+    border-top: 8px solid #999;
+}
+
+.ues-team h2 {
+    color: #666;
+}
+
+p.mb-0.ues-team__lead {
+    color: #999;
+}
+
+.carousel-item.active p {
+    color: #454545;
+}
+/* ==========================
+   UES Quicklinks = boutons
+   ========================== */
+.ues-quicklinks{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+  margin: 30px 0 0 0;
+}
+
+/* Le lien devient un bouton */
+.ues-quicklinks li a{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.1;
+
+  /* Style normal */
+  background: rgba(0,0,0,.55);
+  border: 1px solid rgba(255, 204, 0, .75); /* jaune */
+  color: #fff;
+
+  /* Animation */
+  transition: background .2s ease, color .2s ease, border-color .2s ease, transform .15s ease;
+}
+
+/* Icône */
+.ues-quicklinks li a .ues-qi{
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #fff;
+  transition: color .2s ease, transform .2s ease;
+}
+
+/* Rollover : couleur du bloc + texte + icône */
+.ues-quicklinks li a:hover{
+  background: #ffcc00;   /* jaune plein */
+  border-color: #ffcc00;
+  color: #000;           /* texte noir */
+  transform: translateY(-1px);
+}
+.ues-quicklinks li a:hover .ues-qi{
+  color: #000;
+  transform: translateX(2px);
+}
+
+/* Focus clavier (TAB) */
+.ues-quicklinks li a:focus-visible{
+  outline: 3px solid rgba(255,204,0,.55);
+  outline-offset: 3px;
+}
+
+#header.ues-header--compact .ues-nav {
+    background: #000 !important;
+    max-height: 50px;
+}
+.carousel-item.active strong.date {
+    border: 1px solid #5a83a8;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: #5a83a8;
+    background-color: #FFF;
+    font-size: 0.8rem;
+}
+.ues-slides h3 {
+    margin-bottom: 20px !important;
+    color: #5a83a8;
+}
+.carousel-item strong {
+    color: #5a83a8;
+}
+i.bi
+Specificity: (0,1,1)
+ {
+    padding: 0 0px 0 0;
+    color: #5a83a8;
+    font-size: 35px;
+}
+/* ==========================
+   Slides : menu en haut à droite + ligne sous titre
+   ========================== */
+
+/* chaque slide devient un "contenant" pour positionner le menu */
+#ues-slides .carousel-item{
+  position: relative;
+  padding-top: 56px; /* réserve la place du menu en haut */
+}
+
+/* menu des slides en haut à droite */
+#ues-slides .ues-slide-nav{
+  position: absolute;
+  top: 6px;
+  right: 0px;
+  margin: 0 !important;
+  z-index: 5;
+}
+
+/* optionnel : boutons un peu plus compacts */
+#ues-slides .ues-tabbtn{
+  padding: .05rem .5rem;
+  font-size: .9rem;
+}
+
+/* ligne sous le titre */
+#ues-slides .ues-slide-title{
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+}
+
+/* la ligne */
+#ues-slides .ues-slide-title::after {
+    content: "";
+    position: absolute;
+    left: 52px;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, .22);
+}
+
+/* Responsive : sur mobile on remet le menu sous le titre */
+@media (max-width: 768px){
+  #ues-slides .carousel-item{
+    padding-top: 0;
+  }
+  #ues-slides .ues-slide-nav{
+    position: static;
+    margin-top: 10px !important;
+  }
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active
+ {
+    color: var(--bs-btn-active-color);
+    background-color: #7aa3c9;
+    border-color: #FFF;
+}
+/* ==========================
+   Enseignement : liste + offres (modern)
+   ========================== */
+
+/* Liste d'atouts */
+.ues-featurelist{
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: .55rem;
+}
+
+.ues-featurelist li{
+  position: relative;
+  padding-left: 1.8rem;
+  color: rgba(0,0,0,.82);
+}
+
+.ues-featurelist li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: .1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: #FFF;
+    color: #5a83a8;
+    font-weight: 900;
+}
+h4.ues-offer__title {
+    color: #5a83a8;
+}
+
+/* Cartes offres */
+.ues-offers{
+  display: grid;
+  gap: 14px;
+  margin-top: 1rem;
+}
+
+.ues-offer{
+  background: rgba(255,255,255,.65);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 16px;
+  padding: 16px 16px 14px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+.ues-offer__head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 1.2rem;
+}
+ul.ues-person__bullets.mb-3 {
+    font-size: 0.9rem;
+}
+.ues-offer__title{
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+button.btn.btn-outline-light.btn-sm.w-100 {
+    color: #454545;
+    border: 1px solid #CCC;
+}
+button#tab-pianistes.active, button#tab-profs.active {
+    background-color: #454545;
+	color: #FFF;
+}
+button#tab-profs, button#tab-pianistes {
+    color: #454545;
+}
+.ues-offer__badge{
+  font-size: .78rem;
+  padding: .25rem .55rem;
+  border-radius: 999px;
+  background: rgba(0,0,0,.1);
+  color: rgba(0,0,0,.8);
+  white-space: nowrap;
+}
+
+.ues-offer__price {
+    font-size: .9rem;
+    padding: .25rem .55rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, .1);
+    color: rgba(0, 0, 0, .8);
+}
+i.bi.bi-people-fill {
+    padding-right: 8px;
+}
+.ues-offer__list {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #454545;
+}
+.ues-offer__list li, p.ues-offer__text {
+    margin: .35rem 0;
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+}
+
+.ues-offer__list li{
+  margin: .35rem 0;
+}
+
+.ues-offer__text{
+  margin: 0 0 .75rem;
+}
+
+.ues-offer__cta{
+  border-radius: 999px;
+}
+a.btn.btn-dark.btn-sm.ues-offer__cta {
+    background: #5a83a8;
+    border: 1px solid #FFF;
+    padding: 3px 17px;
+    border-radius: 8px;
+}
+.underline { text-decoration:

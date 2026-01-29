@@ -1,0 +1,46 @@
+ <div[ class="(#ENV{divclass,spip-admin-bloc})"] id="spip-admin" dir="#LANG_DIR">
+
+	[(#AUTORISER{creerarticledans,rubrique,#ENV{id_rubrique}})
+		[(#ENV{id_rubrique}|>{0}|oui)
+		<a href="[(#URL_PAGE{cisf_article}|parametre_url{id_rubrique,[(#ENV{id_rubrique}|intval)]})]" class="spip-admin-boutons"
+		id="voir_rubrique1"><:icone_ecrire_article:></a>
+		<a href="[(#URL_PAGE{cisf_articles_non_publies}|parametre_url{id_rubrique,[(#ENV{id_rubrique}|intval)]})]" class="spip-admin-boutons"
+		id="voir_rubrique2"><:cisf:eq_article_publie_ou_non:></a>
+		]
+	]
+	[(#AUTORISER{modifier,article,#ENV{id_article}})
+                [(#ENV{id_article}|cisf_article_du_site|oui)
+		[<a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,[(#ENV{id_article}|intval)]})]" class="spip-admin-boutons"
+		id="modifier_article"><:admin_modifier_article:> ((#ENV{id_article}|intval))</a>]
+                ]
+                
+		[<a href="[(#ENV{voir_article}|attribut_url)]" class="spip-admin-boutons"
+		id="voir_article"><:cisf:eq_modifier_dans_espace_prive:> ((#ENV{id_article}|intval))</a>]
+	]
+	[(#AUTORISER{modifier,rubrique,#ENV{id_rubrique}})
+		[<a href="[(#ENV{voir_rubrique}|attribut_url)]" class="spip-admin-boutons"
+		id="voir_rubrique"><:admin_modifier_rubrique:> ((#ENV{id_rubrique}|intval))</a>]
+	]
+
+ 	[<a href="(#ENV{analyser}|attribut_url)" class="spip-admin-boutons"
+		id="analyser"><:analyse_xml:>[ ((#ENV{xhtml_error}))]</a>]
+	[<a href="[(#ENV{voir_breve}|attribut_url)]" class="spip-admin-boutons"
+		id="voir_breve"><:breve:>
+			((#ENV{id_breve}))</a>]
+	[<a href="[(#ENV{voir_mot}|attribut_url)]" class="spip-admin-boutons"
+		id="voir_mot"><:mots_clef:> ((#ENV{id_mot}|intval|>{0}))</a>]
+	[(#ENV{id_syndic}|oui)[(#AUTORISER{modifier,site,#ENV{id_syndic}}|oui)
+	<a href="[(#ENV{voir_site}|attribut_url)]" class="spip-admin-boutons"
+		id="voir_site"><:info_site:> [((#ENV{id_syndic}|intval|>{0}))]</a>]]
+	[<a href="[(#ENV{voir_auteur}|attribut_url)]" class="spip-admin-boutons"
+		id="voir_auteur"><:auteur:> ((#ENV{id_auteur}|intval|>{0}))</a>][
+	<a href="(#ENV{ecrire}|attribut_url)" class="spip-admin-boutons" id="ecrire"><:espace_prive:></a>]
+	<a href="[(#SELF|parametre_url{var_mode,#ENV{calcul}}|attribut_url)]" class="spip-admin-boutons"
+		id="var_mode"><:admin_recalculer:>[(#ENV{use_cache})]</a>[
+	<a href="(#ENV{statistiques}|attribut_url)" class="spip-admin-boutons"
+		id="statistiques">[<:info_visites:>&nbsp;(#ENV{visites}|intval)][;&nbsp;<:info_popularite_5:>&nbsp;(#ENV{popularite}|intval)]</a>]
+        [(#PLUGIN{cipr}|non)
+                [<a href="(#ENV{preview}|attribut_url)" class="spip-admin-boutons" id="preview"><:previsualisation:></a>]
+        ]
+        [<a href="(#ENV{debug}|attribut_url)" class="spip-admin-boutons" id="debug"><:admin_debug:></a>]
+</div>

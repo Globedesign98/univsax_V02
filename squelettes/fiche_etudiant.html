@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG" dir="#LANG_DIR">
+<head>
+<title>[(#TITRE|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+[<meta name="description" content="(#INTRODUCTION{150}|textebrut)" />]
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="css/modif_public.css" rel="stylesheet" type="text/css" />
+	<meta name="robots" content="none" />
+<INCLURE{fond=inc-head}>
+<?php include('head-content.php'); ?>
+<link rel="shortcut icon" href="images/favicon.ico" >
+<link href="css/ues.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	background-image: url(images/bg_top_rub.jpg);
+	background-repeat: repeat-x;
+}
+.inscription .spip-previsu {
+    display: none;
+}
+input#champ_pub_auteurs {
+    float: left;
+}
+  .pro_bouton{
+	display:inline-block;
+   border: 1px solid #DDD;
+   border-radius: 3px;
+   text-shadow: 0 1px 1px white;
+   box-shadow:0 1px 1px #fff;
+   font: bold 11px Sans-Serif;
+   line-height:15px;
+   padding: 2px 10px;
+   white-space: nowrap;
+   vertical-align: middle;
+   color: #666;
+   background: transparent;
+   cursor: pointer;
+   border-color: #ddd;
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	filter:none;
+   background-color:#E0E0E0;
+   background: -webkit-linear-gradient(top, white, #E0E0E0);
+   background:    -moz-linear-gradient(top, white, #E0E0E0);
+   background:     -ms-linear-gradient(top, white, #E0E0E0);
+   background:      -o-linear-gradient(top, white, #E0E0E0);
+   background:      linear-gradient(top, white, #E0E0E0);
+   -pie-background:      linear-gradient(top, white, #E0E0E0);
+   box-shadow:         0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;}
+   .pro_bouton:hover{ box-shadow:inset 0 0 3px #fff;border-color: #D6D4D4; text-decoration:none;}
+.cadre_box {
+    background-color: #f0eeee;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin: 3px 0;
+    padding: 20px;
+    position: relative;
+    width: 94%;
+}
+.editer_statut.statut_prepa {
+    float: left;
+    padding: 0;
+    text-align: left;
+    width: 220px;
+}
+.formulaire_spip ul li.valide {
+    clear: none;
+    float: left;
+    width: 250px;
+}
+.menu_pub {
+    margin: 10px 25px 15px 0;
+    text-align: right;
+}
+.menu_pub .pro_btn {
+    font-size: 12px;
+    padding: 5px 25px;
+}
+#ok .spip-previsu {
+    display: none;
+}
+.xxx #cboxLoadedContent {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.txt_10 {
+    color: #666;
+    font-size: 10px;
+}
+.pro_btn,.pro_description-light,.pro_exampletip{
+	display:inline-block;
+   border: 1px solid #DDD;
+   border-radius: 3px;
+   text-shadow: 0 1px 1px white;
+   box-shadow:0 1px 1px #fff;
+   font: bold 11px Sans-Serif;
+   line-height:15px;
+   padding: 8px 10px;
+   white-space: nowrap;
+   vertical-align: middle;
+   color: #666;
+   background: transparent;
+   cursor: pointer;
+   border-color: #ddd;
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	filter:none;
+   background-color:#E0E0E0;
+   background: -webkit-linear-gradient(top, white, #E0E0E0);
+   background:    -moz-linear-gradient(top, white, #E0E0E0);
+   background:     -ms-linear-gradient(top, white, #E0E0E0);
+   background:      -o-linear-gradient(top, white, #E0E0E0);
+   background:      linear-gradient(top, white, #E0E0E0);
+   -pie-background:      linear-gradient(top, white, #E0E0E0);
+   box-shadow:         0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;}
+  .pro_btn.pro_small{ font-size:12px;}
+  .pro_btn:hover,.pro_description-light:hover,.pro_exampletip:hover{ box-shadow:inset 0 0 3px #fff;border-color: #D6D4D4; text-decoration:none;}
+  .pro_bouton{
+	display:inline-block;
+   border: 1px solid #DDD;
+   border-radius: 3px;
+   text-shadow: 0 1px 1px white;
+   box-shadow:0 1px 1px #fff;
+   font: bold 11px Sans-Serif;
+   line-height:15px;
+   padding: 2px 10px;
+   white-space: nowrap;
+   vertical-align: middle;
+   color: #666;
+   background: transparent;
+   cursor: pointer;
+   border-color: #ddd;
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	filter:none;
+   background-color:#E0E0E0;
+   background: -webkit-linear-gradient(top, white, #E0E0E0);
+   background:    -moz-linear-gradient(top, white, #E0E0E0);
+   background:     -ms-linear-gradient(top, white, #E0E0E0);
+   background:      -o-linear-gradient(top, white, #E0E0E0);
+   background:      linear-gradient(top, white, #E0E0E0);
+   -pie-background:      linear-gradient(top, white, #E0E0E0);
+   box-shadow:         0 1px 2px rgba(0,0,0,0.25), inset 0 0 3px #fff;}
+   .pro_bouton:hover{ box-shadow:inset 0 0 3px #fff;border-color: #D6D4D4; text-decoration:none;}
+.cadre_box {
+    background-color: #f0eeee;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin: 3px 0;
+    padding: 20px;
+    position: relative;
+    width: 94%;
+}
+.editer_statut {
+    float: left;
+    padding: 0;
+    text-align: left;
+    width: 220px;
+	list-style: outside none none;
+}
+.editer_statut > label {
+    display: none;
+}
+.formulaire_spip ul li.valide {
+    clear: none;
+    float: left;
+    width: 250px;
+}
+
+.formulaire_spip.formulaire_editer ul {
+    margin: 10px 0 0;
+    padding: 0;
+}
+#ok .spip-previsu {
+    display: none;}
+	.list-categories {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.list-categories li {
+	font-size: 12px;
+	line-height: 8px;
+	font-family: 'Roboto', sans-serif;
+	max-width: 100%;
+	margin-bottom: 2px;
+	
+}
+.list-categories li a {
+	color: #FFF;
+	display: block;
+	padding: 13px 31px;
+	font-size: 15px;
+	font-weight: bold;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	text-align: left;
+	text-decoration:none;
+	background-attachment: scroll;
+	background-color: #333333;
+	background-image: url(../images/arrow_blc.png);
+	background-repeat: no-repeat;
+	background-position: 16px 15px;
+}
+.list-categories li a:hover {
+  color: #FFF;
+  text-decoration: none;
+  background-color: #292929;
+}
+#ok .spip-previsu {
+    display: none;
+}
+div.statut_prop {
+    color: #e42121;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 10px 0 0 17px;
+	font-style: italic;
+}
+
+div.statut_prepa {
+    background-image: url("../images/Sarning.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: #ffe720;
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 2px 0 0 17px;
+    padding: 6px 0 19px 48px;
+}
+div.statut_supp {
+	background-image: url(../images/delete.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	color: #000;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 10px 0 0 17px;
+	font-style: italic;
+}
+
+div.statut_propo {
+    background-image: url("../images/prop.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: #ff7e00;
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 2px 0 0 17px;
+    padding: 6px 0 19px 48px;
+}
+div.statut_publie {
+    background-image: url("../images/ok.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: #0093d5;
+    float: left;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 1px 0 0 17px;
+    padding: 5px 0 17px 37px;
+}
+.txt_gris11 {
+    font-size: 11px;
+    line-height: 14px;
+}
+.small { display:none;}
+#ok #cboxLoadedContent {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.margin_top10 {
+    margin-top: 10px;
+}
+.a_titre {
+    color: #454545;
+}
+.formulaire_spip p.boutons {
+    clear: none;
+    margin: 0;
+    padding: 9px 0 0;
+    text-align: left;
+}
+</style>
+</head>
+<body class="inscription">
+<div align="center">
+<?php include('includes/bloc_rub_forum.php'); ?>
+<INCLURE{fond=inc-menu2012}>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="985" valign="top" class="bg_menu_border">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#212020"><table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top">
+        <table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="485">&nbsp;</td>
+            </tr>
+          <tr>
+            <td><img src="images/titre_inscriptions.jpg" alt="Inscription &agrave; l'Universit&eacute; de Saxophone" width="136" height="23" /></td>
+            </tr>
+          <tr>
+            <td class="txt_jaune11b">Inscription &agrave; l'Universit&eacute; Europ&eacute;enne de Saxophone - 2025
+              </td></tr>
+          <tr>
+            <td valign="top" class="txt_blc12"><div align="justify"><br>
+              </div></td>
+            </tr>
+          <tr>
+            <td>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                  </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  </tr>
+                </table>
+              
+              </td>
+            </tr>
+          <tr>
+            <td>
+              
+              <div align="left"><?php if ($auteur_session) { ?>
+              <div class="cadre_color marg_ins">
+              <BOUCLE_mission2(ARTICLES){id_article}>
+              <div class="menu"></div>
+
+
+
+
+
+
+<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Nom</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Prénom</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Email</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Téléphone</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Adresse</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Code</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Ville</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Pays</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Sexe</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Age</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Santé</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Végétarien</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Hebergement</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Auditeur</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Paiement</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Date</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Contact</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Prénom</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Adresse</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Téléphone</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Ecole</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Prof</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Préparation</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Saxophone</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Bec</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Musique de chambre</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Ensemble</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Initiation aux musiques traditionnelles</strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Compositeur </strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong> Droits d'auteur </strong></div></td>
+    <td align="center" valign="top" bgcolor="#999999" class="txt_blc11"><div class="border2"><strong>Remarques</strong></div></td>
+  </tr>
+  <tr>
+    <td width="156" align="left" valign="top" nowrap="nowrap" bgcolor="#f9f9f9">
+      <div class="border1">[<strong>(#TITRE)</strong><br />
+        ]</div></td>
+    <td width="131" align="left" valign="top" nowrap="nowrap" bgcolor="#f9f9f9">
+      <div class="border1">[(#PRENOM|sinon{"..."})<br />
+        ]</div>
+      </td>
+    <td width="164" align="left" valign="top" nowrap="nowrap" bgcolor="#f9f9f9">
+      <BOUCLE3(AUTEURS){id_article}>
+      <div class="border1">[<a href="mailto:#EMAIL" class="a_gris_underline">(#EMAIL)</a>
+        ]</div>
+      </BOUCLE3></td>
+    <td width="136" align="left" valign="top" nowrap="nowrap" bgcolor="#FFFFFF">
+      <div class="border1">[(#PHONE|sinon{"..."})<br />
+        ]</div>
+      </td>
+      
+    <td width="200px" align="left" valign="top" bgcolor="#f9f9f9">
+   <div class="border3">[(#ADRESSE|sinon{"..."})]</div>
+    </td>
+    <td width="2%" align="left" valign="top" bgcolor="#FFFFFF">
+    <div class="border1">[(#POSTAL|sinon{"..."})]</div>
+    </td>
+    <td width="2%" align="left" valign="top" bgcolor="#f9f9f9">
+    <div class="border1">[(#VILLE|sinon{"..."})]</div>
+    </td>
+    
+    <td width="121" align="left" valign="top" nowrap="nowrap" bgcolor="#f9f9f9">
+      <div class="border1">[(#PAYS|sinon{"..."})<br />]
+        </div>
+      </td>
+    <td width="20" align="center" valign="top" nowrap="nowrap" bgcolor="#FFFFFF">
+      <div class="border1">[(#SEXO|couper{1}|sinon{"..."})<br />]
+        </div>
+      </td>
+    <td width="20" align="center" valign="top" nowrap="nowrap" bgcolor="#f9f9f9">
+      <div class="border1">[(#AGE|sinon{"..."})<br />]
+        </div>
+     </td>
+    <td width="2%" align="left" valign="top" bgcolor="#f9f9f9">
+   
+    <div class="border3">[(#SANTE|sinon{"..."}) ]</div>
+    </td>
+    <td width="20" align="center" valign="top" nowrap="nowrap" bgcolor="#FFFFFF"><div class="border1">[(#VEGETARIEN|sinon{"..."})<br />
+    ]
+      </div></td>
+    <td width="20" align="center" valign="top" nowrap="nowrap" bgcolor="#f9f9f9"><div class="border1">[(#HEBERGEMENT|sinon{"..."})<br />
+    ]
+      </div></td>
+    <td width="1%" align="left" valign="top" bgcolor="#FFFFFF"><div class="border1">[(#AUDITEUR|sinon{"..."})]</div></td>
+    <td width="81" align="center" valign="top" nowrap="nowrap" bgcolor="#FFFFFF"><div class="border1">[(#PAIEMENT|sinon{"..."})<br />
+    ]
+      </div></td>
+    <td width="81" align="center" valign="top" nowrap="nowrap" bgcolor="#f9f9f9"><div class="border1">[(#DATE|affdate{'d/m/y'})<br />
+        ]</div></td>
+      
+      
+    <td width="5%" align="left" valign="top" bgcolor="#f9f9f9"><div class="border1">[(#CONTACT_NOM|sinon{"..."})]</div></td>
+    <td width="5%" align="left" valign="top" bgcolor="#FFFFFF"><div class="border1">[(#CONTACT_PRENOM|sinon{"..."})]</div></td>
+    <td width="8%" align="left" valign="top" bgcolor="#f9f9f9"><div class="border3">[(#CONTACT_ADRESSE|sinon{"..."})]</div></td>
+    <td width="6%" align="left" valign="top" bgcolor="#FFFFFF"><div class="border1">[(#CONTACT_TEL|sinon{"..."})]</div></td>
+    <td width="5%" align="left" valign="top" bgcolor="#FFFFFF"><div class="border3">[(#ECOLE|sinon{"..."})]</div></td>
+    <td width="7%" align="left" valign="top" bgcolor="#f9f9f9"><div class="border3">[(#PROF|sinon{"..."})]</div></td>
+    <td width="11%" align="left" valign="top" bgcolor="#FFFFFF"><div class="border3">[(#PIECE|sinon{"..."})]</div><br /></td>
+    <td width="7%" align="left" valign="top" bgcolor="#f9f9f9"><div class="border3">[(#TYPE_SAXO|sinon{"..."})]</div></td>
+    <td width="7%" align="left" valign="top" bgcolor="#f9f9f9"><div class="border3">[(#TYPE_BEC|sinon{"..."})]</div></td>
+    <td width="1%" align="left" valign="top" bgcolor="#FFFFFF"><div class="border1">[(#MUSICHAMBRE|sinon{"..."})]</div></td>
+    <td width="1%" align="left" valign="top" bgcolor="#FFFFFF"><div class="border1">[(#ENSEMBLE|sinon{"..."})]</div></td>
+    <td width="1%" align="left" valign="top" bgcolor="#FFFFFF"><div class="border1">[(#TRADITION|sinon{"..."})]</div></td>
+    <td align="left" valign="top" bgcolor="#FFFFFF"><div class="border1">[(#OUI_NON_2|sinon{"..."})]</div></td>
+    <td align="left" valign="top" bgcolor="#FFFFFF"><div class="border1">[(#OUI_NON_2|sinon{"..."})]</div></td>
+    <td align="left" valign="top" bgcolor="#FFFFFF"><div class="border1">[(#REMARQUE|sinon{"..."})]</div></td>
+  </tr>
+</table>
+</BOUCLE_student500>
+                  </BOUCLE_mission2>
+              </div>
+              <?php } else { ?>
+              Oups!
+              <?php } ?>
+                
+  </div>
+              
+              
+              </td>
+            </tr>
+          
+        </table></td>
+        </tr>
+    </table>
+        <?php if ($auteur_session) { ?>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+              </table>
+                  
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="marge_15">
+          <tr>
+            <td valign="top" class="txt_blc"></td>
+          </tr>
+      </table>
+        <?php } else { ?>
+        
+        <table width="100%" border="0" cellspacing="0" cellpadding="15">
+          <tr>
+            <td class="txt_jaune11b"> You need   to register :</td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="15" cellpadding="0">
+          <tr>
+            <td width="42%" align="left" valign="top" class="txt_12blc">
+            <div class="cadre_color log_aut">[(#LOGIN_PUBLIC)]</div></td>
+            <td width="58%" align="left" valign="top"  class="txt_12blc">
+            <div class="cadre_color log_aut">[(#FORMULAIRE_INSCRIPTION)]</div></td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+        <?php } ?></td>
+        </tr>
+    </table>
+   </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/bg_bottom.jpg">
+  <tr>
+    <td><?php include('includes/menu_bas.php'); ?></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

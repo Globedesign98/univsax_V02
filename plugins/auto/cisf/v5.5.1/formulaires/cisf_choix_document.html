@@ -1,0 +1,24 @@
+#CACHE{0}
+#SET{ciantihack,''}
+[(#VAL|cisf_choix_document_antihack|oui)
+#SET{ciantihack,'oui'}
+]
+
+[<div class='texte'>(#VAL|cisf_choix_document_info)</div>]
+
+[<p class='formulaire_ok'>(#ENV*{message_ok})</p>]
+[<p class='formulaire_erreur'>(#ENV*{message_erreur})</p>]
+<form action='#ENV{action}' method='post' name="formulaire" id="formulaire">
+
+	<BOUCLE_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+		[(#REM) declarer les hidden qui declencheront le service du formulaire 
+		parametre : url d'action ]
+		#ACTION_FORMULAIRE{#ENV{action}}
+		
+		<input name="id_article" type="hidden" value="#ID_ARTICLE">
+		<input type="hidden" id="cilieninput" name="cilieninput" value=""/>
+	</BOUCLE_article>
+
+        [(#INCLURE{fond=prive/objets/liste/cisf_choix_document,env,ajax})]
+    
+</form>

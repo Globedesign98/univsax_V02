@@ -1,0 +1,34 @@
+<paquet
+	prefix="cisf"
+	categorie="edition"
+	version="5.5.1"
+	etat="stable"
+	compatibilite="[4.0.0;4.*]"
+	logo="prive/themes/spip/images/pyramides-32.png"
+	documentation="https://contrib.spip.net/cisf-plugin-saisie-facile"
+>	
+
+	<nom>cisf : Saisie facile</nom>
+
+	<auteur>Ministère de la Transition écologique et de la Cohésion des Territoires (MTECT) - C. Imberti</auteur>
+
+	<licence lien="http://www.gnu.org/licenses/gpl-3.0.html">GNU/GPLv3</licence>	
+
+	<pipeline nom="porte_plume_barre_pre_charger" inclure="inc/cisf_porte_plume.php" />
+	<pipeline nom="porte_plume_barre_charger" inclure="inc/cisf_porte_plume.php" />
+	<pipeline nom="formulaire_charger" inclure="inc/cisf_pipeline.php" />
+	<pipeline nom="affichage_final_prive" inclure="inc/cisf_pipeline.php" />
+	<pipeline nom="affichage_final" inclure="inc/cisf_pipeline.php" />
+	<pipeline nom="post_insertion" inclure="inc/cisf_pipeline.php" />
+	<pipeline nom="post_edition" inclure="inc/cisf_pipeline.php" />
+	<pipeline nom="jquery_plugins" inclure="inc/cisf_pipeline.php" />
+	<pipeline nom="insert_head" inclure="inc/cisf_pipeline.php" />
+	<pipeline nom="formulaire_fond" action="medias_formulaire_fond" inclure="inc/cisf_pipeline.php" />
+
+        <pipeline nom="cisf_article_options" action='' />
+        <pipeline nom="cisf_max_filesize" action='' />
+        <pipeline nom="cisf_raccourci_doc" action='' />
+
+	<necessite nom="medias" compatibilite="[2.7.0;]" />
+	
+</paquet>

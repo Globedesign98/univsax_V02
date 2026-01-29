@@ -1,0 +1,627 @@
+#CACHE{0}
+<div id="bando_haut">
+
+    [(#REM) Liens d'évitement ]
+    <div id="cisf_bando_liens_rapides" class="cisf_bando-evitement">
+            <div class="largeur">
+                    <p class="menu-simple menu-simple_evitement">
+                            <a class="menu-simple__item" href="#contenu" onclick="return cisf_focus_zone('#contenu')"><:cisf:lien_rapide_contenu:></a>
+                            <a class="menu-simple__item" href="#menu1" onclick="return cisf_focus_zone('#menu1')"><:cisf:lien_rapide_navigation:></a>
+                    </p>
+            </div>
+    </div>
+    
+    <div id="cisf_bando">
+        <nav role="navigation" aria-label="<:cisf:vous_etes_ici:>">
+                #SET{ci_previsu_rub,'preview'}
+                <BOUCLE_rub_previsu(RUBRIQUES){id_rubrique}{statut=publie}>
+                #SET{ci_previsu_rub,''}
+                </BOUCLE_rub_previsu>
+
+                <div id="boxnavpath"><div id="navpath">
+                        <a href="[(#URL_PAGE{sommaire}|parametre_url{var_mode,#GET{ci_previsu_rub}})]"><:cisf:eq_accueil:></a>
+                        <BOUCLE_chem_nav(HIERARCHIE){id_article}>
+                        &gt; <a href="[(#URL_RUBRIQUE|parametre_url{var_mode,#GET{ci_previsu_rub}})]">[(#TITRE|supprimer_numero)]</a>
+                        </BOUCLE_chem_nav>
+                        <BOUCLE_entete_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+                        [&gt; <span aria-current="page">(#TITRE|supprimer_numero)</span>]   
+                        </BOUCLE_entete_article>    
+                </div></div>
+        </nav>
+        <div id="cisf_plugin" aria-hidden="true">
+            <:cisf:plugin_cisf:>
+        </div>        
+    </div>
+</div>
+    
+<div id="milieu">
+<div id="ext-main">
+    
+<div class="main">
+    <div id="contenu" role="main">
+    <div class="main-content">
+        <div id="boxcentrale" class="cadre-formulaire-editer">
+        <div class="innercentrale">
+
+            
+            
+        [<p class='formulaire_ok'>(#ENV*{message_ok})</p>]
+        [<p class='formulaire_erreur'>(#ENV*{message_erreur})</p>]
+			
+
+
+                #SET{ci_id_article,0}
+                #SET{cistatut_article,'non'}
+                #SET{cidate_publication,'non'}
+                #SET{ci_previsu_art,''}
+                [(#SET{ci_id_rubrique,[(#ENV{id_rubrique}|intval)]})]
+                
+                <div class="entete-formulaire">
+                <BOUCLE_f_article(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>
+                        <span class="surtitre-formulaire"><:admin_modifier_article:></span>
+                        <h1>#TITRE</h1>
+
+                        #SET{ci_id_article,#ID_ARTICLE}
+                        #SET{cistatut_article,#STATUT}
+                        #SET{cidate_publication,#DATE|affdate_heure}
+                        #SET{ci_previsu_art,#ID_ARTICLE|cisf_voir_ou_previsu{#STATUT}}
+
+                        [(#GET{ci_previsu_art}|=={voir}|oui)
+                        <div class="retour"><a href="[(#URL_PAGE{article}|parametre_url{id_article,#ID_ARTICLE})]"><:cisf:eq_retour:></a></div>
+                        ]
+
+                        [(#GET{ci_previsu_art}|=={preview}|oui)
+                        <div class="retour"><a href="[(#URL_PAGE{article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{var_mode,#GET{ci_previsu_art}})]"><:cisf:eq_retour:></a></div>
+                        ]
+
+                        [(#GET{ci_previsu_art}|=={''}|oui)
+                        <div class="retour"><a href="[(#URL_PAGE{rubrique}|parametre_url{id_rubrique,#GET{ci_id_rubrique}}|parametre_url{var_mode,#GET{ci_previsu_rub}})]"><:cisf:eq_retour:></a></div>
+                        ]
+
+                </BOUCLE_f_article>				
+                </B_f_article>
+                        <span class="surtitre-formulaire"><:icone_ecrire_article:></span>
+                        <h1><:info_sans_titre:></h1>
+                        <div class="retour"><a href="[(#URL_PAGE{rubrique}|parametre_url{id_rubrique,#GET{ci_id_rubrique}}|parametre_url{var_mode,#GET{ci_previsu_rub}})]"><:cisf:eq_retour:></a></div>
+                <//B_f_article>
+                
+                        <button class="cisf_lien_explications" onclick="cisf_toggle(this); return false;" role="button" aria-expanded="false" aria-controls="cisf_info" data-hide="<:cisf:voir_explication:>" data-show="<:cisf:masquer_explication:>">
+                        <:cisf:voir_explication:>
+                        </button>
+                        <div id="cisf_info" class="cisf_info" style="display: none;">
+                            <div id="menu2" role="complementary">
+
+                                    <div class="blocoutilform2">
+                                    [(#SPIP_VERSION|>={4}|oui)
+                                    <a href="ecrire/?exec=aide&amp;aide=raccourcis&amp;var_lang=fr" target="spip_aide" onKeyPress="javascript:ouvreAide(this.href); return false;" onclick="javascript:ouvreAide(this.href); return false;" title="<:texte_enrichir_mise_a_jour:> (<:cisf:eq_ouvre_fenetre:>)"><img class="aide" alt="" src="#CHEMIN{_images/aide.gif}"> <:texte_enrichir_mise_a_jour:></a>
+                                    ]
+                                    [(#SPIP_VERSION|>={4}|non)
+                                    <a href="ecrire/?exec=aide&amp;aide=arttitre&amp;var_lang=fr" target="spip_aide" onKeyPress="javascript:ouvreAide(this.href); return false;" onclick="javascript:ouvreAide(this.href); return false;" title="<:cisf:eq_aide_titre:> (<:cisf:eq_ouvre_fenetre:>)"><img class="aide" alt="" src="#CHEMIN{_images/aide.gif}"> <:cisf:eq_aide_titre:></a>
+
+                                    <a href="ecrire/?exec=aide&amp;aide=artdesc&amp;var_lang=fr" target="spip_aide" onKeyPress="javascript:ouvreAide(this.href); return false;" onclick="javascript:ouvreAide(this.href); return false;" title="<:cisf:eq_aide_descriptif:> (<:cisf:eq_ouvre_fenetre:>)"><img class="aide" alt="" src="#CHEMIN{_images/aide.gif}"> <:cisf:eq_aide_descriptif:></a>
+                                    <a href="ecrire/?exec=aide&amp;aide=arttexte&amp;var_lang=fr" target="spip_aide" onKeyPress="javascript:ouvreAide(this.href); return false;" onclick="javascript:ouvreAide(this.href); return false;" title="<:cisf:eq_aide_texte:> (<:cisf:eq_ouvre_fenetre:>)"><img class="aide" alt="" src="#CHEMIN{_images/aide.gif}"> <:cisf:eq_aide_texte:></a>
+                                    ]
+
+                                    <a href="#URL_PAGE{cisf_aide}" target="spip_aide" onKeyPress="javascript:ouvreAide(this.href); return false;" onclick="javascript:ouvreAide(this.href); return false;" title="<:cisf:aide_titre1:> (<:cisf:eq_ouvre_fenetre:>)"><img class="aide" alt="" src="#CHEMIN{_images/aide.gif}"> <:cisf:aide_titre1:></a>
+                                    [(#PLUGIN{cibloc}|oui)
+                                    <a href="#URL_PAGE{cibloc_public_liste_bloc}" target="spip_aide" onKeyPress="javascript:ouvreAide(this.href); return false;" onclick="javascript:ouvreAide(this.href); return false;" title="<:cibloc:liste_bloc:> (<:cisf:eq_ouvre_fenetre:>)"><img class="aide" alt="" src="#CHEMIN{_images/aide.gif}"> <:cibloc:liste_bloc:></a>
+                                    <a href="#URL_PAGE{cibloc_public_liste_icone}" target="spip_aide" onKeyPress="javascript:ouvreAide(this.href); return false;" onclick="javascript:ouvreAide(this.href); return false;" title="<:cibloc:liste_icone:> (<:cisf:eq_ouvre_fenetre:>)"><img class="aide" alt="" src="#CHEMIN{_images/aide.gif}"> <:cibloc:liste_icone:></a>
+                                    <a href="#URL_PAGE{cibloc_public_liste_bouton}" target="spip_aide" onKeyPress="javascript:ouvreAide(this.href); return false;" onclick="javascript:ouvreAide(this.href); return false;" title="<:cibloc:liste_bouton:> (<:cisf:eq_ouvre_fenetre:>)"><img class="aide" alt="" src="#CHEMIN{_images/aide.gif}"> <:cibloc:liste_bouton:></a>
+                                    ]
+                                    </div>
+
+                                    <div id="cisf_aide"></div>
+                            </div>
+                        </div>
+                
+                </div>
+                        
+                <noscript>
+                <div class="aidecadregris"><:cisf:enregistrement_manuel:></div>
+                </noscript>
+			
+        <div class="formulaire_spip formulaire_editer formulaire_editer_article formulaire_editer_article">
+	<form action='#ENV{action}' method='post' name="formulaire" id="formulaire">
+		[(#REM) declarer les hidden qui declencheront le service du formulaire 
+		parametre : url d'action ]
+		#ACTION_FORMULAIRE{#ENV{action}}
+	  	<input type='hidden' name='id_article' value='#ENV{id_article}'>
+	  	<input type='hidden' name='id_parent' value='#GET{ci_id_rubrique}'>
+	  	<input type='hidden' name='calendrier' value='#ENV{calendrier}'>
+	  	
+	  	<input type='hidden' name='id_rubrique' value='#GET{ci_id_rubrique}'>
+		<input type="hidden" name="ins_document" id="ins_document" value="">
+		<input type="hidden" name="ins_image" id="ins_image" value="">
+
+		<input type="hidden" id="cilieninput" name="cilieninput" value=""/>
+
+			
+			
+		<div class="editer">
+		
+	  	[(#CONFIG{articles_surtitre}|=={non}|?{#ENV**{surtitre,''},' '}|oui)
+		<div class="editer_surtitre[ (#ENV*{erreurs}|table_valeur{surtitre}|oui)erreur]">
+                        <label for="surtitre" class="ftitre1" style="margin-top:15px;"><:texte_sur_titre:></label>                    
+			[<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{surtitre})</span>]
+                        <input type='text' class='formo' style='width:100%;' name='surtitre' id='surtitre'[ lang='(#LANGUE)'] value="[(#ENV**{surtitre})]" />
+		</div>
+		]
+                    
+                <div class="editer_titre obligatoire[ (#ENV*{erreurs}|table_valeur{titre}|oui)erreur]">
+                    <label for="titre" class="ftitre1"><:texte_titre_obligatoire:></label>
+                    [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{titre})</span>]
+                    <input type='text' class='formo' name='titre' id='titre' size="80"[ lang='(#LANGUE)'] value="[(#ENV**{titre})]" required />
+		</div>
+	    
+	  	[(#CONFIG{articles_soustitre}|=={non}|?{#ENV**{soustitre,''},' '}|oui)
+		<div class="editer_soustitre[ (#ENV*{erreurs}|table_valeur{soustitre}|oui)erreur]">
+                        <label for="soustitre" class="ftitre1" style="margin-top:15px;"><:texte_sous_titre:></label>                    
+			[<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{soustitre})</span>]
+                        <input type='text' class='formo' style='width:100%;' name='soustitre' id='soustitre'[ lang='(#LANGUE)'] value="[(#ENV**{soustitre})]" />
+		</div>
+		]
+                    
+	  	[(#CONFIG{articles_descriptif}|=={non}|?{#ENV**{descriptif,''},' '}|oui)
+                <div class="editer_descriptif[ (#ENV*{erreurs}|table_valeur{descriptif}|oui)erreur]">
+			<label for="descriptif" class="ftitre1"><:texte_descriptif_rapide:></label>
+			[<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{descriptif})</span>]
+			[(#PLUGIN{porte_plume}|non)
+			<script>if(document.getElementById) {document.write(bd);}</script>
+			]
+			<textarea name='descriptif' id='descriptif'[ lang='(#LANGUE)'] [(#ENV**{_browser_caret,''})] class='forml' rows='3' cols='40'>[(#ENV**{descriptif})]</textarea>
+                </div>]
+
+	  	[(#CONFIG{articles_chapeau}|=={oui}|oui)
+		[<div class="editer_chapo[ (#ENV*{erreurs}|table_valeur{chapo}|oui)erreur]">(#ENV**{chapo}|match{^=,Uis}|non)
+			<label for="chapo" class="ftitre1"><span class="gras"><:info_chapeau:></span></label>
+			[<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{chapo})</span>]
+			<textarea name='chapo' id='chapo'[ lang='(#LANGUE)'][ rows='(#CONFIG{lignes})'] cols='40'>[(#ENV**{chapo})]</textarea>
+		</div>]
+		]
+
+                [(#CONFIG{articles_urlref}|=={non}|?{#ENV**{url_site,#ENV**{nom_site,''}},' '}|oui)
+                <div class="editer_liens_sites">
+                        <fieldset style="margin:1rem 0 0 0;padding:0;width:100%;border:none;background:none;">
+                                <legend class="ftitre1"><:entree_liens_sites:></legend>
+                                <div class="editer-groupe">
+                                        <div class="editer_nom_site[ (#ENV*{erreurs}|table_valeur{nom_site}|oui)erreur]" style="display:flex;flex-wrap: wrap;margin-top:5px;">
+                                                <label for="nom_site" class="ftitre1" style="width:20%"><:info_titre:></label>
+                                                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{nom_site})</span>]
+                                                <input type='text' class='formo' style='width:80%;' name='nom_site' id='nom_site'[ lang='(#LANGUE)'] value="[(#ENV**{nom_site})]" />
+                                        </div>
+                                        <div class="editer_url_site[ (#ENV*{erreurs}|table_valeur{url_site}|oui)erreur]" style="display:flex;flex-wrap: wrap;margin-top:5px;">
+                                                <label for="url_site" class="ftitre1" style="width:20%"><:info_url:></label>
+                                                [<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{url_site})</span>]
+                                                <input type='text' class='formo' style='width:80%;' name='url_site' id='url_site' value="[(#ENV**{url_site})]" />
+                                        </div>
+                                </div>
+                        </fieldset>
+                </div>]
+                
+	  	[(#CONFIG{articles_texte}|=={non}|?{#ENV**{texte,''},' '}|oui)
+                <div class="editer_texte obligatoire[ (#ENV*{erreurs}|table_valeur{texte}|oui)erreur]">
+			<label for="text_area" class="ftitre1"><span class="gras"><:info_texte:></span></label>
+			[<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{texte})</span>]
+			[(#PLUGIN{porte_plume}|non)
+			<script>if(document.getElementById) {document.write(bt);}</script>
+			]
+			<textarea name='texte' id='text_area' class='no_previsualisation'[ lang='(#LANGUE)'] rows='29' cols='40' [(#ENV**{_browser_caret,''})]>[(#ENV**{texte})]</textarea>
+                </div>]
+		
+	  	[(#CONFIG{articles_ps}|=={oui}|oui)
+                <div class="editer_ps[ (#ENV*{erreurs}|table_valeur{ps}|oui)erreur]">
+			<label for="ps" class="ftitre1"><span class="gras"><:info_post_scriptum:></span></label>
+			[<span class='erreur_message'>(#ENV*{erreurs}|table_valeur{ps})</span>]
+			<textarea name='ps' id='ps'[ lang='(#LANGUE)'] rows='5' cols='40'>[(#ENV**{ps})]</textarea>
+                </div>]
+	    
+		</div>
+
+		<!--extra-->
+
+				<div class='cadreoptions'>
+				<div class='titreoptions'><:cisf:eq_options_avancees_article:></div>
+				<div class='cadreoptionspadding'>
+				[(#GET{cidate_publication}|!={non}|oui)
+					[(#GET{cistatut_article}|=={publie}|oui)
+					<div class='texte'><:cisf:eq_menu_date_pub:> : #GET{cidate_publication}</div>]
+					[(#GET{cistatut_article}|!={publie}|oui)
+					<div class='texte'><:cisf:eq_menu_date_creation:> : #GET{cidate_publication}</div>]
+				]
+				<div class='texte'><:cisf:eq_auteurs:> 
+				<B_auteur>
+				<BOUCLE_auteur(AUTEURS){id_article}{statut!=tttt}{par nom}>
+				[(#NOM) | ]
+				</BOUCLE_auteur>
+				</B_auteur>
+				[(#GET{ci_id_article}|=={0}|oui)
+				[(#SESSION{login}) | ]
+				]
+				<//B_auteur>
+				</div>
+				<B_mot_article>
+				<div class='texte'><:cisf:eq_mots_cles:>
+				<BOUCLE_mot_article(MOTS){id_article}{par titre}>
+				[(#TITRE) | ]
+				</BOUCLE_mot_article>
+				</div>
+				</B_mot_article>
+				[<div class='texte'><:cisf:eq_redirection:> (#VIRTUEL*)</div>]
+				[<div class='texte'><:cisf:eq_moderation:> (#ACCEPTER_FORUM|cisf_moderation_forum)</div>]
+				[<div class='texte'><:cisf:eq_adresse_redacteur:> (#PS|cisf_redacteur_initial)</div>]
+				<BOUCLE_petition(PETITIONS ?){id_article}{si #PLUGIN{petitions}}>
+				<div class='texte'><:cisf:bouton_radio_petition_activee:></div>
+				</BOUCLE_petition>
+				
+				#CISF_OPTIONS_AFFECTEES
+				</div>
+				</div>
+
+				
+        <div id="tableaupj">
+				<B_documents>
+				<table class="forme" aria-label="<:cisf:eq_doc_article:>">
+					<thead>
+					<tr>
+						<th id="col1" class="forme" abbr="<:cisf:lesdocuments:>"><:cisf:eq_doc_article:></th>
+						<th id="col2" class="forme"><:cisf:eq_raccourci:></th>
+						<th id="col3" class="forme"><:cisf:eq_action:></th>
+					</tr>
+					</thead>
+                                        <BOUCLE_documents(DOCUMENTS){id_article}{mode !== ^(logo)}{tout}{par num titre}>
+						#SET{ci_type_inclus,'non'}
+						<BOUCLE_type_document(TYPES_DOCUMENTS){extension}>
+						#SET{ci_type_inclus,#INCLUS}
+						</BOUCLE_type_document>					
+					<tr>
+						<td headers="col1" class="formecoltexte">
+						<div class="presentation">
+						[(#GET{ci_type_inclus}|=={image}|oui)
+                                                        [(#ID_VIGNETTE|=={0}|oui)
+                                                            <div class="vignette">
+                                                            <a href="[(#URL_PAGE{cisf_affiche_image}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_document,#ID_DOCUMENT})]" class="spip_out" onclick="window.open(this.href, 'affiche_image', 'height=[(#HAUTEUR)], width=[(#LARGEUR)], top=20, left=20, toolbar=no, menubar=no, location=no, resizable=yes, scrollbars=yes, status=no'); return false;"  title="<:cisf:eq_lien_image_gd_format:>"><img class="image_reduite" alt="[(#TITRE)]" src="[(#FICHIER|image_reduire{150,150}|extraire_attribut{src}|attribut_url)]"></a>
+                                                            </div>
+                                                            <div class="description">
+                                                            [(#VU|=={oui}|oui)<span class="vu"><img src='#CHEMIN_IMAGE{cisf-vu-16-10.png}' width='16' height='10' alt='<:medias:document_vu|attribut_html:>' /></span> ]
+                                                            [(#TITRE)] ([(#DISTANT|=={oui}|oui)<img class="distant" alt="[(#TITRE)] (<:cisf:eq_doc_distant:>)" src="#CHEMIN{_images/icones/distant.png}"> ][<:cisf:eq_format:> (#TYPE_DOCUMENT)][ - (#TAILLE|taille_en_octets)])
+                                                            </div>
+                                                        ]
+                                                        [(#ID_VIGNETTE|>{0}|oui)
+                                                            <div class="vignette">
+                                                            <a href="[(#URL_PAGE{cisf_affiche_image}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_document,#ID_DOCUMENT})]" class="spip_out" onclick="window.open(this.href, 'affiche_image', 'height=[(#HAUTEUR)], width=[(#LARGEUR)], top=20, left=20, toolbar=no, menubar=no, location=no, resizable=yes, scrollbars=yes, status=no'); return false;"  title="<:cisf:eq_lien_image_gd_format:>"><img class="image_reduite" alt="[(#TITRE)]" src="[(#LOGO_DOCUMENT|image_reduire{150,150}|extraire_attribut{'src'})]"></a>
+                                                            </div>
+                                                            <div class="description">
+                                                            [(#VU|=={oui}|oui)<span class="vu"><img src='#CHEMIN_IMAGE{cisf-vu-16-10.png}' width='16' height='10' alt='<:medias:document_vu|attribut_html:>' /></span> ]
+                                                            [(#TITRE)] ([<:cisf:eq_format:> (#TYPE_DOCUMENT)][ - (#TAILLE|taille_en_octets)])
+                                                            </div>
+                                                        ]
+						]
+
+						[(#GET{ci_type_inclus}|=={embed}|oui)
+                                                        <div class="vignette">
+                					<a href="[(#URL_DOCUMENT|attribut_url)]" class="spip_out" title="<:cisf:eq_ouvre_document:> [(#TITRE)]"><img class="image_reduite"  alt="[(#TITRE)]"src="[(#LOGO_DOCUMENT|image_reduire{150,150}|extraire_attribut{'src'})]"></a>
+                                                        </div>
+                                                        <div class="description">
+                                                            [(#VU|=={oui}|oui)<span class="vu"><img src='#CHEMIN_IMAGE{cisf-vu-16-10.png}' width='16' height='10' alt='<:medias:document_vu|attribut_html:>' /></span> ]
+        						[(#TITRE)] ([(#DISTANT|=={oui}|oui)<img class="distant" alt="[(#TITRE)] (<:cisf:eq_doc_distant:>)" src="#CHEMIN{_images/icones/distant.png}"> ][<:cisf:eq_format:> (#TYPE_DOCUMENT)][ - (#TAILLE|taille_en_octets)])
+                                                        </div>
+						]
+
+						[(#GET{ci_type_inclus}|=={non}|oui)
+                                                        <div class="vignette">
+                					<a href="[(#URL_DOCUMENT|attribut_url)]" class="spip_out" title="<:cisf:eq_ouvre_document:> [(#TITRE)]"><img class="image_reduite" alt="[(#TITRE)]" src="[(#LOGO_DOCUMENT|image_reduire{150,150}|extraire_attribut{'src'})]"></a>
+                                                        </div>
+                                                        <div class="description">
+                                                        [(#VU|=={oui}|oui)<span class="vu"><img src='#CHEMIN_IMAGE{cisf-vu-16-10.png}' width='16' height='10' alt='<:medias:document_vu|attribut_html:>' /></span> ]
+                                                            [(#TITRE)] ([(#DISTANT|=={oui}|oui)<span class="distant"><img class="distant" alt="[(#TITRE)] (<:cisf:eq_doc_distant:>)" src="#CHEMIN{_images/icones/distant.png}"> ][<:cisf:eq_format:> (#TYPE_DOCUMENT)][ - (#TAILLE|taille_en_octets)])
+                                                        </div>
+						]
+                                                </div>
+						</td>
+						<td headers="col2" class="forme formecol2">
+						[(#ID_DOCUMENT|cisf_raccourcis_document{#ID_DOCUMENT,#ID_ARTICLE,'article'})]					
+						</td>
+						<td headers="col3" class="forme formecol3">
+						<div class="bloc_action_pj">
+						<a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_doc_remplacer#ID_DOCUMENT})]" onclick="cilien('bt_doc_remplacer#ID_DOCUMENT'); return false;" class="bouton_doc_remplacer"><:cisf:eq_remplacer:></a>
+						<a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_doc_modifier#ID_DOCUMENT})]" onclick="cilien('bt_doc_modifier#ID_DOCUMENT'); return false;" class="bouton_doc_modifier"><:cisf:eq_modifier:></a>
+						<a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_doc_supprimer#ID_DOCUMENT})]" onclick="cilien('bt_doc_supprimer#ID_DOCUMENT'); return false;" class="bouton_doc_supprimer"><:cisf:eq_supprimer:></a>
+					    </div>
+						</td>
+					</tr>
+					</BOUCLE_documents>
+				</table>
+				</B_documents>
+				
+	[(#PLUGIN{ciwidget}|oui)
+	<INCLURE{fond=prive/squelettes/inclure/cisf_ciwidget_portfolio,objet=article,id_objet=#ID_ARTICLE}>
+	]
+                
+				</div>
+                
+				
+		[(#REM) boutons ]
+
+		<p class="boutons_cisf">
+		<a role="button" href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_document})]" onclick="cilien('bt_document'); return false;" class="btn_cisf bouton_pj"><:cisf:eq_ajout_doc:></a>
+		<a role="button" href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_image})]" onclick="cilien('bt_image'); return false;" class="btn_cisf bouton_img"><:cisf:eq_ajout_img:></a>
+
+	[(#PLUGIN{ciwidget}|oui)
+		<a role="button" href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_type_widget})]" onclick="cilien('bt_type_widget'); return false;" class="btn_cisf bouton_widget"><:cisf:eq_ajout_widget:></a>
+	]
+
+                </p>
+                
+		<div class="cadrevalider">
+		[(#AUTORISER{publierdans,rubrique,#GET{ci_id_rubrique}}|non)
+			[(#GET{cistatut_article}|match{^(prepa|non)$}|oui)
+				<a role="button" href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_direct_statut_prop})]" onclick="cilien('bt_direct_statut_prop'); return false;" class="btn"><:bouton_demande_publication:></a>
+			]		
+		]
+		[(#AUTORISER{publierdans,rubrique,#GET{ci_id_rubrique}}|oui)
+			[(#GET{ci_previsu_art}|=={voir}|oui)
+				<a role="button" href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,voirenligne})]" onclick="cilien('voirenligne'); return false;" class="btn"><:voir_en_ligne:></a>
+			]
+			[(#GET{cistatut_article}|!={publie}|oui)
+				<a role="button" href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_direct_statut_publie})]" onclick="cilien('bt_direct_statut_publie'); return false;" class="btn"><:cisf:eq_publier:></a>
+			]
+			[(#GET{ci_previsu_art}|=={preview}|oui)
+				<a role="button" href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,previsu})]" onclick="cilien('previsu'); return false;" class="btn"><:previsualiser:></a>
+			]
+		]		
+				<input type="submit" id="validform" name="enregistrer" value="<:bouton_enregistrer:>" class="btn">
+				<a role="button" href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,annuler})]" onclick="cilien('annuler'); return false;" class="btn"><:cisf:eq_retour:></a>
+		</div>
+				
+
+
+        </form>
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
+			
+                <div id="gauche">
+                        
+                        <div id="menu1" role="navigation">
+
+        <div class="box info">
+        <div class="box__body clearfix">
+        <div class="infos">
+        <BOUCLE_form(ARTICLES){id_article}{statut IN (prop,prepa,publie,poubelle,refuse,archive)}>		
+                            
+                        <div class='numero'><:info_numero_article:><p>#ID_ARTICLE</p></div>
+
+                        [(#AUTORISER{publierdans,rubrique,#GET{ci_id_rubrique}}|non)
+                                [(#GET{cistatut_article}|match{^(prepa|non)$}|oui)
+                                        <div class='textestatut'><:texte_proposer_publication:></div>
+                                ]		
+                        ]
+
+                        <div class="formulaire_spip formulaire_editer formulaire_instituer formulaire_instituer_objet formulaire_instituer_objet-article">
+                        <form method="GET" action="#SELF" class="verifformok">
+                            <div class="editer-groupe">
+                                <div class="editer editer_statut statut_[(#GET{cistatut_article})] obligatoire">
+                                    <label for="formulaire_instituer_objet-article-statut"><:texte_article_statut:></label>
+                                    <span class="show">
+                                    <select class="[(#GET{cistatut_article})]" name="cilienget" id="formulaire_instituer_objet-article-statut">
+                                        <option value="bt_statut_prepa" [(#GET{cistatut_article}|=={prepa}|oui)selected="selected"] class="prepa">&nbsp;&nbsp;&nbsp;<:texte_statut_en_cours_redaction:></option>						
+                                        <option value="bt_statut_prop" [(#GET{cistatut_article}|=={prop}|oui)selected="selected"] class="prop">&nbsp;&nbsp;&nbsp;<:texte_statut_propose_evaluation:></option>
+                            [(#AUTORISER{publierdans,rubrique,#GET{ci_id_rubrique}}|oui)
+                                        <option value="bt_statut_publie" [(#GET{cistatut_article}|=={publie}|oui)selected="selected"] class="publie">&nbsp;&nbsp;&nbsp;<:texte_statut_publie:></option>						
+                                        <option value="bt_statut_refuse" [(#GET{cistatut_article}|=={refuse}|oui)selected="selected"] class="refuse">&nbsp;&nbsp;&nbsp;<:texte_statut_refuse:></option>
+                            ]
+                                        <option value="bt_statut_poubelle" [(#GET{cistatut_article}|=={poubelle}|oui)selected="selected"] class="poubelle">&nbsp;&nbsp;&nbsp;<:texte_statut_poubelle:></option>
+                            [(#PLUGIN{ciarchive}|oui)
+                                        <option value="bt_statut_archive" [(#GET{cistatut_article}|=={archive}|oui)selected="selected"] class="archive">&nbsp;&nbsp;&nbsp;<:ciarchive:texte_statut_archive:></option>
+                            ]
+                                    </select>
+                                    </span>    
+                                </div>
+                            </div>
+                            <p class="boutons_mini"><input type="submit" class="btn_mini submit" value="Changer" onclick="cilien(document.getElementById('formulaire_instituer_objet-article-statut').value); return false;"></p>
+                        </form>
+                        </div>    
+
+                        <ul class="ul_previsu">
+                        [(#GET{ci_previsu_art}|=={voir}|oui)
+                                <li><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,voirenligne})]" onclick="cilien('voirenligne'); return false;" class="texteoption bt_voirenligne"><:voir_en_ligne:></a></li>
+                        ]
+                        [(#GET{ci_previsu_art}|=={preview}|oui)
+                                <li><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,previsu})]" onclick="cilien('previsu'); return false;" class="texteoption bt_previsu"><:previsualiser:></a></li>
+                                #SET{ciulprevisu,'oui'}
+                        ]
+
+                        [(#REM) pour SPIP v3 ]
+                        [(#CONFIG{objets_versions}|oui)
+                                [(#SET{civersions,[(#CONFIG{objets_versions}|unserialize)]})]
+                        [(#GET{civersions}|is_array|oui) 
+                                [(#GET{civersions}|find{spip_articles}|oui)
+                                #SET{ciulprevisu,'oui'}
+                                <li><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_revision})]" onclick="cilien('bt_revision'); return false;" class="texteoption bt_revision"><:cisf:eq_histo_modif:></a></li>
+                                ]
+                                ]
+                        ]
+
+                        [(#CONFIG{articles_versions}|=={oui}|oui)
+                                #SET{ciulprevisu,'oui'}
+                                <li><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_revision})]" onclick="cilien('bt_revision'); return false;" class="texteoption bt_revision"><:cisf:eq_histo_modif:></a></li>
+                        ]
+
+                        [(#CONFIG{activer_statistiques}|=={oui}|oui)
+                                [(#STATUT|=={publie}|oui)
+                                        #SET{ciulprevisu,'oui'}
+                                        <li><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_statistique})]" onclick="cilien('bt_statistique'); return false;" class="texteoption bt_statistique"><:cisf:eq_stat:></a></li>
+                                ]
+                        ]
+                        <BOUCLE_sujets(FORUMS){id_article}{statut IN (prop,original,publie,off,spam)}{0,1}>
+                        [(#AUTORISER{modererforum,article,#ID_ARTICLE})
+                                #SET{ciulprevisu,'oui'}
+                                <li><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_suiviforum})]" onclick="cilien('bt_suiviforum'); return false;" class="texteoption bt_suiviforum"><:cisf:eq_suivi_forum:></a></li>
+                        ]
+                        </BOUCLE_sujets>
+
+                        <BOUCLE_signatures(SIGNATURES ?){id_article}{si #PLUGIN{petitions}}{0,1}>
+                        #SET{ciulprevisu,'oui'}
+                        <li><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_gererpetition})]" onclick="cilien('bt_gererpetition'); return false;" class="texteoption bt_gererpetition"><:cisf:eq_suivi_petition:></a></li>
+                        </BOUCLE_signatures>
+
+                        [(#GET{ciulprevisu}|=={non}|oui)
+                                <li class="ciulprevisu">&nbsp;</li>
+                        ]				
+
+                        <li><a href="javascript:chainemail('[(#NOM_SITE_SPIP|cisf_filtre_mailto{#CHARSET})][ - (#TITRE|supprimer_numero|cisf_filtre_mailto{#CHARSET})]')" title="<:cisf:eq_envoyer_courriel:> (<:cisf:eq_ouvre_messagerie:>)" class="texteoption envoiami"><:cisf:eq_envoyer_courriel:></a></li>
+
+                        [(#STATUT|=={prop}|oui)
+                        <li><a href="javascript:chainemailvalideur('[(#NOM_SITE_SPIP|cisf_filtre_mailto{#CHARSET})]  [(#TITRE|supprimer_numero|cisf_filtre_mailto{#CHARSET})]')" title="<:cisf:eq_mail_valideur:> (<:cisf:eq_ouvre_messagerie:>)" class="texteoption envoiami"><:cisf:eq_mail_valideur:></a></li>
+                        ]
+
+                        #CISF_OUTILS_ADDITIONNELS
+
+                        [(#STATUT|=={publie}|oui)
+                                [(#PS|!={''}|oui)
+                                <li><a href="javascript:chainemailreponse('[(#PS|cisf_email_nom|cisf_filtre_mailto{#CHARSET})]','[(#PS|cisf_email_domain|cisf_filtre_mailto{#CHARSET})]','[(#NOM_SITE_SPIP|cisf_filtre_mailto{#CHARSET})]  [(#TITRE|supprimer_numero|cisf_filtre_mailto{#CHARSET})]')" title="<:cisf:eq_repondre_par_mail:> (<:cisf:eq_ouvre_messagerie:>)" class="texteoption envoiami"><:cisf:eq_repondre_par_mail:></a></li>
+                                ]
+                        ]
+                        
+                        </ul>
+                        
+        </BOUCLE_form>
+        </B_form>		
+                        <div class='numero'><:info_numero_article:></div>
+
+                        [(#AUTORISER{publierdans,rubrique,#GET{ci_id_rubrique}}|non)
+                                [(#GET{cistatut_article}|match{^(prepa|non)$}|oui)
+                                        <div class='textestatut'><:texte_proposer_publication:></div>
+                                ]		
+                        ]
+                        
+                        <div class="formulaire_spip formulaire_editer formulaire_instituer formulaire_instituer_objet formulaire_instituer_objet-article">
+                        <form method="GET" action="#SELF" class="verifformok">
+                            <div class="editer-groupe">
+                                <div class="editer editer_statut statut_[(#GET{cistatut_article})] obligatoire">
+                                    <label for="formulaire_instituer_objet-article-statut"><:texte_article_statut:></label>
+                                    <span class="show">
+                                    <select class="[(#GET{cistatut_article})]" name="cilienget" id="formulaire_instituer_objet-article-statut">
+                                        <option value="bt_statut_prepa" [(#GET{cistatut_article}|=={prepa}|oui)selected="selected"] class="prepa">&nbsp;&nbsp;&nbsp;<:texte_statut_en_cours_redaction:></option>						
+                                        <option value="bt_statut_prop" [(#GET{cistatut_article}|=={prop}|oui)selected="selected"] class="prop">&nbsp;&nbsp;&nbsp;<:texte_statut_propose_evaluation:></option>
+                            [(#AUTORISER{publierdans,rubrique,#GET{ci_id_rubrique}}|oui)
+                                        <option value="bt_statut_publie" [(#GET{cistatut_article}|=={publie}|oui)selected="selected"] class="publie">&nbsp;&nbsp;&nbsp;<:texte_statut_publie:></option>						
+                                        <option value="bt_statut_refuse" [(#GET{cistatut_article}|=={refuse}|oui)selected="selected"] class="refuse">&nbsp;&nbsp;&nbsp;<:texte_statut_refuse:></option>
+                            ]
+                                        <option value="bt_statut_poubelle" [(#GET{cistatut_article}|=={poubelle}|oui)selected="selected"] class="poubelle">&nbsp;&nbsp;&nbsp;<:texte_statut_poubelle:></option>
+                            [(#PLUGIN{ciarchive}|oui)
+                                        <option value="bt_statut_archive" [(#GET{cistatut_article}|=={archive}|oui)selected="selected"] class="archive">&nbsp;&nbsp;&nbsp;<:ciarchive:texte_statut_archive:></option>
+                            ]
+                                    </select>
+                                    </span>    
+                                </div>
+                            </div>
+                            <p class="boutons_mini"><input type="submit" class="btn_mini submit" value="Changer" onclick="cilien(document.getElementById('formulaire_instituer_objet-article-statut').value); return false;"></p>
+                        </form>
+                        </div>    
+                        
+                        <ul class="ul_previsu">
+                        #SET{ciulprevisu,'non'}
+                        [(#AUTORISER{previsualiser})
+                                [(#PLUGIN{cipr}|oui)
+                                #SET{ciulprevisu,'oui'}
+                                <li><a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,previsu})]" onclick="cilien('previsu'); return false;" class="texteoption bt_previsu"><:previsualiser:></a></li>
+                                ]
+                        ]
+                        [(#GET{ciulprevisu}|=={non}|oui)
+                                <div class="ciulprevisu">&nbsp;</div>
+                        ]
+                        </ul>
+        <//B_form>
+        </div>
+        </div>
+        </div>
+        
+        <div class="box info">
+        <div class="box__body clearfix">
+        <div class="infos">
+                        <p class="info_logo_article"><:logo_article:></p>    
+                        <div class="logopagearticle">
+                        #SET{cilogo,''}   
+                        [                    
+                        
+                        <div class="visuel"><img src="(#LOGO_ARTICLE||extraire_attribut{'src'})" alt="<:cisf:eq_illustration:>" ></div>
+                        #SET{cilogo,'oui'}   
+                        [(#PLUGIN{titre_logo}|oui)
+                        [(#LOGO_ARTICLE|oui)
+                        <div class='logo'><div class='titre_logo'>#TITRE_LOGO</div><div class='descriptif_logo'>#DESCRIPTIF_LOGO</div></div>
+                        ]
+                        ]
+                        
+                        ]
+
+                        #SET{ciidlogo,0}   
+                        [(#GET{cilogo}|=={oui}|oui)   
+                        [(#SPIP_VERSION|>={4.2}|oui)
+                        #SET{ciidlogo,#ID_LOGO_ARTICLE}  
+                        ]
+                        ]
+                        <BOUCLE_DocLogo(DOCUMENTS){id_document=#GET{ciidlogo}}{tous}>
+                        [<div class="titre">(#TITRE)</div>]
+                        <div class="taille"><:info_largeur_vignette{largeur_vignette=#LARGEUR,hauteur_vignette=#HAUTEUR}:>[ - (#TAILLE|taille_en_octets)]</div>
+                        </BOUCLE_DocLogo>
+                        <p class="boutons_mini">
+                            <a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_doc_modifier#GET{ciidlogo}})]" onclick="cilien('bt_doc_modifier#GET{ciidlogo}'); return false;" class="bouton_doc_modifier"><:cisf:eq_modifier:></a>
+                            <a href="[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_doc_supprimer#GET{ciidlogo}})]" onclick="cilien('bt_doc_supprimer#GET{ciidlogo}'); return false;" class="bouton_doc_supprimer"><:cisf:eq_supprimer:></a>
+                        </p>
+                        </B_DocLogo>
+                        
+                        [(#GET{cilogo}|=={oui}|oui)   
+                        [(#SPIP_VERSION|>={4.2}|non)
+                        <p class="boutons_mini">
+                            <a href="spip.php?page=cisf_logo&id_article=#ID_ARTICLE" class="btn btn_mini" onclick="cilien('bt_logo'); return false;"><:cisf:modifier_logo:></a>
+                        </p>
+                        ]
+                        ]
+
+                        [(#GET{cilogo}|=={oui}|non)   
+                        <p class="boutons_mini">
+                            <a href="spip.php?page=cisf_logo&id_article=#ID_ARTICLE" class="btn btn_mini" onclick="cilien('bt_logo'); return false;"><:cisf:ajouter_logo:></a>
+                        </p>
+                        ]
+                        
+                        </div>
+        </div>
+        </div>
+        </div>
+        
+        <div class="box info">
+        <div class="box__body clearfix">
+        <div class="infos">
+            <nav class="options_avancees">
+                <h1><:cisf:options_avancees:></h1>
+                #CISF_OPTIONS_AVANCEES
+            </nav>
+        </div>
+        </div>
+        </div>
+                
+                
+                </div>
+        </div>
+
+<div class='clearer'>&nbsp;</div>	
+
+</div>
+</div>
+    
+<script type="text/javascript">
+	function update_select(statut_default){
+		var selected = this.options[this.selectedIndex];
+//		jQuery(this).attr('style',jQuery(selected).attr('style'));
+                jQuery(this).removeClass().addClass(jQuery(selected).attr('class'));
+	}
+	jQuery(function($){
+		$(".formulaire_instituer .show select")
+			.each(function(){update_select.apply(this,['#GET{cistatut_article}']);})
+			.on('change',function(){update_select.apply(this,['#GET{cistatut_article}']);})
+			.on('keyup',function(){update_select.apply(this,['#GET{cistatut_article}']);});
+	});
+</script>

@@ -1,0 +1,451 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+
+[(#VAL{''}|f_jQuery)]
+[<script src="(#CHEMIN{prive/javascript/presentation.js})"></script>]
+<script>
+var confirm_changer_statut = '<:confirm_changer_statut|html2unicode|addslashes|unicode_to_javascript:>';
+</script>
+
+<style>
+.puce_objet { position: relative; }
+.puce_objet_fixe { position: relative; }
+
+.puce_objet_popup, .puce_objet_popup * { box-sizing: content-box; }
+.puce_objet_popup {
+	position: absolute;
+	visibility: hidden;
+	border: 0px;
+	background-color: white;
+	padding: 0px;
+	z-index: 10;
+	top: -3px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+	border-radius: 0.33rem;
+	left: -7px;
+	padding: 4px;
+	line-height: 0;
+}
+.puce_objet_popup a { display: inline-block;}
+.puce_objet_popup img { margin: 3px; border: 0; display: block;}
+.puce_objet .puce_objet_popup { visibility: hidden; }
+.puce_objet.on .puce_objet_popup { visibility: visible; }
+
+.puce-survol-enabled:hover,
+.puce-survol-enabled:focus
+{
+    background-color: #e6e6e6;
+}
+
+</style>
+
+
+#SET{cisession,'non'}
+[(#SESSION{id_auteur}|!={''}|oui)
+	[(#SESSION{statut}|!={6forum}|oui)
+	#SET{cisession,'oui'}
+	]
+]
+
+#SET{ci_id_auteur,0}
+[(#GET{cisession}|=={oui}|oui)
+	[(#AUTORISER{creerarticledans,rubrique,#ENV{id_rubrique}})
+	#SET{ci_id_auteur,#SESSION{id_auteur}}
+	]
+]
+
+#SET{cipostdate,'9000-01-01'}
+[(#CONFIG{post_dates}|=={non}|et{#SESSION{statut}|=={0minirezo}|oui})
+	#SET{cipostdate,#DATE|affdate{'Y-m-d H:i:s'}}
+]
+
+
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}{statut IN (prepa,prive,publie,new)}>
+<title>[(#NOM_SITE_SPIP|textebrut) - ][(#TITRE|supprimer_numero|textebrut)]</title>
+<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
+<meta name="DC.Title" content="[(#TITRE|supprimer_numero)]">
+<meta name="DC.Format" content="text/html">
+<meta name="DC.Language" content="#LANG">
+
+#SET{ci_publierdans,''}
+[(#GET{ci_id_auteur}|>{0}|oui)
+	[(#AUTORISER{publierdans,rubrique,#ID_RUBRIQUE})
+		#SET{ci_publierdans,'oui'}
+	]
+]
+</head>
+
+<body>
+<div id="pageNonPublie">
+<div class="largeur">
+    
+    <div id="bando_haut">
+        <nav role="navigation" aria-label="<:cisf:vous_etes_ici:>">
+                    [(#SET{ci_previsu_rub,'preview'})]
+                    <BOUCLE_rub_previsu(RUBRIQUES){id_rubrique}{statut=publie}>
+                    [(#SET{ci_previsu_rub,''})]
+                    </BOUCLE_rub_previsu>
+
+                    <div id="boxnavpath"><div id="navpath">
+                        [(#GET{ci_id_auteur}|>{0}|oui)<a href="[(#URL_PAGE{sommaire}|parametre_url{var_mode,#GET{ci_previsu_rub}})]"><:cisf:eq_accueil:></a>]
+                        <BOUCLE_chem_nav(HIERARCHIE){id_rubrique}>
+                        [(#GET{ci_id_auteur}|>{0}|oui)&gt; <a href="[(#URL_RUBRIQUE|parametre_url{var_mode,#GET{ci_previsu_rub}})]">[(#TITRE|supprimer_numero)]</a>]
+                        </BOUCLE_chem_nav>
+                        [(#GET{ci_id_auteur}|>{0}|oui)&gt; <span aria-current="page">[(#TITRE|supprimer_numero)]</span>]
+                    </div></div>
+        </nav>
+    </div>
+    
+    
+<div>
+<div id="milieu">
+	<div id="ext-main">
+		
+		<div class="main">
+			<div id="gauche">
+			</div>
+
+  			<div id="contenu">
+			<div class="main-content">
+			
+[(#SESSION{id_auteur}|?{'',' '})
+	[(#REM) <!-- Auteur non connecte -->]
+	<div id="contenu">
+			[(#SESSION{id_auteur}|?{' '})<h2><:info_acces_interdit:></h2><div class="texte">]
+			[(#SESSION{id_auteur}|?{'',' '})<h2><:cisf:eq_page_protegee:></h2>
+			<div class="texte"><:cisf:eq_page_protegee_texte1:></div>
+			<div class="texte"><:cisf:eq_page_protegee_texte2:></div>
+			<div class="texte"><a href="[(#URL_PAGE{login}|parametre_url{url,#SELF})]" rel="nofollow" title="<:cisf:eq_authentification:>"><:cisf:eq_authentification:></a>]
+  			
+			
+			<a href="[(#URL_PAGE{sommaire})]"><:cisf:eq_retour_accueil:></a>
+			</div>
+  			
+			<div class='clearer'>&nbsp;</div>	
+	</div>
+]
+			
+			
+			
+				<div id="boxcentrale"><div class="innercentrale">
+
+				[(#GET{ci_id_auteur}|>{0}|oui)
+				<h1>[(#TITRE|supprimer_numero)]</h1>
+				<div class="retour"><a href="#URL_RUBRIQUE"><:icone_retour:></a></div>
+
+				<div class="titreaction">
+[(#SPIP_VERSION|>={4}|oui)
+				<img height="24" width="24" alt="" src="#CHEMIN_IMAGE{article-24.png}">
+]
+[(#SPIP_VERSION|>={4}|non)
+				<img height="24" width="24" alt="" src="prive/themes/spip/images/article-add-24.png">
+]
+				<a href="[(#URL_PAGE{cisf_article}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:icone_ecrire_article:></a>
+				</div>
+				]
+
+				<B_postdate>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+        <div class="liste-objets articles">
+        <table class='spip liste' aria-label="<:info_article_a_paraitre:>">
+        <caption><strong class="caption"><:info_article_a_paraitre:></strong></caption>
+        	<thead>
+        		<tr class='first_row'>
+        						<th class='statut' id="colpostdate1">#</th>
+        						<th class='titre principale' id="colpostdate2"><:info_titre|label_nettoyer:></th>
+        						<th class='auteur' id="colpostdate3"><:auteur:></th>
+        						<th class='date secondaire' id="colpostdate4"><:date:></th>
+        						<th class='id' id="colpostdate5"><:info_numero_abbreviation:></th>
+        		</tr>
+        	</thead>
+        	<tbody>
+        	]
+				<BOUCLE_postdate(ARTICLES){id_rubrique}{statut=publie}{date>#GET{cipostdate}}{par date}{inverse}>
+        		[(#GET{ci_id_auteur}|>{0}|oui)
+        		<tr class="tr_liste">
+            			<td headers="colpostdate1" class="statut">[(#ID_ARTICLE|cisf_puce_article{'publie',#ID_RUBRIQUE})]</td>
+        
+        					<td headers="colpostdate2" class="titre principale"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+        					<td headers="colpostdate3" class="auteur">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+        					<td headers="colpostdate4" class="date secondaire">[(#DATE|affdate{'d/m/Y'})]</td>
+        					<td headers="colpostdate5" class="id">[(#ID_ARTICLE)]</td>
+        			
+        		</tr>
+        	  ]
+        	</BOUCLE_postdate>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+        	</tbody>
+        </table>
+        </div>
+        	]
+				</B_postdate>
+
+
+				<B_prop>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+        <div class="liste-objets articles">
+        <table class='spip liste' aria-label="<:info_articles_proposes:>">
+        <caption><strong class="caption"><:info_articles_proposes:></strong></caption>
+        	<thead>
+        		<tr class='first_row'>
+        						<th class='statut' id="colprop1">#</th>
+        						<th class='titre principale' id="colprop2"><:info_titre|label_nettoyer:></th>
+        						<th class='auteur' id="colprop3"><:auteur:></th>
+        						<th class='date secondaire' id="colprop4"><:date:></th>
+        						<th class='id' id="colprop5"><:info_numero_abbreviation:></th>
+        		</tr>
+        	</thead>
+        	<tbody>
+        	]
+				<BOUCLE_prop(ARTICLES){id_rubrique}{statut=prop}{par date}{inverse}>
+        		[(#GET{ci_id_auteur}|>{0}|oui)
+        		<tr class="tr_liste">
+            			<td headers="colprop1" class="statut">[(#ID_ARTICLE|cisf_puce_article{'prop',#ID_RUBRIQUE})]</td>
+        
+        					<td headers="colprop2" class="titre principale"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+        					<td headers="colprop3" class="auteur">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+        					<td headers="colprop4" class="date secondaire">[(#DATE|affdate{'d/m/Y'})]</td>
+        					<td headers="colprop5" class="id">[(#ID_ARTICLE)]</td>
+        			
+        		</tr>
+        	  ]
+        	</BOUCLE_prop>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+        	</tbody>
+        </table>
+        </div>
+        	]
+				</B_prop>
+
+				
+				<B_prep>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+        <div class="liste-objets articles">
+        <table class='spip liste' aria-label="<:texte_statut_en_cours_redaction:>">
+        <caption><strong class="caption"><:articles:> <:texte_statut_en_cours_redaction:></strong></caption>
+        	<thead>
+        		<tr class='first_row'>
+        						<th class='statut' id="colprepa1">#</th>
+        						<th class='titre principale' id="colprepa2"><:info_titre|label_nettoyer:></th>
+        						<th class='auteur' id="colprepa3"><:auteur:></th>
+        						<th class='date secondaire' id="colprepa4"><:date:></th>
+        						<th class='id' id="colprepa5"><:info_numero_abbreviation:></th>
+        		</tr>
+        	</thead>
+        	<tbody>
+        	]
+				<BOUCLE_prep(ARTICLES){id_rubrique}{statut=prepa}{par date}{inverse}>
+				#SET{ciok,''}
+				[(#GET{ci_publierdans}|oui)
+					#SET{ciok,'oui'}
+				]
+				[(#GET{ci_publierdans}|non)
+					[(#GET{ci_id_auteur}|cisf_auteur_article{#ID_ARTICLE}|oui)
+						#SET{ciok,'oui'}
+					]
+				]
+				[(#GET{ciok}|non)
+					[(#PLUGIN{cirr}|oui)
+						[(#AUTORISER{modifier,article,#ID_ARTICLE})
+							#SET{ciok,'oui'}
+						]
+					]
+				]
+				[(#GET{ciok}|oui)
+        		<tr class="tr_liste">
+            			<td headers="colprepa1" class="statut">[(#ID_ARTICLE|cisf_puce_article{'prepa',#ID_RUBRIQUE})]</td>
+        
+        					<td headers="colprepa2" class="titre principale"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+        					<td headers="colprepa3" class="auteur">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+        					<td headers="colprepa4" class="date secondaire">[(#DATE|affdate{'d/m/Y'})]</td>
+        					<td headers="colprepa5" class="id">[(#ID_ARTICLE)]</td>
+        			
+        		</tr>
+				]
+				</BOUCLE_prep>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+        	</tbody>
+        </table>
+        </div>
+        	]
+				</B_prep>
+				
+				
+				<B_publie>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+        <div class="liste-objets articles">
+        <table class='spip liste' aria-label="<:texte_statut_publies:>">
+        <caption><strong class="caption"><:articles:> <:texte_statut_publies:></strong></caption>
+        	<thead>
+        		<tr class='first_row'>
+        						<th class='statut' id="colpublie1">#</th>
+        						<th class='titre principale' id="colpublie2"><:info_titre|label_nettoyer:></th>
+        						<th class='auteur' id="colpublie3"><:auteur:></th>
+        						<th class='date secondaire' id="colpublie4"><:date:></th>
+        						<th class='id' id="colpublie5"><:info_numero_abbreviation:></th>
+        		</tr>
+        	</thead>
+        	<tbody>
+        	]
+        	<BOUCLE_publie(ARTICLES){id_rubrique}{statut=publie}{date<=#GET{cipostdate}}{par date}{inverse}>
+        		[(#GET{ci_id_auteur}|>{0}|oui)
+        		<tr class="tr_liste">
+            			<td headers="colpublie1" class="statut">[(#ID_ARTICLE|cisf_puce_article{'publie',#ID_RUBRIQUE})]</td>
+        
+        					<td headers="colpublie2" class="titre principale"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+        					<td headers="colpublie3" class="auteur">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+        					<td headers="colpublie4" class="date secondaire">[(#DATE|affdate{'d/m/Y'})]</td>
+        					<td headers="colpublie5" class="id">[(#ID_ARTICLE)]</td>
+        			
+        		</tr>
+        	  ]
+        	</BOUCLE_publie>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+        	</tbody>
+        </table>
+        </div>
+        	]
+				</B_publie>
+				
+				
+				
+
+
+				<B_refuse>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+        <div class="liste-objets articles">
+        <table class='spip liste' aria-label="<:texte_statut_refuses:>">
+        <caption><strong class="caption"><:texte_statut_refuses:></strong></caption>
+        	<thead>
+        		<tr class='first_row'>
+        						<th class='statut' id="colrefuse1">#</th>
+        						<th class='titre principale' id="colrefuse2"><:info_titre|label_nettoyer:></th>
+        						<th class='auteur' id="colrefuse3"><:auteur:></th>
+        						<th class='date secondaire' id="colrefuse4"><:date:></th>
+        						<th class='id' id="colrefuse5"><:info_numero_abbreviation:></th>
+        		</tr>
+        	</thead>
+        	<tbody>
+        	]
+				<BOUCLE_refuse(ARTICLES){id_rubrique}{statut=refuse}{par date}{inverse}>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+        		<tr class="tr_liste">
+            			<td headers="colrefuse1" class="statut">[(#ID_ARTICLE|cisf_puce_article{'refuse',#ID_RUBRIQUE})]</td>
+        
+        					<td headers="colrefuse2" class="titre principale"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+        					<td headers="colrefuse3" class="auteur">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+        					<td headers="colrefuse4" class="date secondaire">[(#DATE|affdate{'d/m/Y'})]</td>
+        					<td headers="colrefuse5" class="id">[(#ID_ARTICLE)]</td>
+        			
+        		</tr>
+				]
+				</BOUCLE_refuse>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+        	</tbody>
+        </table>
+        </div>
+        	]
+				</B_refuse>
+			
+			
+				<B_poub>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+				<div class='cadre-liste'>
+        <div class="liste-objets articles">
+        <table class='spip liste' aria-label="<:texte_statut_poubelle:>">
+        <caption><strong class="caption"><:articles:> <:texte_statut_poubelle:></strong></caption>
+        	<thead>
+        		<tr class='first_row'>
+        						<th class='statut' id="colpoub1">#</th>
+        						<th class='titre principale' id="colpoub2"><:info_titre|label_nettoyer:></th>
+        						<th class='auteur' id="colpoub3"><:auteur:></th>
+        						<th class='date secondaire' id="colpoub4"><:date:></th>
+        						<th class='id' id="colpoub5"><:info_numero_abbreviation:></th>
+        		</tr>
+        	</thead>
+        	<tbody>
+        	]
+				<BOUCLE_poub(ARTICLES){id_rubrique}{statut=poubelle}{par date}{inverse}>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+        		<tr class="tr_liste">
+            			<td headers="colpoub1" class="statut">[(#ID_ARTICLE|cisf_puce_article{'poubelle',#ID_RUBRIQUE})]</td>
+        
+        					<td headers="colpoub2" class="titre principale"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+        					<td headers="colpoub3" class="auteur">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+        					<td headers="colpoub4" class="date secondaire">[(#DATE|affdate{'d/m/Y'})]</td>
+        					<td headers="colpoub5" class="id">[(#ID_ARTICLE)]</td>
+        			
+        		</tr>
+				]
+				</BOUCLE_poub>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+        	</tbody>
+        </table>
+        </div>
+        	]
+				</B_poub>
+
+				<B_arch>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+				<div class='cadre-liste'>
+        <div class="liste-objets articles">
+        <table class='spip liste' aria-label="<:cisf:texte_statut_archive:>">
+        <caption><strong class="caption"><:articles:> <:cisf:texte_statut_archive:></strong></caption>
+        	<thead>
+        		<tr class='first_row'>
+        						<th class='statut' id="colarchive1">#</th>
+        						<th class='titre principale' id="colarchive2"><:info_titre|label_nettoyer:></th>
+        						<th class='auteur' id="colarchive3"><:auteur:></th>
+        						<th class='date secondaire' id="colarchive4"><:date:></th>
+        						<th class='id' id="colarchive5"><:info_numero_abbreviation:></th>
+        		</tr>
+        	</thead>
+        	<tbody>
+        	]
+				<BOUCLE_arch(ARTICLES){id_rubrique}{statut=archive}{par date}{inverse}>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+        		<tr class="tr_liste">
+            			<td headers="colarchive1" class="statut">[(#ID_ARTICLE|cisf_puce_article{'archive',#ID_RUBRIQUE})]</td>
+        
+        					<td headers="colarchive2" class="titre principale"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+        					<td headers="colarchive3" class="auteur">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+        					<td headers="colarchive4" class="date secondaire">[(#DATE|affdate{'d/m/Y'})]</td>
+        					<td headers="colarchive5" class="id">[(#ID_ARTICLE)]</td>
+        			
+        		</tr>
+				]
+				</BOUCLE_arch>
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+        	</tbody>
+        </table>
+        </div>
+        	]
+				</B_arch>
+				
+				
+				</div></div>
+			</div>
+			</div>
+			<div class='clearer'>&nbsp;</div>	
+		</div>
+		
+	</div>
+</div>
+<div id="pied">
+	<div id="outils">
+      		[(#GET{ci_id_auteur}|>{0}|oui)
+  	<INCLURE{fond=cisf_pied}{self=#SELF}{lang}>
+	         ]
+  </div>
+</div>
+    
+</div>
+</div>
+</body>
+</html>
+
+</BOUCLE_rubrique>

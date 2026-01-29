@@ -1,0 +1,42 @@
+[(#ENV{editable})	
+<form action="#ENV{action}" method="post" enctype='multipart/form-data' class="form_upload" style="margin: 0px; border: 0px">
+	<div>
+		[(#ACTION_FORMULAIRE{#ENV{action}})]
+		
+		<div class='joindre'>
+			<a id='access-a' href='#access-a'></a>
+
+			<div class='cadre cadre-r' style=''><img src='prive/images/creer.gif'
+			alt=""  class='cadre-icone'  style='background: url("prive/images/doc-24.gif") no-repeat; padding: 0px; margin: 0px;' width='24' height='24' />
+			
+				
+[(#ENV{distant}|=={oui}|non)
+				<div class='cadre_padding'>
+					<label for='fichier'><:info_telecharger_ordinateur:></label><br />
+					<input name='fichier' id='fichier_choix_#ENV{id_document}' type='file' class='forml spip_xx-small' size='55' />
+					<div style='text-align: right'><input name='joindre_upload' type='submit' value='<:bouton_telecharger:>' /></div>
+					<div class='nettoyeur'></div>
+	
+				</div>				
+]
+
+[(#ENV{distant}|=={oui}|oui)	
+				<div class='cadre_padding'>
+					<div style='border: 1px #303030 solid; padding: 4px; color: #505050;'>
+						<img src='prive/images/attachment.gif' style='float: right;' alt="" />	
+						<label for='url'><:info_referencer_doc_distant:></label><br />
+						<input name='url' size='55' id='url' value='http://' />
+						<div style='text-align: right'><input name='joindre_distant' type='submit' value='<:bouton_choisir:>' /></div>
+					</div>
+					<div class='nettoyeur'></div>
+	
+				</div>
+]				
+				<div class='nettoyeur'></div>
+		
+			</div>
+		</div>
+	</div>
+
+</form>
+]

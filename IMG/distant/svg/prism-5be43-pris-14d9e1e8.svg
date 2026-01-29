@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <path id="a" d="M1.957 7.155h15.252V52.73H1.957z"/>
+  </defs>
+  <path fill="none" d="M0 0h24v24H0z"/>
+  <path d="M37.369 32l-13.23-8.821V40.82zm6.17.86L21.608 47.483a1.035 1.035 0 01-1.608-.86V17.378a1.035 1.035 0 011.608-.86l21.931 14.62a1.035 1.035 0 010 1.722z" opacity=".992" fill="#666"/>
+  <text style="line-height:1.25" x="40.592" y="47.866" transform="matrix(1.08762 0 0 .91943 -.337 0)" font-size="47.671" font-family="sans-serif" letter-spacing="0" word-spacing="0" opacity=".992" fill="#e895b7" stroke-width="17.877">
+    <tspan x="40.592" y="47.866" style="-inkscape-font-specification:'Comfortaa Bold'" font-weight="700" font-family="Comfortaa">}</tspan>
+  </text>
+  <text style="line-height:1.25" x=".232" y="47.866" transform="matrix(1.08762 0 0 .91943 -.337 0)" font-size="47.671" font-family="sans-serif" letter-spacing="0" word-spacing="0" opacity=".992" fill="#e895b7" stroke-width="17.877">
+    <tspan x=".232" y="47.866" style="-inkscape-font-specification:'Comfortaa Bold'" font-weight="700" font-family="Comfortaa">{</tspan>
+  </text>
+</svg>

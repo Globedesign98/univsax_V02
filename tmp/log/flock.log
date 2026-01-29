@@ -1,0 +1,11 @@
+2026-01-27 06:17:59 127.0.0.1 (pid 4132) :Pub:!INFO: ecrire_fichier: operation atomique via rename() impossible, fallback non atomique via file_put_contentsOK
+2026-01-28 23:41:09 127.0.0.1 (pid 27084) :Pub:!INFO: ecrire_fichier: operation atomique via rename() impossible, fallback non atomique via file_put_contentsOK
+2026-01-29 22:00:32 127.0.0.1 (pid 1272) :Pub:!INFO: ecrire_fichier: operation atomique via rename() impossible, fallback non atomique via file_put_contentsOK
+2026-01-29 22:00:32 127.0.0.1 (pid 1272) :Pub:!INFO: ecrire_fichier: operation atomique via rename() impossible, fallback non atomique via file_put_contentsOK
+2026-01-29 22:00:32 127.0.0.1 (pid 1272) :Pub:!INFO: ecrire_fichier: operation atomique via rename() impossible, fallback non atomique via file_put_contentsOK
+2026-01-29 22:00:32 127.0.0.1 (pid 1272) :Pub:!INFO: ecrire_fichier: operation atomique via rename() impossible, fallback non atomique via file_put_contentsOK
+2026-01-29 22:00:32 127.0.0.1 (pid 1272) :Pub:!INFO: ecrire_fichier: operation atomique via rename() impossible, fallback non atomique via file_put_contentsOK
+2026-01-29 22:00:32 127.0.0.1 (pid 1272) :Pub:!INFO: ecrire_fichier: operation atomique via rename() impossible, fallback non atomique via file_put_contentsOK
+2026-01-29 22:00:32 127.0.0.1 (pid 1272) :Pub:!INFO: ecrire_fichier: operation atomique via rename() impossible, fallback non atomique via file_put_contentsOK
+2026-01-29 22:00:32 127.0.0.1 (pid 1272) :Pub:!INFO: ecrire_fichier: operation atomique via rename() impossible, fallback non atomique via file_put_contentsOK
+2026-01-29 22:00:32 127.0.0.1 (pid 1272) :Pub:!INFO: ecrire_fichier: operation atomique via rename() impossible, fallback non atomique via file_put_contentsOK

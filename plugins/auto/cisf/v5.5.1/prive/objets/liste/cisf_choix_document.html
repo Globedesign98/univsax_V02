@@ -1,0 +1,51 @@
+[(#REM) les documents]
+<B_documents>
+<div class="liste_items documents" id="documents#ENV{id_unique}">
+[<p class="pagination">(#PAGINATION{cisf_page_precedent_suivant})</p>]
+<ul>
+<BOUCLE_documents(DOCUMENTS){recherche ?}{media IN #ENV{cimedia,''}}{extension?}{tri #ENV{cichoixtri},#ENV{cichoixordre}}{par fichier}{date>=#ENV{cidebut}}{date<=#ENV{cifin}}{statut==#ENV{statut,.*}}{pagination 10}>
+        #SET{ciok,'oui'}
+        [(#GET{ciantihack}|oui)
+                #SET{ciok,''}
+        ]
+        [(#GET{ciok}|non)
+                [(#STATUT|=={publie}|oui)
+                        #SET{ciok,'oui'}
+                ]
+                [(#GET{ciok}|non)
+                        [(#AUTORISER{modifier,document,#ID_DOCUMENT}|oui)
+                                #SET{ciok,'oui'}
+                        ]
+                ]
+        ]
+        [(#GET{ciok}|oui)
+        <li class="item #MODE vu_#VU statut_#STATUT[(#DISTANT|=={oui}|oui)distant]" id="doc#ID_DOCUMENT">
+                <div class="vignette">
+                [(#LOGO_DOCUMENT{#URL_DOCUMENT,150,150}|inserer_attribut{alt,[(#TITRE|sinon{#FICHIER*|basename}|texte_backend)]})]
+                </div>
+                <div class="titrem">
+                        [(#ID_DOCUMENT|medias_puce_statut_document{#STATUT})]
+                        [(#VU|=={oui}|oui)<img src='#CHEMIN_IMAGE{vu-16-10.png}' width='16' height='10' alt='<:medias:document_vu:>' title='<:medias:document_vu:>'/> ]
+                        [<span class="fichier">(#FICHIER*|basename)</span>]
+                        [<span class="titre">(#TITRE|sinon{<i class="sanstitre"><:info_sans_titre:></i>})</span>]
+                        <span class="image_loading"></span>
+                        <div class="infos">
+                        [(#DISTANT|=={oui}|non)#SET{missing,#FICHIER|file_exists|non}]
+                        [(#GET{missing}|oui)<img src='#CHEMIN_IMAGE{document-manquant-24.png}' width='24' height='24' alt='<:medias:fichier_manquant:>' title='<:medias:fichier_manquant:>'/>]
+                        [(#DISTANT|=={oui}|oui)<img src='#CHEMIN_IMAGE{distant-16.png}' width='16' height='16' alt='<:medias:fichier_distant:>' title='<:medias:fichier_distant:>'/> ]<:info_numero_abbreviation:>#ID_DOCUMENT - [(#DATE|affdate{d/m/Y})] - #EXTENSION - [(#TAILLE|taille_en_octets)]
+                        </div>
+                        <div class="choisir"><a href="[(#URL_PAGE{cisf_choix_document}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{cilienget,bt_#ID_DOCUMENT})]" onclick="cilien('bt_#ID_DOCUMENT'); return false;" class="btn btn_mini" title="[<:bouton_choisir:> (#TITRE|sinon{[(#FICHIER*|basename)]})]"><:bouton_choisir:></a></div>
+
+                </div>
+        </li>
+        ]
+</BOUCLE_documents>
+</ul>
+[<p class="pagination">(#PAGINATION{cisf_page_precedent_suivant})</p>]
+</div>
+</B_documents>
+<p class="enteteresult">0 <strong><:cisf:doc_trouves:></strong></p>
+<//B_documents>
+		
+		
+		

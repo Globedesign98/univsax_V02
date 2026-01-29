@@ -1,0 +1,11 @@
+
+			[(#SESSION{id_auteur}|?{' '})<h2><:info_acces_interdit:></h2><div class="texte">]
+			[(#SESSION{id_auteur}|?{'',' '})<h2><:cisf:eq_page_protegee:></h2>
+			<div class="texte"><:cisf:eq_page_protegee_texte1:></div>
+			<div class="texte"><:cisf:eq_page_protegee_texte2:></div>
+			<div class="texte"><a href="[(#URL_PAGE{login}|parametre_url{url,[(#URL_PAGE{cisf_article,id_article=[(#ENV{id_article}|intval)]&id_rubrique=[(#ENV{id_rubrique}|intval)]})]})]" rel="nofollow" title="<:cisf:eq_authentification:>"><:cisf:eq_authentification:></a>]
+			
+			<a href="[(#URL_PAGE{sommaire})]"><:cisf:eq_retour_accueil:></a>
+			</div>
+  			
+			<div class='clearer'>&nbsp;</div>	
