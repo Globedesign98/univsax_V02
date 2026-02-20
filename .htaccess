@@ -35,6 +35,53 @@ RewriteRule ^(.*) - [E=BASE:%1]
 ################ REGLAGES PERSONNALISES ######################
 # Inscrivez ci-dessous vos reglages supplementaires
 
+################ COMPRESSION GZIP ######################
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml font/ttf font/otf application/font-woff application/font-woff2
+</IfModule>
+
+################ CACHE LONG TERME POUR ASSETS STATIQUES ######################
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Images
+  ExpiresByType image/jpeg        "access plus 1 year"
+  ExpiresByType image/png         "access plus 1 year"
+  ExpiresByType image/webp        "access plus 1 year"
+  ExpiresByType image/gif         "access plus 1 year"
+  ExpiresByType image/svg+xml     "access plus 1 year"
+  ExpiresByType image/x-icon      "access plus 1 year"
+  # Polices
+  ExpiresByType font/ttf          "access plus 1 year"
+  ExpiresByType font/otf          "access plus 1 year"
+  ExpiresByType font/woff         "access plus 1 year"
+  ExpiresByType font/woff2        "access plus 1 year"
+  ExpiresByType application/font-woff   "access plus 1 year"
+  ExpiresByType application/font-woff2  "access plus 1 year"
+  # CSS / JS : 1 semaine (noms de fichiers peuvent ne pas changer entre déploiements)
+  ExpiresByType text/css          "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  # HTML (SPIP génère du HTML dynamique, pas de cache côté client)
+  ExpiresByType text/html         "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Cache long terme pour images et polices (fichiers rarement modifiés)
+  <FilesMatch "\.(woff|woff2|ttf|otf|ico|jpg|jpeg|png|gif|webp|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # CSS / JS : cache 1 semaine (sans immutable, car les noms de fichiers peuvent rester identiques)
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  # Sécurité : pas de cache sur HTML dynamique
+  <FilesMatch "\.(html|php)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
 
 
 ############# GESTIONS DES ACCES FICHIERS #####################
@@ -121,9 +168,7 @@ RewriteRule ^sitemap[.]xml$      spip.php?page=sitemap.xml [QSA,L]
 #RewriteRule ^apple-touch-icon(-(\d+x\d+))?(-precomposed)?[.]png$	spip.php?page=apple-touch-icon.png&size=$2 [QSA,L]
 
 
-<IfModule mod_expires.c>
-	ExpiresByType text/html  "access plus 0 seconds"
-</IfModule>
+# (ExpiresByType text/html déjà défini dans le bloc mod_expires ci-dessus)
 
 #################################
 # gestion des erreurs 404
