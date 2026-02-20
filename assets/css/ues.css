@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+/* Google Fonts are loaded via <link> in the HTML <head> — @import removed to prevent render-blocking */
 
 body {
 

@@ -11,13 +11,18 @@
 <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;family=Lato:wght@100;300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Only load the font weights actually used (reduced from 20 to 10 variants) -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Montserrat:wght@600;700;800&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
 <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
-<link href="assets/vendor/aos/aos.css" rel="stylesheet"/>
-<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
-<link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"/>
-<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+<!-- AOS, GLightbox and Swiper CSS deferred — not needed for initial render -->
+<link rel="preload" href="assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="assets/vendor/aos/aos.css" rel="stylesheet"/></noscript>
+<link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/></noscript>
+<!-- FontAwesome removed — page uses Bootstrap Icons exclusively -->
+<link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/></noscript>
 <link href="assets/css/main.css" rel="stylesheet"/>
 <link href="assets/css/hero-video.css" rel="stylesheet"/>
 <link href="assets/css/univsax.css" rel="stylesheet"/>
@@ -128,7 +133,7 @@
 <nav class="navbar navbar-expand-xl ues-nav">
 <div class="container-xxl ues-nav-inner">
 <a aria-label="Université Européenne de Saxophone" class="navbar-brand ues-brand" href="#URL_SITE_SPIP">
-<img alt="Université Européenne de Saxophone" src="assets/img/ues/logo_ues.png"/>
+<img alt="Université Européenne de Saxophone" src="assets/img/ues/logo_ues.png" width="529" height="157" fetchpriority="high"/>
 </a>
 <button aria-controls="uesNav" aria-expanded="false" aria-label="Ouvrir le menu" class="navbar-toggler ues-toggler" data-bs-target="#uesNav" data-bs-toggle="collapse" type="button">
 <span class="navbar-toggler-icon"></span>
@@ -147,7 +152,7 @@
 </header>
 <main class="main ues-main">
 <section aria-label="Accueil" class="hero section ues-hero" id="hero">
-<video autoplay="" class="ues-hero-video" loop="" muted="" playsinline="">
+<video autoplay="" class="ues-hero-video" loop="" muted="" playsinline="" poster="assets/img/ues/concert.jpg">
 <source src="assets/video/votre_video.mp4" type="video/mp4"/>
         Votre navigateur ne supporte pas la lecture de vidéo.
       </video>
@@ -188,7 +193,7 @@
 </ul>
 </div>
 <div class="col-lg-6">
-<img alt="Affiche 2026 — European University of Saxophone" class="ues-poster img-fluid" src="assets/img/ues/affiche-2026.jpg"/>
+<img alt="Affiche 2026 — European University of Saxophone" class="ues-poster img-fluid" src="assets/img/ues/affiche-2026.jpg" width="1080" height="1527" fetchpriority="high"/>
 </div>
 </div>
 </div><!-- /panel -->
@@ -319,7 +324,7 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <div class="col-12">
 <h3 class="mb-3 ues-slide-title"><i class="bi bi-journal-richtext"></i> Historique</h3>
 <div class="ues-histo-text mt-3">
-<img alt="Ville de Gap" class="ues-histo-float-img" loading="lazy" src="images/img_gap.jpg"/>
+<img alt="Ville de Gap" class="ues-histo-float-img" loading="lazy" src="images/img_gap.jpg" width="465" height="131"/>
 <p>
         C'est en 1989 que Serge <strong>BICHON</strong> (Professeur au Conservatoire National de Région de Lyon),
         Claude <strong>DELANGLE</strong> (Professeur au Conservatoire National Supérieur de Musique de Paris) et
@@ -427,7 +432,7 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <div class="col-12 col-sm-6 col-lg-3">
 <div class="card ues-person h-100">
 <div class="card-body">
-<img alt="Claude Delangle" class="ues-person__img" src="images/Delangle.jpg"/>
+<img alt="Claude Delangle" class="ues-person__img" src="images/Delangle.jpg" width="166" height="221" loading="lazy"/>
 <h3 class="h6 mb-1">Claude Delangle</h3>
 <p class="ues-person__role mb-3">Directeur artistique · Professeur au CNSMDP</p>
 <ul class="ues-person__bullets mb-3">
@@ -442,7 +447,7 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <div class="col-12 col-sm-6 col-lg-3">
 <div class="card ues-person h-100">
 <div class="card-body">
-<img alt="Nicolas Arsenijevic" class="ues-person__img" src="images/arsenijevic.jpg"/>
+<img alt="Nicolas Arsenijevic" class="ues-person__img" src="images/arsenijevic.jpg" width="747" height="630" loading="lazy"/>
 <h3 class="h6 mb-1">Nicolas Arsenijevic</h3>
 <p class="ues-person__role mb-3">Saxophoniste · Enseignant</p>
 <ul class="ues-person__bullets mb-3">
@@ -457,7 +462,7 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <div class="col-12 col-sm-6 col-lg-3">
 <div class="card ues-person h-100">
 <div class="card-body">
-<img alt="Joonatan Rautiola" class="ues-person__img" src="images/rautolia_j.jpg"/>
+<img alt="Joonatan Rautiola" class="ues-person__img" src="images/rautolia_j.jpg" width="747" height="630" loading="lazy"/>
 <h3 class="h6 mb-1">Joonatan Rautiola</h3>
 <p class="ues-person__role mb-3">Saxophoniste · Sibelius Academy</p>
 <ul class="ues-person__bullets mb-3">
@@ -472,7 +477,7 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <div class="col-12 col-sm-6 col-lg-3">
 <div class="card ues-person h-100">
 <div class="card-body">
-<img alt="Philippe Braquart" class="ues-person__img" src="images/braquart_cv.jpg"/>
+<img alt="Philippe Braquart" class="ues-person__img" src="images/braquart_cv.jpg" width="466" height="347" loading="lazy"/>
 <h3 class="h6 mb-1">Philippe Braquart</h3>
 <p class="ues-person__role mb-3">Saxophoniste · Professeur</p>
 <ul class="ues-person__bullets mb-3">
@@ -487,7 +492,7 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <div class="col-12 col-sm-6 col-lg-3">
 <div class="card ues-person h-100">
 <div class="card-body">
-<img alt="Christian Wirth" class="ues-person__img" src="images/ChristianWirth1-60116e5fc1b8c.webp"/>
+<img alt="Christian Wirth" class="ues-person__img" src="images/ChristianWirth1-60116e5fc1b8c.webp" width="400" height="400" loading="lazy"/>
 <h3 class="h6 mb-1">Christian Wirth</h3>
 <p class="ues-person__role mb-3">Saxophoniste · Musique de chambre</p>
 <ul class="ues-person__bullets mb-3">
@@ -502,7 +507,7 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <div class="col-12 col-sm-6 col-lg-3">
 <div class="card ues-person h-100">
 <div class="card-body">
-<img alt="Mariano García" class="ues-person__img" src="images/garcia_cv.jpg"/>
+<img alt="Mariano García" class="ues-person__img" src="images/garcia_cv.jpg" width="136" height="204" loading="lazy"/>
 <h3 class="h6 mb-1">Mariano García</h3>
 <p class="ues-person__role mb-3">Saxophoniste · Professeur (Espagne)</p>
 <ul class="ues-person__bullets mb-3">
@@ -517,7 +522,7 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <div class="col-12 col-sm-6 col-lg-3">
 <div class="card ues-person h-100">
 <div class="card-body">
-<img alt="Sandro Compagnon" class="ues-person__img" src="images/compagnon_bio.jpg"/>
+<img alt="Sandro Compagnon" class="ues-person__img" src="images/compagnon_bio.jpg" width="747" height="630" loading="lazy"/>
 <h3 class="h6 mb-1">Sandro Compagnon</h3>
 <p class="ues-person__role mb-3">Saxophoniste · Soliste</p>
 <ul class="ues-person__bullets mb-3">
@@ -532,7 +537,7 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <div class="col-12 col-sm-6 col-lg-3">
 <div class="card ues-person h-100">
 <div class="card-body">
-<img alt="Miho Sumiya" class="ues-person__img" src="images/63c10b4b4d6731.png"/>
+<img alt="Miho Sumiya" class="ues-person__img" src="images/63c10b4b4d6731.png" width="364" height="364" loading="lazy"/>
 <h3 class="h6 mb-1">Miho Sumiya</h3>
 <p class="ues-person__role mb-3">Saxophoniste · Tokyo (Japon)</p>
 <ul class="ues-person__bullets mb-3">
@@ -551,7 +556,7 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <div class="col-12 col-sm-6 col-lg-3">
 <div class="card ues-person h-100">
 <div class="card-body">
-<img alt="Fumie Ito" class="ues-person__img" src="images/fumie.jpg"/>
+<img alt="Fumie Ito" class="ues-person__img" src="images/fumie.jpg" width="55" height="60" loading="lazy"/>
 <h3 class="h6 mb-1">Fumie Ito</h3>
 <p class="ues-person__role mb-3">Pianiste accompagnatrice</p>
 <ul class="ues-person__bullets mb-3">
@@ -950,35 +955,6 @@ Il a également été professeur de saxophone au CNSM de Paris de 2000 à 2004.<
     });
   });
   </script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carouselEl = document.querySelector("#uesCarousel");
-    if (!carouselEl) return;
-
-    const items = Array.from(carouselEl.querySelectorAll(".carousel-item"));
-    const buttons = Array.from(carouselEl.querySelectorAll(".ues-tabbtn"));
-
-    function setActiveButtonByIndex(activeIndex){
-      buttons.forEach(btn => btn.classList.remove("active"));
-      buttons
-        .filter(btn => Number(btn.getAttribute("data-bs-slide-to")) === activeIndex)
-        .forEach(btn => btn.classList.add("active"));
-    }
-
-    function getActiveIndex(){
-      const activeItem = carouselEl.querySelector(".carousel-item.active");
-      return Math.max(0, items.indexOf(activeItem));
-    }
-
-    // état initial
-    setActiveButtonByIndex(getActiveIndex());
-
-    // à chaque changement de slide
-    carouselEl.addEventListener("slid.bs.carousel", () => {
-      setActiveButtonByIndex(getActiveIndex());
-    });
-  });
-</script>
 
 <script id="ues-scroll-header-script">
 /* UES : au scroll -> logo sort de la navbar, revient plus petit dans la topbar + menu noir */
