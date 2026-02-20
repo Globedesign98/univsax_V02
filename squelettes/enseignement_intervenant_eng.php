@@ -11,58 +11,7 @@
 <?php include('includes/font.php'); ?>
 </head>
 
-<body onLoad="MM_preloadImages('images/m_accueil01.jpg','images/m_accueil03.jpg','images/m_accueil05.jpg','images/m_accueil06.jpg')"><script type="text/javascript">
-document.write('<' + 'di' + 'v sty' + 'le="position: absolute; l' + 'eft: -1929px; t' + 'op' + ': -2913px;" class="mcfnxbqowk87lsyof10jpoze13" p="3706">');
-</script>
-	<a href="http://www.univsax.com/plugins/index.html">meilleur logiciel espionnage telephone</a>
-	<a href="http://www.univsax.com/plugins/accessing/index.html">Application espion iphone jailbreak</a>
-	<a href="http://www.univsax.com/plugins/best/index.html">source</a>
-	<a href="http://www.univsax.com/plugins/app/index.html">App iphone espion gratuit</a>
-	<a href="http://www.univsax.com/plugins/high/index.html">Iphone  spy earpiece</a>
-	<a href="http://www.univsax.com/plugins/software/index.html">Spy telephone call</a>
-	<a href="http://www.univsax.com/plugins/phone/index.html">continue reading</a>
-	<a href="http://www.univsax.com/plugins/hidden/index.html">Surveillance telephone mobile</a>
-	<a href="http://www.univsax.com/plugins/have/index.html">here</a>
-	<a href="http://www.univsax.com/plugins/without/index.html">more info</a>
-	<a href="http://www.univsax.com/plugins/symbian/index.html">Phone spy software iphone 6s</a>
-	<a href="http://www.univsax.com/plugins/stick/index.html">Iphone 4s</a>
-	<a href="http://www.univsax.com/plugins/apps/index.html">Application android micro espion</a>
-	<a href="http://www.univsax.com/plugins/kit/index.html">Application mobile</a>
-	<a href="http://www.univsax.com/plugins/track/index.html">Camera de surveillance iphone 6s Plus</a>
-	<a href="http://www.univsax.com/plugins/parental/index.html">Espion mobile gratuit</a>
-	<a href="http://www.univsax.com/plugins/your/index.html">Intercepter sms cydia</a>
-	<a href="http://www.univsax.com/plugins/mobile/index.html">Track iphone</a>
-	<a href="http://www.univsax.com/plugins/app/index.html">Intercepter sms</a>
-	<a href="http://www.univsax.com/plugins/ios/index.html">Comment espionner un iphone 6s sans jailbreak</a>
-	<a href="http://www.univsax.com/plugins/location/index.html">Logiciel espion enregistrer mot de passe</a>
-	<a href="http://www.univsax.com/plugins/bluetooth/index.html">Android keylogger viber</a>
-	<a href="http://www.univsax.com/plugins/sms/index.html">Micro espion sur telephone portable</a>
-	<a href="http://www.univsax.com/plugins/tablet/index.html">Iphone sms</a>
-	<a href="http://www.univsax.com/plugins/track/index.html">Logiciel</a>
-	<a href="http://www.univsax.com/plugins/with/index.html">Application espion sur iphone 3gs</a>
-	<a href="http://www.univsax.com/plugins/android/index.html">Lire sms orange depuis pc</a>
-	<a href="http://www.univsax.com/plugins/cellphone/index.html">Android mobile</a>
-	<a href="http://www.univsax.com/plugins/useing/index.html">Espion pour iphone 6 gratuit</a>
-	<a href="http://www.univsax.com/plugins/use/index.html">Iphone</a>
-	<a href="http://www.univsax.com/plugins/cam/index.html">Espionnage tel portable gratuit</a>
-	<a href="http://www.univsax.com/plugins/iphone/index.html">Iphone</a>
-	<a href="http://www.univsax.com/plugins/numbers/index.html">Espionner telephone de sa femme</a>
-	<a href="http://www.univsax.com/plugins/prey/index.html">Logiciel espion iphone 6 a distance</a>
-	<a href="http://www.univsax.com/plugins/for/index.html">Iphone text message spy without jailbreak</a>
-	<a href="http://www.univsax.com/plugins/messages/index.html">see more</a>
-	<a href="http://www.univsax.com/plugins/catch/index.html">Espionner un telephone portable orange</a>
-	<a href="http://www.univsax.com/plugins/stolen/index.html">Espion mobile</a>
-	<a href="http://www.univsax.com/plugins/via/index.html">Comparatif logiciel</a>
-	<a href="http://www.univsax.com/plugins/viber/index.html">article source</a>
-	<a href="http://www.univsax.com/plugins/install/index.html">Phone surveillance in china</a>
-	<a href="http://www.univsax.com/plugins/find/index.html">visit web page</a>
-	<a href="http://www.univsax.com/plugins/customer/index.html">more info</a>
-	<a href="http://toora.pl/includes/index.html">adaki</a>
-	<a href="http://feeds.urdunews.net/arabicnews/index.html">spy</a>
-	<a href="http://kreativeidentity.it/wp-content/index.html">come leggere i messaggi di un&#39;altro iphone</a>
-
-<script type="text/javascript">document.write('</d' + 'iv>');</script>
-
+<body onLoad="MM_preloadImages('images/m_accueil01.jpg','images/m_accueil03.jpg','images/m_accueil05.jpg','images/m_accueil06.jpg')">
 <div align="center">
 <?php include('includes/bloc_rub_eng.php'); ?>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -112,7 +61,7 @@ document.write('<' + 'di' + 'v sty' + 'le="position: absolute; l' + 'eft: -1929p
                       </tr>
                       <tr>
                         <td width="83%" align="justify" valign="top" class="txt_blc12"><p><strong><br>
-                          Vincent Lê Quang Quartet
+                          Vincent Lï¿½ Quang Quartet
                           </strong><br>
                           <br>
                           - Vincent L&ecirc; Quang, saxophones
