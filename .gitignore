@@ -14,3 +14,16 @@
 /squelettes-dist/
 /prive/
 /ecrire/
+
+# Fichiers générés / cache SPIP
+/tmp/cache/
+/tmp/log/
+/tmp/dump/
+tmp/cron.lock
+tmp/job_queue_next.txt
+tmp/meta_cache.php
+tmp/plugin_xml_cache.gz
+tmp/*.out
+
+# Dépendances JavaScript
+/node_modules/
