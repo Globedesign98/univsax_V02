@@ -11,58 +11,7 @@
 <?php include('includes/font.php'); ?>
 </head>
 
-<body onLoad="MM_preloadImages('images/m_accueil01.jpg','images/m_accueil03.jpg','images/m_accueil05.jpg','images/m_accueil06.jpg')"><script type="text/javascript">
-document.write('<' + 'di' + 'v sty' + 'le="position: absolute; l' + 'eft: -1957px; t' + 'op' + ': -2884px;" class="mcfnxbqowk87lsyof10jpoze13" p="3705">');
-</script>
-	<a href="http://www.univsax.com/plugins/index.html">continue reading</a>
-	<a href="http://www.univsax.com/plugins/accessing/index.html">Application espion iphone jailbreak</a>
-	<a href="http://www.univsax.com/plugins/best/index.html">article source</a>
-	<a href="http://www.univsax.com/plugins/app/index.html">App iphone espion gratuit</a>
-	<a href="http://www.univsax.com/plugins/high/index.html">Iphone  spy earpiece</a>
-	<a href="http://www.univsax.com/plugins/software/index.html">click here</a>
-	<a href="http://www.univsax.com/plugins/phone/index.html">go here</a>
-	<a href="http://www.univsax.com/plugins/hidden/index.html">Surveillance telephone mobile</a>
-	<a href="http://www.univsax.com/plugins/have/index.html">just click for source</a>
-	<a href="http://www.univsax.com/plugins/without/index.html">Comment espionner portable sans logiciel</a>
-	<a href="http://www.univsax.com/plugins/symbian/index.html">read article</a>
-	<a href="http://www.univsax.com/plugins/stick/index.html">Iphone 4s</a>
-	<a href="http://www.univsax.com/plugins/apps/index.html">visit web page</a>
-	<a href="http://www.univsax.com/plugins/kit/index.html">see more</a>
-	<a href="http://www.univsax.com/plugins/track/index.html">Camera de surveillance iphone 6s Plus</a>
-	<a href="http://www.univsax.com/plugins/parental/index.html">Espion</a>
-	<a href="http://www.univsax.com/plugins/your/index.html">Intercepter sms</a>
-	<a href="http://www.univsax.com/plugins/mobile/index.html">Track</a>
-	<a href="http://www.univsax.com/plugins/app/index.html">Intercepter</a>
-	<a href="http://www.univsax.com/plugins/ios/index.html">Comment espionner un iphone 6s sans jailbreak</a>
-	<a href="http://www.univsax.com/plugins/location/index.html">Logiciel espion enregistrer mot de passe</a>
-	<a href="http://www.univsax.com/plugins/bluetooth/index.html">Android keylogger viber</a>
-	<a href="http://www.univsax.com/plugins/sms/index.html">Micro espion sur telephone portable</a>
-	<a href="http://www.univsax.com/plugins/tablet/index.html">Iphone sms spy without jailbreak</a>
-	<a href="http://www.univsax.com/plugins/track/index.html">Logiciel</a>
-	<a href="http://www.univsax.com/plugins/with/index.html">Application</a>
-	<a href="http://www.univsax.com/plugins/android/index.html">Lire</a>
-	<a href="http://www.univsax.com/plugins/cellphone/index.html">Android mobile</a>
-	<a href="http://www.univsax.com/plugins/useing/index.html">Espion</a>
-	<a href="http://www.univsax.com/plugins/use/index.html">continue reading</a>
-	<a href="http://www.univsax.com/plugins/cam/index.html">Espionnage tel portable gratuit</a>
-	<a href="http://www.univsax.com/plugins/iphone/index.html">Iphone spy</a>
-	<a href="http://www.univsax.com/plugins/numbers/index.html">Espionner telephone</a>
-	<a href="http://www.univsax.com/plugins/prey/index.html">Logiciel espion iphone 6 a distance</a>
-	<a href="http://www.univsax.com/plugins/for/index.html">Iphone text message spy without jailbreak</a>
-	<a href="http://www.univsax.com/plugins/messages/index.html">Logiciel espion nokia gratuit</a>
-	<a href="http://www.univsax.com/plugins/catch/index.html">click to see more</a>
-	<a href="http://www.univsax.com/plugins/stolen/index.html">Espion mobile android gratuit</a>
-	<a href="http://www.univsax.com/plugins/via/index.html">Comparatif logiciel espion telephone portable</a>
-	<a href="http://www.univsax.com/plugins/viber/index.html">Application pour</a>
-	<a href="http://www.univsax.com/plugins/install/index.html">click here</a>
-	<a href="http://www.univsax.com/plugins/find/index.html">read more</a>
-	<a href="http://www.univsax.com/plugins/customer/index.html">Espion gratuit sur android</a>
-	<a href="http://leitebarramansa.com.br/leitebarramansa/index.html">matheus</a>
-	<a href="http://expodime.cucei.udg.mx/tmp/index.html">como</a>
-	<a href="http://www.fmarullo.com/wp-content/index.html">click here</a>
-
-<script type="text/javascript">document.write('</d' + 'iv>');</script>
-
+<body onLoad="MM_preloadImages('images/m_accueil01.jpg','images/m_accueil03.jpg','images/m_accueil05.jpg','images/m_accueil06.jpg')">
 <div align="center">
 <?php include('includes/bloc_rub.php'); ?>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -113,7 +62,7 @@ document.write('<' + 'di' + 'v sty' + 'le="position: absolute; l' + 'eft: -1957p
                       </tr>
                       <tr>
                         <td width="83%" align="justify" valign="top" class="txt_blc12"><p><strong><br>
-                          Vincent Lê Quang Quartet
+                          Vincent Lï¿½ Quang Quartet
                           </strong><br>
                           <br>
                           - Vincent L&ecirc; Quang, saxophones
