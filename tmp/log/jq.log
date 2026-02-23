@@ -1,0 +1,783 @@
+2026-02-01 23:13:22 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-01 23:13:22 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769984002 / 1769984017
+2026-02-01 23:13:22 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769984002
+2026-02-01 23:13:22 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769984002
+2026-02-01 23:13:23 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769984003
+2026-02-01 23:13:23 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769984003
+2026-02-01 23:13:23 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769984003
+2026-02-01 23:13:23 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769984003
+2026-02-01 23:13:25 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-01 23:13:25 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769984005 / 1769984020
+2026-02-01 23:13:25 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769984005
+2026-02-01 23:13:25 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769984005
+2026-02-01 23:25:56 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-01 23:25:56 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769984756 / 1769984771
+2026-02-01 23:25:56 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769984756
+2026-02-01 23:25:56 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769984756
+2026-02-01 23:25:56 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769984756
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769986535 / 1769986550
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769986535
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769986535
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769986535
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769986535
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769986535 / 1769986550
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769986535
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769986535
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-02 00:12:14 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 00:12:14 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769987534 / 1769987549
+2026-02-02 00:12:14 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769987534
+2026-02-02 00:12:14 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769987534
+2026-02-02 00:12:14 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769987534
+2026-02-02 00:27:51 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 00:27:51 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769988471 / 1769988486
+2026-02-02 00:27:51 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769988471
+2026-02-02 00:27:51 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769988471
+2026-02-02 00:27:51 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769988471
+2026-02-02 00:43:09 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 00:43:09 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769989389 / 1769989404
+2026-02-02 00:43:09 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769989389
+2026-02-02 00:43:09 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769989389
+2026-02-02 00:43:09 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769989389
+2026-02-02 00:58:14 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 00:58:14 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769990294 / 1769990309
+2026-02-02 00:58:14 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769990294
+2026-02-02 00:58:14 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769990294
+2026-02-02 00:58:14 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769990294
+2026-02-02 01:29:01 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 01:29:01 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769992141 / 1769992156
+2026-02-02 01:29:01 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769992141
+2026-02-02 01:29:01 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769992141
+2026-02-02 01:29:01 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769992141
+2026-02-02 01:29:01 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 01:29:01 127.0.0.1 (pid 16880) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-02 01:47:11 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 01:47:11 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769993231 / 1769993246
+2026-02-02 01:47:11 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769993231
+2026-02-02 01:47:11 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769993231
+2026-02-02 01:47:11 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769993231
+2026-02-02 02:01:15 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 02:01:15 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769994075 / 1769994090
+2026-02-02 02:01:15 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769994075
+2026-02-02 02:01:15 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769994075
+2026-02-02 02:01:15 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769994075
+2026-02-02 02:01:16 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 02:01:16 127.0.0.1 (pid 16880) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-02 02:04:48 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 02:04:48 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769994288 / 1769994303
+2026-02-02 02:04:48 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769994288
+2026-02-02 02:04:48 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769994288
+2026-02-02 02:04:48 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769994288
+2026-02-02 02:19:53 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 02:19:53 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769995193 / 1769995208
+2026-02-02 02:19:53 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769995193
+2026-02-02 02:19:53 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769995193
+2026-02-02 02:19:53 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769995193
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769995359 / 1769995374
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769995359
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769995359
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769995359
+2026-02-02 03:01:40 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 03:01:40 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1769997700 / 1769997715
+2026-02-02 03:01:40 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769997700
+2026-02-02 03:01:40 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1769997700
+2026-02-02 03:01:40 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1769997700
+2026-02-02 03:01:41 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 03:01:41 127.0.0.1 (pid 16880) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-02 03:49:39 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 03:49:39 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1770000579 / 1770000594
+2026-02-02 03:49:39 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770000579
+2026-02-02 03:49:39 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 03:49:39 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1770000579 / 1770000594
+2026-02-02 03:49:39 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770000579
+2026-02-02 03:49:39 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1770000579
+2026-02-02 03:49:47 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770000587
+2026-02-02 03:49:47 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770000587
+2026-02-02 03:49:47 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1770000587
+2026-02-02 03:49:48 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 03:49:48 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1770000588 / 1770000603
+2026-02-02 03:49:48 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770000588
+2026-02-02 03:49:48 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1770000588
+2026-02-02 03:49:48 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 03:49:48 127.0.0.1 (pid 16880) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-02 04:04:56 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 04:04:56 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1770001496 / 1770001511
+2026-02-02 04:04:56 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770001496
+2026-02-02 04:04:56 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770001496
+2026-02-02 04:04:56 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770001496
+2026-02-02 04:04:56 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1770001496
+2026-02-02 04:04:57 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 04:04:57 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1770001497 / 1770001512
+2026-02-02 04:04:57 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770001497
+2026-02-02 04:04:57 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1770001497
+2026-02-02 04:23:01 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 04:23:01 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1770002581 / 1770002596
+2026-02-02 04:23:01 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770002581
+2026-02-02 04:23:01 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770002581
+2026-02-02 04:23:01 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1770002581
+2026-02-02 04:41:14 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 04:41:14 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1770003674 / 1770003689
+2026-02-02 04:41:14 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770003674
+2026-02-02 04:41:14 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770003674
+2026-02-02 04:41:14 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1770003674
+2026-02-02 05:02:52 127.0.0.1 (pid 16880) :Pub:debug: cron !
+2026-02-02 05:02:52 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule 1770004972 / 1770004987
+2026-02-02 05:02:52 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770004972
+2026-02-02 05:02:52 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule job end time 1770004972
+2026-02-02 05:02:52 127.0.0.1 (pid 16880) :Pub:debug: JQ schedule end time 1770004972
+2026-02-02 05:18:00 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 05:18:00 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770005880 / 1770005895
+2026-02-02 05:18:00 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770005880
+2026-02-02 05:18:00 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770005880
+2026-02-02 05:18:00 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770005880
+2026-02-02 05:33:26 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 05:33:26 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770006806 / 1770006821
+2026-02-02 05:33:26 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770006806
+2026-02-02 05:33:26 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770006806
+2026-02-02 05:33:26 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770006806
+2026-02-02 05:48:40 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 05:48:40 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770007720 / 1770007735
+2026-02-02 05:48:41 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770007720
+2026-02-02 05:48:41 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770007720
+2026-02-02 05:48:41 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770007721
+2026-02-02 06:02:27 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 06:02:27 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770008547 / 1770008562
+2026-02-02 06:02:29 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770008549
+2026-02-02 06:02:29 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770008549
+2026-02-02 06:02:29 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770008549
+2026-02-02 06:10:23 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 06:10:23 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770009023 / 1770009038
+2026-02-02 06:10:23 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770009023
+2026-02-02 06:10:23 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770009023
+2026-02-02 06:10:23 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770009023
+2026-02-02 06:10:23 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770009023
+2026-02-02 06:10:24 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 06:10:24 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770009024 / 1770009039
+2026-02-02 06:10:24 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770009024
+2026-02-02 06:10:24 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770009024
+2026-02-02 06:10:27 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 06:10:27 127.0.0.1 (pid 19752) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-02 06:29:31 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 06:29:31 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770010171 / 1770010186
+2026-02-02 06:29:31 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770010171
+2026-02-02 06:29:31 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770010171
+2026-02-02 06:29:31 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770010171
+2026-02-02 06:45:07 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 06:45:07 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770011107 / 1770011122
+2026-02-02 06:45:07 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770011107
+2026-02-02 06:45:07 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770011107
+2026-02-02 06:45:07 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770011107
+2026-02-02 07:01:55 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 07:01:55 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770012115 / 1770012130
+2026-02-02 07:01:55 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770012115
+2026-02-02 07:01:55 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770012115
+2026-02-02 07:01:55 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770012115
+2026-02-02 07:18:16 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 07:18:16 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770013096 / 1770013111
+2026-02-02 07:18:17 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770013097
+2026-02-02 07:18:17 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770013097
+2026-02-02 07:18:17 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770013097
+2026-02-02 07:34:20 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 07:34:20 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770014060 / 1770014075
+2026-02-02 07:34:20 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770014060
+2026-02-02 07:34:20 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770014060
+2026-02-02 07:34:20 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770014060
+2026-02-02 07:50:09 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 07:50:09 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770015009 / 1770015024
+2026-02-02 07:50:09 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770015009
+2026-02-02 07:50:09 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770015009
+2026-02-02 07:50:09 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770015009
+2026-02-02 08:08:28 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 08:08:28 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770016108 / 1770016123
+2026-02-02 08:08:28 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770016108
+2026-02-02 08:08:28 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770016108
+2026-02-02 08:08:28 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770016108
+2026-02-02 08:10:35 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 08:10:35 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770016235 / 1770016250
+2026-02-02 08:10:35 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770016235
+2026-02-02 08:10:35 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770016235
+2026-02-02 08:10:35 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770016235
+2026-02-02 08:24:28 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 08:24:28 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770017068 / 1770017083
+2026-02-02 08:24:28 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770017068
+2026-02-02 08:24:28 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770017068
+2026-02-02 08:24:28 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770017068
+2026-02-02 08:41:53 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 08:41:53 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770018113 / 1770018128
+2026-02-02 08:41:53 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770018113
+2026-02-02 08:41:53 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770018113
+2026-02-02 08:41:53 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770018113
+2026-02-02 09:02:55 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 09:02:55 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770019375 / 1770019390
+2026-02-02 09:02:55 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770019375
+2026-02-02 09:02:55 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770019375
+2026-02-02 09:02:55 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770019375
+2026-02-02 09:02:56 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 09:02:56 127.0.0.1 (pid 19752) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-02 09:18:00 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 09:18:00 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770020280 / 1770020295
+2026-02-02 09:18:00 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770020280
+2026-02-02 09:18:00 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770020280
+2026-02-02 09:18:00 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770020280
+2026-02-02 21:44:28 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 21:44:28 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770065068 / 1770065083
+2026-02-02 21:44:28 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770065068
+2026-02-02 21:44:29 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 21:44:29 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770065069 / 1770065084
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770065071
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770065071
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770065071
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770065071
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770065071
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770065071
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770065071
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770065071
+2026-02-02 21:45:04 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770065104
+2026-02-02 21:45:04 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770065104
+2026-02-02 21:45:04 127.0.0.1 (pid 19752) :Pub:debug: JQ encore !
+2026-02-02 21:45:42 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 21:45:42 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770065142 / 1770065157
+2026-02-02 21:45:42 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770065142
+2026-02-02 21:45:42 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770065142
+2026-02-02 21:45:43 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 21:45:43 127.0.0.1 (pid 19752) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-02 22:00:18 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 22:00:19 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770066019 / 1770066034
+2026-02-02 22:00:19 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770066019
+2026-02-02 22:00:19 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770066019
+2026-02-02 22:00:19 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770066019
+2026-02-02 22:18:34 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 22:18:34 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770067114 / 1770067129
+2026-02-02 22:18:34 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770067114
+2026-02-02 22:18:34 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770067114
+2026-02-02 22:18:34 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770067114
+2026-02-02 22:38:36 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 22:38:36 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770068316 / 1770068331
+2026-02-02 22:38:36 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770068316
+2026-02-02 22:38:36 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770068316
+2026-02-02 22:38:36 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770068316
+2026-02-02 22:38:36 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 22:38:36 127.0.0.1 (pid 19752) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-02 22:57:57 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 22:57:57 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770069477 / 1770069492
+2026-02-02 22:57:57 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770069477
+2026-02-02 22:57:57 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770069477
+2026-02-02 22:57:57 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770069477
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770070605 / 1770070620
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770070605
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770070605
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770070605
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770070605
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770070605
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770070605
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770070605
+2026-02-02 23:16:59 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 23:16:59 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770070619 / 1770070634
+2026-02-02 23:16:59 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770070619
+2026-02-02 23:16:59 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770070619
+2026-02-02 23:34:05 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 23:34:05 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770071645 / 1770071660
+2026-02-02 23:34:05 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770071645
+2026-02-02 23:34:05 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770071645
+2026-02-02 23:34:05 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770071645
+2026-02-02 23:44:40 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 23:44:40 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770072280 / 1770072295
+2026-02-02 23:44:40 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770072280
+2026-02-02 23:44:40 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770072280
+2026-02-02 23:44:40 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770072280
+2026-02-02 23:51:59 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-02 23:51:59 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770072719 / 1770072734
+2026-02-02 23:51:59 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770072719
+2026-02-02 23:51:59 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770072719
+2026-02-02 23:51:59 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770072719
+2026-02-03 00:08:15 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 00:08:15 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770073695 / 1770073710
+2026-02-03 00:08:15 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770073695
+2026-02-03 00:08:15 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770073695
+2026-02-03 00:08:15 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770073695
+2026-02-03 00:23:45 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 00:23:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770074625 / 1770074640
+2026-02-03 00:23:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770074625
+2026-02-03 00:23:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770074625
+2026-02-03 00:23:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770074625
+2026-02-03 00:39:08 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 00:39:08 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770075548 / 1770075563
+2026-02-03 00:39:08 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770075548
+2026-02-03 00:39:08 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770075548
+2026-02-03 00:39:08 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770075548
+2026-02-03 01:00:10 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 01:00:10 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770076810 / 1770076825
+2026-02-03 01:00:10 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770076810
+2026-02-03 01:00:10 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770076810
+2026-02-03 01:00:10 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770076810
+2026-02-03 01:00:10 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 01:00:10 127.0.0.1 (pid 19752) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-03 01:16:46 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 01:16:46 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770077806 / 1770077821
+2026-02-03 01:16:46 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770077806
+2026-02-03 01:16:46 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770077806
+2026-02-03 01:16:46 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770077806
+2026-02-03 01:37:10 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 01:37:10 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770079030 / 1770079045
+2026-02-03 01:37:11 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770079030
+2026-02-03 01:37:11 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770079030
+2026-02-03 01:37:11 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770079031
+2026-02-03 01:37:11 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 01:37:11 127.0.0.1 (pid 19752) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-03 01:45:33 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 01:45:33 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770079533 / 1770079548
+2026-02-03 01:45:33 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770079533
+2026-02-03 01:45:33 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770079533
+2026-02-03 01:45:33 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770079533
+2026-02-03 01:53:48 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 01:53:48 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770080028 / 1770080043
+2026-02-03 01:53:48 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770080028
+2026-02-03 01:53:48 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770080028
+2026-02-03 01:53:48 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770080028
+2026-02-03 02:09:45 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 02:09:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770080985 / 1770081000
+2026-02-03 02:09:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770080985
+2026-02-03 02:09:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770080985
+2026-02-03 02:09:45 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770080985
+2026-02-03 02:56:32 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 02:56:32 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770083792 / 1770083807
+2026-02-03 02:56:32 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770083792
+2026-02-03 02:56:32 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770083792
+2026-02-03 02:56:32 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770083792
+2026-02-03 02:56:33 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 02:56:33 127.0.0.1 (pid 19752) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-03 03:50:56 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 03:50:56 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770087056 / 1770087071
+2026-02-03 03:50:56 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770087056
+2026-02-03 03:50:59 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 03:50:59 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770087059 / 1770087074
+2026-02-03 03:50:59 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770087059
+2026-02-03 03:50:59 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770087059
+2026-02-03 03:50:59 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770087059
+2026-02-03 03:51:05 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770087065
+2026-02-03 03:51:05 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770087065
+2026-02-03 03:51:05 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770087065
+2026-02-03 03:51:05 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770087065
+2026-02-03 03:53:03 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 03:53:03 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770087183 / 1770087198
+2026-02-03 03:53:03 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770087183
+2026-02-03 03:53:03 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770087183
+2026-02-03 03:53:05 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 03:53:05 127.0.0.1 (pid 19752) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-03 04:06:22 127.0.0.1 (pid 19752) :Pub:debug: cron !
+2026-02-03 04:06:22 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule 1770087982 / 1770087997
+2026-02-03 04:06:22 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770087982
+2026-02-03 04:06:22 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule job end time 1770087982
+2026-02-03 04:06:22 127.0.0.1 (pid 19752) :Pub:debug: JQ schedule end time 1770087982
+2026-02-03 04:28:49 127.0.0.1 (pid 34436) :Pub:debug: cron !
+2026-02-03 04:28:49 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule 1770089329 / 1770089344
+2026-02-03 04:28:49 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770089329
+2026-02-03 04:28:49 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770089329
+2026-02-03 04:28:49 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule end time 1770089329
+2026-02-03 04:28:49 127.0.0.1 (pid 34436) :Pub:debug: cron !
+2026-02-03 04:28:49 127.0.0.1 (pid 34436) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-03 04:45:23 127.0.0.1 (pid 34436) :Pub:debug: cron !
+2026-02-03 04:45:23 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule 1770090323 / 1770090338
+2026-02-03 04:45:23 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770090323
+2026-02-03 04:45:23 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770090323
+2026-02-03 04:45:23 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule end time 1770090323
+2026-02-03 05:00:29 127.0.0.1 (pid 34436) :Pub:debug: cron !
+2026-02-03 05:00:29 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule 1770091229 / 1770091244
+2026-02-03 05:00:29 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770091229
+2026-02-03 05:00:29 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770091229
+2026-02-03 05:00:29 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule end time 1770091229
+2026-02-03 05:28:37 127.0.0.1 (pid 34436) :Pub:debug: cron !
+2026-02-03 05:28:37 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule 1770092917 / 1770092932
+2026-02-03 05:28:37 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770092917
+2026-02-03 05:28:37 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770092917
+2026-02-03 05:28:37 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule end time 1770092917
+2026-02-03 05:28:38 127.0.0.1 (pid 34436) :Pub:debug: cron !
+2026-02-03 05:28:38 127.0.0.1 (pid 34436) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-03 05:49:17 127.0.0.1 (pid 34436) :Pub:debug: cron !
+2026-02-03 05:49:17 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule 1770094157 / 1770094172
+2026-02-03 05:49:17 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770094157
+2026-02-03 05:49:17 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770094157
+2026-02-03 05:49:17 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule end time 1770094157
+2026-02-03 05:49:18 127.0.0.1 (pid 34436) :Pub:debug: cron !
+2026-02-03 05:49:18 127.0.0.1 (pid 34436) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-03 05:51:46 127.0.0.1 (pid 34436) :Pub:debug: cron !
+2026-02-03 05:51:46 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule 1770094306 / 1770094321
+2026-02-03 05:51:46 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770094306
+2026-02-03 05:51:46 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770094306
+2026-02-03 05:51:46 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule end time 1770094306
+2026-02-03 06:07:02 127.0.0.1 (pid 34436) :Pub:debug: cron !
+2026-02-03 06:07:02 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule 1770095222 / 1770095237
+2026-02-03 06:07:03 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770095222
+2026-02-03 06:07:03 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770095222
+2026-02-03 06:07:03 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule end time 1770095223
+2026-02-03 06:22:05 127.0.0.1 (pid 34436) :Pub:debug: cron !
+2026-02-03 06:22:05 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule 1770096125 / 1770096140
+2026-02-03 06:22:05 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770096125
+2026-02-03 06:22:05 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770096125
+2026-02-03 06:22:05 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule end time 1770096125
+2026-02-03 06:37:36 127.0.0.1 (pid 34436) :Pub:debug: cron !
+2026-02-03 06:37:36 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule 1770097056 / 1770097071
+2026-02-03 06:37:36 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770097056
+2026-02-03 06:37:36 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule job end time 1770097056
+2026-02-03 06:37:36 127.0.0.1 (pid 34436) :Pub:debug: JQ schedule end time 1770097056
+2026-02-03 06:53:05 127.0.0.1 (pid 27436) :Pub:debug: cron !
+2026-02-03 06:53:05 127.0.0.1 (pid 27436) :Pub:debug: JQ schedule 1770097985 / 1770098000
+2026-02-03 06:53:06 127.0.0.1 (pid 27436) :Pub:debug: JQ schedule job end time 1770097985
+2026-02-03 06:53:06 127.0.0.1 (pid 27436) :Pub:debug: JQ schedule job end time 1770097985
+2026-02-03 06:53:06 127.0.0.1 (pid 27436) :Pub:debug: JQ schedule end time 1770097986
+2026-02-03 07:08:18 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 07:08:18 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770098898 / 1770098913
+2026-02-03 07:08:18 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770098898
+2026-02-03 07:08:18 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770098898
+2026-02-03 07:08:18 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770098898
+2026-02-03 07:23:27 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 07:23:27 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770099807 / 1770099822
+2026-02-03 07:23:27 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770099807
+2026-02-03 07:23:27 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770099807
+2026-02-03 07:23:27 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770099807
+2026-02-03 07:42:06 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 07:42:06 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770100926 / 1770100941
+2026-02-03 07:42:06 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770100926
+2026-02-03 07:42:06 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770100926
+2026-02-03 07:42:06 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770100926
+2026-02-03 07:53:48 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 07:53:48 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770101628 / 1770101643
+2026-02-03 07:53:48 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770101628
+2026-02-03 07:53:48 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770101628
+2026-02-03 07:53:48 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770101628
+2026-02-03 07:59:18 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 07:59:18 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770101958 / 1770101973
+2026-02-03 07:59:18 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770101958
+2026-02-03 07:59:18 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770101958
+2026-02-03 07:59:18 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770101958
+2026-02-03 08:16:15 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 08:16:15 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770102975 / 1770102990
+2026-02-03 08:16:15 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770102975
+2026-02-03 08:16:15 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770102975
+2026-02-03 08:16:15 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770102975
+2026-02-03 08:35:01 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 08:35:01 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770104101 / 1770104116
+2026-02-03 08:35:01 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770104101
+2026-02-03 08:35:01 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770104101
+2026-02-03 08:35:01 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770104101
+2026-02-03 08:51:07 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 08:51:07 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770105067 / 1770105082
+2026-02-03 08:51:07 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770105067
+2026-02-03 08:51:07 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770105067
+2026-02-03 08:51:07 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770105067
+2026-02-03 09:06:33 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 09:06:33 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770105993 / 1770106008
+2026-02-03 09:06:34 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770105993
+2026-02-03 09:06:34 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770105993
+2026-02-03 09:06:34 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770105994
+2026-02-03 21:32:58 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 21:32:58 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770150778 / 1770150793
+2026-02-03 21:32:58 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770150778
+2026-02-03 21:32:59 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 21:32:59 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770150779 / 1770150794
+2026-02-03 21:32:59 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770150779
+2026-02-03 21:32:59 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770150779
+2026-02-03 21:32:59 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770150779
+2026-02-03 21:32:59 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770150779
+2026-02-03 21:33:41 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 21:33:41 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770150821 / 1770150836
+2026-02-03 21:33:41 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770150821
+2026-02-03 21:33:41 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770150821
+2026-02-03 21:33:59 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770150839
+2026-02-03 21:33:59 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770150839
+2026-02-03 21:33:59 127.0.0.1 (pid 13600) :Pub:debug: JQ encore !
+2026-02-03 21:37:48 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 21:37:48 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770151068 / 1770151083
+2026-02-03 21:37:48 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770151068
+2026-02-03 21:37:48 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770151068
+2026-02-03 21:49:58 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 21:49:58 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770151798 / 1770151813
+2026-02-03 21:49:58 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770151798
+2026-02-03 21:49:58 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770151798
+2026-02-03 21:49:58 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770151798
+2026-02-03 22:13:50 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 22:13:50 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770153230 / 1770153245
+2026-02-03 22:13:50 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770153230
+2026-02-03 22:13:50 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770153230
+2026-02-03 22:13:50 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770153230
+2026-02-03 22:13:50 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 22:13:50 127.0.0.1 (pid 13600) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-03 22:30:14 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-03 22:30:14 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770154214 / 1770154229
+2026-02-03 22:30:14 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770154214
+2026-02-03 22:30:14 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770154214
+2026-02-03 22:30:14 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770154214
+2026-02-04 00:15:12 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 00:15:12 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770160512 / 1770160527
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770160512
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770160513
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770160513
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770160513
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770160513
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770160513 / 1770160528
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770160513
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770160513
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770160513
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770160513
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770160513
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770160513 / 1770160528
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770160513
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770160513
+2026-02-04 00:46:21 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 00:46:21 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770162381 / 1770162396
+2026-02-04 00:46:21 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770162381
+2026-02-04 00:46:21 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770162381
+2026-02-04 00:46:21 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770162381
+2026-02-04 00:46:22 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 00:46:22 127.0.0.1 (pid 13600) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-04 01:01:42 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 01:01:42 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770163302 / 1770163317
+2026-02-04 01:01:42 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770163302
+2026-02-04 01:01:42 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770163302
+2026-02-04 01:01:42 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770163302
+2026-02-04 01:19:06 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 01:19:06 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770164346 / 1770164361
+2026-02-04 01:19:06 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770164346
+2026-02-04 01:19:06 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770164346
+2026-02-04 01:19:06 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770164346
+2026-02-04 02:59:30 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770170371 / 1770170386
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770170371
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770170371
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770170371
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770170371
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770170371 / 1770170386
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770170371
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770170371
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-04 03:34:55 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 03:34:55 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770172495 / 1770172510
+2026-02-04 03:34:55 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770172495
+2026-02-04 03:34:56 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 03:34:56 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770172496 / 1770172511
+2026-02-04 03:34:56 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770172496
+2026-02-04 03:34:56 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770172496
+2026-02-04 03:35:00 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770172500
+2026-02-04 03:35:00 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770172500
+2026-02-04 03:35:00 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770172500
+2026-02-04 03:41:34 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 03:41:34 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770172894 / 1770172909
+2026-02-04 03:41:34 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770172894
+2026-02-04 03:41:34 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770172894
+2026-02-04 03:41:34 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 03:41:34 127.0.0.1 (pid 13600) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-04 03:50:56 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 03:50:56 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770173456 / 1770173471
+2026-02-04 03:50:56 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770173456
+2026-02-04 03:50:56 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770173456
+2026-02-04 03:50:56 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770173456
+2026-02-04 04:07:24 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 04:07:24 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770174444 / 1770174459
+2026-02-04 04:07:24 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770174444
+2026-02-04 04:07:24 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770174444
+2026-02-04 04:07:24 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770174444
+2026-02-04 04:25:07 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 04:25:07 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770175507 / 1770175522
+2026-02-04 04:25:07 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770175507
+2026-02-04 04:25:07 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770175507
+2026-02-04 04:25:07 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770175507
+2026-02-04 04:40:58 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 04:40:58 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770176458 / 1770176473
+2026-02-04 04:40:58 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770176458
+2026-02-04 04:40:58 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770176458
+2026-02-04 04:40:58 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770176458
+2026-02-04 05:00:42 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 05:00:42 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770177642 / 1770177657
+2026-02-04 05:00:42 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770177642
+2026-02-04 05:00:42 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770177642
+2026-02-04 05:00:42 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770177642
+2026-02-04 05:00:42 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770177642
+2026-02-04 05:01:30 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 05:01:30 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770177690 / 1770177705
+2026-02-04 05:01:30 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770177690
+2026-02-04 05:01:30 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770177690
+2026-02-04 05:21:24 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 05:21:24 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770178884 / 1770178899
+2026-02-04 05:21:24 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770178884
+2026-02-04 05:21:24 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770178884
+2026-02-04 05:21:24 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770178884
+2026-02-04 05:21:24 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 05:21:24 127.0.0.1 (pid 13600) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770179811 / 1770179826
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770179811
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770179812
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770179812
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770179812
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770179812 / 1770179827
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770179812
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770179812
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-04 06:06:22 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 06:06:22 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770181582 / 1770181597
+2026-02-04 06:06:22 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770181582
+2026-02-04 06:06:22 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770181582
+2026-02-04 06:06:22 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770181582
+2026-02-04 06:06:32 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 06:06:32 127.0.0.1 (pid 13600) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-04 06:23:59 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 06:23:59 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770182639 / 1770182654
+2026-02-04 06:23:59 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770182639
+2026-02-04 06:23:59 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770182639
+2026-02-04 06:23:59 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770182639
+2026-02-04 06:39:11 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 06:39:11 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770183551 / 1770183566
+2026-02-04 06:39:12 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770183551
+2026-02-04 06:39:12 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770183551
+2026-02-04 06:39:12 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770183552
+2026-02-04 06:54:56 127.0.0.1 (pid 13600) :Pub:debug: cron !
+2026-02-04 06:54:56 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule 1770184496 / 1770184511
+2026-02-04 06:54:56 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770184496
+2026-02-04 06:54:56 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule job end time 1770184496
+2026-02-04 06:54:56 127.0.0.1 (pid 13600) :Pub:debug: JQ schedule end time 1770184496
+2026-02-04 07:52:42 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 07:52:42 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770187962 / 1770187977
+2026-02-04 07:52:42 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770187962
+2026-02-04 07:52:42 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770187962
+2026-02-04 07:52:42 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770187962
+2026-02-04 07:52:42 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770187962
+2026-02-04 07:52:45 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 07:52:45 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770187965 / 1770187980
+2026-02-04 07:52:45 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770187965
+2026-02-04 07:52:45 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770187965
+2026-02-04 08:08:53 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 08:08:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770188933 / 1770188948
+2026-02-04 08:08:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770188933
+2026-02-04 08:08:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770188933
+2026-02-04 08:08:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770188933
+2026-02-04 08:28:52 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 08:28:52 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770190132 / 1770190147
+2026-02-04 08:28:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770190132
+2026-02-04 08:28:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770190132
+2026-02-04 08:28:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770190133
+2026-02-04 08:48:10 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 08:48:10 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770191290 / 1770191305
+2026-02-04 08:48:10 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770191290
+2026-02-04 08:48:10 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770191290
+2026-02-04 08:48:10 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770191290
+2026-02-04 09:13:17 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 09:13:17 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770192797 / 1770192812
+2026-02-04 09:13:18 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770192797
+2026-02-04 09:13:18 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770192797
+2026-02-04 09:13:18 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770192798
+2026-02-04 09:13:18 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 09:13:18 127.0.0.1 (pid 5332) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-04 22:43:46 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 22:43:46 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770241426 / 1770241441
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770241426
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770241427 / 1770241442
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770241427
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770241427
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770241427
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770241427
+2026-02-04 22:43:48 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 22:43:48 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770241428 / 1770241443
+2026-02-04 22:43:48 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770241428
+2026-02-04 22:43:48 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770241428
+2026-02-04 22:45:00 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770241500
+2026-02-04 22:45:00 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770241500
+2026-02-04 22:45:00 127.0.0.1 (pid 5332) :Pub:debug: JQ encore !
+2026-02-04 22:52:02 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 22:52:02 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770241922 / 1770241937
+2026-02-04 22:52:02 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770241922
+2026-02-04 22:52:02 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770241922
+2026-02-04 22:52:03 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 22:52:03 127.0.0.1 (pid 5332) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-04 23:04:18 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 23:04:18 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770242658 / 1770242673
+2026-02-04 23:04:18 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770242658
+2026-02-04 23:04:18 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770242658
+2026-02-04 23:04:18 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770242658
+2026-02-04 23:04:20 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 23:04:20 127.0.0.1 (pid 5332) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-04 23:20:05 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 23:20:05 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770243605 / 1770243620
+2026-02-04 23:20:05 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770243605
+2026-02-04 23:20:05 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770243605
+2026-02-04 23:20:05 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770243605
+2026-02-04 23:35:25 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 23:35:25 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770244525 / 1770244540
+2026-02-04 23:35:25 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770244525
+2026-02-04 23:35:25 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770244525
+2026-02-04 23:35:25 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770244525
+2026-02-04 23:50:42 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-04 23:50:42 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770245442 / 1770245457
+2026-02-04 23:50:42 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770245442
+2026-02-04 23:50:42 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770245442
+2026-02-04 23:50:42 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770245442
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770246933 / 1770246948
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770246933
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770246933
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770246933
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770246933
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770246933
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770246933
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770246933
+2026-02-05 00:15:36 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 00:15:36 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770246936 / 1770246951
+2026-02-05 00:15:36 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770246936
+2026-02-05 00:15:36 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770246936
+2026-02-05 00:49:16 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 00:49:16 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770248956 / 1770248971
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770248957
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770248957
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770248957
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770248957
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770248957 / 1770248972
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770248957
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770248957
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-05 01:06:20 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 01:06:20 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770249980 / 1770249995
+2026-02-05 01:06:20 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770249980
+2026-02-05 01:06:20 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770249980
+2026-02-05 01:06:20 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770249980
+2026-02-05 01:24:40 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 01:24:40 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770251080 / 1770251095
+2026-02-05 01:24:40 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770251080
+2026-02-05 01:24:40 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770251080
+2026-02-05 01:24:40 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770251080
+2026-02-05 03:05:52 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 03:05:52 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770257152 / 1770257167
+2026-02-05 03:05:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770257152
+2026-02-05 03:05:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770257153
+2026-02-05 03:05:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770257153
+2026-02-05 03:05:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770257153
+2026-02-05 03:05:53 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 03:05:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770257153 / 1770257168
+2026-02-05 03:05:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770257153
+2026-02-05 03:05:53 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770257153
+2026-02-05 03:06:05 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 03:06:05 127.0.0.1 (pid 5332) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-05 04:12:15 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 04:12:15 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770261135 / 1770261150
+2026-02-05 04:12:15 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770261135
+2026-02-05 04:12:15 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770261135
+2026-02-05 04:12:15 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770261135
+2026-02-05 04:12:16 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 04:12:16 127.0.0.1 (pid 5332) :Pub:debug: queue_sleep_time_to_next_job
+2026-02-05 04:30:24 127.0.0.1 (pid 5332) :Pub:debug: cron !
+2026-02-05 04:30:24 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule 1770262224 / 1770262239
+2026-02-05 04:30:24 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770262224
+2026-02-05 04:30:24 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule job end time 1770262224
+2026-02-05 04:30:24 127.0.0.1 (pid 5332) :Pub:debug: JQ schedule end time 1770262224

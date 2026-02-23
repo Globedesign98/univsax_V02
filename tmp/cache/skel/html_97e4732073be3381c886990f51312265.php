@@ -2,160 +2,13 @@
 
 /*
  * Squelette : squelettes/sommaire.html
- * Date :      Thu, 29 Jan 2026 23:12:04 GMT
- * Compile :   Thu, 29 Jan 2026 23:13:39 GMT
- * Boucles :   _nav, _serv3
+ * Date :      Wed, 18 Feb 2026 05:36:08 GMT
+ * Compile :   Thu, 19 Feb 2026 00:52:37 GMT
+ * Boucles :   
  */ 
-
-function BOUCLE_navhtml_97e4732073be3381c886990f51312265(&$Cache, &$Pile, &$doublons, &$Numrows, $SP) {
-
-	static $command = array();
-	static $connect;
-	$command['connect'] = $connect = '';
-	if (!isset($command['table'])) {
-		$command['table'] = 'rubriques';
-		$command['id'] = '_nav';
-		$command['from'] = array('rubriques' => 'spip_rubriques');
-		$command['type'] = array();
-		$command['groupby'] = array();
-		$command['select'] = array("0+rubriques.titre AS num",
-		"CASE ( 0+rubriques.titre ) WHEN 0 THEN 1 ELSE 0 END AS sinum",
-		"rubriques.titre",
-		"rubriques.id_rubrique",
-		"rubriques.lang");
-		$command['orderby'] = array('sinum, num', 'rubriques.titre');
-		$command['where'] = 
-			array(
-quete_condition_statut('rubriques.statut','!','publie',''), 
-			array('=', 'rubriques.id_parent', 0));
-		$command['join'] = array();
-		$command['limit'] = '';
-		$command['having'] = 
-			array();
-	}
-	if (defined("_BOUCLE_PROFILER")) $timer = time()+(float)microtime();
-	$t0 = "";
-	// REQUETE
-	$iter = Spip\Compilateur\Iterateur\Factory::create(
-		"SQL",
-		$command,
-		array('squelettes/sommaire.html','html_97e4732073be3381c886990f51312265','_nav',832,$GLOBALS['spip_lang'])
-	);
-	if (!$iter->err()) {
-	
-	// COMPTEUR
-	$Numrows['_nav']['compteur_boucle'] = 0;
-	$Numrows['_nav']['command'] = $command;
-	$Numrows['_nav']['total'] = @intval($iter->count());
-	lang_select($GLOBALS['spip_lang']);
-	$SP++;
-	// RESULTATS
-	while ($Pile[$SP]=$iter->fetch()) {
-
-		$Numrows['_nav']['compteur_boucle']++;
-		lang_select_public($Pile[$SP]['lang'], '', $Pile[$SP]['titre']);
-		$t0 .= (
-'
-                      <li class="nav-item' .
-(($t1 = strval(retablir_echappements_modeles((calcul_exposer($Pile[$SP]['id_rubrique'], 'id_rubrique', $Pile[0], 0, 'id_rubrique', '') ? 'on' : ''))))!=='' ?
-		(' ' . $t1) :
-		'') .
-(($t1 = strval(retablir_echappements_modeles((((($Numrows['_nav']['compteur_boucle'] ?? 0) == '1')) ?' ' :''))))!=='' ?
-		(' ' . $t1 . 'first') :
-		'') .
-(($t1 = strval(retablir_echappements_modeles((((($Numrows['_nav']['compteur_boucle'] ?? 0) == (($Numrows['_nav']['total'] ?? 0)))) ?' ' :''))))!=='' ?
-		(' ' . $t1 . 'last') :
-		'') .
-'">
-                        <a href="' .
-retablir_echappements_modeles(vider_url(urlencode_1738(generer_objet_url($Pile[$SP]['id_rubrique'], 'rubrique', '', '', true)))) .
-'">' .
-retablir_echappements_modeles(interdire_scripts(supprimer_numero(typo($Pile[$SP]['titre'], "TYPO", $connect, $Pile[0])))) .
-'</a>
-                      </li>
-                    ');
-		lang_select();
-	}
-	lang_select();
-	$iter->free();
-	}
-	if (defined("_BOUCLE_PROFILER")
-	AND 1000*($timer = (time()+(float)microtime())-$timer) > _BOUCLE_PROFILER)
-		spip_log(intval(1000*$timer)."ms BOUCLE_nav @ squelettes/sommaire.html","profiler"._LOG_AVERTISSEMENT);
-	return $t0;
-}
-
-
-function BOUCLE_serv3html_97e4732073be3381c886990f51312265(&$Cache, &$Pile, &$doublons, &$Numrows, $SP) {
-
-	static $command = array();
-	static $connect;
-	$command['connect'] = $connect = '';
-	if (!isset($command['table'])) {
-		$command['table'] = 'articles';
-		$command['id'] = '_serv3';
-		$command['from'] = array('articles' => 'spip_articles');
-		$command['type'] = array();
-		$command['groupby'] = array();
-		$command['select'] = array("articles.date",
-		"articles.id_article",
-		"articles.titre",
-		"articles.lang");
-		$command['orderby'] = array('articles.date DESC');
-		$command['where'] = 
-			array(
-quete_condition_statut('articles.statut','publie,prop,prepa/auteur','publie',''), 
-quete_condition_postdates('articles.date',''), 
-			array('=', 'articles.id_rubrique', "2"));
-		$command['join'] = array();
-		$command['limit'] = '0,10';
-		$command['having'] = 
-			array();
-	}
-	if (defined("_BOUCLE_PROFILER")) $timer = time()+(float)microtime();
-	$t0 = "";
-	// REQUETE
-	$iter = Spip\Compilateur\Iterateur\Factory::create(
-		"SQL",
-		$command,
-		array('squelettes/sommaire.html','html_97e4732073be3381c886990f51312265','_serv3',847,$GLOBALS['spip_lang'])
-	);
-	if (!$iter->err()) {
-	lang_select($GLOBALS['spip_lang']);
-	$SP++;
-	// RESULTATS
-	while ($Pile[$SP]=$iter->fetch()) {
-
-		lang_select_public($Pile[$SP]['lang'], '', $Pile[$SP]['titre']);
-		$t0 .= (
-'
-                    <li class="puce">
-                      <a href="' .
-retablir_echappements_modeles(vider_url(urlencode_1738(generer_objet_url($Pile[$SP]['id_article'], 'article', '', '', true)))) .
-'">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16" aria-hidden="true">
-                          <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm4 0v6h8V1zm8 8H4v6h8zM1 1v2h2V1zm2 3H1v2h2zM1 7v2h2V7zm2 3H1v2h2zm-2 3v2h2v-2zM15 1h-2v2h2zm-2 3v2h2V4zm2 3h-2v2h2zm-2 3v2h2v-2zm2 3h-2v2h2z"/>
-                        </svg>
-                        ' .
-retablir_echappements_modeles(interdire_scripts(supprimer_numero(typo($Pile[$SP]['titre'], "TYPO", $connect, $Pile[0])))) .
-'
-                      </a>
-                    </li>
-                  ');
-		lang_select();
-	}
-	lang_select();
-	$iter->free();
-	}
-	if (defined("_BOUCLE_PROFILER")
-	AND 1000*($timer = (time()+(float)microtime())-$timer) > _BOUCLE_PROFILER)
-		spip_log(intval(1000*$timer)."ms BOUCLE_serv3 @ squelettes/sommaire.html","profiler"._LOG_AVERTISSEMENT);
-	return $t0;
-}
-
 //
 // Fonction principale du squelette squelettes/sommaire.html
-// Temps de compilation total: 11.162 ms
+// Temps de compilation total: 2.375 ms
 //
 
 function html_97e4732073be3381c886990f51312265($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {
@@ -166,21 +19,45 @@ function html_97e4732073be3381c886990f51312265($Cache, $Pile, $doublons = array(
 	$connect = '';
 	$page = (
 '<!DOCTYPE html>
-
-<html lang="fr">
+<html lang="fr-FR" dir="ltr">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>' .
-retablir_echappements_modeles(interdire_scripts(typo($GLOBALS['meta']['nom_site'], "TYPO", $connect, $Pile[0]))) .
-' — ' .
-retablir_echappements_modeles(interdire_scripts(typo($GLOBALS['meta']['slogan_site'], "TYPO", $connect, $Pile[0]))) .
-'</title>
-<meta content="' .
-retablir_echappements_modeles(interdire_scripts(textebrut(propre($GLOBALS['meta']['descriptif_site'], $connect, $Pile[0])))) .
-'" name="description"/>
-<meta content="saxophone, université, gap, musique, stage, france" name="keywords"/>
-<link href="assets/img/favicon.png" rel="icon"/>
+<title>Stage de saxophone à Gap (France) | UES 2026</title>
+<meta name="description" content="Stage de musique en saxophone à Gap (Hautes‑Alpes), du 13 au 23 juillet 2026 : cours, masterclasses, ensembles et concerts. Accueil étudiants internationaux. Inscriptions ouvertes."/>
+<meta name="keywords" content="stage de saxophone, stage musique, masterclass saxophone, cours saxophone, Université Européenne de Saxophone, Gap, Hautes-Alpes, France, étudiants internationaux"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<link rel="canonical" href="' .
+retablir_echappements_modeles(interdire_scripts(url_absolue(generer_url_public('sommaire', '')))) .
+'"/>
+<link rel="alternate" hreflang="fr" href="' .
+retablir_echappements_modeles(interdire_scripts(url_absolue(generer_url_public('sommaire', '')))) .
+'"/>
+<link rel="alternate" hreflang="en" href="' .
+retablir_echappements_modeles(interdire_scripts(url_absolue(generer_url_public('sommaire_eng', '')))) .
+'"/>
+<link rel="alternate" hreflang="x-default" href="' .
+retablir_echappements_modeles(interdire_scripts(url_absolue(generer_url_public('sommaire', '')))) .
+'"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:title" content="Stage de saxophone à Gap (France) | UES 2026"/>
+<meta property="og:description" content="Stage de musique en saxophone à Gap (Hautes‑Alpes), du 13 au 23 juillet 2026 : cours, masterclasses, ensembles et concerts. Accueil étudiants internationaux. Inscriptions ouvertes."/>
+<meta property="og:url" content="' .
+retablir_echappements_modeles(interdire_scripts(url_absolue(generer_url_public('sommaire', '')))) .
+'"/>
+<meta property="og:image" content="' .
+retablir_echappements_modeles(url_absolue(spip_htmlspecialchars(sinon($GLOBALS['meta']['adresse_site'],'.')))) .
+'assets/img/ues/affiche-2026.jpg"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Stage de saxophone à Gap (France) | UES 2026"/>
+<meta name="twitter:description" content="Stage de musique en saxophone à Gap (Hautes‑Alpes), du 13 au 23 juillet 2026 : cours, masterclasses, ensembles et concerts. Étudiants internationaux bienvenus."/>
+<meta name="twitter:image" content="' .
+retablir_echappements_modeles(url_absolue(spip_htmlspecialchars(sinon($GLOBALS['meta']['adresse_site'],'.')))) .
+'assets/img/ues/affiche-2026.jpg"/>
+<link href="assets/img/favicon.ico" rel="icon"/>
 <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -282,20 +159,242 @@ retablir_echappements_modeles('<'.'?php header("X-Spip-Filtre: insert_head_css_c
     --ues-logo-small: 80px;
   }
 }
+
+.ues-edition-encard{
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 14px 32px rgba(0,0,0,.25);
+  backdrop-filter: blur(6px);
+}
+
+.ues-edition-encard::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+
+  /* ✅ voile animé blanc (nacré) */
+  background: linear-gradient(120deg,
+    rgba(255,255,255,0),
+    rgba(255,255,255,.32),
+    rgba(255,255,255,0));
+
+  transform: translateX(-70%);
+  animation: ues-encard-shine 6s ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
+  opacity:.9;
+  mix-blend-mode: screen; /* joli sur fond sombre */
+}
+
+
+.ues-edition-encard__inner{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ues-edition-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,214,10,.18);
+  border: 1px solid rgba(255,214,10,.35);
+  color: #ffd60a;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: .75rem;
+  white-space: nowrap;
+}
+
+.ues-edition-title{
+  font-weight: 900;
+  font-size: 1.05rem;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0 0 13px;
+}
+
+.ues-edition-date{
+  margin-top: 3px;
+  opacity: .95;
+  font-size: .95rem;
+}
+
+.ues-edition-icon{
+  margin-left: auto;
+  font-size: 1.6rem;
+  color: #ffd60a;
+  opacity: .95;
+  animation: ues-encard-float 2.8s ease-in-out infinite;
+}
+
+@keyframes ues-encard-shine{
+  0%   { transform: translateX(-70%); opacity: .2; }
+  40%  { opacity: .45; }
+  60%  { opacity: .45; }
+  100% { transform: translateX(70%);  opacity: .2; }
+}
+
+@keyframes ues-encard-float{
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+/* Mobile */
+@media (max-width: 575px){
+  .ues-edition-encard__inner{ flex-wrap: wrap; }
+  .ues-edition-icon{ margin-left: 0; }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce){
+  .ues-edition-encard::before,
+  .ues-edition-icon{
+    animation: none !important;
+  }
+}
+
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "' .
+retablir_echappements_modeles(url_absolue(spip_htmlspecialchars(sinon($GLOBALS['meta']['adresse_site'],'.')))) .
+'#organization",
+      "name": "Université Européenne de Saxophone",
+      "url": "' .
+retablir_echappements_modeles(url_absolue(spip_htmlspecialchars(sinon($GLOBALS['meta']['adresse_site'],'.')))) .
+'",
+      "email": "contact@univsax.com",
+      "telephone": "+33 4 92 45 06 48",
+      "sameAs": [
+        "https://www.facebook.com/univsax/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14 chemin de Vigneaux",
+        "addressLocality": "Gap",
+        "postalCode": "05000",
+        "addressCountry": "FR"
+      }
+    },
+    {
+      "@type": "Event",
+      "@id": "' .
+retablir_echappements_modeles(interdire_scripts(url_absolue(generer_url_public('sommaire', '')))) .
+'#event",
+      "name": "Université Européenne de Saxophone — Stage de saxophone (édition 2026)",
+      "description": "Stage de musique en saxophone à Gap (France), du 13 au 23 juillet 2026 : cours, masterclasses, ensembles et concerts. Étudiants internationaux bienvenus.",
+      "startDate": "2026-07-13",
+      "endDate": "2026-07-23",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Gap (Hautes-Alpes), France",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gap",
+          "postalCode": "05000",
+          "addressCountry": "FR"
+        }
+      },
+      "organizer": {
+        "@id": "' .
+retablir_echappements_modeles(url_absolue(spip_htmlspecialchars(sinon($GLOBALS['meta']['adresse_site'],'.')))) .
+'#organization"
+      },
+      "image": [
+        "' .
+retablir_echappements_modeles(url_absolue(spip_htmlspecialchars(sinon($GLOBALS['meta']['adresse_site'],'.')))) .
+'assets/img/ues/affiche-2026.jpg"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "' .
+retablir_echappements_modeles(interdire_scripts(url_absolue(generer_url_public('sommaire', '')))) .
+'#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "À qui s\'adresse le stage de musique en saxophone ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le stage s\'adresse aux saxophonistes souhaitant se perfectionner. Deux formules existent : stagiaire (participation instrumentale) ou auditeur (assister aux cours)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles sont les dates et le lieu du stage ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L\'édition 2026 se déroule à Gap (France) du 13 au 23 juillet 2026."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Je suis étudiant international : puis-je m\'inscrire ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. L\'UES accueille des participants internationaux. Pour les questions de voyage/visa, contactez contact@univsax.com."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles activités sont proposées pendant le stage ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cours individuels, répétitions avec pianistes accompagnateurs, masterclasses/cours publics, ensembles de saxophones et préparation de concerts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel programme préparer avant l\'arrivée ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un programme de 30 minutes minimum est demandé avant le début du stage."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
-<body class="index-page ues-page">
+<body class="index-page ues-page som">
 <header class="header fixed-top ues-header" id="header">
+<button id="backToTop" class="btn-back-to-top">
+  <i class="bi bi-arrow-up"></i>
+</button>
 <div class="ues-topbar">
 <div class="container-xxl ues-topbar-inner">
 <div class="ues-topbar-title">Université Européenne de Saxophone - Edition 2026</div>
 <div class="ues-topbar-actions">
+
+<a href="spip.php?rubrique5&slide=1" class="ues-social" title="Se connecter">
+    <i class="bi bi-wallet-fill"></i>
+</a>
+
 <a href="https://www.facebook.com/univsax/" title="Facebook UES" target="_blank" class="ues-social" rel="noopener" aria-label="Facebook">
 <i class="bi bi-facebook"></i>
 </a>
 <div aria-label="Langue" class="ues-lang-pill" role="group">
-<a class="ues-lang-pill-btn is-active" href="#">FR</a>
-<a class="ues-lang-pill-btn" href="#">ENG</a>
+        <a class="ues-lang-pill-btn is-active" href="spip.php?page=sommaire">FR</a>
+        <a class="ues-lang-pill-btn" href="spip.php?page=sommaire_eng">ENG</a>
 </div>
 </div>
 </div>
@@ -311,38 +410,92 @@ retablir_echappements_modeles(spip_htmlspecialchars(sinon($GLOBALS['meta']['adre
 <span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse" id="uesNav">
-<ul class="navbar-nav ms-auto ues-menu">
-<li class="nav-item"><a class="nav-link active" href="index.php">Accueil</a></li>
-<li class="nav-item"><a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="0" class="nav-link">Présentation</a></li>
-<li class="nav-item"><a class="nav-link" href="#!">Inscriptions 2026</a></li>
-<li class="nav-item"><a class="nav-link" href="#part">Partenaires</a></li>
-<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-</ul>
+    <ul class="navbar-nav ms-auto ues-menu">
+        <!-- Liens existants (visible partout ou Desktop) -->
+        <li class="nav-item"><a class="nav-link active" href="index.php">Accueil</a></li>
+        <li class="nav-item"><a href="index.php#ues-slides" class="nav-link">Présentation</a></li>
+        
+        <!-- LIENS MOBILES UNIQUEMENT (Enseignement, Histoire...) -->
+        <li class="nav-item d-lg-none">
+            <a class="nav-link" href="#slide-enseignement">Enseignement</a>
+        </li>
+        <li class="nav-item d-lg-none">
+            <a class="nav-link" href="#slide-histoire">Histoire</a>
+        </li>
+        <li class="nav-item d-lg-none">
+            <a class="nav-link" href="#slide-journee">Une journée à l\'UES</a>
+        </li>
+
+        <!-- LIEN COMMUN -->
+        <li class="nav-item"><a class="nav-link" href="spip.php?rubrique5">Inscriptions 2026</a></li>
+
+        <!-- LIENS MOBILES UNIQUEMENT (Connexion / Dossier) -->
+        <!-- Si connecté -->
+        ' .
+(($t1 = strval(retablir_echappements_modeles(interdire_scripts(invalideur_session($Cache, ((table_valeur($GLOBALS["visiteur_session"]??[], (string)'id_auteur', null)) ?' ' :''))))))!=='' ?
+		($t1 . '
+        <li class="nav-item d-lg-none">
+            <a class="nav-link" href="spip.php?rubrique5&slide=3">Mon dossier</a>
+        </li>
+        ') :
+		'') .
+'
+        <!-- Si PAS connecté -->
+        ' .
+(($t1 = strval(retablir_echappements_modeles(interdire_scripts(invalideur_session($Cache, ((table_valeur($GLOBALS["visiteur_session"]??[], (string)'id_auteur', null)) ?'' :' '))))))!=='' ?
+		($t1 . '
+        <li class="nav-item d-lg-none">
+            <a class="nav-link" href="spip.php?rubrique5&slide=1">Se connecter</a>
+        </li>
+        <li class="nav-item d-lg-none">
+            <a class="nav-link" href="spip.php?rubrique5&slide=2">S\'inscrire</a>
+        </li>
+        ') :
+		'') .
+'
+
+        <!-- Reste des liens existants -->
+        <li class="nav-item"><a class="nav-link" href="#cta">Partenaires</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
 </div>
 </div>
 </nav>
 </header>
 <main class="main ues-main">
 <section aria-label="Accueil" class="hero section ues-hero" id="hero">
-<video autoplay="" class="ues-hero-video" loop="" muted="" playsinline="">
-<source src="assets/video/votre_video.mp4" type="video/mp4"/>
-        Votre navigateur ne supporte pas la lecture de vidéo.
-      </video>
+<div class="ues-xfade">
+  <video id="v1" class="ues-xfade__video is-active" autoplay muted playsinline preload="metadata">
+    <source src="assets/video/video1.mp4" type="video/mp4">
+  </video>
+
+  <video id="v2" class="ues-xfade__video filtre_black" muted playsinline preload="metadata">
+    <source src="assets/video/video2.mp4" type="video/mp4">
+  </video>
+</div>
+
 <div aria-hidden="true" class="ues-hero-overlay"></div>
 <div class="container ues-hero-container ues-hero-content">
 <div class="row justify-content-center">
 <div class="col-12 col-xxl-10">
 <div class="d-flex justify-content-end ues-cta-wrap">
-<a class="ues-cta" href="#">Inscriptions 2026 : <strong>OUVERTE</strong></a>
+  <a class="ues-cta ues-cta--inscriptions"
+     href="spip.php?rubrique5"
+     title="Inscriptions 2026">
+    <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i>
+    Inscriptions 2026 : <strong>OUVERTE</strong>
+  </a>
 </div>
+
 <div class="ues-panel">
 <div class="row g-4 align-items-start">
 <div class="col-lg-6">
 <h1 class="roboto"><span class="txt_yellow txt_27">B</span>ienvenue à l\'Université Européenne de Saxophone</h1>
 <div class="ues-panel-text">
+<p><strong>Stage de musique en saxophone</strong> à <strong>Gap (France)</strong>, du <strong>13 au 23 juillet 2026</strong> : cours individuels, masterclasses, ensembles et concerts. <strong>Étudiants internationaux bienvenus</strong>.</p>
 <p>Depuis sa création, l\'Université Européenne de Saxophone a contribué à promouvoir la pratique du saxophone au plus haut niveau.</p>
 <p>Le Directeur Artistique Monsieur Claude DELANGLE et son équipe pédagogique constituée des plus renommés pédagogues français mais aussi de grandes personnalités du saxophone, ont permis d\'assurer la libre circulation des compétences et des connaissances sur le plan européen et international.</p>
-<p class="mb-0">L\'Université, en collaboration avec la ville de GAP et le concours des sociétés <strong><a class="a_jaune" href="partenaires.php">VANDOREN</a></strong> et <strong><a class="a_jaune" href="partenaires.php">SELMER</a></strong>, vous réserve une programmation inédite. Pendant toute la période du stage, du <strong class="txt_yellow">lundi 14 juillet au vendredi 25 juillet 2025</strong>, vous pourrez entendre lors des différents concerts, les étudiants ainsi que leurs professeurs.<br/></p>
+<p class="mb-0">L\'Université, en collaboration avec la ville de GAP et le concours des sociétés <strong><a class="a_jaune" href="partenaires.php">VANDOREN</a></strong> et <strong><a class="a_jaune" href="partenaires.php">SELMER</a></strong>, vous réserve une programmation inédite. Pendant toute la période du stage, du <strong class="txt_yellow">lundi 13 juillet au jeudi 23 juillet 2026</strong> inclus, vous pourrez entendre lors des différents concerts, les étudiants ainsi que leurs professeurs.<br/></p>
 </div>
 <ul class="ues-quicklinks">
   <li>
@@ -358,14 +511,14 @@ retablir_echappements_modeles(spip_htmlspecialchars(sinon($GLOBALS['meta']['adre
   </li>
 
   <li>
-    <a href="#ues-slides">
+    <a href="#ues-concerts">
       <i class="bi bi-mic-fill ues-qi"></i> Les concerts
     </a>
   </li>
 </ul>
 </div>
 <div class="col-lg-6">
-<img alt="Affiche 2026 — European University of Saxophone" class="ues-poster img-fluid" src="assets/img/ues/affiche-2026.jpg"/>
+<img alt="Affiche UES 2026 — stage de saxophone à Gap" class="ues-poster img-fluid" src="assets/img/ues/affiche-2026.jpg"/>
 </div>
 </div>
 </div><!-- /panel -->
@@ -384,40 +537,95 @@ retablir_echappements_modeles(spip_htmlspecialchars(sinon($GLOBALS['meta']['adre
 <div class="ues-logo-strip__row">
 <img alt="Henri SELMER Paris" class="ues-logo ues-logo--selmer" loading="lazy" src="assets/img/ues/Henri_Selmer_Paris_logo.svg"/>
 <img alt="Vandoren" class="ues-logo ues-logo--vandoren" loading="lazy" src="assets/img/ues/vandoren.svg"/>
-<img alt="Hautes-Alpes — le département" class="ues-logo ues-logo--hautes-alpes" loading="lazy" src="assets/img/ues/Logo_Hautes_Alpes.svg"/>
 <img alt="Ville de Gap" class="ues-logo ues-logo--gap" loading="lazy" src="assets/img/ues/Logo_ville_de_Gap.svg"/>
+<img alt="Hautes-Alpes — le département" class="ues-logo ues-logo--hautes-alpes" loading="lazy" src="assets/img/ues/Logo_Hautes_Alpes.svg"/>
+
 </div>
 </div>
 </section>
 </div>
-<section class="ues-slides py-3" id="ues-slides">
+
+
+<section class="ues-slides py-7 ues-bg" id="ues-slides">
 <div class="container-xxl">
 <div class="carousel slide" data-bs-ride="false" data-bs-touch="true" id="uesCarousel">
+
+
+  <div class="ues-slide-nav d-flex gap-2 flex-wrap" aria-label="Navigation du diaporama">
+    <button type="button" class="btn btn-light ues-tabbtn" data-bs-target="#uesCarousel" data-bs-slide-to="0">
+      <i class="bi bi-wechat ues-qi"></i> Présentation
+    </button>
+    <button type="button" class="btn btn-light ues-tabbtn" data-bs-target="#uesCarousel" data-bs-slide-to="1">
+      <i class="bi bi-apple-music ues-qi"></i> Enseignement
+    </button>
+    <button type="button" class="btn btn-light ues-tabbtn" data-bs-target="#uesCarousel" data-bs-slide-to="2">
+      <i class="bi bi-journal-richtext ues-qi"></i> Historique
+    </button>
+    <button type="button" class="btn btn-light ues-tabbtn" data-bs-target="#uesCarousel" data-bs-slide-to="3">
+      <i class="bi bi-music-note-list ues-qi"></i> Une journée à l\'UES
+    </button>
+  </div>
 <div class="carousel-inner">
 <!-- SLIDE 1 (0) : Présentation -->
 <div class="carousel-item active">
 <div class="row g-4 align-items-start">
 <div class="col-lg-7">
 <h3 class="mb-3 ues-slide-title"><i class="bi bi-wechat ues-qi"></i> Présentation</h3>
-<p>L\'Université Européenne de Saxophone se déroule sur 12 jours complets, dans la deuxième partie du mois de juillet.<br/><br/>
-Lors de leur arrivée à Gap, les 54 étudiants inscrits sont accueillis dans les locaux du foyer des jeunes travailleurs (voir schéma) par l\'ensemble du personnel : organisateurs, professeurs et pianistes, représentants locaux, etc.<br/><br/>
-Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance avec les autres étudiants, et de s\'entretenir avec les professeurs et les organisateurs. Ces derniers abordent ensuite avec eux l\'ensemble des détails pratiques (planning du stage, déroulement des journées, enseignement, programme des concerts, etc.). Les étudiants sont accompagnés par une personne qui les encadre durant la totalité de leur stage. Elle est leur référent direct en cas de question ou de problème, et dort également au foyer afin de pallier à tout problème qui pourrait se dérouler durant la nuit. </p>
+
+<p>L\'Université Européenne de Saxophone se déroule sur 11 jours complets, dans la deuxième partie du mois de juillet.<br/><br/>
+Lors de leur arrivée à Gap, les 54 étudiants inscrits sont accueillis dans les locaux du foyer des jeunes travailleurs (voir schéma) par l\'ensemble du personnel : organisateurs, professeurs et pianistes, représentants locaux, etc.</p>
+
+
+
+
+<p>Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance avec les autres étudiants, et de s\'entretenir avec les professeurs et les organisateurs. Ces derniers abordent ensuite avec eux l\'ensemble des détails pratiques (planning du stage, déroulement des journées, enseignement, programme des concerts, etc.). Les étudiants sont accompagnés par une personne qui les encadre durant la totalité de leur stage. Elle est leur référent direct en cas de question ou de problème. </p>
 </div>
 <div class="col-lg-5">
-<div class="ues-video-box d-flex align-items-center justify-content-center">
-                Clip video
-              </div>
+<div class="ues-edition-encard my-5" role="note" aria-label="Annonce édition 2026">
+  <div class="ues-edition-encard__inner">
+    <div class="ues-edition-main">
+     <div class="ues-edition-title">La trente-septième édition arrive !</div>
+      <div class="ues-edition-top">
+        <span class="ues-edition-chip">
+          Gap · du 13 au 23 juillet 2026
+        </span>
+        <span class="ues-edition-badge">
+          <a href="spip.php?rubrique5" title="Inscription UES 2026">S\'inscrire</a> </span>
+        
+      </div>
+
+     
+      <div class="ues-edition-date">
+        La trente-septième édition de l\'Université Européenne de Saxophone se déroulera à
+        <strong>Gap</strong> du <strong>13</strong> au <strong>23</strong> juillet <strong>2026</strong>.
+      </div>
+    </div>
+
+    <i class="bi bi-stars ues-edition-icon" aria-hidden="true"></i>
+  </div>
 </div>
+
+
+
+    
+<div class="ues-folio" id="uesFolio" aria-label="Folio">
+  <div class="ues-folio__viewport" aria-live="polite"></div>
+  <div class="ues-folio__dots" role="tablist" aria-label="Navigation du folio"></div>
+
+  <button class="ues-folio__prev" type="button" aria-label="Image précédente">
+    <span aria-hidden="true">‹</span>
+  </button>
+  <button class="ues-folio__next" type="button" aria-label="Image suivante">
+    <span aria-hidden="true">›</span>
+  </button>
 </div>
-<div class="ues-slide-nav d-flex gap-2 flex-wrap">
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="0" data-bs-target="#uesCarousel" type="button">Présentation</button>
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="1" data-bs-target="#uesCarousel" type="button">Enseignement</button>
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="2" data-bs-target="#uesCarousel" type="button">Historique</button>
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="3" data-bs-target="#uesCarousel" type="button">Déroulement d\'une journée à l\'UES</button>
+
+
+</div>
 </div>
 </div>
 <!-- SLIDE 2 (1) : Enseignement -->
-<div class="carousel-item">
+<div class="carousel-item" id="slide-enseignement">
 <div class="row g-4 align-items-start">
 <div class="col-lg-7">
 <h3 class="mb-3 ues-slide-title"><i class="bi bi-apple-music ues-qi"></i> Enseignement</h3>
@@ -429,7 +637,7 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
               Les cours individuels restent naturellement le   noyau de cet enseignement, et permettent à tous les étudiants de côtoyer chacun   des professeurs, mais ils sont à présent accompagnés de nombreuses autres   activités. Les stagiaires peuvent ainsi apprécier les membres de l\'équipe en   tant que professeurs, mais aussi en tant qu\'artistes. Outre le perfectionnement   instrumental à proprement parler, les activités qui sont proposées aux   stagiaires sont les suivantes : <br/>
 <br/>
 <ul class="ues-featurelist">
-  <li>Possibilité pour chacun de répéter individuellement avec les deux pianistes (Fumie Ito et Cyrille Lehn)</li>
+  <li>Possibilité pour chacun de répéter individuellement avec les deux pianistes (Fumie Ito et Iren Seleljo)</li>
   <li>Master classe</li>
   <li>Ensemble de saxophones</li>
   <li>Préparation au Concours</li>
@@ -483,15 +691,9 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 </div>
 </div>
 </div>
-<div class="ues-slide-nav d-flex gap-2 flex-wrap">
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="0" data-bs-target="#uesCarousel" type="button">Présentation</button>
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="1" data-bs-target="#uesCarousel" type="button">Enseignement</button>
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="2" data-bs-target="#uesCarousel" type="button">Historique</button>
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="3" data-bs-target="#uesCarousel" type="button">Déroulement d\'une journée à l\'UES</button>
-</div>
 </div>
 <!-- SLIDE 3 (2) : Historique -->
-<div class="carousel-item">
+<div class="carousel-item" id="slide-histoire">
 <div class="row g-4">
 <div class="col-12">
 <h3 class="mb-3 ues-slide-title"><i class="bi bi-journal-richtext"></i> Historique</h3>
@@ -534,16 +736,10 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 </div>
 </div>
 </div>
-<div class="ues-slide-nav d-flex gap-2 flex-wrap">
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="0" data-bs-target="#uesCarousel" type="button">Présentation</button>
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="1" data-bs-target="#uesCarousel" type="button">Enseignement</button>
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="2" data-bs-target="#uesCarousel" type="button">Historique</button>
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="3" data-bs-target="#uesCarousel" type="button">Une journée à l\'UES</button>
-</div>
 </div>
 <!-- SLIDE 4 (3) : Déroulement -->
 <!-- SLIDE 4 (3) : Déroulement -->
-<div class="carousel-item">
+<div class="carousel-item" id="slide-journee">
 <div class="row  align-items-start">
 <div class="col-12">
 <h3 class="mb-3 ues-slide-title"><i class="bi bi-music-note-list"></i> Déroulement d\'une journée</h3>
@@ -562,12 +758,6 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <strong class="date">18h 30 ou 21h 00</strong> : À tour de rôle, et accompagnés par les pianistes de renom de l\'Université Européenne de Saxophone, chacun des professeurs se produit en concert à la Chapelle des Pénitents, en plein centre de Gap. Ils donnent, pour les étudiants mais aussi pour environ 200 personnes présentes tous les soirs, des concerts de grande qualité, et gratuits.
       </p>
 </div>
-</div>
-<div class="ues-slide-nav d-flex gap-2 flex-wrap">
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="0" data-bs-target="#uesCarousel" type="button">Présentation</button>
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="1" data-bs-target="#uesCarousel" type="button">Enseignement</button>
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="2" data-bs-target="#uesCarousel" type="button">Historique</button>
-<button class="btn btn-light ues-tabbtn" data-bs-slide-to="3" data-bs-target="#uesCarousel" type="button">Déroulement d\'une journée à l\'UES</button>
 </div>
 </div>
 </div>
@@ -597,151 +787,198 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 </ul>
 </div>
 <div class="tab-content" id="uesTeamTabContent">
-<!-- PROFS -->
-<div aria-labelledby="tab-profs" class="tab-pane fade show active" id="pane-profs" role="tabpanel" tabindex="0">
-<div class="row g-4">
-<!-- Delangle -->
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="card ues-person h-100">
-<div class="card-body">
-<img alt="Claude Delangle" class="ues-person__img" src="images/Delangle.jpg"/>
-<h3 class="h6 mb-1">Claude Delangle</h3>
-<p class="ues-person__role mb-3">Directeur artistique · Professeur au CNSMDP</p>
-<ul class="ues-person__bullets mb-3">
-<li>Enseigne au Conservatoire de Paris depuis 1988</li>
-<li>Fondateur de l\'UES de Gap</li>
-</ul>
-<button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalDelangle" data-bs-toggle="modal" type="button">Voir la bio</button>
+  <!-- PROFS -->
+  <div aria-labelledby="tab-profs" class="tab-pane fade show active" id="pane-profs" role="tabpanel" tabindex="0">
+    <div class="row g-4">
+
+      <!-- Delangle -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modalDelangle" aria-label="Voir la bio de Claude Delangle">
+              <img alt="Claude Delangle" class="ues-person__img img-fluid" src="images/Delangle.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Claude Delangle</h3>
+            <p class="ues-person__role mb-3">Directeur artistique · Professeur au CNSMDP</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Enseigne au Conservatoire de Paris depuis 1988</li>
+              <li>Fondateur de l\'UES de Gap</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalDelangle" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arsenijevic -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modalArsenijevic" aria-label="Voir la bio de Nicolas Arsenijevic">
+              <img alt="Nicolas Arsenijevic" class="ues-person__img img-fluid" src="images/arsenijevic.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Nicolas Arsenijevic</h3>
+            <p class="ues-person__role mb-3">Saxophoniste · Enseignant</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Diplômé du CNSMDP (classe Claude Delangle)</li>
+              <li>Lauréat de concours internationaux</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalArsenijevic" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Braquart (Eva) -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modaleva" aria-label="Voir la bio de Eva van Grinsven">
+              <img alt="Eva van Grinsven" class="ues-person__img img-fluid" src="images/eva_cv.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Eva van Grinsven</h3>
+            <p class="ues-person__role mb-3">Saxophoniste</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Saxophoniste diplômée du Conservatoire d\'Amsterdam</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modaleva" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rautiola -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modalRautiola" aria-label="Voir la bio de Joonatan Rautiola">
+              <img alt="Joonatan Rautiola" class="ues-person__img img-fluid" src="images/rautolia_j.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Joonatan Rautiola</h3>
+            <p class="ues-person__role mb-3">Saxophoniste · Sibelius Academy</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Soliste (orchestres européens &amp; nordiques)</li>
+              <li>Pédagogue et interprète de musique contemporaine</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalRautiola" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sumiya -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modalSumiya" aria-label="Voir la bio de Miho Sumiya">
+              <img alt="Miho Sumiya" class="ues-person__img img-fluid" src="images/63c10b4b4d6731.png"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Miho Sumiya</h3>
+            <p class="ues-person__role mb-3">Saxophoniste · Tokyo (Japon)</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Diplômée major de l\'Université des Arts de Tokyo</li>
+              <li>Soliste &amp; chambriste · enseignante</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalSumiya" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- lars -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modallars" aria-label="Voir la bio de Lars Mlekusch">
+              <img alt="Lars Mlekusch" class="ues-person__img img-fluid" src="images/lars_cv.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Lars Mlekusch</h3>
+            <p class="ues-person__role mb-3">Chef d\'orchestre, saxophoniste</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Professeur de saxophone à l\'Université des arts de Zurich</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modallars" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compagnon -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modalCompagnon" aria-label="Voir la bio de Sandro Compagnon">
+              <img alt="Sandro Compagnon" class="ues-person__img img-fluid" src="images/compagnon_bio.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Sandro Compagnon</h3>
+            <p class="ues-person__role mb-3">Saxophoniste · Soliste</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Prix internationaux (Osaka, Dinant, Thessalonique…)</li>
+              <li>Formé au CNSMDP (Delangle / Moraguès)</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalCompagnon" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PIANISTES -->
+  <div aria-labelledby="tab-pianistes" class="tab-pane fade" id="pane-pianistes" role="tabpanel" tabindex="0">
+    <div class="row g-4">
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modalIto" aria-label="Voir la bio de Fumie Ito">
+              <img alt="Fumie Ito" class="ues-person__img img-fluid" src="images/fumie.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Fumie Ito</h3>
+            <p class="ues-person__role mb-3">Pianiste accompagnatrice</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Accompagne les cours &amp; concerts de l\'UES</li>
+              <li>Intervient sur plusieurs édition de l\'UES</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalIto" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- iren -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modaliren" aria-label="Voir la bio de Iren Seleljo">
+              <img alt="Iren Seleljo" class="ues-person__img img-fluid" src="images/iren_cv.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Iren Seleljo</h3>
+            <p class="ues-person__role mb-3">Pianiste accompagnatrice</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Accompagne les cours &amp; concerts de l\'UES</li>
+              <li>Intervient sur plusieurs édition de l\'UES</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modaliren" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
-</div>
-</div>
-<!-- Arsenijevic -->
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="card ues-person h-100">
-<div class="card-body">
-<img alt="Nicolas Arsenijevic" class="ues-person__img" src="images/arsenijevic.jpg"/>
-<h3 class="h6 mb-1">Nicolas Arsenijevic</h3>
-<p class="ues-person__role mb-3">Saxophoniste · Enseignant</p>
-<ul class="ues-person__bullets mb-3">
-<li>Diplômé du CNSMDP (classe Claude Delangle)</li>
-<li>Lauréat de concours internationaux</li>
-</ul>
-<button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalArsenijevic" data-bs-toggle="modal" type="button">Voir la bio</button>
-</div>
-</div>
-</div>
-<!-- Rautiola -->
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="card ues-person h-100">
-<div class="card-body">
-<img alt="Joonatan Rautiola" class="ues-person__img" src="images/rautolia_j.jpg"/>
-<h3 class="h6 mb-1">Joonatan Rautiola</h3>
-<p class="ues-person__role mb-3">Saxophoniste · Sibelius Academy</p>
-<ul class="ues-person__bullets mb-3">
-<li>Soliste (orchestres européens &amp; nordiques)</li>
-<li>Pédagogue et interprète de musique contemporaine</li>
-</ul>
-<button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalRautiola" data-bs-toggle="modal" type="button">Voir la bio</button>
-</div>
-</div>
-</div>
-<!-- Braquart -->
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="card ues-person h-100">
-<div class="card-body">
-<img alt="Philippe Braquart" class="ues-person__img" src="images/braquart_cv.jpg"/>
-<h3 class="h6 mb-1">Philippe Braquart</h3>
-<p class="ues-person__role mb-3">Saxophoniste · Professeur</p>
-<ul class="ues-person__bullets mb-3">
-<li>Premier prix (CNSM de Paris)</li>
-<li>Orchestres &amp; projets jazz / contemporains</li>
-</ul>
-<button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalBraquart" data-bs-toggle="modal" type="button">Voir la bio</button>
-</div>
-</div>
-</div>
-<!-- Wirth -->
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="card ues-person h-100">
-<div class="card-body">
-<img alt="Christian Wirth" class="ues-person__img" src="images/ChristianWirth1-60116e5fc1b8c.webp"/>
-<h3 class="h6 mb-1">Christian Wirth</h3>
-<p class="ues-person__role mb-3">Saxophoniste · Musique de chambre</p>
-<ul class="ues-person__bullets mb-3">
-<li>Fondateur du Quatuor HABANERA</li>
-<li>Garde Républicaine (orchestre d’harmonie)</li>
-</ul>
-<button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalWirth" data-bs-toggle="modal" type="button">Voir la bio</button>
-</div>
-</div>
-</div>
-<!-- Garcia -->
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="card ues-person h-100">
-<div class="card-body">
-<img alt="Mariano García" class="ues-person__img" src="images/garcia_cv.jpg"/>
-<h3 class="h6 mb-1">Mariano García</h3>
-<p class="ues-person__role mb-3">Saxophoniste · Professeur (Espagne)</p>
-<ul class="ues-person__bullets mb-3">
-<li>Chaire de saxophone (Conservatoire sup. d’Aragon)</li>
-<li>Artiste Selmer · Duo ÁniMa</li>
-</ul>
-<button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalGarcia" data-bs-toggle="modal" type="button">Voir la bio</button>
-</div>
-</div>
-</div>
-<!-- Compagnon -->
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="card ues-person h-100">
-<div class="card-body">
-<img alt="Sandro Compagnon" class="ues-person__img" src="images/compagnon_bio.jpg"/>
-<h3 class="h6 mb-1">Sandro Compagnon</h3>
-<p class="ues-person__role mb-3">Saxophoniste · Soliste</p>
-<ul class="ues-person__bullets mb-3">
-<li>Prix internationaux (Osaka, Dinant, Thessalonique…)</li>
-<li>Formé au CNSMDP (Delangle / Moraguès)</li>
-</ul>
-<button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalCompagnon" data-bs-toggle="modal" type="button">Voir la bio</button>
-</div>
-</div>
-</div>
-<!-- Sumiya -->
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="card ues-person h-100">
-<div class="card-body">
-<img alt="Miho Sumiya" class="ues-person__img" src="images/63c10b4b4d6731.png"/>
-<h3 class="h6 mb-1">Miho Sumiya</h3>
-<p class="ues-person__role mb-3">Saxophoniste · Tokyo (Japon)</p>
-<ul class="ues-person__bullets mb-3">
-<li>Diplômée major de l’Université des Arts de Tokyo</li>
-<li>Soliste &amp; chambriste · enseignante</li>
-</ul>
-<button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalSumiya" data-bs-toggle="modal" type="button">Voir la bio</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- PIANISTES -->
-<div aria-labelledby="tab-pianistes" class="tab-pane fade" id="pane-pianistes" role="tabpanel" tabindex="0">
-<div class="row g-4">
-<div class="col-12 col-sm-6 col-lg-3">
-<div class="card ues-person h-100">
-<div class="card-body">
-<img alt="Fumie Ito" class="ues-person__img" src="images/fumie.jpg"/>
-<h3 class="h6 mb-1">Fumie Ito</h3>
-<p class="ues-person__role mb-3">Pianiste accompagnatrice</p>
-<ul class="ues-person__bullets mb-3">
-<li>Accompagne les cours &amp; concerts de l’UES</li>
-<li>Intervient sur plusieurs édition de l\'UES</li>
-</ul>
-<button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalIto" data-bs-toggle="modal" type="button">Voir la fiche</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><!-- /tab-content -->
+<!-- /tab-content -->
 </div>
 </section>
 <!-- Modals (bios courtes + lien vers page complète) -->
@@ -752,16 +989,19 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <h5 class="modal-title">Claude Delangle</h5>
 <button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
 </div>
-<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Claude Delangle" class="img-fluid rounded-3 ues-modal-photo" src="images/Delangle.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Claude Delangle enseigne le saxophone au Conservatoire de Paris (CNSMDP) depuis septembre 1988, année où il fonde l’Université Européenne du Saxophone de Gap dont il est le directeur artistique.</p>
-<p>A la demande de Pierre Boulez il s’est produit en soliste et au sein de l’Ensemble Intercontemporain de 1986 à 2000. Il fut très proche de Luciano Berio qui écrivit pour lui le concerto pour saxophone Chemin VII – Récit et s’est produit à ses côtés aux Norton Lectures à l’Université d’Harvard, au Queen Elizabeth Hall de Londres, au Tisch Center de New York, à la Philharmonie de Cologne, avec le BBC Symphony. <br/></p>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Claude Delangle" class="img-fluid rounded-3 ues-modal-photo" src="images/Delangle.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Claude Delangle enseigne le saxophone au Conservatoire de Paris (CNSMDP) depuis septembre 1988, année où il fonde l\'Université Européenne du Saxophone de Gap dont il est le directeur artistique.</p>
+<p>A la demande de Pierre Boulez il s\'est produit en soliste et au sein de l\'Ensemble Intercontemporain de 1986 à 2000. Il fut très proche de Luciano Berio qui écrivit pour lui le concerto pour saxophone Chemin VII – Récit et s\'est produit à ses côtés aux Norton Lectures à l\'Université d\'Harvard, au Queen Elizabeth Hall de Londres, au Tisch Center de New York, à la Philharmonie de Cologne, avec le BBC Symphony. <br/></p>
 <p>Ses spectacles « Canticum » (Roma Europa) avec Luciano Berio et London Voices, « Tango Futur » (Aix-en-Provence) avec Susanna Moncayo, « Quest » (Zagreb Biennale) avec Thierry Coduys, « Récit » (Agora/Ircam et Shizuoka-Japon) avec les œuvres de Pierre Boulez, Ichiro Nodaira et Marco Stroppa, « Elucidation » avec le chorégraphe Loïc Touzé, « Japanese Songs » (Manca/Nice) avec la mezzo soprano Marie Kobayashi et plus récemment « Duo » avec la danseuse Anne-Hélène Kotoujansky (Bach, Debussy, Mantovani, Leroux) sont des repères qui ont profondément nourri sa réflexion pour un partage vivant de la création musicale. Claude Delangle a créé des oeuvres de G.Amy, L.Berio, E.Denisov, H.Dufourt, G.Grisey, B.Jolas, G.Ligeti, A.Piazzolla, K.Stockhausen, Y.Taïra, T.Takemitsu, J.L.Campana, B.Dubedout, F.Durieux, T.Hosokawa, Ph.Hurel, M.Jarrell, P.Jodlovski, Ch.Lauba, Ph.Leroux, J.M.Lopez-Lopez, A.Louvier, B.Mantovani, M.Matalon, L.Naon, M.Natsuda, I.Nodaïra, Y.Robin, O.Strasnoy, F.Tanada, Ton-That Tiêt entre autres. Créer et transmettre motivent toute son activité musicale.</p>
 <p>Claude Delangle a gravé douze disques pour BIS et participé à des enregistrements monographiques des compositeurs Claude Debussy, Anton Webern, Luciano Berio, Edison Denisov, Hugues Dufourt, Gérard Grisey et Philippe Leroux, pour Deutsche Grammophon, Harmonia Mundi, Erato et Verany.</p>
-<p>Il se produit depuis quatre décennies avec son épouse la pianiste Odile Catelin-Delangle, professeur à l’Ecole Normale de Musique de Paris.</p>
-<p>Claude Delangle contribue au développement des prototypes de la société Henri-Selmer-Paris et dirige une collection aux Editions Lemoine Paris dans laquelle il se réjouit d’avoir publié des œuvres de ses amis Bruno Mantovani, Ichiro Nodaïra, Fuminori Tanada et nombre de compositeurs de plusieurs générations.</p>
-<p>Claude Delangle est Chevalier des Arts et des Lettres.<br/>
+<p>Il se produit depuis quatre décennies avec son épouse la pianiste Odile Catelin-Delangle, professeur à l\'Ecole Normale de Musique de Paris.</p>
+<p>Claude Delangle contribue au développement des prototypes de la société Henri-Selmer-Paris et dirige une collection aux Editions Lemoine Paris dans laquelle il se réjouit d\'avoir publié des œuvres de ses amis Bruno Mantovani, Ichiro Nodaïra, Fuminori Tanada et nombre de compositeurs de plusieurs générations.</p>
+<p>Claude Delangle est Chevalier des Arts et des Lettres.
 <br/>
 <br/>
-<span class="txt_gris10"><a href="http://www.sax-delangle.com" target="_blank">www.sax-delangle.com</a></span></p></div></div></div></div>
+<br/>
+<span class="txt_gris10"><a href="http://www.sax-delangle.com" target="_blank">www.sax-delangle.com</a></span></p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a></div></div></div></div>
 </div>
 </div>
 </div>
@@ -772,7 +1012,9 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <h5 class="modal-title">Nicolas Arsenijevic</h5>
 <button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
 </div>
-<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Nicolas Arsenijevic" class="img-fluid rounded-3 ues-modal-photo" src="images/arsenijevic.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Nicolas Arsenijevic est l\'un des saxophonistes les plus reconnus de sa génération. Diplômé du Conservatoire National Supérieur de Musique de Paris en 2016 dans la classe de Claude Delangle (Licence et Master), il navigue depuis plusieurs années entre création contemporaine, répertoire original pour saxophone, transcriptions, musique traditionnelle des Balkans ou encore théâtre musical. <br/></p></div></div></div></div>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Nicolas Arsenijevic" class="img-fluid rounded-3 ues-modal-photo" src="images/arsenijevic.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Nicolas Arsenijevic est l\'un des saxophonistes les plus reconnus de sa génération. Diplômé du Conservatoire National Supérieur de Musique de Paris en 2016 dans la classe de Claude Delangle (Licence et Master), il navigue depuis plusieurs années entre création contemporaine, répertoire original pour saxophone, transcriptions, musique traditionnelle des Balkans ou encore théâtre musical. <br/></p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a></div></div></div></div>
 </div>
 </div>
 </div>
@@ -783,75 +1025,75 @@ Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance ave
 <h5 class="modal-title">Joonatan Rautiola</h5>
 <button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
 </div>
-<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Joonatan Rautiola" class="img-fluid rounded-3 ues-modal-photo" src="images/rautolia_j.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Né à Helsinki, Finlande en 1983, Joonatan Rautiola étudie le saxophone à l\'Académie Sibelius avec Pekka Savijoki et au Conservatoire de Paris avec Claude Delangle. Lauréat de grands concours internationaux (Dinant, Düsseldorf, Oslo, Nova Gorica, Paris), Joonatan Rautiola se produit en soliste avec l\'Orchestre Philharmonique de Strasbourg, l\'Orchestre national de la Lettonie, l\'Orchestre de la Radio Finlandaise et le Düsseldorf Symfoniker entre autres, et donne des récitals à Londres, Dublin, Saint Pétersbourg, Tokyo et au Carnegie Hall de New York. Joonatan Rautiola a créé de nombreux œuvres de compositeurs contemporains, notamment à l\'IRCAM (Paris) et a reçu les conseils de Pierre Boulez et Betsy Jolas. En 2012, il enregistre le disque monographique "8 Solos" (Sismal Records) du compositeur Patrick Marcland avec les solistes de l\'Ensemble Intercontemporain. Il enseigne le saxophone à l\'Académie Sibelius et donne des cours publics à Londres, Tokyo, Strasbourg et Riga. Joonatan Rautiola joue les saxophones Henri Selmer Paris et les anches D\'Addario Woodwinds. www.joonatanrautiola.com</p></div></div></div></div>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Joonatan Rautiola" class="img-fluid rounded-3 ues-modal-photo" src="images/rautolia_j.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Né à Helsinki, Finlande en 1983, Joonatan Rautiola étudie le saxophone à l\'Académie Sibelius avec Pekka Savijoki et au Conservatoire de Paris avec Claude Delangle. Lauréat de grands concours internationaux (Dinant, Düsseldorf, Oslo, Nova Gorica, Paris), Joonatan Rautiola se produit en soliste avec l\'Orchestre Philharmonique de Strasbourg, l\'Orchestre national de la Lettonie, l\'Orchestre de la Radio Finlandaise et le Düsseldorf Symfoniker entre autres, et donne des récitals à Londres, Dublin, Saint Pétersbourg, Tokyo et au Carnegie Hall de New York. Joonatan Rautiola a créé de nombreux œuvres de compositeurs contemporains, notamment à l\'IRCAM (Paris) et a reçu les conseils de Pierre Boulez et Betsy Jolas. En 2012, il enregistre le disque monographique "8 Solos" (Sismal Records) du compositeur Patrick Marcland avec les solistes de l\'Ensemble Intercontemporain. Il enseigne le saxophone à l\'Académie Sibelius et donne des cours publics à Londres, Tokyo, Strasbourg et Riga. Joonatan Rautiola joue les saxophones Henri Selmer Paris et les anches D\'Addario Woodwinds. www.joonatanrautiola.com</p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a></div></div></div></div>
 </div>
 </div>
 </div>
-<div aria-hidden="true" class="modal fade" id="modalBraquart" tabindex="-1">
+<div aria-hidden="true" class="modal fade" id="modaleva" tabindex="-1">
 <div class="modal-dialog modal-lg modal-dialog-centered">
 <div class="modal-content ues-modal">
 <div class="modal-header">
-<h5 class="modal-title">Philippe Braquart</h5>
+<h5 class="modal-title">Eva van Grinsven</h5>
 <button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
 </div>
-<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Philippe Braquart" class="img-fluid rounded-3 ues-modal-photo" src="images/braquart_cv.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p><br/>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Eva van Grinsven" class="img-fluid rounded-3 ues-modal-photo" src="images/eva_cv.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p><br/>
 <strong><br/>
-            Saxophoniste, professeur et compositeur</strong><br/>
-<br/>
-            Après des études au Conservatoire Supérieur de Musique de Paris terminées par un premier prix
-en 1988, il obtient plusieurs prix internationaux de Musique de Chambre ( Martigny, Ilzaach) avec
-le quatuor de saxophones DIASTEMA et enregistre plusieurs disques sous les labels Naxos
-(saxophone classics et french saxophone quartets) et Ames (d\'Ouest en Est et Hispano).
-            <br/>
-<br/>
-            Il se produit régulièrement au sein de l\'orchestre national de Montpellier, de l\'ensemble
-Intercontemporain et de l\'orchestre de Paris avec lequel il il a effectué plusieurs tournées
-internationales (Chine, Corée, Japon, USA...)
-<br/>
-Il a notamment travaillé sous la direction de P.Boulez, Z.Metha, M.Plasson, G.Prêtre,
-C.Eschenbach...
-<br/>
-<br/>
-Saxophoniste polyvalent, sa passion pour le Jazz l\'amène à diriger le Big Band du Conservatoire
-de Montpellier de 1999 à 2006.
-<br/>
-Il a en outre dirigé et participé à plusieurs sessions de l\'atelier 21 , ensemble de musique
-contemporaine du CRR de Montpellier.
-<br/>
-<br/>
-Ses activités artistiques et pédagogiques le conduisent maintenant à explorer d\'autres univers
-comme l\'improvisation collective et le Sound-Painting ainsi que le théâtre musical au sein du trio
-BHL, formation originale dont le répertoire est teinté d\'humour, de poésie, d\'improvisation, de
-chansons françaises, de recettes de cuisine et de faits divers.
-<br/>
-<br/>
-Il rejoint le Quartet CHAMAD en 2011 et aborde un jazz mélodique à la fois sensible et explosif au
-travers des compositions originales du groupe. Sortie du premier album SILLAGE 1 en octobre
-2013.
-<br/>
-<br/>
-En 2014 , il rencontre les Chanteurs d\'oiseaux dans un festival à l\'Abbaye de Sylvanès (Aveyron)
-et fasciné par leur univers, il a maintenant le plaisir de travailler régulièrement avec eux.
-<br/>
-<br/>
-Titulaire du C.A de Saxophone, Philippe Braquart est professeur au Conservatoire à Rayonnement
-Régional de Montpellier Agglomération ainsi qu\'à l\'Institut Supérieur des Arts de Toulouse
-spectacle vivant (ISDAT)
-<br/>
-Il a également été professeur de saxophone au CNSM de Paris de 2000 à 2004.<br/>
-<br/></p>
-<p>Pour tous renseignements  complémentaires, n’hésitez pas à contacter philippe Braquart à  l’adresse suivante : <a href="mailto:contact@univsax.com">contact@univsax.com</a></p></div></div></div></div>
+           Avec sa large palette de couleurs sonores, sa présence scénique captivante et la joie immense qu\'elle manifeste en jouant, la saxophoniste Eva van Grinsven a conquis à maintes reprises le cœur de la presse et du public. Sa pratique de performance intense et multifacette se concentre souvent sur la musique de chambre, mais Eva se produit aussi en solo et avec diverses compagnies musicales, dont l\'Orchestre Philharmonique de la Radio néerlandaise et l\'Orchestre royal du Concertgebouw. Mais peu importe le contexte musical ou le style, pour Eva, l\'histoire derrière les notes passe toujours avant tout.
+<br>
+<br>
+
+Après avoir pris des cours de flûte à bec et de violon, Eva, âgée de neuf ans, a découvert le saxophone. Elle a immédiatement été fascinée par les possibilités apparemment infinies qu\'offrait cet instrument caméléonique, et elles l\'inspirent encore aujourd\'hui. En 2008, Eva a obtenu son diplôme avec mention du Conservatoire d\'Amsterdam, où elle a étudié avec son mentor et source d\'inspiration constante Arno Bornkamp.
+<br>
+<br>
+
+La même année, son duo Sax & Stix a remporté le Vriendenkrans, un prix prestigieux décerné chaque année à de jeunes musiciens prometteurs par la Société néerlandaise des amis du Concertgebouw et l\'Orchestre royal du Concertgebouw. De nombreux prix et distinctions ont suivi.
+<br>
+<br>
+
+Récemment, Eva a reçu à la fois le prix du jury et le prix du public du Dutch Classical Talent Award 2013 avec le Quatuor de saxophones de Bergage.
+<br>
+<br>
+
+Le premier album de Sax & Stix ainsi que le premier enregistrement du Berlage Saxophone Quartet ont reçu des critiques enthousiastes tant de la presse musicale néerlandaise que internationale.
+Sa passion pour la musique de saxophone des années 1920 et 1930 l\'a également conduit à des performances et des enregistrements d\'albums avec le Dudok Quartet et le Café Dansant.
+<br>
+<br>
+
+Après une performance live réussie sur Radio 4 néerlandaise, elle a formé une nouvelle collaboration avec la pianiste Helena Basilova. Ils ont immédiatement élaboré de nombreux projets pour l\'avenir, notamment une tournée au Danemark et un programme de concerts de musique française et russe.
+<br>
+<br>
+
+Son enthousiasme pour rapprocher les gens et la musique a également conduit à la fondation de l\'Amsterdam Saxophone Orchestra. Cette compagnie est composée d\'anciens élèves d\'Arno Bornkamp et donne des concerts à l\'initiative d\'Eva ou sur demande lors d\'occasions spéciales.
+<br>
+<br>
+
+Eva est une invitée bienvenue dans des festivals tels que le Grachtenfestival et le Delft Chamber Music Festival, où elle a travaillé avec Karin Strobos et Liza Ferschtman, entre autres. Elle s\'est produite sur toutes les grandes scènes néerlandaises et a effectué des tournées de concerts dans de nombreux pays européens, en Chine et au Japon.
+<br>
+<br>
+
+En tant qu\'artiste solo, Eva a récemment créé la Megumi Suite de Robin de Raaff avec le Doelen Ensemble. Elle a auparavant donné des concerts en solo avec des compagnies telles que l\'Orchestre national des jeunes néerlandais et l\'Amstel String Ensemble.
+<br>
+
+Eva s\'est produite à de nombreuses reprises sur Radio 4 néerlandaise, NDR, WDR et Deutschlandfunk et est également apparue à la télévision pour Vrije Geluiden, le célèbre concert du Nouvel An NBE 2008 et le concert KCO & Armin van Buuren en l\'honneur du couronnement du roi Guillaume-Alexandre.</p>
+</div></div></div></div>
 </div>
 </div>
 </div>
-<div aria-hidden="true" class="modal fade" id="modalWirth" tabindex="-1">
+<div aria-hidden="true" class="modal fade" id="modallars" tabindex="-1">
 <div class="modal-dialog modal-lg modal-dialog-centered">
 <div class="modal-content ues-modal">
 <div class="modal-header">
-<h5 class="modal-title">Christian Wirth</h5>
+<h5 class="modal-title">Lars Mlekusch</h5>
 <button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
 </div>
-<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Christian Wirth" class="img-fluid rounded-3 ues-modal-photo" src="images/christian.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Après avoir obtenu les 1er Prix à l’unanimité de saxophone et  de musique de chambre au Conservatoire National Supérieur de Musique et de Danse de Paris, il réussit ensuite les concours d\'entrée dans les classes de perfectionnement de ces mêmes disciplines. Passionné de musique de chambre, il fonde le Quatuor de saxophones HABANERA, au sein duquel il se produit en France et à l\'étranger depuis 15 ans. Il enseigne actuellement au Conservatoire Maurice Ravel de Paris XIIIème, et depuis 1995, il fait partie de l\'Orchestre d\'Harmonie de la Garde Républicaine.</p></div></div></div></div>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Christian Wirth" class="img-fluid rounded-3 ues-modal-photo" src="images/lars_cv.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Reconnu internationalement comme chef d\'orchestre, éducateur, saxophoniste et conservateur, Lars Mlekusch est reconnu pour son art réfléchi et son dévouement particulier à la musique du XXe siècle et contemporaine, qui conduit à des performances vibrantes. Ses collaborations étroites avec des compositeurs tels qu\'Agata Zubel, Aureliano Cattaneo, Johanne Maria Staud, Laura Bowler, Sarah Nemtsov, Pierluigi Billone, Klaus Lang, Bernhard Lang et Wolfgang Mitterer ont donné lieu à de nombreuses créations mondiales.
+Il est un partenaire très recherché de certains des plus grands ensembles mondiaux, dont le Klangforum Wien, PHACE, l\'Orchestre de chambre de Stuttgart, l\'Orchestre de chambre géorgien, l\'OENM, le Collegium Novum Zurich, la Neue Vocalsolisten Stuttgart, l\'Orchestre symphonique de la Radio slovaque ou les musiciens principaux de l\'Orchestre de la Tonhalle.<br>
+
+Ses prestations l\'ont mené dans des festivals prestigieux et des salles de concert renommées dans le monde entier, telles que Wien Modern, Klangspuren Festival, Transart Festival, Huddersfield Contemporary Music Festival, Elbphilharmonie Sommer, Salzburg aspekte, Melos-Ethos à Bratislava, Musikverein Wien, Konzerthaus Wien, Elbphilharmonie Hamburg, Concertgebouw Amsterdam, Muziekgebouw Amsterdam, Casa da Música Porto, National Concert Hall Taipei ou le Centre des Arts du Spectacle Weiwuying Kaohsiung.</p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a></div></div></div></div>
 </div>
 </div>
 </div>
@@ -862,7 +1104,9 @@ Il a également été professeur de saxophone au CNSM de Paris de 2000 à 2004.<
 <h5 class="modal-title">Mariano García</h5>
 <button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
 </div>
-<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Mariano García" class="img-fluid rounded-3 ues-modal-photo" src="images/garcia_cv.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Passionné de saxophone, ses interprétations sont une recherche incessante de dépassement des limites de l\'instrument, élargissant le répertoire, soit avec des transcriptions de la grande musique de chambre de tous les temps soit avec la musique contemporaine. Alliant sa carrière pédagogique à celle de concertiste, il se produit en Chine, aux USA et participe à des festivals importants à Andorre, au Portugal, en Autriche et en Italie, avec un répertoire adapté aux différentes situations et veille tout particulièrement au répertoire de notre temps ainsi qu\'aux transcriptions. Au niveau pédagogique, il dispense de nombreux cours et master-classes en Espagne, notamment à l\'Esmuc de Barcelone, au Conservatoire Supérieur de Salamanque et à l\'Université Francisco de Vitoria de Madrid. Aux Etats-Unis, il est invité par différentes universités, comme North Carolina, South Carolina, Furman University, Shenandoah, Georgia University, Augusta… Depuis 2009, il est titulaire de la chaire de saxophone au Conservatoire Supérieur de Musique d\'Aragon et actuellement l\'un des professeurs les plus prisés de cet instrument. Son dernier enregistrement « Ritmo En El Espacio » avec la pianiste Aniana Jaime autour de compositeurs espagnols sous le label discographique IBS classical a reçu un accueil chaleureux de la critique spécialisée. Sollicité comme membre du jury de différents concours internationaux, il est, depuis 2010, artiste Selmer et membre du duo ÁniMa. www.marianogarciasax.com</p></div></div></div></div>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Mariano García" class="img-fluid rounded-3 ues-modal-photo" src="images/garcia_cv.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Passionné de saxophone, ses interprétations sont une recherche incessante de dépassement des limites de l\'instrument, élargissant le répertoire, soit avec des transcriptions de la grande musique de chambre de tous les temps soit avec la musique contemporaine. Alliant sa carrière pédagogique à celle de concertiste, il se produit en Chine, aux USA et participe à des festivals importants à Andorre, au Portugal, en Autriche et en Italie, avec un répertoire adapté aux différentes situations et veille tout particulièrement au répertoire de notre temps ainsi qu\'aux transcriptions. Au niveau pédagogique, il dispense de nombreux cours et master-classes en Espagne, notamment à l\'Esmuc de Barcelone, au Conservatoire Supérieur de Salamanque et à l\'Université Francisco de Vitoria de Madrid. Aux Etats-Unis, il est invité par différentes universités, comme North Carolina, South Carolina, Furman University, Shenandoah, Georgia University, Augusta… Depuis 2009, il est titulaire de la chaire de saxophone au Conservatoire Supérieur de Musique d\'Aragon et actuellement l\'un des professeurs les plus prisés de cet instrument. Son dernier enregistrement « Ritmo En El Espacio » avec la pianiste Aniana Jaime autour de compositeurs espagnols sous le label discographique IBS classical a reçu un accueil chaleureux de la critique spécialisée. Sollicité comme membre du jury de différents concours internationaux, il est, depuis 2010, artiste Selmer et membre du duo ÁniMa. www.marianogarciasax.com</p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a></div></div></div></div>
 </div>
 </div>
 </div>
@@ -880,7 +1124,9 @@ Il a également été professeur de saxophone au CNSM de Paris de 2000 à 2004.<
     </div>
     <div class="col-md-8">
       <div class="ues-modal-bio">
-        <p>Né à Nice en 1996, Sandro Compagnon commence le saxophone à 6 ans lorsqu’il déménage à Chamonix Mont-Blanc avec comme premier professeur, son père. Deux ans plus tard, il commence sa scolarité au CRR d’Annecy dans la classe de Christian Charnay puis de Fabrizio Mancuso. En 2006, il obtient le troisième prix au concours européen de Gap dans la catégorie des moins de 16 ans et en 2010 le troisième prix du concours européen de Valenciennes dans la catégorie soliste.</p><p>Après avoir obtenu un DEM de saxophone et de musique de chambre en 2011, il intègre la classe de Jean-Denis Michat au CRR de Lyon en 2013. Parallèlement à ses études de musique classique, Sandro pratique beaucoup le jazz et se produit lors de nombreux concerts dans des festivals comme le festival de jazz de Vannes (invité par le Spok Frevo Orchestra) ou encore au Cosmo Jazz Festival de Chamonix d’André Manoukian. Il se produit régulièrement en concert avec ce dernier et a récemment enregistré pour l’un de ses albums.</p><p>Depuis le début de sa jeune carrière, Sandro Compagnon a eu l’occasion de se produire dans des salles et festivals de prestige, en France ainsi qu’à l’international (Philharmonie de Paris, Wigmore Hall de Londres, Festival Radio-France de Montpellier, salle Cortot, Izumi Hall d’Osaka, Topan Hall de Tokyo, Folles Journées de Nantes, maison de la radio, invité en soliste par l’orchestre de la Garde Républicaine…). Il joue régulièrement avec le pianiste Gaspard Dehaene. Ensemble, ils se sont notamment produits au prestigieux festival du Printemps des Arts de Monte-Carlo. Aussi, Sandro Compagnon collabore étroitement depuis plusieurs années avec le compositeur Bruno Mantovani. Il a fait la création de la version pour saxophone soprano de sa pièce pour flûte seule « Früh » à la Scala Paris en direct sur France Musique, a transcrit de nombreuses œuvres pour bois au saxophone et a récemment enregistré son premier disque solo, dédié à la musique du compositeur.</p><p>Il est diplômé de Master en saxophone et en musique de chambre au CNSMDP dans les classes de Claude Delangle et Michel Moraguès et, il suit le cursus d’improvisation générative auprès de Vincent LêQuang et Alexandros Markeas. En 2017, il remporte le 1er prix du concours international de musique de chambre d’Osaka avec le quatuor Zahir dont il était membre entre 2016 et 2021, en novembre 2019, le 3ème prix au concours international Adolphe Sax de Dinant en Belgique et en octobre 2021, le 1er prix au concours international Thomas Kuti à Thessalonique, en Grèce. Sandro est aussi, depuis mai 2021, lauréat de la Fondation Banque Populaire. Il vient d’être admis en Master Soliste à la ZHdK de Zürich (Suisse) dans la classe de Lars Mlekusch.</p>
+        <p>Né à Nice en 1996, Sandro Compagnon commence le saxophone à 6 ans lorsqu\'il déménage à Chamonix Mont-Blanc avec comme premier professeur, son père. Deux ans plus tard, il commence sa scolarité au CRR d\'Annecy dans la classe de Christian Charnay puis de Fabrizio Mancuso. En 2006, il obtient le troisième prix au concours européen de Gap dans la catégorie des moins de 16 ans et en 2010 le troisième prix du concours européen de Valenciennes dans la catégorie soliste.</p><p>Après avoir obtenu un DEM de saxophone et de musique de chambre en 2011, il int��gre la classe de Jean-Denis Michat au CRR de Lyon en 2013. Parallèlement à ses études de musique classique, Sandro pratique beaucoup le jazz et se produit lors de nombreux concerts dans des festivals comme le festival de jazz de Vannes (invité par le Spok Frevo Orchestra) ou encore au Cosmo Jazz Festival de Chamonix d\'André Manoukian. Il se produit régulièrement en concert avec ce dernier et a récemment enregistré pour l\'un de ses albums.</p><p>Depuis le début de sa jeune carrière, Sandro Compagnon a eu l\'occasion de se produire dans des salles et festivals de prestige, en France ainsi qu\'à l\'international (Philharmonie de Paris, Wigmore Hall de Londres, Festival Radio-France de Montpellier, salle Cortot, Izumi Hall d\'Osaka, Topan Hall de Tokyo, Folles Journées de Nantes, maison de la radio, invité en soliste par l\'orchestre de la Garde Républicaine…). Il joue régulièrement avec le pianiste Gaspard Dehaene. Ensemble, ils se sont notamment produits au prestigieux festival du Printemps des Arts de Monte-Carlo. Aussi, Sandro Compagnon collabore étroitement depuis plusieurs années avec le compositeur Bruno Mantovani. Il a fait la création de la version pour saxophone soprano de sa pièce pour flûte seule « Früh » à la Scala Paris en direct sur France Musique, a transcrit de nombreuses œuvres pour bois au saxophone et a récemment enregistré son premier disque solo, dédié à la musique du compositeur.</p><p>Il est diplômé de Master en saxophone et en musique de chambre au CNSMDP dans les classes de Claude Delangle et Michel Moraguès et, il suit le cursus d\'improvisation générative auprès de Vincent LêQuang et Alexandros Markeas. En 2017, il remporte le 1er prix du concours international de musique de chambre d\'Osaka avec le quatuor Zahir dont il était membre entre 2016 et 2021, en novembre 2019, le 3ème prix au concours international Adolphe Sax de Dinant en Belgique et en octobre 2021, le 1er prix au concours international Thomas Kuti à Thessalonique, en Grèce. Sandro est aussi, depuis mai 2021, lauréat de la Fondation Banque Populaire. Il vient d\'être admis en Master Soliste à la ZHdK de Zürich (Suisse) dans la classe de Lars Mlekusch.</p>
+        <hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a>
       </div>
     </div>
   </div>
@@ -902,7 +1148,9 @@ Il a également été professeur de saxophone au CNSM de Paris de 2000 à 2004.<
           
           Elle s\'est produite en tant que soliste avec l\'Orchestre Philharmonique de Tokyo, l\'Orchestre Symphonique de Gunma, l\'Orchestre Philharmonique du Kansai, l\'Orchestre Symphonique de Tokyo, le New Japan Philharmonic, l\'Orchestre Philharmonique de Geidai, l\'Orchestre à Vent de Sienne et l\'Orchestre de Chambre de Tokyo.</p>
 <p>Actuellement, elle est membre du Lumie Saxophone Quartet et du Panda Wind Orchestra et enseigne le saxophone au Showa Music College.<br/>
-<br/></p></div></div></div></div>
+<br/></p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a></div></div></div></div>
 </div>
 </div>
 </div>
@@ -914,19 +1162,87 @@ Il a également été professeur de saxophone au CNSM de Paris de 2000 à 2004.<
 <button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
 </div>
 <div class="modal-body">
-<p class="mb-0">Pianiste accompagnatrice de l’UES, elle participe aux activités pédagogiques (cours, accompagnement) et apparaît régulièrement sur les programmes des concerts.</p>
+<p class="mb-0">Pianiste accompagnatrice de l\'UES, elle participe aux activités pédagogiques (cours, accompagnement) et apparaît régulièrement sur les programmes des concerts.</p>
 <hr class="my-4"/>
-<a class="btn btn-outline-light btn-sm" href="https://www.univsax.com/enseignement_equipe.php" rel="noopener" target="_blank">Voir la liste de l’équipe</a>
-<a class="btn btn-outline-light btn-sm" href="https://www.univsax.com/concerts.php" rel="noopener" target="_blank">Voir les concerts 2025</a>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a>
 </div>
 </div>
 </div>
 </div>
 
-    <!-- ============================
+<div aria-hidden="true" class="modal fade" id="modaliren" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content ues-modal">
+<div class="modal-header">
+<h5 class="modal-title">Iren Seleljo</h5>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p class="mb-0">Pianiste accompagnatrice de l\'UES, elle participe aux activités pédagogiques (cours, accompagnement) et apparaît régulièrement sur les programmes des concerts.</p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a>
+</div>
+</div>
+</div>
+</div>
+
+<section id="ues-concerts" class="ues-section py-7">
+  <div class="container-xxl">
+    <div class="row align-items-start">
+      <!-- Text content (Left) -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <h2 class="ues-title text-uppercase">
+          <i class="bi bi-music-note"></i> <span class="">C</span>oncerts
+        </h2>
+        <p class="ues-subtitle">Du 13 au 23 juillet 2026</p>
+        <p class="ues-subtitle">Programme des Concerts (gratuits) :</p>
+        <div class="ues-concerts-list">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h4 class="card-title">
+                GAP, Chapelle des pénitents
+              </h4>
+              <ul class="list-group">
+                <li class="list-group-item"><strong>... </strong>: prochainement....</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Video and slideshow (Right) -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="d-flex flex-column align-items-center">
+          <!-- Video Placeholder -->
+          <div class="ues-video-placeholder border bg-white shadow-sm p-3 rounded text-center w-100 mb-4" style="max-width: 500px;">
+            <i class="bi bi-play-circle" style="font-size: 100px; color: grey"></i>
+            <p class="mt-3" align="center">Future concert video placeholder</p>
+          </div>
+          <!-- Slideshow Placeholder -->
+         
+            <!-- Slideshow Placeholder -->
+<div class="ues-slideshow-placeholder  shadow-sm p-3 rounded text-center w-100" style="max-width: 500px;">
+  <img src="assets/img/ues/concert_img1.jpg"
+       class="img-fluid rounded-3"
+       alt="Photo de concert UES"
+       loading="lazy">
+  <p class="mt-2 mb-0 small text-muted" align="center">Concerts des étudiants de l\'UES</p>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    
+
+<!-- ============================
          CONTACT
          ============================ -->
-    <section id="contact" class="ues-contact py-5">
+    <section id="contact" class="ues-contact py-7">
   <div class="container-xxl ues-contact__wrap">
 
     <!-- Titre gauche (style OIB) -->
@@ -945,10 +1261,21 @@ Il a également été professeur de saxophone au CNSM de Paris de 2000 à 2004.<
             </span>
             <div>
               <h4>Adresse :</h4>
-              <p>14 chemin de Vigneaux - Romette<br>05000 Gap FRANCE</p>
+              <p>14 chemin de Vigneaux<br>
+                Romette<br>05000 Gap FRANCE</p>
             </div>
           </div>
 
+          <div class="ues-contact__item">
+            <span class="ues-contact__icon" aria-hidden="true">
+              <i class="bi bi-telephone-inbound"></i>
+            </span>
+            <div>
+              <h4>Téléphone:</h4>
+              <p>+033 (0)4.92.45.06.48</p>
+            </div>
+          </div>
+          
           <div class="ues-contact__item">
             <span class="ues-contact__icon" aria-hidden="true">
               <i class="bi bi-envelope"></i>
@@ -958,6 +1285,21 @@ Il a également été professeur de saxophone au CNSM de Paris de 2000 à 2004.<
               <p><a href="mailto:contact@univsax.com">contact@univsax.com</a></p>
             </div>
           </div>
+          
+          <div class="ues-contact__item">
+            <span class="ues-contact__icon" aria-hidden="true">
+              <i class="bi bi-house-check"></i>
+            </span>
+            <div>
+              <h4>Hébergement:</h4>
+              <p>Foyer Des Jeunes Travailleurs<br>
+73 Boulevard Georges Pompidou<br>
+05000 Gap FRANCE	 <br>
+<br>
+Tel : +033 (0)4 92 40 24 00</p>
+            </div>
+          </div>
+          
         </div>
       </div>
 
@@ -970,7 +1312,7 @@ Il a également été professeur de saxophone au CNSM de Paris de 2000 à 2004.<
             ' .
 retablir_echappements_modeles(executer_balise_dynamique('FORMULAIRE_CONTACT',
 	array(),
-	array('squelettes/sommaire.html','html_97e4732073be3381c886990f51312265','',793,$GLOBALS['spip_lang']))) .
+	array('squelettes/sommaire.html','html_97e4732073be3381c886990f51312265','',1243,$GLOBALS['spip_lang']))) .
 '
           </div>
         </div>
@@ -988,50 +1330,45 @@ retablir_echappements_modeles(executer_balise_dynamique('FORMULAIRE_CONTACT',
           <div class="row">
             <div class="col-lg-4 col-md-6 col-12">
               <div class="single-footer f-about">
-                <div class="logo">
-                  <a href="index.html">
-                    <img src="assets/images/logo/logo_cine.png" alt="Cinecitoyen">
-                  </a>
+                <div class="logo ues_logo"> <img src="assets/img/ues/ues_blc.png" alt="UES saxophone stage">
                 </div>
-                <p><em>De l\'émotion... à la reflexion !</em></p>
                 <h4 class="social-title">
                   Suivez-nous :
-                  <a href="https://fr-fr.facebook.com/cinecitoyen/" target="_blank" rel="noopener">
+                  <a href="https://www.facebook.com/univsax/" target="_blank" rel="noopener">
                     <i class="bi bi-facebook"></i>
                   </a>
                 </h4>
               </div>
             </div>
 
-            <div class="col-lg-2 col-md-6 col-12">
+            <div class="col-lg-3 col-md-6 col-12">
               <div class="single-footer f-link">
                 <h3>Menu</h3>
-                ' .
-(($t1 = BOUCLE_navhtml_97e4732073be3381c886990f51312265($Cache, $Pile, $doublons, $Numrows, $SP))!=='' ?
-		((	'
-                <nav class="nav clearfix' .
-		(($t3 = strval(retablir_echappements_modeles((((($Numrows['_nav']['total'] ?? 0) == '1')) ?' ' :''))))!=='' ?
-				(' ' . $t3 . 'none') :
-				'') .
-		'" id="nav" role="navigation">
                   <ul>
-                    <li class="nav-item"><a href="index.php">Accueil</a></li>
-                    ') . $t1 . '
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="index.php">Accueil</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="0">Présentation</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="spip.php?rubrique5">Inscription</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="1">Enseignement</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="2">Histoire</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="3">Une journée à l\'UES</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-concerts">Les concerts</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#part">Nos partenaires</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#contact">Nous contacter</a></li>
                   </ul>
                 </nav>
-                ') :
-		'') .
-'
+                </B_nav>
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-2 col-md-6 col-12">
               <div class="single-footer f-link">
-                <h3>Films en débat</h3>
+                <h3>Espace étudiants</h3>
                 <ul>
-                  ' .
-BOUCLE_serv3html_97e4732073be3381c886990f51312265($Cache, $Pile, $doublons, $Numrows, $SP) .
-'
+                  <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">Accueil</a></li>
+        <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">S\'inscrire</a></li>
+        <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">Mon dossier</a></li>
+        <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">Téléchargement</a></li>
+      <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">Chat UES</a></li>
                 </ul>
               </div>
             </div>
@@ -1039,9 +1376,11 @@ BOUCLE_serv3html_97e4732073be3381c886990f51312265($Cache, $Pile, $doublons, $Num
             <div class="col-lg-3 col-md-6 col-12">
               <div class="single-footer newsletter">
                 <h3>S\'inscrire à la newsletter</h3>
-                <p>Recevez les dernières actualités, programme et prochaines projection débat de Cinecitoyen.</p>
+                <p>Recevez les dernières actualités, programmes des concerts et bien plus...</p>
                 ' .
-retablir_echappements_modeles('') .
+retablir_echappements_modeles(executer_balise_dynamique('FORMULAIRE_NEWSLETTER_SUBSCRIBE',
+	array(),
+	array('squelettes/sommaire.html','html_97e4732073be3381c886990f51312265','',1307,$GLOBALS['spip_lang']))) .
 '
               </div>
             </div>
@@ -1055,7 +1394,7 @@ retablir_echappements_modeles('') .
         <div class="inner-content">
           <div class="row">
             <div class="col-lg-6 col-md-6 col-12">
-              <p class="copyright-text">© 2023 Cinecitoyen - Tous droits réservés</p>
+              <p class="copyright-text">© 2026 Université Européenne de Saxophone - Tous droits réservés</p>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
               <p class="copyright-owner">Designed and Developed by GD</p>
@@ -1065,216 +1404,258 @@ retablir_echappements_modeles('') .
       </div>
     </div>
 
-    <!-- Waves -->
-    <div class="ues-footer-waves" aria-hidden="true">
-      <svg class="ues-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
-        <defs>
-          <path id="ues-gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"/>
-        </defs>
-        <g class="ues-parallax">
-          <use href="#ues-gentle-wave" xlink:href="#ues-gentle-wave" x="48" y="0"></use>
-          <use href="#ues-gentle-wave" xlink:href="#ues-gentle-wave" x="48" y="3"></use>
-          <use href="#ues-gentle-wave" xlink:href="#ues-gentle-wave" x="48" y="5"></use>
-          <use href="#ues-gentle-wave" xlink:href="#ues-gentle-wave" x="48" y="7"></use>
-        </g>
-      </svg>
+  <!-- Waves (DOIT rester DANS le footer) -->
+  <div class="ues-footer-waves" aria-hidden="true">
+    <svg class="ues-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+      <defs>
+        <path id="ues-gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"></path>
+      </defs>
+      <g class="ues-parallax">
+  <use href="#ues-gentle-wave" x="48" y="0"></use>
+  <use href="#ues-gentle-wave" x="48" y="4"></use>
+</g>
+
+    </svg>
+  </div>
+</footer>
+
+<!-- ======= Bandeau partenaires (EN DEHORS du footer, sous la vague) ======= -->
+<section id="cta" class="cta partenaire">
+  <div class="container">
+    <div class="row" data-aos="zoom-out">
+      <div class="col-lg-12">
+        <div class="ues-logo-strip__container">
+<div class="ues-logo-strip__row">
+<img alt="Henri SELMER Paris" class="ues-logo ues-logo--selmer" loading="lazy" src="assets/img/ues/Henri_Selmer_Paris_logo.svg"/>
+<img alt="Vandoren" class="ues-logo ues-logo--vandoren" loading="lazy" src="assets/img/ues/vandoren.svg"/>
+<img alt="Ville de Gap" class="ues-logo ues-logo--gap" loading="lazy" src="assets/img/ues/Logo_ville_de_Gap.svg"/>
+<img alt="Hautes-Alpes — le département" class="ues-logo ues-logo--hautes-alpes" loading="lazy" src="assets/img/ues/Logo_Hautes_Alpes.svg"/>
+
+</div>
+</div>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
   ' .
 retablir_echappements_modeles(interdire_scripts(($Pile[0]['insert_footer'] ?? null))) .
 '
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const ensureBootstrap = (cb) => {
-      if (window.bootstrap && window.bootstrap.Carousel) return cb();
-      const s = document.createElement("script");
-      s.src = "assets/vendor/bootstrap/js/bootstrap.bundle.min.js";
-      s.onload = cb;
-      s.onerror = () => console.warn("Bootstrap JS introuvable :", s.src);
-      document.body.appendChild(s);
-    };
-
-    ensureBootstrap(() => {
-      const carouselEl = document.querySelector("#uesCarousel");
-      if (!carouselEl) return;
-
-      const navButtons = Array.from(
-        document.querySelectorAll(\'.ues-tabbtn[data-bs-target="#uesCarousel"][data-bs-slide-to]\')
-      );
-
-      const items = Array.from(carouselEl.querySelectorAll(".carousel-item"));
-
-      const setActiveButton = (activeIndex) => {
-        navButtons.forEach((btn) => {
-          const isActive = Number(btn.getAttribute("data-bs-slide-to")) === activeIndex;
-
-          btn.classList.toggle("is-active", isActive);
-          btn.setAttribute("aria-current", isActive ? "true" : "false");
-
-          // Optionnel : variation Bootstrap (actif en sombre)
-          btn.classList.toggle("btn-dark", isActive);
-          btn.classList.toggle("btn-light", !isActive);
-        });
-      };
-
-      // Etat initial
-      const activeItem = carouselEl.querySelector(".carousel-item.active");
-      const initialIndex = Math.max(0, items.indexOf(activeItem));
-      setActiveButton(initialIndex);
-
-      // Mise à jour à chaque changement
-      carouselEl.addEventListener("slid.bs.carousel", (e) => {
-        const idx = (typeof e.to === "number")
-          ? e.to
-          : Math.max(0, items.indexOf(carouselEl.querySelector(".carousel-item.active")));
-        setActiveButton(idx);
-      });
-    });
-  });
-  </script>
+  
+  <!-- SCRIPT BLOCK UNIQUE ET OPTIMISÉ -->
+    <!-- SCRIPT UES (carousel + folio) -->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carouselEl = document.querySelector("#uesCarousel");
-    if (!carouselEl) return;
+document.addEventListener("DOMContentLoaded", function () {
 
-    const items = Array.from(carouselEl.querySelectorAll(".carousel-item"));
-    const buttons = Array.from(carouselEl.querySelectorAll(".ues-tabbtn"));
+  // -------- Folio (mini slider maison, sans Bootstrap Carousel) --------
+  (function initFolio(){
+    var folioEl = document.getElementById("uesFolio");
+    if (!folioEl) return;
 
-    function setActiveButtonByIndex(activeIndex){
-      buttons.forEach(btn => btn.classList.remove("active"));
-      buttons
-        .filter(btn => Number(btn.getAttribute("data-bs-slide-to")) === activeIndex)
-        .forEach(btn => btn.classList.add("active"));
+    // Mets ici les fichiers présents dans assets/img/folio
+    var folioImages = [
+      "image-1.jpg",
+      "image-2.jpg",
+      "image-3.jpg",
+      "image-4.jpg",
+      "image-5.jpg",
+      "image-6.jpg",
+      "image-7.jpg",
+      "image-8.jpg",
+      "image-9.jpg"
+    ];
+
+    var takeCount = Math.min(6, folioImages.length);
+
+    function shuffle(arr) {
+      var a = arr.slice();
+      for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+      }
+      return a;
     }
 
-    function getActiveIndex(){
-      const activeItem = carouselEl.querySelector(".carousel-item.active");
-      return Math.max(0, items.indexOf(activeItem));
-    }
+    var chosen = shuffle(folioImages).slice(0, takeCount);
+    var viewport = folioEl.querySelector(".ues-folio__viewport");
+    var dots = folioEl.querySelector(".ues-folio__dots");
+    var prevBtn = folioEl.querySelector(".ues-folio__prev");
+    var nextBtn = folioEl.querySelector(".ues-folio__next");
 
-    // état initial
-    setActiveButtonByIndex(getActiveIndex());
+    if (!viewport || !dots || !prevBtn || !nextBtn || chosen.length === 0) return;
 
-    // à chaque changement de slide
-    carouselEl.addEventListener("slid.bs.carousel", () => {
-      setActiveButtonByIndex(getActiveIndex());
+    // Construire DOM
+    chosen.forEach(function (file, idx) {
+      var item = document.createElement("div");
+      item.className = "ues-folio__item" + (idx === 0 ? " is-active" : "");
+      item.hidden = idx !== 0;
+      item.innerHTML =
+        \'<img src="assets/img/folio/\' + file + \'" class="ues-folio__img" alt="Folio \' + (idx + 1) + \'" loading="lazy" />\';
+      viewport.appendChild(item);
+
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "ues-folio__dot" + (idx === 0 ? " is-active" : "");
+      dot.setAttribute("aria-label", "Folio " + (idx + 1));
+      dot.addEventListener("click", function () { go(idx); });
+      dots.appendChild(dot);
     });
-  });
-</script>
 
-<script id="ues-scroll-header-script">
-/* UES : au scroll -> logo sort de la navbar, revient plus petit dans la topbar + menu noir */
-(function(){
-  const header = document.getElementById(\'header\');
-  if(!header) return;
+    var items = Array.prototype.slice.call(folioEl.querySelectorAll(".ues-folio__item"));
+    var dotEls = Array.prototype.slice.call(folioEl.querySelectorAll(".ues-folio__dot"));
+    var current = 0;
 
-  const navBrand = header.querySelector(\'.ues-nav .ues-brand\');
-  const topBrand = header.querySelector(\'.ues-topbar-brand\');
-  const threshold = 40; // px
+    function go(n) {
+      if (n === current) return;
+      items[current].classList.remove("is-active");
+      items[current].hidden = true;
+      dotEls[current].classList.remove("is-active");
 
-  let isCompact = false;
-  let ticking = false;
+      current = (n + items.length) % items.length;
 
-  function play(el, cls){
-    if(!el) return;
-    el.classList.remove(cls);
-    void el.offsetWidth; // reflow -> relance l\'animation
-    el.classList.add(cls);
-  }
-
-  function setCompact(on){
-    if(on === isCompact) return;
-    isCompact = on;
-
-    header.classList.toggle(\'ues-header--compact\', on);
-
-    if(on){
-      play(navBrand, \'ues-brand--out\');
-      play(topBrand, \'ues-brand--in\');
+      items[current].hidden = false;
+      items[current].classList.add("is-active");
+      dotEls[current].classList.add("is-active");
     }
-  }
 
-  function onScroll(){
-    if(ticking) return;
-    ticking = true;
-    window.requestAnimationFrame(() => {
-      setCompact(window.scrollY > threshold);
-      ticking = false;
-    });
-  }
+    function next() { go(current + 1); }
+    function prev() { go(current - 1); }
 
-  window.addEventListener(\'scroll\', onScroll, {passive: true});
-  onScroll();
+    nextBtn.addEventListener("click", next);
+    prevBtn.addEventListener("click", prev);
 
-  function cleanup(e){
-    if(e.animationName === \'ues-logo-out\'){
-      e.target.classList.remove(\'ues-brand--out\');
+    // Auto-rotation (pause au survol / focus)
+    var intervalMs = 4000;
+    var timer = setInterval(next, intervalMs);
+
+    function stop() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
     }
-    if(e.animationName === \'ues-logo-in\'){
-      e.target.classList.remove(\'ues-brand--in\');
+    function start() {
+      if (!timer && items.length > 1) timer = setInterval(next, intervalMs);
     }
-  }
 
-  if(navBrand) navBrand.addEventListener(\'animationend\', cleanup);
-  if(topBrand) topBrand.addEventListener(\'animationend\', cleanup);
-})();
-</script>
-<script>
-(function(){
-  function ensureBootstrap(cb){
-    if (window.bootstrap && window.bootstrap.Carousel) return cb();
+    folioEl.addEventListener("mouseenter", stop);
+    folioEl.addEventListener("mouseleave", start);
+    folioEl.addEventListener("focusin", stop);
+    folioEl.addEventListener("focusout", start);
+  })();
 
-    // évite de charger 2 fois si un script a déjà été injecté
-    const existing = document.querySelector(\'script[data-ues-bootstrap]\');
-    if (existing){
-      existing.addEventListener(\'load\', cb, { once: true });
+  // -------- UES Carousel (Bootstrap) --------
+  function ensureBootstrap(ready) {
+    if (window.bootstrap && window.bootstrap.Carousel) return ready();
+
+    var existing = document.querySelector(\'script[data-ues-bootstrap="1"]\');
+    if (existing) {
+      existing.addEventListener("load", ready, { once: true });
       return;
     }
 
-    const s = document.createElement("script");
-    s.src = "assets/vendor/bootstrap/js/bootstrap.bundle.min.js";
-    s.dataset.uesBootstrap = "1";
-    s.onload = cb;
-    s.onerror = () => console.warn("Bootstrap JS introuvable :", s.src);
-    document.body.appendChild(s);
+    var script = document.createElement("script");
+    script.src = "assets/vendor/bootstrap/js/bootstrap.bundle.min.js";
+    script.setAttribute("data-ues-bootstrap", "1");
+    script.addEventListener("load", ready, { once: true });
+    document.body.appendChild(script);
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    ensureBootstrap(() => {
-      const carouselEl = document.querySelector("#uesCarousel");
-      const slidesSection = document.querySelector("#ues-slides");
-      if (!carouselEl) return;
+  function initUesCarousel() {
+    var carouselEl = document.getElementById("uesCarousel");
+    if (!carouselEl || !window.bootstrap || !bootstrap.Carousel) return;
 
-      const carousel = bootstrap.Carousel.getOrCreateInstance(carouselEl, {
-        interval: false,
-        touch: true
+    var carousel = bootstrap.Carousel.getOrCreateInstance(carouselEl, {
+      interval: false,
+      touch: true
+    });
+
+    var buttons = carouselEl.querySelectorAll(".ues-slide-nav .ues-tabbtn");
+
+    function updateButtons(activeIndex) {
+      buttons.forEach(function (btn) {
+        btn.classList.remove("active", "btn-dark");
+        btn.classList.add("btn-light");
       });
 
-      document
-        .querySelectorAll(\'.ues-quicklinks a[data-bs-target="#uesCarousel"][data-bs-slide-to]\')
-        .forEach((link) => {
-          link.addEventListener("click", (e) => {
-            e.preventDefault();
+      var activeButtons = carouselEl.querySelectorAll(\'.ues-slide-nav .ues-tabbtn[data-bs-slide-to="\' + activeIndex + \'"]\');
+      activeButtons.forEach(function (btn) {
+        btn.classList.remove("btn-light");
+        btn.classList.add("active", "btn-dark");
+      });
+    }
 
-            const idx = parseInt(link.getAttribute("data-bs-slide-to"), 10);
-            carousel.to(idx);
+    // Si tu cliques sur un bouton, on pilote explicitement le carousel
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation(); // évite le double déclenchement via le data-API
+        var index = parseInt(btn.getAttribute("data-bs-slide-to"), 10);
+        carousel.to(index);
+      });
+    });
 
-            (slidesSection || carouselEl).scrollIntoView({
-              behavior: "smooth",
-              block: "start"
-            });
+    // Liens externes (Quicklinks, footer, etc.)
+    var links = document.querySelectorAll(\'a[data-bs-target="#uesCarousel"][data-bs-slide-to]\');
+    links.forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var index = parseInt(link.getAttribute("data-bs-slide-to"), 10);
+        carousel.to(index);
+        var anchor = document.getElementById("ues-slides");
+        if (anchor) anchor.scrollIntoView({ behavior: "smooth" });
+      });
+    });
 
-            // optionnel : met à jour l\'URL proprement
-            history.replaceState(null, "", "#ues-slides");
-          });
-        });
+    carouselEl.addEventListener("slid.bs.carousel", function (e) {
+      updateButtons(e.to);
+    });
+
+    updateButtons(0);
+  }
+
+  ensureBootstrap(initUesCarousel);
+});
+</script>
+<script>
+  // Script pour gérer l\'apparence du menu au scroll
+  document.addEventListener(\'scroll\', () => {
+    const header = document.getElementById(\'header\');
+    if (window.scrollY > 100) {
+      header.classList.add(\'ues-header--compact\');
+    } else {
+      header.classList.remove(\'ues-header--compact\');
+    }
+  });
+</script>
+<script>
+// Fermer le menu mobile après un clic sur un lien
+document.addEventListener(\'DOMContentLoaded\', function() {
+  const navLinks = document.querySelectorAll(\'#uesNav .nav-link\');
+  const navCollapse = document.getElementById(\'uesNav\');
+  
+  navLinks.forEach(link => {
+    link.addEventListener(\'click\', function() {
+      // Vérifier si le menu est ouvert (visible en mobile)
+      if (navCollapse.classList.contains(\'show\')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
+        if (bsCollapse) {
+          bsCollapse.hide();
+        } else {
+          // Si l\'instance n\'existe pas, la créer et fermer
+          new bootstrap.Collapse(navCollapse, {
+            toggle: false
+          }).hide();
+        }
+      }
     });
   });
-})();
+});
 </script>
 </body>
-</html>
-');
+</html>');
 
 	return analyse_resultat_skel('html_97e4732073be3381c886990f51312265', $Cache, $page, 'squelettes/sommaire.html');
 }

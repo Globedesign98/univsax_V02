@@ -1,0 +1,29 @@
+<div class="formulaire_spip formulaire_inscription_ues ajax">
+  
+  <!-- Messages de validation -->
+  [(#ENV{message_ok}|oui)
+    <div class="alert alert-success">#ENV{message_ok}</div>
+  ]
+  [(#ENV{message_erreur}|oui)
+    <div class="alert alert-danger">#ENV{message_erreur}</div>
+  ]
+
+  [(#ENV{editable}|oui)
+  <form method="post" action="#ENV{action}">
+    #ACTION_FORMULAIRE{#ENV{action}}
+    <fieldset>
+        <legend class="h5 mb-3">Création de votre dossier</legend>
+        <div class="mb-3">
+            <label class="form-label" for="titre">Nom du dossier (Votre Nom) :</label>
+            <input type="text" name="titre" id="titre" class="form-control" placeholder="Ex: DUPONT" value="[(#ENV{titre})]" required>
+        </div>
+
+        <div class="mt-3 d-flex gap-2">
+            <button type="submit" name="save" value="1" class="btn btn-primary">
+            <i class="bi bi-folder-plus"></i> Créer le dossier
+            </button>
+        </div>
+    </fieldset>
+  </form>
+  ]
+</div>

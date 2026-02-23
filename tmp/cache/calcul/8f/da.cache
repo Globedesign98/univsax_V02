@@ -1,0 +1,138 @@
+a:2:{s:9:"nom_cache";s:38:"8fda6bf6fe905e8960b9130272eb2472.cache";s:6:"valeur";a:12:{s:9:"squelette";s:37:"html_4d625efd1f7368ad40ca9214decf4886";s:6:"source";s:38:"prive/formulaires/instituer_objet.html";s:11:"process_ins";s:4:"html";s:11:"invalideurs";a:1:{s:5:"cache";s:38:"8fda6bf6fe905e8960b9130272eb2472.cache";}s:7:"entetes";a:1:{s:12:"X-Spip-Cache";i:3600;}s:5:"duree";i:0;s:5:"texte";s:5111:"<div class="instituer_objet">
+	
+
+	<div class="statut_actuel">
+		<strong class="editer-label">Statut </strong>
+		<div class="statut statut--prepa">
+			<span class="statut-icone"><img src='prive/themes/spip/images/puce-preparer-xx.svg?1764889040' alt='Article en cours de r&#233;daction' title="Article en cours de r&#233;daction" width='12' height='12' /></span>
+			<span class="statut-label">en cours de r&eacute;daction</span>
+		</div>
+	</div>
+
+	
+	 
+	<div class="formulaire_spip formulaire_editer formulaire_instituer formulaire_instituer_objet formulaire_instituer_objet-article formulaire_instituer_objet-article-1434">
+		
+		
+		<form method='post' action='/univsax/spip.php?rubrique5'><div>
+			<span class="form-hidden"><input name="id_rubrique" value="5" type="hidden"
+><input name="page" value="rubrique" type="hidden"
+><input name='formulaire_action' type='hidden'
+		value='instituer_objet'><input name='formulaire_action_args' type='hidden'
+		value='s9Fiuscu7CpwONMLw/OZjE8hnOq8OCG/BVuuCvaEylpD9V7LG3t8fsppnnCEUfLcGdjL8GWI9Lmqt36RqJWFtK5f4rNsR++ptWvrsX4XcWq/DgZdUaOt4+0X7biCUFRfdpFFsZ/6usUlbu2aR8d8QkKfVWYnf4G+7iXogZ9aLpnVjlHPORWPJvoJLCqfy2mywcjTiw=='><input name='formulaire_action_sign' type='hidden'
+		value='49eaa19f2d2935809ffa51c062542ce33a5268e7f9c0c8393a78dd4ffc52021d'><input type='hidden' name='statut_old' value='prepa'></span>
+
+			<div class="editer-groupe">
+				<fieldset class="editer editer_statut statut_prepa obligatoire">
+					<legend class="editer-label">Modifier le statut</legend>
+					
+					
+					<div class="choix">
+						<input
+							type="radio" class="radio"
+							name="statut"
+							id="instituer_article_1434_choix_prop"
+							
+							value="prop"
+						>
+						<label for="instituer_article_1434_choix_prop">
+							<span class="statut">
+								<span class="statut-icone"><img src='prive/themes/spip/images/puce-proposer-xx.svg?1764889040' alt='Article propos&#233;' title="Article propos&#233;" width='12' height='12' /></span>
+								<span class="statut-label">propos&eacute; &agrave; l'&eacute;valuation</span>
+							</span>
+						</label>
+					</div>
+					
+					<div class="choix">
+						<input
+							type="radio" class="radio"
+							name="statut"
+							id="instituer_article_1434_choix_publie"
+							
+							value="publie"
+						>
+						<label for="instituer_article_1434_choix_publie">
+							<span class="statut">
+								<span class="statut-icone"><img src='prive/themes/spip/images/puce-publier-xx.svg?1764889040' alt='Article publi&#233;' title="Article publi&#233;" width='12' height='12' /></span>
+								<span class="statut-label">publi&eacute; en ligne</span>
+							</span>
+						</label>
+					</div>
+					
+					<div class="choix">
+						<input
+							type="radio" class="radio"
+							name="statut"
+							id="instituer_article_1434_choix_refuse"
+							
+							value="refuse"
+						>
+						<label for="instituer_article_1434_choix_refuse">
+							<span class="statut">
+								<span class="statut-icone"><img src='prive/themes/spip/images/puce-refuser-xx.svg?1764889040' alt='Article refus&#233;' title="Article refus&#233;" width='12' height='12' /></span>
+								<span class="statut-label">refus&eacute;</span>
+							</span>
+						</label>
+					</div>
+					
+					<div class="choix">
+						<input
+							type="radio" class="radio"
+							name="statut"
+							id="instituer_article_1434_choix_poubelle"
+							
+							value="poubelle"
+						>
+						<label for="instituer_article_1434_choix_poubelle">
+							<span class="statut">
+								<span class="statut-icone"><img src='prive/themes/spip/images/puce-supprimer-xx.svg?1764889040' alt='Article supprim&#233;' title="Article supprim&#233;" width='12' height='12' /></span>
+								<span class="statut-label">&agrave; la poubelle</span>
+							</span>
+						</label>
+					</div>
+					
+				</fieldset>
+			</div>
+			<!--extra-->
+			<div class='boutons'>
+				<span class='image_loading'>&nbsp;</span>
+				<div class="groupe-btns">
+					<button type='button' class='btn submit btn_secondaire' name='annuler'>Annuler</button>
+					<button type='submit' class='btn submit' name='changer'>Changer</button>
+				</div>
+			</div>
+		</div></form>
+	</div>
+	
+</div>
+
+<script>
+	;(function($){
+		
+		 
+			var form = $('.formulaire_instituer_objet-article-1434');
+
+			// Un bouton pour afficher le form pour modifier
+			var bouton_modifier =
+				$('<button class="btn_mini btn_secondaire btn_modifier float-end" aria-expanded="false">Changer</button>')
+				.click(function() {
+					form.slideDown().closest('.instituer_objet').removeClass('form-closed');
+					/*$(this).slideUp().attr('aria-expanded', 'true');*/
+				})
+			;
+
+			// On ajoute ce bouton dynamiquement
+			$('.instituer_objet .statut_actuel .editer-label').after(bouton_modifier);
+			$('.instituer_objet button[name=annuler]').on('click', function() {
+				form.find('input[type=radio]:checked').prop('checked', false);
+				form.slideUp().closest('.instituer_objet').addClass('form-closed');
+			});
+
+			 
+				// On masque au départ le form pour modifier
+				form.closest('.instituer_objet').addClass('form-closed');
+			
+		
+	})(jQuery);
+</script>
+";s:5:"notes";s:0:"";s:8:"contexte";a:21:{s:8:"editable";s:1:" ";s:6:"statut";s:5:"prepa";s:6:"_objet";s:7:"article";s:9:"_id_objet";s:4:"1434";s:8:"_statuts";a:5:{s:5:"prepa";s:31:"texte_statut_en_cours_redaction";s:4:"prop";s:31:"texte_statut_propose_evaluation";s:6:"publie";s:19:"texte_statut_publie";s:6:"refuse";s:19:"texte_statut_refuse";s:8:"poubelle";s:21:"texte_statut_poubelle";}s:10:"_publiable";b:1;s:6:"_label";s:11:"info_statut";s:5:"_aide";s:9:"artstatut";s:7:"_hidden";s:53:"<input type='hidden' name='statut_old' value='prepa'>";s:10:"_pipelines";a:1:{s:15:"formulaire_fond";a:3:{s:4:"form";s:15:"instituer_objet";s:4:"args";a:3:{i:0;s:7:"article";i:1;s:4:"1434";i:2;s:62:"spip.php?rubrique5&amp;slide=3&amp;var_mode=preview#ues-slides";}s:13:"je_suis_poste";b:0;}}s:15:"formulaire_args";s:200:"s9Fiuscu7CpwONMLw/OZjE8hnOq8OCG/BVuuCvaEylpD9V7LG3t8fsppnnCEUfLcGdjL8GWI9Lmqt36RqJWFtK5f4rNsR++ptWvrsX4XcWq/DgZdUaOt4+0X7biCUFRfdpFFsZ/6usUlbu2aR8d8QkKfVWYnf4G+7iXogZ9aLpnVjlHPORWPJvoJLCqfy2mywcjTiw==";s:7:"erreurs";a:0:{}s:6:"action";s:27:"/univsax/spip.php?rubrique5";s:4:"form";s:15:"instituer_objet";s:15:"formulaire_sign";s:64:"49eaa19f2d2935809ffa51c062542ce33a5268e7f9c0c8393a78dd4ffc52021d";s:2:"id";s:3:"new";s:4:"lang";s:2:"fr";s:4:"date";s:19:"2026-02-19 02:08:58";s:12:"date_default";b:1;s:10:"date_redac";s:19:"2026-02-19 02:08:58";s:18:"date_redac_default";b:1;}s:12:"lastmodified";i:1771463337;s:2:"gz";b:0;s:3:"sig";i:3613365080;}}

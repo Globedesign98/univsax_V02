@@ -1,0 +1,77 @@
+2026-02-05 05:08:40 51.158.253.189 (pid 126159) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:08:40 51.158.253.189 (pid 126159) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:08:40 51.158.253.189 (pid 126159) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:09:19 51.158.253.189 (pid 126195) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:09:19 51.158.253.189 (pid 126195) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:09:19 51.158.253.189 (pid 126195) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:09:43 51.158.253.189 (pid 126159) :Pri:ERREUR: api.mailjet.com/v3/send : Error Status 0
+2026-02-05 05:12:08 51.158.253.189 (pid 76266) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:12:08 51.158.253.189 (pid 76266) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:12:08 51.158.253.189 (pid 76266) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:12:59 51.158.253.189 (pid 77061) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:12:59 51.158.253.189 (pid 77061) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:12:59 51.158.253.189 (pid 77061) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:13:10 51.158.253.189 (pid 76266) :Pri:ERREUR: api.mailjet.com/v3/send : Error Status 0
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: sendRequest via curl
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: 
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: GET api.mailjet.com/v3/REST/sender?Email=contact%40univsax.com FAIL resultat: 
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: sendRequest via curl
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: 
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: POST api.mailjet.com/v3/REST/sender FAIL resultat: 
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: sendRequest via curl
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: 
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: GET api.mailjet.com/v3/REST/sender?Email=contact%40univsax.com FAIL resultat: 
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: sendRequest via curl
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: 
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: POST api.mailjet.com/v3/send FAIL resultat: 
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:ERREUR: api.mailjet.com/v3/send : Error Status 0
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: sendRequest via curl
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: 
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: POST api.mailjet.com/v3/send FAIL resultat: 
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:ERREUR: api.mailjet.com/v3/send : Error Status 0
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: sendRequest via curl
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: 
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: POST api.mailjet.com/v3/send FAIL resultat: 
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:ERREUR: api.mailjet.com/v3/send : Error Status 0
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: sendRequest via curl
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: 
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: GET api.mailjet.com/v3/REST/sender?Email=contact%40univsax.com FAIL resultat: 
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: sendRequest via curl
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: 
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: POST api.mailjet.com/v3/REST/sender FAIL resultat: 
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: sendRequest via curl
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: 
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: GET api.mailjet.com/v3/REST/sender?Email=contact%40univsax.com FAIL resultat: 
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: sendRequest via curl
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: 
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: POST api.mailjet.com/v3/send FAIL resultat: 
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:ERREUR: api.mailjet.com/v3/send : Error Status 0
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: sendRequest via curl
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: 
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: GET api.mailjet.com/v3/REST/sender?Email=contact%40univsax.com FAIL resultat: 
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: sendRequest via curl
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: 
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: POST api.mailjet.com/v3/REST/sender FAIL resultat: 
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: sendRequest via curl
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: 
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: GET api.mailjet.com/v3/REST/sender?Email=contact%40univsax.com FAIL resultat: 
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: sendRequest via curl
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: 
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: POST api.mailjet.com/v3/send FAIL resultat: 
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:ERREUR: api.mailjet.com/v3/send : Error Status 0
+2026-02-05 05:19:01 51.158.253.189 (pid 76266) :Pri:ERREUR: api.mailjet.com/v3/send : Error Status 0
+2026-02-05 05:19:03 51.158.253.189 (pid 89497) :Pri:ERREUR: api.mailjet.com/v3/send : Error Status 0
+2026-02-05 05:19:04 51.158.253.189 (pid 77061) :Pri:ERREUR: api.mailjet.com/v3/send : Error Status 0
+2026-02-16 05:23:01 114.69.210.251 (pid 74828) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-16 05:23:01 114.69.210.251 (pid 74828) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-16 05:23:01 114.69.210.251 (pid 74828) :Pri:ERREUR: api.mailjet.com/v3/sender : Error Status 0
+2026-02-16 05:23:33 114.69.210.251 (pid 74828) :Pri:ERREUR: api.mailjet.com/v3/send : Error Status 0

@@ -1,0 +1,295 @@
+<BOUCLE_art(ARTICLES){id_article}{tout}>
+
+  [(#SET{prio,1})]
+  [(#STATUT|=={publie}|oui)
+    [(#INSCRIPTION|=={confirmée}|oui)
+      [(#PAIEMENTOK|=={oui}|oui)
+        [(#SET{prio,2})]
+      ]
+    ]
+  ]
+
+  [(#SET{uid,[(#ID_ARTICLE)]})]
+
+  <div class="accordion-item mb-2"
+       data-name="[(#TITRE|concat{' ',#PRENOM}|textebrut|strtolower)]"
+       data-prio="#GET{prio}"
+       data-docsok="[(#ENV{docs_ok}|sinon{0})]"
+       data-payok="[(#PAIEMENTOK|=={oui}|?{1,0})]"
+       data-auditeur="[(#AUDITEUR|=={oui}|?{1,0})]"
+       data-ts="[(#DATE|strtotime)]">
+
+    <h2 class="accordion-header" id="h-insc-#GET{uid}">
+      <button class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#c-insc-#GET{uid}"
+              aria-expanded="false"
+              aria-controls="c-insc-#GET{uid}">
+
+        <div class="d-flex w-100 align-items-center justify-content-between gap-3 flex-wrap">
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+    <!-- Avatar auteur (55px rond) -->
+    <BOUCLE_aut(AUTEURS){id_article}{0,1}>
+      [(#LOGO_AUTEUR
+        |image_reduire{45,45}
+        |inserer_attribut{class,ues-author-avatar}
+        |inserer_attribut{alt,''}
+      )]
+    </BOUCLE_aut>
+    <//B_aut>
+
+    <//B_aut>
+            <strong>#TITRE </strong>
+            
+            <strong> #PRENOM</strong>
+
+            [(#GET{prio}|=={2}|oui)
+              <span class="ues-pill ues-pill--ok">
+                <i class="bi bi-star-fill"></i> Validé/Confirmé/Payé
+              </span>
+            ]
+          </div>
+
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+          
+                      <!-- BOUTON WHATSAPP -->
+            [(#WHATSAPP|oui)
+              <span class="" title="Utilise WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+              </span>
+            ]
+            [(#WHATSAPP|non)
+              <span class="" style="opacity:0.3;" title="Pas de WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+              </span>
+            ]
+
+
+
+           <span class="ues-pill [(#STATUT|=={publie}|oui)ues-pill--ok]">
+  <i class="bi bi-sliders"></i>
+  [(#STATUT|=={publie}|oui)publié en ligne]
+  [(#STATUT|=={publie}|non)#STATUT]
+</span>
+
+[(#ENV{docs_ok}|=={1}|oui)
+  <span class="ues-pill ues-pill--ok">
+    <i class="bi bi-check2-circle"></i>  Signé
+  </span>
+]
+[(#ENV{docs_ok}|=={1}|non)
+  <span class="ues-pill ues-pill--todo">
+    <span class="ues-dot ues-dot--todo"></span> A faire
+  </span>
+]
+
+            [(#PAIEMENTOK|=={oui}|oui)
+              <span class="ues-pill ues-pill--ok">
+                <i class="bi bi-credit-card"></i> Paiement OK
+              </span>
+            ]
+            [(#PAIEMENTOK|=={oui}|non)
+              <span class="ues-pill ues-pill--todo">
+                <i class="bi bi-credit-card"></i> Paiement non
+              </span>
+            ]
+
+            [(#INSCRIPTION|=={confirmée}|oui)
+              <span class="ues-pill ues-pill--ok">
+                <i class="bi bi-check2-circle"></i> Confirmée
+              </span>
+            ]
+            [(#INSCRIPTION|=={confirmée}|non)
+              <span class="ues-pill ues-pill--todo">
+                <span class="ues-dot ues-dot--todo"></span> En attente
+              </span>
+            ]
+          </div>
+        </div>
+
+      </button>
+    </h2>
+
+    <div id="c-insc-#GET{uid}"
+         class="accordion-collapse collapse"
+         aria-labelledby="h-insc-#GET{uid}"
+         data-bs-parent="#accInscriptions">
+
+      <div class="accordion-body text-white">
+        <div class="row g-4 align-items-start">
+
+          <!-- COLONNE GAUCHE -->
+          <div class="col-12 col-lg-7">
+            <div class="card ues-card-dark shadow-sm border-0 bg-dark bg-opacity-25 text-white ues-adminbox">
+
+              <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center justify-content-between gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                  <span class="fw-semibold">Modifier le dossier</span>
+                </div>
+                <span class="badge rounded-pill text-bg-info">Stage 2026</span>
+              </div>
+
+              <div class="card-body">
+
+                <!-- Bandeau rappel + bouton Enregistrer (haut) -->
+                <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap mb-3 ues-savebar">
+                  <div class="text-white-50">
+                    N'oubliez pas d'enregistrer vos modifications
+                  </div>
+                  <button type="button" class="btn btn-outline-light ues-save-top">Enregistrer</button>
+                </div>
+
+                <div class="ues-form-surface p-3 rounded-3 border border-light border-opacity-25">
+                  #FORMULAIRE_EDITER_ARTICLE{#ID_ARTICLE,#ID_RUBRIQUE,#SELF}
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- COLONNE DROITE -->
+          <div class="col-12 col-lg-5">
+
+            #INCLURE{fond=inc-checklist-admin, id_article=#ID_ARTICLE, statut=#STATUT, id_auteur=#ID_AUTEUR, with_help=non}
+
+            <!-- Informations -->
+            <div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white mt-3">
+              <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center justify-content-between gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-person-badge" aria-hidden="true"></i>
+                  <span class="fw-semibold">Informations</span>
+                </div>
+              </div>
+
+              <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                  <div>Nom / Prénom</div>
+                  <div class="text-white text-end fw-semibold">#TITRE #PRENOM</div>
+                </div>
+              </div>
+
+              <!-- Email (article -> sinon premier auteur -> sinon tiret) -->
+<div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+                <div class="d-flex align-items-center justify-content-between gap-3">
+    <div>Email</div>
+ 
+  <div class="text-white text-end">
+    [(#EMAIL
+      |?{<a class="text-white" href="mailto:[(#EMAIL|textebrut)]">[(#EMAIL|textebrut)]</a>,
+        <BOUCLE_mail_aut(AUTEURS){id_article}{0,1}>
+          [(#EMAIL|?{<a class="text-white" href="mailto:[(#EMAIL|textebrut)]">[(#EMAIL|textebrut)]</a>,''})]
+        </BOUCLE_mail_aut>
+      }
+      |sinon{—}
+    )]
+  </div>
+</div>
+ </div>
+
+              <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                  <div>Statut inscription</div>
+                  <div class="text-white text-end">
+                    [(#SET{insc,[(#INSCRIPTION|sinon{en attente})]})]
+                    [(#GET{insc}|=={confirmée}|oui)
+                      <span class="badge text-bg-success">#GET{insc}</span>
+                    ]
+                    [(#GET{insc}|=={confirmée}|non)
+                      <strong class="text-white">#GET{insc}</strong>
+                    ]
+                  </div>
+                </div>
+
+                <div class="border-top border-light border-opacity-25 my-2"></div>
+
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                  <div>Paiement</div>
+                  <div class="text-white text-end">
+                    [(#SET{pay,[(#PAIEMENTOK|sinon{en attente})]})]
+                    [(#GET{pay}|=={oui}|oui)
+                      <span class="badge text-bg-success">#GET{pay}</span>
+                    ]
+                    [(#GET{pay}|=={oui}|non)
+                      <strong class="text-white">#GET{pay}</strong>
+                    ]
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Documents -->
+            <div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white mt-3">
+              <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center justify-content-between gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-paperclip" aria-hidden="true"></i>
+                  <span class="fw-semibold">Documents</span>
+                </div>
+<!-- Bouton régénération: ajoute les attributs data pour recharger et rouvrir l'article -->
+<a class="btn btn-sm btn-warning d-inline-flex align-items-center gap-1 ues-btn-regen"
+   href="[(#URL_PAGE{article_pdf,id_article=#ID_ARTICLE&var_mode=recalcul})]"
+   target="_blank" rel="noopener"
+   data-article-id="#ID_ARTICLE"
+   data-refresh-url="[(#URL_PAGE{tableau_inscriptions,id_article=#ID_ARTICLE})]"
+   title="Générer / Régénérer le PDF">
+  <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+  Régénérer PDF
+</a>
+                [(#ENV{docs_ok}|=={1}|oui)
+                  <span class="badge rounded-pill ues-status-pill" style="background-color: rgba(25,135,84,.18); border:1px solid rgba(25,135,84,.40);">
+                    Signé
+                  </span>
+                ]
+                [(#ENV{docs_ok}|=={1}|non)
+                  <span class="badge rounded-pill bg-light bg-opacity-10 text-white border border-light border-opacity-25">
+                    A faire
+                  </span>
+                ]
+              </div>
+
+              <B_docs>
+                <BOUCLE_docs(DOCUMENTS){id_article}{mode IN document,image}{par date}{inverse}{tout}>
+                  <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+                    <div class="d-flex align-items-center justify-content-between gap-3">
+                      <a class="link-light" href="#URL_DOCUMENT" target="_blank" rel="noopener">
+                        [(#TITRE|sinon{[(#FICHIER|basename)]})]
+                      </a>
+                      <span class="text-white-50">[(#DATE|affdate)]</span>
+                    </div>
+                  </div>
+                </BOUCLE_docs>
+              </B_docs>
+
+              <//B_docs>
+              <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+                Aucun document.
+              </div>
+            </div>
+
+            <!-- Statut admin (SPIP) sous Documents -->
+            <div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white mt-3 ues-admin-statutbox">
+              <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center justify-content-between gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-sliders" aria-hidden="true"></i>
+                  <span class="fw-semibold">Statut</span>
+                </div>
+                <span class="badge rounded-pill bg-light bg-opacity-10 text-white border border-light border-opacity-25">
+                  #STATUT
+                </span>
+              </div>
+
+              <div class="px-3 py-2 border-top border-light border-opacity-25">
+                #FORMULAIRE_INSTITUER_OBJET{article,#ID_ARTICLE,#SELF}
+              </div>
+            </div>
+
+          </div><!-- /col droite -->
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</BOUCLE_art>

@@ -1,0 +1,460 @@
+2026-02-01 23:13:22 127.0.0.1 (pid 16880) :Pub:info: queue [331910]: genie_queue_watch_dist() start
+2026-02-01 23:13:22 127.0.0.1 (pid 16880) :Pub:info: queue [331910]: genie_queue_watch_dist() end
+2026-02-01 23:13:22 127.0.0.1 (pid 16880) :Pub:info: replan_job queue_watch 86400 1769984002 1770070402 0
+2026-02-01 23:13:22 127.0.0.1 (pid 16880) :Pub:info: queue [331911]: genie_bigup_nettoyer_repertoire_upload_dist() start
+2026-02-01 23:13:22 127.0.0.1 (pid 16880) :Pub:info: queue [331911]: genie_bigup_nettoyer_repertoire_upload_dist() end
+2026-02-01 23:13:22 127.0.0.1 (pid 16880) :Pub:info: replan_job bigup_nettoyer_repertoire_upload 86400 1769984002 1770070402 0
+2026-02-01 23:13:22 127.0.0.1 (pid 16880) :Pub:info: queue [331912]: genie_revisions_optimiser_revisions_dist() start
+2026-02-01 23:13:23 127.0.0.1 (pid 16880) :Pub:info: queue [331912]: genie_revisions_optimiser_revisions_dist() end
+2026-02-01 23:13:23 127.0.0.1 (pid 16880) :Pub:info: replan_job revisions_optimiser_revisions 86400 1769984003 1770070403 0
+2026-02-01 23:13:23 127.0.0.1 (pid 16880) :Pub:info: queue [331913]: genie_medias_nettoyer_repertoire_upload_dist() start
+2026-02-01 23:13:23 127.0.0.1 (pid 16880) :Pub:info: queue [331913]: genie_medias_nettoyer_repertoire_upload_dist() end
+2026-02-01 23:13:23 127.0.0.1 (pid 16880) :Pub:info: replan_job medias_nettoyer_repertoire_upload 86400 1769984003 1770070403 0
+2026-02-01 23:25:56 127.0.0.1 (pid 16880) :Pub:info: queue [331943]: genie_mailsubscribers_update_optins_dist() start
+2026-02-01 23:25:56 127.0.0.1 (pid 16880) :Pub:info: queue [331943]: genie_mailsubscribers_update_optins_dist() end
+2026-02-01 23:25:56 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1769984756 1769985656 0
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:info: queue [331948]: genie_mailsubscribers_update_optins_dist() start
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:info: queue [331948]: genie_mailsubscribers_update_optins_dist() end
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1769986535 1769987435 0
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:info: queue [331935]: genie_maintenance_dist() start
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:info: queue [331935]: genie_maintenance_dist() end
+2026-02-01 23:55:35 127.0.0.1 (pid 16880) :Pub:info: replan_job maintenance 7200 1769986535 1769993735 0
+2026-02-02 00:12:14 127.0.0.1 (pid 16880) :Pub:info: queue [331949]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 00:12:14 127.0.0.1 (pid 16880) :Pub:info: queue [331949]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 00:12:14 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1769987534 1769988434 0
+2026-02-02 00:27:51 127.0.0.1 (pid 16880) :Pub:info: queue [331951]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 00:27:51 127.0.0.1 (pid 16880) :Pub:info: queue [331951]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 00:27:51 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1769988471 1769989371 0
+2026-02-02 00:43:09 127.0.0.1 (pid 16880) :Pub:info: queue [331952]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 00:43:09 127.0.0.1 (pid 16880) :Pub:info: queue [331952]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 00:43:09 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1769989389 1769990289 0
+2026-02-02 00:58:14 127.0.0.1 (pid 16880) :Pub:info: queue [331953]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 00:58:14 127.0.0.1 (pid 16880) :Pub:info: queue [331953]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 00:58:14 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1769990294 1769991194 0
+2026-02-02 01:29:01 127.0.0.1 (pid 16880) :Pub:info: queue [331954]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 01:29:01 127.0.0.1 (pid 16880) :Pub:info: queue [331954]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 01:29:01 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1769992141 1769993041 0
+2026-02-02 01:47:11 127.0.0.1 (pid 16880) :Pub:info: queue [331955]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 01:47:11 127.0.0.1 (pid 16880) :Pub:info: queue [331955]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 01:47:11 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1769993231 1769994131 0
+2026-02-02 02:01:15 127.0.0.1 (pid 16880) :Pub:info: queue [331950]: genie_maintenance_dist() start
+2026-02-02 02:01:15 127.0.0.1 (pid 16880) :Pub:info: queue [331950]: genie_maintenance_dist() end
+2026-02-02 02:01:15 127.0.0.1 (pid 16880) :Pub:info: replan_job maintenance 7200 1769994075 1770001275 0
+2026-02-02 02:04:48 127.0.0.1 (pid 16880) :Pub:info: queue [331956]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 02:04:48 127.0.0.1 (pid 16880) :Pub:info: queue [331956]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 02:04:48 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1769994288 1769995188 0
+2026-02-02 02:19:53 127.0.0.1 (pid 16880) :Pub:info: queue [331958]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 02:19:53 127.0.0.1 (pid 16880) :Pub:info: queue [331958]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 02:19:53 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1769995193 1769996093 0
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:info: queue [331885]: genie_optimiser_dist() start
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:info: queue [331885]: genie_optimiser_dist() end
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:info: replan_job optimiser 172800 1770006157 1770178957 -11
+2026-02-02 03:01:40 127.0.0.1 (pid 16880) :Pub:info: queue [331959]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 03:01:40 127.0.0.1 (pid 16880) :Pub:info: queue [331959]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 03:01:40 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1769997700 1769998600 0
+2026-02-02 03:49:39 127.0.0.1 (pid 16880) :Pub:info: queue [331961]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 03:49:39 127.0.0.1 (pid 16880) :Pub:info: queue [331961]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 03:49:39 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1770000579 1770001479 0
+2026-02-02 03:49:39 127.0.0.1 (pid 16880) :Pub:info: queue [331934]: genie_svp_actualiser_depots_dist() start
+2026-02-02 03:49:47 127.0.0.1 (pid 16880) :Pub:info: queue [331934]: genie_svp_actualiser_depots_dist() end
+2026-02-02 03:49:47 127.0.0.1 (pid 16880) :Pub:info: replan_job svp_actualiser_depots 21600 1770000587 1770022187 0
+2026-02-02 04:04:56 127.0.0.1 (pid 16880) :Pub:info: queue [331957]: genie_maintenance_dist() start
+2026-02-02 04:04:56 127.0.0.1 (pid 16880) :Pub:info: queue [331957]: genie_maintenance_dist() end
+2026-02-02 04:04:56 127.0.0.1 (pid 16880) :Pub:info: replan_job maintenance 7200 1770001496 1770008696 0
+2026-02-02 04:04:56 127.0.0.1 (pid 16880) :Pub:info: queue [331962]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 04:04:56 127.0.0.1 (pid 16880) :Pub:info: queue [331962]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 04:04:56 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1770001496 1770002396 0
+2026-02-02 04:23:01 127.0.0.1 (pid 16880) :Pub:info: queue [331965]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 04:23:01 127.0.0.1 (pid 16880) :Pub:info: queue [331965]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 04:23:01 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1770002581 1770003481 0
+2026-02-02 04:41:14 127.0.0.1 (pid 16880) :Pub:info: queue [331966]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 04:41:14 127.0.0.1 (pid 16880) :Pub:info: queue [331966]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 04:41:14 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1770003674 1770004574 0
+2026-02-02 05:02:52 127.0.0.1 (pid 16880) :Pub:info: queue [331967]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 05:02:52 127.0.0.1 (pid 16880) :Pub:info: queue [331967]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 05:02:52 127.0.0.1 (pid 16880) :Pub:info: replan_job mailsubscribers_update_optins 900 1770004972 1770005872 0
+2026-02-02 05:18:00 127.0.0.1 (pid 19752) :Pub:info: queue [331968]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 05:18:00 127.0.0.1 (pid 19752) :Pub:info: queue [331968]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 05:18:00 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770005880 1770006780 0
+2026-02-02 05:33:26 127.0.0.1 (pid 19752) :Pub:info: queue [331969]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 05:33:26 127.0.0.1 (pid 19752) :Pub:info: queue [331969]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 05:33:26 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770006806 1770007706 0
+2026-02-02 05:48:40 127.0.0.1 (pid 19752) :Pub:info: queue [331970]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 05:48:40 127.0.0.1 (pid 19752) :Pub:info: queue [331970]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 05:48:40 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770007720 1770008620 0
+2026-02-02 06:02:27 127.0.0.1 (pid 19752) :Pub:info: queue [331857]: genie_mise_a_jour_dist() start
+2026-02-02 06:02:29 127.0.0.1 (pid 19752) :Pub:info: queue [331857]: genie_mise_a_jour_dist() end
+2026-02-02 06:02:29 127.0.0.1 (pid 19752) :Pub:info: replan_job mise_a_jour 259200 1770008549 1770267749 0
+2026-02-02 06:10:23 127.0.0.1 (pid 19752) :Pub:info: queue [331971]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 06:10:23 127.0.0.1 (pid 19752) :Pub:info: queue [331971]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 06:10:23 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770009023 1770009923 0
+2026-02-02 06:10:23 127.0.0.1 (pid 19752) :Pub:info: queue [331964]: genie_maintenance_dist() start
+2026-02-02 06:10:23 127.0.0.1 (pid 19752) :Pub:info: queue [331964]: genie_maintenance_dist() end
+2026-02-02 06:10:23 127.0.0.1 (pid 19752) :Pub:info: replan_job maintenance 7200 1770009023 1770016223 0
+2026-02-02 06:29:31 127.0.0.1 (pid 19752) :Pub:info: queue [331973]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 06:29:31 127.0.0.1 (pid 19752) :Pub:info: queue [331973]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 06:29:31 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770010171 1770011071 0
+2026-02-02 06:45:07 127.0.0.1 (pid 19752) :Pub:info: queue [331975]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 06:45:07 127.0.0.1 (pid 19752) :Pub:info: queue [331975]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 06:45:07 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770011107 1770012007 0
+2026-02-02 07:01:55 127.0.0.1 (pid 19752) :Pub:info: queue [331976]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 07:01:55 127.0.0.1 (pid 19752) :Pub:info: queue [331976]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 07:01:55 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770012115 1770013015 0
+2026-02-02 07:18:17 127.0.0.1 (pid 19752) :Pub:info: queue [331977]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 07:18:17 127.0.0.1 (pid 19752) :Pub:info: queue [331977]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 07:18:17 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770013097 1770013997 0
+2026-02-02 07:34:20 127.0.0.1 (pid 19752) :Pub:info: queue [331978]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 07:34:20 127.0.0.1 (pid 19752) :Pub:info: queue [331978]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 07:34:20 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770014060 1770014960 0
+2026-02-02 07:50:09 127.0.0.1 (pid 19752) :Pub:info: queue [331979]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 07:50:09 127.0.0.1 (pid 19752) :Pub:info: queue [331979]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 07:50:09 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770015009 1770015909 0
+2026-02-02 08:08:28 127.0.0.1 (pid 19752) :Pub:info: queue [331980]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 08:08:28 127.0.0.1 (pid 19752) :Pub:info: queue [331980]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 08:08:28 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770016108 1770017008 0
+2026-02-02 08:10:35 127.0.0.1 (pid 19752) :Pub:info: queue [331974]: genie_maintenance_dist() start
+2026-02-02 08:10:35 127.0.0.1 (pid 19752) :Pub:info: queue [331974]: genie_maintenance_dist() end
+2026-02-02 08:10:35 127.0.0.1 (pid 19752) :Pub:info: replan_job maintenance 7200 1770016235 1770023435 0
+2026-02-02 08:24:28 127.0.0.1 (pid 19752) :Pub:info: queue [331981]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 08:24:28 127.0.0.1 (pid 19752) :Pub:info: queue [331981]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 08:24:28 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770017068 1770017968 0
+2026-02-02 08:41:53 127.0.0.1 (pid 19752) :Pub:info: queue [331983]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 08:41:53 127.0.0.1 (pid 19752) :Pub:info: queue [331983]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 08:41:53 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770018113 1770019013 0
+2026-02-02 09:02:55 127.0.0.1 (pid 19752) :Pub:info: queue [331984]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 09:02:55 127.0.0.1 (pid 19752) :Pub:info: queue [331984]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 09:02:55 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770019375 1770020275 0
+2026-02-02 09:18:00 127.0.0.1 (pid 19752) :Pub:info: queue [331985]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 09:18:00 127.0.0.1 (pid 19752) :Pub:info: queue [331985]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 09:18:00 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770020280 1770021180 0
+2026-02-02 21:44:28 127.0.0.1 (pid 19752) :Pub:info: queue [331986]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 21:44:28 127.0.0.1 (pid 19752) :Pub:info: queue [331986]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 21:44:28 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770065068 1770065968 0
+2026-02-02 21:44:29 127.0.0.1 (pid 19752) :Pub:info: queue [331937]: facteur_retry_envoyer_mail() start
+2026-02-02 21:44:29 127.0.0.1 (pid 19752) :Pub:info: queue [331938]: facteur_retry_envoyer_mail() start
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:info: queue [331937]: facteur_retry_envoyer_mail() end
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:info: queue [331963]: genie_svp_actualiser_depots_dist() start
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:info: queue [331938]: facteur_retry_envoyer_mail() end
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:info: queue [331982]: genie_maintenance_dist() start
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:info: queue [331982]: genie_maintenance_dist() end
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:info: replan_job maintenance 7200 1770065071 1770072271 0
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:info: queue [331936]: genie_mailsubscribers_synchro_lists_dist() start
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:info: queue [331936]: genie_mailsubscribers_synchro_lists_dist() end
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_synchro_lists 82800 1770065071 1770147871 0
+2026-02-02 21:45:04 127.0.0.1 (pid 19752) :Pub:info: queue [331963]: genie_svp_actualiser_depots_dist() end
+2026-02-02 21:45:04 127.0.0.1 (pid 19752) :Pub:info: replan_job svp_actualiser_depots 21600 1770065104 1770086704 0
+2026-02-02 22:00:19 127.0.0.1 (pid 19752) :Pub:info: queue [331987]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 22:00:19 127.0.0.1 (pid 19752) :Pub:info: queue [331987]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 22:00:19 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770066019 1770066919 0
+2026-02-02 22:18:34 127.0.0.1 (pid 19752) :Pub:info: queue [331991]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 22:18:34 127.0.0.1 (pid 19752) :Pub:info: queue [331991]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 22:18:34 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770067114 1770068014 0
+2026-02-02 22:38:36 127.0.0.1 (pid 19752) :Pub:info: queue [331992]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 22:38:36 127.0.0.1 (pid 19752) :Pub:info: queue [331992]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 22:38:36 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770068316 1770069216 0
+2026-02-02 22:57:57 127.0.0.1 (pid 19752) :Pub:info: queue [331993]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 22:57:57 127.0.0.1 (pid 19752) :Pub:info: queue [331993]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 22:57:57 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770069477 1770070377 0
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: queue [331994]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: queue [331994]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770070605 1770071505 0
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: queue [331944]: genie_queue_watch_dist() start
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: queue [331944]: genie_queue_watch_dist() end
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: replan_job queue_watch 86400 1770070605 1770157005 0
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: queue [331945]: genie_bigup_nettoyer_repertoire_upload_dist() start
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: queue [331945]: genie_bigup_nettoyer_repertoire_upload_dist() end
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: replan_job bigup_nettoyer_repertoire_upload 86400 1770070605 1770157005 0
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: queue [331946]: genie_revisions_optimiser_revisions_dist() start
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: queue [331946]: genie_revisions_optimiser_revisions_dist() end
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: replan_job revisions_optimiser_revisions 86400 1770070605 1770157005 0
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: queue [331947]: genie_medias_nettoyer_repertoire_upload_dist() start
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: queue [331947]: genie_medias_nettoyer_repertoire_upload_dist() end
+2026-02-02 23:16:45 127.0.0.1 (pid 19752) :Pub:info: replan_job medias_nettoyer_repertoire_upload 86400 1770070605 1770157005 0
+2026-02-02 23:34:05 127.0.0.1 (pid 19752) :Pub:info: queue [331995]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 23:34:05 127.0.0.1 (pid 19752) :Pub:info: queue [331995]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 23:34:05 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770071645 1770072545 0
+2026-02-02 23:44:40 127.0.0.1 (pid 19752) :Pub:info: queue [331988]: genie_maintenance_dist() start
+2026-02-02 23:44:40 127.0.0.1 (pid 19752) :Pub:info: queue [331988]: genie_maintenance_dist() end
+2026-02-02 23:44:40 127.0.0.1 (pid 19752) :Pub:info: replan_job maintenance 7200 1770072280 1770079480 0
+2026-02-02 23:51:59 127.0.0.1 (pid 19752) :Pub:info: queue [332000]: genie_mailsubscribers_update_optins_dist() start
+2026-02-02 23:51:59 127.0.0.1 (pid 19752) :Pub:info: queue [332000]: genie_mailsubscribers_update_optins_dist() end
+2026-02-02 23:51:59 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770072719 1770073619 0
+2026-02-03 00:08:15 127.0.0.1 (pid 19752) :Pub:info: queue [332002]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 00:08:15 127.0.0.1 (pid 19752) :Pub:info: queue [332002]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 00:08:15 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770073695 1770074595 0
+2026-02-03 00:23:45 127.0.0.1 (pid 19752) :Pub:info: queue [332003]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 00:23:45 127.0.0.1 (pid 19752) :Pub:info: queue [332003]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 00:23:45 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770074625 1770075525 0
+2026-02-03 00:39:08 127.0.0.1 (pid 19752) :Pub:info: queue [332004]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 00:39:08 127.0.0.1 (pid 19752) :Pub:info: queue [332004]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 00:39:08 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770075548 1770076448 0
+2026-02-03 01:00:10 127.0.0.1 (pid 19752) :Pub:info: queue [332005]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 01:00:10 127.0.0.1 (pid 19752) :Pub:info: queue [332005]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 01:00:10 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770076810 1770077710 0
+2026-02-03 01:16:46 127.0.0.1 (pid 19752) :Pub:info: queue [332006]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 01:16:46 127.0.0.1 (pid 19752) :Pub:info: queue [332006]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 01:16:46 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770077806 1770078706 0
+2026-02-03 01:37:10 127.0.0.1 (pid 19752) :Pub:info: queue [332007]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 01:37:10 127.0.0.1 (pid 19752) :Pub:info: queue [332007]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 01:37:11 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770079030 1770079930 0
+2026-02-03 01:45:33 127.0.0.1 (pid 19752) :Pub:info: queue [332001]: genie_maintenance_dist() start
+2026-02-03 01:45:33 127.0.0.1 (pid 19752) :Pub:info: queue [332001]: genie_maintenance_dist() end
+2026-02-03 01:45:33 127.0.0.1 (pid 19752) :Pub:info: replan_job maintenance 7200 1770079533 1770086733 0
+2026-02-03 01:53:48 127.0.0.1 (pid 19752) :Pub:info: queue [332008]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 01:53:48 127.0.0.1 (pid 19752) :Pub:info: queue [332008]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 01:53:48 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770080028 1770080928 0
+2026-02-03 02:09:45 127.0.0.1 (pid 19752) :Pub:info: queue [332010]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 02:09:45 127.0.0.1 (pid 19752) :Pub:info: queue [332010]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 02:09:45 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770080985 1770081885 0
+2026-02-03 02:56:32 127.0.0.1 (pid 19752) :Pub:info: queue [332011]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 02:56:32 127.0.0.1 (pid 19752) :Pub:info: queue [332011]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 02:56:32 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770083792 1770084692 0
+2026-02-03 03:50:56 127.0.0.1 (pid 19752) :Pub:info: queue [332012]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 03:50:56 127.0.0.1 (pid 19752) :Pub:info: queue [332012]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 03:50:56 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770087056 1770087956 0
+2026-02-03 03:50:56 127.0.0.1 (pid 19752) :Pub:info: queue [331990]: genie_svp_actualiser_depots_dist() start
+2026-02-03 03:50:59 127.0.0.1 (pid 19752) :Pub:info: queue [332009]: genie_maintenance_dist() start
+2026-02-03 03:50:59 127.0.0.1 (pid 19752) :Pub:info: queue [332009]: genie_maintenance_dist() end
+2026-02-03 03:50:59 127.0.0.1 (pid 19752) :Pub:info: replan_job maintenance 7200 1770087059 1770094259 0
+2026-02-03 03:51:05 127.0.0.1 (pid 19752) :Pub:info: queue [331990]: genie_svp_actualiser_depots_dist() end
+2026-02-03 03:51:05 127.0.0.1 (pid 19752) :Pub:info: replan_job svp_actualiser_depots 21600 1770087065 1770108665 0
+2026-02-03 04:06:22 127.0.0.1 (pid 19752) :Pub:info: queue [332013]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 04:06:22 127.0.0.1 (pid 19752) :Pub:info: queue [332013]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 04:06:22 127.0.0.1 (pid 19752) :Pub:info: replan_job mailsubscribers_update_optins 900 1770087982 1770088882 0
+2026-02-03 04:28:49 127.0.0.1 (pid 34436) :Pub:info: queue [332016]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 04:28:49 127.0.0.1 (pid 34436) :Pub:info: queue [332016]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 04:28:49 127.0.0.1 (pid 34436) :Pub:info: replan_job mailsubscribers_update_optins 900 1770089329 1770090229 0
+2026-02-03 04:45:23 127.0.0.1 (pid 34436) :Pub:info: queue [332017]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 04:45:23 127.0.0.1 (pid 34436) :Pub:info: queue [332017]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 04:45:23 127.0.0.1 (pid 34436) :Pub:info: replan_job mailsubscribers_update_optins 900 1770090323 1770091223 0
+2026-02-03 05:00:29 127.0.0.1 (pid 34436) :Pub:info: queue [332018]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 05:00:29 127.0.0.1 (pid 34436) :Pub:info: queue [332018]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 05:00:29 127.0.0.1 (pid 34436) :Pub:info: replan_job mailsubscribers_update_optins 900 1770091229 1770092129 0
+2026-02-03 05:28:37 127.0.0.1 (pid 34436) :Pub:info: queue [332019]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 05:28:37 127.0.0.1 (pid 34436) :Pub:info: queue [332019]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 05:28:37 127.0.0.1 (pid 34436) :Pub:info: replan_job mailsubscribers_update_optins 900 1770092917 1770093817 0
+2026-02-03 05:49:17 127.0.0.1 (pid 34436) :Pub:info: queue [332020]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 05:49:17 127.0.0.1 (pid 34436) :Pub:info: queue [332020]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 05:49:17 127.0.0.1 (pid 34436) :Pub:info: replan_job mailsubscribers_update_optins 900 1770094157 1770095057 0
+2026-02-03 05:51:46 127.0.0.1 (pid 34436) :Pub:info: queue [332014]: genie_maintenance_dist() start
+2026-02-03 05:51:46 127.0.0.1 (pid 34436) :Pub:info: queue [332014]: genie_maintenance_dist() end
+2026-02-03 05:51:46 127.0.0.1 (pid 34436) :Pub:info: replan_job maintenance 7200 1770094306 1770101506 0
+2026-02-03 06:07:02 127.0.0.1 (pid 34436) :Pub:info: queue [332021]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 06:07:02 127.0.0.1 (pid 34436) :Pub:info: queue [332021]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 06:07:02 127.0.0.1 (pid 34436) :Pub:info: replan_job mailsubscribers_update_optins 900 1770095222 1770096122 0
+2026-02-03 06:22:05 127.0.0.1 (pid 34436) :Pub:info: queue [332023]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 06:22:05 127.0.0.1 (pid 34436) :Pub:info: queue [332023]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 06:22:05 127.0.0.1 (pid 34436) :Pub:info: replan_job mailsubscribers_update_optins 900 1770096125 1770097025 0
+2026-02-03 06:37:36 127.0.0.1 (pid 34436) :Pub:info: queue [332024]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 06:37:36 127.0.0.1 (pid 34436) :Pub:info: queue [332024]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 06:37:36 127.0.0.1 (pid 34436) :Pub:info: replan_job mailsubscribers_update_optins 900 1770097056 1770097956 0
+2026-02-03 06:53:05 127.0.0.1 (pid 27436) :Pub:info: queue [332025]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 06:53:05 127.0.0.1 (pid 27436) :Pub:info: queue [332025]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 06:53:05 127.0.0.1 (pid 27436) :Pub:info: replan_job mailsubscribers_update_optins 900 1770097985 1770098885 0
+2026-02-03 07:08:18 127.0.0.1 (pid 13600) :Pub:info: queue [332026]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 07:08:18 127.0.0.1 (pid 13600) :Pub:info: queue [332026]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 07:08:18 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770098898 1770099798 0
+2026-02-03 07:23:27 127.0.0.1 (pid 13600) :Pub:info: queue [332027]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 07:23:27 127.0.0.1 (pid 13600) :Pub:info: queue [332027]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 07:23:27 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770099807 1770100707 0
+2026-02-03 07:42:06 127.0.0.1 (pid 13600) :Pub:info: queue [332028]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 07:42:06 127.0.0.1 (pid 13600) :Pub:info: queue [332028]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 07:42:06 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770100926 1770101826 0
+2026-02-03 07:53:48 127.0.0.1 (pid 13600) :Pub:info: queue [332022]: genie_maintenance_dist() start
+2026-02-03 07:53:48 127.0.0.1 (pid 13600) :Pub:info: queue [332022]: genie_maintenance_dist() end
+2026-02-03 07:53:48 127.0.0.1 (pid 13600) :Pub:info: replan_job maintenance 7200 1770101628 1770108828 0
+2026-02-03 07:59:18 127.0.0.1 (pid 13600) :Pub:info: queue [332029]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 07:59:18 127.0.0.1 (pid 13600) :Pub:info: queue [332029]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 07:59:18 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770101958 1770102858 0
+2026-02-03 08:16:15 127.0.0.1 (pid 13600) :Pub:info: queue [332031]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 08:16:15 127.0.0.1 (pid 13600) :Pub:info: queue [332031]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 08:16:15 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770102975 1770103875 0
+2026-02-03 08:35:01 127.0.0.1 (pid 13600) :Pub:info: queue [332032]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 08:35:01 127.0.0.1 (pid 13600) :Pub:info: queue [332032]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 08:35:01 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770104101 1770105001 0
+2026-02-03 08:51:07 127.0.0.1 (pid 13600) :Pub:info: queue [332033]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 08:51:07 127.0.0.1 (pid 13600) :Pub:info: queue [332033]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 08:51:07 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770105067 1770105967 0
+2026-02-03 09:06:33 127.0.0.1 (pid 13600) :Pub:info: queue [332034]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 09:06:33 127.0.0.1 (pid 13600) :Pub:info: queue [332034]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 09:06:33 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770105993 1770106893 0
+2026-02-03 21:32:58 127.0.0.1 (pid 13600) :Pub:info: queue [332035]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 21:32:58 127.0.0.1 (pid 13600) :Pub:info: queue [332035]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 21:32:58 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770150778 1770151678 0
+2026-02-03 21:32:58 127.0.0.1 (pid 13600) :Pub:info: queue [332015]: genie_svp_actualiser_depots_dist() start
+2026-02-03 21:32:59 127.0.0.1 (pid 13600) :Pub:info: queue [332030]: genie_maintenance_dist() start
+2026-02-03 21:32:59 127.0.0.1 (pid 13600) :Pub:info: queue [332030]: genie_maintenance_dist() end
+2026-02-03 21:32:59 127.0.0.1 (pid 13600) :Pub:info: replan_job maintenance 7200 1770150779 1770157979 0
+2026-02-03 21:32:59 127.0.0.1 (pid 13600) :Pub:info: queue [331989]: genie_mailsubscribers_synchro_lists_dist() start
+2026-02-03 21:32:59 127.0.0.1 (pid 13600) :Pub:info: queue [331989]: genie_mailsubscribers_synchro_lists_dist() end
+2026-02-03 21:32:59 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_synchro_lists 82800 1770150779 1770233579 0
+2026-02-03 21:33:59 127.0.0.1 (pid 13600) :Pub:info: queue [332015]: genie_svp_actualiser_depots_dist() end
+2026-02-03 21:33:59 127.0.0.1 (pid 13600) :Pub:info: replan_job svp_actualiser_depots 21600 1770150839 1770172439 0
+2026-02-03 21:49:58 127.0.0.1 (pid 13600) :Pub:info: queue [332036]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 21:49:58 127.0.0.1 (pid 13600) :Pub:info: queue [332036]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 21:49:58 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770151798 1770152698 0
+2026-02-03 22:13:50 127.0.0.1 (pid 13600) :Pub:info: queue [332040]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 22:13:50 127.0.0.1 (pid 13600) :Pub:info: queue [332040]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 22:13:50 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770153230 1770154130 0
+2026-02-03 22:30:14 127.0.0.1 (pid 13600) :Pub:info: queue [332041]: genie_mailsubscribers_update_optins_dist() start
+2026-02-03 22:30:14 127.0.0.1 (pid 13600) :Pub:info: queue [332041]: genie_mailsubscribers_update_optins_dist() end
+2026-02-03 22:30:14 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770154214 1770155114 0
+2026-02-04 00:15:12 127.0.0.1 (pid 13600) :Pub:info: queue [332042]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 00:15:12 127.0.0.1 (pid 13600) :Pub:info: queue [332042]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 00:15:12 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770160512 1770161412 0
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: queue [331996]: genie_queue_watch_dist() start
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: queue [331996]: genie_queue_watch_dist() end
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: replan_job queue_watch 86400 1770160513 1770246913 0
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: queue [331997]: genie_bigup_nettoyer_repertoire_upload_dist() start
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: queue [331997]: genie_bigup_nettoyer_repertoire_upload_dist() end
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: replan_job bigup_nettoyer_repertoire_upload 86400 1770160513 1770246913 0
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: queue [331998]: genie_revisions_optimiser_revisions_dist() start
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: queue [331998]: genie_revisions_optimiser_revisions_dist() end
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: replan_job revisions_optimiser_revisions 86400 1770160513 1770246913 0
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: queue [331999]: genie_medias_nettoyer_repertoire_upload_dist() start
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: queue [331999]: genie_medias_nettoyer_repertoire_upload_dist() end
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: replan_job medias_nettoyer_repertoire_upload 86400 1770160513 1770246913 0
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: queue [332037]: genie_maintenance_dist() start
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: queue [332037]: genie_maintenance_dist() end
+2026-02-04 00:15:13 127.0.0.1 (pid 13600) :Pub:info: replan_job maintenance 7200 1770160513 1770167713 0
+2026-02-04 00:46:21 127.0.0.1 (pid 13600) :Pub:info: queue [332043]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 00:46:21 127.0.0.1 (pid 13600) :Pub:info: queue [332043]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 00:46:21 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770162381 1770163281 0
+2026-02-04 01:01:42 127.0.0.1 (pid 13600) :Pub:info: queue [332049]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 01:01:42 127.0.0.1 (pid 13600) :Pub:info: queue [332049]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 01:01:42 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770163302 1770164202 0
+2026-02-04 01:19:06 127.0.0.1 (pid 13600) :Pub:info: queue [332050]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 01:19:06 127.0.0.1 (pid 13600) :Pub:info: queue [332050]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 01:19:06 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770164346 1770165246 0
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:info: queue [332051]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:info: queue [332051]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770170371 1770171271 0
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:info: queue [332048]: genie_maintenance_dist() start
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:info: queue [332048]: genie_maintenance_dist() end
+2026-02-04 02:59:31 127.0.0.1 (pid 13600) :Pub:info: replan_job maintenance 7200 1770170371 1770177571 0
+2026-02-04 03:34:55 127.0.0.1 (pid 13600) :Pub:info: queue [332052]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 03:34:55 127.0.0.1 (pid 13600) :Pub:info: queue [332052]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 03:34:55 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770172495 1770173395 0
+2026-02-04 03:34:55 127.0.0.1 (pid 13600) :Pub:info: queue [332039]: genie_svp_actualiser_depots_dist() start
+2026-02-04 03:35:00 127.0.0.1 (pid 13600) :Pub:info: queue [332039]: genie_svp_actualiser_depots_dist() end
+2026-02-04 03:35:00 127.0.0.1 (pid 13600) :Pub:info: replan_job svp_actualiser_depots 21600 1770172500 1770194100 0
+2026-02-04 03:50:56 127.0.0.1 (pid 13600) :Pub:info: queue [332054]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 03:50:56 127.0.0.1 (pid 13600) :Pub:info: queue [332054]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 03:50:56 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770173456 1770174356 0
+2026-02-04 04:07:24 127.0.0.1 (pid 13600) :Pub:info: queue [332056]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 04:07:24 127.0.0.1 (pid 13600) :Pub:info: queue [332056]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 04:07:24 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770174444 1770175344 0
+2026-02-04 04:25:07 127.0.0.1 (pid 13600) :Pub:info: queue [332057]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 04:25:07 127.0.0.1 (pid 13600) :Pub:info: queue [332057]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 04:25:07 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770175507 1770176407 0
+2026-02-04 04:40:58 127.0.0.1 (pid 13600) :Pub:info: queue [332058]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 04:40:58 127.0.0.1 (pid 13600) :Pub:info: queue [332058]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 04:40:58 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770176458 1770177358 0
+2026-02-04 05:00:42 127.0.0.1 (pid 13600) :Pub:info: queue [332059]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 05:00:42 127.0.0.1 (pid 13600) :Pub:info: queue [332059]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 05:00:42 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770177642 1770178542 0
+2026-02-04 05:00:42 127.0.0.1 (pid 13600) :Pub:info: queue [332053]: genie_maintenance_dist() start
+2026-02-04 05:00:42 127.0.0.1 (pid 13600) :Pub:info: queue [332053]: genie_maintenance_dist() end
+2026-02-04 05:00:42 127.0.0.1 (pid 13600) :Pub:info: replan_job maintenance 7200 1770177642 1770184842 0
+2026-02-04 05:21:24 127.0.0.1 (pid 13600) :Pub:info: queue [332060]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 05:21:24 127.0.0.1 (pid 13600) :Pub:info: queue [332060]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 05:21:24 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770178884 1770179784 0
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:info: queue [332062]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:info: queue [332062]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770179811 1770180711 0
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:info: queue [331960]: genie_optimiser_dist() start
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:info: queue [331960]: genie_optimiser_dist() end
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:info: replan_job optimiser 172800 1770180992 1770353792 -11
+2026-02-04 06:06:22 127.0.0.1 (pid 13600) :Pub:info: queue [332063]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 06:06:22 127.0.0.1 (pid 13600) :Pub:info: queue [332063]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 06:06:22 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770181582 1770182482 0
+2026-02-04 06:23:59 127.0.0.1 (pid 13600) :Pub:info: queue [332065]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 06:23:59 127.0.0.1 (pid 13600) :Pub:info: queue [332065]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 06:23:59 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770182639 1770183539 0
+2026-02-04 06:39:11 127.0.0.1 (pid 13600) :Pub:info: queue [332066]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 06:39:11 127.0.0.1 (pid 13600) :Pub:info: queue [332066]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 06:39:11 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770183551 1770184451 0
+2026-02-04 06:54:56 127.0.0.1 (pid 13600) :Pub:info: queue [332067]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 06:54:56 127.0.0.1 (pid 13600) :Pub:info: queue [332067]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 06:54:56 127.0.0.1 (pid 13600) :Pub:info: replan_job mailsubscribers_update_optins 900 1770184496 1770185396 0
+2026-02-04 07:52:42 127.0.0.1 (pid 5332) :Pub:info: queue [332061]: genie_maintenance_dist() start
+2026-02-04 07:52:42 127.0.0.1 (pid 5332) :Pub:info: queue [332061]: genie_maintenance_dist() end
+2026-02-04 07:52:42 127.0.0.1 (pid 5332) :Pub:info: replan_job maintenance 7200 1770187962 1770195162 0
+2026-02-04 07:52:42 127.0.0.1 (pid 5332) :Pub:info: queue [332068]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 07:52:42 127.0.0.1 (pid 5332) :Pub:info: queue [332068]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 07:52:42 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770187962 1770188862 0
+2026-02-04 08:08:53 127.0.0.1 (pid 5332) :Pub:info: queue [332070]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 08:08:53 127.0.0.1 (pid 5332) :Pub:info: queue [332070]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 08:08:53 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770188933 1770189833 0
+2026-02-04 08:28:52 127.0.0.1 (pid 5332) :Pub:info: queue [332071]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 08:28:52 127.0.0.1 (pid 5332) :Pub:info: queue [332071]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 08:28:52 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770190132 1770191032 0
+2026-02-04 08:48:10 127.0.0.1 (pid 5332) :Pub:info: queue [332072]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 08:48:10 127.0.0.1 (pid 5332) :Pub:info: queue [332072]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 08:48:10 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770191290 1770192190 0
+2026-02-04 09:13:17 127.0.0.1 (pid 5332) :Pub:info: queue [332073]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 09:13:17 127.0.0.1 (pid 5332) :Pub:info: queue [332073]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 09:13:17 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770192797 1770193697 0
+2026-02-04 22:43:46 127.0.0.1 (pid 5332) :Pub:info: queue [332074]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 22:43:46 127.0.0.1 (pid 5332) :Pub:info: queue [332074]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770241426 1770242326 0
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:info: queue [332055]: genie_svp_actualiser_depots_dist() start
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:info: queue [332069]: genie_maintenance_dist() start
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:info: queue [332069]: genie_maintenance_dist() end
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:info: replan_job maintenance 7200 1770241427 1770248627 0
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:info: queue [332038]: genie_mailsubscribers_synchro_lists_dist() start
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:info: queue [332038]: genie_mailsubscribers_synchro_lists_dist() end
+2026-02-04 22:43:47 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_synchro_lists 82800 1770241427 1770324227 0
+2026-02-04 22:45:00 127.0.0.1 (pid 5332) :Pub:info: queue [332055]: genie_svp_actualiser_depots_dist() end
+2026-02-04 22:45:00 127.0.0.1 (pid 5332) :Pub:info: replan_job svp_actualiser_depots 21600 1770241500 1770263100 0
+2026-02-04 23:04:18 127.0.0.1 (pid 5332) :Pub:info: queue [332075]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 23:04:18 127.0.0.1 (pid 5332) :Pub:info: queue [332075]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 23:04:18 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770242658 1770243558 0
+2026-02-04 23:20:05 127.0.0.1 (pid 5332) :Pub:info: queue [332079]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 23:20:05 127.0.0.1 (pid 5332) :Pub:info: queue [332079]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 23:20:05 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770243605 1770244505 0
+2026-02-04 23:35:25 127.0.0.1 (pid 5332) :Pub:info: queue [332080]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 23:35:25 127.0.0.1 (pid 5332) :Pub:info: queue [332080]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 23:35:25 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770244525 1770245425 0
+2026-02-04 23:50:42 127.0.0.1 (pid 5332) :Pub:info: queue [332081]: genie_mailsubscribers_update_optins_dist() start
+2026-02-04 23:50:42 127.0.0.1 (pid 5332) :Pub:info: queue [332081]: genie_mailsubscribers_update_optins_dist() end
+2026-02-04 23:50:42 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770245442 1770246342 0
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: queue [332082]: genie_mailsubscribers_update_optins_dist() start
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: queue [332082]: genie_mailsubscribers_update_optins_dist() end
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770246933 1770247833 0
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: queue [332044]: genie_queue_watch_dist() start
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: queue [332044]: genie_queue_watch_dist() end
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: replan_job queue_watch 86400 1770246933 1770333333 0
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: queue [332045]: genie_bigup_nettoyer_repertoire_upload_dist() start
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: queue [332045]: genie_bigup_nettoyer_repertoire_upload_dist() end
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: replan_job bigup_nettoyer_repertoire_upload 86400 1770246933 1770333333 0
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: queue [332046]: genie_revisions_optimiser_revisions_dist() start
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: queue [332046]: genie_revisions_optimiser_revisions_dist() end
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: replan_job revisions_optimiser_revisions 86400 1770246933 1770333333 0
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: queue [332047]: genie_medias_nettoyer_repertoire_upload_dist() start
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: queue [332047]: genie_medias_nettoyer_repertoire_upload_dist() end
+2026-02-05 00:15:33 127.0.0.1 (pid 5332) :Pub:info: replan_job medias_nettoyer_repertoire_upload 86400 1770246933 1770333333 0
+2026-02-05 00:49:16 127.0.0.1 (pid 5332) :Pub:info: queue [332083]: genie_mailsubscribers_update_optins_dist() start
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:info: queue [332083]: genie_mailsubscribers_update_optins_dist() end
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770248957 1770249857 0
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:info: queue [332076]: genie_maintenance_dist() start
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:info: queue [332076]: genie_maintenance_dist() end
+2026-02-05 00:49:17 127.0.0.1 (pid 5332) :Pub:info: replan_job maintenance 7200 1770248957 1770256157 0
+2026-02-05 01:06:20 127.0.0.1 (pid 5332) :Pub:info: queue [332088]: genie_mailsubscribers_update_optins_dist() start
+2026-02-05 01:06:20 127.0.0.1 (pid 5332) :Pub:info: queue [332088]: genie_mailsubscribers_update_optins_dist() end
+2026-02-05 01:06:20 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770249980 1770250880 0
+2026-02-05 01:24:40 127.0.0.1 (pid 5332) :Pub:info: queue [332090]: genie_mailsubscribers_update_optins_dist() start
+2026-02-05 01:24:40 127.0.0.1 (pid 5332) :Pub:info: queue [332090]: genie_mailsubscribers_update_optins_dist() end
+2026-02-05 01:24:40 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770251080 1770251980 0
+2026-02-05 03:05:52 127.0.0.1 (pid 5332) :Pub:info: queue [332091]: genie_mailsubscribers_update_optins_dist() start
+2026-02-05 03:05:52 127.0.0.1 (pid 5332) :Pub:info: queue [332091]: genie_mailsubscribers_update_optins_dist() end
+2026-02-05 03:05:52 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770257152 1770258052 0
+2026-02-05 03:05:53 127.0.0.1 (pid 5332) :Pub:info: queue [332089]: genie_maintenance_dist() start
+2026-02-05 03:05:53 127.0.0.1 (pid 5332) :Pub:info: queue [332089]: genie_maintenance_dist() end
+2026-02-05 03:05:53 127.0.0.1 (pid 5332) :Pub:info: replan_job maintenance 7200 1770257153 1770264353 0
+2026-02-05 04:12:15 127.0.0.1 (pid 5332) :Pub:info: queue [332092]: genie_mailsubscribers_update_optins_dist() start
+2026-02-05 04:12:15 127.0.0.1 (pid 5332) :Pub:info: queue [332092]: genie_mailsubscribers_update_optins_dist() end
+2026-02-05 04:12:15 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770261135 1770262035 0
+2026-02-05 04:30:24 127.0.0.1 (pid 5332) :Pub:info: queue [332094]: genie_mailsubscribers_update_optins_dist() start
+2026-02-05 04:30:24 127.0.0.1 (pid 5332) :Pub:info: queue [332094]: genie_mailsubscribers_update_optins_dist() end
+2026-02-05 04:30:24 127.0.0.1 (pid 5332) :Pub:info: replan_job mailsubscribers_update_optins 900 1770262224 1770263124 0

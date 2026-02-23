@@ -3,12 +3,12 @@
 /*
  * Squelette : plugins/auto/diapo-636dc-diapo-2.2.0/diapo-2.2.0/diapo.js.html
  * Date :      Sat, 18 Jan 2025 14:09:26 GMT
- * Compile :   Thu, 29 Jan 2026 23:13:39 GMT
+ * Compile :   Sun, 22 Feb 2026 23:40:43 GMT
  * Boucles :   
  */ 
 //
 // Fonction principale du squelette plugins/auto/diapo-636dc-diapo-2.2.0/diapo-2.2.0/diapo.js.html
-// Temps de compilation total: 0.085 ms
+// Temps de compilation total: 0.077 ms
 //
 
 function html_829bd4af9347ffd7f896072b14cfb900($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

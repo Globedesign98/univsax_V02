@@ -1,0 +1,151 @@
+2026-02-03 08:16:15 127.0.0.1 (pid 13600) :Pub:ERREUR: Aucun squelette &lt;b>reglement_2023.html&lt;/b> n'est disponible...
+2026-02-03 08:16:27 127.0.0.1 (pid 13600) :Pub:ERREUR: Aucun squelette &lt;b>reglement_2023.html&lt;/b> n'est disponible...
+2026-02-03 08:17:05 127.0.0.1 (pid 13600) :Pub:ERREUR: Aucun squelette &lt;b>reglement_2023.html&lt;/b> n'est disponible...
+2026-02-03 08:20:25 127.0.0.1 (pid 13600) :Pub:ERREUR: Aucun squelette &lt;b>inc-head&lt;/b> n'est disponible... Squelette squelettes/reglement_2026.html L12
+2026-02-03 08:23:25 127.0.0.1 (pid 13600) :Pub:ERREUR: Aucun squelette &lt;b>reglement_2023.html&lt;/b> n'est disponible...
+2026-02-03 08:23:27 127.0.0.1 (pid 13600) :Pub:ERREUR: Aucun squelette &lt;b>reglement_2023.html&lt;/b> n'est disponible...
+2026-02-03 08:23:28 127.0.0.1 (pid 13600) :Pub:ERREUR: Aucun squelette &lt;b>reglement_2023.html&lt;/b> n'est disponible...
+2026-02-03 08:29:25 127.0.0.1 (pid 13600) :Pub:ERREUR: Aucun squelette &lt;b>reglement_2023.html&lt;/b> n'est disponible...
+2026-02-03 08:29:27 127.0.0.1 (pid 13600) :Pub:ERREUR: Aucun squelette &lt;b>reglement_2023.html&lt;/b> n'est disponible...
+2026-02-03 08:30:09 127.0.0.1 (pid 13600) :Pub:ERREUR: Aucun squelette &lt;b>reglement_2023.html&lt;/b> n'est disponible...
+2026-02-03 08:30:12 127.0.0.1 (pid 13600) :Pub:ERREUR: Aucun squelette &lt;b>reglement_2023.html&lt;/b> n'est disponible...
+2026-02-04 04:32:17 127.0.0.1 (pid 13600) :Pub:ERREUR: BOUCLE&lt;span class='spip-debug-arg'>_ues_has_doc&lt;/span>: double d&eacute;finition Squelette squelettes/rubrique-5.html Boucle _ues_has_doc L671
+2026-02-04 06:38:31 127.0.0.1 (pid 13600) :Pub:ERREUR: BOUCLE&lt;span class='spip-debug-arg'>_articles_paiement&lt;/span>: double d&eacute;finition Squelette squelettes/rubrique-5.html Boucle _articles_paiement L1689
+2026-02-04 23:20:05 127.0.0.1 (pid 5332) :Pub:ERREUR: Aucun squelette &lt;b>sommaire_corrige(1).html&lt;/b> n'est disponible...
+2026-02-06 23:05:27 127.0.0.1 (pid 5332) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 23:05:27 127.0.0.1 (pid 5332) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-10 22:50:49 127.0.0.1 (pid 2152) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _art L222
+2026-02-10 22:51:53 127.0.0.1 (pid 2152) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _art L222
+2026-02-10 22:56:48 127.0.0.1 (pid 2152) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _art L276
+2026-02-10 22:57:15 127.0.0.1 (pid 2152) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _art L276
+2026-02-10 22:59:34 127.0.0.1 (pid 2152) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _art L268
+2026-02-10 22:59:38 127.0.0.1 (pid 2152) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _art L268
+2026-02-10 23:01:17 127.0.0.1 (pid 2152) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _build L102
+2026-02-10 23:01:17 127.0.0.1 (pid 2152) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _art L270
+2026-02-10 23:01:29 127.0.0.1 (pid 2152) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _build L102
+2026-02-10 23:01:29 127.0.0.1 (pid 2152) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _art L270
+2026-02-10 23:04:17 127.0.0.1 (pid 2152) :Pub:ERREUR: crit&egrave;re inconnu &lt;span class='spip-debug-arg'>!(statut=publie)&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _B1 L169
+2026-02-10 23:04:17 127.0.0.1 (pid 2152) :Pub:ERREUR: crit&egrave;re inconnu &lt;span class='spip-debug-arg'>!(statut=publie)&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _B2 L184
+2026-02-10 23:04:17 127.0.0.1 (pid 2152) :Pub:ERREUR: crit&egrave;re inconnu &lt;span class='spip-debug-arg'>=&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _A1 L129
+2026-02-10 23:04:17 127.0.0.1 (pid 2152) :Pub:ERREUR: crit&egrave;re inconnu &lt;span class='spip-debug-arg'>=&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _A1 L129
+2026-02-10 23:04:17 127.0.0.1 (pid 2152) :Pub:ERREUR: crit&egrave;re inconnu &lt;span class='spip-debug-arg'>=&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _A2 L146
+2026-02-10 23:04:17 127.0.0.1 (pid 2152) :Pub:ERREUR: crit&egrave;re inconnu &lt;span class='spip-debug-arg'>=&lt;/span> Squelette squelettes/tableau_inscriptions.html Boucle _A2 L146
+2026-02-11 01:58:35 127.0.0.1 (pid 2152) :Pub:ERREUR: Aucun squelette &lt;b>tableau_inscriptions?var_mode=recalcul.html&lt;/b> n'est disponible...
+2026-02-11 03:04:43 127.0.0.1 (pid 2152) :Pub:ERREUR: Champ &lt;span class='spip-debug-arg'>#TOTAL_BOUCLE&lt;/span> hors boucle Squelette squelettes/tableau_inscriptions.html L202
+2026-02-11 03:04:43 127.0.0.1 (pid 2152) :Pub:ERREUR: Champ &lt;span class='spip-debug-arg'>#TOTAL_BOUCLE&lt;/span> hors boucle Squelette squelettes/tableau_inscriptions.html L191
+2026-02-11 03:04:43 127.0.0.1 (pid 2152) :Pub:ERREUR: Champ &lt;span class='spip-debug-arg'>#TOTAL_BOUCLE&lt;/span> hors boucle Squelette squelettes/tableau_inscriptions.html L191
+2026-02-13 19:56:31 127.0.0.1 (pid 15260) :Pub:ERREUR: Execution error squelettes/rubrique-7.html | File C:\xampp\htdocs\univsax\squelettes\lang\spip_en.php Line 1660 : syntax error, unexpected single-quoted string "acc_validated_confirmed_paid", expecting ")"
+2026-02-13 19:57:37 127.0.0.1 (pid 15260) :Pub:ERREUR: error in page calculation squelettes/inc-checklist.html | File C:\xampp\htdocs\univsax\squelettes\lang\ues_en.php Line 23 : syntax error, unexpected identifier "t", expecting ")"
+2026-02-13 19:59:08 127.0.0.1 (pid 15260) :Pub:ERREUR: error in page calculation squelettes/inc-checklist.html | File C:\xampp\htdocs\univsax\squelettes\lang\ues_en.php Line 23 : syntax error, unexpected identifier "t", expecting ")"
+2026-02-13 22:17:30 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L59
+2026-02-13 22:17:30 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L58
+2026-02-13 22:17:30 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L66
+2026-02-13 22:17:30 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L58
+2026-02-13 22:17:30 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L59
+2026-02-13 22:17:30 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L58
+2026-02-13 22:17:30 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L66
+2026-02-13 22:17:30 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L58
+2026-02-13 22:18:22 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L59
+2026-02-13 22:18:22 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L59
+2026-02-13 22:18:22 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L67
+2026-02-13 22:18:22 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L59
+2026-02-13 22:18:22 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L59
+2026-02-13 22:18:22 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L59
+2026-02-13 22:18:22 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L67
+2026-02-13 22:18:22 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L59
+2026-02-13 22:18:31 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L59
+2026-02-13 22:18:31 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L59
+2026-02-13 22:18:31 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L67
+2026-02-13 22:18:31 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L59
+2026-02-13 22:18:31 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L59
+2026-02-13 22:18:31 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L59
+2026-02-13 22:18:31 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L67
+2026-02-13 22:18:31 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L59
+2026-02-13 22:18:41 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L59
+2026-02-13 22:18:41 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L59
+2026-02-13 22:18:41 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L67
+2026-02-13 22:18:41 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>})&lt;/span> &raquo;&lt;/b> non d&eacute;fini L59
+2026-02-13 22:18:41 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L59
+2026-02-13 22:18:41 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L59
+2026-02-13 22:18:41 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L67
+2026-02-13 22:18:41 127.0.0.1 (pid 15260) :Pub:ERREUR: Argument manquant dans la balise &lt;span class='spip-debug-arg'>SET&lt;/span> Squelette squelettes/inc-ues-accordion-item.html Boucle _art L59
+2026-02-13 22:32:10 127.0.0.1 (pid 15260) :Pub:ERREUR: &lt;b>Erreur SQL 1054&lt;/b>&lt;br>&lt;code>
+Unknown column 'prenom' in 'field list'
+&lt;br>&lt;span style='color: red'>&lt;b>
+SELECT prenom
+FROM spip_auteurs
+WHERE id_auteur=-1&lt;/b>&lt;/span>&lt;/code>&lt;br> Squelette C:\xampp\htdocs\univsax\squelettes\formulaires\envoyer_mail_ues.php Boucle formulaires_envoyer_mail_ues_traiter_dist(){
+sql_getfetsel();
+} L51
+2026-02-13 22:34:31 127.0.0.1 (pid 15260) :Pub:ERREUR: &lt;b>Erreur SQL 1054&lt;/b>&lt;br>&lt;code>
+Unknown column 'prenom' in 'field list'
+&lt;br>&lt;span style='color: red'>&lt;b>
+SELECT prenom
+FROM spip_auteurs
+WHERE id_auteur=-1&lt;/b>&lt;/span>&lt;/code>&lt;br> Squelette C:\xampp\htdocs\univsax\squelettes\formulaires\envoyer_mail_ues.php Boucle formulaires_envoyer_mail_ues_traiter_dist(){
+sql_getfetsel();
+} L51
+2026-02-13 22:36:25 127.0.0.1 (pid 15260) :Pub:ERREUR: &lt;b>Erreur SQL 1054&lt;/b>&lt;br>&lt;code>
+Unknown column 'prenom' in 'field list'
+&lt;br>&lt;span style='color: red'>&lt;b>
+SELECT prenom
+FROM spip_auteurs
+WHERE id_auteur=-1&lt;/b>&lt;/span>&lt;/code>&lt;br> Squelette C:\xampp\htdocs\univsax\squelettes\formulaires\envoyer_mail_ues.php Boucle formulaires_envoyer_mail_ues_traiter_dist(){
+sql_getfetsel();
+} L51
+2026-02-13 22:37:48 127.0.0.1 (pid 15260) :Pub:ERREUR: &lt;b>Erreur SQL 1054&lt;/b>&lt;br>&lt;code>
+Unknown column 'prenom' in 'field list'
+&lt;br>&lt;span style='color: red'>&lt;b>
+SELECT prenom
+FROM spip_auteurs
+WHERE id_auteur=-1&lt;/b>&lt;/span>&lt;/code>&lt;br> Squelette C:\xampp\htdocs\univsax\squelettes\formulaires\envoyer_mail_ues.php Boucle formulaires_envoyer_mail_ues_traiter_dist(){
+sql_getfetsel();
+} L72
+2026-02-13 22:38:01 127.0.0.1 (pid 15260) :Pub:ERREUR: &lt;b>Erreur SQL 1054&lt;/b>&lt;br>&lt;code>
+Unknown column 'prenom' in 'field list'
+&lt;br>&lt;span style='color: red'>&lt;b>
+SELECT prenom
+FROM spip_auteurs
+WHERE id_auteur=-1&lt;/b>&lt;/span>&lt;/code>&lt;br> Squelette C:\xampp\htdocs\univsax\squelettes\formulaires\envoyer_mail_ues.php Boucle formulaires_envoyer_mail_ues_traiter_dist(){
+sql_getfetsel();
+} L72
+2026-02-13 22:39:56 127.0.0.1 (pid 15260) :Pub:ERREUR: &lt;b>Erreur SQL 1054&lt;/b>&lt;br>&lt;code>
+Unknown column 'prenom' in 'field list'
+&lt;br>&lt;span style='color: red'>&lt;b>
+SELECT prenom
+FROM spip_auteurs
+WHERE id_auteur=-1&lt;/b>&lt;/span>&lt;/code>&lt;br> Squelette C:\xampp\htdocs\univsax\squelettes\formulaires\envoyer_mail_ues.php Boucle formulaires_envoyer_mail_ues_traiter_dist(){
+sql_getfetsel();
+} L71
+2026-02-13 22:41:56 127.0.0.1 (pid 15260) :Pub:ERREUR: &lt;b>Erreur SQL 1054&lt;/b>&lt;br>&lt;code>
+Unknown column 'prenom' in 'field list'
+&lt;br>&lt;span style='color: red'>&lt;b>
+SELECT prenom
+FROM spip_auteurs
+WHERE id_auteur=-1&lt;/b>&lt;/span>&lt;/code>&lt;br> Squelette C:\xampp\htdocs\univsax\squelettes\formulaires\envoyer_mail_ues.php Boucle formulaires_envoyer_mail_ues_traiter_dist(){
+sql_getfetsel();
+} L65
+2026-02-16 08:07:46 127.0.0.1 (pid 18780) :Pri:ERREUR: erreur d'ex&eacute;cution de la page ../prive/themes/spip/bando.css.html | File C:\xampp\htdocs\univsax\plugins\export_articles_xlsx\export_articles_xlsx_pipelines.php Line 8 : Cannot use object of type Spip\Admin\Bouton as array
+2026-02-16 08:07:46 127.0.0.1 (pid 18780) :Pri:ERREUR: erreur d'ex&eacute;cution de la page ../prive/squelettes/inclure/barre-nav.html | File C:\xampp\htdocs\univsax\plugins\export_articles_xlsx\export_articles_xlsx_pipelines.php Line 8 : Cannot use object of type Spip\Admin\Bouton as array
+2026-02-16 08:07:46 127.0.0.1 (pid 18780) :Pri:ERREUR: erreur d'ex&eacute;cution de la page ../prive/squelettes/inclure/menu-navigation.html | File C:\xampp\htdocs\univsax\plugins\export_articles_xlsx\export_articles_xlsx_pipelines.php Line 8 : Cannot use object of type Spip\Admin\Bouton as array
+2026-02-16 08:45:34 127.0.0.1 (pid 18780) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>url_action_auteur&lt;/span> &raquo;&lt;/b> non d&eacute;fini Squelette squelettes/inc-ues-accordion-item.html Boucle _art L64
+2026-02-16 08:46:13 127.0.0.1 (pid 18780) :Pub:ERREUR: Erreur : filtre &lt;b>&laquo; &lt;span class='spip-debug-arg'>url_action_auteur&lt;/span> &raquo;&lt;/b> non d&eacute;fini Squelette squelettes/inc-ues-accordion-item.html Boucle _art L64
+2026-02-17 08:12:04 127.0.0.1 (pid 18780) :Pub:ERREUR: Aucun squelette &lt;b>inc-documents&lt;/b> n'est disponible... Squelette squelettes/article.html Boucle _principale L35
+2026-02-17 08:12:04 127.0.0.1 (pid 18780) :Pub:ERREUR: Aucun squelette &lt;b>inc-head&lt;/b> n'est disponible... Squelette squelettes/article.html L7
+2026-02-17 08:12:04 127.0.0.1 (pid 18780) :Pub:ERREUR: Aucun squelette &lt;b>inc-entete&lt;/b> n'est disponible... Squelette squelettes/article.html L13
+2026-02-17 08:12:04 127.0.0.1 (pid 18780) :Pub:ERREUR: Aucun squelette &lt;b>inc-forum&lt;/b> n'est disponible... Squelette squelettes/article.html L63
+2026-02-17 08:12:04 127.0.0.1 (pid 18780) :Pub:ERREUR: Aucun squelette &lt;b>inc-rubriques&lt;/b> n'est disponible... Squelette squelettes/article.html L74
+2026-02-17 08:12:04 127.0.0.1 (pid 18780) :Pub:ERREUR: Aucun squelette &lt;b>inc-pied&lt;/b> n'est disponible... Squelette squelettes/article.html L92
+2026-02-18 23:16:44 127.0.0.1 (pid 2912) :Pub:ERREUR: BOUCLE&lt;span class='spip-debug-arg'>_fiche_pdf&lt;/span>: double d&eacute;finition Squelette squelettes/rubrique-7.html Boucle _fiche_pdf L1498
+2026-02-18 23:16:44 127.0.0.1 (pid 2912) :Pub:ERREUR: BOUCLE&lt;span class='spip-debug-arg'>_pj&lt;/span>: double d&eacute;finition Squelette squelettes/rubrique-7.html Boucle _pj L1536
+2026-02-18 23:16:44 127.0.0.1 (pid 2912) :Pub:ERREUR: BOUCLE&lt;span class='spip-debug-arg'>_ues_me_logo&lt;/span>: double d&eacute;finition Squelette squelettes/rubrique-7.html Boucle _ues_me_logo L1602
+2026-02-18 23:16:44 127.0.0.1 (pid 2912) :Pub:ERREUR: BOUCLE&lt;span class='spip-debug-arg'>_article_statut&lt;/span>: double d&eacute;finition Squelette squelettes/rubrique-7.html Boucle _article_statut L1465
+2026-02-19 01:42:02 127.0.0.1 (pid 2912) :Pri:ERREUR: &lt;b>Erreur SQL 1054&lt;/b>&lt;br>&lt;code>
+Unknown column 'id_auteur' in 'field list'
+&lt;br>&lt;span style='color: red'>&lt;b>
+SELECT id_auteur
+FROM spip_articles
+WHERE id_article=1438 AND id_auteur=80&lt;/b>&lt;/span>&lt;/code>&lt;br> Squelette C:\xampp\htdocs\univsax\config\autoriser.php Boucle _ues_article_auteur(){
+sql_getfetsel();
+} L53
+2026-02-19 01:42:02 127.0.0.1 (pid 2912) :Pri:ERREUR: erreur d'ex&eacute;cution de la page ../prive/objets/liste/articles.html | File C:\xampp\htdocs\univsax\ecrire\req\mysql.php Line 1054 : Unknown column 'id_auteur' in 'field list'

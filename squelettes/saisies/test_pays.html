@@ -1,0 +1,15 @@
+[(#REM)
+  Gabarit minimal safe pour la saisie "pays"
+]
+<div class="editer editer_#ENV{nom}[(#ENV{obligatoire}|oui) obligatoire]">
+  [<label for="#ENV{id}">(#ENV{label})</label>]
+  <select name="#ENV{nom}" id="#ENV{id}" class="select">
+    <option value="">-</option>
+    [(#ENV{datas}|oui)
+      #BOUCLE_pays(DATA){source tableau,#ENV{datas}}>
+        <option value="#CLE"[(#ENV{valeur}|=={#CLE}|oui) selected="selected"]>#VALEUR</option>
+      </BOUCLE_pays>
+    ]
+  </select>
+  [<p class="explication">(#ENV{explication})</p>]
+</div>

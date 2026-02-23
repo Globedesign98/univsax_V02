@@ -1,0 +1,9 @@
+<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" version="1.1" id="svg150" sodipodi:docname="listunsubscribe-xx.svg" xml:space="preserve" inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)">
+  <defs id="defs154"/>
+  <path fill="#fff" d="M7 7h53v45H7z" id="path144"/>
+  <path fill="#666" d="M54.4 15.3l-22.2 19-22.6-19V46h22.6v6H6.8C5.3 52 4 50.8 4 49.4V6.7C4 5.2 5.3 4 6.8 4h50.4C58.7 4 60 5.2 60 6.7V28h-5.6V15.3zm-1.4-6H11l21.1 17.8L53 9.3z" id="path146"/>
+  <g stroke-width="0.5" id="g324" transform="matrix(0.46875,0,0,0.46875,33.365716,29.262856)">
+    <circle cx="32" cy="32" r="32" fill="#e21b1b" id="circle320"/>
+    <path fill="#ffffff" d="m 55.044,26.408 c -0.637,-0.636 -1.41,-0.954 -2.319,-0.954 H 11.272 c -0.908,0 -1.681,0.318 -2.318,0.954 C 8.318,27.045 8,27.818 8,28.727 v 6.545 c 0,0.91 0.318,1.682 0.954,2.318 0.637,0.636 1.41,0.954 2.318,0.954 h 41.476 c 0.91,0 1.682,-0.318 2.318,-0.954 0.636,-0.636 0.954,-1.408 0.954,-2.318 v -6.545 c -0.022,-0.91 -0.34,-1.682 -0.976,-2.319 z" id="path322"/>
+  </g>
+</svg>

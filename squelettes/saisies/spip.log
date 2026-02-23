@@ -1,0 +1,57 @@
+2026-02-05 23:40:31 74.7.241.2 (pid 117928) :Pub:HS: spip_connect: fichier de connexion '' non trouve, pas de connexion serveur
+2026-02-05 23:40:31 74.7.241.2 (pid 117928) :Pub:ERREUR: Table SQL &laquo; &lt;span class='spip-debug-arg'>BREVES&lt;/span> &raquo; inconnue Squelette squelettes/plan.html Boucle _breves L116
+2026-02-06 21:31:48 114.69.215.30 (pid 19844) :Pri:!INFO: Probleme de configuration opcache.revalidate_freq 2s : on attend 0s
+2026-02-06 21:32:35 114.69.215.30 (pid 19844) :Pri:ERREUR: charger_decompresser erreur zip 2 archives:extension_inconnue pour paquet: ../tmp/cache/chargeur/jquery-validation-1.10.0-3254fbf5-jquery-validation-1.10.0.zip
+2026-02-06 21:32:35 114.69.215.30 (pid 19844) :Pri:ERREUR: probleme lors du dezip de ../tmp/cache/chargeur/jquery-validation-1.10.0-3254fbf5-jquery-validation-1.10.0.zip
+2026-02-06 21:32:38 114.69.215.30 (pid 19844) :Pri:cf maj.log
+2026-02-06 21:32:38 114.69.215.30 (pid 19844) :Pri:ERREUR: Erreur mysql 1146
+2026-02-06 21:32:38 114.69.215.30 (pid 19844) :Pri:ERREUR: Erreur mysql 1146
+2026-02-06 21:32:38 114.69.215.30 (pid 19844) :Pri:cf maj.log
+2026-02-06 21:32:38 114.69.215.30 (pid 19844) :Pri:cf maj.log
+2026-02-06 21:32:38 114.69.215.30 (pid 19844) :Pri:cf maj.log
+2026-02-06 21:32:38 114.69.215.30 (pid 19844) :Pri:cf maj.log
+2026-02-06 21:32:38 114.69.215.30 (pid 19844) :Pri:cf maj.log
+2026-02-06 21:32:38 114.69.215.30 (pid 19844) :Pri:cf maj.log
+2026-02-06 21:32:38 114.69.215.30 (pid 19844) :Pri:cf maj.log
+2026-02-06 21:32:38 114.69.215.30 (pid 19844) :Pri:cf maj.log
+2026-02-06 21:32:40 114.69.215.30 (pid 19844) :Pri:!INFO: Probleme de configuration opcache.revalidate_freq 2s : on attend 0s
+2026-02-06 21:34:47 114.69.215.30 (pid 48564) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:34:47 114.69.215.30 (pid 48564) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:38:24 114.69.215.30 (pid 48564) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:38:24 114.69.215.30 (pid 48564) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:38:24 114.69.215.30 (pid 48564) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:38:43 114.69.215.30 (pid 20230) :Pub:CRITIQUE: Array
+(
+    [verifier_confirmer] => oui
+)
+
+2026-02-06 21:38:43 114.69.215.30 (pid 20230) :Pub:CRITIQUE: statut auteur inchange
+2026-02-06 21:40:53 114.69.215.30 (pid 20230) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:40:53 114.69.215.30 (pid 20230) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:48:15 51.158.253.189 (pid 104877) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:48:15 51.158.253.189 (pid 104877) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:49:23 51.158.253.189 (pid 116043) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:49:23 51.158.253.189 (pid 116043) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:49:23 51.158.253.189 (pid 116043) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:54:00 51.158.253.189 (pid 31421) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:54:00 51.158.253.189 (pid 31421) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:54:00 51.158.253.189 (pid 31421) :Pri:ERREUR: Aucun squelette &lt;b>saisies/pays&lt;/b> n'est disponible... Squelette ../plugins/auto/saisies/v6.1.1/saisies/_base.html L59
+2026-02-06 21:56:51 51.158.253.189 (pid 31421) :Pri:!INFO: Probleme de configuration opcache.revalidate_freq 2s : on attend 0s
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:cf maj.log
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:ERREUR: Erreur mysql 1146
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:ERREUR: Erreur mysql 1146
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:ERREUR: Erreur mysql 1146
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:ERREUR: Erreur mysql 1146
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:cf maj.log
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:cf maj.log
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:cf maj.log
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:cf maj.log
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:cf maj.log
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:cf maj.log
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:cf maj.log
+2026-02-06 21:57:31 51.158.253.189 (pid 31421) :Pri:cf maj.log
+2026-02-06 22:04:46 51.158.253.189 (pid 1237) :Pri:!INFO: Probleme de configuration opcache.revalidate_freq 2s : on attend 0s
+2026-02-06 23:17:27 51.158.253.189 (pid 71245) :Pri:!INFO: Probleme de configuration opcache.revalidate_freq 2s : on attend 0s
+2026-02-06 23:17:50 51.158.253.189 (pid 71245) :Pri:!INFO: Probleme de configuration opcache.revalidate_freq 2s : on attend 0s
+2026-02-06 23:58:57 51.158.253.189 (pid 11954) :Pri:!INFO: Probleme de configuration opcache.revalidate_freq 2s : on attend 0s
+2026-02-07 00:20:32 51.158.253.189 (pid 47456) :Pri:!INFO: Probleme de configuration opcache.revalidate_freq 2s : on attend 0s

@@ -13,7 +13,9 @@
   --ues-logo-small: 58px;
 }
 
-
+div {
+    line-height: 1.4rem !important;
+}
 /* Base */
 .ues-page{
   font-family: Montserrat, Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
@@ -47,17 +49,7 @@
   padding: 6px 12px;
 }
 
-.ues-topbar-title{
-  flex: 1 1 auto;
-  min-width: 0;                 /* needed for ellipsis */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: 600;
-  letter-spacing: .2px;
-  font-size: .80rem;
-  text-align: left;
-}
+
 
 .ues-topbar-actions{
   flex: 0 0 auto;
@@ -213,7 +205,7 @@ padding-left: 49px;
   background:
     radial-gradient(circle at 25% 20%, rgba(242,209,0,.20), rgba(0,0,0,0) 55%),
     linear-gradient(to right, rgba(0,0,0,.25) 0%, rgba(0,0,0,.65) 55%, rgba(0,0,0,.82) 100%),
-    url("../img/ues/hero-sax.jpg");
+    url("../sax.png");
   background-size: cover;
   background-position: left center;
   background-repeat: no-repeat;
@@ -395,9 +387,6 @@ html, body{
   backdrop-filter: blur(6px);
 }
 
-/* Évite que le contenu clair des sections "remonte" derrière le header */
-.ues-main{
-  background: transparent !important;
 }
 /* ===== HERO derrière le header + NAV transparente sur le hero ===== */
 
@@ -407,8 +396,9 @@ html, body{
 }
 
 /* Utilise la variable partout */
-.ues-main{
-  padding-top: var(--ues-header-h) !important;
+.ues-main {
+    background: transparent !important;
+    margin: -31px 0 0 0;
 }
 
 /* Remonte le hero sous le header (la vidéo passe derrière logo/menu) */
@@ -492,10 +482,13 @@ p {
 .ues-quicklinks li {
 
 }
-.col-lg-7, .d-flex.gap-3.mt-4.flex-wrap, .container-xxl {
+@media (min-width: 992px){
+  body.rub .container-xxl{
     padding-right: calc(var(--bs-gutter-x) * 2.5);
     padding-left: calc(var(--bs-gutter-x) * 2.5);
+  }
 }
+
 .ues-histo-text{
   text-align: justify;
   line-height: 1.55;
@@ -546,11 +539,15 @@ p {
   width: 100%;
   height: 100%;
 }
-.ues-footer-waves .ues-parallax > use,
-.footer-waves .parallax > use{
-  fill: rgba(255,255,255,.35);
-  animation: footer-waves-move 25s cubic-bezier(.55,.5,.45,.5) infinite;
-  will-change: transform;
+.ues-footer-waves .ues-parallax > use {
+  fill: rgba(255,255,255,.35) !important;
+  animation: footer-waves-move 25s cubic-bezier(.55,.5,.45,.5) infinite !important;
+  will-change: transform !important;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ues-footer-waves .ues-parallax > use {
+    animation: footer-waves-move 25s cubic-bezier(.55,.5,.45,.5) infinite;
+  }
 }
 .ues-footer-waves .ues-parallax > use:nth-child(1),
 .footer-waves .parallax > use:nth-child(1){
@@ -583,11 +580,7 @@ p {
 /* === Fin Footer Wave Effect === */
 
 /* Topbar : alignement et marge pour ne pas passer sous le logo */
-#header .ues-topbar-inner{
-  justify-content: flex-start !important;
-  padding-left: 105px; /* laisse de la place au logo à gauche */
-      border-bottom: 2px solid #CCC;
-}
+
 
 /* Logo : rester dans la navbar noire, avec un léger chevauchement de la topbar */
 #header .navbar-brand.ues-brand{
@@ -618,7 +611,7 @@ p {
 /* Au scroll : logo plus petit, MAIS il reste visible dans la navbar */
 #header.ues-header--compact .ues-nav .ues-brand img{
   height: var(--ues-logo-small) !important;
-  margin: 30px 0 0 -78px;
+  margin: 0;
 }
 
 /* Sécurité : empêcher tout "fade/slide out" du logo navbar au scroll (au cas où une règle existe ailleurs) */
@@ -667,8 +660,11 @@ p {
   }
 }
 @media (max-width: 600px) { .ues-logo-strip__row { gap: 8px; } }
-
-#uesNav { position: relative; top: -33px; /* monte l'élément */ left: -25px; /* le rapproche du logo */ }
+.index-page section#hero
+ {
+    margin-top: -100px !important;
+    padding: 85px 0 0 0 !important;
+}
 .ues-team .ues-person__img {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -686,6 +682,7 @@ p.ues-person__role.mb-3 {
 section#ues-team {
     background-color: #eae7d8;
     border-top: 8px solid #999;
+    padding: 7rem 0 !important;
 }
 
 .ues-team h2 {
@@ -696,9 +693,14 @@ p.mb-0.ues-team__lead {
     color: #999;
 }
 
-.carousel-item.active p {
+#uesCarousel > .carousel-inner > .carousel-item.active p {
     color: #FFF;
+    padding: 0 15px;
 }
+.rub div#uesNav {
+    top: -32px;
+}
+
 /* ==========================
    UES Quicklinks = boutons
    ========================== */
@@ -713,20 +715,7 @@ p.mb-0.ues-team__lead {
 
 /* Le lien devient un bouton */
 .ues-quicklinks li a{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 18px;
-  border-radius: 10px;
 
-  text-decoration: none;
-  font-weight: 600;
-  line-height: 1.1;
-
-  /* Style normal */
-  background: rgba(0,0,0,.55);
-  border: 1px solid rgba(255, 204, 0, .75); /* jaune */
-  color: #fff;
 
   /* Animation */
   transition: background .2s ease, color .2s ease, border-color .2s ease, transform .15s ease;
@@ -741,10 +730,9 @@ p.mb-0.ues-team__lead {
 }
 
 /* Rollover : couleur du bloc + texte + icône */
-.ues-quicklinks li a:hover{
-  background: #ffcc00;   /* jaune plein */
+.ues-quicklinks li a:hover {
   border-color: #ffcc00;
-  color: #000;           /* texte noir */
+  color: #FFF !important;
   transform: translateY(-1px);
 }
 .ues-quicklinks li a:hover .ues-qi{
@@ -760,9 +748,9 @@ p.mb-0.ues-team__lead {
 
 #header.ues-header--compact .ues-nav {
     background: #000 !important;
-    max-height: 50px;
+    max-height: none !important;
 }
-.carousel-item.active strong.date {
+#uesCarousel > .carousel-inner > .carousel-item.active strong.date {
     border: 1px solid #5a83a8;
     padding: 2px 5px;
     border-radius: 5px;
@@ -774,28 +762,21 @@ p.mb-0.ues-team__lead {
     margin-bottom: 20px !important;
     color: #FFF;
 }
-.carousel-item strong {
+#uesCarousel > .carousel-inner > .carousel-item strong {
     color: #7aa3c9;
-}
-i.bi
-Specificity: (0,1,1)
- {
-    padding: 0 0px 0 0;
-    color: #5a83a8;
-    font-size: 35px;
 }
 /* ==========================
    Slides : menu en haut à droite + ligne sous titre
    ========================== */
 
 /* chaque slide devient un "contenant" pour positionner le menu */
-#ues-slides .carousel-item{
+#uesCarousel > .carousel-inner > .carousel-item {
   position: relative;
-  padding-top: 56px; /* réserve la place du menu en haut */
+  padding-top: 25px; /* réserve la place du menu en haut */
 }
 
 /* menu des slides en haut à droite */
-#ues-slides .ues-slide-nav{
+#uesCarousel .ues-slide-nav {
   position: absolute;
   top: 6px;
   right: 0px;
@@ -804,20 +785,23 @@ Specificity: (0,1,1)
 }
 
 /* optionnel : boutons un peu plus compacts */
-#ues-slides .ues-tabbtn{
+#uesCarousel .ues-tabbtn {
   padding: .05rem .5rem;
   font-size: .9rem;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.28) !important;
 }
-
+#ues-slides .ues-form-surface .formulaire_spip .editer.obligatoire label {
+  color: #FFF !important;
+}
 /* ligne sous le titre */
-#ues-slides .ues-slide-title{
+#uesCarousel .ues-slide-title {
   position: relative;
   padding-bottom: 10px;
   margin-bottom: 18px;
 }
 
 /* la ligne */
-#ues-slides .ues-slide-title::after {
+#uesCarousel .ues-slide-title::after {
     content: "";
     position: absolute;
     left: 52px;
@@ -829,10 +813,10 @@ Specificity: (0,1,1)
 
 /* Responsive : sur mobile on remet le menu sous le titre */
 @media (max-width: 768px){
-  #ues-slides .carousel-item{
+  #uesCarousel > .carousel-inner > .carousel-item {
     padding-top: 0;
   }
-  #ues-slides .ues-slide-nav{
+  #uesCarousel .ues-slide-nav {
     position: static;
     margin-top: 10px !important;
   }
@@ -857,6 +841,7 @@ Specificity: (0,1,1)
   gap: .55rem;
 }
 
+
 .ues-featurelist li{
   position: relative;
   padding-left: 2.5rem;
@@ -878,7 +863,7 @@ Specificity: (0,1,1)
     font-weight: 900;
 }
 h4.ues-offer__title {
-    color: #FFF;
+    color: #2b445c;
 }
 
 /* Cartes offres */
@@ -889,7 +874,7 @@ h4.ues-offer__title {
 }
 
 .ues-offer{
-  background: #7aa3c9;
+  background: #FFF;
   border: 1px solid rgba(0,0,0,.08);
   border-radius: 16px;
   padding: 16px 16px 14px;
@@ -930,6 +915,7 @@ button#tab-profs, button#tab-pianistes {
   color: #2b445c;
   white-space: nowrap;
   font-weight: bold;
+  border: 1px solid #CCC;
 }
 
 .ues-offer__price {
@@ -940,15 +926,36 @@ button#tab-profs, button#tab-pianistes {
     background: #FFF;
     color: #2b445c;
     font-weight: bold;
+	border: 1px solid #CCC;
 }
 i.bi.bi-people-fill {
     padding-right: 8px;
+    font-size: 30px;
 }
 .ues-offer__list {
     margin: 0;
     padding-left: 1.2rem;
     color: #454545;
 }
+.hero-video-wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+  }
+  .hero-video{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease; /* durée du fondu */
+  }
+  .hero-video.is-active{
+    opacity: 1;
+  }
 .ues-offer__list li, p.ues-offer__text {
     margin: .35rem 0;
     font-size: 0.95rem;
@@ -1478,3 +1485,3740 @@ section.ues-contact {
 /* 5) Si ton CSS précédent masquait des H3/legend et que SPIP mettait
       le label "Texte..." dans un legend (cas rare), on ne touche pas aux labels.
       -> rien à faire ici, juste un rappel : ne jamais cacher label/editer. */
+.ues-footer-waves {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  pointer-events: none;
+  background: none;
+}
+.ues-footer-waves svg {
+  display: block;
+  width: 100%;
+  height: 120px;
+}
+.ues-footer-waves .ues-parallax > use {
+  fill: rgba(255,255,255,.35);
+  animation: footer-waves-move 25s cubic-bezier(.55,.5,.45,.5) infinite;
+  will-change: transform;
+}
+.ues-footer-waves .ues-parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 10s;
+  opacity: 0.6;
+}
+.ues-footer-waves .ues-parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 14s;
+  opacity: 0.4;
+}
+.ues-footer-waves .ues-parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 18s;
+  opacity: 0.2;
+}
+.ues-footer-waves .ues-parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 22s;
+  opacity: 0.1;
+}
+
+@keyframes footer-waves-move {
+  0% { transform: translate3d(-90px, 0, 0) }
+  100% { transform: translate3d(85px, 0, 0) }
+}
+.logo-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+}
+
+.logo-strip__img{
+  max-width: 130px;     /* ajuste si besoin */
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Tablette */
+@media (max-width: 992px){
+  .logo-strip{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px){
+  .logo-strip{
+    grid-template-columns: 1fr;
+  }
+  .logo-strip__img{
+    max-width: 220px;
+  }
+}
+.cta.partenaire {
+    background-color: rgb(255, 255, 255);
+    background-image: url(//www.oib-france.com/squelettes/img/img_part.jpg);
+    background-repeat: no-repeat;
+    padding: 22px;
+    background-position: 17px 7px;
+}
+/* ===========================
+   FOOTER + WAVES (ne pas casser)
+   =========================== */
+
+/* Le footer doit être le conteneur relatif des waves + réserve de place */
+footer.ues-footer{
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 120px; /* hauteur des waves */
+}
+
+/* Le contenu du footer passe au-dessus des waves */
+footer.ues-footer .footer-top,
+footer.ues-footer .copyright-area{
+  position: relative;
+  z-index: 2;
+}
+
+/* Les waves restent au fond */
+footer.ues-footer .ues-footer-waves{
+  z-index: 1;
+}
+
+
+/* ===========================
+   BANDEAU PARTENAIRES (comme la capture)
+   =========================== */
+
+/* On supprime l'ancienne image de fond et on force le bandeau blanc */
+#cta.cta.partenaire{
+  background: #fff !important;
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+
+  border-top: 5px solid #CCC;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+
+  position: relative;
+  padding: 22px 0;
+  padding-left: 56px; /* place pour le libellé vertical à gauche */
+}
+
+/* Libellé vertical "Partenaires" à gauche (comme sur ta capture) */
+#cta.cta.partenaire::before{
+  content: "Partenaires";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 56px;
+  background: #f2f2f2;
+  color: #9a9a9a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+  font-size: 20px;
+  letter-spacing: .5px;
+}
+
+/* 4 logos sur une ligne (desktop), centrés */
+#cta.cta.partenaire .logo-strip{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  justify-items: center;
+
+  column-gap: 60px;
+  row-gap: 18px;
+  padding: 0;
+}
+
+/* Taille des logos */
+#cta.cta.partenaire .logo-strip__img{
+  width: auto;
+  height: auto;
+  max-height: 80px;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Tablette : 2 par ligne */
+@media (max-width: 992px){
+  #cta.cta.partenaire .logo-strip{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  #cta.cta.partenaire .logo-strip__img{
+    max-height: 72px;
+    max-width: 220px;
+  }
+}
+
+/* Mobile : 1 par ligne + on enlève le libellé vertical */
+@media (max-width: 576px){
+  #cta.cta.partenaire{
+    padding-left: 0;
+  }
+  #cta.cta.partenaire::before{
+    content: none;
+  }
+  #cta.cta.partenaire .logo-strip{
+    grid-template-columns: 1fr;
+  }
+  #cta.cta.partenaire .logo-strip__img{
+    max-height: 70px;
+    max-width: 260px;
+  }
+}
+.ues-modal-bio a, .ues-modal a {
+    color: #454545 !important;
+    font-size: 0.9rem;
+}
+a.btn.btn-outline-light.btn-sm {
+    border: 1px solid #CCC;
+    margin: 11px;
+}
+h2.ues-title.text-uppercase {
+    color: #FFF;
+    font-size: 1.5rem;
+}
+div#uesDate {
+    margin: 0 0 40px 0;
+}
+p.ues-subtitle {
+    color: #FFF;
+    padding-left: 31px;
+}
+.ues-concerts-list strong {
+    color: #7aa3c9;
+    font-size: 0.9rem;
+    padding-right: 5px;
+}
+.ues-concerts-list .card-body {
+    background-color: #eae7d8;
+}
+section#ues-concerts {
+    background-color: #2b445c;
+    border-top: 5px solid #CCC;
+    padding: 7rem 0;
+}
+.ues_logo img {
+    width: 24rem;
+}
+p.copyright-text, p.copyright-owner {
+    font-size: 0.7rem;
+}
+h4.social-title {
+    font-size: 1rem;
+    padding: 61px 0 0 10px;
+	color: #FFF;
+}
+.bi-facebook::before {
+    content: "\f344";
+    font-size: 40px;
+    padding: 0 0 0 16px;
+}
+p.copyright-owner {
+    text-align: right;
+}
+footer.ues-footer {
+    border-top: 3px solid #999;
+}
+.nav-item, .puce {
+  list-style: none;
+}
+input#session_email {
+    width: 100%;
+    box-sizing: border-box;
+    padding: .25em;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+}
+.newsletter input.submit {
+    color: #FFF;
+    background-color: #999;
+    border-radius: 8px;
+    padding: 10px 0px;
+    border: none;
+    font-weight: 700;
+    width: 100%;
+    font-size: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+/* Bouton Back-to-Top */
+.btn-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: var(--ues-yellow);
+    color: #454545;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+/* Animation lorsqu'il apparaît */
+.btn-back-to-top.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Animation au survol */
+.btn-back-to-top:hover {
+  background-color: #0056b3;
+  transform: scale(1.1); /* Zoom léger */
+}
+/* Crossfade vidéo — SCOPE HERO (évite conflits avec .hero-video existant) */
+#hero.ues-hero { position: relative; } /* déjà le cas dans ton CSS :contentReference[oaicite:3]{index=3} */
+
+#hero .ues-xfade{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#hero .ues-xfade__video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1s ease; /* durée fondu */
+}
+
+#hero .ues-xfade__video.is-active{
+  opacity: 1;
+}
+.ues-edition-encard{
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 16px 18px;
+
+  /* ✅ lisibilité : fond plus opaque */
+  background: rgba(8, 18, 28, .72);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 16px 36px rgba(0,0,0,.28);
+  backdrop-filter: blur(6px);
+
+  color: rgba(255,255,255,.96);
+}
+
+/* ✅ animation derrière le contenu, plus douce */
+.ues-edition-encard::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background: linear-gradient(120deg,
+    rgba(255,214,10,0),
+    rgba(255,214,10,.28),
+    rgba(255,214,10,0));
+  transform: translateX(-70%);
+  animation: ues-encard-shine 6s ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
+  opacity:.9;
+}
+
+/* léger voile pour stabiliser le contraste */
+.ues-edition-encard::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(1200px 260px at 20% 30%, rgba(255,255,255,.07), transparent 55%);
+  pointer-events:none;
+  z-index:0;
+}
+
+.ues-edition-encard__inner{
+  position: relative;
+  z-index: 1;
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+}
+
+.ues-edition-main{
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ues-edition-top{
+  display:flex;
+  flex-wrap: wrap;
+  align-items:center;
+  gap:10px;
+  margin-bottom: 8px;
+}
+
+.ues-edition-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,214,10,.18);
+  border: 1px solid rgba(255,214,10,.35);
+  color: #ffd60a;
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: .75rem;
+  white-space: nowrap;
+}
+
+.ues-edition-chip{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.12);
+  color: rgba(255,255,255,.9);
+  font-weight: 700;
+  font-size: .82rem;
+  white-space: nowrap;
+}
+
+.ues-edition-title{
+  font-weight: 950;
+  font-size: 1.08rem;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.35);
+}
+
+.ues-edition-date{
+  margin-top: 4px;
+  font-size: .98rem;
+  color: rgba(255,255,255,.92);
+  text-shadow: 0 1px 0 rgba(0,0,0,.35);
+}
+
+.ues-edition-icon{
+  flex: 0 0 auto;
+  margin-left: 6px;
+  font-size: 1.6rem;
+  color: #ffd60a;
+  opacity: .95;
+  animation: ues-encard-float 2.8s ease-in-out infinite;
+}
+
+@keyframes ues-encard-shine{
+  0%   { transform: translateX(-70%); opacity: .25; }
+  50%  { opacity: .55; }
+  100% { transform: translateX(70%);  opacity: .25; }
+}
+
+@keyframes ues-encard-float{
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-4px); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .ues-edition-encard::before,
+  .ues-edition-icon{ animation:none !important; }
+}
+.ues-slideshow-placeholder.shadow-sm.p-3.rounded.text-center.w-100 {
+    background-color: #eae7d8;
+}
+
+/* =========================================================
+   FIX FOOTER "explosé" (icônes trop grosses)
+   Cause : une règle globale sur i.bi appliquait un font-size énorme.
+   -> On reset le footer + on laisse les tailles spécifiques ailleurs.
+   ========================================================= */
+footer.ues-footer i.bi{
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+  padding: 0;
+}
+
+footer.ues-footer .bi-facebook::before{
+  font-size: 1.6rem;   /* au lieu de 40px */
+  padding-left: .35rem;
+}
+
+footer.ues-footer .bi-check2-square::before{
+  font-size: .95rem;
+  color: #7aa3c9;      /* bleu clair UES */
+}
+
+footer.ues-footer .single-footer ul li{
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  margin: .35rem 0;
+}
+
+footer.ues-footer .single-footer ul li a{
+  display: inline-block;
+}
+/* Bootstrap Icons: éviter les icônes "fausses" dans le footer */
+footer.ues-footer .bi::before{
+  font-family: "bootstrap-icons" !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.rub .ues-slides {
+    margin-top: -75px;
+}
+.rub .txt_blc12 {
+    font-size: 1rem;
+    text-align: justify;
+}
+.rub a.mediabox {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 10px 12px;
+}
+.bt_plus a {
+    font-size: 0.9rem;
+}
+.rub .ues-edition-title {
+    padding: 0 0 15px;
+}
+footer.ues-footer{
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 120px; /* réserve la place pour la vague */
+}
+
+footer.ues-footer .ues-footer-waves{
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto !important;
+  width: 100%;
+  height: 120px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+footer.ues-footer .footer-top,
+footer.ues-footer .copyright-area{
+  position: relative;
+  z-index: 2; /* contenu au-dessus de la vague */
+}
+
+footer.ues-footer .ues-footer-waves svg{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.rub .small {
+  color: #2b445c;
+}
+.card-header.bg-dark.text-white {
+  background-color: #7aa3c9 !important;
+}
+.tablo .card-header.bg-dark.text-white {
+  padding: 4px 10px;
+}
+.card-body.money {
+  background-color: transparent !important;
+  padding: 30px;
+}
+.rub .card-body {
+    border-radius: 0 0 10px 10px;
+    padding: 10px 45px 40px;
+}
+.inffo .card-body {
+  background-color: aliceblue;
+  color: #454545;
+}
+#uesCarousel > .carousel-inner > .carousel-item .small strong {
+  color: #454545;
+}
+.card.shadow-sm.border-0.mt-3.bg-dark.bg-opacity-25.text-white {
+    margin-top: 35px !important;
+}
+/* Slide formulaire : cards sombres lisibles */
+.ues-slides .ues-card-dark{
+  background: rgba(0,0,0,.25) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  color: #fff !important;
+}
+
+.ues-slides .ues-card-dark .card-header{
+  background: rgba(248, 249, 250, 0.30) !important
+  border-bottom: 1px solid rgba(255,255,255,.12) !important;
+}
+.rub .text-bg-info {
+    background-color: var(--ues-yellow) !important;
+}
+.ues-slides .ues-card-dark .text-white-50{
+  color: rgba(255,255,255,.75) !important; /* un peu plus lisible */
+}
+.btn-yellow {
+    color: #212121; /* Texte noir pour un bon contraste */
+    background-color: #FFC107; /* Jaune vif */
+    border: none;
+    border-radius: 50px; /* Arrondi complet pour un look moderne */
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombre pour le relief */
+    transition: transform 0.2s, background-color 0.2s; /* Transition fluide */
+}
+
+.btn-yellow:hover {
+    background-color: #ffb300; /* Jaune légèrement plus foncé au survol */
+    transform: scale(1.05); /* Légère mise en valeur avec un effet zoom */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+a.btn.btn-warning.btn-sm {
+    background-color: rgba(255, 214, 10, .18);
+}
+#ues-slides p.reponse_formulaire.reponse_formulaire_ok {
+    color: #454545 !important;
+}
+.rub #ues-slides p.reponse_formulaire {
+    color: #FFF !important;
+    font-weight: bold;
+    text-align: left;
+    background-color: #2b445c;
+    border-radius: 8px;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+}
+.list-group.list-group-flush {
+    border: none !important;
+}
+.d-flex.align-items-start.gap-2 {
+    padding: 15px 0 0px 0;
+}
+.list-group-item.bg-transparent {
+    padding: 0 0 32px 10px;
+}
+.rub .padd {
+    padding: 5px 0 5px 0 !important;
+}
+.padd i.bi {
+    font-size: 1.5rem;
+    padding-right: 10px;
+}
+.ues-form-surface legend, .editer_choix #champ_choix {
+    display: none !important;
+}
+.alert.alert-success {
+    padding: 50px !important;
+}
+.d-flex.align-items-center.gap-3.ms-auto {
+    margin-top: -15px;
+}
+#slide-formulaire .margg {
+    margin-top: 0 !important;
+}
+.editer.editer_parent {
+    display: none;
+}
+.editer_sexo .editer-label.label, .editer_saxophone .editer-label.label, .editer_type_bec .editer-label.label {
+  display: block !important;
+  font-size: 1rem;
+}
+#ues-slides .ues-form-surface .formulaire_spip textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+/* =========================================================
+   UES — Slide Formulaire : labels + champs sur une ligne (desktop)
+   Scope: uniquement dans le carousel / slide formulaire
+   ========================================================= */
+
+#slide-formulaire .ues-form-surface .formulaire_spip .editer,
+#slide-formulaire .ues-form-surface .formulaire_spip .saisie{
+  margin-bottom: 12px;
+}
+
+/* Par défaut (mobile): empilé */
+#slide-formulaire .ues-form-surface .formulaire_spip .editer > label,
+#slide-formulaire .ues-form-surface .formulaire_spip .saisie > label{
+  display: block;
+  margin-bottom: .35rem;
+}
+
+/* Desktop: label + champ sur une même ligne quand c'est possible */
+@media (min-width: 992px){
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .65rem 1rem;
+  }
+
+  /* Label colonne gauche */
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer > label,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie > label{
+    flex: 0 0 34%;
+    max-width: 34%;
+    margin: 0;
+    padding-top: .2rem;
+  }
+
+  /* Champ colonne droite (cas SPIP natif: input directement) */
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer > input,
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer > select,
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer > textarea,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie > input,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie > select,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie > textarea{
+    flex: 1 1 0;
+    min-width: 260px;
+    max-width: 560px;
+    margin: 0;
+  }
+
+  /* Champ colonne droite (cas Saisies: enveloppe .input/.saisie_input) */
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer > .input,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie > .input,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie .saisie_input{
+    flex: 1 1 0;
+    min-width: 260px;
+    max-width: 560px;
+  }
+
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer > .input > input,
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer > .input > select,
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer > .input > textarea,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie > .input > input,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie > .input > select,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie > .input > textarea,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie .saisie_input input,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie .saisie_input select,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie .saisie_input textarea{
+    width: 100%;
+  }
+
+  /* Les zones de texte s'alignent en haut */
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer_texte,
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer_chapo,
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer_ps,
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer_notes,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie_textarea{
+    align-items: flex-start;
+  }
+}
+
+/* Listes de choix (checkbox / radio): aligner proprement */
+#slide-formulaire .ues-form-surface .formulaire_spip ul.choix,
+#slide-formulaire .ues-form-surface .formulaire_spip .choix{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#slide-formulaire .ues-form-surface .formulaire_spip ul.choix > li{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: .25rem 0;
+}
+
+/* Desktop: choix en ligne (wrap) + dans la colonne droite */
+@media (min-width: 992px){
+  #slide-formulaire .ues-form-surface .formulaire_spip ul.choix{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem 1.25rem;
+  }
+  #slide-formulaire .ues-form-surface .formulaire_spip ul.choix > li{
+    margin: 0;
+  }
+
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer ul.choix,
+  #slide-formulaire .ues-form-surface .formulaire_spip .editer .choix,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie ul.choix,
+  #slide-formulaire .ues-form-surface .formulaire_spip .saisie .choix{
+    flex: 1 1 0;
+    min-width: 260px;
+    max-width: 560px;
+  }
+}
+
+#slide-formulaire .ues-form-surface .formulaire_spip input[type="checkbox"],
+#slide-formulaire .ues-form-surface .formulaire_spip input[type="radio"]{
+  margin-top: 0;
+  flex: 0 0 auto;
+}
+
+/* Aide + erreurs */
+#slide-formulaire .ues-form-surface .formulaire_spip .explication,
+#slide-formulaire .ues-form-surface .formulaire_spip .aide,
+#slide-formulaire .ues-form-surface .formulaire_spip .notice{
+  font-size: .9rem;
+  opacity: .85;
+}
+
+#slide-formulaire .ues-form-surface .formulaire_spip .erreur_message{
+  margin-top: .25rem;
+  font-size: .9rem;
+}
+.ues-form-surface .editer.editer_texte.obligatoire, .ues-form-surface .editer.editer_parent {
+  display: none !important;
+}
+/* ===========================================================
+   UES — Correctif chevauchement (header/topbar vs slides)
+   =========================================================== */
+
+body.rub .ues-main{
+  margin-top: 0 !important;
+  padding-top: var(--ues-header-h) !important;
+}
+
+
+
+body.rub #uesDate{
+  margin: -14px 0 0 0 !important;
+}
+
+body.rub #uesCarousel > .carousel-inner > .carousel-item {
+  padding-top: 40px; /* au lieu de 56px */
+}
+body.rub #uesCarousel .ues-slide-nav {
+  top: 12px;
+  right: 12px;
+}
+
+@media (max-width: 768px){
+  body.rub #uesCarousel > .carousel-inner > .carousel-item {
+    padding-top: 0;
+  }
+  body.rub #uesCarousel .ues-slide-nav {
+    position: static;
+    margin-top: 12px;
+  }
+}
+.photos .taille {
+    display: none;
+}
+
+.photos h3.titrem {
+    display: none;
+}
+
+.photos .text-center.mb-3 {
+    display: none;
+}
+.text-end.position {
+    margin: -44px 0 0 0;
+}
+.ues-slides .ues-card-dark .bott.card-header {
+    background: transparent !important;
+    padding: 0 0 30px 43px;
+}
+.cadre_txt {
+  padding: 0 0 25px;
+}
+#ues-slides .ues-form-surface p.text-white-50 {
+    color: #454545 !important;
+}
+.alert.alert-warning.mb-0.d-flex.align-items-start.gap-2 {
+  padding: 15px;
+}
+.inffo.border.border-light.border-opacity-25.rounded-3.overflow-hidden.text-white.mt-3 {
+  margin-bottom: 20px;
+}
+#ues-slides .ues-form-surface input#logo {
+    color: #454545;
+}
+.rub .card .card-body {
+  padding: 10px 10px;
+}
+
+
+
+.btn_mini.btn_secondaire.btn_modifier.float-end {
+  display: none;
+}
+.statut_actuel .editer-label {
+  display: none;
+}
+.statut_actuel {
+  background-color: chocolate;
+  padding: 20px 30px;
+}
+.statut.statut--publie .statut-icone img {
+  width: 25px;
+  height: auto;
+  padding: 0 0 5px 0;
+}
+.badge.rounded-pill.ues-status-pill {
+  background-color: #9dba00;
+  padding: 5px 18px;
+}
+.col-lg-5.bloc_marg {
+  margin-top: 40px;
+}
+
+/* =================================================================
+   UES — Harmonisation FINALE Colonne Droite (Slide Formulaire)
+   Force le style exact de "Checklist/Aide" sur "Statut" et "Photo"
+   ================================================================= */
+
+/* 1. Le conteneur principal (La Carte) */
+/* On applique le même fond bleu sombre translucide partout */
+#slide-formulaire .col-lg-5 .ues-status-card,
+#slide-formulaire .col-lg-5 .photos,
+#slide-formulaire .col-lg-5 .border.border-light.border-opacity-25.rounded-3.overflow-hidden.text-white {
+  background: rgba(24, 45, 60, 0.78) !important;       /* Le fond "verre" bleu */
+  border: 1px solid rgba(255, 255, 255, 0.18) !important; /* La bordure fine claire */
+  border-radius: 12px !important;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.28) !important;
+  color: #fff !important;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+/* 2. L'en-tête (Header) */
+/* Le même dégradé pour tous les titres */
+#slide-formulaire .col-lg-5 .ues-status-card .card-header,
+#slide-formulaire .col-lg-5 .photos .card-header,
+#slide-formulaire .col-lg-5 .bg-light.bg-opacity-10 {
+  background: #3f546a !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+  color: #fff !important;
+  padding: 10px 14px !important;
+}
+
+/* Police du titre */
+#slide-formulaire .col-lg-5 .card-header .fw-semibold,
+#slide-formulaire .col-lg-5 .bg-light.bg-opacity-10 .fw-semibold {
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: #fff !important;
+}
+
+/* 3. Le contenu (Body) */
+/* Fond transparent pour laisser voir le fond bleu du conteneur */
+#slide-formulaire .col-lg-5 .card-body,
+#slide-formulaire .col-lg-5 .photos .card-body {
+  background: transparent !important;
+  padding: 16px !important;
+}
+
+/* --- NETTOYAGE SPÉCIFIQUE PHOTO & STATUT --- */
+
+/* Supprimer les fonds gris parasites à l'intérieur des formulaires */
+#slide-formulaire .col-lg-5 .photos .card-body .p-3,
+#slide-formulaire .col-lg-5 .ues-status-form {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Le texte descriptif (small) */
+/* On lui met une bordure au-dessus comme dans la checklist (séparateur) */
+#slide-formulaire .col-lg-5 .photos .small,
+#slide-formulaire .col-lg-5 .ues-status-card .text-white-50 {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  padding-top: 12px;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.82) !important;
+  display: block;
+}
+
+/* Liens en bleu clair */
+#slide-formulaire .col-lg-5 a {
+  color: #86b6ff !important;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Masquer le badge "Photo" du header pour faire propre comme Checklist */
+#slide-formulaire .col-lg-5 .photos .card-header .badge {
+  display: none !important;
+}
+
+/* Style de l'image (Photo) */
+#slide-formulaire .col-lg-5 .photos img {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  margin-bottom: 15px;
+}
+/* =========================================================
+   UES — Colonne droite : titres Statut + Photo
+   même fond que Checklist (bg-light bg-opacity-10)
+   ========================================================= */
+
+/* 1. En-têtes des cartes Statut et Photo :
+      on remplace bg-dark par le même fond que Checklist/Aide */
+#slide-formulaire .col-lg-5 .ues-status-card .card-header,
+#slide-formulaire .col-lg-5 .photos .card-header{
+  background-color: #3f546a !important; /* équivalent de .bg-light.bg-opacity-10 */
+  color: #ffffff !important;
+  border-bottom: 1px solid rgba(255,255,255,0.16) !important;
+  padding: 8px 12px !important;
+}
+
+/* 2. On neutralise spécifiquement bg-dark/bg-opacity-25 sur ces headers */
+#slide-formulaire .col-lg-5 .ues-status-card .card-header.bg-dark,
+#slide-formulaire .col-lg-5 .photos .card-header.bg-dark,
+#slide-formulaire .col-lg-5 .ues-status-card .card-header.bg-opacity-25,
+#slide-formulaire .col-lg-5 .photos .card-header.bg-opacity-25{
+  background-color: rgba(248, 249, 250, 0.30) !important;
+}
+
+/* 3. Typo du titre identique aux autres cadres (Checklist/Aide) */
+#slide-formulaire .col-lg-5 .ues-status-card .card-header .fw-semibold,
+#slide-formulaire .col-lg-5 .photos .card-header .fw-semibold{
+  font-weight: 700;
+  letter-spacing: .2px;
+  color: #ffffff !important;
+}
+
+/* 4. Icônes dans ces headers (sliders / image) en blanc comme Checklist */
+#slide-formulaire .col-lg-5 .ues-status-card .card-header i.bi,
+#slide-formulaire .col-lg-5 .photos .card-header i.bi{
+  color: #ffffff !important;
+}
+/* ===========================================
+   UES — Boutons "Modifier" / "Supprimer" (Photo)
+   =========================================== */
+
+/* Container des boutons (sous la photo) */
+#slide-formulaire .col-lg-5 .photos .formulaire_spip .boutons{
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+/* On enlève l'aspect "petit bouton Bootstrap" et
+   on transforme en liens typographiques horizontaux */
+#slide-formulaire .col-lg-5 .photos .btn_mini{
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 12px 0 0;
+  font-size: 0.95rem;
+  text-transform: none;
+  box-shadow: none !important;
+}
+
+/* MODIFIER : lien bleu mis en avant */
+#slide-formulaire .col-lg-5 .photos .btn_mini.btn_secondaire.btn_modifier{
+  color: #86b6ff !important;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* SUPPRIMER : lien gris, moins accentué */
+#slide-formulaire .col-lg-5 .photos .btn_mini[name="supprimer"],
+#slide-formulaire .col-lg-5 .photos .btn_mini.btn_supprimer{
+  color: rgba(255,255,255,0.55) !important;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Hover / focus : simple soulignement */
+#slide-formulaire .col-lg-5 .photos .btn_mini.btn_secondaire.btn_modifier:hover,
+#slide-formulaire .col-lg-5 .photos .btn_mini.btn_secondaire.btn_modifier:focus,
+#slide-formulaire .col-lg-5 .photos .btn_mini[name="supprimer"]:hover,
+#slide-formulaire .col-lg-5 .photos .btn_mini[name="supprimer"]:focus{
+  text-decoration: underline;
+  outline: none;
+}
+#slide-formulaire a.editbox.btn, input#supprimer_logo_on_auteur_80 {
+    background-color: rgba(255, 214, 10, .18);
+    --bs-btn-color: #000;
+    --bs-btn-bg: #ffc107;
+    --bs-btn-border-color: #ffc107;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #ffca2c;
+    --bs-btn-hover-border-color: #ffc720;
+    --bs-btn-focus-shadow-rgb: 217, 164, 6;
+    /* --bs-btn-active-bg: #ffcd39; */
+    --bs-btn-active-border-color: #ffc720;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: #ffc107;
+    --bs-btn-disabled-border-color: #ffc107;
+    padding: 5px 20px;
+    color: #FFF !important;
+    font-size: 0.9rem;
+    margin-left: 23px !important;
+	font-weight: 400;
+}
+/* =========================================================
+   UES — Force l'édition du logo sur la page publique
+   ========================================================= */
+
+/* 1. Cacher le bouton "Modifier" qui renvoie vers ecrire/ */
+#slide-formulaire .col-lg-5 .photos .formulaire_editer_logo .groupe-btns .editbox,
+#slide-formulaire .col-lg-5 .photos .formulaire_editer_logo .groupe-btns a.btn {
+    display: none !important;
+}
+
+/* 2. Forcer l'affichage du bloc d'upload (souvent caché par SPIP via JS) */
+#slide-formulaire .col-lg-5 .photos .formulaire_editer_logo .editer_logo_on {
+    display: block !important;
+}
+
+/* 3. Style du champ input file pour qu'il soit visible et propre */
+#slide-formulaire .col-lg-5 .photos .formulaire_editer_logo input[type="file"] {
+    display: block !important;
+    width: 100%;
+    color: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+/* 4. Style du bouton de validation (téléverser) */
+#slide-formulaire .col-lg-5 .photos .formulaire_editer_logo input[name="valider_logo_auteur"] {
+    background-color: #86b6ff;
+    color: #0b1b2a;
+    border: none;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 5. Style du bouton Supprimer */
+#slide-formulaire .col-lg-5 .photos .formulaire_editer_logo input[name="supprimer_logo_on"] {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.7);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-left: 10px;
+}
+/* Image du logo dans l'encard photo */
+#slide-formulaire .col-lg-5 .photos .ues-photo-img{
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Formulaire d'édition du logo */
+#slide-formulaire .col-lg-5 .photos .formulaire_spip .boutons{
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+/* =========================================================
+   UES — Bouton "Téléverser" (Upload Logo)
+   ========================================================= */
+
+/* Le conteneur du bouton */
+#slide-formulaire .col-lg-5 .photos p.boutons {
+  margin-top: 12px;
+  margin-bottom: 0;
+  text-align: center; /* Centre le bouton sous le champ fichier */
+}
+
+/* Le bouton Téléverser lui-même */
+#slide-formulaire .col-lg-5 .photos .btn-upload {
+  background-color: #86b6ff !important;   /* Bleu clair charte */
+  color: #0b1b2a !important;              /* Texte foncé pour le contraste */
+  border: 1px solid #86b6ff !important;
+  border-radius: 50px !important;         /* Pillule arrondie */
+  padding: 6px 20px !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+/* Effet au survol */
+#slide-formulaire .col-lg-5 .photos .btn-upload:hover {
+  background-color: #fff !important;      /* Devient blanc */
+  color: #0b1b2a !important;
+  border-color: #fff !important;
+  transform: translateY(-2px);            /* Légère remontée */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+/* =========================================================
+   FIX : contenu sous header fixed (Bonjour/Date/Déconnexion)
+   ========================================================= */
+
+/* La page doit commencer sous le header, toujours */
+.ues-main{
+  margin-top: 0 !important;
+  padding-top: var(--ues-header-h, 140px) !important;
+}
+
+/* Sur rubrique (tu as déjà des règles body.rub, on sécurise) */
+body.rub .ues-main{
+  margin-top: -48px !important;
+  padding-top: var(--ues-header-h, 140px) !important;
+}
+p.mb-3 {
+    font-size: 0.9rem;
+}
+
+
+
+.d-flex.align-items-start.gap-2 {
+    font-size: 1rem;
+}
+
+.d-flex.align-items-start.gap-2 i.bi {
+    font-size: 2rem;
+}
+/* Alignement icône + texte (Checklist) */
+.ues-checkline{
+  display: flex;
+  align-items: center;   /* aligne verticalement icône et 1ère ligne */
+  gap: .5rem;
+}
+
+.ues-checkline > i.bi{
+  font-size: 1.05rem;    /* ajuste si besoin */
+  line-height: 1;        /* évite le décalage */
+  flex: 0 0 auto;
+}
+/* =========================================================
+   FIX Checklist : annuler la règle globale qui grossit les icônes
+   ========================================================= */
+
+/* 1) Dans la checklist : icônes taille normale + pas de décalage */
+#slide-formulaire .col-lg-5 .border.border-light.border-opacity-25.rounded-3.overflow-hidden
+.px-3.py-2 i.bi{
+  font-size: 1.05rem !important;
+  line-height: 1 !important;
+  margin-top: 0 !important; /* annule mt-1 */
+}
+
+/* 2) Dans la checklist : alignement icône/texte */
+#slide-formulaire .col-lg-5 .border.border-light.border-opacity-25.rounded-3.overflow-hidden
+.px-3.py-2 > .d-flex,
+#slide-formulaire .col-lg-5 .border.border-light.border-opacity-25.rounded-3.overflow-hidden
+.px-3.py-2 > .ues-checkline{
+  display: flex !important;
+  align-items: center !important;
+  gap: .5rem !important;
+}
+
+/* =========================================================
+   Checklist : éviter l'effet "double cadre"
+   - on supprime la 1ère bordure-top après le header
+   ========================================================= */
+
+/* On cible la carte checklist via une classe si tu l'as ajoutée */
+#slide-formulaire .col-lg-5 .ues-checklist > .px-3.py-2.border-top:first-of-type{
+  border-top: 0 !important;
+}
+
+/* =========================================================
+   Checklist : supprimer la 1ère bordure-top (double trait)
+   ========================================================= */
+
+/* 1er item après le header = 2e enfant div */
+#slide-formulaire .col-lg-5 .ues-checklist > div:nth-child(2){
+  border-top: 0 !important;
+}
+.rub #uesCarousel > .carousel-inner > .carousel-item .small strong {
+    color: #FFF;
+}
+a.btn.btn-lg {
+    text-align: left;
+    padding-left: 32px;
+}
+.rub #uesCarousel > .carousel-inner > .carousel-item .small strong {
+    color: #FFF;
+}
+
+::before {}
+
+i.bi.bi-pencil-square.me-2 {
+    padding: 14px 12px 0 14px;
+}
+
+.rub .bi-pencil-square::before {
+    padding: 4px -4px -18px 7px;
+    margin: 0px 0 0;
+}
+
+a.btn.btn-lg {
+    text-align: left;
+    padding-left: 32px;
+}
+
+a.btn.btn-outline-warning.btn-lg {}
+
+.list-group-item a.btn {
+    text-align: left;
+    padding-left: 30px;
+}
+
+a.btn.btn-light.text-dark.fw-semibold {
+    padding: 0 20px 0px 0;
+}
+.instituer_objet p.small {
+    display: none;
+}
+.instituer_objet p.small {
+    display: none;
+}
+
+legend.editer-label {
+    display: none;
+}
+/* =========================================================
+   UES — Restyle "Statut du dossier" (FORMULAIRE_INSTITUER_OBJET)
+   Scope: uniquement dans #slide-formulaire (colonne droite)
+   ========================================================= */
+
+/* Le container du bloc statut (dans ta card) */
+#slide-formulaire .col-lg-5 .ues-status-form{
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+  border-radius: 12px !important;
+  padding: 14px !important;
+}
+
+/* Bloc "statut actuel" */
+#slide-formulaire .col-lg-5 .ues-status-form .statut_actuel{
+  background: rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 12px 12px;
+  margin-bottom: 10px;
+}
+
+/* Titre "Statut" */
+#slide-formulaire .col-lg-5 .ues-status-form .statut_actuel .editer-label{
+  display: inline-block !important;
+  font-weight: 800;
+  color: rgba(255,255,255,.92);
+}
+
+/* Badge du statut courant (prepa/prop/...) */
+#slide-formulaire .col-lg-5 .ues-status-form .statut_actuel .statut{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+}
+#slide-formulaire .col-lg-5 .ues-status-form .statut_actuel .statut-icone img{
+  width: 14px;
+  height: 14px;
+}
+#slide-formulaire .col-lg-5 .ues-status-form .statut_actuel .statut-label{
+  font-weight: 700;
+  color: rgba(255,255,255,.95);
+}
+
+/* Bouton "Changer" en haut à droite (celui injecté par JS) */
+#slide-formulaire .col-lg-5 .ues-status-form .btn_modifier{
+  float: right;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+  background: rgba(255,255,255,0.08) !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+  padding: 6px 12px !important;
+  font-weight: 800;
+  font-size: .85rem;
+}
+#slide-formulaire .col-lg-5 .ues-status-form .btn_modifier:hover{
+  background: rgba(255,255,255,0.14) !important;
+}
+
+/* Texte d'aide */
+#slide-formulaire .col-lg-5 .ues-status-form p.small{
+  margin: 10px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,.75) !important;
+}
+
+/* Formulaire "Modifier le statut" : aspect carte */
+#slide-formulaire .col-lg-5 .ues-status-form .formulaire_instituer_objet{
+  margin-top: 12px;
+}
+
+/* Legend */
+#slide-formulaire .col-lg-5 .ues-status-form fieldset.editer_statut{
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#slide-formulaire .col-lg-5 .ues-status-form fieldset.editer_statut > legend{
+  display: block !important;
+  font-weight: 900;
+  margin: 0 0 10px;
+  color: rgba(255,255,255,.92) !important;
+}
+
+/* Choix : rendre la ligne entière cliquable et "pill" */
+#slide-formulaire .col-lg-5 .ues-status-form .choix{
+  margin: 8px 0;
+}
+#slide-formulaire .col-lg-5 .ues-status-form .choix label{
+  display: block;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,.14);
+  transition: background .15s ease, border-color .15s ease, transform .12s ease;
+}
+#slide-formulaire .col-lg-5 .ues-status-form .choix label:hover{
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.22);
+  transform: translateY(-1px);
+}
+
+/* Radio : alignement propre */
+#slide-formulaire .col-lg-5 .ues-status-form .choix input[type="radio"]{
+  margin-right: 10px;
+  transform: translateY(1px);
+}
+
+/* Contenu du statut dans les labels */
+#slide-formulaire .col-lg-5 .ues-status-form .choix .statut{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+#slide-formulaire .col-lg-5 .ues-status-form .choix .statut-icone img{
+  width: 14px;
+  height: 14px;
+}
+
+/* Option sélectionnée */
+#slide-formulaire .col-lg-5 .ues-status-form .choix input[type="radio"]:checked + label{
+  background: rgba(134,182,255,0.18);
+  border-color: rgba(134,182,255,0.55);
+}
+
+/* Boutons Annuler / Changer */
+#slide-formulaire .col-lg-5 .ues-status-form .boutons{
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+#slide-formulaire .col-lg-5 .ues-status-form .groupe-btns{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* Annuler */
+#slide-formulaire .col-lg-5 .ues-status-form button[name="annuler"]{
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+  color: rgba(255,255,255,.85) !important;
+  border-radius: 10px !important;
+  padding: 8px 12px !important;
+  font-weight: 800;
+}
+
+/* Changer (CTA) */
+#slide-formulaire .col-lg-5 .ues-status-form button[name="changer"]{
+  background: #86b6ff !important;
+  border: 1px solid rgba(134,182,255,0.8) !important;
+  color: #0b1b2a !important;
+  border-radius: 10px !important;
+  padding: 8px 12px !important;
+  font-weight: 900;
+}
+#slide-formulaire .col-lg-5 .ues-status-form button[name="changer"]:hover{
+  filter: brightness(1.05);
+}
+/* =========================================================
+   UES — Statut dossier : boutons (style "Modifier") + radios masquées
+   Scope: #slide-formulaire
+   ========================================================= */
+
+/* 1) Boutons Annuler / Changer => style "btn btn-warning btn-sm" */
+#slide-formulaire .ues-status-form .groupe-btns .btn.submit{
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .45rem !important;
+
+  border-radius: .375rem !important;     /* bootstrap-like */
+  padding: .25rem .5rem !important;      /* btn-sm */
+  font-size: .875rem !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+
+  border: 1px solid rgba(255,214,10,.55) !important;
+  background: rgba(255,214,10,.18) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+/* Icône ajoutée via pseudo-élément (pour éviter de modifier le HTML SPIP) */
+#slide-formulaire .ues-status-form .groupe-btns button[name="annuler"]::before{
+  font-family: "bootstrap-icons" !important;
+  content: "\f659"; /* bi-x-lg */
+  font-weight: normal;
+  line-height: 1;
+}
+#slide-formulaire .ues-status-form .groupe-btns button[name="changer"]::before{
+  font-family: "bootstrap-icons" !important;
+  content: "\f26a"; /* bi-send */
+  font-weight: normal;
+  line-height: 1;
+}
+
+/* Hover comme tes boutons */
+#slide-formulaire .ues-status-form .groupe-btns .btn.submit:hover{
+  background: rgba(255,214,10,.28) !important;
+  border-color: rgba(255,214,10,.75) !important;
+}
+
+/* (Optionnel) "Changer" un poil plus mis en avant */
+#slide-formulaire .ues-status-form .groupe-btns button[name="changer"]{
+  background: rgba(134,182,255,.22) !important;
+  border-color: rgba(134,182,255,.65) !important;
+}
+
+/* 2) Enlever les boutons radio (tout en gardant le clic sur le label) */
+#slide-formulaire .ues-status-form fieldset.editer_statut input[type="radio"]{
+  position: absolute !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 1px !important;
+  height: 1px !important;
+}
+
+/* Labels deviennent des "pills" cliquables (sans radio visible) */
+#slide-formulaire .ues-status-form fieldset.editer_statut .choix label{
+  display: block !important;
+  cursor: pointer !important;
+  padding: 10px 12px !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  background: rgba(0,0,0,.14) !important;
+  transition: background .15s ease, border-color .15s ease, transform .12s ease;
+}
+
+/* Hover */
+#slide-formulaire .ues-status-form fieldset.editer_statut .choix label:hover{
+  background: rgba(255,255,255,0.08) !important;
+  border-color: rgba(255,255,255,0.28) !important;
+  transform: translateY(-1px);
+}
+
+/* Option sélectionnée */
+#slide-formulaire .ues-status-form fieldset.editer_statut .choix input[type="radio"]:checked + label{
+  background: rgba(134,182,255,0.18) !important;
+  border-color: rgba(134,182,255,0.60) !important;
+}
+/* Toujours afficher le bouton "Changer" qui ré-ouvre le formulaire */
+#slide-formulaire .ues-status-form .statut_actuel .btn_modifier{
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+button.btn_mini.btn_secondaire.btn_modifier.float-end {
+    padding: 12px 0 0 0;
+    margin: 4px 0 0;
+}
+
+.statut.statut--prepa {}
+
+#slide-formulaire .col-lg-5 .ues-status-form .statut_actuel .statut {margin-left: 8px;margin-top: 0;}
+.rub .mt-1.small {
+    color: #FFF;
+}
+#spip_logo_auteur img.spip_logo {
+    border-radius: 150px;
+    width: 150px;
+    height: auto;
+    padding: 6px;
+}
+
+#ues-slides .ues-form-surface .formulaire_spip  p.boutons {
+    margin: 0;
+}
+.x-small {
+    font-size: 0.75rem !important;
+    line-height: 1.0rem;
+}
+/* CTA "Inscriptions" : hover jaune plein (jaune du menu) */
+.ues-cta.ues-cta--inscriptions{
+  transition: background .18s ease, color .18s ease, border-color .18s ease, transform .12s ease;
+}
+
+.ues-cta.ues-cta--inscriptions:hover,
+.ues-cta.ues-cta--inscriptions:focus-visible{
+  background: var(--ues-yellow);
+  border-color: var(--ues-yellow);
+  color: #000;
+  transform: translateY(-1px);
+}
+
+.ues-cta.ues-cta--inscriptions:hover i,
+.ues-cta.ues-cta--inscriptions:focus-visible i{
+  color: #000;
+}
+
+/* Option 1 : rendre "OUVERTE" noir sur hover (lisibilité maximale) */
+.ues-cta.ues-cta--inscriptions:hover strong,
+.ues-cta.ues-cta--inscriptions:focus-visible strong{
+  color: #000;
+}
+
+/* Focus clavier propre */
+.ues-cta.ues-cta--inscriptions:focus-visible{
+  outline: 3px solid rgba(242,209,0,.55);
+  outline-offset: 3px;
+}
+/* --- CTA au-dessus du header (sans casser la mise en page) --- */
+
+/* 1) Enlève le "plafond" qui bloque le z-index des enfants */
+.ues-hero-content{
+  z-index: auto; /* au lieu de 2 */
+}
+
+/* 2) Garde le panel au-dessus de l'overlay du hero */
+.ues-panel{
+  position: relative;
+  z-index: 2;
+}
+
+/* 3) Et là, on met seulement la div du bouton au-dessus du menu */
+.ues-cta-wrap{
+  position: relative;
+  z-index: 1301; /* > topbar (1200) et header (1100) */
+}
+/* === MENU : underline animé (active + hover) === */
+.ues-menu .nav-link{
+  position: relative;                 /* nécessaire pour ::after */
+  transition: color .18s ease;
+}
+
+/* Le trait (barre) existe pour tous, mais caché par défaut */
+.ues-menu .nav-link::after{
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 3px;
+  background: var(--ues-yellow);
+  border-radius: 10px;
+
+  transform: scaleX(0);               /* caché */
+  transform-origin: left;             /* effet "barre qui arrive" */
+  transition: transform .22s ease;
+  will-change: transform;
+}
+
+/* Active = trait visible */
+.ues-menu .nav-link.active{
+  color: var(--ues-yellow);
+}
+.ues-menu .nav-link.active::after{
+  transform: scaleX(1);
+}
+
+/* Hover / focus = trait visible (donne l'effet barre qui se déplace) */
+.ues-menu .nav-link:hover::after,
+.ues-menu .nav-link:focus-visible::after{
+  transform: scaleX(1);
+}
+
+/* Optionnel : au hover, texte jaune aussi (si tu veux) */
+/*
+.ues-menu .nav-link:hover,
+.ues-menu .nav-link:focus-visible{
+  color: var(--ues-yellow);
+}
+*/
+/* =========================================================
+   UES — Badge statut (ues-status-pill) : couleurs selon statut
+   ========================================================= */
+
+.ues-status-pill{
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 900;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  font-size: .75rem;
+
+  border: 1px solid rgba(255,255,255,.18);
+}
+
+/* PREPA = en cours de rédaction */
+.ues-status-pill[data-statut="prepa"] {
+  background-color: #FFF !important;
+  border-color: rgba(255,193,7,.40);
+  color: #454545;
+}
+
+/* PROP = envoyé / proposé à l'évaluation */
+.ues-status-pill[data-statut="prop"] {
+  background-color: #de6c2e !important;
+  border-color: rgba(13,110,253,.40);
+  color: #FFF;
+}
+
+/* PUBLIE = validé */
+.ues-status-pill[data-statut="publie"] {
+  background-color: rgba(25,135,84,.18);
+  border-color: rgba(25,135,84,.40);
+  color: #FFF;
+}
+
+/* POUBELLE = supprimé */
+.ues-status-pill[data-statut="poubelle"]{
+  background: rgba(220,53,69,.16);          /* rouge */
+  border-color: rgba(220,53,69,.35);
+  color: #ff7a88;
+}
+/* ========= Menu : barre "indicator" animée (nécessite JS) ========= */
+.ues-menu.ues-menu--indicator{
+  position: relative;
+}
+
+/* Désactive le trait actuel "active::after" uniquement quand l'indicator JS est actif */
+.ues-menu.ues-menu--indicator .nav-link.active::after{
+  display: none;
+}
+
+.ues-menu__indicator{
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  height: 3px;
+  background: var(--ues-yellow);
+  border-radius: 10px;
+  width: 0;
+  transform: translateX(0);
+  opacity: 0;
+  transition: transform .22s ease, width .22s ease, opacity .12s ease;
+  pointer-events: none;
+}
+
+/* Sur mobile (menu empilé), on masque l'indicator */
+@media (max-width: 991.98px){
+  .ues-menu__indicator{ display: none; }
+}
+
+/* ===== Statut : bloc repliable (form fermé au départ) ===== */
+#slide-formulaire .ues-status-form .ues-status-form__collapse{
+  overflow: hidden;
+  max-height: 0;                 /* JS gère la hauteur */
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: max-height .25s ease, opacity .18s ease, transform .18s ease;
+}
+
+#slide-formulaire .ues-status-form.is-open .ues-status-form__collapse{
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce){
+  #slide-formulaire .ues-status-form .ues-status-form__collapse{
+    transition: none;
+  }
+}
+/* Pastilles checklist */
+.ues-checkline .ues-checktext{
+  flex: 1 1 auto;            /* pousse la pastille à droite */
+}
+
+.ues-step-dot{
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #fff;          /* blanc par défaut */
+  border: 2px solid rgba(255,255,255,.65);
+  flex: 0 0 auto;
+  margin-left: .75rem;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.12) inset;
+}
+
+.ues-step-dot.is-done{
+  background: #2ecc71;       /* vert */
+  border-color: #2ecc71;
+  box-shadow: none;
+}
+.ues-step-dot { /* rond blanc */ }
+.ues-step-dot.is-done { /* rond vert */ }
+
+/* Image RIB : largeur 100% + hauteur réduite (ratio 3:2) */
+  .pay-img{
+    width:100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display:block;
+    border-radius:.75rem;
+  }
+  div.pay-panel {
+    padding: 20px;
+}
+address.mb-0.text-white {
+  border: 1px solid #CCC;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 20px 14px !important;
+  margin-bottom: 20px;
+}
+#slide-paiement h6.mb-3 {
+    color: #FFF;
+}
+#pay-carte select#item-options {
+    width: 100%;
+    margin: 0 0 0 1px;
+    padding: 20px 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+button.btn.btn-outline-light {
+    text-align: left;
+    padding-left: 25px;
+}
+
+#pay-cheque.pay-panel, #pay-carte.pay-panel, #pay-virement.pay-panel {
+  padding: 0;
+}
+/* Slide "S'inscrire" : décoller le bouton Valider (FORMULAIRE_INSCRIPTION) */
+#ues-slides .ues-form-surface form button[type="submit"],
+#ues-slides .ues-form-surface form input[type="submit"]{
+  margin-top: 10px !important;
+}
+/* Lisibilité texte dans les surfaces de formulaire */
+.rub #ues-slides .ues-form-surface .formulaire_spip .explication{
+  color: rgba(255,255,255,.75) !important;
+}
+/* Navigation interne des slides (version liens) */
+/* =============================================
+   UES — Navigation Slides (Style Boutons)
+   ============================================= */
+
+/* Le conteneur */
+.ues-slide-nav .nav-item {
+  margin: 0;
+}
+
+/* Le bouton (lien) */
+a.ues-slide-link {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  text-transform: none;
+  text-decoration: none !important;
+  
+  padding: 0.6rem 1.2rem !important;
+  border-radius: 50rem !important; /* Arrondi complet (pill) */
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* Ombre légère */
+}
+
+/* État INACTIF (blanc/gris) */
+a.ues-slide-link.btn-light {
+  background-color: #f8f9fa !important;
+  color: #454545 !important;
+  border-color: #dee2e6 !important;
+}
+
+a.ues-slide-link.btn-light:hover {
+  background-color: #e2e6ea !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* État ACTIF (Sombre) */
+a.ues-slide-link.active,
+a.ues-slide-link.btn-dark {
+  background-color: #212529 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+  box-shadow: inset 0 3px 5px rgba(0,0,0,0.3) !important;
+}
+
+/* Icône dans le bouton */
+a.ues-slide-link i {
+  font-size: 1.1em;
+  line-height: 1;
+}
+/* --- Navigation Slides (Boutons) --- */
+.ues-slide-nav {
+  margin-top: 15px;
+}
+
+.ues-tabbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 50px; /* Arrondi pillule */
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* État inactif (gris clair) */
+.ues-tabbtn.btn-light {
+  background-color: #f8f9fa;
+  color: #454545;
+  border-color: #dee2e6;
+}
+.ues-tabbtn.btn-light:hover {
+  background-color: #e2e6ea;
+  transform: translateY(-2px);
+}
+
+/* État actif (Noir) */
+.ues-tabbtn.active,
+.ues-tabbtn.btn-dark {
+  background-color: #212529 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.ues-tabbtn i {
+  font-size: 1.1em;
+}
+
+/* --- UES Carousel base --- */
+#uesCarousel{ position: relative; }
+
+/* --- Folio (slider maison) --- */
+.ues-folio{
+  position: relative;
+  margin-top: 1rem;
+}
+
+.ues-folio__viewport{
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ues-folio__item{
+  display: none;
+}
+
+.ues-folio__item.is-active{
+  display: block;
+}
+
+.ues-folio__img{
+  width: 100%;
+  aspect-ratio: 3 / 2; /* H = 66.67% de W */
+  object-fit: cover;
+  display: block;
+}
+
+/* Contrôles */
+.ues-folio__prev,
+.ues-folio__next{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.ues-folio__prev{ left: 10px; }
+.ues-folio__next{ right: 10px; }
+
+.ues-folio__prev:hover,
+.ues-folio__next:hover{
+  background: rgba(0,0,0,.7);
+}
+
+.ues-folio__dots{
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.ues-folio__dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.75);
+  background: rgba(0,0,0,.35);
+  padding: 0;
+  cursor: pointer;
+}
+
+.ues-folio__dot.is-active{
+  background: #fff;
+}
+.ues-person__imgBtn { cursor: pointer; display:block; }
+.ues-person__img { transition: transform .2s ease, box-shadow .2s ease, filter .2s ease; }
+
+.ues-person__imgBtn:hover .ues-person__img,
+.ues-person__imgBtn:focus-visible .ues-person__img {
+  transform: scale(1.03);
+  box-shadow: 0 .5rem 1.25rem rgba(0,0,0,.25);
+  filter: brightness(1.03);
+}
+
+/* ==============================
+   FIX: Modal au-dessus du header
+   ============================== */
+.modal{
+  --bs-modal-zindex: 2000;
+}
+.modal-backdrop{
+  --bs-backdrop-zindex: 1990;
+}
+#ues-slides .ues-tabbtn.active i {
+  color: #FFF;
+  margin-right: 0;
+}
+#ues-slides .ues-tabbtn i {
+  color: #454545;
+  margin-right: 0;
+}
+#ues-slides .ues-tabbtn i.bi.bi-music-note-list {
+  padding-right: 0;
+}
+/* ===========================================================
+   UES — HEADER AU SCROLL (Style "Pilule Flottante")
+   =========================================================== */
+
+/* Quand on scrolle (classe .ues-header--compact ajoutée par JS) */
+#header.ues-header--compact .ues-nav {
+  margin: -5px 0 0 0;
+  background: rgba(10, 10, 10, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+  padding: 5px 25px !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Ajustement pour mobile : on prend toute la largeur pour gagner de la place */
+@media (max-width: 991px) {
+  #header.ues-header--compact .ues-nav {
+    margin: 0 !important;
+    border-radius: 0 !important;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+}
+/* ==========================
+   UES Quicklinks (Menu Hero)
+   ========================== */
+.ues-quicklinks{
+  list-style: none;
+  padding: 0;
+  margin: 35px 0 0 0;
+  display: grid;
+  gap: 14px;
+}
+
+/* --- État par défaut : Jaune avec dégradé/transparence, texte foncé --- */
+.ues-quicklinks li a{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 0.95rem;
+
+  /* Fond Jaune (légèrement transparent + dégradé subtil) */
+  background: linear-gradient(135deg, rgba(230, 180, 0, 0.95) 0%, rgba(255, 240, 50, 0.8) 100%);
+  border: 1px solid rgba(255, 214, 10, 0.6);
+  backdrop-filter: blur(4px); /* Effet de flou si l'arrière-plan est complexe */
+  
+  /* Texte gris foncé */
+  color: #333333;
+
+  /* Animation fluide */
+  transition: all .25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* L'icône hérite de la couleur du texte (gris foncé) */
+.ues-quicklinks li a .ues-qi{
+  font-size: 1.3rem;
+  line-height: 1;
+  color: inherit !important; 
+  transition: transform .2s ease;
+}
+
+/* --- État Hover : Gris transparent, texte blanc --- */
+.ues-quicklinks li a:hover{
+  /* Fond sombre transparent */
+  background: rgba(20, 20, 20, 0.75);
+  border-color: rgba(255, 255, 255, 0.25);
+  
+  /* Texte blanc */
+  color: #ffffff;
+  
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Petit mouvement de l'icône au survol */
+.ues-quicklinks li a:hover .ues-qi{
+  transform: translateX(4px);
+  /* L'icône deviendra blanche car elle hérite du 'color: #fff' du parent */
+}
+
+
+/* Force le bloc inscription au-dessus des calques vidéo/overlay */
+.ues-cta-wrap {
+    position: relative;
+    z-index: 10; /* Valeur élevée pour passer au-dessus */
+    margin-bottom: 14px;
+}
+
+/* Assure que le lien lui-même est interactif */
+.ues-cta {
+    position: relative;
+    z-index: 11;
+    cursor: pointer;
+    /* ... (le reste de votre style actuel) */
+}
+.btn.ues-tabbtn.is-active.btn-dark {
+  background-color: var(--ues-yellow) !important;
+  color: #454545 !important;
+}
+.formulaire_inscription,
+.formulaire_inscription .editer_password {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.editer.editer_inscription.saisie_selection {
+    display: none !important;
+}
+div#joindre_distant__article {
+    display: none;
+}
+fieldset.saisie_radio {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+	flex-wrap: nowrap;
+}
+
+fieldset.saisie_radio .editer-label {
+	margin: 0;
+	white-space: nowrap;
+}
+
+fieldset.saisie_radio .choix {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	margin: 0;
+}
+/* Sexe : tout sur une ligne */
+#ues-slides .ues-form-surface fieldset.editer_sexo.saisie_radio{
+  display: flex !important;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap; /* si écran étroit, ça passe à la ligne proprement */
+}
+
+#ues-slides .ues-form-surface fieldset.editer_sexo.saisie_radio > legend{
+  margin: 0;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+#ues-slides .ues-form-surface fieldset.editer_sexo.saisie_radio .choix{
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin: 0;
+}
+/* Choix : label + input sur une ligne */
+#slide-formulaire .ues-form-surface .formulaire_spip .editer.editer_choix{
+  display: flex;
+  align-items: center;
+  gap: .65rem 1rem;
+  flex-wrap: wrap; /* utile si écran étroit */
+}
+
+#slide-formulaire .ues-form-surface .formulaire_spip .editer.editer_choix > label{
+  flex: 0 0 34%;
+  max-width: 34%;
+  margin: 0;
+}
+
+#slide-formulaire .ues-form-surface .formulaire_spip .editer.editer_choix > input{
+  flex: 1 1 0;
+  min-width: 260px;
+  max-width: 560px;
+  margin: 0;
+}
+
+/* FIX Sexe : aligner legend + radios comme un champ label/input */
+@media (min-width: 992px){
+  #slide-formulaire .ues-form-surface .formulaire_spip fieldset.editer_sexo.saisie_radio{
+    display: flex !important;
+    align-items: center;
+    gap: .65rem 1rem;
+    flex-wrap: nowrap; /* garde Féminin / Masculin sur une ligne */
+  }
+
+  #slide-formulaire .ues-form-surface .formulaire_spip fieldset.editer_sexo.saisie_radio > legend{
+    display: block !important;   /* au cas où */
+    flex: 0 0 34%;
+    max-width: 34%;
+    margin: 0 !important;
+    white-space: nowrap;
+  }
+
+  /* Annule le min-width:260px qui fait tout passer à la ligne */
+  #slide-formulaire .ues-form-surface .formulaire_spip fieldset.editer_sexo.saisie_radio > .choix{
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: .35rem;
+  }
+}
+/* Affiché seulement quand le panneau n'est pas hidden */
+#pay-cheque:not([hidden]){ display: block; }
+
+.alert.alert-warning .small.text-dark strong {
+    color: #454545 !important;
+}
+div#joindre_distant__new {
+    display: none;
+}
+
+div#joindre_mediatheque__new {
+    display: none;
+}
+
+div#defaultsubmit__new {
+    display: none;
+}
+
+.reponse_formulaire.reponse_formulaire_ok {
+background-color: #7aa3c9;
+    padding: 10px 10px;
+    border-radius: 8px;
+    text-align: left;
+    margin: 5px 0px 20px;
+}
+
+.sourceup {
+    display: none;
+}
+
+.formulaire_joindre_document input.btn.submit {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 6px 33px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin: 15px 0 0 -14px;
+}
+
+h3.titrem {
+    display: none;
+}
+div#joindre_upload__new {
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    padding: 10px 5px 0 20px;
+}
+.pay-panel[hidden],
+.pay-panel.d-none{
+  display: none !important;
+}
+body.tablo,
+body.tablo html,
+body.tablo .ues-page{
+  background: #2b445c !important;
+}
+/* =========================================================
+   TABLEAU INSCRIPTIONS — Restyle "instituer_objet" (statut)
+   Scope: body.tablo
+   ========================================================= */
+
+body.tablo .ues-admin-statutbox .instituer_objet{
+  background: transparent;
+}
+
+/* Bandeau statut actuel */
+body.tablo .ues-admin-statutbox .instituer_objet .statut_actuel{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+}
+
+body.tablo .ues-admin-statutbox .instituer_objet .statut_actuel .editer-label{
+  margin:0;
+  font-weight: 800;
+  color:#fff;
+}
+
+/* Bouton changer / fermer */
+body.tablo .ues-admin-statutbox .instituer_objet .statut_actuel .btn_modifier{
+  border-radius: 999px;
+  padding: .25rem .7rem;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.08);
+  color:#fff;
+}
+
+/* Form (liste des statuts) */
+body.tablo .ues-admin-statutbox .instituer_objet .formulaire_instituer_objet{
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+/* Titre "Modifier le statut" (legend) */
+body.tablo .ues-admin-statutbox .instituer_objet .editer_statut > .editer-label{
+  display:block !important;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color:#fff;
+  margin: 10px 0 12px;
+}
+
+/* Les choix */
+body.tablo .ues-admin-statutbox .instituer_objet .editer_statut .choix{
+  display:block;
+  margin: 10px 0;
+  padding: 0;
+}
+
+body.tablo .ues-admin-statutbox .instituer_objet .editer_statut .choix label{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  width:100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  cursor:pointer;
+}
+
+body.tablo .ues-admin-statutbox .instituer_objet .editer_statut .choix input[type="radio"]{
+  margin: 0 6px 0 0;
+}
+
+/* Boutons Annuler / Changer */
+body.tablo .ues-admin-statutbox .instituer_objet .boutons .groupe-btns{
+  display:flex;
+  justify-content:flex-end;
+  gap: 10px;
+}
+
+body.tablo .ues-admin-statutbox .instituer_objet .boutons button{
+  border-radius: 10px;
+  padding: .35rem .85rem;
+  font-weight: 800;
+}
+/* =========================================================
+   TABLEAU (admin) — Reprendre le rendu du formulaire rubrique-5
+   Scope: body.tablo pour ne rien casser ailleurs
+   ========================================================= */
+
+/* Comme dans rubrique-5 (slide-formulaire), mais appliqué au tableau */
+body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .editer,
+body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .saisie{
+  margin-bottom: 12px;
+}
+
+/* Mobile: empilé */
+body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .editer > label,
+body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .saisie > label{
+  display: block;
+  margin-bottom: .35rem;
+}
+
+/* Desktop: label gauche / champ droite */
+@media (min-width: 992px){
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .editer,
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .saisie{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .65rem 1rem;
+  }
+
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .editer > label,
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .saisie > label{
+    flex: 0 0 34%;
+    max-width: 34%;
+    margin: 0;
+    padding-top: .2rem;
+    color: rgba(255,255,255,.90);
+    font-weight: 700;
+  }
+
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .editer > input,
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .editer > select,
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .editer > textarea,
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .saisie > input,
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .saisie > select,
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .saisie > textarea{
+    flex: 1 1 0;
+    min-width: 260px;
+    max-width: 560px;
+    margin: 0;
+  }
+
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .editer > .input,
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .saisie > .input,
+  body.tablo .ues-adminbox .ues-form-surface .formulaire_spip .saisie .saisie_input{
+    flex: 1 1 0;
+    min-width: 260px;
+    max-width: 560px;
+  }
+}
+
+/* Radios/checkbox: laisser "propres" */
+body.tablo .ues-adminbox .ues-form-surface .formulaire_spip ul.choix{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+body.tablo .ues-adminbox .ues-form-surface .formulaire_spip ul.choix > li{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin: .25rem .75rem .25rem 0;
+}
+
+/* Légère homogénéisation du header "Modifier le dossier" */
+body.tablo .ues-adminbox{
+  background: rgba(24, 45, 60, 0.78);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.28);
+}
+/* =========================================================
+   TABLEAU INSCRIPTIONS — Statut admin : radios invisibles + boutons Bootstrap
+   Scope: body.tablo .ues-admin-statutbox
+   ========================================================= */
+
+/* 1) Masquer le rond radio natif (sans casser l'accessibilité) */
+body.tablo .ues-admin-statutbox .instituer_objet .editer_statut .choix input[type="radio"]{
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Si le "rond" venait d'un pseudo-élément, on neutralise aussi */
+body.tablo .ues-admin-statutbox .instituer_objet .editer_statut .choix label::before,
+body.tablo .ues-admin-statutbox .instituer_objet .editer_statut .choix label::after{
+  content: none !important;
+}
+
+/* (optionnel) état sélectionné : on met un outline/teinte sur la tuile */
+body.tablo .ues-admin-statutbox .instituer_objet .editer_statut .choix input[type="radio"]:checked + label{
+  border-color: rgba(255,214,10,.55) !important;
+  box-shadow: 0 0 0 .2rem rgba(255,193,7,.18) !important;
+}
+
+/* 2) Boutons Annuler / Changer : même style que .btn.btn-warning.btn-sm */
+body.tablo .ues-admin-statutbox .instituer_objet .boutons .groupe-btns button,
+body.tablo .ues-admin-statutbox .instituer_objet .boutons .groupe-btns input[type="submit"],
+body.tablo .ues-admin-statutbox .instituer_objet .boutons .groupe-btns input[type="button"]{
+  /* reset look SPIP */
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+
+  /* look Bootstrap warning sm */
+  display: inline-block;
+  padding: .25rem .5rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  border-radius: .2rem;
+
+  background-color: rgba(255, 214, 10, .18) !important; /* comme ton site */
+  border: 1px solid #ffc107 !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+body.tablo .ues-admin-statutbox .instituer_objet .boutons .groupe-btns button:hover,
+body.tablo .ues-admin-statutbox .instituer_objet .boutons .groupe-btns input[type="submit"]:hover,
+body.tablo .ues-admin-statutbox .instituer_objet .boutons .groupe-btns input[type="button"]:hover{
+  background-color: #ffc107 !important;
+  color: #000 !important;
+  border-color: #ffc107 !important;
+}
+.editer.editer_paiementok.saisie_selection {
+    display: flex !important;
+    background-color: #7aa3c9;
+    border-radius: 0 0 5px 5px;
+        padding: 0 10px 25px;
+}
+
+.editer.editer_inscription.saisie_selection {
+    display: flex !important;
+    background-color: #7aa3c9;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    margin: 0 0 0 !important;
+}
+/* SELECT fermé (dark) */
+body.tablo .ues-adminbox .formulaire_spip .editer.editer_paiementok.saisie_selection select,
+body.tablo .ues-adminbox .formulaire_spip .editer.editer_inscription.saisie_selection select{
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  min-width: 260px;
+  max-width: 560px;
+
+  background: rgba(255,255,255,.08) !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+
+  /* IMPORTANT: on garde le texte lisible dans la liste native */
+  color: #fff !important;
+}
+
+/* Dropdown natif : la valeur sélectionnée et les options doivent rester lisibles.
+   On évite de forcer le background des <option> (souvent ignoré),
+   mais on force une couleur de texte sombre quand le navigateur affiche le menu sur fond clair. */
+body.tablo .ues-adminbox .formulaire_spip .editer.editer_paiementok.saisie_selection select option,
+body.tablo .ues-adminbox .formulaire_spip .editer.editer_inscription.saisie_selection select option{
+  color: #000 !important;
+}
+.tablo select#champ_inscription {background-color: #394b5d !important;padding: 5px;border-radius: 5px;}
+
+.tablo select#champ_paiementok {
+    background-color: #394b5d !important; padding: 5px;border-radius: 5px;
+}
+/* Statut (SPIP) : fermé par défaut */
+body.tablo .ues-admin-statutbox .instituer_objet .formulaire_instituer_objet{
+  display: none;
+}
+
+/* Si on ouvre via JS, on enlève cette règle via une classe */
+body.tablo .ues-admin-statutbox .instituer_objet.is-open .formulaire_instituer_objet{
+  display: block;
+}
+
+/* Masquer tous les boutons "Changer" sauf le premier (doublons SPIP) */
+body.tablo .ues-admin-statutbox .instituer_objet .statut_actuel .btn_modifier{
+  display: none;
+}
+body.tablo .ues-admin-statutbox .instituer_objet .statut_actuel .btn_modifier:first-of-type{
+  display: inline-flex !important;
+}
+.tablo .card-body .text-white-50 {
+    font-size: 0.8rem;
+    text-align: right;
+    padding-left: 20px;
+}
+/* Fond plein écran (100% hauteur) pour la page tableau */
+html, body{
+  min-height: 100%;
+}
+
+body.tablo{
+  min-height: 100vh;
+  background: #2b445c !important; /* ton bleu */
+}
+
+/* Optionnel : si un wrapper met un fond blanc (main/container), on force transparent */
+body.tablo .main,
+body.tablo main,
+body.tablo .container,
+body.tablo .container-fluid,
+body.tablo .container-xxl{
+  background: transparent !important;
+}
+/* Compteurs à droite du titre */
+.ues-title-metrics{
+  display:flex;
+  flex-direction: column;
+  align-items:flex-end;
+  gap: .35rem;
+  line-height: 1.2;
+}
+
+.ues-title-metrics .ues-metric{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap: .6rem;
+  color: rgba(255,255,255,.9);
+  white-space: nowrap;
+}
+
+.ues-title-metrics .ues-metric .ues-metric-label{
+  color: rgba(255,255,255,.85);
+}
+
+.ues-title-metrics .ues-metric .ues-metric-value{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px; /* rond/pill */
+  background: rgba(255,255,255,.22); /* gris */
+  border: 1px solid rgba(255,255,255,.28);
+  color: #fff;
+  font-weight: 800;
+}
+.ues-title-metrics{
+  display:flex;
+  flex-direction: column;
+  align-items:flex-end;
+  gap: .35rem;
+}
+
+.ues-title-metrics .ues-metric{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap: .6rem;
+  white-space: nowrap; /* force sur une ligne */
+}
+
+.ues-title-metrics .ues-metric-value{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.22);
+  border: 1px solid rgba(255,255,255,.28);
+  color: #fff;
+  font-weight: 800;
+}
+.tablo .accordion-body .col-12.col-lg-7 {
+    padding: 0 30px !important;
+}
+.tablo .editer.saisie_input input {
+    padding: 0 0 0 7px;
+}
+.tablo .text-bg-success {
+    color: #fff !important;
+    background-color: #2ecc71 !important;
+}
+/* ===== Login (tableau inscriptions) ===== */
+body.tablo .formulaire_login{
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+body.tablo .formulaire_login fieldset{
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body.tablo .formulaire_login legend{
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.35rem;
+  margin: 0 0 1rem 0;
+}
+
+body.tablo .formulaire_login .editer{
+  margin: 0 0 12px 0;
+}
+
+@media (min-width: 992px){
+  body.tablo .formulaire_login .editer{
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    align-items: center;
+    column-gap: 16px;
+  }
+}
+
+body.tablo .formulaire_login .editer > label{
+  color: rgba(255,255,255,.9);
+  font-weight: 700;
+  margin: 0 0 .35rem 0;
+}
+
+@media (min-width: 992px){
+  body.tablo .formulaire_login .editer > label{
+    margin: 0;
+  }
+}
+
+body.tablo .formulaire_login input[type="text"],
+body.tablo .formulaire_login input[type="email"],
+body.tablo .formulaire_login input[type="password"]{
+  width: 100%;
+  background: rgba(255,255,255,.08) !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  color: #fff !important;
+  border-radius: .6rem;
+  padding: .55rem .75rem;
+}
+
+body.tablo .formulaire_login .explication,
+body.tablo .formulaire_login .reponse_formulaire,
+body.tablo .formulaire_login .erreur_message{
+  color: rgba(255,255,255,.75);
+}
+
+body.tablo .formulaire_login .formulaire_spip .boutons{
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+body.tablo .formulaire_login .formulaire_spip .boutons button,
+body.tablo .formulaire_login .formulaire_spip .boutons input[type="submit"]{
+  border-radius: 999px;
+  padding: .5rem 1rem;
+  font-weight: 800;
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.12);
+  color: #fff;
+}
+
+body.tablo .formulaire_login a{
+  color: rgba(255,255,255,.85);
+  text-decoration: underline;
+}
+body.tablo .formulaire_login a:hover{
+  color: #fff;
+}
+.only .editer.editer_inscription.saisie_selection {
+  display: none !important;
+}
+.only .editer.editer_paiementok.saisie_selection {
+  display: none !important;
+}
+/* =================================================================
+   TABLEAU (admin) — Sexe: label + boutons radio sur la même ligne
+   Scope: body.tablo (édition de l'article dans le tableau)
+   ================================================================= */
+
+body.tablo .ues-adminbox .formulaire_spip fieldset.editer_sexo.saisie_radio{
+  display: flex !important;
+  align-items: center !important;
+  gap: .75rem 1rem !important;
+  flex-wrap: wrap; /* mobile: passe à la ligne proprement */
+  margin: 0 0 12px !important;
+}
+
+/* Label "Sexe *" à gauche */
+body.tablo .ues-adminbox .formulaire_spip fieldset.editer_sexo.saisie_radio > legend{
+  display: block !important;
+  margin: 0 !important;
+  font-weight: 800;
+  white-space: nowrap;
+  color: rgba(255,255,255,.90);
+}
+
+/* Boutons radio + libellés sur une ligne */
+body.tablo .ues-adminbox .formulaire_spip fieldset.editer_sexo.saisie_radio .choix{
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .35rem !important;
+  margin: 0 .85rem 0 0 !important;
+}
+
+body.tablo .ues-adminbox .formulaire_spip fieldset.editer_sexo.saisie_radio .choix .radio{
+  margin: 0 .35rem 0 0 !important;
+  transform: translateY(0); /* aligne le rond avec le texte */
+}
+
+/* Desktop: label colonne gauche, radios colonne droite */
+@media (min-width: 992px){
+  body.tablo .ues-adminbox .formulaire_spip fieldset.editer_sexo.saisie_radio{
+    flex-wrap: nowrap; /* tout sur une ligne */
+  }
+  body.tablo .ues-adminbox .formulaire_spip fieldset.editer_sexo.saisie_radio > legend{
+    flex: 0 0 34%;
+    max-width: 34%;
+  }
+}
+.tablo .statut.statut--publie .statut-icone img {
+    border-radius: 20px 20px 25px 25px;
+    margin: 5px 12px 0 0;
+}
+.tablo img.ues-author-avatar {
+    border-radius: 50% !important;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+.tablo .form-check-label.text-white {
+  font-size: 0.8rem;
+}
+.tablo #uesFilterReset {
+  padding: 0 8px;
+  font-size: 0.8rem;
+}
+.only section#ues-slides {
+    margin-top: -91px;
+}
+
+/* =========================================================
+   UES — MOBILE FINAL PATCH (logo caché + menu lisible + slides empilés)
+   À coller TOUT EN BAS de univsax.css
+   ========================================================= */
+
+/* 0) Anti overflow horizontal (filet de sécurité) */
+html, body{
+  overflow-x: hidden;
+}
+
+/* Médias fluides */
+img, video, svg, iframe{
+  max-width: 100%;
+  height: auto;
+}
+
+/* 1) Topbar : on masque le titre long, on garde actions + "UES" */
+@media (max-width: 600px){
+  .ues-topbar-title{ display: none !important; }
+}
+
+/* 2) Header / Menu mobile : lisible, sans chevauchement */
+@media (max-width: 991.98px){
+
+  /* Annule offsets manuels qui provoquent les superpositions */
+  #uesNav{
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  /* Réduit les paddings de container sur mobile (évite débordements) */
+  .container-xxl,
+  .container,
+  .container-fluid{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Navbar: hauteur/spacing normal */
+  #header .ues-nav{
+    padding: 8px 0 !important;
+  }
+
+  /* IMPORTANT: neutralise le max-height qui écrase la nav au scroll */
+  #header.ues-header--compact .ues-nav{
+    max-height: none !important;
+  }
+
+
+
+  /* Toggler propre */
+  #header .ues-toggler{
+    margin: 0 !important;
+  }
+
+  /* Panneau du menu déroulant (fond noir) */
+  #uesNav.navbar-collapse{
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 14px;
+
+    background: rgba(0,0,0,.92);
+    border: 1px solid rgba(255,255,255,.14);
+    box-shadow: 0 18px 40px rgba(0,0,0,.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* Liste menu: annule marge-top desktop */
+  .ues-menu{
+    margin-top: 0 !important;
+    gap: 6px !important;
+  }
+
+  .ues-menu .nav-link{
+    padding: 10px 10px !important;
+    font-size: 1rem;
+    white-space: normal !important;
+  }
+}
+
+/* 3) Slides: pas de carousel horizontal + pas de menu tabs (mobile) */
+@media (max-width: 768px){
+  /* masquer la nav de tabs */
+  #uesCarousel .ues-slide-nav{
+    display: none !important;
+  }
+
+  /* empiler les items du carousel */
+  #uesCarousel .carousel-inner{
+    transform: none !important;
+    transition: none !important;
+  }
+
+  #uesCarousel .carousel-item{
+    display: block !important;
+    width: 100% !important;
+    margin-right: 0 !important;
+    float: none !important;
+
+    position: static !important;
+    transform: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+
+    padding-bottom: 28px;
+  }
+
+  #uesCarousel .carousel-item:not(.active){
+    display: block !important;
+  }
+
+  #uesCarousel .carousel-control-prev,
+  #uesCarousel .carousel-control-next,
+  #uesCarousel .carousel-indicators{
+    display: none !important;
+  }
+}
+/* =========================================================
+   TOPBAR — UES tout à gauche, actions à droite
+   ========================================================= */
+
+/* Le conteneur topbar doit occuper toute la largeur */
+#header .ues-topbar-inner{
+  justify-content: space-between !important; /* gauche vs droite */
+}
+
+/* Le groupe d'actions prend la largeur et se "sépare" en 2 zones */
+#header .ues-topbar-actions{
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+}
+
+/* UES collé à gauche */
+#header .ues-topbar-ues{
+  margin-right: auto; /* pousse Facebook + langues à droite */
+}
+
+/* Facebook + langues restent groupés à droite */
+#header .ues-social,
+#header .ues-lang-pill{
+  flex: 0 0 auto;
+}
+/* Logo image dans la topbar */
+#header .ues-topbar-logo{
+  display: inline-flex;
+  align-items: center;
+  margin-right: auto; /* pousse FB + langues à droite */
+  text-decoration: none;
+}
+
+#header .ues-topbar-logo img{
+  height: 22px;       /* ajuste: 20–26px selon ton goût */
+  width: auto;
+  display: block;
+}
+
+/* Mobile: on masque le titre long */
+@media (max-width: 600px){
+  #header .ues-topbar-title{ display: none !important; }
+}
+/* MOBILE: afficher le logo dans la navbar noire */
+@media (max-width: 991.98px){
+  #header .navbar-brand.ues-brand img{
+    display: block !important;
+  }
+  body.rub.tablo .ues-main {
+  margin-top: -113px !important;
+}
+body.rub.tablo .h3.text-white.m-0 {
+  font-size: 0.9rem;
+  text-align: center;
+  border: 1px solid #dadada;
+  padding: 5px 10px;
+}
+}
+/* =========================================================
+   MOBILE — Navbar noire: logo à gauche, burger à droite (aligné)
+   ========================================================= */
+@media (max-width: 991.98px){
+
+  /* Aligne le contenu de la navbar */
+  #header .ues-nav-inner{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  /* Logo dans le noir (taille compacte) */
+  #header .navbar-brand.ues-brand{
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: -10px 0 0 0 !important;
+    padding: 0 !important;
+  }
+
+  #header .navbar-brand.ues-brand img{
+    height: 44px !important;  /* ajuste: 40–54px */
+    width: auto !important;
+    margin: 0 !important;
+    filter: none !important;
+  }
+
+  /* Toggler à droite */
+  #header .ues-toggler{
+    margin: 0 !important;
+  }
+  .col-12.col-xxl-10 {
+  padding: 0;
+}
+.ues-cta.ues-cta--inscriptions {
+  font-size: 0.9rem !important;
+}
+.som #header.ues-header--compact .ues-nav .ues-brand img {
+  height: 44px ! !important;
+}
+.ues-logo-strip__row img {
+    max-height: 115px !important;
+  }
+.som .carousel-item .col-lg-7 {
+  padding: 0;
+}
+.som .carousel-item div div p {
+  color: #FFF;
+}
+.som .carousel-item .col-lg-7 {
+  padding: 15px;
+}
+}
+/* =========================================================
+   MOBILE — Fix logo au scroll (annule margin qui décale)
+   ========================================================= */
+@media (max-width: 991.98px){
+
+  /* Logo taille stable sur mobile */
+  #header .ues-nav .ues-brand img{
+    height: 70px !important;   /* ajuste: 40-54px */
+    margin: 0 !important;      /* annule tous les margins existants */
+  }
+
+  /* Au scroll : on garde le même comportement (pas de décalage) */
+  #header.ues-header--compact .ues-nav .ues-brand img{
+    height: 40px !important;   /* un peu plus petit si tu veux */
+    margin: 0 !important;      /* CRUCIAL */
+  }
+}
+/* =========================================================
+   MOBILE — Ajustement hero sous header
+   ========================================================= */
+@media (max-width: 991.98px){
+  .index-page section#hero{
+    margin-top: -115px !important;
+    padding-top: 85px !important;
+  }
+}
+/* =========================================================
+   MOBILE ONLY — Topbar jaune disparaît au scroll
+   ========================================================= */
+@media (max-width: 991.98px){
+  #header.ues-header--compact .ues-topbar{
+    display: none !important;
+  }
+
+  /* évite un éventuel décalage de la navbar */
+  #header.ues-header--compact .ues-nav{
+    margin-top: 0 !important;
+  }
+}
+
+/* Quand la topbar disparaît, on retire l'espace qu'elle prenait */
+@media (max-width: 991.98px){
+  #header.ues-header--compact .ues-nav{
+    margin-top: 0 !important;
+  }
+}
+/* =========================================================
+   Scroll — masquer la topbar jaune quand on scrolle
+   ========================================================= */
+#header.ues-header--compact .ues-topbar{
+  display: none !important;
+}
+
+/* Quand la topbar disparaît, on retire l'espace qu'elle prenait */
+@media (max-width: 991.98px){
+  #header.ues-header--compact .ues-nav{
+    margin-top: 0 !important;
+  }
+  #header .ues-topbar-inner{
+  justify-content: space-between !important;
+  padding-left: 12px !important;   /* léger padding normal */
+  padding-right: 12px !important;
+  border-bottom: 2px solid #CCC;
+}
+img.ues-logo.ues-logo--gap {
+  margin: 30px 0 0px 0;
+}
+}
+/* =========================================================
+   MOBILE ONLY — Topbar: UES à gauche / actions à droite
+   ========================================================= */
+@media (max-width: 991.98px){
+  #header .ues-topbar-inner{
+    justify-content: space-between !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  #header .ues-topbar-actions{
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #header .ues-topbar-ues{
+    margin-right: auto !important; /* pousse FB + langues à droite */
+  }
+}
+
+/* ==========================================================================
+   UES — univsax.css (version nettoyée)
+   Objectif:
+   - Desktop: ne bouge pas
+   - Mobile: topbar actions à droite + topbar cachée au scroll + logo stable
+   ========================================================================== */
+
+:root{
+  --ues-yellow: #f2d100;
+  --ues-black: #0a0a0a;
+  --ues-white: #ffffff;
+  --ues-muted: rgba(255,255,255,.78);
+  --ues-line: rgba(242,209,0,.55);
+  --ues-blue: #86b6ff;
+
+  --ues-logo-big: 140px;
+  --ues-logo-small: 58px;
+
+  /* Hauteur header (topbar+nav). Ajuste si besoin */
+  --ues-header-h: 140px;
+}
+
+/* =============== Base =============== */
+.ues-page{
+  font-family: Montserrat, Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  background: var(--ues-black);
+  color: var(--ues-white);
+}
+
+html, body{ background: #000; }
+
+img, video, svg, iframe{ max-width: 100%; height: auto; }
+
+/* Le header est fixed -> réserve la place */
+.ues-main{ padding-top: var(--ues-header-h); }
+
+/* =============== TOPBAR (desktop & mobile) =============== */
+.ues-topbar{
+  background: var(--ues-yellow);
+  color: #111;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+  position: relative;
+  z-index: 1200;
+}
+
+.ues-topbar-inner{
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 12px;
+  padding: 6px 12px;
+}
+
+/* Titre à gauche */
+.ues-topbar-title{
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  letter-spacing: .2px;
+  font-size: .80rem;
+  text-align: left;
+  padding-left: 2% !important;
+}
+
+/* Actions à droite (Facebook + FR/ENG) */
+.ues-topbar-actions{
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  margin-left: auto; /* pousse à droite */
+}
+
+/* Facebook */
+.ues-social{
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: #111;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+
+  justify-content: center;
+}
+.ues-social i{
+  font-size: 25px;
+  line-height: 1;
+  margin: 0 8px 0 0;
+  color: #000;
+}
+
+/* Langues */
+.ues-lang-pill{
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(0,0,0,.14);
+  border: 1px solid rgba(0,0,0,.18);
+}
+.ues-lang-pill-btn{
+  height: 26px;
+  min-width: 44px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: .78rem;
+  letter-spacing: .2px;
+}
+.ues-lang-pill-btn.is-active{
+  background: #111;
+  color: var(--ues-yellow);
+}
+
+/* =============== NAVBAR =============== */
+.ues-header{ z-index: 1100; }
+
+/* Sur le hero: léger dégradé; hors hero: noir */
+.ues-nav{
+  background: linear-gradient(to bottom, rgba(0,0,0,.70), rgba(0,0,0,0));
+  padding: 0;
+}
+.ues-header.is-outside-hero .ues-nav{
+  background: rgba(0,0,0,.90);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.45);
+}
+
+/* IMPORTANT: on évite tout "décalage magique" */
+.ues-nav-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Logo */
+.ues-brand{
+  margin: 0;
+  padding: 0;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+}
+.ues-brand img{
+  height: var(--ues-logo-big);
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,.55));
+  transition: height .35s ease;
+}
+
+/* Bouton burger */
+.ues-toggler{
+  border: 1px solid rgba(255,255,255,.35);
+  margin: 0;
+}
+.ues-toggler .navbar-toggler-icon{ filter: invert(1); }
+
+/* Menu */
+.navbar-collapse{ justify-content: flex-end; }
+.ues-menu{
+  gap: 10px;
+  margin-top: -44px;
+}
+.ues-menu .nav-link{
+  color: rgba(255,255,255,.90);
+  font-weight: 600;
+  letter-spacing: .3px;
+  padding: 10px 12px;
+  white-space: nowrap;
+  position: relative;
+}
+.ues-menu .nav-link:hover{ color: #fff; }
+.ues-menu .nav-link::after{
+  content:"";
+  position:absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 3px;
+  background: var(--ues-yellow);
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .22s ease;
+}
+.ues-menu .nav-link.active{
+  color: var(--ues-yellow);
+}
+.ues-menu .nav-link.active::after,
+.ues-menu .nav-link:hover::after,
+.ues-menu .nav-link:focus-visible::after{
+  transform: scaleX(1);
+}
+
+/* =============== Scroll: header compact (desktop + mobile) =============== */
+/* logo petit au scroll, mais SANS margin/left bizarre */
+#header.ues-header--compact .ues-brand img{
+  height: var(--ues-logo-small);
+  margin: 0 !important;     /* empêche le "décalage à droite" */
+  transform: none !important;
+}
+
+/* fond noir nav au scroll */
+#header.ues-header--compact .ues-nav{
+  background: rgba(0,0,0,.92) !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,.45);
+}
+
+/* =============== HERO derrière header (si tu en as besoin) =============== */
+.ues-hero{
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - var(--ues-header-h));
+  padding: 26px 0 70px;
+}
+
+/* =========================
+   MOBILE ONLY (ne touche pas desktop)
+   ========================= */
+@media (max-width: 991.98px){
+
+  :root{
+    --ues-header-h: 158px;
+    --ues-logo-big: 84px;
+    --ues-logo-small: 54px;
+  }
+
+  /* IMPORTANT: annule les vieux offsets qui cassent le mobile */
+  #uesNav{
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+  }
+  
+
+
+  /* Panel du menu déroulant (fond noir lisible) */
+  #uesNav.navbar-collapse{
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: rgba(0,0,0,.92);
+    border: 1px solid rgba(255,255,255,.14);
+    box-shadow: 0 18px 40px rgba(0,0,0,.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .ues-menu{
+    gap: 6px;
+  }
+  .ues-menu .nav-link{
+    white-space: normal;
+    font-size: 1rem;
+    padding: 10px 10px;
+  }
+
+  /* Topbar jaune disparaît AU SCROLL uniquement sur mobile */
+  #header.ues-header--compact .ues-topbar{
+    display: none !important;
+  }
+
+  /* quand la topbar disparaît, pas de "trou" */
+  #header.ues-header--compact .ues-nav{
+    margin-top: 0 !important;
+  }
+
+  /* NE JAMAIS limiter la hauteur du header au scroll (ça casse le menu) */
+  #header.ues-header--compact .ues-nav{
+    max-height: none !important;
+  }
+}
+
+@media (max-width: 600px){
+  /* Option: masquer le titre long en très petit */
+  .ues-topbar-title{ display: none !important; }
+}
+/* =========================================================
+   TOPBAR — FIX DESKTOP + MOBILE (ne pas impacter grand écran)
+   À coller TOUT EN BAS du CSS
+   ========================================================= */
+
+/* DESKTOP / GLOBAL : titre à gauche, actions à droite */
+#header .ues-topbar-inner{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;   /* important */
+  gap: 12px;
+}
+
+#header .ues-topbar-title{
+  flex: 1 1 auto;               /* prend l'espace à gauche */
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block !important;    /* annule tout display:none parasite */
+}
+
+#header .ues-topbar-actions{
+  margin-left: auto;            /* pousse FB + langues tout à droite */
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* MOBILE UNIQUEMENT : si tu veux cacher le titre sous 600px */
+@media (max-width: 600px){
+  #header .ues-topbar-title{
+    display: none !important;
+  }
+  .only .carousel-item .col-lg-7 {
+  padding: 0 10px;
+} 
+
+}
+/* =========================================================
+   TOPBAR — Titre à gauche / Actions à droite (safe desktop)
+   À coller TOUT EN BAS
+   ========================================================= */
+
+/* Ligne topbar: gauche (titre) / droite (actions) */
+#header .ues-topbar .ues-topbar-inner{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+}
+
+/* Le titre doit pouvoir prendre l'espace disponible */
+#header .ues-topbar .ues-topbar-title{
+  flex: 1 1 auto !important;
+  min-width: 0 !important;              /* ellipsis */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Actions collées à droite */
+#header .ues-topbar .ues-topbar-actions{
+  flex: 0 0 auto !important;
+  margin-left: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  white-space: nowrap !important;
+  width: auto !important;               /* important: PAS 100% */
+}
+
+/* Mobile: si tu veux voir le titre, commente la règle ci-dessous.
+   Sinon, laisse-la (actuellement tu l'as demandé masqué). */
+@media (max-width: 600px){
+  /* .ues-topbar-title{ display: none !important; } */
+}
+@media (min-width: 992px){
+  .ues-menu{
+    margin-top: -25px !important; /* 64px - 44px = 20px */
+  }
+ 
+  
+}
+body.rub.tablo .ues-main {
+  margin-top: -80px !important;
+}
+body.only .navbar.navbar-expand-xl.ues-nav.ues-nav--compact {
+  border-bottom: 3px solid #7aa3c9 !important;
+}
+/* TOUT EN BAS DU FICHIER */
+
+@media (max-width: 991.98px) {
+  /* Force la suppression de l'espace blanc en haut sur mobile */
+  body.rub.only .ues-main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Ajustement supplémentaire si le bloc "Bonjour" est collé au header */
+  body.rub.only .ues-main .container-xxl.py-3 {
+    padding-top: 55px !important; /* Espace pour ne pas être caché par le menu fixe */
+  }
+}
+@media (max-width: 715px){
+  /* Force la suppression de l'espace blanc en haut sur mobile */
+  /* Ajustement supplémentaire si le bloc "Bonjour" est collé au header */
+  body.rub.only .ues-main .container-xxl.py-3 {
+    padding-top: 69px !important; /* Espace pour ne pas être caché par le menu fixe */
+  }
+}
+/* Correctif spécifique Tablette / Mobile large (entre 715px et 991px) */
+@media (min-width: 715px) and (max-width: 991.98px) {
+  
+  /* On pousse le contenu vers le bas pour qu'il ne soit pas caché par le header */
+  body.rub.only .ues-main .container-xxl.py-3  {
+    padding-top: 140px !important; /* Ajustez cette valeur si nécessaire (ex: 120px ou 150px) */
+    margin-top: 0 !important;
+  }
+
+  /* On s'assure que le bloc "Bonjour" est visible */
+  body.rub.only .ues-main .container-xxl.py-3  {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding-top: 110px !important;
+  }
+}
+.editer_whatsapp .editer-label.label {
+  display: block !important;
+  max-width: 34%;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+i.bi.bi-whatsapp {
+    color: #2ecc71;
+    font-size: 1.8rem;
+    padding-right: 10px;
+}
+.only span.ues-pill.ues-pill--ok {
+    color: #2ecc71;
+}
+/* ===== HOTFIX MOBILE : Statut inscription / Paiement ===== */
+@media (max-width: 991.98px){
+
+  #slide-formulaire .ues-form-surface .formulaire_spip
+  .editer.editer_inscription.saisie_selection,
+  #slide-formulaire .ues-form-surface .formulaire_spip
+  .editer.editer_paiementok.saisie_selection{
+    display: flex !important;
+    flex-wrap: wrap !important;          /* ✅ passe en 2 lignes si besoin */
+    align-items: flex-start !important;
+    gap: .35rem .75rem !important;
+    padding: 10px 12px !important;       /* ✅ enlève le "gros vide" */
+  }
+
+  /* label sur toute la largeur */
+  #slide-formulaire .ues-form-surface .formulaire_spip
+  .editer.editer_inscription.saisie_selection > label,
+  #slide-formulaire .ues-form-surface .formulaire_spip
+  .editer.editer_paiementok.saisie_selection > label{
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    margin: 0 !important;
+  }
+
+  /* select sur toute la largeur */
+  #slide-formulaire .ues-form-surface .formulaire_spip
+  .editer.editer_inscription.saisie_selection select,
+  #slide-formulaire .ues-form-surface .formulaire_spip
+  .editer.editer_paiementok.saisie_selection select{
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+  .tablo select#champ_paiementok, .tablo select#champ_inscription {
+    min-width: auto;
+    max-width: unset;
+    margin-left: 10px;
+}
+}
+.som a.ues-social {
+    padding: 0 !important;
+    margin: 0 -12px !important;
+}
+body.rub.only .ues-main {
+  margin-top: -50px !important;
+}
+
+@media (min-width: 992px) {
+    .tablo .ues-menu, .only .ues-menu {
+        margin-top: -4px !important;
+    }
+}
+body.rub.only.eng .ues-main {
+    margin-top: -74px !important;
+}
+textarea#champ_contact {
+    display: none;
+}
+
+.editer.editer_contact.saisie_textarea label.editer-label {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    align-items: flex-start;
+}
+.formulaire_contact .reponse_formulaire.reponse_formulaire_ok {
+    background-color: #FFF;
+    padding: 15px 25px;
+    margin: 5px 0px 20px;
+}
+.info_txt span.bot {
+    border: 0 !important;
+    border-radius: 5px !important;
+    padding: .25rem 0.5rem !important;
+    background: #0d6efd !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+    font-size: 0.6rem;
+}
+.info_txt span.badge {
+    margin: 8px 8px 0 0;
+}
+.cadre .alert.alert-success.mb-0.d-flex.align-items-center.gap-2 {
+    color: #FFF;
+    padding: 0 !important;
+    background-color: transparent;
+    border: none;
+}
+#formulaire_joindre_document-new .reponse_formulaire.reponse_formulaire_ok {
+	background-color: #9dba00 !important;
+	color: #FFF;
+	font-weight: bold;
+	text-align: center;
+}
+
+.cadre_depo #fichier_upload__new {
+  display: block !important;
+  width: 100%;
+  color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  padding: 8px;
+  margin: 10px 0 -4px;
+  font-size: 0.85rem;
+}
+.cadre_depo div#joindre_upload__new {
+  border: none;
+  padding: 0 15px;
+}
+.cadre_depo .formulaire_joindre_document input.btn.submit {
+  background-color: #86b6ff !important;
+  color: #0b1b2a !important;
+  border: 1px solid #86b6ff !important;
+  border-top-color: rgb(134, 182, 255);
+  border-right-color: rgb(134, 182, 255);
+  border-bottom-color: rgb(134, 182, 255);
+  border-left-color: rgb(134, 182, 255);
+  border-radius: 50px !important;
+  padding: 6px 20px !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+.cadre_depo .formulaire_joindre_document input.btn.submit:hover {
+  background-color: #fff !important;
+  color: #0b1b2a !important;
+  border-color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}

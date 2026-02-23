@@ -55,4 +55,4 @@ a:2:{s:9:"nom_cache";s:38:"9b867d5032c85d3fce62f43af1703090.cache";s:6:"valeur";
 		position:fixed;
 		left:75%;
 }
-";s:5:"notes";s:0:"";s:8:"contexte";a:6:{s:4:"hash";s:32:"0a129b1863451cb0b63f0697e1a5bf24";s:4:"lang";s:2:"fr";s:4:"date";s:19:"2026-01-30 00:13:39";s:12:"date_default";b:1;s:10:"date_redac";s:19:"2026-01-30 00:13:39";s:18:"date_redac_default";b:1;}s:12:"lastmodified";i:1769728419;s:2:"gz";b:0;s:3:"sig";i:1562499253;}}
+";s:5:"notes";s:0:"";s:8:"contexte";a:6:{s:4:"hash";s:32:"0a129b1863451cb0b63f0697e1a5bf24";s:4:"lang";s:2:"fr";s:4:"date";s:19:"2026-02-23 00:40:43";s:12:"date_default";b:1;s:10:"date_redac";s:19:"2026-02-23 00:40:43";s:18:"date_redac_default";b:1;}s:12:"lastmodified";i:1771803643;s:2:"gz";b:0;s:3:"sig";i:1562499253;}}

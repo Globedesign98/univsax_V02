@@ -1,0 +1,100 @@
+2026-02-06 21:38:43 114.69.215.30 (pid 20230) :Pub:CRITIQUE: Array
+(
+    [verifier_confirmer] => oui
+)
+
+2026-02-06 21:38:43 114.69.215.30 (pid 20230) :Pub:CRITIQUE: statut auteur inchange
+2026-02-07 01:30:52 114.69.215.30 (pid 126624) :Pub:CRITIQUE: statut auteur inchange
+2026-02-07 01:30:52 114.69.215.30 (pid 126624) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-08 16:11:22 88.181.166.141 (pid 96520) :Pub:CRITIQUE: Array
+(
+    [verifier_confirmer] => oui
+)
+
+2026-02-08 16:11:22 88.181.166.141 (pid 96520) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 00:48:13 114.69.213.164 (pid 47865) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 00:48:13 114.69.213.164 (pid 47865) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 00:51:33 51.158.253.189 (pid 70243) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 00:51:33 51.158.253.189 (pid 70243) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 00:52:32 51.158.253.189 (pid 78402) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 00:52:32 51.158.253.189 (pid 78402) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 00:54:51 51.158.253.189 (pid 70243) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 00:54:51 51.158.253.189 (pid 70243) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 01:07:21 51.158.253.189 (pid 93053) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 01:07:21 51.158.253.189 (pid 93053) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 01:08:08 114.69.213.164 (pid 54014) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 01:08:08 114.69.213.164 (pid 54014) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 01:17:23 51.158.253.189 (pid 31568) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 01:17:23 51.158.253.189 (pid 31568) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 01:44:57 51.158.253.189 (pid 91070) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 01:44:57 51.158.253.189 (pid 91070) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 01:53:19 114.69.213.164 (pid 56432) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 01:53:19 114.69.213.164 (pid 56432) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 01:57:57 51.158.253.189 (pid 56432) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 01:57:57 51.158.253.189 (pid 56432) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 01:58:17 114.69.213.164 (pid 94320) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 01:58:17 114.69.213.164 (pid 94320) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 02:06:10 51.158.253.189 (pid 10774) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 02:06:10 51.158.253.189 (pid 10774) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 02:11:20 114.69.213.164 (pid 68414) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 02:11:20 114.69.213.164 (pid 68414) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 02:33:53 51.158.253.189 (pid 99820) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 02:33:53 51.158.253.189 (pid 99820) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 02:34:12 114.69.213.164 (pid 14846) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 02:34:12 114.69.213.164 (pid 14846) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 02:36:08 51.158.253.189 (pid 108881) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 02:36:08 51.158.253.189 (pid 108881) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 02:36:36 114.69.213.164 (pid 122105) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 02:36:36 114.69.213.164 (pid 122105) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 02:44:33 51.158.253.189 (pid 33077) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 02:44:33 51.158.253.189 (pid 33077) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 02:45:57 114.69.213.164 (pid 33077) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 02:45:57 114.69.213.164 (pid 33077) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 03:09:17 51.158.253.189 (pid 27391) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 03:09:17 51.158.253.189 (pid 27391) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 03:09:54 114.69.213.164 (pid 57612) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 03:09:54 114.69.213.164 (pid 57612) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 03:13:52 51.158.253.189 (pid 8060) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 03:13:52 51.158.253.189 (pid 8060) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 03:15:02 51.158.253.189 (pid 8061) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 03:15:02 51.158.253.189 (pid 8061) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 03:15:12 114.69.213.164 (pid 8060) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 03:15:12 114.69.213.164 (pid 8060) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 04:08:42 51.158.253.189 (pid 42998) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 04:08:42 51.158.253.189 (pid 42998) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 04:09:20 114.69.213.164 (pid 96927) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 04:09:20 114.69.213.164 (pid 96927) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 04:09:20 114.69.213.164 (pid 96927) :Pub:CRITIQUE: Array
+(
+    [statut] => 1comite
+    [pass] => ok
+)
+
+2026-02-09 04:09:20 114.69.213.164 (pid 96927) :Pub:CRITIQUE: notifications/auteur_inscription_pass
+2026-02-09 04:15:27 51.158.253.189 (pid 81758) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 04:15:27 51.158.253.189 (pid 81758) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 04:21:12 114.69.213.164 (pid 81758) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 04:21:12 114.69.213.164 (pid 81758) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 04:21:13 114.69.213.164 (pid 81758) :Pub:CRITIQUE: Array
+(
+    [statut] => 1comite
+    [pass] => ok
+)
+
+2026-02-09 04:21:13 114.69.213.164 (pid 81758) :Pub:CRITIQUE: notifications/auteur_inscription_pass
+2026-02-09 04:28:11 51.158.253.189 (pid 43273) :Pri:CRITIQUE: statut auteur inchange
+2026-02-09 04:28:11 51.158.253.189 (pid 43273) :Pri:CRITIQUE: statut auteur : 1comite
+2026-02-09 04:30:43 114.69.213.164 (pid 55015) :Pub:CRITIQUE: statut auteur inchange
+2026-02-09 04:30:43 114.69.213.164 (pid 55015) :Pub:CRITIQUE: statut auteur : nouveau
+2026-02-09 21:50:42 114.69.212.200 (pid 69119) :Pub:CRITIQUE: Array
+(
+    [verifier_confirmer] => oui
+)
+
+2026-02-09 21:50:42 114.69.212.200 (pid 69119) :Pub:CRITIQUE: statut auteur inchange
+2026-02-23 00:42:33 127.0.0.1 (pid 14832) :Pub:CRITIQUE: Array
+(
+    [verifier_confirmer] => oui
+)
+
+2026-02-23 00:42:33 127.0.0.1 (pid 14832) :Pub:CRITIQUE: statut auteur inchange

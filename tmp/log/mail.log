@@ -1,0 +1,78 @@
+2026-01-31 23:23:09 127.0.0.1 (pid 16880) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-01-31 23:23:57 127.0.0.1 (pid 16880) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-01-31 23:33:25 127.0.0.1 (pid 16880) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-01-31 23:34:15 127.0.0.1 (pid 16880) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-01 00:35:01 127.0.0.1 (pid 16880) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-01 00:35:02 127.0.0.1 (pid 16880) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-01 21:43:39 127.0.0.1 (pid 16880) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-01 21:43:40 127.0.0.1 (pid 16880) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-02 21:44:29 127.0.0.1 (pid 19752) :Pub:info: mail via facteur
+Sent by SPIP\Facteur\FacteurMail
+Date: Mon, 2 Feb 2026 21:44:29 +0100
+From: =?utf-8?Q?Universit=C3=A9_Europ=C3=A9enne_de_Saxophone?= &lt;contact@globedesign.org>
+Message-ID: &lt;@127.0.0.1>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+To: globetriber@hotmail.com
+Subject: [Université Européenne de Saxophone] : Identifiants personnels
+Message: Body(6054c) AltBody(256c)
+2026-02-02 21:44:29 127.0.0.1 (pid 19752) :Pub:info: mail via facteur
+Sent by SPIP\Facteur\FacteurMail
+Date: Mon, 2 Feb 2026 21:44:29 +0100
+From: =?utf-8?Q?Universit=C3=A9_Europ=C3=A9enne_de_Saxophone?= &lt;contact@globedesign.org>
+Message-ID: &lt;@127.0.0.1>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+To: contact@fermegaia.nc
+Subject: [Université Européenne de Saxophone] : Identifiants personnels
+Message: Body(6056c) AltBody(258c)
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-06 22:59:23 127.0.0.1 (pid 5332) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-06 23:11:19 127.0.0.1 (pid 5332) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-06 23:44:21 127.0.0.1 (pid 5332) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-07 00:05:21 127.0.0.1 (pid 5332) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-07 00:12:32 127.0.0.1 (pid 5332) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-08 23:33:37 127.0.0.1 (pid 5332) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-08 23:33:38 127.0.0.1 (pid 5332) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-09 00:10:09 127.0.0.1 (pid 5332) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-09 01:12:55 127.0.0.1 (pid 5332) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-09 01:13:53 127.0.0.1 (pid 5332) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-09 01:30:00 127.0.0.1 (pid 5332) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-09 01:30:47 127.0.0.1 (pid 5332) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-09 22:57:56 127.0.0.1 (pid 2152) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-09 22:57:57 127.0.0.1 (pid 2152) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-09 22:57:58 127.0.0.1 (pid 2152) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-09 22:57:59 127.0.0.1 (pid 2152) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-09 22:58:01 127.0.0.1 (pid 2152) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-10 22:50:16 127.0.0.1 (pid 2152) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-10 22:50:16 127.0.0.1 (pid 2152) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-10 22:50:18 127.0.0.1 (pid 2152) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-10 22:50:18 127.0.0.1 (pid 2152) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-11 01:57:52 127.0.0.1 (pid 2152) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-13 19:27:15 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-13 19:27:17 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-13 19:27:17 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-13 19:27:24 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-13 19:37:33 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-13 20:38:22 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-13 22:41:58 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-13 22:50:12 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-13 23:02:17 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-13 23:02:18 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-16 07:18:20 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-16 07:18:20 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-16 07:18:20 127.0.0.1 (pid 15260) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-16 23:24:23 127.0.0.1 (pid 18780) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-16 23:24:23 127.0.0.1 (pid 18780) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-16 23:24:25 127.0.0.1 (pid 18780) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-18 06:01:35 127.0.0.1 (pid 2912) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-18 06:01:36 127.0.0.1 (pid 2912) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-18 06:05:17 127.0.0.1 (pid 2912) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-18 06:22:37 127.0.0.1 (pid 2912) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-18 22:30:39 127.0.0.1 (pid 2912) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.
+2026-02-19 01:42:09 127.0.0.1 (pid 2912) :Pub:ERREUR: Erreur Envoi mail via Facteur : Could not instantiate mail function.

@@ -17,11 +17,12 @@ body.scrolled .ues-nav, body.scrolled .navbar.ues-nav, body.scrolled .ues-header
 
 /* ==========================================================================
    UES — CONTACT (objectif : proche de "Contact OIB" + tes couleurs)
-   IMPORTANT : on neutralise les contraintes de largeur héritées (sinon "50%")
+   IMPORTANT : on neutralise toutes les contraintes de largeur/alignement
+   qui peuvent réduire le bloc (effet "50%")
    ========================================================================== */
 
-#contact.ues-contact{
-  background:#fff !important;
+#contact.ues-contact {
+    background: #eae7d8 !important;
 }
 
 /* Layout global : limiter l'étalement (comme OIB) */
@@ -29,6 +30,29 @@ body.scrolled .ues-nav, body.scrolled .navbar.ues-nav, body.scrolled .ues-header
   max-width: 1200px !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+/* ✅ RESET CRITIQUE : si un CSS met la colonne droite en flex/center,
+   le formulaire peut "shrink" et donner l'impression de 50% */
+#contact.ues-contact .col-lg-8{
+  display: block !important;
+  justify-content: initial !important;
+  align-items: initial !important;
+}
+
+/* ✅ RESET CRITIQUE : les wrappers AJAX peuvent être en flex/inline-flex */
+#contact.ues-contact .ajax-form-container,
+#contact.ues-contact .ajax-form-container .ajax,
+#contact.ues-contact .formulaire_spip,
+#contact.ues-contact .formulaire_spip form,
+#contact.ues-contact .formulaire_spip fieldset,
+#contact.ues-contact .formulaire_spip .editer-groupe{
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
 }
 
 /* Pas d'effet "carte" : rendu flat */
@@ -71,7 +95,7 @@ body.scrolled .ues-nav, body.scrolled .navbar.ues-nav, body.scrolled .ues-header
 
 /* --------- COLONNE GAUCHE (adresse / email) ------------------------------ */
 #contact.ues-contact .ues-contact__item{
-  display:grid;
+  display:grid !important;
   grid-template-columns: 52px 1fr;
   gap: 16px;
   align-items: start;
@@ -123,21 +147,6 @@ body.scrolled .ues-nav, body.scrolled .navbar.ues-nav, body.scrolled .ues-header
   font-size: 1.4rem;
 }
 
-/* IMPORTANT : enlever toute contrainte de largeur héritée (cause du "50%") */
-#contact.ues-contact .ues-contact__form,
-#contact.ues-contact .ajax-form-container,
-#contact.ues-contact .ajax-form-container .ajax,
-#contact.ues-contact .formulaire_spip,
-#contact.ues-contact .formulaire_spip form,
-#contact.ues-contact .formulaire_spip fieldset,
-#contact.ues-contact .formulaire_spip .editer-groupe{
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box;
-}
-
 /* On cache le legend SPIP (tu as déjà le H3 "Envoyer un message") */
 #contact.ues-contact .formulaire_spip legend{ display:none !important; }
 
@@ -146,10 +155,10 @@ body.scrolled .ues-nav, body.scrolled .navbar.ues-nav, body.scrolled .ues-header
   display:block !important;
 }
 
-/* --------- GRILLE 2 colonnes (structure SPIP réelle : .editer-groupe) ---- */
+/* --------- GRILLE 2 colonnes (structure SPIP : .editer-groupe) ----------- */
 #contact.ues-contact .formulaire_spip .editer-groupe{
   display:grid !important;
-  grid-template-columns: 1fr 1fr !important;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr) !important;
   gap: 14px 28px !important;
   align-items:start;
 }
@@ -157,10 +166,12 @@ body.scrolled .ues-nav, body.scrolled .navbar.ues-nav, body.scrolled .ues-header
 /* Par défaut : un champ = une colonne */
 #contact.ues-contact .formulaire_spip .editer{
   grid-column: auto;
+  min-width: 0; /* évite les champs qui forcent la colonne à rétrécir */
 }
 
-/* Pleine largeur : destinataire (1er bloc), sujet, texte, pièces jointes, boutons */
+/* Pleine largeur : destinataire (1er bloc), mail, sujet, texte, pièces jointes, boutons */
 #contact.ues-contact .formulaire_spip .editer-groupe > .editer.obligatoire:first-child,
+#contact.ues-contact .formulaire_spip .editer_mail,
 #contact.ues-contact .formulaire_spip .editer_sujet,
 #contact.ues-contact .formulaire_spip .editer_texte,
 #contact.ues-contact .formulaire_spip .pieces_jointes,
@@ -172,12 +183,6 @@ body.scrolled .ues-nav, body.scrolled .navbar.ues-nav, body.scrolled .ues-header
 #contact.ues-contact .formulaire_spip .editer_prenom,
 #contact.ues-contact .formulaire_spip .editer_nom{
   grid-column: auto !important;
-}
-
-/* Email : à droite (comme OIB).
-   Si tu préfères mail en pleine largeur, remplace par grid-column: 1 / -1 */
-#contact.ues-contact .formulaire_spip .editer_mail{
-  grid-column: 2 !important;
 }
 
 /* --------- Champs : style simple (comme OIB) ----------------------------- */
@@ -193,6 +198,7 @@ body.scrolled .ues-nav, body.scrolled .navbar.ues-nav, body.scrolled .ues-header
 #contact.ues-contact .formulaire_spip select,
 #contact.ues-contact .formulaire_spip textarea{
   width: 100% !important;
+  max-width: none !important;
   border: 1px solid #cfcfcf !important;
   border-radius: 4px !important;
   padding: 10px 10px !important;
@@ -201,6 +207,7 @@ body.scrolled .ues-nav, body.scrolled .navbar.ues-nav, body.scrolled .ues-header
   outline:none;
   box-shadow:none !important;
   box-sizing: border-box;
+  min-width: 0;
 }
 
 #contact.ues-contact .formulaire_spip textarea{
@@ -252,7 +259,177 @@ body.scrolled .ues-nav, body.scrolled .navbar.ues-nav, body.scrolled .ues-header
     grid-template-columns: 1fr !important;
     gap: 12px !important;
   }
-  #contact.ues-contact .formulaire_spip .editer_mail{
-    grid-column: 1 / -1 !important;
-  }
+}
+
+/* ==========================================================================
+
+   OIB — FOOTER + WAVES + BANDEAU PARTENAIRES
+   (à garder EN FIN de fichier)
+   ========================================================================== */
+
+:root{
+  --oib-teal: #2f7d8d;       /* fond footer */
+  --oib-teal-mid: #3f8fa0;   /* pan 1 */
+  --oib-teal-light:#6aa9b5;  /* pan 2 */
+}
+
+/* Fond global (évite l'apparition de noir sous la vague) */
+html, body{ background:#fff !important; }
+
+/* ---- Footer couleur OIB ---- */
+footer.ues-footer{
+  background: #2b445c !important;
+  color: #fff !important;
+  position: relative !important;
+  overflow: hidden !important;
+  padding-bottom: 6px !important; /* réserve sous le contenu pour les pans + wave */
+}
+
+footer.ues-footer a{ color:#fff !important; }
+footer.ues-footer a:hover{ opacity:.9; }
+
+/* Contenu au-dessus */
+footer.ues-footer .footer-top,
+footer.ues-footer .copyright-area{
+  position: relative;
+  z-index: 6;
+}
+
+/* ---- Pans bleus (comme sur l'OIB) ---- */
+footer.ues-footer::before,
+footer.ues-footer::after{
+  content:"";
+  position:absolute;
+  left:-8%;
+  width:116%;
+  pointer-events:none;
+  z-index: 3; /* sous la wave blanche */
+}
+
+/* pan clair (en bas) */
+footer.ues-footer::before{
+  height: 90px;
+  bottom: 2px;
+  background: var(--oib-teal-light);
+  clip-path: polygon(0 70%, 55% 35%, 100% 70%, 100% 100%, 0 100%);
+}
+
+/* pan moyen (par-dessus) */
+footer.ues-footer::after{
+  height: 136px;
+  bottom: 0px;
+  background: #2b445c;
+  clip-path: polygon(0 78%, 60% 48%, 100% 78%, 100% 100%, 0 100%);
+}
+
+/* ---- Waves : grande zone blanche animée ---- */
+/* IMPORTANT : le bloc .ues-footer-waves doit être DANS <footer> (juste avant </footer>) */
+footer.ues-footer .ues-footer-waves{
+  position: absolute !important;
+  left: 0; right: 0;
+  bottom: -1px !important;
+  height: 190px !important;           /* <-- augmente le "blanc sous la vague" */
+  pointer-events: none;
+  z-index: 5;                         /* au-dessus des pans, sous le contenu */
+}
+
+footer.ues-footer .ues-footer-waves svg{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Animation : on écrase les valeurs invalides éventuelles ailleurs */
+footer.ues-footer .ues-footer-waves .ues-parallax > use{
+  animation: footer-waves-move 25s cubic-bezier(.55,.5,.45,.5) infinite !important;
+  will-change: transform;
+}
+
+/* 4 couches : dernières = blanc plein, premières = très légères */
+footer.ues-footer .ues-footer-waves .ues-parallax > use:nth-child(1){
+  fill: rgba(255,255,255,.20) !important;
+  animation-duration: 10s !important;
+  animation-delay: -2s !important;
+}
+footer.ues-footer .ues-footer-waves .ues-parallax > use:nth-child(2){
+  fill: rgba(255,255,255,.14) !important;
+  animation-duration: 14s !important;
+  animation-delay: -3s !important;
+}
+footer.ues-footer .ues-footer-waves .ues-parallax > use:nth-child(3){
+  fill: rgba(255,255,255,.10) !important;
+  animation-duration: 18s !important;
+  animation-delay: -4s !important;
+}
+footer.ues-footer .ues-footer-waves .ues-parallax > use:nth-child(4){
+  fill: #fff !important;              /* blanc "plein" sous la courbe */
+  opacity: 1 !important;
+  animation-duration: 24s !important;
+  animation-delay: -5s !important;
+}
+
+@keyframes footer-waves-move{
+  0%   { transform: translate3d(-90px,0,0); }
+  100% { transform: translate3d(85px,0,0); }
+}
+
+/* ---- Bandeau partenaires (blanc + libellé vertical) ---- */
+#cta.cta.partenaire{
+  background:#fff !important;
+  background-image:none !important;
+  border: 0 !important;
+  position: relative;
+  padding: 22px 0 !important;
+  padding-left: 56px !important;
+  margin-top: 0 !important;           /* pas d'espace avec le footer */
+}
+
+/* Si tu veux que les logos "rentrent" un peu dans le blanc de la wave :
+   décommente et ajuste ces 2 lignes (mêmes valeurs) */
+/*
+#cta.cta.partenaire{ margin-top:-70px !important; padding-top:70px !important; }
+*/
+
+#cta.cta.partenaire::before{
+  content:"Partenaires";
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width:56px;
+  background:#f1f1f1;
+  color:#8a8a8a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing:.22em;
+  font-weight:600;
+  font-size:.95rem;
+  z-index: 3;
+}
+
+#cta.cta.partenaire .logo-strip{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 42px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+#cta.cta.partenaire .logo-strip__img{
+  height: 56px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display:block;
+}
+
+@media (max-width: 992px){
+  #cta.cta.partenaire .logo-strip{ justify-content:center; gap:28px; }
+}
+@media (max-width: 576px){
+  #cta.cta.partenaire{ padding-left:0 !important; }
+  #cta.cta.partenaire::before{ content:none; }
+  #cta.cta.partenaire .logo-strip__img{ height:52px; max-width:260px; }
 }

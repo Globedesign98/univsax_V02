@@ -1,34 +1,9 @@
 <?php
 
 if (defined('_ECRIRE_INC_VERSION')) {
-// Pipeline pre_description_outil 
-function execute_pipeline_pre_description_outil(&$val){
-static $inc=null;
-if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
-$inc=true;
-}
-$val = minipipe('couteau_suisse_pre_description_outil', $val);
-return $val;
-}
-// Pipeline fichier_distant 
-function execute_pipeline_fichier_distant(&$val){
-static $inc=null;
-if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
-$inc=true;
-}
-$val = minipipe('couteau_suisse_fichier_distant', $val);
-return $val;
-}
-// Pipeline porte_plume_cs_pre_charger 
-function execute_pipeline_porte_plume_cs_pre_charger(&$val){
-static $inc=null;
-if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
-$inc=true;
-}
-$val = minipipe('couteau_suisse_porte_plume_cs_pre_charger', $val);
+// Pipeline i3_traiter_formulaire 
+function execute_pipeline_i3_traiter_formulaire(&$val){
+$val = minipipe('ues_i3_traiter_formulaire', $val);
 return $val;
 }
 // Pipeline declarer_tables_objets_sql 
@@ -41,7 +16,9 @@ include_once_check(_ROOT_PLUGINS_DIST.'revisions/base/revisions.php');
 include_once_check(_ROOT_PLUGINS_DIST.'sites/base/sites.php');
 include_once_check(_ROOT_PLUGINS_DIST.'svp/base/svp_declarer.php');
 include_once_check(_ROOT_PLUGINS.'auto/organiseur/v3.3.1/base/organiseur.php');
+include_once_check(_ROOT_PLUGINS.'auto/pays/v4.2.1/base/pays.php');
 include_once_check(_ROOT_PLUGINS_DIST.'medias/base/medias.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/base/mailsubscribers.php');
 $inc=true;
 }
 $val = minipipe('forum_declarer_tables_objets_sql', $val);
@@ -50,7 +27,9 @@ $val = minipipe('revisions_declarer_tables_objets_sql', $val);
 $val = minipipe('sites_declarer_tables_objets_sql', $val);
 $val = minipipe('svp_declarer_tables_objets_sql', $val);
 $val = minipipe('organiseur_declarer_tables_objets_sql', $val);
+$val = minipipe('pays_declarer_tables_objets_sql', $val);
 $val = minipipe('medias_declarer_tables_objets_sql', $val);
+$val = minipipe('mailsubscribers_declarer_tables_objets_sql', $val);
 $val = minipipe('cextras_declarer_champs_apres_les_autres', $val);
 return $val;
 }
@@ -64,9 +43,12 @@ include_once_check(_ROOT_PLUGINS_DIST.'revisions/base/revisions.php');
 include_once_check(_ROOT_PLUGINS_DIST.'sites/base/sites.php');
 include_once_check(_ROOT_PLUGINS_DIST.'svp/base/svp_declarer.php');
 include_once_check(_ROOT_PLUGINS_DIST.'urls_etendues/base/urls.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/organiseur/v3.3.1/base/organiseur.php');
+include_once_check(_ROOT_PLUGINS.'auto/pays/v4.2.1/base/pays.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/base/inscription3.php');
 include_once_check(_ROOT_PLUGINS_DIST.'medias/base/medias.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/base/mailsubscribers.php');
 $inc=true;
 }
 $val = minipipe('forum_declarer_tables_interfaces', $val);
@@ -75,10 +57,43 @@ $val = minipipe('revisions_declarer_tables_interfaces', $val);
 $val = minipipe('sites_declarer_tables_interfaces', $val);
 $val = minipipe('svp_declarer_tables_interfaces', $val);
 $val = minipipe('urls_declarer_tables_interfaces', $val);
-$val = minipipe('couteau_suisse_declarer_tables_interfaces', $val);
 $val = minipipe('organiseur_declarer_tables_interfaces', $val);
+$val = minipipe('pays_declarer_tables_interfaces', $val);
+$val = minipipe('couteau_suisse_declarer_tables_interfaces', $val);
+$val = minipipe('inscription3_declarer_tables_interfaces', $val);
 $val = minipipe('medias_declarer_tables_interfaces', $val);
+$val = minipipe('mailsubscribers_declarer_tables_interfaces', $val);
 $val = minipipe('cextras_declarer_champs_interfaces_apres_les_autres', $val);
+return $val;
+}
+// Pipeline pre_description_outil 
+function execute_pipeline_pre_description_outil(&$val){
+static $inc=null;
+if (!$inc){
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
+$inc=true;
+}
+$val = minipipe('couteau_suisse_pre_description_outil', $val);
+return $val;
+}
+// Pipeline fichier_distant 
+function execute_pipeline_fichier_distant(&$val){
+static $inc=null;
+if (!$inc){
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
+$inc=true;
+}
+$val = minipipe('couteau_suisse_fichier_distant', $val);
+return $val;
+}
+// Pipeline porte_plume_cs_pre_charger 
+function execute_pipeline_porte_plume_cs_pre_charger(&$val){
+static $inc=null;
+if (!$inc){
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
+$inc=true;
+}
+$val = minipipe('couteau_suisse_porte_plume_cs_pre_charger', $val);
 return $val;
 }
 // Pipeline styliser 
@@ -86,7 +101,7 @@ function execute_pipeline_styliser(&$val){
 static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_RESTREINT.'/inc/cvt_multietapes.php');
-include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.1.1/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.2.0/saisies_pipelines.php');
 $inc=true;
 }
 $val = minipipe('cvtmulti_styliser', $val);
@@ -122,8 +137,8 @@ function execute_pipeline_affichage_final(&$val){
 static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_RESTREINT.'/inc/pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.1.1/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.2.0/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/cisf/v5.5.1/inc/cisf_pipeline.php');
 $inc=true;
 }
@@ -132,8 +147,8 @@ $val = minipipe('f_tidy', $val);
 $val = minipipe('f_admin', $val);
 $val = minipipe('f_queue', $val);
 $val = minipipe('spip_bonux_affichage_final', $val);
-$val = minipipe('couteau_suisse_affichage_final', $val);
 $val = minipipe('saisies_affichage_final', $val);
+$val = minipipe('couteau_suisse_affichage_final', $val);
 $val = minipipe('compresseur_affichage_final', $val);
 $val = minipipe('cisf_affichage_final', $val);
 return $val;
@@ -231,9 +246,11 @@ function execute_pipeline_affiche_auteurs_interventions(&$val){
 static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_PLUGINS.'auto/organiseur/v3.3.1/organiseur_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_pipelines.php');
 $inc=true;
 }
 $val = minipipe('organiseur_affiche_auteurs_interventions', $val);
+$val = minipipe('mailsubscribers_affiche_auteurs_interventions', $val);
 return $val;
 }
 // Pipeline affiche_droite 
@@ -241,13 +258,17 @@ function execute_pipeline_affiche_droite(&$val){
 static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_PLUGINS_DIST.'compagnon/compagnon_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/organiseur/v3.3.1/organiseur_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_pipelines.php');
 $inc=true;
 }
 $val = minipipe('compagnon_affiche_droite', $val);
-$val = minipipe('couteau_suisse_affiche_droite', $val);
 $val = minipipe('organiseur_affiche_droite', $val);
+$val = minipipe('couteau_suisse_affiche_droite', $val);
+$val = minipipe('inscription3_affiche_droite', $val);
+$val = minipipe('mailsubscribers_affiche_droite', $val);
 return $val;
 }
 // Pipeline affiche_gauche 
@@ -255,7 +276,7 @@ function execute_pipeline_affiche_gauche(&$val){
 static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_PLUGINS_DIST.'compagnon/compagnon_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'medias/medias_pipelines.php');
 $inc=true;
 }
@@ -274,8 +295,9 @@ include_once_check(_ROOT_PLUGINS_DIST.'porte_plume/porte_plume_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'revisions/revisions_pipeline.php');
 include_once_check(_ROOT_PLUGINS_DIST.'sites/sites_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'statistiques/stats_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/organiseur/v3.3.1/organiseur_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/pays/v4.2.1/pays_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'bigup/bigup_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'compresseur/compresseur_pipeline.php');
 include_once_check(_ROOT_PLUGINS_DIST.'medias/medias_pipelines.php');
@@ -289,8 +311,9 @@ $val = minipipe('porte_plume_affiche_milieu', $val);
 $val = minipipe('revisions_affiche_milieu', $val);
 $val = minipipe('sites_affiche_milieu', $val);
 $val = minipipe('stats_affiche_milieu', $val);
-$val = minipipe('couteau_suisse_affiche_milieu', $val);
 $val = minipipe('organiseur_affiche_milieu', $val);
+$val = minipipe('pays_affiche_milieu', $val);
+$val = minipipe('couteau_suisse_affiche_milieu', $val);
 $val = minipipe('bigup_affiche_milieu', $val);
 $val = minipipe('compresseur_affiche_milieu', $val);
 $val = minipipe('medias_affiche_milieu', $val);
@@ -339,7 +362,7 @@ function execute_pipeline_arbo_creer_chaine_url(&$val){
 static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_PLUGINS_DIST.'urls_etendues/urls/arbo.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 $inc=true;
 }
 $val = minipipe('urls_arbo_creer_chaine_url', $val);
@@ -362,10 +385,14 @@ include_once_check(_ROOT_PLUGINS_DIST.'sites/sites_autoriser.php');
 include_once_check(_ROOT_PLUGINS_DIST.'statistiques/stats_autoriser.php');
 include_once_check(_ROOT_PLUGINS_DIST.'svp/svp_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'urls_etendues/urls_autoriser.php');
+include_once_check(_ROOT_PLUGINS.'auto/organiseur/v3.3.1/organiseur_autoriser.php');
 include_once_check(_ROOT_PLUGINS.'auto/cextras/v4.3.0/inc/cextras_autoriser.php');
 include_once_check(_ROOT_PLUGINS.'auto/iextras/v4.3.0/inc/iextras_autoriser.php');
-include_once_check(_ROOT_PLUGINS.'auto/organiseur/v3.3.1/organiseur_autoriser.php');
+include_once_check(_ROOT_PLUGINS.'auto/pays/v4.2.1/pays_autorisations.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_autoriser.php');
+include_once_check(_ROOT_PLUGINS.'auto/_____inscriptionmotdepasse.disabled/v2.1.1/inscriptionmotdepasse_autorisations.php');
 include_once_check(_ROOT_PLUGINS_DIST.'medias/medias_autoriser.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_autorisations.php');
 $inc=true;
 }
 $val = minipipe('forum_autoriser', $val);
@@ -376,10 +403,14 @@ $val = minipipe('sites_autoriser', $val);
 $val = minipipe('stats_autoriser', $val);
 $val = minipipe('svp_autoriser', $val);
 $val = minipipe('urls_autoriser', $val);
+$val = minipipe('organiseur_autoriser', $val);
 $val = minipipe('cextras_autoriser', $val);
 $val = minipipe('iextras_autoriser', $val);
-$val = minipipe('organiseur_autoriser', $val);
+$val = minipipe('pays_autoriser', $val);
+$val = minipipe('inscription3_autoriser', $val);
+$val = minipipe('inscriptionmotdepasse_autoriser', $val);
 $val = minipipe('medias_autoriser', $val);
+$val = minipipe('mailsubscribers_autoriser', $val);
 return $val;
 }
 // Pipeline base_admin_repair 
@@ -395,7 +426,7 @@ include_once_check(_ROOT_PLUGINS_DIST.'forum/forum_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'revisions/revisions_pipeline.php');
 include_once_check(_ROOT_PLUGINS_DIST.'sites/sites_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'statistiques/stats_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'medias/medias_pipelines.php');
 $inc=true;
 }
@@ -412,7 +443,7 @@ return $val;
 function execute_pipeline_ajouter_menus(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 $inc=true;
 }
 $val = minipipe('couteau_suisse_ajouter_menus', $val);
@@ -490,9 +521,11 @@ return $val;
 function execute_pipeline_declarer_tables_principales(&$val){
 static $inc=null;
 if (!$inc){
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/base/inscription3.php');
 include_once_check(_ROOT_PLUGINS_DIST.'medias/base/medias.php');
 $inc=true;
 }
+$val = minipipe('inscription3_declarer_tables_principales', $val);
 $val = minipipe('medias_declarer_tables_principales', $val);
 return $val;
 }
@@ -505,7 +538,9 @@ include_once_check(_ROOT_PLUGINS_DIST.'revisions/base/revisions.php');
 include_once_check(_ROOT_PLUGINS_DIST.'statistiques/base/stats.php');
 include_once_check(_ROOT_PLUGINS_DIST.'svp/base/svp_declarer.php');
 include_once_check(_ROOT_PLUGINS_DIST.'urls_etendues/base/urls.php');
+include_once_check(_ROOT_PLUGINS.'auto/pays/v4.2.1/base/pays.php');
 include_once_check(_ROOT_PLUGINS_DIST.'medias/base/medias.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/base/mailsubscribers.php');
 $inc=true;
 }
 $val = minipipe('mots_declarer_tables_auxiliaires', $val);
@@ -513,7 +548,9 @@ $val = minipipe('revisions_declarer_tables_auxiliaires', $val);
 $val = minipipe('stats_declarer_tables_auxiliaires', $val);
 $val = minipipe('svp_declarer_tables_auxiliaires', $val);
 $val = minipipe('urls_declarer_tables_auxiliaires', $val);
+$val = minipipe('pays_declarer_tables_auxiliaires', $val);
 $val = minipipe('medias_declarer_tables_auxiliaires', $val);
+$val = minipipe('mailsubscribers_declarer_tables_auxiliaires', $val);
 return $val;
 }
 // Pipeline declarer_tables_objets_surnoms 
@@ -557,9 +594,11 @@ function execute_pipeline_editer_contenu_objet(&$val){
 static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_PLUGINS.'auto/cextras/v4.3.0/cextras_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
 $inc=true;
 }
 $val = minipipe('cextras_editer_contenu_objet', $val);
+$val = minipipe('inscription3_editer_contenu_objet', $val);
 return $val;
 }
 // Pipeline exec_init 
@@ -577,26 +616,32 @@ if (!$inc){
 include_once_check(_ROOT_RESTREINT.'/inc/cvt_configurer.php');
 include_once_check(_ROOT_RESTREINT.'/inc/cvt_autosave.php');
 include_once_check(_ROOT_PLUGINS_DIST.'revisions/revisions_pipeline.php');
-include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.1.1/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.2.0/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/_____inscriptionmotdepasse.disabled/v2.1.1/inscriptionmotdepasse_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'bigup/bigup_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'bigup/bigup_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/cisf/v5.5.1/inc/cisf_pipeline.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_pipelines.php');
 $inc=true;
 }
 $val = minipipe('cvtconf_formulaire_charger', $val);
 $val = minipipe('cvtautosave_formulaire_charger', $val);
 $val = minipipe('revisions_formulaire_charger', $val);
 $val = minipipe('saisies_formulaire_charger', $val);
+$val = minipipe('inscription3_formulaire_charger', $val);
+$val = minipipe('inscriptionmotdepasse_formulaire_charger', $val);
 $val = minipipe('bigup_medias_formulaire_charger', $val);
 $val = minipipe('bigup_formulaire_charger', $val);
 $val = minipipe('cisf_formulaire_charger', $val);
+$val = minipipe('mailsubscribers_formulaire_charger', $val);
 return $val;
 }
 // Pipeline formulaire_receptionner 
 function execute_pipeline_formulaire_receptionner(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.1.1/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.2.0/saisies_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'bigup/bigup_pipelines.php');
 $inc=true;
 }
@@ -608,25 +653,31 @@ return $val;
 function execute_pipeline_formulaire_verifier(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.1.1/saisies_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/cextras/v4.3.0/cextras_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/contact-2.0.0/contact_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.2.0/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/cextras/v4.3.0/cextras_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/_____inscriptionmotdepasse.disabled/v2.1.1/inscriptionmotdepasse_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'bigup/bigup_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_pipelines.php');
 $inc=true;
 }
-$val = minipipe('couteau_suisse_formulaire_verifier', $val);
+$val = minipipe('contact_formulaire_verifier', $val);
 $val = minipipe('saisies_formulaire_verifier', $val);
 $val = minipipe('cextras_formulaire_verifier', $val);
-$val = minipipe('contact_formulaire_verifier', $val);
+$val = minipipe('couteau_suisse_formulaire_verifier', $val);
+$val = minipipe('inscription3_formulaire_verifier', $val);
+$val = minipipe('inscriptionmotdepasse_formulaire_verifier', $val);
 $val = minipipe('bigup_formulaire_verifier', $val);
+$val = minipipe('mailsubscribers_formulaire_verifier', $val);
 return $val;
 }
 // Pipeline formulaire_verifier_etape 
 function execute_pipeline_formulaire_verifier_etape(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.1.1/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.2.0/saisies_pipelines.php');
 $inc=true;
 }
 $val = minipipe('saisies_formulaire_verifier_etape', $val);
@@ -638,32 +689,40 @@ static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_RESTREINT.'/inc/cvt_configurer.php');
 include_once_check(_ROOT_RESTREINT.'/inc/cvt_autosave.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'bigup/bigup_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_pipelines.php');
 $inc=true;
 }
 $val = minipipe('cvtconf_formulaire_traiter', $val);
 $val = minipipe('cvtautosave_formulaire_traiter', $val);
+$val = minipipe('inscription3_formulaire_traiter', $val);
 $val = minipipe('bigup_formulaire_traiter', $val);
+$val = minipipe('mailsubscribers_formulaire_traiter', $val);
 return $val;
 }
 // Pipeline formulaire_fond 
 function execute_pipeline_formulaire_fond(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/facteur/v5.3.0/facteur_fonctions.php');
-include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.1.1/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.2.0/saisies_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/cextras/v4.3.0/cextras_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/_____inscriptionmotdepasse.disabled/v2.1.1/inscriptionmotdepasse_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'bigup/bigup_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/cisf/v5.5.1/inc/cisf_pipeline.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_pipelines.php');
 $inc=true;
 }
-$val = minipipe('couteau_suisse_formulaire_fond', $val);
 $val = minipipe('facteur_formulaire_fond', $val);
 $val = minipipe('saisies_formulaire_fond', $val);
 $val = minipipe('cextras_formulaire_fond', $val);
+$val = minipipe('couteau_suisse_formulaire_fond', $val);
+$val = minipipe('inscriptionmotdepasse_formulaire_fond', $val);
 $val = minipipe('bigup_medias_formulaire_fond', $val);
 $val = minipipe('cisf_medias_formulaire_fond', $val);
+$val = minipipe('mailsubscribers_formulaire_fond', $val);
 return $val;
 }
 // Pipeline formulaire_admin 
@@ -687,10 +746,10 @@ if (!$inc){
 include_once_check(_ROOT_PLUGINS_DIST.'mediabox/mediabox_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'porte_plume/porte_plume_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/select2/v2.1.0/select2_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/diapo-636dc-diapo-2.2.0/diapo-2.2.0/diapo_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.1.1/saisies_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/organiseur/v3.3.1/organiseur_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.2.0/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'bigup/bigup_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'compresseur/compresseur_pipeline.php');
 $inc=true;
@@ -701,10 +760,10 @@ if ($f=timestamp(find_in_path('javascript/medias_edit.js'))) $val .= '<script sr
 $val = minipipe('mediabox_insert_head', $val);
 $val = minipipe('porte_plume_insert_head_prive', $val);
 $val = minipipe('select2_header_prive', $val);
-$val = minipipe('couteau_suisse_header_prive', $val);
 $val = minipipe('diapo_header_prive', $val);
-$val = minipipe('saisies_header_prive', $val);
 $val = minipipe('organiseur_header_prive', $val);
+$val = minipipe('saisies_header_prive', $val);
+$val = minipipe('couteau_suisse_header_prive', $val);
 $val = minipipe('bigup_header_prive', $val);
 $val = minipipe('compresseur_header_prive', $val);
 return $val;
@@ -750,9 +809,9 @@ if (!$inc){
 include_once_check(_ROOT_PLUGINS_DIST.'mediabox/mediabox_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'porte_plume/porte_plume_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/select2/v2.1.0/select2_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/diapo-636dc-diapo-2.2.0/diapo-2.2.0/diapo_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.1.1/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.2.0/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'bigup/bigup_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'compresseur/compresseur_pipeline.php');
 include_once_check(_ROOT_PLUGINS.'auto/cisf/v5.5.1/inc/cisf_pipeline.php');
@@ -763,9 +822,9 @@ $val = minipipe('f_jQuery', $val);
 $val = minipipe('mediabox_insert_head', $val);
 $val = minipipe('porte_plume_insert_head_public', $val);
 $val = minipipe('select2_insert_head', $val);
-$val = minipipe('couteau_suisse_insert_head', $val);
 $val = minipipe('diapo_insert_head', $val);
 $val = minipipe('saisies_insert_head', $val);
+$val = minipipe('couteau_suisse_insert_head', $val);
 $val = minipipe('bigup_insert_head', $val);
 $val = minipipe('compresseur_insert_head', $val);
 $val = minipipe('cisf_insert_head', $val);
@@ -778,7 +837,7 @@ if (!$inc){
 include_once_check(_ROOT_PLUGINS_DIST.'mediabox/mediabox_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'porte_plume/porte_plume_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/select2/v2.1.0/select2_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'bigup/bigup_pipelines.php');
 $inc=true;
 }
@@ -843,7 +902,7 @@ return $val;
 function execute_pipeline_nettoyer_raccourcis_typo(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 $inc=true;
 }
 $val = minipipe('couteau_suisse_nettoyer_raccourcis_typo', $val);
@@ -861,6 +920,12 @@ return $val;
 }
 // Pipeline notifications_destinataires 
 function execute_pipeline_notifications_destinataires(&$val){
+static $inc=null;
+if (!$inc){
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
+$inc=true;
+}
+$val = minipipe('inscription3_notifications_destinataires', $val);
 return $val;
 }
 // Pipeline notifications_envoyer_mails 
@@ -889,6 +954,7 @@ include_once_check(_ROOT_PLUGINS_DIST.'sites/sites_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'urls_etendues/urls_pipeline.php');
 include_once_check(_ROOT_PLUGINS.'auto/organiseur/v3.3.1/organiseur_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'medias/base/medias.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_pipelines.php');
 $inc=true;
 }
 $val = minipipe('forum_optimiser_base_disparus', $val);
@@ -897,6 +963,7 @@ $val = minipipe('sites_optimiser_base_disparus', $val);
 $val = minipipe('urls_optimiser_base_disparus', $val);
 $val = minipipe('organiseur_optimiser_base_disparus', $val);
 $val = minipipe('medias_optimiser_base_disparus', $val);
+$val = minipipe('mailsubscribers_optimiser_base_disparus', $val);
 return $val;
 }
 // Pipeline page_indisponible 
@@ -918,7 +985,7 @@ function execute_pipeline_pre_boucle(&$val){
 static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_PLUGINS_DIST.'svp/svp_pipelines.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 $inc=true;
 }
 $val = minipipe('svp_pre_boucle', $val);
@@ -945,7 +1012,7 @@ return $val;
 function execute_pipeline_pre_propre(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 $inc=true;
 }
 $val = minipipe('couteau_suisse_pre_propre', $val);
@@ -969,7 +1036,7 @@ return $val;
 function execute_pipeline_post_propre(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 $inc=true;
 }
 $val = minipipe('couteau_suisse_post_propre', $val);
@@ -979,7 +1046,7 @@ return $val;
 function execute_pipeline_pre_typo(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 $inc=true;
 }
 $val = minipipe('couteau_suisse_pre_typo', $val);
@@ -989,7 +1056,7 @@ return $val;
 function execute_pipeline_post_typo(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'textwheel/inc/ressource-mini.php');
 $inc=true;
 }
@@ -1003,13 +1070,15 @@ function execute_pipeline_pre_edition(&$val){
 static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_PLUGINS_DIST.'revisions/revisions_pipeline.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/cextras/v4.3.0/cextras_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_pipelines.php');
 $inc=true;
 }
 $val = minipipe('revisions_pre_edition', $val);
-$val = minipipe('couteau_suisse_pre_edition', $val);
 $val = minipipe('cextras_pre_edition', $val);
+$val = minipipe('couteau_suisse_pre_edition', $val);
+$val = minipipe('mailsubscribers_pre_edition', $val);
 return $val;
 }
 // Pipeline pre_edition_lien 
@@ -1028,18 +1097,22 @@ static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_PLUGINS_DIST.'mots/mots_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'revisions/revisions_pipeline.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/organiseur/v3.3.1/organiseur_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'medias/medias_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/cisf/v5.5.1/inc/cisf_pipeline.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_pipelines.php');
 $inc=true;
 }
 $val = minipipe('mots_post_edition', $val);
 $val = minipipe('revisions_post_edition', $val);
-$val = minipipe('couteau_suisse_post_edition', $val);
 $val = minipipe('organiseur_post_edition', $val);
+$val = minipipe('couteau_suisse_post_edition', $val);
+$val = minipipe('inscription3_post_edition', $val);
 $val = minipipe('medias_post_edition', $val);
 $val = minipipe('cisf_post_edition', $val);
+$val = minipipe('mailsubscribers_post_edition', $val);
 return $val;
 }
 // Pipeline post_edition_lien 
@@ -1058,10 +1131,14 @@ static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_PLUGINS_DIST.'forum/forum_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'revisions/revisions_pipeline.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_pipelines.php');
 $inc=true;
 }
 $val = minipipe('forum_pre_insertion', $val);
 $val = minipipe('revisions_pre_insertion', $val);
+$val = minipipe('inscription3_pre_insertion', $val);
+$val = minipipe('mailsubscribers_pre_insertion', $val);
 return $val;
 }
 // Pipeline post_insertion 
@@ -1087,7 +1164,7 @@ function execute_pipeline_propres_creer_chaine_url(&$val){
 static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_PLUGINS_DIST.'urls_etendues/urls/propres.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 $inc=true;
 }
 $val = minipipe('urls_propres_creer_chaine_url', $val);
@@ -1121,7 +1198,9 @@ if (!$inc){
 include_once_check(_ROOT_PLUGINS_DIST.'sites/sites_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'statistiques/stats_pipelines.php');
 include_once_check(_ROOT_PLUGINS_DIST.'svp/genie/svp_taches_generales_cron.php');
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_pipelines.php');
 $inc=true;
 }
 $val['revisions_optimiser_revisions'] = 86400;
@@ -1131,6 +1210,8 @@ $val = minipipe('sites_taches_generales_cron', $val);
 $val = minipipe('stats_taches_generales_cron', $val);
 $val = minipipe('svp_taches_generales_cron', $val);
 $val = minipipe('couteau_suisse_taches_generales_cron', $val);
+$val = minipipe('inscription3_taches_generales_cron', $val);
+$val = minipipe('mailsubscribers_taches_generales_cron', $val);
 return $val;
 }
 // Pipeline rechercher_liste_des_champs 
@@ -1146,9 +1227,11 @@ function execute_pipeline_recuperer_fond(&$val){
 static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_RESTREINT.'/inc/pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
 $inc=true;
 }
 $val = minipipe('f_recuperer_fond', $val);
+$val = minipipe('inscription3_recuperer_fond', $val);
 return $val;
 }
 // Pipeline traduire 
@@ -1295,7 +1378,7 @@ return $val;
 function execute_pipeline_porte_plume_barre_pre_charger(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 include_once_check(_ROOT_PLUGINS.'auto/cisf/v5.5.1/inc/cisf_porte_plume.php');
 $inc=true;
 }
@@ -1317,7 +1400,7 @@ return $val;
 function execute_pipeline_porte_plume_lien_classe_vers_icone(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 $inc=true;
 }
 $val = minipipe('couteau_suisse_porte_plume_lien_classe_vers_icone', $val);
@@ -1351,32 +1434,60 @@ return $val;
 function execute_pipeline_svp_afficher_paquet(&$val){
 return $val;
 }
-// Pipeline creer_chaine_url 
-function execute_pipeline_creer_chaine_url(&$val){
-static $inc=null;
-if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
-$inc=true;
-}
-$val = minipipe('couteau_suisse_creer_chaine_url', $val);
+// Pipeline facteur_lister_methodes_mailer 
+function execute_pipeline_facteur_lister_methodes_mailer(&$val){
 return $val;
 }
 // Pipeline facteur_pre_envoi 
 function execute_pipeline_facteur_pre_envoi(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse-97c2b-couteau_suisse-1.16.1(1)/couteau_suisse-1.16.1/cout_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 $inc=true;
 }
 $val = minipipe('couteau_suisse_facteur_pre_envoi', $val);
 return $val;
 }
-// Pipeline facteur_lister_methodes_mailer 
-function execute_pipeline_facteur_lister_methodes_mailer(&$val){
-return $val;
-}
 // Pipeline verifier 
 function execute_pipeline_verifier(&$val){
+return $val;
+}
+// Pipeline quete_calendrier_prive 
+function execute_pipeline_quete_calendrier_prive(&$val){
+return $val;
+}
+// Pipeline messagerie_statuts_destinataires_possibles 
+function execute_pipeline_messagerie_statuts_destinataires_possibles(&$val){
+return $val;
+}
+// Pipeline jqueryui_plugins 
+function execute_pipeline_jqueryui_plugins(&$val){
+static $inc=null;
+if (!$inc){
+include_once_check(_ROOT_PLUGINS.'auto/contact-2.0.0/contact_pipelines.php');
+$inc=true;
+}
+$val = minipipe('contact_jqueryui_plugins', $val);
+return $val;
+}
+// Pipeline contact_infos_supplementaires 
+function execute_pipeline_contact_infos_supplementaires(&$val){
+return $val;
+}
+// Pipeline nospam_lister_formulaires 
+function execute_pipeline_nospam_lister_formulaires(&$val){
+static $inc=null;
+if (!$inc){
+include_once_check(_ROOT_PLUGINS.'auto/contact-2.0.0/contact_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/mailsubscribers/v4.0.3/mailsubscribers_pipelines.php');
+$inc=true;
+}
+$val = minipipe('contact_nospam_lister_formulaires', $val);
+$val = minipipe('mailsubscribers_nospam_lister_formulaires', $val);
+return $val;
+}
+// Pipeline contact_pre_envoi 
+function execute_pipeline_contact_pre_envoi(&$val){
 return $val;
 }
 // Pipeline saisies_autonomes 
@@ -1429,7 +1540,7 @@ return $val;
 function execute_pipeline_saisies_lister_disponibles(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.1.1/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.2.0/saisies_pipelines.php');
 $inc=true;
 }
 $val = minipipe('saisies_saisies_lister_disponibles', $val);
@@ -1439,7 +1550,7 @@ return $val;
 function execute_pipeline_saisies_verifier_lister_disponibles(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.1.1/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.2.0/saisies_pipelines.php');
 $inc=true;
 }
 $val = minipipe('saisies_saisies_verifier_lister_disponibles', $val);
@@ -1449,7 +1560,7 @@ return $val;
 function execute_pipeline_saisies_afficher_si_saisies(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.1.1/saisies_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/saisies/v6.2.0/saisies_pipelines.php');
 $inc=true;
 }
 $val = minipipe('saisies_saisies_afficher_si_saisies', $val);
@@ -1460,9 +1571,11 @@ function execute_pipeline_declarer_champs_extras(&$val){
 static $inc=null;
 if (!$inc){
 include_once_check(_ROOT_PLUGINS.'auto/iextras/v4.3.0/base/iextras.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/base/inscription3.php');
 $inc=true;
 }
 $val = minipipe('iextras_declarer_champs_extras', $val);
+$val = minipipe('inscription3_declarer_champs_extras', $val);
 return $val;
 }
 // Pipeline crayons_controleur 
@@ -1485,40 +1598,98 @@ $inc=true;
 $val = minipipe('cextras_crayons_verifier', $val);
 return $val;
 }
-// Pipeline quete_calendrier_prive 
-function execute_pipeline_quete_calendrier_prive(&$val){
-return $val;
-}
-// Pipeline messagerie_statuts_destinataires_possibles 
-function execute_pipeline_messagerie_statuts_destinataires_possibles(&$val){
-return $val;
-}
-// Pipeline jqueryui_plugins 
-function execute_pipeline_jqueryui_plugins(&$val){
+// Pipeline creer_chaine_url 
+function execute_pipeline_creer_chaine_url(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/contact-2.0.0/contact_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/couteau_suisse/v1.17.0/cout_pipelines.php');
 $inc=true;
 }
-$val = minipipe('contact_jqueryui_plugins', $val);
+$val = minipipe('couteau_suisse_creer_chaine_url', $val);
 return $val;
 }
-// Pipeline contact_infos_supplementaires 
-function execute_pipeline_contact_infos_supplementaires(&$val){
+// Pipeline i3_charger_formulaire 
+function execute_pipeline_i3_charger_formulaire(&$val){
 return $val;
 }
-// Pipeline nospam_lister_formulaires 
-function execute_pipeline_nospam_lister_formulaires(&$val){
+// Pipeline i3_verifier_formulaire 
+function execute_pipeline_i3_verifier_formulaire(&$val){
+return $val;
+}
+// Pipeline i3_form_fin 
+function execute_pipeline_i3_form_fin(&$val){
+return $val;
+}
+// Pipeline i3_form_debut 
+function execute_pipeline_i3_form_debut(&$val){
+return $val;
+}
+// Pipeline i3_validation_methods 
+function execute_pipeline_i3_validation_methods(&$val){
+return $val;
+}
+// Pipeline i3_cfg_form 
+function execute_pipeline_i3_cfg_form(&$val){
+return $val;
+}
+// Pipeline i3_exceptions_des_champs_auteurs_elargis 
+function execute_pipeline_i3_exceptions_des_champs_auteurs_elargis(&$val){
 static $inc=null;
 if (!$inc){
-include_once_check(_ROOT_PLUGINS.'auto/contact-2.0.0/contact_pipelines.php');
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
 $inc=true;
 }
-$val = minipipe('contact_nospam_lister_formulaires', $val);
+$val = minipipe('inscription3_i3_exceptions_des_champs_auteurs_elargis', $val);
 return $val;
 }
-// Pipeline contact_pre_envoi 
-function execute_pipeline_contact_pre_envoi(&$val){
+// Pipeline i3_exceptions_chargement_champs_auteurs_elargis 
+function execute_pipeline_i3_exceptions_chargement_champs_auteurs_elargis(&$val){
+static $inc=null;
+if (!$inc){
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
+$inc=true;
+}
+$val = minipipe('inscription3_i3_exceptions_chargement_champs_auteurs_elargis', $val);
+return $val;
+}
+// Pipeline i3_verifications_specifiques 
+function execute_pipeline_i3_verifications_specifiques(&$val){
+static $inc=null;
+if (!$inc){
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
+$inc=true;
+}
+$val = minipipe('inscription3_i3_verifications_specifiques', $val);
+return $val;
+}
+// Pipeline i3_definition_champs 
+function execute_pipeline_i3_definition_champs(&$val){
+static $inc=null;
+if (!$inc){
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
+$inc=true;
+}
+$val = minipipe('inscription3_i3_definition_champs', $val);
+return $val;
+}
+// Pipeline openid_recuperer_identite 
+function execute_pipeline_openid_recuperer_identite(&$val){
+static $inc=null;
+if (!$inc){
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
+$inc=true;
+}
+$val = minipipe('inscription3_openid_recuperer_identite', $val);
+return $val;
+}
+// Pipeline openid_inscrire_redirect 
+function execute_pipeline_openid_inscrire_redirect(&$val){
+static $inc=null;
+if (!$inc){
+include_once_check(_ROOT_PLUGINS.'auto/inscription3/v3.7.1/inscription3_pipelines.php');
+$inc=true;
+}
+$val = minipipe('inscription3_openid_inscrire_redirect', $val);
 return $val;
 }
 // Pipeline bigup_preparer_input_options 
@@ -1593,6 +1764,10 @@ return $val;
 }
 // Pipeline cisf_raccourci_doc 
 function execute_pipeline_cisf_raccourci_doc(&$val){
+return $val;
+}
+// Pipeline mailsubscriber_informations_liees 
+function execute_pipeline_mailsubscriber_informations_liees(&$val){
 return $val;
 }
 }

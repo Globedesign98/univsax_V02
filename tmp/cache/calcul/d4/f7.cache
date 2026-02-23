@@ -1,0 +1,208 @@
+a:2:{s:9:"nom_cache";s:38:"d4f79d526a19d859881c0630cf3ac651.cache";s:6:"valeur";a:12:{s:9:"squelette";s:37:"html_cea33b70e86ca6d77edfdecff7a7b4c2";s:6:"source";s:40:"../prive/formulaires/editer_article.html";s:11:"process_ins";s:4:"html";s:11:"invalideurs";a:1:{s:5:"cache";s:38:"d4f79d526a19d859881c0630cf3ac651.cache";}s:7:"entetes";a:1:{s:12:"X-Spip-Cache";i:3600;}s:5:"duree";i:0;s:5:"texte";s:9467:"<div class="formulaire_spip formulaire_editer formulaire_editer_article formulaire_editer_article-1434">
+	
+	
+	 
+	<form method='post' action='/univsax/spip.php?rubrique5=&amp;slide=3&amp;edit=1'><div>
+		<span class="form-hidden"><input name="rubrique5" value="" type="hidden"
+><input name="slide" value="3" type="hidden"
+><input name="edit" value="1" type="hidden"
+><input name="id_rubrique" value="5" type="hidden"
+><input name="page" value="rubrique" type="hidden"
+><input name='formulaire_action' type='hidden'
+		value='editer_article'><input name='formulaire_action_args' type='hidden'
+		value='s5Dyvgcv7OpuRhNeT/FxPsy7k9ENKPzRpywgxNRT+MPdNcT2S4ehO6kK/f4KySoeoo90EZmBQv+2OWlqlT8jkKYaT9bTRzx2jaujOzqwnraMfxRdwCS5uMXBqVGe36TgdcMtKkPWlwZ2eRteO+ZWUz6VSOwnQZsQiZsYlvgKyMrB5nomKfhM5a5ubzxx2wM='><input name='formulaire_action_sign' type='hidden'
+		value='12fb0dc80b82a8a2d241065a1c72f2c0657f59b2351f454527ed19ce0e7b2330'><input type='hidden' name='editer_article' value='oui'>
+
+
+<!-- controles md5 -->
+<input type='hidden' value='7895fc13088ee37f511913bac71fa66f' name='ctr_id_article'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_surtitre'>
+<input type='hidden' value='56a036735e46821195a55359c5ad144f' name='ctr_titre'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_soustitre'>
+<input type='hidden' value='e4da3b7fbbce2345d7772b0674a318d5' name='ctr_id_rubrique'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_descriptif'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_chapo'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_texte'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_ps'>
+<input type='hidden' value='a1f75d51712c7b3edf3414b0559875f8' name='ctr_date'>
+<input type='hidden' value='22055ccd08151c946512945f21da674e' name='ctr_statut'>
+<input type='hidden' value='e4da3b7fbbce2345d7772b0674a318d5' name='ctr_id_secteur'>
+<input type='hidden' value='5acffc53bbb2f906251c3c4fddf1852a' name='ctr_maj'>
+<input type='hidden' value='b2a5abfeef9e36964281a31e17b57c97' name='ctr_export'>
+<input type='hidden' value='8e30a659c31b53017073692309ab0da1' name='ctr_date_redac'>
+<input type='hidden' value='cfcd208495d565ef66e7dff9f98764da' name='ctr_visites'>
+<input type='hidden' value='cfcd208495d565ef66e7dff9f98764da' name='ctr_referers'>
+<input type='hidden' value='cfcd208495d565ef66e7dff9f98764da' name='ctr_popularite'>
+<input type='hidden' value='5e0bdcbddccca4d66d74ba8c1cee1a68' name='ctr_accepter_forum'>
+<input type='hidden' value='e527ad0ff0ca74531856a55a1e775b41' name='ctr_date_modif'>
+<input type='hidden' value='82a9e4d26595c87ab6e442391d8c5bba' name='ctr_lang'>
+<input type='hidden' value='14b8f0494c6f1460c3720d0ce692dbca' name='ctr_langue_choisie'>
+<input type='hidden' value='cfcd208495d565ef66e7dff9f98764da' name='ctr_id_trad'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_extra'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_nom_site'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_url_site'>
+<input type='hidden' value='3a5ad952f284ed876f7ca818e3663bb2' name='ctr_prenom'>
+<input type='hidden' value='3348c4f1488a8aa6c57148c39e9b6f40' name='ctr_sexo'>
+<input type='hidden' value='8e296a067a37563370ded05f5a3bf3ec' name='ctr_age'>
+<input type='hidden' value='ea1b7530aac5d8ef196ba554a97631f9' name='ctr_adresse'>
+<input type='hidden' value='ed3d2c21991e3bef5e069713af9fa6ca' name='ctr_postal'>
+<input type='hidden' value='f561aaf6ef0bf14d4208bb46a4ccb3ad' name='ctr_ville'>
+<input type='hidden' value='f561aaf6ef0bf14d4208bb46a4ccb3ad' name='ctr_pays'>
+<input type='hidden' value='0e5bb2dd9e28130154406cefcfb0d484' name='ctr_phone'>
+<input type='hidden' value='6679e65c932b2c5ad98080ee21a4f0d4' name='ctr_sante'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_contact'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_id_version'>
+<input type='hidden' value='f94c84fac5cb091c60bb143cb957d229' name='ctr_contact_nom'>
+<input type='hidden' value='336311a016184326ddbdd61edd4eeb52' name='ctr_contact_prenom'>
+<input type='hidden' value='0ff8a08c41566cd3fe1dfbc26295a1b3' name='ctr_contact_adresse'>
+<input type='hidden' value='c6f057b86584942e415435ffb1fa93d4' name='ctr_contact_tel'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_vegetarien'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_hebergement'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_auditeur'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_ecole'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_prof'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_piece'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_saxophone'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_choix'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_musichambre'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_ensemble'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_painting'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_paiement'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_lieu'>
+<input type='hidden' value='ed2b5c0139cec8ad2873829dc1117d50' name='ctr_reglement'>
+<input type='hidden' value='9466f834eb497d69167eaf24f3d2f7ba' name='ctr_inscription'>
+<input type='hidden' value='b2a5abfeef9e36964281a31e17b57c97' name='ctr_paiementok'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_tradition'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_oui_non_2'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_oui_non_1'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_type_saxo'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_type_bec'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_remarque'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_virtuel'>
+
+</span>
+		<input type='hidden' name='id_article' value='1434'>
+		<div class="editer-groupe">
+			
+			<div class="editer editer_titre obligatoire">
+				<label for="titre">Nom<em class="aide"></em></label><input type='text' class='text' name='titre' id='titre' lang='fr' value="GD"
+				placeholder="Nom de l&#039;&#233;tudiant">
+			</div>
+			
+			<div class="editer editer_parent">
+				<label for="id_parent">À l’intérieur de la rubrique<em class="aide"></em></label>
+				<select id='id_parent' name='id_parent'
+class='selecteur_parent verdana1' size='1'>
+<option value='14' class='niveau_1 selec_rub' style=''>Contact</option>
+<option value='15' class='niveau_1 selec_rub' style=''>Espace privé</option>
+<option value='16' class='niveau_2 selec_rub' style=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Informations pratiques</option>
+<option value='17' class='niveau_2 selec_rub' style=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Questions / FAQ</option>
+<option value='18' class='niveau_2 selec_rub' style=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ressources pédagogiques</option>
+<option value='9' class='niveau_1 selec_rub' style=''>Excel inscription 2025</option>
+<option selected="selected" value='5' class='niveau_1 selec_rub' style=''>Inscription 2025</option>
+<option value='12' class='niveau_1 selec_rub' style=''>Photo</option>
+<option value='10' class='niveau_1 selec_rub' style=''>Photos</option>
+<option value='11' class='niveau_1 selec_rub' style=''>Pictures</option>
+<option value='13' class='niveau_1 selec_rub' style=''>Pictures</option>
+<option value='7' class='niveau_1 selec_rub' style=''>Registration 2025</option>
+<option value='8' class='niveau_1 selec_rub' style=''>Tableau inscription 2025</option>
+<option value='1' class='niveau_1 selec_rub' style=''>Université Européenne de Saxophone</option>
+<option value='2' class='niveau_2 selec_rub' style=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forum des étudiants, enseignants et organisateurs</option>
+<option value='4' class='niveau_2 selec_rub' style=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Photos de l’université de Saxophone</option>
+<option value='6' class='niveau_2 selec_rub' style=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Problèmes lors de votre inscription sur le site</option>
+<option value='3' class='niveau_2 selec_rub' style=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Questions aux organisateurs de l’université</option>
+</select>
+
+			</div>
+
+			
+			
+
+			
+
+			 
+			<div class="editer editer_texte obligatoire">
+				<label for="text_area">Texte<em class="aide">
+&nbsp;&nbsp;<a class='aide popin'
+href='http://127.0.0.1:8080/univsax/ecrire/?exec=aide&aide=raccourcis' target='_blank'><img src='prive/themes/spip/images/aide-xx.svg?1764889040&amp;16px' alt='AIDE' title="De l'aide sur cet &eacute;l&eacute;ment" class='aide' width='16' height='16' /></a></em></label>
+				<textarea name='texte' id='text_area' lang='fr' rows='10' cols='40'></textarea>
+			</div>
+			
+		</div>
+
+		
+		<!--extra-->
+		<p class='boutons'><input type='submit' name="save" class='btn submit' value='Enregistrer'></p>
+	</div></form>
+	
+</div>
+";s:5:"notes";s:0:"";s:8:"contexte";a:77:{s:10:"id_article";s:4:"1434";s:8:"surtitre";s:0:"";s:5:"titre";s:2:"GD";s:9:"soustitre";s:0:"";s:10:"descriptif";s:0:"";s:5:"chapo";s:0:"";s:5:"texte";s:0:"";s:2:"ps";s:0:"";s:4:"date";s:19:"2026-02-17 07:20:18";s:6:"statut";s:5:"prepa";s:10:"id_secteur";s:1:"5";s:3:"maj";s:19:"2026-02-19 12:07:01";s:6:"export";s:3:"oui";s:10:"date_redac";s:0:"";s:7:"visites";s:1:"0";s:8:"referers";s:1:"0";s:10:"popularite";s:1:"0";s:14:"accepter_forum";s:3:"pos";s:10:"date_modif";s:19:"2026-02-19 02:04:41";s:14:"langue_choisie";s:3:"non";s:7:"id_trad";s:1:"0";s:5:"extra";N;s:8:"nom_site";s:0:"";s:8:"url_site";s:0:"";s:6:"prenom";s:3:"Fab";s:4:"sexo";s:8:"Masculin";s:3:"age";s:2:"25";s:7:"adresse";s:7:"14 bann";s:6:"postal";s:2:"98";s:5:"ville";s:3:"xxx";s:4:"pays";s:3:"xxx";s:5:"phone";s:6:"946609";s:5:"sante";s:3:"Non";s:7:"contact";s:0:"";s:10:"id_version";s:0:"";s:11:"contact_nom";s:12:"xxxxxxxxxxxx";s:14:"contact_prenom";s:10:"xxxxxxxxxx";s:15:"contact_adresse";s:17:"ffddsffsd fds fds";s:11:"contact_tel";s:3:"000";s:10:"vegetarien";s:0:"";s:11:"hebergement";s:0:"";s:8:"auditeur";s:0:"";s:5:"ecole";s:0:"";s:4:"prof";s:0:"";s:5:"piece";s:0:"";s:9:"saxophone";s:0:"";s:5:"choix";s:0:"";s:11:"musichambre";s:0:"";s:8:"ensemble";s:0:"";s:8:"painting";s:0:"";s:8:"paiement";s:0:"";s:4:"lieu";s:0:"";s:9:"reglement";s:2:"on";s:11:"inscription";s:10:"confirmée";s:10:"paiementok";s:3:"oui";s:9:"tradition";s:0:"";s:9:"oui_non_2";s:0:"";s:9:"oui_non_1";s:0:"";s:9:"type_saxo";s:0:"";s:8:"type_bec";s:0:"";s:8:"remarque";s:0:"";s:7:"virtuel";s:0:"";s:9:"id_parent";s:1:"5";s:6:"config";a:3:{s:6:"lignes";i:8;s:6:"langue";s:2:"fr";s:9:"restreint";s:0:"";}s:6:"langue";s:2:"fr";s:7:"_hidden";s:5379:"<input type='hidden' name='editer_article' value='oui'>
+
+
+<!-- controles md5 -->
+<input type='hidden' value='7895fc13088ee37f511913bac71fa66f' name='ctr_id_article'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_surtitre'>
+<input type='hidden' value='56a036735e46821195a55359c5ad144f' name='ctr_titre'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_soustitre'>
+<input type='hidden' value='e4da3b7fbbce2345d7772b0674a318d5' name='ctr_id_rubrique'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_descriptif'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_chapo'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_texte'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_ps'>
+<input type='hidden' value='a1f75d51712c7b3edf3414b0559875f8' name='ctr_date'>
+<input type='hidden' value='22055ccd08151c946512945f21da674e' name='ctr_statut'>
+<input type='hidden' value='e4da3b7fbbce2345d7772b0674a318d5' name='ctr_id_secteur'>
+<input type='hidden' value='5acffc53bbb2f906251c3c4fddf1852a' name='ctr_maj'>
+<input type='hidden' value='b2a5abfeef9e36964281a31e17b57c97' name='ctr_export'>
+<input type='hidden' value='8e30a659c31b53017073692309ab0da1' name='ctr_date_redac'>
+<input type='hidden' value='cfcd208495d565ef66e7dff9f98764da' name='ctr_visites'>
+<input type='hidden' value='cfcd208495d565ef66e7dff9f98764da' name='ctr_referers'>
+<input type='hidden' value='cfcd208495d565ef66e7dff9f98764da' name='ctr_popularite'>
+<input type='hidden' value='5e0bdcbddccca4d66d74ba8c1cee1a68' name='ctr_accepter_forum'>
+<input type='hidden' value='e527ad0ff0ca74531856a55a1e775b41' name='ctr_date_modif'>
+<input type='hidden' value='82a9e4d26595c87ab6e442391d8c5bba' name='ctr_lang'>
+<input type='hidden' value='14b8f0494c6f1460c3720d0ce692dbca' name='ctr_langue_choisie'>
+<input type='hidden' value='cfcd208495d565ef66e7dff9f98764da' name='ctr_id_trad'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_extra'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_nom_site'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_url_site'>
+<input type='hidden' value='3a5ad952f284ed876f7ca818e3663bb2' name='ctr_prenom'>
+<input type='hidden' value='3348c4f1488a8aa6c57148c39e9b6f40' name='ctr_sexo'>
+<input type='hidden' value='8e296a067a37563370ded05f5a3bf3ec' name='ctr_age'>
+<input type='hidden' value='ea1b7530aac5d8ef196ba554a97631f9' name='ctr_adresse'>
+<input type='hidden' value='ed3d2c21991e3bef5e069713af9fa6ca' name='ctr_postal'>
+<input type='hidden' value='f561aaf6ef0bf14d4208bb46a4ccb3ad' name='ctr_ville'>
+<input type='hidden' value='f561aaf6ef0bf14d4208bb46a4ccb3ad' name='ctr_pays'>
+<input type='hidden' value='0e5bb2dd9e28130154406cefcfb0d484' name='ctr_phone'>
+<input type='hidden' value='6679e65c932b2c5ad98080ee21a4f0d4' name='ctr_sante'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_contact'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_id_version'>
+<input type='hidden' value='f94c84fac5cb091c60bb143cb957d229' name='ctr_contact_nom'>
+<input type='hidden' value='336311a016184326ddbdd61edd4eeb52' name='ctr_contact_prenom'>
+<input type='hidden' value='0ff8a08c41566cd3fe1dfbc26295a1b3' name='ctr_contact_adresse'>
+<input type='hidden' value='c6f057b86584942e415435ffb1fa93d4' name='ctr_contact_tel'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_vegetarien'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_hebergement'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_auditeur'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_ecole'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_prof'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_piece'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_saxophone'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_choix'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_musichambre'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_ensemble'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_painting'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_paiement'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_lieu'>
+<input type='hidden' value='ed2b5c0139cec8ad2873829dc1117d50' name='ctr_reglement'>
+<input type='hidden' value='9466f834eb497d69167eaf24f3d2f7ba' name='ctr_inscription'>
+<input type='hidden' value='b2a5abfeef9e36964281a31e17b57c97' name='ctr_paiementok'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_tradition'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_oui_non_2'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_oui_non_1'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_type_saxo'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_type_bec'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_remarque'>
+<input type='hidden' value='d41d8cd98f00b204e9800998ecf8427e' name='ctr_virtuel'>
+
+";s:9:"_pipeline";a:2:{i:0;s:20:"editer_contenu_objet";i:1;a:2:{s:4:"type";s:7:"article";s:2:"id";s:4:"1434";}}s:7:"_action";a:2:{i:0;s:14:"editer_article";i:1;s:4:"1434";}s:10:"_pipelines";a:2:{s:20:"editer_contenu_objet";a:2:{s:4:"type";s:7:"article";s:2:"id";s:4:"1434";}s:15:"formulaire_fond";a:3:{s:4:"form";s:14:"editer_article";s:4:"args";a:2:{s:4:"type";s:7:"article";s:2:"id";s:4:"1434";}s:13:"je_suis_poste";b:0;}}s:15:"formulaire_args";s:192:"s5Dyvgcv7OpuRhNeT/FxPsy7k9ENKPzRpywgxNRT+MPdNcT2S4ehO6kK/f4KySoeoo90EZmBQv+2OWlqlT8jkKYaT9bTRzx2jaujOzqwnraMfxRdwCS5uMXBqVGe36TgdcMtKkPWlwZ2eRteO+ZWUz6VSOwnQZsQiZsYlvgKyMrB5nomKfhM5a5ubzxx2wM=";s:7:"erreurs";a:0:{}s:6:"action";s:51:"/univsax/spip.php?rubrique5=&amp;slide=3&amp;edit=1";s:4:"form";s:14:"editer_article";s:15:"formulaire_sign";s:64:"12fb0dc80b82a8a2d241065a1c72f2c0657f59b2351f454527ed19ce0e7b2330";s:2:"id";s:3:"new";s:8:"editable";s:1:" ";s:4:"lang";s:2:"fr";}s:12:"lastmodified";i:1771463272;s:2:"gz";b:0;s:3:"sig";i:541439412;}}

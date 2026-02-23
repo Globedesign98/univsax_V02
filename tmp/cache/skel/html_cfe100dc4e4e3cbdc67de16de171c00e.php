@@ -3,12 +3,12 @@
 /*
  * Squelette : plugins/auto/contact-2.0.0/formulaires/contact_champ_mail.html
  * Date :      Thu, 29 Jan 2026 02:52:21 GMT
- * Compile :   Thu, 29 Jan 2026 23:13:39 GMT
+ * Compile :   Thu, 19 Feb 2026 01:08:58 GMT
  * Boucles :   
  */ 
 //
 // Fonction principale du squelette plugins/auto/contact-2.0.0/formulaires/contact_champ_mail.html
-// Temps de compilation total: 0.077 ms
+// Temps de compilation total: 0.074 ms
 //
 
 function html_cfe100dc4e4e3cbdc67de16de171c00e($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

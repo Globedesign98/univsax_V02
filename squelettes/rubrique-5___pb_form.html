@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>[(#NOM_SITE_SPIP)] — [(#SLOGAN_SITE_SPIP)]</title>
+<meta content="[(#DESCRIPTIF_SITE_SPIP|textebrut)]" name="description"/>
+<meta content="saxophone, université, gap, musique, stage, france" name="keywords"/>
+<link href="assets/img/favicon.ico" rel="icon"/>
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;family=Lato:wght@100;300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+<link href="assets/vendor/aos/aos.css" rel="stylesheet"/>
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
+<link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"/>
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="assets/css/main.css" rel="stylesheet"/>
+<link href="assets/css/hero-video.css" rel="stylesheet"/>
+<link href="assets/css/univsax.css" rel="stylesheet"/>
+<link href="assets/css/ues.css" rel="stylesheet"/>
+<link href="assets/css/menu-override.css" rel="stylesheet"/>
+
+  #INSERT_HEAD
+<style id="ues-scroll-header-patch">
+/* ============================
+   UES — Logo dans la topbar au scroll + barre noire menu
+   ============================ */
+:root{
+  --ues-logo-big: 140px;
+  --ues-logo-small: 80px;
+}
+
+/* Logo (navbar) : grand en haut de page */
+#header .ues-nav .ues-brand img{
+  height: var(--ues-logo-big);
+  width: auto;
+  transition: height .35s ease;
+}
+
+/* Logo de la topbar (masqué en haut de page) */
+#header .ues-topbar-brand{
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin-right: 12px;
+  will-change: transform, opacity;
+}
+#header .ues-topbar-brand img{
+  height: var(--ues-logo-small);
+  width: auto;
+  display: block;
+}
+
+/* Au scroll : on affiche le logo dans la topbar */
+#header.ues-header--compact .ues-topbar-brand{
+  display: flex;
+}
+
+/* Au scroll : on cache le logo de la navbar (avec animation) */
+#header .ues-nav .ues-brand{
+  will-change: transform, opacity;
+}
+#header.ues-header--compact .ues-nav .ues-brand{
+  opacity: 0;
+  transform: translateY(-90px);
+  pointer-events: none;
+}
+
+/* Animation : logo navbar qui sort par le haut */
+#header .ues-nav .ues-brand.ues-brand--out{
+  animation: ues-logo-out .45s cubic-bezier(.22,.85,.2,1) both;
+}
+@keyframes ues-logo-out{
+  0%   { transform: translateY(0);     opacity: 1; }
+  100% { transform: translateY(-90px); opacity: 0; }
+}
+
+/* Animation : logo topbar qui entre */
+#header .ues-topbar-brand.ues-brand--in{
+  animation: ues-logo-in .55s cubic-bezier(.22,.85,.2,1) both;
+}
+@keyframes ues-logo-in{
+  0%   { transform: translateY(-35px); opacity: 0; }
+  100% { transform: translateY(0);     opacity: 1; }
+}
+
+/* Menu : barre noire dès le scroll */
+#header.ues-header--compact .ues-nav{
+  background: #000;
+  box-shadow: 0 10px 28px rgba(0,0,0,.45);
+}
+
+/* (optionnel) Navbar un peu plus compacte quand le logo est petit */
+#header.ues-header--compact .navbar{
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
+
+/* Mobile */
+@media (max-width: 991px){
+  :root{
+    --ues-logo-big: 84px;
+    --ues-logo-small: 80px;
+  }
+}
+
+.ues-edition-encard{
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 14px 32px rgba(0,0,0,.25);
+  backdrop-filter: blur(6px);
+}
+
+.ues-edition-encard::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+
+  /* ✅ voile animé blanc (nacré) */
+  background: linear-gradient(120deg,
+    rgba(255,255,255,0),
+    rgba(255,255,255,.32),
+    rgba(255,255,255,0));
+
+  transform: translateX(-70%);
+  animation: ues-encard-shine 6s ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
+  opacity:.9;
+  mix-blend-mode: screen; /* joli sur fond sombre */
+}
+
+
+.ues-edition-encard__inner{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ues-edition-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,214,10,.18);
+  border: 1px solid rgba(255,214,10,.35);
+  color: #ffd60a;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: .75rem;
+  white-space: nowrap;
+}
+
+.ues-edition-title{
+  font-weight: 900;
+  font-size: 1.05rem;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0 0 13px;
+}
+
+.ues-edition-date{
+  margin-top: 3px;
+  opacity: .95;
+  font-size: .95rem;
+}
+
+.ues-edition-icon{
+  margin-left: auto;
+  font-size: 1.6rem;
+  color: #ffd60a;
+  opacity: .95;
+  animation: ues-encard-float 2.8s ease-in-out infinite;
+}
+
+@keyframes ues-encard-shine{
+  0%   { transform: translateX(-70%); opacity: .2; }
+  40%  { opacity: .45; }
+  60%  { opacity: .45; }
+  100% { transform: translateX(70%);  opacity: .2; }
+}
+
+@keyframes ues-encard-float{
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+/* Mobile */
+@media (max-width: 575px){
+  .ues-edition-encard__inner{ flex-wrap: wrap; }
+  .ues-edition-icon{ margin-left: 0; }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce){
+  .ues-edition-encard::before,
+  .ues-edition-icon{
+    animation: none !important;
+  }
+}
+
+</style>
+</head>
+<body class="index-page ues-page rub">
+<header class="header fixed-top ues-header ues-header--compact" id="header">
+    <button id="backToTop" class="btn-back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+    <div class="ues-topbar">
+        <div class="container-xxl ues-topbar-inner">
+            <div class="ues-topbar-title">Université Européenne de Saxophone - Edition 2026</div>
+            <div class="ues-topbar-actions">
+                <a href="https://www.facebook.com/univsax/" title="Facebook UES" target="_blank" class="ues-social" rel="noopener" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <div aria-label="Langue" class="ues-lang-pill" role="group">
+                    <a class="ues-lang-pill-btn is-active" href="#">FR</a>
+                    <a class="ues-lang-pill-btn" href="#">ENG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-xl ues-nav ues-nav--compact">
+        <div class="container-xxl ues-nav-inner">
+            <a aria-label="Université Européenne de Saxophone" class="navbar-brand ues-brand" href="#URL_SITE_SPIP">
+                <img alt="Université Européenne de Saxophone" src="assets/img/ues/logo_ues.png"/>
+            </a>
+            <button aria-controls="uesNav" aria-expanded="false" aria-label="Ouvrir le menu" class="navbar-toggler ues-toggler" data-bs-target="#uesNav" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="uesNav">
+                <ul class="navbar-nav ms-auto ues-menu">
+                    <li class="nav-item"><a class="nav-link active" href="index.php">Accueil</a></li>
+                    <li class="nav-item"><a href="index.php#ues-slides" class="nav-link">Présentation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="spip.php?rubrique5">Inscriptions 2026</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cta">Partenaires</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="main ues-main">
+<div class="container-xxl py-3">
+[(#SESSION{auth}|oui)
+
+  <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+    <div class="text-white-50 small">
+      <i class="bi bi-person-circle me-1" aria-hidden="true"></i>
+      <strong class="text-white">Bonjour</strong>
+      [(#SESSION{nom}|typo)] [(#SESSION{prenom}|typo)]
+    </div>
+
+    <div class="d-flex align-items-center gap-3 ms-auto">
+      <div id="uesDate" class="text-white-50 small"></div>
+
+      <a class="btn btn-sm btn-outline-light" href="[(#URL_LOGOUT{#SELF})]">
+        <i class="bi bi-box-arrow-right me-1" aria-hidden="true"></i>
+        Se déconnecter
+      </a>
+    </div>
+  </div>
+
+]
+
+<script>
+(function(){
+  const el = document.getElementById("uesDate");
+  if(!el) return;
+
+  const today = new Date();
+  const jours = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
+  const mois  = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+
+  const d = String(today.getDate()).padStart(2,"0");
+  el.textContent = `${jours[today.getDay()]} ${d} ${mois[today.getMonth()]} ${today.getFullYear()}`;
+})();
+</script>
+</div>
+
+<section class="ues-slides py-7" id="ues-slides">
+  <div class="container-xxl">
+    <div class="carousel slide" data-bs-ride="false" data-bs-touch="true" id="uesCarousel">
+      <div class="carousel-inner">
+        <!-- SLIDE 1 (0) : Présentation -->
+        <div class="carousel-item active">
+          <div class="row align-items-start">
+            <div class="col-lg-7">
+              <h3 class="mb-3 ues-slide-title"><i class="bi bi-wechat ues-qi"></i> <span class="txt_yellow">I</span>nscriptions</h3>
+
+              <B_inscription_01>
+              <BOUCLE_inscription_01(ARTICLES){id_auteur=#SESSION{id_auteur}}{id_rubrique IN 5,7}{0,1}>
+                <div class="txt_blc12">
+                  Votre inscription a bien été <strong>enregistrée</strong>. Elle sera validée :
+                  <br><br>1. dès réception des sommes dues<br>2. dès réception du formulaire d'inscription signé et envoyé à l'adresse contact@univsax.com.
+                  
+                  
+                 <div class="d-flex flex-wrap gap-2 my-3">
+  <a href="spip.php?page=inscriptions_paiement"
+     class="btn btn-outline-light d-inline-flex align-items-center">
+    <i class="bi bi-credit-card-2-front me-2" aria-hidden="true"></i>
+    Effectuer votre paiement
+  </a>
+
+  <a href="spip.php?page=inscriptions_formulaire"
+     class="btn btn-outline-light d-inline-flex align-items-center">
+    <i class="bi bi-file-earmark-text me-2" aria-hidden="true"></i>
+    Mon formulaire de réservation
+  </a>
+</div>
+                  
+                  
+                  
+                  <div class="card shadow-sm border-0 mt-4 bg-dark bg-opacity-25 text-white">
+                    
+                    <div class="vstack gap-3">
+
+  <p class="mb-0">
+    La <strong>trente-septième édition</strong> de l'Université Européenne de Saxophone se déroulera du
+    <strong>13 au 24 juillet 2026</strong>.
+    Les inscriptions seront prises en compte jusqu'au <strong>15 juin 2026</strong>,
+    dans la limite des places disponibles.<br>
+<br>
+
+  </p>
+
+  <div class="border border-light border-opacity-25 rounded-3 overflow-hidden">
+
+  <!-- Header -->
+  <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center gap-2">
+    <i class="bi bi-tag" aria-hidden="true"></i>
+    <span class="fw-semibold">Tarifs</span>
+  </div>
+
+  <!-- Ligne 1 -->
+  <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-2">
+      <i class="bi bi-house-door" aria-hidden="true"></i>
+      <span>Droits d'inscription + hébergement</span>
+    </div>
+    <span class="badge rounded-pill text-dark" style="background:#f6c343;">1028 €</span>
+  </div>
+
+  <!-- Ligne 2 -->
+  <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-2">
+      <i class="bi bi-mortarboard" aria-hidden="true"></i>
+      <span>Sans hébergement</span>
+    </div>
+    <span class="badge rounded-pill text-dark" style="background:#57d2ff;">500 €</span>
+  </div>
+
+  <!-- Ligne 3 -->
+  <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-2">
+      <i class="bi bi-person" aria-hidden="true"></i>
+      <span>Auditeurs libres</span>
+    </div>
+    <span class="badge rounded-pill text-white" style="background:#6c757d;">250 €</span>
+  </div>
+
+
+</div>
+<br>
+
+
+  <div class="alert alert-warning mb-0 d-flex align-items-start gap-2">
+    <i class="bi bi-exclamation-triangle-fill mt-1" aria-hidden="true"></i>
+    <div>
+      <div class="fw-semibold">Conditions de remboursement</div>
+      <div class="small">
+        En cas de désistement, un remboursement pourra être effectué (retenue de <strong>130 €</strong> pour frais de dossier).
+        <strong>Aucun remboursement après le 10 juin 2026.</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+                  </div>
+                </div>
+                <p class="small text-white-50 mt-3 mb-0">
+        Besoin d'aide ? Écrivez à <a href="mailto:inscription@univsax.com">inscription@univsax.com</a>.
+      </p>
+              </BOUCLE_inscription_01>
+              </B_inscription_01>
+              
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                <?php if ($auteur_session) { ?>
+<!-- ===== UES — Parcours d'inscription (Bootstrap) ===== -->
+<div class="card shadow-sm border-0 mt-4 bg-dark bg-opacity-25 text-white ues-steps-card">
+  <div class="card-header bg-dark text-white d-flex align-items-center justify-content-between">
+    <span class="fw-bold"><i class="bi bi-list-check me-2" aria-hidden="true"></i>Prochaines étapes</span>
+    <span class="badge rounded-pill bg-light bg-opacity-10 text-white border border-light border-opacity-25">Inscription 2026</span>
+  </div>
+
+  <div class="card-body">
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+      <div class="small text-white-50">
+        Les inscriptions sont prises en compte jusqu'au <strong class="text-white">15 juin 2026</strong> (dans la limite des places disponibles).
+      </div>
+    </div>
+
+    <hr class="border-light border-opacity-25">
+
+    <div class="list-group list-group-flush rounded-3 overflow-hidden border border-light border-opacity-25">
+
+      
+
+      <!-- Étape 2 — Formulaire -->
+      <div class="list-group-item bg-transparent text-white border-light border-opacity-25">
+        <div class="d-flex align-items-start justify-content-between gap-3">
+          <div class="d-flex align-items-start gap-2">
+            <div class="flex-shrink-0">
+              <span class="badge rounded-pill text-dark" style="background:#f6c343;">1</span>
+            </div>
+            <div>
+              <div class="fw-semibold d-flex align-items-center gap-2">
+                
+                Formulaire d'inscription
+              </div>
+              <div class="small text-white-50 mt-1">
+                Complétez le formulaire, puis cliquez sur <strong class="text-white">« Envoyer votre inscription »</strong>.
+                Après validation par l'UES, imprimez, signez et envoyez une copie à <a class="link-light" href="mailto:contact@univsax.com">contact@univsax.com</a>.
+              </div>
+
+              <div class="mt-3 d-flex flex-wrap gap-2">
+                <a class="btn btn-light text-dark fw-semibold"
+                   href="#ues-slides"
+                   data-bs-target="#uesCarousel"
+                   data-bs-slide-to="3">
+                  <i class="bi bi-pencil-square me-2" aria-hidden="true"></i>Accéder au formulaire
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- Étape 1 — Paiement -->
+      <div class="list-group-item bg-transparent text-white border-light border-opacity-25">
+        <div class="d-flex align-items-start justify-content-between gap-3">
+          <div class="d-flex align-items-start gap-2">
+            <div class="flex-shrink-0">
+              <span class="badge rounded-pill bg-light bg-opacity-10 text-white border border-light border-opacity-25">2</span>
+            </div>
+            <div>
+              <div class="fw-semibold d-flex align-items-center gap-2">
+                Paiement
+              </div>
+              <div class="small text-white-50 mt-1">
+                Votre inscription sera validée dès réception des sommes dues. Pour toute question ou autre mode de paiement,
+                contactez-nous via la section <a class="link-light" href="#contact">Contact</a>.
+              </div>
+
+              <div class="d-grid gap-2 mt-3" style="max-width: 320px;">
+                <a class="btn btn-outline-primary" href="spip.php?page=inscriptions_etape_virement">
+                  <i class="bi bi-bank me-2" aria-hidden="true"></i>Virement
+                </a>
+                <a class="btn btn-outline-warning" href="spip.php?page=inscriptions_etape_cheque">
+                  <i class="bi bi-receipt me-2" aria-hidden="true"></i>Chèque
+                </a>
+                <a class="btn btn-outline-success" href="spip.php?page=inscriptions_etape_cb">
+                  <i class="bi bi-credit-card-2-front me-2" aria-hidden="true"></i>Carte bancaire
+                </a>
+              </div>
+
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Étape 3 — Confirmation -->
+      <div class="list-group-item bg-transparent text-white border-light border-opacity-25">
+        <div class="d-flex align-items-start gap-2">
+          <div class="flex-shrink-0">
+            <span class="badge rounded-pill bg-light bg-opacity-10 text-white border border-light border-opacity-25">3</span>
+          </div>
+          <div>
+            <div class="fw-semibold d-flex align-items-center gap-2">
+              Confirmation
+            </div>
+            <div class="small text-white-50 mt-1">
+              Un email comprenant votre bulletin d'inscription vous sera envoyé après validation de votre formulaire (≈ 72 h).
+              Pensez à le renvoyer signé à <a class="link-light" href="mailto:contact@univsax.com">contact@univsax.com</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
+      <a class="btn btn-sm btn-outline-light mediabox boxIframe boxWidth-90% boxHeight-90%"
+         href="spip.php?page=reglement_2023">
+        <i class="bi bi-shield-check me-2" aria-hidden="true"></i>Règlement / Rules 2026
+      </a>
+
+      <div class="small text-white-50">
+        Besoin d'aide ? <a class="link-light" href="mailto:inscription@univsax.com">inscription@univsax.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ===== /UES — Parcours d'inscription ===== -->
+<?php } else { ?>
+                  
+                  <div class="txt_blc12">Les inscriptions seront prises en compte jusqu&rsquo;au <strong>15 juin 2026</strong>, dans la limite des places disponibles. <br />
+                    <br>
+              La <span class="txt_yellow">37ème</span>  &eacute;dition de l&rsquo;Universit&eacute; Europ&eacute;enne de Saxophone se d&eacute;roulera du lundi 14 juillet au vendredi 24 juillet 2026. <br>
+                <br>
+                <strong>TARIFS : 1028 &euro;</strong><br>  
+                <br>
+                Le tarif comprend les droits d&rsquo;inscription au cours p&eacute;dagogiques (500&euro;), ainsi que l&rsquo;h&eacute;bergement (facultatif) en pension compl&egrave;te au Foyer des Jeunes Travailleurs de Gap, pendant la dur&eacute;e de l&rsquo;Universit&eacute; (528&euro;). Hébergement et restauration en pension complète, soit 48€/jour (uniquement à titre indicatif, pas de possibilité de fractionnement).<br>
+                <br>
+                <strong>TARIFS : 500&euro;</strong> (sans l'h&eacute;bergement)<br>
+                <br>
+                <strong>TARIFS : 250&euro;</strong> (Auditeurs libres)<br>
+                <br>
+                En cas de d&eacute;sistement, un remboursement pourra &ecirc;tre effectu&eacute; (avec une retenue de 130 &euro; pour les frais de dossier).  Il n'y aura aucun remboursement apr&egrave;s le 10 juin 2026. <br>
+                <br />
+                <br>
+                <div style="float:left;" class="bt_plus">
+    <a href="spip.php?page=reglement_2023" class="mediabox boxIframe boxWidth-90% boxHeight-90%">
+        Règlement / Rules 2026
+    </a>
+</div>
+<div class="d-flex justify-content-end align-items-center gap-2 flex-wrap my-2">
+
+  
+
+  <a href="#ues-slides"
+     class="btn btn-primary btn-sm px-3 d-inline-flex align-items-center gap-2"
+     data-bs-target="#uesCarousel"
+     data-bs-slide-to="1">
+    <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i>
+    Se connecter
+  </a>
+
+  <a href="#ues-slides"
+     class="btn btn-warning btn-sm px-3 fw-semibold d-inline-flex align-items-center gap-2"
+     data-bs-target="#uesCarousel"
+     data-bs-slide-to="2">
+    <i class="bi bi-person-plus-fill" aria-hidden="true"></i>
+    S'inscrire
+  </a>
+
+</div>
+<br />
+                </div>
+                <?php } ?>
+                </div></td>
+              </tr>
+            </table>
+            <//B_inscription_01>
+              
+              
+              
+              
+              
+              
+            </div>
+            <!-- Second Column -->
+            <div class="col-lg-5">
+              
+              
+             <?php if ($auteur_session) { ?>
+             
+
+  <div class="inffo border border-light border-opacity-25 rounded-3 overflow-hidden text-white mt-3">
+
+  <!-- Header -->
+  <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-2">
+      <i class="bi bi-person-badge" aria-hidden="true"></i>
+      <span class="fw-semibold">Informations sur votre compte</span>
+    </div>
+  </div>
+<BOUCLE_art(ARTICLES)
+       {id_auteur=#SESSION{id_auteur}}
+       {id_rubrique IN 5,7}
+       {statut IN prepa,prop,publie}
+       {par date}{inverse}{0,1}>
+
+       <!-- Afficher le logo de l'utilisateur -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center
+  justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2"></div>
+           <div class="text-end position">
+               [(#LOGO_AUTEUR|oui)
+                   <img src="[(#LOGO_AUTEUR|image_reduire{200,200}|extraire_attribut{src})]"
+                        alt="Logo de l'utilisateur"
+                        class="rounded-circle shadow-sm"
+                        style="width:80px;height:80px;object-fit:cover;">]
+           </div>
+       </div>
+
+       <!-- Nom -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center
+  justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+               <i class="bi bi-person" aria-hidden="true"></i><span>Nom</span>
+           </div>
+           <div class="text-white-50 text-end">[(#SESSION{nom}|typo)] [(#SESSION{prenom}|typo)]</div>
+       </div>
+
+       <!-- Adresse -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-start
+  justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+               <i class="bi bi-geo-alt" aria-hidden="true"></i><span>Adresse</span>
+           </div>
+           <div class="text-white-50 text-end">
+               #ADRESSE
+               #CODE_POSTAL
+               #VILLE
+               #PAYS
+           </div>
+       </div>
+
+       <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center
+  justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+               <i class="bi bi-telephone" aria-hidden="true"></i><span>Téléphone</span>
+           </div>
+           <div class="text-white-50 text-end"> #PHONE </div>
+       </div>
+
+       <!-- Email -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center
+  justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+               <i class="bi bi-envelope" aria-hidden="true"></i><span>Email</span>
+           </div>
+           <div class="text-white-50 text-end">[(#SESSION{email}|typo)]</div>
+       </div>
+
+       <!-- Champs extras -->
+       
+       [(#SET{ues_extras,[(#INFO_EXTRA{article,#ID_ARTICLE}|unserialize|sinon{#ARRAY})]})]
+       <B_extra>
+       <BOUCLE_extra(DATA){source tableau,#GET{ues_extras}}>
+           <div class="ues-extra-row d-flex flex-wrap align-items-start gap-2 py-2 border-top border-light
+  border-opacity-10">
+               <div class="ues-extra-label text-white-50 small fw-semibold" style="flex:0 0 34%;max-width:34%;">
+                   [(#CLE|replace{_,' '}|ucfirst)]
+               </div>
+               <div class="ues-extra-value flex-grow-1">
+                   [(#VALEUR|is_array|oui)[(#VALEUR|implode{', '})]]
+                   [(#VALEUR|is_array|non)[(#VALEUR|textebrut)]]
+               </div>
+           </div>
+       </BOUCLE_extra>
+       <div class="text-white-50 small">Aucun champ extra trouvé.</div>
+       </B_extra>
+   </BOUCLE_art>
+  
+
+</div>
+
+
+  <div class="card shadow-sm border-0 mt-3 bg-dark bg-opacity-25 text-white">
+    <div class="card-header bg-dark text-white">
+      <span class="fw-bold"><i class="bi bi-credit-card me-2" aria-hidden="true"></i>Mode de paiement</span>
+    </div>
+    <div class="card-body money">
+      <div class="d-grid gap-2">
+        <a class="btn btn-outline-primary btn-lg" href="spip.php?page=inscriptions_etape_virement">
+          <i class="bi bi-bank me-2" aria-hidden="true"></i>Virement
+        </a>
+        <a class="btn btn-outline-warning btn-lg" href="spip.php?page=inscriptions_etape_cheque">
+          <i class="bi bi-receipt me-2" aria-hidden="true"></i>Chèque
+        </a>
+        <a class="btn btn-outline-success btn-lg" href="spip.php?page=inscriptions_etape_cb">
+          <i class="bi bi-credit-card-2-front me-2" aria-hidden="true"></i>Carte bancaire
+        </a>
+      </div>
+      
+<p class="small text-white-50 mt-3 mb-0">       	
+<i class="bi bi-info-circle"></i> Les étudiants, qui règlent le montant de leur inscription par carte bancaire, doivent rajouter 38€ aux tarifs ci-dessus. Cette somme forfaitaire correspond aux frais bancaires et à la commission du système Paypal et ne sera donc plus à payer lors de leur arrivée à Gap.</p>
+
+      
+      
+      
+    </div>
+  </div>
+  <div class="ues-slide-nav d-flex gap-2 flex-wrap">
+    <!-- Bouton "Inscription" -->
+    <button class="btn btn-light ues-tabbtn" data-bs-slide-to="0" data-bs-target="#uesCarousel" type="button">
+        <i class="bi bi-pencil-square me-1"></i> Inscription
+    </button>
+    
+    <!-- Boutons pour les utilisateurs déconnectés -->
+    [(#SESSION{auth}|non)
+        <button class="btn btn-light ues-tabbtn" data-bs-slide-to="1" data-bs-target="#uesCarousel" type="button">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Se connecter
+        </button>
+        <button class="btn btn-light ues-tabbtn" data-bs-slide-to="2" data-bs-target="#uesCarousel" type="button">
+            <i class="bi bi-person-plus-fill me-1"></i> S'inscrire
+        </button>
+    ]
+
+    <!-- Bouton "Formulaire" - affiché uniquement pour les utilisateurs connectés -->
+    [(#SESSION{id_auteur}|oui)
+        <button class="btn btn-light ues-tabbtn" data-bs-slide-to="3" data-bs-target="#uesCarousel" type="button">
+            <i class="bi bi-folder2-open me-1"></i> Formulaire
+        </button>
+    ]
+
+    <!-- Bouton "Paiement" - affiché uniquement pour utilisateurs connectés qui ont des articles -->
+    [(#SESSION{id_auteur}|oui) 
+        <BOUCLE_articles_paiement(ARTICLES){id_auteur=#SESSION{id_auteur}}{id_rubrique IN 5,7}{0,1}>
+            <button class="btn btn-light ues-tabbtn" data-bs-slide-to="4" data-bs-target="#uesCarousel" type="button">
+                <i class="bi bi-credit-card me-1"></i> Paiement
+            </button>
+        </BOUCLE_articles_paiement>
+    ]
+</div>
+
+<?php } else { ?>
+
+<div class="ues-edition-encard my-3" role="note" aria-label="Annonce édition 2026">
+  <div class="ues-edition-encard__inner">
+    <div class="ues-edition-main">
+     <div class="ues-edition-title">La trente-septième édition arrive !</div>
+      <div class="ues-edition-top">
+        <span class="ues-edition-chip">
+          Gap · du 13 au 24 juillet 2026
+        </span>
+        <span class="ues-edition-badge">
+          <a href="#ues-slides"
+     class=""
+     data-bs-target="#uesCarousel"
+     data-bs-slide-to="2">S'inscrire</a> </span>
+        
+      </div>
+
+     
+      <div class="ues-edition-date">
+        La trente-septième édition de l'Université Européenne de Saxophone se déroulera à
+        <strong>Gap</strong> du <strong>13</strong> au <strong>24</strong> juillet <strong>2026</strong>.
+      </div>
+    </div>
+
+    <i class="bi bi-stars ues-edition-icon" aria-hidden="true"></i>
+  </div>
+</div>
+<!-- Infos pratiques (sous l'encart édition) -->
+<div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white mt-3">
+  <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center gap-2">
+    <i class="bi bi-building" aria-hidden="true"></i>
+    <span class="fw-semibold">Université Européenne de Saxophone</span>
+  </div>
+
+  <div class="px-3 py-2 border-top border-light border-opacity-25">
+    <div class="small text-white-50">Adresse</div>
+    <div class="mt-1">
+      14 chemin de Vigneaux – Romette<br>
+      05000 Gap, FRANCE
+    </div>
+  </div>
+</div>
+
+<!-- Avertissement : âge -->
+<div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white mt-3">
+  <div class="px-3 py-2 d-flex align-items-start gap-2">
+    <i class="bi bi-exclamation-triangle-fill text-warning mt-1" aria-hidden="true"></i>
+    <div>
+      <div class="fw-semibold">Condition d'âge</div>
+      <div class="small text-white-50">
+        Les étudiants doivent avoir au moins <strong class="text-white">18 ans</strong> le <strong class="text-white">14 juillet 2026</strong>.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Avertissement : frais CB -->
+<div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white mt-3">
+  <div class="px-3 py-2 d-flex align-items-start gap-2">
+    <i class="bi bi-exclamation-triangle-fill text-warning mt-1" aria-hidden="true"></i>
+    <div>
+      <div class="fw-semibold">Paiement par carte bancaire</div>
+      <div class="small text-white-50">
+        Les étudiants qui règlent par <strong class="text-white">carte bancaire</strong> doivent ajouter
+        <strong class="text-white">38 €</strong> (frais bancaires + commission PayPal).  
+        Cette somme ne sera <strong class="text-white">plus à payer</strong> à l'arrivée à Gap.
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php } ?>
+            </div>
+          </div>
+        </div>
+        <!-- SLIDE 2 (1) : Enseignement -->
+        <div class="carousel-item">
+  <div class="row g-4 align-items-start">
+
+    <div class="col-lg-7">
+      <h3 class="mb-3 ues-slide-title">
+        <i class="bi bi-box-arrow-in-right me-2"></i> Se connecter
+      </h3>
+
+      <?php if ($auteur_session) { ?>
+
+        <div class="alert alert-success d-flex align-items-start gap-2 mb-0" role="alert">
+          <i class="bi bi-check-circle-fill mt-1" aria-hidden="true"></i>
+          <div>
+            <div class="fw-semibold">Vous êtes déjà connecté(e).</div>
+            <div class="small">
+              Vous pouvez accéder à votre dossier, au formulaire et au paiement.
+            </div>
+          </div>
+        </div>
+
+      <?php } else { ?>
+
+        <div class="card ues-card-dark shadow-sm border-0 text-white">
+          <div class="card-header bg-dark text-white d-flex align-items-center justify-content-between">
+            <span class="fw-semibold">
+              <i class="bi bi-person-lock me-2" aria-hidden="true"></i> Connexion
+            </span>
+            <span class="badge rounded-pill text-bg-info">Stage 2026</span>
+          </div>
+
+          <div class="card-body">
+            <p class="text-white-50 mb-3">
+              Pour vous inscrire à l'Université Européenne de Saxophone 2026, vous devez posséder un compte.
+            </p>
+
+            <!-- Surface claire pour que le formulaire reste lisible -->
+            <div class="ues-form-surface p-3 rounded-3 border border-light border-opacity-25">
+  <div class="login">
+    <!-- FORMULAIRE_LOGIN avec paramètres -->
+    [(#FORMULAIRE_LOGIN{#SELF|parametre_url{'slide',1}|parametre_url{var_login,#ENV{var_login}}})]
+    
+    <?php
+      // Initialisez la variable $erreur même si aucune erreur n'existe
+      $erreur = isset($erreur) ? $erreur : false;
+    ?>
+    
+    <?php if ($erreur): ?>
+      <div class="alert alert-danger" role="alert">
+        Identifiants incorrects. Veuillez réessayer.
+      </div>
+    <?php endif; ?>
+  </div>
+</div>
+
+            <div class="small text-white-50 mt-3 mb-0">
+              Pas encore de compte ? Utilisez l'onglet <strong class="text-white">"S'inscrire"</strong>.
+            </div>
+          </div>
+        </div>
+
+      <?php } ?>
+    </div>
+
+    <div class="col-lg-5">
+      <div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white h-100">
+        <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center gap-2">
+          <i class="bi bi-info-circle" aria-hidden="true"></i>
+          <span class="fw-semibold">Conseils</span>
+        </div>
+
+        <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+          <div class="padd d-flex align-items-start gap-2">
+            <i class="bi bi-key" aria-hidden="true"></i>
+            <div>
+              Mot de passe oublié ? Utilisez le lien <strong class="text-white">"Mot de passe oublié"</strong>
+              sur le formulaire de connexion.
+            </div>
+          </div>
+        </div>
+
+        <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+          <div class="padd d-flex align-items-start gap-2">
+            <i class="bi bi-envelope" aria-hidden="true"></i>
+            <div>
+              Support : <a class="link-light" href="mailto:inscription@univsax.com">inscription@univsax.com</a><br>
+              <span class="small">Réponse sous 24–48h (jours ouvrés).</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+          <div class="padd d-flex align-items-start gap-2">
+            <i class="bi bi-arrow-right-circle" aria-hidden="true"></i>
+            <div>
+              Ensuite : allez sur <strong class="text-white">"S'inscrire"</strong> pour créer un compte,
+              puis <strong class="text-white">"Formulaire"</strong>.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+        <!-- SLIDE 3 (2) : Historique -->
+        <div class="carousel-item">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-7">
+  <h3 class="mb-3 ues-slide-title">
+    <i class="bi bi-person-plus-fill me-2"></i> S'inscrire
+  </h3>
+
+  <?php if ($auteur_session) { ?>
+
+    <div class="alert alert-success d-flex align-items-start gap-2 mb-0" role="alert">
+      <i class="bi bi-check-circle-fill mt-1" aria-hidden="true"></i>
+      <div>
+        <div class="fw-semibold">Vous avez déjà un compte (connecté).</div>
+        <div class="small">
+          Vous pouvez passer au formulaire et au paiement.
+        </div>
+      </div>
+    </div>
+
+  <?php } else { ?>
+
+    <div class="card ues-card-dark shadow-sm border-0 text-white">
+      <div class="card-header bg-dark text-white d-flex align-items-center justify-content-between">
+        <span class="fw-semibold">
+          <i class="bi bi-person-plus me-2" aria-hidden="true"></i> Création de compte
+        </span>
+        <span class="badge rounded-pill text-bg-info">Stage 2026</span>
+      </div>
+
+      <div class="card-body">
+        <p class="text-white-50 mb-3">
+          Pour vous inscrire à l'Université Européenne de Saxophone 2026, vous devez posséder un compte.
+          Créez-le ici en quelques minutes.
+        </p>
+
+        <!-- Surface claire pour que le formulaire reste lisible -->
+        <div class="ues-form-surface p-4 rounded-3 border border-light border-opacity-25">
+          <div class="login">
+            [(#FORMULAIRE_INSCRIPTION)]
+          </div>
+        </div>
+
+        <div class="small text-white-50 mt-3 mb-0">
+          Déjà un compte ? Utilisez l'onglet <strong class="text-white"><a href="#ues-slides"
+     class="btn btn-primary btn-sm px-3 d-inline-flex align-items-center gap-2"
+     data-bs-target="#uesCarousel"
+     data-bs-slide-to="1">Se connecter</a></strong>.
+        </div>
+      </div>
+    </div>
+
+  <?php } ?>
+</div>
+
+<div class="col-lg-5">
+  <div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white h-100">
+    <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center gap-2">
+      <i class="bi bi-info-circle" aria-hidden="true"></i>
+      <span class="fw-semibold">Conseils</span>
+    </div>
+
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="padd d-flex align-items-start gap-2">
+        <i class="bi bi-shield-check" aria-hidden="true"></i>
+        <div>
+          Utilisez une adresse email <strong class="text-white">valide</strong> : elle servira pour le suivi de votre dossier.
+        </div>
+      </div>
+    </div>
+
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="padd d-flex align-items-start gap-2">
+        <i class="bi bi-key" aria-hidden="true"></i>
+        <div>
+          Choisissez un mot de passe sûr et conservez-le : il sera nécessaire pour accéder au formulaire et au paiement.
+        </div>
+      </div>
+    </div>
+
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="padd d-flex align-items-start gap-2">
+        <i class="bi bi-arrow-right-circle" aria-hidden="true"></i>
+        <div>
+          Après création du compte : allez sur <strong class="text-white">"Se connecter"</strong>,
+          puis <strong class="text-white">"Formulaire"</strong>.
+        </div>
+      </div>
+    </div>
+
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="padd d-flex align-items-start gap-2">
+        <i class="bi bi-envelope" aria-hidden="true"></i>
+        <div>
+          Support : <a class="link-light" href="mailto:inscription@univsax.com">inscription@univsax.com</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+        </div>
+        <!-- SLIDE 4 (3) : Déroulement -->
+        
+        <div class="carousel-item" id="slide-formulaire">
+  <div class="row align-items-start">
+
+    <!-- Titre -->
+    <div class="col-12">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <h3 class="mb-0 ues-slide-title">
+          <i class="bi bi-music-note-list me-2"></i> Formulaire d'inscription
+        </h3>
+        <span class="badge rounded-pill text-bg-info">
+          Étape 2 · Formulaire
+        </span>
+      </div>
+    </div>
+
+    <!-- Colonne gauche -->
+    <div class="col-12 col-lg-7">
+<div class="col-12">
+  <div class="cadre_txt">
+    <p class="mb-0 text-white-50">
+      Lors de cette seconde étape, vous devez compléter le formulaire et cliquer sur "Enregistrer"
+      <strong class="text-white">« Envoyer votre inscription (colonne de droite : statut »</strong>.
+      Un administrateur de l'UES validera votre formulaire.
+      Il vous faudra ensuite l'imprimer, le signer et nous envoyer une copie à
+      <a class="link-light" href="mailto:contact@univsax.com">contact@univsax.com</a>.
+    </p>
+  </div>
+</div>
+     [(#SESSION{id_auteur}|oui)
+
+<B_article_formulaire>
+<BOUCLE_article_formulaire(ARTICLES) {id_auteur=#SESSION{id_auteur}} {id_rubrique IN 5,7} {statut IN prepa,prop,publie} {par date}{inverse}{0,1}>
+  [(#ENV{edit}|=={1}|oui)
+  <!-- MODE ÉDITION : formulaire complet -->
+    <div class="card ues-card-dark ues-form-card shadow-sm border-0 bg-dark bg-opacity-25 text-white">
+      <!-- Header -->
+      <div class="card-header bg-dark d-flex align-items-center justify-content-between">
+        <span class="fw-semibold"><i class="bi bi-pencil-square me-2"></i> Éditer votre formulaire</span>
+        <a href="[(#SELF|parametre_url{slide,3}|parametre_url{edit,''}|parametre_url{id_article,''}|ancre_url{ues-slides})]" class="btn btn-outline-light btn-sm">
+          <i class="bi bi-eye me-1"></i> Voir le résumé
+        </a>
+      </div>
+      <div class="card-body">
+        <div class="ues-form-surface p-3 rounded-3 border border-light border-opacity-25">
+          #FORMULAIRE_EDITER_ARTICLE{#ID_ARTICLE,#ID_RUBRIQUE,#SELF|parametre_url{slide,3}|parametre_url{edit,''}|parametre_url{id_article,#ID_ARTICLE}|ancre_url{ues-slides}}
+        </div>
+        <div class="small text-white-50 mt-3 mb-0">
+          Après modification, cliquez sur <strong class="text-white">Enregistrer »</strong>.
+        </div>
+      </div>
+    </div>
+  ]
+
+  [(#ENV{edit}|=={1}|non)
+  <!-- MODE RÉSUMÉ -->
+    <div class="card ues-card-dark ues-summary-card shadow-sm border-0 bg-dark bg-opacity-25 text-white">
+      <div class="card-header bg-dark d-flex align-items-center justify-content-between">
+        <span class="fw-semibold"><i class="bi bi-file-earmark-text me-2"></i> Votre formulaire</span>
+        <a href="[(#SELF|parametre_url{slide,3}|parametre_url{edit,1}|parametre_url{id_article,#ID_ARTICLE}|ancre_url{ues-slides})]" class="btn btn-warning btn-sm">
+          <i class="bi bi-pencil"></i> Modifier
+        </a>
+      </div>
+      <div class="card-body">
+        <div class="small text-white-50 mb-2">Résumé</div>
+        <div class="p-3 border border-light border-opacity-25">
+          <!-- Informations générales -->
+          
+
+          <!-- Champs extras -->
+          
+          
+          
+        <BOUCLE_art8(ARTICLES)
+       {id_auteur=#SESSION{id_auteur}}
+       {id_rubrique IN 5,7}
+       {statut IN prepa,prop,publie}
+       {par date}{inverse}{0,1}>
+       <div class="mb-2"><strong>#PRENOM #TITRE</strong> </div>
+
+       <!-- Afficher le logo de l'utilisateur -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center
+  justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2"></div>
+           <div class="text-end position">
+               [(#LOGO_AUTEUR|oui)
+                   <img src="[(#LOGO_AUTEUR|image_reduire{200,200}|extraire_attribut{src})]"
+                        alt="Logo de l'utilisateur"
+                        class="rounded-circle shadow-sm"
+                        style="width:80px;height:80px;object-fit:cover;">]
+           </div>
+       </div>
+
+       <!-- Nom -->
+
+
+       <!-- Adresse -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-start
+  justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+               <i class="bi bi-geo-alt" aria-hidden="true"></i><span>Adresse</span>
+           </div>
+           <div class="text-white-50 text-end">
+               #ADRESSE
+               #CODE_POSTAL
+               #VILLE
+               #PAYS
+           </div>
+       </div>
+
+       <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-telephone" aria-hidden="true"></i><span>Téléphone</span>
+           </div>
+           <div class="text-white-50 text-end"> #PHONE </div>
+       </div>
+
+       <!-- Email -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center
+  justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+               <i class="bi bi-envelope" aria-hidden="true"></i><span>Email</span>
+           </div>
+           <div class="text-white-50 text-end">[(#SESSION{email}|typo)]</div>
+       </div>
+
+       <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span>Sexe</span>
+           </div>
+           <div class="text-white-50 text-end"> #SEXO </div>
+       </div>
+              <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+       <span>Age</span>
+           </div>
+           <div class="text-white-50 text-end"> #AGE </div>
+       </div>
+              <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span>Particularités sanitaires</span>
+           </div>
+           <div class="text-white-50 text-end"> #SANTE </div>
+       </div>
+              <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span>Personne à joindre</span>
+           </div>
+           <div class="text-white-50 text-end"> #CONTACT_NOM
+#CONTACT_PRENOM</div>
+       </div>
+              <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span><:texte_vegetarien:></span>
+           </div>
+           <div class="text-white-50 text-end"> #VEGETARIEN </div>
+       </div>
+                     <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span>Hébergement </span>
+           </div>
+           <div class="text-white-50 text-end"> #HEBERGEMENT </div>
+       </div>
+                     <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span><:texte_auditeur:></span>
+           </div>
+           <div class="text-white-50 text-end"> #AUDITEUR </div>
+       </div>
+                     <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span><:texte_nomecole:></span>
+           </div>
+           <div class="text-white-50 text-end"> #ECOLE </div>
+       </div>
+                     <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span><:texte_nomprof:></span>
+           </div>
+           <div class="text-white-50 text-end"> #PROF </div>
+       </div>
+                     <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span>Pièce préparée</span>
+           </div>
+           <div class="text-white-50 text-end"> #PIECE </div>
+       </div>
+                     <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span><:texte_vegetarien:></span>
+           </div>
+           <div class="text-white-50 text-end"> #TYPE_SAXO </div>
+       </div>
+                     <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span><:info_typebec:></span>
+           </div>
+           <div class="text-white-50 text-end"> #TYPE_BEC </div>
+       </div>
+                     <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span>Droits d auteur</span>
+           </div>
+           <div class="text-white-50 text-end"> #OUI_NON_2 </div>
+       </div>
+                     <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span><:texte_modepaie:></span>
+           </div>
+           <div class="text-white-50 text-end"> #PAIEMENT </div>
+       </div>
+                     <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span>Message</span></div>
+           <div class="text-white-50 text-end"> #REMARQUE </div>
+       </div>
+                     <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span>Règlement UES</span>
+           </div>
+           <div class="text-white-50 text-end">Vous avez lu et accepté le règlement.</div>
+       </div>
+                     <!-- Téléphone -->
+       <div class="px-3 py-2 border-top border-light border-opacity-25 d-flex align-items-center justify-content-between gap-3">
+           <div class="d-flex align-items-center gap-2">
+        <span><:texte_vegetarien:></span>
+           </div>
+           <div class="text-white-50 text-end"> #VEGETARIEN </div>
+       </div>
+   </BOUCLE_art8>  
+          
+          
+          
+          
+          [(#SET{ues_extras,[(#INFO_EXTRA{article,#ID_ARTICLE}|unserialize|sinon{#ARRAY})]})]
+
+          <B_extra2>
+          <BOUCLE_extra2(DATA){source tableau,#GET{ues_extras}}>
+            [(#VALEUR|oui)
+              <div class="ues-extra-row d-flex flex-wrap align-items-start gap-2 py-2 border-top border-light border-opacity-10">
+                <div class="ues-extra-label text-white-50 small fw-semibold" style="flex:0 0 34%;max-width:34%;">
+                  [(#CLE|replace{_,' '}|ucfirst)]
+                </div>
+                <div class="ues-extra-value flex-grow-1">
+                  [(#VALEUR|is_array|oui)[(#VALEUR|implode{', '})]]
+                  [(#VALEUR|is_array|non)[(#VALEUR|textebrut)]]
+                </div>
+              </div>
+            ]
+          </BOUCLE_extra2>
+          <div class="text-white-50 small">Aucun champ extra trouvé.</div>
+          </B_extra2>
+        </div>
+      </div>
+<div class=" bott card-header bg-dark d-flex align-items-center justify-content-between">
+        <a href="[(#SELF|parametre_url{slide,3}|parametre_url{edit,1}|parametre_url{id_article,#ID_ARTICLE}|ancre_url{ues-slides})]" class="btn btn-warning btn-sm">
+          <i class="bi bi-pencil"></i> Modifier
+        </a>
+      </div>
+    </div>
+  ]
+</BOUCLE_article_formulaire>
+</B_article_formulaire>
+
+<!-- Aucun article trouvé -->
+<div class="card ues-card-dark ues-create-card shadow-sm border-0 bg-dark bg-opacity-25 text-white">
+  <div class="card-header bg-dark text-white">
+    <span class="fw-semibold"><i class="bi bi-file-earmark-plus me-2"></i> Créer votre formulaire</span>
+    <span class="badge rounded-pill bg-light text-dark px-3 py-2">Stage 2026</span>
+  </div>
+  <div class="card-body">
+    <p class="text-white-50 mb-3">Commencez par créer votre dossier. Ensuite, le formulaire complet apparaîtra.</p>
+    <div class="ues-form-surface p-3 rounded-3 border border-light border-opacity-25">
+      #FORMULAIRE_INSCRIPTION_UES{#ID_RUBRIQUE,#SELF|parametre_url{slide,3}|ancre_url{ues-slides}}
+    </div>
+  </div>
+</div>
+<//B_article_formulaire>
+
+[(#SESSION{id_auteur}|non)
+  <div class="alert alert-warning mb-0">Vous devez vous identifier pour compléter un formulaire.</div>
+]
+
+[(#SESSION{id_auteur}|non)
+  <div class="alert alert-warning mb-0">
+    Vous devez vous identifier pour compléter un formulaire.
+  </div>
+]
+
+
+      ]
+
+      [(#SESSION{id_auteur}|non)
+        <div class="alert alert-warning mb-0">
+          Vous devez vous identifier pour compléter un formulaire.
+        </div>
+      ]
+
+    </div>
+    
+
+    <!-- Colonne droite -->
+    <div class="col-12 col-lg-5">
+
+      [(#SESSION{id_auteur}|oui)
+
+      <B_article_statut>
+      <BOUCLE_article_statut(ARTICLES)
+        {id_auteur=#SESSION{id_auteur}}
+        {id_rubrique IN 5,7}
+        {statut IN prepa,prop,publie}
+        {par date}{inverse}{0,1}>
+
+        <div class="card ues-card-dark ues-status-card shadow-sm border-0 bg-dark bg-opacity-25 text-white">
+          <div class="card-header bg-dark text-white d-flex align-items-center justify-content-between">
+            <span class="fw-semibold">
+              <i class="bi bi-sliders me-2" aria-hidden="true"></i>
+              Statut du dossier
+            </span>
+
+            <span class="badge rounded-pill ues-status-pill" data-statut="#STATUT">#STATUT</span>
+          </div>
+
+          <div class="card-body">
+            <p class="text-white-50 mb-3">
+              Pour <strong class="text-white">proposer votre candidature à l'évaluation</strong>, modifiez le statut ci-dessous
+              en <em class="text-white">« proposé à l'évaluation »</em>, puis cliquez sur <strong class="text-white">Changer</strong>.
+            </p>
+
+            <div class="ues-status-form p-3 rounded-3 border border-light border-opacity-25 bg-light bg-opacity-10">
+              [(#SESSION{statut}|=={1comite}|oui)
+                #FORMULAIRE_INSTITUER_OBJET{article,#ID_ARTICLE,#SELF|parametre_url{slide,3}|parametre_url{var_mode,preview}|ancre_url{ues-slides}}
+              ]
+              [(#SESSION{statut}|=={0minirezo}|oui)
+                #FORMULAIRE_INSTITUER_OBJET{article,#ID_ARTICLE,#SELF|parametre_url{slide,3}|parametre_url{var_mode,preview}|ancre_url{ues-slides}}
+              ]
+            </div>
+          </div>
+        </div>
+        
+        <!-- Section pour afficher ou mettre à jour le logo -->
+<!-- Logo utilisateur (logo auteur SPIP) -->
+<div class="photos card ues-card-dark shadow-sm border-0 bg-dark bg-opacity-25 text-white mt-3">
+  <div class="card-header bg-dark text-white d-flex align-items-center justify-content-between">
+    <span class="fw-semibold">
+      <i class="bi bi-image me-2" aria-hidden="true"></i>
+      #PRENOM #TITRE
+    </span>
+    <span class="badge rounded-pill bg-light bg-opacity-10 text-white border border-light border-opacity-25 px-3 py-2">
+      Photo
+    </span>
+  </div>
+
+  <div class="card-body">
+    <BOUCLE_ues_me_logo(AUTEURS){id_auteur=#SESSION{id_auteur}}{tout}>
+
+      <!-- Aperçu logo actuel -->
+      <div class="text-center mb-3">
+        [(#LOGO_AUTEUR|oui)
+          [(#LOGO_AUTEUR
+            |image_reduire{220,0}
+            |inserer_attribut{class,'img-fluid rounded shadow-sm'}
+            |inserer_attribut{alt,'Logo utilisateur'}
+          )]
+        ]
+        [(#LOGO_AUTEUR|non)
+          <div class="text-white-50 small">Aucun logo pour le moment.</div>
+        ]
+      </div>
+
+      <!-- Upload / remplacement via SPIP -->
+      <div class="p-3 rounded-3 border border-light border-opacity-25">
+        #FORMULAIRE_EDITER_LOGO{auteur,#ID_AUTEUR,#SELF|parametre_url{slide,0}|ancre_url{ues-slides}}
+      </div>
+
+      <p class="small text-white-50 mt-3 mb-0">
+        Formats conseillés : JPG/PNG. Après envoi, le logo peut mettre quelques secondes à apparaître (cache).
+      </p>
+
+    </BOUCLE_ues_me_logo>
+
+    <!-- Si pas connecté -->
+    <div class="alert alert-warning mb-0">
+      Vous devez être connecté pour ajouter un logo.
+    </div>
+
+    <//B_ues_me_logo>
+  </div>
+</div>
+
+  
+        
+         <div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white">
+        <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center gap-2">
+          <i class="bi bi-check2-circle"></i>
+          <span class="fw-semibold">Checklist</span>
+        </div>
+
+        <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+          <div class="d-flex align-items-start gap-2">
+            <i class="bi bi-1-circle mt-1"></i>
+            <div>Formulaire complété et <strong>envoyé</strong></div>
+          </div>
+        </div>
+
+        <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+          <div class="d-flex align-items-start gap-2">
+            <i class="bi bi-2-circle mt-1"></i>
+            <div>Formulaire <strong>validé</strong> par l'administration</div>
+          </div>
+        </div>
+
+        <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+          <div class="d-flex align-items-start gap-2">
+            <i class="bi bi-3-circle mt-1"></i>
+            <div>Impression + <strong>signature</strong></div>
+          </div>
+        </div>
+
+        <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+          <div class="d-flex align-items-start gap-2">
+            <i class="bi bi-4-circle mt-1"></i>
+            <div>Envoi à <a class="link-light" href="mailto:contact@univsax.com">contact@univsax.com</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aide / contact -->
+      <div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white mt-3">
+        <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center gap-2">
+          <i class="bi bi-life-preserver"></i>
+          <span class="fw-semibold">Aide</span>
+        </div>
+        <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+          En cas de difficulté, contactez :
+          <a class="link-light" href="mailto:inscription@univsax.com">inscription@univsax.com</a>
+        </div>
+      </div>
+
+      </BOUCLE_article_statut>
+      </B_article_statut>
+
+        <div class="alert alert-info mb-0">
+          Une fois votre compte créé, commencez par <strong>remplir le formulaire</strong> (colonne gauche).
+        </div>
+
+      <//B_article_statut>
+
+      ]
+
+    </div>
+
+  </div>
+</div>
+
+<div class="carousel-item">
+    <h3>Paiement</h3>
+    <!-- Contenu de la diapositive paiement -->
+</div>
+
+      </div>
+<div class="ues-slide-nav d-flex gap-2 flex-wrap">
+    <!-- Bouton "Inscription" -->
+    <button class="btn btn-light ues-tabbtn" data-bs-slide-to="0" data-bs-target="#uesCarousel" type="button">
+        <i class="bi bi-pencil-square me-1"></i> Inscription
+    </button>
+    
+    <!-- Boutons pour les utilisateurs déconnectés -->
+    [(#SESSION{auth}|non)
+        <button class="btn btn-light ues-tabbtn" data-bs-slide-to="1" data-bs-target="#uesCarousel" type="button">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Se connecter
+        </button>
+        <button class="btn btn-light ues-tabbtn" data-bs-slide-to="2" data-bs-target="#uesCarousel" type="button">
+            <i class="bi bi-person-plus-fill me-1"></i> S'inscrire
+        </button>
+    ]
+
+    <!-- Bouton "Formulaire" - affiché uniquement pour les utilisateurs connectés -->
+    [(#SESSION{id_auteur}|oui)
+        <button class="btn btn-light ues-tabbtn" data-bs-slide-to="3" data-bs-target="#uesCarousel" type="button">
+            <i class="bi bi-folder2-open me-1"></i> Formulaire
+        </button>
+    ]
+
+    <!-- Bouton "Paiement" - affiché uniquement pour utilisateurs connectés qui ont des articles -->
+    [(#SESSION{id_auteur}|oui) 
+        <BOUCLE_articles_paiement2(ARTICLES){id_auteur=#SESSION{id_auteur}}{id_rubrique IN 5,7}{0,1}>
+            <button class="btn btn-light ues-tabbtn" data-bs-slide-to="4" data-bs-target="#uesCarousel" type="button">
+    <i class="bi bi-credit-card me-1"></i> Paiement
+</button>
+        </BOUCLE_articles_paiement2>
+    ]
+</div>
+    </div>
+  </div>
+</section>
+<!-- Bandeau logos (après #hero) -->
+<div aria-label="Logos partenaires" class="ues-logo-strip-wrap">
+<p class="ues-logo-strip__title">Avec la participation de :</p>
+<section class="ues-logo-strip" id="logo-strip">
+<div class="ues-logo-strip__container">
+<div class="ues-logo-strip__row">
+<img alt="Henri SELMER Paris" class="ues-logo ues-logo--selmer" loading="lazy" src="assets/img/ues/Henri_Selmer_Paris_logo.svg"/>
+<img alt="Vandoren" class="ues-logo ues-logo--vandoren" loading="lazy" src="assets/img/ues/vandoren.svg"/>
+<img alt="Hautes-Alpes — le département" class="ues-logo ues-logo--hautes-alpes" loading="lazy" src="assets/img/ues/Logo_Hautes_Alpes.svg"/>
+<img alt="Ville de Gap" class="ues-logo ues-logo--gap" loading="lazy" src="assets/img/ues/Logo_ville_de_Gap.svg"/>
+</div>
+</div>
+</section>
+</div>
+
+
+
+
+
+    <!-- ============================
+         CONTACT
+         ============================ -->
+    <section id="contact" class="ues-contact py-7">
+  <div class="container-xxl ues-contact__wrap">
+
+    <!-- Titre gauche (style OIB) -->
+    <div class="ues-contact__head" data-aos="zoom-out">
+      <div class="ues-contact__kicker">MESSAGERIE</div>
+      <h2 class="ues-contact__title">Université Européenne de Saxophone</h2>
+    </div>
+
+    <div class="row g-4 mt-4">
+      <!-- Colonne infos -->
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="ues-contact__info">
+          <div class="ues-contact__item">
+            <span class="ues-contact__icon" aria-hidden="true">
+              <i class="bi bi-geo-alt"></i>
+            </span>
+            <div>
+              <h4>Adresse :</h4>
+              <p>14 chemin de Vigneaux<br>
+                Romette<br>05000 Gap FRANCE</p>
+            </div>
+          </div>
+
+          <div class="ues-contact__item">
+            <span class="ues-contact__icon" aria-hidden="true">
+              <i class="bi bi-telephone-inbound"></i>
+            </span>
+            <div>
+              <h4>Téléphone:</h4>
+              <p>+033 (0)4.92.45.06.48</p>
+            </div>
+          </div>
+          
+          <div class="ues-contact__item">
+            <span class="ues-contact__icon" aria-hidden="true">
+              <i class="bi bi-envelope"></i>
+            </span>
+            <div>
+              <h4>Email:</h4>
+              <p><a href="mailto:contact@univsax.com">contact@univsax.com</a></p>
+            </div>
+          </div>
+          
+          <div class="ues-contact__item">
+            <span class="ues-contact__icon" aria-hidden="true">
+              <i class="bi bi-house-check"></i>
+            </span>
+            <div>
+              <h4>Hébergement:</h4>
+              <p>Foyer Des Jeunes Travailleurs<br>
+73 Boulevard Georges Pompidou<br>
+05000 Gap FRANCE	 <br>
+<br>
+Tel : +033 (0)4 92 40 24 00</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Colonne formulaire -->
+      <div class="col-lg-8" data-aos="fade-left">
+        <div class="ues-contact__form">
+          <h3 class="ues-contact__formtitle">Envoyer un message</h3>
+
+          <div class="ajax">
+            #FORMULAIRE_CONTACT
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+<footer class="footer header2 ues-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="inner-content">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="single-footer f-about">
+                <div class="logo ues_logo"> <img src="assets/img/ues/ues_blc.png" alt="UES saxophone stage">
+                </div>
+                <h4 class="social-title">
+                  Suivez-nous :
+                  <a href="https://www.facebook.com/univsax/" target="_blank" rel="noopener">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </h4>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer f-link">
+                <h3>Menu</h3>
+                  <ul>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="index.php">Accueil</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="1">Présentation</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="spip.php?rubrique5">Inscription</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="2">Enseignement</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="3">Histoire</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="4">Une journée à l'UES</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-concerts">Les concerts</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#part">Nos partenaires</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#contact">Nous contacter</a></li>
+                  </ul>
+                </nav>
+                </B_nav>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-12">
+              <div class="single-footer f-link">
+                <h3>Espace étudiants</h3>
+                <ul>
+                  <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">Accueil</a></li>
+        <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">S'inscrire</a></li>
+        <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">Formulaire</a></li>
+        <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">Téléchargement</a></li>
+      <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">Chat UES</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer newsletter">
+                <h3>S'inscrire à la newsletter</h3>
+                <p>Recevez les dernières actualités, programme et prochaines projection débat de Cinecitoyen.</p>
+                #FORMULAIRE_NEWSLETTER_SUBSCRIBE
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright-area">
+      <div class="container">
+        <div class="inner-content">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+              <p class="copyright-text">© 2026 Université Européenne de Saxophone - Tous droits réservés</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <p class="copyright-owner">Designed and Developed by GD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Waves (DOIT rester DANS le footer) -->
+  <div class="ues-footer-waves" aria-hidden="true">
+    <svg class="ues-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+      <defs>
+        <path id="ues-gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"></path>
+      </defs>
+      <g class="ues-parallax">
+  <use href="#ues-gentle-wave" x="48" y="0"></use>
+  <use href="#ues-gentle-wave" x="48" y="4"></use>
+</g>
+
+    </svg>
+  </div>
+</footer>
+
+<!-- ======= Bandeau partenaires (EN DEHORS du footer, sous la vague) ======= -->
+<section id="cta" class="cta partenaire">
+  <div class="container">
+    <div class="row" data-aos="zoom-out">
+      <div class="col-lg-12">
+        <div class="ues-logo-strip__container">
+<div class="ues-logo-strip__row">
+<img alt="Henri SELMER Paris" class="ues-logo ues-logo--selmer" loading="lazy" src="assets/img/ues/Henri_Selmer_Paris_logo.svg"/>
+<img alt="Vandoren" class="ues-logo ues-logo--vandoren" loading="lazy" src="assets/img/ues/vandoren.svg"/>
+<img alt="Hautes-Alpes — le département" class="ues-logo ues-logo--hautes-alpes" loading="lazy" src="assets/img/ues/Logo_Hautes_Alpes.svg"/>
+<img alt="Ville de Gap" class="ues-logo ues-logo--gap" loading="lazy" src="assets/img/ues/Logo_ville_de_Gap.svg"/>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+  #INSERT_FOOTER
+  
+<script>
+(function () {
+  function ensureBootstrap(cb) {
+    if (window.bootstrap && window.bootstrap.Carousel) return cb();
+
+    const existing = document.querySelector('script[data-ues-bootstrap]');
+    if (existing) {
+      existing.addEventListener('load', cb, { once: true });
+      return;
+    }
+
+    const s = document.createElement("script");
+    s.src = "assets/vendor/bootstrap/js/bootstrap.bundle.min.js";
+    s.dataset.uesBootstrap = "1";
+    s.onload = cb;
+    s.onerror = () => console.warn("Bootstrap JS introuvable :", s.src);
+    document.body.appendChild(s);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    ensureBootstrap(() => {
+      const carouselEl = document.querySelector("#uesCarousel");
+      if (!carouselEl) return;
+
+      const slidesSection = document.querySelector("#ues-slides");
+      const items = Array.from(carouselEl.querySelectorAll(".carousel-item"));
+
+      const carousel = bootstrap.Carousel.getOrCreateInstance(carouselEl, {
+        interval: false,
+        touch: true
+      });
+
+      const navButtons = Array.from(
+        document.querySelectorAll('.ues-tabbtn[data-bs-target="#uesCarousel"][data-bs-slide-to]')
+      );
+
+      const setActiveButton = (activeIndex) => {
+        navButtons.forEach((btn) => {
+          const isActive = Number(btn.getAttribute("data-bs-slide-to")) === activeIndex;
+          btn.classList.toggle("is-active", isActive);
+          btn.setAttribute("aria-current", isActive ? "true" : "false");
+          btn.classList.toggle("btn-dark", isActive);
+          btn.classList.toggle("btn-light", !isActive);
+        });
+      };
+
+      const initialActive = carouselEl.querySelector(".carousel-item.active");
+      setActiveButton(Math.max(0, items.indexOf(initialActive)));
+
+      carouselEl.addEventListener("slid.bs.carousel", (e) => {
+        const idx = (typeof e.to === "number")
+          ? e.to
+          : Math.max(0, items.indexOf(carouselEl.querySelector(".carousel-item.active")));
+        setActiveButton(idx);
+      });
+
+      document
+        .querySelectorAll('a[data-bs-target="#uesCarousel"][data-bs-slide-to]')
+        .forEach((link) => {
+          link.addEventListener("click", (e) => {
+            if (link.tagName.toLowerCase() === "a") e.preventDefault();
+            const idx = parseInt(link.getAttribute("data-bs-slide-to"), 10);
+            if (Number.isNaN(idx)) return;
+
+            carousel.to(idx);
+            (slidesSection || carouselEl).scrollIntoView({ behavior: "smooth", block: "start" });
+            if (location.hash !== "#ues-slides") history.replaceState(null, "", "#ues-slides");
+          });
+        });
+
+      const params = new URLSearchParams(window.location.search);
+      const slideParam = parseInt(params.get("slide"), 10);
+
+      if (!Number.isNaN(slideParam) && slideParam >= 0 && slideParam < items.length) {
+        carousel.to(slideParam);
+
+        params.delete("slide");
+        const qs = params.toString();
+        const newUrl = window.location.pathname + (qs ? ("?" + qs) : "") + window.location.hash;
+        history.replaceState(null, "", newUrl);
+      }
+    });
+  });
+})();
+</script>
+<script>
+/* UES — calcule la hauteur réelle du header fixed pour éviter les chevauchements
+   (utile quand la topbar/nav changent entre connecté / non connecté) */
+(function(){
+  const root = document.documentElement;
+  const header = document.getElementById("header");
+  if (!header) return;
+
+  const setHeaderH = () => {
+    const h = Math.ceil(header.getBoundingClientRect().height || 0);
+    if (h > 0) root.style.setProperty("--ues-header-h", h + "px");
+  };
+
+  setHeaderH();
+  window.addEventListener("load", setHeaderH, { passive: true });
+  window.addEventListener("resize", setHeaderH, { passive: true });
+
+  // Au cas où la hauteur change au scroll (compact/expanded)
+  let t = null;
+  window.addEventListener("scroll", () => {
+    if (t) return;
+    t = setTimeout(() => { t = null; setHeaderH(); }, 120);
+  }, { passive: true });
+})();
+</script>
+
+
+</body>
+</html>

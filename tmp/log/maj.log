@@ -132,3 +132,36 @@
 2026-01-29 04:14:13 127.0.0.1 (pid 27084) :Pri:!INFO: contact_base_version_maj_0.2.0: ok
 2026-01-29 04:14:13 127.0.0.1 (pid 27084) :Pri:!INFO: meta contact_base_version: 0.2.0 en 0 secondes
 2026-01-29 04:14:13 127.0.0.1 (pid 27084) :Pri:!INFO: MAJ terminee. contact_base_version: 0.2.0
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: maj meta mailsubscribers_base_version_maj_init etape 0: maj_tables Array
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: mailsubscribers_base_version_maj_init: ok
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: maj meta mailsubscribers_base_version_maj_init etape 1: mailsubscribers_import_from_spiplistes 
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: mailsubscribers_base_version_maj_init: ok
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: maj meta mailsubscribers_base_version_maj_init etape 2: mailsubscribers_import_from_mesabonnes 
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: mailsubscribers_base_version_maj_init: ok
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: maj meta mailsubscribers_base_version_maj_init etape 3: mailsubscribers_import_from_spiplettres 
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: mailsubscribers_base_version_maj_init: ok
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: maj meta mailsubscribers_base_version_maj_init etape 4: mailsubscribers_import_from_clevermail 
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: mailsubscribers_base_version_maj_init: ok
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: meta mailsubscribers_base_version: init en 0 secondes
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: maj meta mailsubscribers_base_version_maj_1.2.1 etape 0: inc_config_dist 
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: mailsubscribers_base_version_maj_1.2.1: ok
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: meta mailsubscribers_base_version: 1.2.1 en 0 secondes
+2026-01-30 05:53:04 127.0.0.1 (pid 1272) :Pri:!INFO: MAJ terminee. mailsubscribers_base_version: 1.2.1
+2026-02-06 23:03:54 127.0.0.1 (pid 5332) :Pri:!INFO: maj meta inscription3_base_version_maj_init etape 0: i3_installer_pays 
+2026-02-06 23:03:55 127.0.0.1 (pid 5332) :Pri:!INFO: inscription3_base_version_maj_init: ok
+2026-02-06 23:03:55 127.0.0.1 (pid 5332) :Pri:!INFO: maj meta inscription3_base_version_maj_init etape 1: ecrire_meta inscription3,a:11:{s:13:"nom_fiche_mod";s:2:"on";s:9:"nom_table";s:2:"on";s:15:"email_fiche_mod";s:2:"on";s:11:"email_table";s:2:"on";s:14:"pass_fiche_mod";s:2:"on";s:13:"bio_fiche_mod";s:2:"on";s:15:"login_fiche_mod";s:2:"on";s:18:"nom_site_fiche_mod";s:2:"on";s:18:"url_site_fiche_mod";s:2:"on";s:14:"statut_nouveau";s:6:"6forum";s:14:"statut_interne";s:0:"";}
+2026-02-06 23:03:55 127.0.0.1 (pid 5332) :Pri:!INFO: inscription3_base_version_maj_init: ok
+2026-02-06 23:03:55 127.0.0.1 (pid 5332) :Pri:!INFO: meta inscription3_base_version: init en 1 secondes
+2026-02-06 23:03:55 127.0.0.1 (pid 5332) :Pri:!INFO: maj meta inscription3_base_version_maj_3.0.2 etape 0: inc_config_dist 
+2026-02-06 23:03:55 127.0.0.1 (pid 5332) :Pri:!INFO: inscription3_base_version_maj_3.0.2: ok
+2026-02-06 23:03:55 127.0.0.1 (pid 5332) :Pri:!INFO: meta inscription3_base_version: 3.0.2 en 1 secondes
+2026-02-06 23:03:55 127.0.0.1 (pid 5332) :Pri:!INFO: MAJ terminee. inscription3_base_version: 3.0.2
+2026-02-06 23:06:16 127.0.0.1 (pid 5332) :Pri:!INFO: maj meta pays_base_version_maj_init etape 0: maj_tables Array
+2026-02-06 23:06:16 127.0.0.1 (pid 5332) :Pri:!INFO: pays_base_version_maj_init: ok
+2026-02-06 23:06:16 127.0.0.1 (pid 5332) :Pri:!INFO: maj meta pays_base_version_maj_init etape 1: peupler_base_pays 
+2026-02-06 23:06:16 127.0.0.1 (pid 5332) :Pri:!INFO: pays_base_version_maj_init: ok
+2026-02-06 23:06:16 127.0.0.1 (pid 5332) :Pri:!INFO: meta pays_base_version: init en 0 secondes
+2026-02-06 23:06:16 127.0.0.1 (pid 5332) :Pri:!INFO: maj meta pays_base_version_maj_1.4.8 etape 0: inc_config_dist 
+2026-02-06 23:06:16 127.0.0.1 (pid 5332) :Pri:!INFO: pays_base_version_maj_1.4.8: ok
+2026-02-06 23:06:16 127.0.0.1 (pid 5332) :Pri:!INFO: meta pays_base_version: 1.4.8 en 0 secondes
+2026-02-06 23:06:16 127.0.0.1 (pid 5332) :Pri:!INFO: MAJ terminee. pays_base_version: 1.4.8

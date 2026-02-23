@@ -1,0 +1,333 @@
+a:2:{s:9:"nom_cache";s:38:"17d56a11bc421b5d389d1e5244fc63a9.cache";s:6:"valeur";a:12:{s:9:"squelette";s:37:"html_13d055254278883be2887873a48d0a73";s:6:"source";s:38:"squelettes/inc-ues-accordion-item.html";s:11:"process_ins";s:3:"php";s:11:"invalideurs";a:2:{s:5:"cache";s:38:"f71ff670a59668a6a02c0a474a9b283e.cache";s:7:"session";s:8:"c30f5dbd";}s:7:"entetes";a:1:{s:12:"X-Spip-Cache";i:86400;}s:5:"duree";i:0;s:5:"texte";s:13139:"
+
+  
+   
+    
+  
+
+  
+
+  <div class="accordion-item mb-2"
+       data-name="nom gaia "
+       data-prio="1"
+       data-docsok="0"
+       data-payok="0"
+       data-auditeur="0"
+       data-ts="1771019037">
+
+    <h2 class="accordion-header" id="h-insc-1437">
+      <button class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#c-insc-1437"
+              aria-expanded="false"
+              aria-controls="c-insc-1437">
+
+        <div class="d-flex w-100 align-items-center justify-content-between gap-3 flex-wrap">
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+            <!-- Avatar auteur -->
+            
+              <img
+	src="local/cache-vignettes/L45xH38/arsenijevic-450c0.jpg?1771007330" class='ues-author-avatar' width='45' height='38' alt='' />
+            
+
+            <strong>Nom Gaia </strong>
+            <strong> </strong>
+
+            
+          </div>
+
+          <div class="d-flex align-items-center gap-2 flex-wrap">
+
+            <!-- WHATSAPP -->
+            
+             
+              <span class="" style="opacity:0.3;" title="Pas de WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+              </span>
+            
+
+            <span class="ues-pill  ues-pill--ok">
+              <i class="bi bi-sliders"></i>
+               Envoyé
+              
+            </span>
+
+            
+             
+              <span class="ues-pill ues-pill--todo">
+                <span class="ues-dot ues-dot--todo"></span> À faire
+              </span>
+            
+
+            
+             
+              <span class="ues-pill ues-pill--todo">
+                <i class="bi bi-credit-card"></i> Paiement en attente
+              </span>
+            
+
+            
+             
+              <span class="ues-pill ues-pill--todo">
+                <span class="ues-dot ues-dot--todo"></span> En attente
+              </span>
+            
+          </div>
+        </div>
+
+      </button>
+    </h2>
+
+    <div id="c-insc-1437"
+         class="accordion-collapse collapse"
+         aria-labelledby="h-insc-1437"
+         data-bs-parent="#accInscriptions">
+
+      <div class="accordion-body text-white">
+        <div class="row g-4 align-items-start">
+
+          <!-- COLONNE GAUCHE -->
+          <div class="col-12 col-lg-7">
+            <div class="card ues-card-dark shadow-sm border-0 bg-dark bg-opacity-25 text-white ues-adminbox">
+
+              <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center justify-content-between gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-pencil-square" aria-hidden="true"></i>
+                  <span class="fw-semibold">Modifier le dossier</span>
+                </div>
+                <span class="badge rounded-pill text-bg-info">Stage 2026</span>
+              </div>
+
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap mb-3 ues-savebar">
+                  <div class="text-white-50">
+                    N'oubliez pas d'enregistrer vos modifications
+                  </div>
+                  <button type="button" class="btn btn-outline-light ues-save-top">Enregistrer</button>
+                </div>
+
+                <div class="ues-form-surface p-3 rounded-3 border border-light border-opacity-25">
+                  <?php
+include_once("./" . _DIR_RACINE . "ecrire/balise/formulaire_.php");
+if ($lang_select = "fr") $lang_select = lang_select($lang_select);
+inserer_balise_dynamique(balise_FORMULAIRE__dyn('FORMULAIRE_EDITER_ARTICLE', '1437', '5', 'spip.php?page=tableau_inscriptions'), array('squelettes/inc-ues-accordion-item.html', 'html_13d055254278883be2887873a48d0a73', '_art', 90, 'fr'));
+if ($lang_select) lang_select();
+?></div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- COLONNE DROITE -->
+          <div class="col-12 col-lg-5">
+
+            
+
+            <!-- Informations -->
+            <div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white">
+              <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center justify-content-between gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-person-badge" aria-hidden="true"></i>
+                  <span class="fw-semibold">Informations</span>
+                </div>
+              </div>
+
+              <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                  <div>Nom / Prénom</div>
+                  <div class="text-white text-end fw-semibold">Nom Gaia </div>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                  <div>Email</div>
+
+                  <div class="text-white text-end">
+                    
+                          <a class="text-white" href="mailto:contact@fermegaia.nc">contact@fermegaia.nc</a>
+                        
+                      
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                  <div>Statut inscription</div>
+                  <div class="text-white text-end">
+                    
+                    
+                     
+                      <strong class="text-white">en attente</strong>
+                    
+                  </div>
+                </div>
+
+                <div class="border-top border-light border-opacity-25 my-2"></div>
+
+                <div class="d-flex align-items-center justify-content-between gap-3">
+                  <div>Paiement</div>
+                  <div class="text-white text-end">
+                    
+                    
+                     
+                      <strong class="text-white">en attente</strong>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white ues-checklist mt-3">
+
+    <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center gap-2">
+      <i class="bi bi-check2-circle"></i>
+      <span class="fw-semibold">Checklist</span>
+    </div>
+
+    <!-- 1) Formulaire envoyé -->
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="ues-checkline">
+        <i class="bi bi-1-circle mt-1"></i>
+        <div class="ues-checktext">Formulaire complété et <strong>envoyé</strong></div>
+        <span class="ues-step-dot  is-done" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <!-- 2) Photo d'identité -->
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="ues-checkline">
+        <i class="bi bi-2-circle mt-1"></i>
+        <div class="ues-checktext">Photo d'identité</div>
+        <span class="ues-step-dot  is-done" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <!-- 3) Formulaire validé par l'administration -->
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="ues-checkline">
+        <i class="bi bi-3-circle mt-1"></i>
+        <div class="ues-checktext">Formulaire <strong>validé</strong> par l'administration</div>
+        <span class="ues-step-dot  is-done" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <!-- 4) Copie signée envoyée (pièce jointe) -->
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="ues-checkline">
+        <i class="bi bi-4-circle mt-1"></i>
+        <div class="ues-checktext">Copie <strong>signée</strong> envoyée (pièce jointe)</div>
+        <span class="ues-step-dot " aria-hidden="true"></span>
+      </div>
+    </div>
+    
+      
+  <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+    <div class="ues-checkline">
+      <i class="bi bi-5-circle mt-1"></i>
+      <div class="ues-checktext">Paiement effectué</div>
+      <span class="ues-step-dot " aria-hidden="true"></span>
+    </div>
+  </div>
+
+    <!-- 5) Inscription validée et confirmée par l'UES -->
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="ues-checkline">
+        <i class="bi bi-5-circle mt-1"></i>
+        <div class="ues-checktext">Inscription <strong>validée et confirmée</strong> par l'UES</div>
+        <span class="ues-step-dot " aria-hidden="true"></span>
+      </div>
+    </div>
+
+  </div> 
+
+   
+    <?php
+include_once("./" . _DIR_RACINE . "ecrire/balise/formulaire_.php");
+if ($lang_select = "fr") $lang_select = lang_select($lang_select);
+inserer_balise_dynamique(balise_FORMULAIRE__dyn('FORMULAIRE_ENVOYER_MAIL_UES', '1437', 'publie', 'Envoyer email : formulaire validé', 'btn-outline-info mt-3'), array('squelettes/inc-ues-accordion-item.html', 'html_13d055254278883be2887873a48d0a73', '_art', 57, 'fr'));
+if ($lang_select) lang_select();
+?>
+
+  
+
+
+       
+
+            
+            <!-- Documents -->
+            <div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white mt-3">
+              <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center justify-content-between gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-paperclip" aria-hidden="true"></i>
+                  <span class="fw-semibold">Documents</span>
+                </div>
+
+                <a class="btn btn-sm btn-warning d-inline-flex align-items-center gap-1 ues-btn-regen"
+                   href="spip.php?page=article_pdf&amp;id_article=1437&amp;var_mode=recalcul"
+                   target="_blank" rel="noopener"
+                   data-article-id="1437"
+                   data-refresh-url="spip.php?page=tableau_inscriptions&amp;id_article=1437"
+                   title="Générer / Régénérer le PDF">
+                  <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                  Régénérer PDF
+                </a>
+
+                
+                 
+                  <span class="badge rounded-pill bg-light bg-opacity-10 text-white border border-light border-opacity-25">
+                    À faire
+                  </span>
+                
+              </div>
+
+              
+                
+                  <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+                    <div class="d-flex align-items-center justify-content-between gap-3">
+                      <a class="link-light" href="IMG/pdf/gaia_a1444-3.pdf" target="_blank" rel="noopener">
+                        gaia_a1444-3.pdf
+                      </a>
+                      <span class="text-white-50">19 f&eacute;vrier 2026</span>
+                    </div>
+                  </div>
+                
+              
+              <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+                Aucun document.
+              </div>
+            </div>
+
+            <!-- Statut admin -->
+            <div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white mt-3 ues-admin-statutbox">
+              <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center justify-content-between gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-sliders" aria-hidden="true"></i>
+                  <span class="fw-semibold">Statut</span>
+                </div>
+                <span class="badge rounded-pill bg-light bg-opacity-10 text-white border border-light border-opacity-25">
+                  publie
+                </span>
+              </div>
+
+              <div class="px-3 py-2 border-top border-light border-opacity-25">
+                <?php
+include_once("./" . _DIR_RACINE . "ecrire/balise/formulaire_.php");
+if ($lang_select = "fr") $lang_select = lang_select($lang_select);
+inserer_balise_dynamique(balise_FORMULAIRE__dyn('FORMULAIRE_INSTITUER_OBJET', 'article', '1437', 'spip.php?page=tableau_inscriptions'), array('squelettes/inc-ues-accordion-item.html', 'html_13d055254278883be2887873a48d0a73', '_art', 199, 'fr'));
+if ($lang_select) lang_select();
+?></div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+";s:5:"notes";s:0:"";s:8:"contexte";a:7:{s:10:"id_article";s:4:"1437";s:7:"docs_ok";s:1:"0";s:4:"lang";s:2:"fr";s:4:"date";s:19:"2026-02-23 00:51:13";s:12:"date_default";b:1;s:10:"date_redac";s:19:"2026-02-23 00:51:13";s:18:"date_redac_default";b:1;}s:12:"lastmodified";i:1771804272;s:2:"gz";b:0;s:3:"sig";i:413673977;}}

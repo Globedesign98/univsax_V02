@@ -1,0 +1,18 @@
+a:2:{s:9:"nom_cache";s:38:"36fcda684ca002b808657731f3220851.cache";s:6:"valeur";a:12:{s:9:"squelette";s:37:"html_a62948ed72f10f0fb43c12189d6834e7";s:6:"source";s:38:"prive/formulaires/inc-apercu-logo.html";s:11:"process_ins";s:4:"html";s:11:"invalideurs";a:2:{s:5:"cache";s:38:"6faf8883cfea986ad2d86cc6eba0865d.cache";s:7:"session";s:8:"7cbe69df";}s:7:"entetes";a:1:{s:12:"X-Spip-Cache";i:3600;}s:5:"duree";i:0;s:5:"texte";s:700:"<div class="apercu">
+	<div class="spip_logo"><a href="IMG/logo/person-m-3.webp?1771462328" class="mediabox"><img src='local/cache-vignettes/L320xH320/person-m-3-b5a4b.webp?1771462329' width='320' height='320' alt='logo_on' /></a></div>
+	
+	
+	
+	<div class="taille">1024 &#215; 1024 pixels - 31.6 kio</div>
+	
+	 
+		<div class="groupe-btns groupe-btns_mini">
+			 
+				<a href="http://127.0.0.1:8080/univsax/ecrire/?exec=document_edit&amp;id_document=200" target="_blank" class="editbox btn" tabindex="0" role="button">Modifier</a>
+			 
+				<input type="submit" class="btn btn_secondaire submit supprimer" id="supprimer_logo_on_auteur_-1" name="supprimer_logo_on" value="Supprimer">
+			
+		</div>
+	
+</div>
+";s:5:"notes";s:0:"";s:8:"contexte";a:25:{s:8:"editable";s:1:" ";s:11:"logo_survol";s:0:"";s:5:"objet";s:6:"auteur";s:8:"id_objet";s:2:"-1";s:8:"_options";a:2:{s:5:"titre";s:150:"<img src='plugins-dist/medias/prive/themes/spip/images/image-xx.svg?1764890072' alt='' class='cadre-icone' width='24' height='24' />Logo de l’auteur";s:8:"editable";b:1;}s:16:"_show_upload_off";s:0:"";s:7:"logo_on";s:24:"IMG/logo/person-m-3.webp";s:10:"logo_id_on";s:3:"200";s:26:"_bigup_rechercher_fichiers";b:1;s:7:"_hidden";s:141:"<input type="hidden" name="bigup_retrouver_fichiers" value="*:1771463158:6da18051503e6e35526c6b150b6238c81a5d4607a3c7c9dd29671290c19594a3" />";s:10:"_pipelines";a:1:{s:15:"formulaire_fond";a:3:{s:4:"form";s:11:"editer_logo";s:4:"args";a:3:{i:0;s:6:"auteur";i:1;s:2:"-1";i:2;s:41:"spip.php?rubrique5&amp;slide=3#ues-slides";}s:13:"je_suis_poste";b:0;}}s:15:"formulaire_args";s:176:"i9Louscu7Cpw9HIt0C3DIOGlXK35LZdwsRl1rFNy886VxNoXnq1Nxke9IT7fa2KEUXm71ioU/j5daPc4TtDFrf+txyJhrZ+Bu+D3amKqMvnBBWfeO3FtGMeFDpeTktDbveeDwx1OLfT8FMWGOlWkOCsrdocFgmXmArkVKShnUZiA2cS/";s:7:"erreurs";a:0:{}s:6:"action";s:27:"/univsax/spip.php?rubrique5";s:4:"form";s:11:"editer_logo";s:15:"formulaire_sign";s:64:"036346134c21edf4656a1f3e86a4d443c270038b207727df8146d6d7a589b430";s:2:"id";s:3:"new";s:4:"lang";s:2:"fr";s:4:"date";s:19:"2026-02-19 02:05:58";s:12:"date_default";b:1;s:10:"date_redac";s:19:"2026-02-19 02:05:58";s:18:"date_redac_default";b:1;s:7:"id_logo";s:3:"200";s:4:"logo";s:24:"IMG/logo/person-m-3.webp";s:4:"quoi";s:7:"logo_on";}s:12:"lastmodified";i:1771463157;s:2:"gz";b:0;s:3:"sig";i:3288858153;}}

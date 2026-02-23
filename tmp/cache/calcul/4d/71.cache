@@ -1,0 +1,49 @@
+a:2:{s:9:"nom_cache";s:38:"4d717214370eef606a3b695fb6cf107f.cache";s:6:"valeur";a:12:{s:9:"squelette";s:37:"html_6b869b64ddcab2d9912a9d8a4a9047df";s:6:"source";s:35:"../prive/themes/spip/bando.css.html";s:11:"process_ins";s:4:"html";s:11:"invalideurs";a:1:{s:5:"cache";s:38:"4d717214370eef606a3b695fb6cf107f.cache";}s:7:"entetes";a:5:{s:12:"X-Spip-Cache";s:6:"360000";s:13:"Cache-Control";s:14:"max-age=360000";s:15:"X-Spip-Statique";s:3:"oui";s:12:"Content-Type";s:23:"text/css; charset=utf-8";s:4:"Vary";s:15:"Accept-Encoding";}s:5:"duree";i:360000;s:5:"texte";s:4799:"
+
+/* Icônes en background-image */
+
+.bando2_auteurs {background-image:url(../prive/themes/spip/images/auteur-xx.svg?16px);}
+.bando2_rubriques {background-image:url(../prive/themes/spip/images/rubrique-xx.svg?16px);}
+.bando2_articles {background-image:url(../prive/themes/spip/images/article-xx.svg?16px);}
+.bando2_mots {background-image:url(../plugins-dist/mots/prive/themes/spip/images/mot-xx.svg?16px);}
+.bando2_sites {background-image:url(../plugins-dist/sites/prive/themes/spip/images/site-xx.svg?16px);}
+.bando2_documents {background-image:url(../plugins-dist/medias/prive/themes/spip/images/portfolio-xx.svg?16px);}
+.bando2_suivi_edito {background-image:url(../prive/themes/spip/images/suivi-xx.svg?16px);}
+.bando2_synchro {background-image:url(../prive/themes/spip/images/synchro-xx.svg?16px);}
+.bando2_revisions {background-image:url(../plugins-dist/revisions/prive/themes/spip/images/revision-xx.svg?16px);}
+.bando2_controler_syndication {background-image:url(../plugins-dist/sites/prive/themes/spip/images/site-xx.svg?16px);}
+.bando2_controler_urls {background-image:url(../plugins-dist/urls_etendues/prive/themes/spip/images/url-xx.svg?16px);}
+.bando2_visiteurs {background-image:url(../prive/themes/spip/images/auteur-6forum-xx.svg?16px);}
+.bando2_forum_reactions {background-image:url(../plugins-dist/forum/prive/themes/spip/images/forum-xx.svg?16px);}
+.bando2_statistiques {background-image:url(../plugins-dist/statistiques/prive/themes/spip/images/statistique-xx.svg?16px);}
+.bando2_contact_message {background-image:url(../plugins/auto/contact-2.0.0/prive/themes/spip/images/contact-xx.svg?16px);}
+.bando2_mediabox {background-image:url(../plugins-dist/mediabox/prive/themes/spip/images/mediabox-xx.svg);}
+.bando2_admin_vider {background-image:url(../prive/themes/spip/images/cache-empty-xx.svg?16px);}
+.bando2_sauvegarder {background-image:url(../plugins-dist/dump/prive/themes/spip/images/base-backup-xx.svg?16px);}
+.bando2_restaurer {background-image:url(../plugins-dist/dump/prive/themes/spip/images/base-restore-xx.svg?16px);}
+.bando2_admin_maintenir {background-image:url(../prive/themes/spip/images/base-maintenance-xx.svg?16px);}
+.bando2_job_queue {background-image:url(../prive/themes/spip/images/queue-process-xx.svg?16px);}
+.bando2_phpinfos {background-image:url(../prive/themes/spip/images/php-xx.svg?16px);}
+.bando2_configurer_identite {background-image:url(../prive/themes/spip/images/identite-xx.svg?16px);}
+.bando2_configurer_langue {background-image:url(../prive/themes/spip/images/langue-xx.svg?16px);}
+.bando2_configurer_multilinguisme {background-image:url(../prive/themes/spip/images/traduction-xx.svg?16px);}
+.bando2_configurer_contenu {background-image:url(../prive/themes/spip/images/config-contenu-xx.svg?16px);}
+.bando2_configurer_interactions {background-image:url(../prive/themes/spip/images/config-interaction-xx.svg?16px);}
+.bando2_configurer_avancees {background-image:url(../prive/themes/spip/images/configuration-xx.svg?16px);}
+.bando2_admin_plugin {background-image:url(../prive/themes/spip/images/plugin-xx.svg?16px);}
+.bando2_configurer_forum {background-image:url(../plugins-dist/forum/prive/themes/spip/images/forum-xx.svg?16px);}
+.bando2_configurer_revisions {background-image:url(../plugins-dist/revisions/prive/themes/spip/images/revision-xx.svg?16px);}
+.bando2_configurer_urls {background-image:url(../plugins-dist/urls_etendues/prive/themes/spip/images/url-xx.svg?16px);}
+.bando2_configurer_facteur {background-image:url(../plugins/auto/facteur/v5.3.0/prive/themes/spip/images/facteur-xx.svg?16px);}
+.bando2_configurer_contact {background-image:url(../plugins/auto/contact-2.0.0/prive/themes/spip/images/contact-xx.svg?16px);}
+.bando2_select2 {background-image:url(../plugins/auto/select2/v2.1.0/prive/themes/spip/images/select2-xx.svg?16px);}
+.bando2_verifier_doc {background-image:url(../plugins/auto/verifier/v3.9.0/prive/themes/spip/images/verifier-xx.svg?16px);}
+.bando2_forum_interne_suivi {background-image:url(../plugins-dist/forum/prive/themes/spip/images/forum-interne-xx.svg?16px);}
+.bando2_calendrier {background-image:url(../plugins/auto/organiseur/v3.3.1/prive/themes/spip/images/calendrier-xx.svg?16px);}
+.bando2_messagerie {background-image:url(../plugins/auto/organiseur/v3.3.1/prive/themes/spip/images/messagerie-xx.svg?16px);}
+.bando2_rubrique_creer {background-image:url(../prive/themes/spip/images/rubrique-new-16.svg);}
+.bando2_article_creer {background-image:url(../prive/themes/spip/images/article-new-16.svg);}
+.bando2_auteur_creer {background-image:url(../prive/themes/spip/images/auteur-new-16.svg);}
+.bando2_mot_creer {background-image:url(../plugins-dist/mots/prive/themes/spip/images/mot-new-16.svg);}
+.bando2_site_creer {background-image:url(../plugins-dist/sites/prive/themes/spip/images/site-new-16.svg);}
+";s:5:"notes";s:0:"";s:8:"contexte";a:26:{s:1:"v";s:8:"20241203";s:1:"p";s:4:"faff";s:6:"themes";s:4:"spip";s:3:"ltr";s:4:"left";s:4:"md5b";s:32:"f95a25069c0f8cc785921d0b3cf98b95";s:13:"couleur_theme";s:6:"F02364";s:14:"couleur_claire";s:6:"f891b2";s:14:"couleur_foncee";s:6:"F02364";s:4:"lang";s:2:"fr";s:4:"date";s:19:"2026-02-23 00:41:01";s:12:"date_default";b:1;s:10:"date_redac";s:19:"2026-02-23 00:41:01";s:18:"date_redac_default";b:1;s:6:"claire";s:7:"#f891b2";s:6:"foncee";s:7:"#F02364";s:4:"left";s:4:"left";s:5:"right";s:5:"right";s:3:"rtl";s:0:"";s:3:"dir";s:3:"ltr";s:9:"font-size";s:8:"0.8125em";s:11:"line-height";s:7:"1.385em";s:13:"margin-bottom";s:7:"1.385em";s:11:"text-indent";s:4:"50px";s:11:"font-family";s:28:"Helvetica, Arial, sans-serif";s:16:"background-color";s:7:"#F8F7F3";s:5:"color";s:7:"#000000";}s:12:"lastmodified";i:1771803660;s:2:"gz";b:0;s:3:"sig";i:1213214493;}}

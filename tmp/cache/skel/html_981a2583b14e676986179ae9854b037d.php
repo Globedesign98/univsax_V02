@@ -3,7 +3,7 @@
 /*
  * Squelette : plugins/auto/contact-2.0.0/formulaires/contact.html
  * Date :      Thu, 29 Jan 2026 02:52:21 GMT
- * Compile :   Thu, 29 Jan 2026 23:13:39 GMT
+ * Compile :   Thu, 19 Feb 2026 01:08:58 GMT
  * Boucles :   _previsu_infos, _previsu_pj, _previsu, _tous, _choix, _destinataires, _infos, _pj, _editable
  */ 
 
@@ -885,7 +885,7 @@ $l7 .
 
 //
 // Fonction principale du squelette plugins/auto/contact-2.0.0/formulaires/contact.html
-// Temps de compilation total: 3.942 ms
+// Temps de compilation total: 2.572 ms
 //
 
 function html_981a2583b14e676986179ae9854b037d($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

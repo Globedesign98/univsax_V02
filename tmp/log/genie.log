@@ -1,0 +1,29 @@
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:debug: optimiser_base_une_table ["spip_articles","spip_auteurs","spip_auteurs_liens","spip_breves","spip_depots","spip_depots_plugins","spip_documents","spip_documents_liens","spip_forum","spip_groupes_mots","spip_jobs","spip_jobs_liens","spip_mailsubscribers","spip_mailsubscribinglists","spip_mailsubscriptions","spip_mailsubscriptions_optins","spip_messages","spip_meta","spip_mots","spip_mots_liens","spip_paquets","spip_petitions","spip_plugins","spip_referers","spip_referers_articles","spip_resultats","spip_rubriques","spip_signatures","spip_syndic","spip_syndic_articles","spip_transactions","spip_types_documents","spip_urls","spip_versions","spip_versions_fragments","spip_visites","spip_visites_articles"]
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:debug: optimiser_base_une_table : debut d'optimisation de la table spip_depots
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:debug: optimiser_base_une_table : fin d'optimisation de la table spip_depots
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:debug: objet_optimiser_liens : {"auteur":"*"}, "*"
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:debug: objet_optimiser_liens : {"mot":"*"}, "*"
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:debug: objet_optimiser_liens : {"document":"*"}, "*"
+2026-02-02 02:22:39 127.0.0.1 (pid 16880) :Pub:debug: optimiser_base_disparus : 0 lien(s) mort(s)
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:debug: optimiser_base_une_table ["spip_articles","spip_auteurs","spip_auteurs_liens","spip_breves","spip_depots","spip_depots_plugins","spip_documents","spip_documents_liens","spip_forum","spip_groupes_mots","spip_jobs","spip_jobs_liens","spip_mailsubscribers","spip_mailsubscribinglists","spip_mailsubscriptions","spip_mailsubscriptions_optins","spip_messages","spip_meta","spip_mots","spip_mots_liens","spip_paquets","spip_petitions","spip_plugins","spip_referers","spip_referers_articles","spip_resultats","spip_rubriques","spip_signatures","spip_syndic","spip_syndic_articles","spip_transactions","spip_types_documents","spip_urls","spip_versions","spip_versions_fragments","spip_visites","spip_visites_articles"]
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:debug: optimiser_base_une_table : debut d'optimisation de la table spip_depots_plugins
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:debug: optimiser_base_une_table : fin d'optimisation de la table spip_depots_plugins
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:debug: objet_optimiser_liens : {"auteur":"*"}, "*"
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree -1/1373/article supprimee dans la table spip_auteurs_liens
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree -1/1378/article supprimee dans la table spip_auteurs_liens
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree -1/1428/article supprimee dans la table spip_auteurs_liens
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree -1/1429/article supprimee dans la table spip_auteurs_liens
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree -1/1430/article supprimee dans la table spip_auteurs_liens
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree -1/1432/article supprimee dans la table spip_auteurs_liens
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree -1/1433/article supprimee dans la table spip_auteurs_liens
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree 80/1424/article supprimee dans la table spip_auteurs_liens
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree 80/1425/article supprimee dans la table spip_auteurs_liens
+2026-02-04 05:36:51 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree 80/1426/article supprimee dans la table spip_auteurs_liens
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree 80/1427/article supprimee dans la table spip_auteurs_liens
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree 80/1431/article supprimee dans la table spip_auteurs_liens
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:debug: objet_optimiser_liens : {"mot":"*"}, "*"
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:debug: objet_optimiser_liens : {"document":"*"}, "*"
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:!INFO: lien_optimise: Entree 178/1373/article supprimee dans la table spip_documents_liens
+2026-02-04 05:36:52 127.0.0.1 (pid 13600) :Pub:debug: optimiser_base_disparus : 14 lien(s) mort(s)
+2026-02-06 22:54:22 127.0.0.1 (pid 5332) :Pub:!INFO: lien_optimise: Entree 80/1435/article supprimee dans la table spip_auteurs_liens
+2026-02-06 22:54:22 127.0.0.1 (pid 5332) :Pub:!INFO: lien_optimise: Entree 80/1436/article supprimee dans la table spip_auteurs_liens

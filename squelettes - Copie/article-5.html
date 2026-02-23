@@ -1,0 +1,451 @@
+<BOUCLE_principale(ARTICLES) {id_article}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG">
+<head>
+
+<title>[(#NOM_SITE_SPIP|textebrut)][ - (#TITRE|textebrut)]</title>
+
+<INCLURE{fond=inc-head}>
+
+<?php include('head-content.php'); ?>
+<link rel="shortcut icon" href="images/favicon.ico" >
+<link href="css/ues.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	background-image: url(images/bg_top_rub.jpg);
+	background-repeat: repeat-x;
+}
+-->
+</style>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+</head>
+
+<body class="inscription">
+<div align="center">
+<?php include('includes/bloc_rub_forum.php'); ?>
+<INCLURE{fond=inc-menu2012}>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="985" valign="top" class="bg_menu_border">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#212020"><table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top">
+        <table width="985" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top"><table width="485" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="485">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><h1 class="roboto"><span class="txt_yellow txt_27">I</span>nscriptions</h1>
+              <span class="txt_yellow txt_12">Inscription à l'Université Européenne de Saxophone - 2025</span>
+              <div class="ues_trait_titre"></div></td>
+          </tr>
+          <tr>
+            <td valign="top" class="txt_blc12"><div align="justify"><br>
+              </div></td>
+          </tr>
+          <tr>
+            <td><?php if ($auteur_session) { ?>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="27%" align="left"><a href="spip.php?page=rubrique&id_rubrique=5"><img src="images/bt_retour.jpg" alt="Retour" width="164" height="40" border="0" /></a></td>
+                <td width="73%" align="left" class="modif"><a href="spip.php?page=inscription_modifier&id_article=#ENV{id_article}&var_mode=preview" class=""><img src="images/bt_modif.jpg" alt="Retour" width="164" height="40" border="0" /></a></td>
+                <td width="73%" align="right" class="print">#IMPRIMIR_DOCUMENTO**</td>
+              </tr>
+            </table>
+            <?php } else { ?>
+            <strong><span class="txt_blc12">Vous devez vous connecter pour accèder à cette partie</span></strong>.
+            <?php } ?>
+<br />
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+              </tr>
+              </table>
+            <?php if ($auteur_session) { ?>
+            <table width="100%" border="0" cellspacing="0" cellpadding="20" class="txt_12">
+              <tr>
+                <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="69%" align="left"><img src="images/logo_ues.jpg" alt="" width="284" height="137" /></td>
+                    <td width="31%" align="right" valign="top"><br />
+                      [(#LOGO_ARTICLE||image_reduire{130,130})]</td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td align="left" bgcolor="#FFFFFF"><strong><span class="txt_13">FICHE D'INSCRIPTION</span></strong><br />
+                  <span class="txt_12">36ème Edition, Gap du lundi 14 au 25 juillet 2025</span><span class="txt_gris11"><br />
+                    <br />
+                    Attention ! Votre inscription sera validée dès réception des sommes dues et du formulaire d'inscription signé et envoyé à l'adresse contact@univsax.com.</span></td>
+              </tr>
+              <tr>
+                <td valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="2" cellpadding="3">
+                  <tr>
+                    <td width="22%" align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Nom </strong></td>
+                    <td width="78%" align="left" valign="top" class="txt_12">#TITRE</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Prénom </strong></td>
+                    <td align="left" valign="top" class="txt_12">#PRENOM</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Sexe </strong></td>
+                    <td align="left" valign="top" class="txt_12">#SEXO</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Age</strong></td>
+                    <td align="left" valign="top" class="txt_12">#AGE</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top" bgcolor="#ebe9e9" class="txt_12">&nbsp;</td>
+                    <td align="left" valign="top" class="txt_12">&nbsp;</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Adresse</strong></td>
+                    <td align="left" valign="top" class="txt_12">#ADRESSE</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Code postal</strong></td>
+                    <td align="left" valign="top" class="txt_12">#POSTAL</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Ville</strong></td>
+                    <td align="left" valign="top" class="txt_12">#VILLE</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Pays</strong></td>
+                    <td align="left" valign="top" class="txt_12">#PAYS</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Téléphone</strong></td>
+                    <td align="left" valign="top" class="txt_12">#PHONE</td>
+                    </tr>
+                  <tr>
+                    <td align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Courriel</strong></td>
+                    <td align="left" valign="top" class="txt_12"><BOUCLE3(AUTEURS){id_article}>[(#EMAIL)]</BOUCLE3></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top">&nbsp;</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" bgcolor="#EBE9E9"><strong class="txt_12">Particularités sanitaires (allergies, asthme, etc.) - à signer absolument :</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#SANTE</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" bgcolor="#EBE9E9"><strong class="txt_12">Personne à joindre en cas d'hospitalisation ou de force majeure - à signaler absolument :</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#CONTACT_NOM<br />
+#CONTACT_PRENOM<br />
+#CONTACT_ADRESSE<br />
+#CONTACT_TEL</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top"><br />
+                      <table width="100%" border="0" cellspacing="2" cellpadding="5">
+                        <tr>
+                          <td width="54%" align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Végétarien(ne) :</strong></td>
+                          <td width="46%" align="left" valign="top" class="txt_12">#VEGETARIEN</td>
+                          </tr>
+                        <tr>
+                          <td align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Hébergement au Foyer Des Jeunes Travailleurs :</strong></td>
+                          <td align="left" valign="top" class="txt_12">#HEBERGEMENT</td>
+                          </tr>
+                        <tr>
+                          <td align="left" valign="top" bgcolor="#ebe9e9" class="txt_12"><strong>Auditeur libre  :</strong></td>
+                          <td align="left" valign="top" class="txt_12">#AUDITEUR</td>
+                          </tr>
+                        </table>
+                      <br /></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" bgcolor="#EBE9E9"><strong class="txt_12">Nom et lieu de votre école de musique :</strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#ECOLE</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" bgcolor="#EBE9E9"><strong class="txt_12">Nom de votre professeur :</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#PROF</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" bgcolor="#EBE9E9"><strong class="txt_12">Pièce préparée pour l'Université Européenne de Saxophone :</strong></td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#PIECE</td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" bgcolor="#EBE9E9"><strong class="txt_12">Quel saxophone apportez-vous ?</strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#TYPE_SAXO</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" bgcolor="#EBE9E9"><strong class="txt_12">Quel bec apportez-vous ?</strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#TYPE_BEC</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top"><strong class="txt_12"><br />
+                      Choix de pratique d'ensemble :</strong><br />
+                      <br />
+                      <table width="100%" border="0" cellspacing="2" cellpadding="5">
+                        <tr>
+                          <td bgcolor="#EBE9E9" class="txt_12">Musique de chambre :</td>
+                          <td align="left" class="txt_12">#QUATUOR</td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#EBE9E9" class="txt_12">Ensemble de Sax :</td>
+                          <td align="left" class="txt_12">#ENSEMBLE</td>
+                        </tr>
+                        <tr>
+                          <td width="78%" bgcolor="#EBE9E9" class="txt_12">Initiation aux musiques traditionnelles :</td>
+                          <td width="22%" align="left" class="txt_12">#TRADITION</td>
+                        </tr>
+                       
+                        </table>
+                      <br /></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" bgcolor="#EBE9E9" class="txt_12"><strong>Etes-vous compositeur ?</strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#OUI_NON_2</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" bgcolor="#EBE9E9" class="txt_12"><strong>Etes-vous inscrit auprès d un organisme de droits d auteur ? </strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#OUI_NON_1</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" bgcolor="#EBE9E9" class="txt_12"><strong>Mode de paiement choisi par l'étudiant : </strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#PAIEMENT</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" bgcolor="#EBE9E9" class="txt_12"><strong>Commentaires : </strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">#REMARQUE</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" bgcolor="#EBE9E9" class="txt_12"><strong>Règlement 2025 : </strong></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="left" valign="top" class="txt_12">Vous avez lu et accepté le règlement.</td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table>
+            <?php } else { ?>
+            <?php } ?>
+            </td>
+          </tr>
+          <tr>
+            <td><br />
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+              </tr>
+            </table>
+              <?php if ($auteur_session) { ?>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="27%" align="left"><a href="spip.php?page=rubrique&id_rubrique=5"><img src="images/bt_retour.jpg" alt="Retour" width="164" height="40" border="0" /></a></td>
+                <td width="73%" align="left" class="modif"><a href="spip.php?page=inscription_modifier&id_article=#ENV{id_article}&var_mode=preview" class=""><img src="images/bt_modif.jpg" alt="Retour" width="164" height="40" border="0" /></a></td>
+                <td width="73%" align="right" class="print">#IMPRIMIR_DOCUMENTO**</td>
+              </tr>
+            </table>
+            <?php } else { ?>
+            <strong><span class="txt_blc12">Vous devez vous connecter pour accèder à cette partie</span></strong>.
+            <?php } ?></td>
+          </tr>
+          
+        </table></td>
+        <td align="right" valign="top"><table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="right" valign="top" class="txt_gris10" ><table width="447" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="207" align="left">[(#SESSION{auth}|?{' '})
+                          [<strong>Bonjour</strong> (#SESSION{nom}|typo)]
+                          [(#SESSION{prenom}|typo)] (<a href="#URL_LOGOUT{spip.php?rubrique5}">Se déconnecter</a>)
+                          ]</td>
+    <td width="240" align="right"><script type="text/javascript">
+navvers = navigator.appVersion.substring(0,1);
+if (navvers > 3)
+   navok = true;
+else
+   navok = false;
+
+today = new Date;
+jour = today.getDay();
+numero = today.getDate();
+if (numero<10)
+   numero = "0"+numero;
+mois = today.getMonth();
+if (navok)
+   annee = today.getFullYear();
+else
+   annee = today.getYear();
+TabJour = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
+TabMois = new Array("janvier","f&eacute;vrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","d&eacute;cembre");
+messageDate = TabJour[jour] + " " + numero + " " + TabMois[mois] + " " + annee;
+          </script>
+              <script type="text/javascript">
+document.write(messageDate);
+            </script>
+              &nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+          </tr>
+          <tr>
+            <td><img src="images/trans.gif" alt="Saxo" width="5" height="10" /></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><table width="446" border="0" cellpadding="0" cellspacing="0" class="bg_cadrec02">
+              <tr>
+                <td align="left"><img src="images/c_c01.jpg" alt="UES" width="21" height="115" /></td>
+                <td align="left" valign="top"><img src="images/UES_encard.jpg" alt="36ème Edition UES" width="404" height="115" /></td>
+                <td align="right"><img src="images/c_c03.jpg" alt="UES Saxo" width="21" height="115" /></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><table width="446" border="0" cellpadding="0" cellspacing="0" class="bg_cadrec02 marge_top10">
+              <tr>
+                <td width="23" align="left" valign="top"><img src="images/c_c01.jpg" alt="UES" width="21" height="115"></td>
+                <td width="428" align="left" valign="top"><table width="99%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td align="left" background="images/t_ibg.jpg"><img src="images/t_ues.jpg" alt="Intervenants &agrave;  l'Universit&eacute; de Saxophone" width="241" height="37"></td>
+                    </tr>
+                    <tr>
+                      <td align="left"><img src="images/trans.gif" alt="UES" width="14" height="10"></td>
+                    </tr>
+                    <tr>
+                      <td align="left"><table width="98%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="58%"><span class="txt_blc12">14 chemin de Vigneaux - Romette <br>
+                              05000 Gap FRANCE</span></td>
+                            <td width="42%">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td><span class="txt_blc12">Tel : +033 (0)4.92.45.06.48</span></td>
+                            <td align="right"><a href="contact.php" class="txt_blc12">contact@univsax.com</a></td>
+                          </tr>
+                      </table></td>
+                    </tr>
+                </table></td>
+                <td width="24" align="right" valign="top"><img src="images/c_c03.jpg" alt="UES Saxo" width="21" height="115"></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><?php if ($auteur_session) { ?>
+              <br />
+              <table width="447" border="0" cellpadding="15" cellspacing="0">
+                <tr>
+                  <td align="left" valign="baseline" bgcolor="#363434"><span class="txt_blc12 justify">
+                    <INCLURE{fond=inc_txt_register}>
+                  </span></td>
+                </tr>
+              </table>
+              <?php } else { ?>
+              <?php } ?></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top"><table width="447" border="0" align="right" cellpadding="8" cellspacing="0">
+              <tr>
+                <td colspan="2" align="left"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+              </tr>
+              <tr>
+                <td width="37" align="center" valign="baseline" bgcolor="#363434"><span class="txt_blc12"><strong class="txt_red12b"><img src="images/Sarning.png" alt="" width="32" height="32" /></strong></span></td>
+                <td width="378" bgcolor="#363434"><div align="justify"><span class="txt_blc12">Les &eacute;tudiants doivent avoir au moins 18 ans le 15 juillet 2025</span></div></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="left"><img src="images/trans.gif" alt="UES Saxo" width="14" height="1" /></td>
+              </tr>
+              <tr>
+                <td align="center" valign="baseline" bgcolor="#363434" class="txt_red12b"><strong class="txt_red12b"><img src="images/Sarning.png" alt="" width="32" height="32" /></strong></td>
+                <td bgcolor="#363434"><div align="justify"><span class="txt_blc12">Les &eacute;tudiants, qui r&egrave;glent le montant de leur inscription par carte bancaire, doivent rajouter 38&euro; aux tarifs ci-dessus. Cette somme forfaitaire correspond aux frais bancaires et &agrave; la commission du syst&egrave;me Paypal et ne sera donc plus &agrave; payer lors de leur arriv&eacute;e &agrave; Gap.<br />
+                </span></div></td>
+              </tr>
+          </table></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top">&nbsp;</td>
+          </tr>
+          </table></td>
+      </tr>
+    </table>
+        
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="bg_traitx"><img src="images/bg_trait.jpg" width="11" height="15" /></td>
+                    </tr>
+                  </table>
+                  <?php if ($auteur_session) { ?>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="marge_15">
+          <tr>
+            <td valign="top" class="txt_blc"></td>
+          </tr>
+      </table>
+        <?php } else { ?>
+        
+        <table width="100%" border="0" cellspacing="0" cellpadding="15">
+          <tr>
+            <td class="txt_jaune11b"> Pour vous inscrire ou vous connecter à l'Université Européenne de Saxophone 2025, vous devez posséder un compte :</td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="15" cellpadding="0">
+          <tr>
+            <td align="left" valign="top" bgcolor="#363434"><span class="txt_12blc">[(#LOGIN_PUBLIC)] </span></td>
+            <td align="left" valign="top" bgcolor="#363434"><span class="txt_12blc">[(#FORMULAIRE_INSCRIPTION)] </span></td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+        <?php } ?></td>
+        </tr>
+    </table>
+   </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="images/bg_bottom.jpg">
+  <tr>
+    <td><?php include('includes/menu_bas.php'); ?></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+</BOUCLE_principale>

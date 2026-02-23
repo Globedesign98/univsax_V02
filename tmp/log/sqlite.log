@@ -1,0 +1,234 @@
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_articles in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_articles
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_auteurs in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_auteurs
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_auteurs_liens in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_auteurs_liens
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_depots in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_depots
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_depots_plugins in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_depots_plugins
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_documents in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_documents
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_documents_liens in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_documents_liens
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_forum in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_forum
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_groupes_mots in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_groupes_mots
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_jobs in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_jobs
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_jobs_liens in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_jobs_liens
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_mailsubscribers in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_mailsubscribers
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_mailsubscribinglists in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_mailsubscribinglists
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_mailsubscriptions in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_mailsubscriptions
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_mailsubscriptions_optins in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_mailsubscriptions_optins
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_messages in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_messages
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_mots in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_mots
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_mots_liens in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_mots_liens
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_paquets in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_paquets
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_plugins in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_plugins
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_rubriques in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_rubriques
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_syndic in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_syndic
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_syndic_articles in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_syndic_articles
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_types_documents in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_types_documents
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_urls in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_urls
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_versions in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_versions
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_versions_fragments in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_versions_fragments
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_articles
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_articles in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_articles
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_auteurs
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_auteurs in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_auteurs
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_auteurs_liens
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_auteurs_liens in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_auteurs_liens
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_depots
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_depots in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_depots
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_depots_plugins
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_depots_plugins in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_depots_plugins
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_documents
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_documents in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_documents
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_documents_liens
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_documents_liens in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_documents_liens
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_forum
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_forum in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_forum
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_groupes_mots
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_groupes_mots in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_groupes_mots
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_jobs
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_jobs in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_jobs
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_jobs_liens
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_jobs_liens in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_jobs_liens
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_mailsubscribers
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_mailsubscribers in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_mailsubscribers
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_mailsubscribinglists
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_mailsubscribinglists in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_mailsubscribinglists
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_mailsubscriptions
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_mailsubscriptions in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_mailsubscriptions
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_mailsubscriptions_optins
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_mailsubscriptions_optins in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_mailsubscriptions_optins
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_messages
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_messages in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_messages
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_mots
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_mots in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_mots
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_mots_liens
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_mots_liens in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_mots_liens
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_paquets
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_paquets in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_paquets
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_plugins
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_plugins in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_plugins
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_rubriques
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_rubriques in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_rubriques
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_syndic
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_syndic in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_syndic
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_syndic_articles
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_syndic_articles in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_syndic_articles
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_types_documents
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_types_documents in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_types_documents
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_urls
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: SQLSTATE[HY000]: General error: 1 no such table: spip_urls in C:\xampp\htdocs\univsax\ecrire\src\Sql\Sqlite\Requeteur.php line 88 - 
+DELETE FROM spip_urls
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:ERREUR: Erreur sqlite HY000 / 1
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:debug: PDOException: SQLSTATE[HY000]: General error: 1 no such table: spip_versions

@@ -1,0 +1,123 @@
+/* =====================================================================
+   UES — Styles Unifiés
+   Description: Fichier unique combinant les styles pour SPIP
+   Sources: menu-override.css, ues.css, univsax.css
+===================================================================== */
+
+/* VARIABLES CSS GLOBALES */
+:root {
+  --ues-yellow: #f2d100;
+  --ues-black: #0a0a0a;
+  --ues-white: #ffffff;
+  --ues-muted: rgba(255, 255, 255, 0.78);
+  --ues-line: rgba(242, 209, 0, 0.55);
+  --ues-blue: #86b6ff;
+  --ues-logo-big: 140px;
+  --ues-logo-small: 58px;
+}
+
+/* ======= GÉNÉRAL ======= */
+html, body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  color: var(--ues-black);
+}
+
+/* ======= HEADER ======= */
+.ues-header,
+.ues-nav {
+  background: transparent !important;
+}
+
+.ues-header.is-outside-hero .ues-nav {
+  background: rgba(0, 0, 0, 0.92) !important;
+  backdrop-filter: blur(6px);
+}
+
+/* LOGO SCROLL EFFECT */
+#header .ues-nav .ues-brand img {
+  height: var(--ues-logo-big);
+  transition: height 0.35s ease;
+}
+
+#header.ues-header--compact .ues-nav .ues-brand img {
+  height: var(--ues-logo-small);
+}
+
+/* ======= WAVE ANIMATION ======= */
+@keyframes ues-waves-move {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+.ues-footer-waves {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ues-footer-waves svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ues-footer-waves .ues-parallax > use {
+  fill: rgba(255, 255, 255, 0.35) !important;
+  animation: ues-waves-move 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite !important;
+}
+
+.ues-footer-waves .ues-parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 10s;
+  opacity: 0.6;
+}
+
+.ues-footer-waves .ues-parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 14s;
+  opacity: 0.4;
+}
+
+.ues-footer-waves .ues-parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 18s;
+  opacity: 0.2;
+}
+
+.ues-footer-waves .ues-parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 22s;
+  opacity: 0.1;
+}
+
+/* ======= FOOTER ======= */
+footer.ues-footer {
+  background: rgba(0, 0, 0, 0.85);
+  color: var(--ues-white);
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 120px;
+  border-top: 10px solid #6aa9b5;
+}
+
+footer.ues-footer .footer-top {
+  position: relative;
+  z-index: 2;
+}
+
+footer.ues-footer .copyright-area {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ues-muted);
+}

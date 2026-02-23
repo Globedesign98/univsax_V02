@@ -1,0 +1,27 @@
+[09-Feb-2026 23:52:39 Europe/Paris] PHP Warning:  Undefined array key "i3_traiter_formulaire" in /home/openpacibe/univsax_v02/config/mes_options.php on line 7
+[09-Feb-2026 23:52:40 Europe/Paris] PHP Warning:  Undefined array key "nom_site" in /home/openpacibe/univsax_v02/ecrire/public/composer.php(96) : eval()'d code on line 20
+[09-Feb-2026 23:52:40 Europe/Paris] PHP Warning:  Undefined array key "slogan_site" in /home/openpacibe/univsax_v02/ecrire/public/composer.php(96) : eval()'d code on line 22
+[09-Feb-2026 23:52:40 Europe/Paris] PHP Warning:  Undefined array key "descriptif_site" in /home/openpacibe/univsax_v02/ecrire/public/composer.php(96) : eval()'d code on line 25
+[09-Feb-2026 23:52:40 Europe/Paris] PHP Warning:  Undefined array key "adresse_site" in /home/openpacibe/univsax_v02/ecrire/public/composer.php(96) : eval()'d code on line 258
+[09-Feb-2026 23:55:10 Europe/Paris] PHP Warning:  Undefined array key "nom_site" in /home/openpacibe/univsax_v02/ecrire/public/composer.php(96) : eval()'d code on line 59
+[09-Feb-2026 23:55:10 Europe/Paris] PHP Warning:  Undefined array key "charset" in /home/openpacibe/univsax_v02/ecrire/inc/charsets.php on line 1106
+[09-Feb-2026 23:55:10 Europe/Paris] PHP Warning:  Undefined array key "charset" in /home/openpacibe/univsax_v02/ecrire/public/composer.php(96) : eval()'d code on line 27
+[09-Feb-2026 23:55:10 Europe/Paris] PHP Warning:  Undefined array key "activer_statistiques" in /home/openpacibe/univsax_v02/plugins-dist/statistiques/stats_pipelines.php on line 144
+[09-Feb-2026 23:56:41 Europe/Paris] PHP Warning:  Undefined array key "nom_site" in /home/openpacibe/univsax_v02/tmp/cache/skel/html_c3a00e7dfddbb90d26ffc622e4516e3c.php on line 66
+[09-Feb-2026 23:56:41 Europe/Paris] PHP Warning:  Undefined array key "charset" in /home/openpacibe/univsax_v02/ecrire/inc/charsets.php on line 1106
+[09-Feb-2026 23:56:41 Europe/Paris] PHP Warning:  Undefined array key "charset" in /home/openpacibe/univsax_v02/tmp/cache/skel/html_9a2571ae38eee05410a6d0b684543939.php on line 34
+[09-Feb-2026 23:56:41 Europe/Paris] PHP Warning:  Undefined array key "activer_statistiques" in /home/openpacibe/univsax_v02/plugins-dist/statistiques/stats_pipelines.php on line 144
+[10-Feb-2026 00:03:40 Europe/Paris] PHP Warning:  Undefined array key "nom_site" in /home/openpacibe/univsax_v02/ecrire/public/composer.php(96) : eval()'d code on line 59
+[10-Feb-2026 00:03:40 Europe/Paris] PHP Warning:  Undefined array key "charset" in /home/openpacibe/univsax_v02/ecrire/inc/charsets.php on line 1106
+[10-Feb-2026 00:03:40 Europe/Paris] PHP Warning:  Undefined array key "charset" in /home/openpacibe/univsax_v02/ecrire/public/composer.php(96) : eval()'d code on line 27
+[10-Feb-2026 00:03:40 Europe/Paris] PHP Warning:  Undefined array key "activer_statistiques" in /home/openpacibe/univsax_v02/plugins-dist/statistiques/stats_pipelines.php on line 144
+[10-Feb-2026 00:03:43 Europe/Paris] PHP Warning:  Undefined array key "nom_site" in /home/openpacibe/univsax_v02/ecrire/public/composer.php(96) : eval()'d code on line 59
+[10-Feb-2026 00:03:43 Europe/Paris] PHP Warning:  Undefined array key "charset" in /home/openpacibe/univsax_v02/ecrire/inc/charsets.php on line 1106
+[10-Feb-2026 00:03:43 Europe/Paris] PHP Warning:  Undefined array key "charset" in /home/openpacibe/univsax_v02/ecrire/public/composer.php(96) : eval()'d code on line 27
+[10-Feb-2026 00:03:43 Europe/Paris] PHP Warning:  Undefined array key "activer_statistiques" in /home/openpacibe/univsax_v02/plugins-dist/statistiques/stats_pipelines.php on line 144
+[10-Feb-2026 00:35:22 Europe/Paris] PHP Fatal error:  Uncaught Error: Call to undefined function charger_meta() in /home/openpacibe/univsax_v02/config/mes_options.php:9
+Stack trace:
+#0 /home/openpacibe/univsax_v02/ecrire/inc_version.php(482): include_once()
+#1 /home/openpacibe/univsax_v02/spip.php(19): include_once('/home/openpacib...')
+#2 {main}
+  thrown in /home/openpacibe/univsax_v02/config/mes_options.php on line 9

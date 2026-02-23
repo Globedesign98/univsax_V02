@@ -3,12 +3,12 @@
 /*
  * Squelette : ../prive/squelettes/inclure/admin_vider_cache.html
  * Date :      Thu, 04 Dec 2025 22:57:20 GMT
- * Compile :   Thu, 29 Jan 2026 23:13:28 GMT
+ * Compile :   Thu, 19 Feb 2026 00:52:30 GMT
  * Boucles :   
  */ 
 //
 // Fonction principale du squelette ../prive/squelettes/inclure/admin_vider_cache.html
-// Temps de compilation total: 3.159 ms
+// Temps de compilation total: 2.328 ms
 //
 
 function html_7f5abdf8b64dd14cac4059cc2b881675($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

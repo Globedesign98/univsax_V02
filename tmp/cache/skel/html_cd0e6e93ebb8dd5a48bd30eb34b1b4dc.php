@@ -3,12 +3,12 @@
 /*
  * Squelette : plugins/auto/contact-2.0.0/formulaires/contact_champ_texte.html
  * Date :      Thu, 29 Jan 2026 02:52:21 GMT
- * Compile :   Thu, 29 Jan 2026 23:13:39 GMT
+ * Compile :   Thu, 19 Feb 2026 01:08:58 GMT
  * Boucles :   
  */ 
 //
 // Fonction principale du squelette plugins/auto/contact-2.0.0/formulaires/contact_champ_texte.html
-// Temps de compilation total: 0.089 ms
+// Temps de compilation total: 0.095 ms
 //
 
 function html_cd0e6e93ebb8dd5a48bd30eb34b1b4dc($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

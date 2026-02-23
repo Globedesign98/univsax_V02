@@ -1,0 +1,119 @@
+[(#SET{ues_id_article,#ENV{id_article}})]
+[(#SET{ues_statut,#ENV{statut}})]
+
+[(#REM) Sécurité: id_article requis]
+[(#GET{ues_id_article}|non)
+  <div class="alert alert-warning mb-3">
+    Checklist admin : id_article manquant.
+  </div>
+]
+
+[(#GET{ues_id_article}|oui)
+
+  [(#REM) Etats des pastilles ]
+  [(#SET{ues_step1_done,0})]
+  [(#GET{ues_statut}|=={prop}|oui)[(#SET{ues_step1_done,1})]]
+  [(#GET{ues_statut}|=={publie}|oui)[(#SET{ues_step1_done,1})]]
+
+  [(#SET{ues_step2_done,0})]
+  [(#GET{ues_statut}|=={publie}|oui)[(#SET{ues_step2_done,1})]]
+
+  [(#REM) Photo = logo du participant (premier auteur lié à l'article) ]
+  [(#SET{ues_photo_done,0})]
+  <BOUCLE_ues_photo(AUTEURS){id_article=#GET{ues_id_article}}{0,1}{tout}>
+    [(#SET{ues_photo_done,[(#LOGO_AUTEUR|extraire_attribut{src}|?{1,0})]})]
+  </BOUCLE_ues_photo>
+
+  [(#SET{ues_inscription_ok,0})]
+  <BOUCLE_ues_insc(ARTICLES){id_article=#GET{ues_id_article}}{0,1}>
+    [(#SET{ues_inscription_norm,[(#INSCRIPTION|translitteration|strtolower|trim)]})]
+    [(#GET{ues_inscription_norm}|match{^confirme}|oui)[(#SET{ues_inscription_ok,1})]]
+  </BOUCLE_ues_insc>
+
+  [(#REM)
+    4) Copie signée envoyée (pièces jointes) :
+    Blanc si 0 ou 1 document; Vert si ≥ 2 documents
+    -> On compte TOUS les documents liés à l'article (PDF inclus), sans filtrer par mode
+  ]
+  [(#SET{ues_docs_ok,0})]
+<B_ues_docs_count>
+<BOUCLE_ues_docs_count(DOCUMENTS){id_article=#GET{ues_id_article}}{tout}>
+</BOUCLE_ues_docs_count>
+  [(#TOTAL_BOUCLE|>={2}|oui)[(#SET{ues_docs_ok,1})]]
+</B_ues_docs_count>
+<//B_ues_docs_count>
+
+[(#REM)
+  Paiement effectué : vert si PAIEMENTOK = oui
+  (on le lit sur l'article courant)
+]
+[(#SET{ues_paiement_ok,0})]
+<BOUCLE_ues_pay(ARTICLES){id_article=#GET{ues_id_article}}{0,1}{tout}>
+  [(#PAIEMENTOK|=={oui}|oui)[(#SET{ues_paiement_ok,1})]]
+</BOUCLE_ues_pay>
+
+
+  <div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white ues-checklist mt-3">
+
+    <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center gap-2">
+      <i class="bi bi-check2-circle"></i>
+      <span class="fw-semibold">Checklist</span>
+    </div>
+
+    <!-- 1) Formulaire envoyé -->
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="ues-checkline">
+        <i class="bi bi-1-circle mt-1"></i>
+        <div class="ues-checktext">Formulaire complété et <strong>envoyé</strong></div>
+        <span class="ues-step-dot [(#GET{ues_step1_done}|=={1}|oui)is-done]" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <!-- 2) Photo d'identité -->
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="ues-checkline">
+        <i class="bi bi-2-circle mt-1"></i>
+        <div class="ues-checktext">Photo d'identité</div>
+        <span class="ues-step-dot [(#GET{ues_photo_done}|=={1}|oui)is-done]" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <!-- 3) Formulaire validé par l'administration -->
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="ues-checkline">
+        <i class="bi bi-3-circle mt-1"></i>
+        <div class="ues-checktext">Formulaire <strong>validé</strong> par l'administration</div>
+        <span class="ues-step-dot [(#GET{ues_step2_done}|=={1}|oui)is-done]" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <!-- 4) Copie signée envoyée (pièce jointe) -->
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="ues-checkline">
+        <i class="bi bi-4-circle mt-1"></i>
+        <div class="ues-checktext">Copie <strong>signée</strong> envoyée (pièce jointe)</div>
+        <span class="ues-step-dot [(#GET{ues_docs_ok}|=={1}|oui)is-done]" aria-hidden="true"></span>
+      </div>
+    </div>
+    
+      [(#REM) NOUVEAU : Paiement effectué ]
+  <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+    <div class="ues-checkline">
+      <i class="bi bi-5-circle mt-1"></i>
+      <div class="ues-checktext">Paiement effectué</div>
+      <span class="ues-step-dot [(#GET{ues_paiement_ok}|=={1}|oui)is-done]" aria-hidden="true"></span>
+    </div>
+  </div>
+
+    <!-- 5) Inscription validée et confirmée par l'UES -->
+    <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+      <div class="ues-checkline">
+        <i class="bi bi-5-circle mt-1"></i>
+        <div class="ues-checktext">Inscription <strong>validée et confirmée</strong> par l'UES</div>
+        <span class="ues-step-dot [(#GET{ues_inscription_ok}|=={1}|oui)is-done]" aria-hidden="true"></span>
+      </div>
+    </div>
+
+  </div>
+
+]

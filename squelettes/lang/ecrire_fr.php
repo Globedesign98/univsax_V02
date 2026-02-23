@@ -451,7 +451,7 @@ exige d’avoir un accès FTP au site Web.</p>',
 	'info_oui' => 'oui',
 	'info_non' => 'non',
 	'info_remarque' => 'Remarques',
-	'info_sante' => 'Particularités sanitaires (allergies, asthme, etc.) à signer absolument',
+	'info_sante' => 'Particularités sanitaires (allergies, asthme, etc.) à signaler absolument',
 	'info_pers' => 'Personne à joindre en cas d’hospitalisation ou de force majeure, à signaler absolument',
 	'info_vegetarian' => 'Végétarien(ne)',
 	'info_villars' => 'Hébergement au Foyer Des Jeunes Travailleurs',
@@ -961,7 +961,7 @@ réinstallation de SPIP pour recréer une nouvelle base ainsi qu’un premier ac
 	'texte_plusieurs_articles' => 'Plusieurs auteurs trouvés pour "@cherche_auteur@" :',
 	'texte_port_annuaire' => '(La valeur indiquée par défaut convient généralement.)',
 	'texte_presente_plugin' => 'Cette page liste les plugins disponibles sur le site. Vous pouvez activer les plugins nécessaires en cochant la case correspondante.',
-	'texte_proposer_publication' => 'Lorsque votre article est terminé,<br /> vous pouvez proposer sa publication.',
+	'texte_proposer_publication' => 'Envoyer votre formulaire',
 	'texte_proxy' => 'Dans certains cas (intranet, réseaux protégés), les sites distants (documentation de SPIP, sites syndiqués, etc.) ne sont accessibles qu’à travers un <i>proxy HTTP</i>. Le cas échéant, indiquez ci-dessous son adresse, sous la forme @proxy_en_cours@. En général, vous laisserez cette case vide.',
 	'texte_publication_articles_post_dates' => 'Quel comportement SPIP doit-il adopter face aux articles dont la
 		date de publication a été fixée à une

@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>[(#NOM_SITE_SPIP)] — [(#SLOGAN_SITE_SPIP)]</title>
+<meta content="[(#DESCRIPTIF_SITE_SPIP|textebrut)]" name="description"/>
+<meta content="saxophone, université, gap, musique, stage, france" name="keywords"/>
+<link href="assets/img/favicon.ico" rel="icon"/>
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;family=Lato:wght@100;300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+<link href="assets/vendor/aos/aos.css" rel="stylesheet"/>
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"/>
+<link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"/>
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="assets/css/main.css" rel="stylesheet"/>
+<link href="assets/css/hero-video.css" rel="stylesheet"/>
+<link href="assets/css/univsax.css" rel="stylesheet"/>
+<link href="assets/css/ues.css" rel="stylesheet"/>
+<link href="assets/css/menu-override.css" rel="stylesheet"/>
+
+  #INSERT_HEAD
+<style id="ues-scroll-header-patch">
+/* ============================
+   UES — Logo dans la topbar au scroll + barre noire menu
+   ============================ */
+:root{
+  --ues-logo-big: 140px;
+  --ues-logo-small: 80px;
+}
+
+/* Logo (navbar) : grand en haut de page */
+#header .ues-nav .ues-brand img{
+  height: var(--ues-logo-big);
+  width: auto;
+  transition: height .35s ease;
+}
+
+/* Logo de la topbar (masqué en haut de page) */
+#header .ues-topbar-brand{
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin-right: 12px;
+  will-change: transform, opacity;
+}
+#header .ues-topbar-brand img{
+  height: var(--ues-logo-small);
+  width: auto;
+  display: block;
+}
+
+/* Au scroll : on affiche le logo dans la topbar */
+#header.ues-header--compact .ues-topbar-brand{
+  display: flex;
+}
+
+/* Au scroll : on cache le logo de la navbar (avec animation) */
+#header .ues-nav .ues-brand{
+  will-change: transform, opacity;
+}
+#header.ues-header--compact .ues-nav .ues-brand{
+  opacity: 0;
+  transform: translateY(-90px);
+  pointer-events: none;
+}
+
+/* Animation : logo navbar qui sort par le haut */
+#header .ues-nav .ues-brand.ues-brand--out{
+  animation: ues-logo-out .45s cubic-bezier(.22,.85,.2,1) both;
+}
+@keyframes ues-logo-out{
+  0%   { transform: translateY(0);     opacity: 1; }
+  100% { transform: translateY(-90px); opacity: 0; }
+}
+
+/* Animation : logo topbar qui entre */
+#header .ues-topbar-brand.ues-brand--in{
+  animation: ues-logo-in .55s cubic-bezier(.22,.85,.2,1) both;
+}
+@keyframes ues-logo-in{
+  0%   { transform: translateY(-35px); opacity: 0; }
+  100% { transform: translateY(0);     opacity: 1; }
+}
+
+/* Menu : barre noire dès le scroll */
+#header.ues-header--compact .ues-nav{
+  background: #000;
+  box-shadow: 0 10px 28px rgba(0,0,0,.45);
+}
+
+/* (optionnel) Navbar un peu plus compacte quand le logo est petit */
+#header.ues-header--compact .navbar{
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
+
+/* Mobile */
+@media (max-width: 991px){
+  :root{
+    --ues-logo-big: 84px;
+    --ues-logo-small: 80px;
+  }
+}
+
+.ues-edition-encard{
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 14px 32px rgba(0,0,0,.25);
+  backdrop-filter: blur(6px);
+}
+
+.ues-edition-encard::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+
+  /* ✅ voile animé blanc (nacré) */
+  background: linear-gradient(120deg,
+    rgba(255,255,255,0),
+    rgba(255,255,255,.32),
+    rgba(255,255,255,0));
+
+  transform: translateX(-70%);
+  animation: ues-encard-shine 6s ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
+  opacity:.9;
+  mix-blend-mode: screen; /* joli sur fond sombre */
+}
+
+
+.ues-edition-encard__inner{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ues-edition-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,214,10,.18);
+  border: 1px solid rgba(255,214,10,.35);
+  color: #ffd60a;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: .75rem;
+  white-space: nowrap;
+}
+
+.ues-edition-title{
+  font-weight: 900;
+  font-size: 1.05rem;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0 0 13px;
+}
+
+.ues-edition-date{
+  margin-top: 3px;
+  opacity: .95;
+  font-size: .95rem;
+}
+
+.ues-edition-icon{
+  margin-left: auto;
+  font-size: 1.6rem;
+  color: #ffd60a;
+  opacity: .95;
+  animation: ues-encard-float 2.8s ease-in-out infinite;
+}
+
+@keyframes ues-encard-shine{
+  0%   { transform: translateX(-70%); opacity: .2; }
+  40%  { opacity: .45; }
+  60%  { opacity: .45; }
+  100% { transform: translateX(70%);  opacity: .2; }
+}
+
+@keyframes ues-encard-float{
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+/* Mobile */
+@media (max-width: 575px){
+  .ues-edition-encard__inner{ flex-wrap: wrap; }
+  .ues-edition-icon{ margin-left: 0; }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce){
+  .ues-edition-encard::before,
+  .ues-edition-icon{
+    animation: none !important;
+  }
+}
+
+</style>
+</head>
+<body class="index-page ues-page som">
+<header class="header fixed-top ues-header" id="header">
+<button id="backToTop" class="btn-back-to-top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+<div class="ues-topbar">
+<div class="container-xxl ues-topbar-inner">
+<div class="ues-topbar-title">Université Européenne de Saxophone - Edition 2026</div>
+<div class="ues-topbar-actions">
+
+<a href="spip.php?rubrique5?slide=1" class="ues-social" title="Se connecter">
+    <i class="bi bi-wallet-fill"></i>
+</a>
+
+<a href="https://www.facebook.com/univsax/" title="Facebook UES" target="_blank" class="ues-social" rel="noopener" aria-label="Facebook">
+<i class="bi bi-facebook"></i>
+</a>
+<div aria-label="Langue" class="ues-lang-pill" role="group">
+        <a class="ues-lang-pill-btn" href="spip.php?page=sommaire">FR</a>
+        <a class="ues-lang-pill-btn is-active" href="spip.php?page=sommaire_eng">ENG</a>
+</div>
+</div>
+</div>
+</div>
+<nav class="navbar navbar-expand-xl ues-nav">
+<div class="container-xxl ues-nav-inner">
+<a aria-label="Université Européenne de Saxophone" class="navbar-brand ues-brand" href="#URL_SITE_SPIP">
+<img alt="Université Européenne de Saxophone" src="assets/img/ues/logo_ues.png"/>
+</a>
+<button aria-controls="uesNav" aria-expanded="false" aria-label="Ouvrir le menu" class="navbar-toggler ues-toggler" data-bs-target="#uesNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="uesNav">
+    <ul class="navbar-nav ms-auto ues-menu">
+        <!-- Liens existants (visible partout ou Desktop) -->
+        <li class="nav-item"><a class="nav-link active" href="index.php">Accueil</a></li>
+        <li class="nav-item"><a href="index.php#ues-slides" class="nav-link">Présentation</a></li>
+        
+        <!-- LIENS MOBILES UNIQUEMENT (Enseignement, Histoire...) -->
+        <li class="nav-item d-lg-none">
+            <a class="nav-link" href="index.php?slide=1#ues-slides">Enseignement</a>
+        </li>
+        <li class="nav-item d-lg-none">
+            <a class="nav-link" href="index.php?slide=2#ues-slides">Histoire</a>
+        </li>
+        <li class="nav-item d-lg-none">
+            <a class="nav-link" href="index.php?slide=3#ues-slides">Une journée à l'UES</a>
+        </li>
+
+        <!-- LIEN COMMUN -->
+        <li class="nav-item"><a class="nav-link" href="spip.php?rubrique5">Inscriptions 2026</a></li>
+
+        <!-- LIENS MOBILES UNIQUEMENT (Connexion / Dossier) -->
+        <!-- Si connecté -->
+        [(#SESSION{id_auteur}|oui)
+        <li class="nav-item d-lg-none">
+            <a class="nav-link" href="spip.php?rubrique5?slide=3">Mon dossier</a>
+        </li>
+        ]
+        <!-- Si PAS connecté -->
+        [(#SESSION{id_auteur}|non)
+        <li class="nav-item d-lg-none">
+            <a class="nav-link" href="spip.php?rubrique5?slide=1">Se connecter</a>
+        </li>
+        <li class="nav-item d-lg-none">
+            <a class="nav-link" href="spip.php?rubrique5?slide=2">S'inscrire</a>
+        </li>
+        ]
+
+        <!-- Reste des liens existants -->
+        <li class="nav-item"><a class="nav-link" href="#cta">Partenaires</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+</div>
+</div>
+</nav>
+</header>
+<main class="main ues-main">
+<section aria-label="Accueil" class="hero section ues-hero" id="hero">
+<div class="ues-xfade">
+  <video id="v1" class="ues-xfade__video is-active" autoplay muted playsinline preload="auto">
+    <source src="assets/video/video1.mp4" type="video/mp4">
+  </video>
+
+  <video id="v2" class="ues-xfade__video filtre_black" muted playsinline preload="auto">
+    <source src="assets/video/video2.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div aria-hidden="true" class="ues-hero-overlay"></div>
+<div class="container ues-hero-container ues-hero-content">
+<div class="row justify-content-center">
+<div class="col-12 col-xxl-10">
+<div class="d-flex justify-content-end ues-cta-wrap">
+  <a class="ues-cta ues-cta--inscriptions"
+     href="spip.php?rubrique5"
+     title="Inscriptions 2026">
+    <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i>
+    Inscriptions 2026 : <strong>OUVERTE</strong>
+  </a>
+</div>
+
+<div class="ues-panel">
+<div class="row g-4 align-items-start">
+<div class="col-lg-6">
+<h1 class="roboto"><span class="txt_yellow txt_27">B</span>ienvenue à l'Université Européenne de Saxophone</h1>
+<div class="ues-panel-text">
+<p>Depuis sa création, l'Université Européenne de Saxophone a contribué à promouvoir la pratique du saxophone au plus haut niveau.</p>
+<p>Le Directeur Artistique Monsieur Claude DELANGLE et son équipe pédagogique constituée des plus renommés pédagogues français mais aussi de grandes personnalités du saxophone, ont permis d'assurer la libre circulation des compétences et des connaissances sur le plan européen et international.</p>
+<p class="mb-0">L'Université, en collaboration avec la ville de GAP et le concours des sociétés <strong><a class="a_jaune" href="partenaires.php">VANDOREN</a></strong> et <strong><a class="a_jaune" href="partenaires.php">SELMER</a></strong>, vous réserve une programmation inédite. Pendant toute la période du stage, du <strong class="txt_yellow">lundi 13 juillet au jeudi 23 juillet 2026</strong> inclus, vous pourrez entendre lors des différents concerts, les étudiants ainsi que leurs professeurs.<br/></p>
+</div>
+<ul class="ues-quicklinks">
+  <li>
+    <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="0">
+      <i class="bi bi-wechat ues-qi"></i> Date et présentation de la 37ème édition
+    </a>
+  </li>
+
+  <li>
+    <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="1">
+      <i class="bi bi-apple-music ues-qi"></i> Enseignements
+    </a>
+  </li>
+
+  <li>
+    <a href="#ues-concerts">
+      <i class="bi bi-mic-fill ues-qi"></i> Les concerts
+    </a>
+  </li>
+</ul>
+</div>
+<div class="col-lg-6">
+<img alt="Affiche 2026 — European University of Saxophone" class="ues-poster img-fluid" src="assets/img/ues/affiche-2026.jpg"/>
+</div>
+</div>
+</div><!-- /panel -->
+</div>
+</div>
+<div   id="part"></div>
+</div>
+
+</section>
+<!-- Ajoutez ici d'autres sections dynamiques SPIP si besoin -->
+<!-- Bandeau logos (après #hero) -->
+<div aria-label="Logos partenaires" class="ues-logo-strip-wrap">
+<p class="ues-logo-strip__title">Avec la participation de :</p>
+<section class="ues-logo-strip" id="logo-strip">
+<div class="ues-logo-strip__container">
+<div class="ues-logo-strip__row">
+<img alt="Henri SELMER Paris" class="ues-logo ues-logo--selmer" loading="lazy" src="assets/img/ues/Henri_Selmer_Paris_logo.svg"/>
+<img alt="Vandoren" class="ues-logo ues-logo--vandoren" loading="lazy" src="assets/img/ues/vandoren.svg"/>
+<img alt="Hautes-Alpes — le département" class="ues-logo ues-logo--hautes-alpes" loading="lazy" src="assets/img/ues/Logo_Hautes_Alpes.svg"/>
+<img alt="Ville de Gap" class="ues-logo ues-logo--gap" loading="lazy" src="assets/img/ues/Logo_ville_de_Gap.svg"/>
+</div>
+</div>
+</section>
+</div>
+<section class="ues-slides py-7 ues-bg" id="ues-slides">
+<div class="container-xxl">
+<div class="carousel slide" data-bs-ride="false" data-bs-touch="true" id="uesCarousel">
+
+
+  <div class="ues-slide-nav d-flex gap-2 flex-wrap" aria-label="Navigation du diaporama">
+    <button type="button" class="btn btn-light ues-tabbtn" data-bs-target="#uesCarousel" data-bs-slide-to="0">
+      <i class="bi bi-wechat ues-qi"></i> Présentation
+    </button>
+    <button type="button" class="btn btn-light ues-tabbtn" data-bs-target="#uesCarousel" data-bs-slide-to="1">
+      <i class="bi bi-apple-music ues-qi"></i> Enseignement
+    </button>
+    <button type="button" class="btn btn-light ues-tabbtn" data-bs-target="#uesCarousel" data-bs-slide-to="2">
+      <i class="bi bi-journal-richtext ues-qi"></i> Historique
+    </button>
+    <button type="button" class="btn btn-light ues-tabbtn" data-bs-target="#uesCarousel" data-bs-slide-to="3">
+      <i class="bi bi-music-note-list ues-qi"></i> Une journée à l'UES
+    </button>
+  </div>
+<div class="carousel-inner">
+<!-- SLIDE 1 (0) : Présentation -->
+<div class="carousel-item active">
+<div class="row g-4 align-items-start">
+<div class="col-lg-7">
+<h3 class="mb-3 ues-slide-title"><i class="bi bi-wechat ues-qi"></i> Présentation</h3>
+
+<p>L'Université Européenne de Saxophone se déroule sur 11 jours complets, dans la deuxième partie du mois de juillet.<br/><br/>
+Lors de leur arrivée à Gap, les 54 étudiants inscrits sont accueillis dans les locaux du foyer des jeunes travailleurs (voir schéma) par l'ensemble du personnel : organisateurs, professeurs et pianistes, représentants locaux, etc.</p>
+
+
+
+
+<p>Un cocktail de bienvenue leur permet de se rencontrer, de faire connaissance avec les autres étudiants, et de s'entretenir avec les professeurs et les organisateurs. Ces derniers abordent ensuite avec eux l'ensemble des détails pratiques (planning du stage, déroulement des journées, enseignement, programme des concerts, etc.). Les étudiants sont accompagnés par une personne qui les encadre durant la totalité de leur stage. Elle est leur référent direct en cas de question ou de problème, et dort également au foyer afin de pallier à tout problème qui pourrait se dérouler durant la nuit. </p>
+</div>
+<div class="col-lg-5">
+<div class="ues-edition-encard my-5" role="note" aria-label="Annonce édition 2026">
+  <div class="ues-edition-encard__inner">
+    <div class="ues-edition-main">
+     <div class="ues-edition-title">La trente-septième édition arrive !</div>
+      <div class="ues-edition-top">
+        <span class="ues-edition-chip">
+          Gap · du 13 au 23 juillet 2026
+        </span>
+        <span class="ues-edition-badge">
+          <a href="spip.php?rubrique5" title="Inscription UES 2026">S'inscrire</a> </span>
+        
+      </div>
+
+     
+      <div class="ues-edition-date">
+        La trente-septième édition de l'Université Européenne de Saxophone se déroulera à
+        <strong>Gap</strong> du <strong>13</strong> au <strong>23</strong> juillet <strong>2026</strong>.
+      </div>
+    </div>
+
+    <i class="bi bi-stars ues-edition-icon" aria-hidden="true"></i>
+  </div>
+</div>
+
+
+
+    
+<div class="ues-folio" id="uesFolio" aria-label="Folio">
+  <div class="ues-folio__viewport" aria-live="polite"></div>
+  <div class="ues-folio__dots" role="tablist" aria-label="Navigation du folio"></div>
+
+  <button class="ues-folio__prev" type="button" aria-label="Image précédente">
+    <span aria-hidden="true">‹</span>
+  </button>
+  <button class="ues-folio__next" type="button" aria-label="Image suivante">
+    <span aria-hidden="true">›</span>
+  </button>
+</div>
+
+
+</div>
+</div>
+</div>
+<!-- SLIDE 2 (1) : Enseignement -->
+<div class="carousel-item">
+<div class="row g-4 align-items-start">
+<div class="col-lg-7">
+<h3 class="mb-3 ues-slide-title"><i class="bi bi-apple-music ues-qi"></i> Enseignement</h3>
+<p>
+
+              Depuis plusieurs années, l'équipe pédagogique de l'Université Européenne de   Saxophone de Gap se réjouit d'accueillir une cinquantaine d'étudiants dont le   niveau d'ensemble est plutôt homogène. Cette réalité très appréciable permet aux   professeurs présents de faire évoluer leurs techniques d'enseignement, vers   davantage de polyvalence.<br/>
+<br/>
+
+              Les cours individuels restent naturellement le   noyau de cet enseignement, et permettent à tous les étudiants de côtoyer chacun   des professeurs, mais ils sont à présent accompagnés de nombreuses autres   activités. Les stagiaires peuvent ainsi apprécier les membres de l'équipe en   tant que professeurs, mais aussi en tant qu'artistes. Outre le perfectionnement   instrumental à proprement parler, les activités qui sont proposées aux   stagiaires sont les suivantes : <br/>
+<br/>
+<ul class="ues-featurelist">
+  <li>Possibilité pour chacun de répéter individuellement avec les deux pianistes (Fumie Ito et Cyrille Lehn)</li>
+  <li>Master classe</li>
+  <li>Ensemble de saxophones</li>
+  <li>Préparation au Concours</li>
+  <li>Cours de pédagogie</li>
+  <li>Préparation à des concerts</li>
+</ul>
+<br/>
+</p>
+</div>
+<div class="col-lg-5">
+<div class="ues-enseignement-box h-100">
+<p class="mb-2">
+      Tous les étudiants devront avoir préparé un programme de <strong>30 minutes minimum</strong>
+      avant le début de l'Université.
+    </p>
+<p class="mb-4">
+      Nous vous rappelons que l'usage des <strong>photocopies</strong> pour les partitions est
+      <strong>strictement interdit</strong>.
+    </p>
+<p class="mb-3 underline">2 formules sont proposées :</p>
+<div class="ues-offers">
+  <article class="ues-offer">
+    <header class="ues-offer__head">
+      <h4 class="ues-offer__title"><i class="bi bi-people-fill"></i> Stagiaire</h4>
+      <span class="ues-offer__badge">Formule complète</span>
+    </header>
+
+    <ul class="ues-offer__list">
+      <li>Cours individuel de <strong>40 minutes</strong> par jour, avec chacun des professeurs</li>
+      <li>Cours individuel avec chacune des pianistes</li>
+      <li>Participation aux ensembles, aux concerts et aux Master Classes</li>
+    </ul>
+  </article>
+
+  <article class="ues-offer">
+    <header class="ues-offer__head">
+      <h4 class="ues-offer__title"><i class="bi bi-people-fill"></i> Auditeur</h4>
+      <span class="ues-offer__price">250€</span>
+    </header>
+
+    <p class="ues-offer__text">
+      Possibilité d'assister à tous les cours sans participation instrumentale.
+      Pour vous inscrire ou avoir des informations supplémentaires, nous contacter par mail.
+    </p>
+
+    <a class="btn btn-dark btn-sm ues-offer__cta" href="mailto:contact@univsax.com">
+      Nous contacter
+    </a>
+  </article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SLIDE 3 (2) : Historique -->
+<div class="carousel-item">
+<div class="row g-4">
+<div class="col-12">
+<h3 class="mb-3 ues-slide-title"><i class="bi bi-journal-richtext"></i> Historique</h3>
+<div class="ues-histo-text mt-3">
+<img alt="Ville de Gap" class="ues-histo-float-img" loading="lazy" src="images/img_gap.jpg"/>
+<p>
+        C'est en 1989 que Serge <strong>BICHON</strong> (Professeur au Conservatoire National de Région de Lyon),
+        Claude <strong>DELANGLE</strong> (Professeur au Conservatoire National Supérieur de Musique de Paris) et
+        Yves <strong>RAMBAUD</strong> (Professeur à l'Ecole Nationale de Musique de Gap) ont créé l'Université
+        Européenne de Saxophone, grâce au soutien financier de la municipalité gapençaise.
+      </p>
+<p>
+        Leurs objectifs sont multiples. Ils cherchent à affirmer la place du saxophone en tant qu'instrument moderne
+        et classique à la fois, ils souhaitent améliorer la formation des étudiants et ils préparent activement
+        (et avant l'heure !) la libre circulation des connaissances et des compétences au sein d'un continent européen
+        qui se cherche. Enfin, ce projet est un excellent moyen d'égayer la programmation culturelle du département
+        des Hautes-Alpes. Ils vont faire appel pour cela aux meilleurs professeurs de saxophone en France, et décident
+        de compléter chaque année l'équipe pédagogique avec la présence d'un Professeur Européen – c'est ainsi que
+        l'Université gagne ses galons d'événement « Européen ».
+      </p>
+<p>
+        Lors des 35 éditions précédentes, les étudiants ont donc eu l'occasion de perfectionner leur maîtrise instrumentale
+        avec des Professeurs venus d'Espagne, de Suisse, d'Allemagne, d'Italie, de Hollande, etc.
+      </p>
+<p>
+        Pensée à l'origine pour des étudiants Français, l'Université s'est rapidement mise au goût du jour, et accueille
+        depuis de nombreuses années déjà des étudiants venus des quatre coins du monde. Japonais, Chinois, Australiens,
+        Américains, Russes, et bien sûr des ressortissants de tous les pays de l'Union Européenne composent à présent
+        la plus grande partie de l'effectif, et viennent assimiler la technique et le style français, plébiscités
+        dans le monde entier.
+      </p>
+<p class="mb-0">
+        La première génération d'étudiants est aujourd'hui devenue professionnelle, et elle a progressivement exporté
+        le « modèle gapençais » dans le monde entier. Si, un peu partout en Europe, le concept a été repris, Gap garde
+        toujours une longueur d'avance grâce à son équipe pédagogique de très haut niveau, grâce aux innovations apportées
+        année après année, grâce aussi au cadre somptueux des Hautes-Alpes et à l'ambiance unique qui règne durant le stage.
+        L'Université Européenne de Saxophone de Gap est ainsi devenue un passage incontournable pour les saxophonistes
+        professionnels du monde entier.
+      </p>
+</div>
+</div>
+</div>
+</div>
+<!-- SLIDE 4 (3) : Déroulement -->
+<!-- SLIDE 4 (3) : Déroulement -->
+<div class="carousel-item">
+<div class="row  align-items-start">
+<div class="col-12">
+<h3 class="mb-3 ues-slide-title"><i class="bi bi-music-note-list"></i> Déroulement d'une journée</h3>
+</div>
+<div class="col-lg-6">
+<p>
+<strong class="date">7h30</strong> : Après une nuit passée au foyer des jeunes travailleurs, les 54 étudiants sont conviés à un petit-déjeuner dans le restaurant de l'établissement. Un repas que l'on recommande de ne pas manquer car la journée est souvent longue et intense.<br/><br/>
+<strong class="date">De 8h45 à 12h45</strong> : Les 54 participants sont répartis dans 9 groupes différents de 6 étudiants. Chacun des étudiants passera durant la totalité du stage 40 minutes avec chacun des 7 professeurs présents, ainsi qu'avec les deux pianistes accompagnatrices. Tous les étudiants devront avoir au préalable préparé un programme de 30 minutes minimum, qu'ils auront loisir de travailler avec chacun des membres de l'équipe pédagogique de l'Université Européenne de Saxophone. Durant le reste de la matinée, les étudiants ont à leur disposition de nombreuses salles de répétition. Ils peuvent également tester les produits présentés par les fabricants <strong>Selmer</strong> et <strong>Vandoren</strong>, présents sur les lieux du stage pendant quelques jours (2 à 3 jours pleins en général), et faire réviser leur instrument au réparateur de chez <strong>JS Musique</strong> également présent.<br/>
+<br/>
+<strong class="date">13h00</strong> : Les étudiants prennent le repas du midi au restaurant du foyer. Les professeurs sont souvent présents également.<br/><br/> </p>
+</div>
+<div class="col-lg-6">
+<p>
+<strong class="date">APRES-MIDI</strong> : Le début d'après-midi est généralement consacré aux répétitions avec les quatuors et les différents ensembles formés par les professeurs dès le premier jour selon les souhaits et le niveau des étudiants (C'est dans cette configuration de groupe que les étudiants donneront en conclusion du stage leur concert final). Le reste de l'après-midi est principalement consacré à des Cours Publics, donnés par certains des Professeurs présents, mais aussi par des intervenants extérieurs de renom. Enfin, les étudiants peuvent profiter des nombreux atouts touristiques de la ville de Gap...<br/><br/>
+<strong class="date">19h 30 ou 20h 30</strong> : Les étudiants prennent le repas du soir au restaurant du foyer, et se préparent pour le dernier événement de la journée, toujours très attendu, soit le concert programmé, soit la soirée libre...<br/><br/>
+<strong class="date">18h 30 ou 21h 00</strong> : À tour de rôle, et accompagnés par les pianistes de renom de l'Université Européenne de Saxophone, chacun des professeurs se produit en concert à la Chapelle des Pénitents, en plein centre de Gap. Ils donnent, pour les étudiants mais aussi pour environ 200 personnes présentes tous les soirs, des concerts de grande qualité, et gratuits.
+      </p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- SECTION : Équipe pédagogique (cartes) -->
+<section class="ues-team py-5" id="ues-team">
+<div class="container-xxl">
+<div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-4">
+<div>
+<h2 class="h4 mb-1">Équipe pédagogique</h2>
+<p class="mb-0 ues-team__lead">Les professeurs et la pianiste accompagnatrice de la 37ème édition.</p>
+</div>
+<ul class="nav nav-pills ues-team__tabs" id="uesTeamTabs" role="tablist">
+<li class="nav-item" role="presentation">
+<button aria-controls="pane-profs" aria-selected="true" class="nav-link active" data-bs-target="#pane-profs" data-bs-toggle="pill" id="tab-profs" role="tab" type="button">
+            Professeurs
+          </button>
+</li>
+<li class="nav-item" role="presentation">
+<button aria-controls="pane-pianistes" aria-selected="false" class="nav-link" data-bs-target="#pane-pianistes" data-bs-toggle="pill" id="tab-pianistes" role="tab" type="button">
+            Pianistes
+          </button>
+</li>
+</ul>
+</div>
+<div class="tab-content" id="uesTeamTabContent">
+  <!-- PROFS -->
+  <div aria-labelledby="tab-profs" class="tab-pane fade show active" id="pane-profs" role="tabpanel" tabindex="0">
+    <div class="row g-4">
+
+      <!-- Delangle -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modalDelangle" aria-label="Voir la bio de Claude Delangle">
+              <img alt="Claude Delangle" class="ues-person__img img-fluid" src="images/Delangle.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Claude Delangle</h3>
+            <p class="ues-person__role mb-3">Directeur artistique · Professeur au CNSMDP</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Enseigne au Conservatoire de Paris depuis 1988</li>
+              <li>Fondateur de l'UES de Gap</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalDelangle" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arsenijevic -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modalArsenijevic" aria-label="Voir la bio de Nicolas Arsenijevic">
+              <img alt="Nicolas Arsenijevic" class="ues-person__img img-fluid" src="images/arsenijevic.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Nicolas Arsenijevic</h3>
+            <p class="ues-person__role mb-3">Saxophoniste · Enseignant</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Diplômé du CNSMDP (classe Claude Delangle)</li>
+              <li>Lauréat de concours internationaux</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalArsenijevic" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Braquart (Eva) -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modaleva" aria-label="Voir la bio de Eva van Grinsven">
+              <img alt="Eva van Grinsven" class="ues-person__img img-fluid" src="images/eva_cv.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Eva van Grinsven</h3>
+            <p class="ues-person__role mb-3">Saxophoniste</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Saxophoniste diplômée du Conservatoire d'Amsterdam</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modaleva" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rautiola -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modalRautiola" aria-label="Voir la bio de Joonatan Rautiola">
+              <img alt="Joonatan Rautiola" class="ues-person__img img-fluid" src="images/rautolia_j.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Joonatan Rautiola</h3>
+            <p class="ues-person__role mb-3">Saxophoniste · Sibelius Academy</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Soliste (orchestres européens &amp; nordiques)</li>
+              <li>Pédagogue et interprète de musique contemporaine</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalRautiola" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sumiya -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modalSumiya" aria-label="Voir la bio de Miho Sumiya">
+              <img alt="Miho Sumiya" class="ues-person__img img-fluid" src="images/63c10b4b4d6731.png"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Miho Sumiya</h3>
+            <p class="ues-person__role mb-3">Saxophoniste · Tokyo (Japon)</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Diplômée major de l'Université des Arts de Tokyo</li>
+              <li>Soliste &amp; chambriste · enseignante</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalSumiya" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- lars -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modallars" aria-label="Voir la bio de Lars Mlekusch">
+              <img alt="Lars Mlekusch" class="ues-person__img img-fluid" src="images/lars_cv.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Lars Mlekusch</h3>
+            <p class="ues-person__role mb-3">Chef d'orchestre, saxophoniste</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Professeur de saxophone à l'Université des arts de Zurich</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modallars" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compagnon -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modalCompagnon" aria-label="Voir la bio de Sandro Compagnon">
+              <img alt="Sandro Compagnon" class="ues-person__img img-fluid" src="images/compagnon_bio.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Sandro Compagnon</h3>
+            <p class="ues-person__role mb-3">Saxophoniste · Soliste</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Prix internationaux (Osaka, Dinant, Thessalonique…)</li>
+              <li>Formé au CNSMDP (Delangle / Moraguès)</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalCompagnon" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PIANISTES -->
+  <div aria-labelledby="tab-pianistes" class="tab-pane fade" id="pane-pianistes" role="tabpanel" tabindex="0">
+    <div class="row g-4">
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modalIto" aria-label="Voir la bio de Fumie Ito">
+              <img alt="Fumie Ito" class="ues-person__img img-fluid" src="images/fumie.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Fumie Ito</h3>
+            <p class="ues-person__role mb-3">Pianiste accompagnatrice</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Accompagne les cours &amp; concerts de l'UES</li>
+              <li>Intervient sur plusieurs édition de l'UES</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modalIto" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- iren -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card ues-person h-100">
+          <div class="card-body">
+            <button type="button" class="ues-person__imgBtn p-0 border-0 bg-transparent w-100"
+              data-bs-toggle="modal" data-bs-target="#modaliren" aria-label="Voir la bio de Iren Seleljo">
+              <img alt="Iren Seleljo" class="ues-person__img img-fluid" src="images/iren_cv.jpg"/>
+            </button>
+
+            <h3 class="h6 mb-1 mt-3">Iren Seleljo</h3>
+            <p class="ues-person__role mb-3">Pianiste accompagnatrice</p>
+            <ul class="ues-person__bullets mb-3">
+              <li>Accompagne les cours &amp; concerts de l'UES</li>
+              <li>Intervient sur plusieurs édition de l'UES</li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm w-100" data-bs-target="#modaliren" data-bs-toggle="modal" type="button">Voir la bio</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- /tab-content -->
+</div>
+</section>
+<!-- Modals (bios courtes + lien vers page complète) -->
+<div aria-hidden="true" class="modal fade" id="modalDelangle" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content ues-modal">
+<div class="modal-header">
+<h5 class="modal-title">Claude Delangle</h5>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Claude Delangle" class="img-fluid rounded-3 ues-modal-photo" src="images/Delangle.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Claude Delangle enseigne le saxophone au Conservatoire de Paris (CNSMDP) depuis septembre 1988, année où il fonde l'Université Européenne du Saxophone de Gap dont il est le directeur artistique.</p>
+<p>A la demande de Pierre Boulez il s'est produit en soliste et au sein de l'Ensemble Intercontemporain de 1986 à 2000. Il fut très proche de Luciano Berio qui écrivit pour lui le concerto pour saxophone Chemin VII – Récit et s'est produit à ses côtés aux Norton Lectures à l'Université d'Harvard, au Queen Elizabeth Hall de Londres, au Tisch Center de New York, à la Philharmonie de Cologne, avec le BBC Symphony. <br/></p>
+<p>Ses spectacles « Canticum » (Roma Europa) avec Luciano Berio et London Voices, « Tango Futur » (Aix-en-Provence) avec Susanna Moncayo, « Quest » (Zagreb Biennale) avec Thierry Coduys, « Récit » (Agora/Ircam et Shizuoka-Japon) avec les œuvres de Pierre Boulez, Ichiro Nodaira et Marco Stroppa, « Elucidation » avec le chorégraphe Loïc Touzé, « Japanese Songs » (Manca/Nice) avec la mezzo soprano Marie Kobayashi et plus récemment « Duo » avec la danseuse Anne-Hélène Kotoujansky (Bach, Debussy, Mantovani, Leroux) sont des repères qui ont profondément nourri sa réflexion pour un partage vivant de la création musicale. Claude Delangle a créé des oeuvres de G.Amy, L.Berio, E.Denisov, H.Dufourt, G.Grisey, B.Jolas, G.Ligeti, A.Piazzolla, K.Stockhausen, Y.Taïra, T.Takemitsu, J.L.Campana, B.Dubedout, F.Durieux, T.Hosokawa, Ph.Hurel, M.Jarrell, P.Jodlovski, Ch.Lauba, Ph.Leroux, J.M.Lopez-Lopez, A.Louvier, B.Mantovani, M.Matalon, L.Naon, M.Natsuda, I.Nodaïra, Y.Robin, O.Strasnoy, F.Tanada, Ton-That Tiêt entre autres. Créer et transmettre motivent toute son activité musicale.</p>
+<p>Claude Delangle a gravé douze disques pour BIS et participé à des enregistrements monographiques des compositeurs Claude Debussy, Anton Webern, Luciano Berio, Edison Denisov, Hugues Dufourt, Gérard Grisey et Philippe Leroux, pour Deutsche Grammophon, Harmonia Mundi, Erato et Verany.</p>
+<p>Il se produit depuis quatre décennies avec son épouse la pianiste Odile Catelin-Delangle, professeur à l'Ecole Normale de Musique de Paris.</p>
+<p>Claude Delangle contribue au développement des prototypes de la société Henri-Selmer-Paris et dirige une collection aux Editions Lemoine Paris dans laquelle il se réjouit d'avoir publié des œuvres de ses amis Bruno Mantovani, Ichiro Nodaïra, Fuminori Tanada et nombre de compositeurs de plusieurs générations.</p>
+<p>Claude Delangle est Chevalier des Arts et des Lettres.
+<br/>
+<br/>
+<br/>
+<span class="txt_gris10"><a href="http://www.sax-delangle.com" target="_blank">www.sax-delangle.com</a></span></p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a></div></div></div></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal fade" id="modalArsenijevic" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content ues-modal">
+<div class="modal-header">
+<h5 class="modal-title">Nicolas Arsenijevic</h5>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Nicolas Arsenijevic" class="img-fluid rounded-3 ues-modal-photo" src="images/arsenijevic.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Nicolas Arsenijevic est l'un des saxophonistes les plus reconnus de sa génération. Diplômé du Conservatoire National Supérieur de Musique de Paris en 2016 dans la classe de Claude Delangle (Licence et Master), il navigue depuis plusieurs années entre création contemporaine, répertoire original pour saxophone, transcriptions, musique traditionnelle des Balkans ou encore théâtre musical. <br/></p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a></div></div></div></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal fade" id="modalRautiola" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content ues-modal">
+<div class="modal-header">
+<h5 class="modal-title">Joonatan Rautiola</h5>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Joonatan Rautiola" class="img-fluid rounded-3 ues-modal-photo" src="images/rautolia_j.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Né à Helsinki, Finlande en 1983, Joonatan Rautiola étudie le saxophone à l'Académie Sibelius avec Pekka Savijoki et au Conservatoire de Paris avec Claude Delangle. Lauréat de grands concours internationaux (Dinant, Düsseldorf, Oslo, Nova Gorica, Paris), Joonatan Rautiola se produit en soliste avec l'Orchestre Philharmonique de Strasbourg, l'Orchestre national de la Lettonie, l'Orchestre de la Radio Finlandaise et le Düsseldorf Symfoniker entre autres, et donne des récitals à Londres, Dublin, Saint Pétersbourg, Tokyo et au Carnegie Hall de New York. Joonatan Rautiola a créé de nombreux œuvres de compositeurs contemporains, notamment à l'IRCAM (Paris) et a reçu les conseils de Pierre Boulez et Betsy Jolas. En 2012, il enregistre le disque monographique "8 Solos" (Sismal Records) du compositeur Patrick Marcland avec les solistes de l'Ensemble Intercontemporain. Il enseigne le saxophone à l'Académie Sibelius et donne des cours publics à Londres, Tokyo, Strasbourg et Riga. Joonatan Rautiola joue les saxophones Henri Selmer Paris et les anches D'Addario Woodwinds. www.joonatanrautiola.com</p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a></div></div></div></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal fade" id="modaleva" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content ues-modal">
+<div class="modal-header">
+<h5 class="modal-title">Eva van Grinsven</h5>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Eva van Grinsven" class="img-fluid rounded-3 ues-modal-photo" src="images/eva_cv.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p><br/>
+<strong><br/>
+           Avec sa large palette de couleurs sonores, sa présence scénique captivante et la joie immense qu'elle manifeste en jouant, la saxophoniste Eva van Grinsven a conquis à maintes reprises le cœur de la presse et du public. Sa pratique de performance intense et multifacette se concentre souvent sur la musique de chambre, mais Eva se produit aussi en solo et avec diverses compagnies musicales, dont l'Orchestre Philharmonique de la Radio néerlandaise et l'Orchestre royal du Concertgebouw. Mais peu importe le contexte musical ou le style, pour Eva, l'histoire derrière les notes passe toujours avant tout.
+<br>
+<br>
+
+Après avoir pris des cours de flûte à bec et de violon, Eva, âgée de neuf ans, a découvert le saxophone. Elle a immédiatement été fascinée par les possibilités apparemment infinies qu'offrait cet instrument caméléonique, et elles l'inspirent encore aujourd'hui. En 2008, Eva a obtenu son diplôme avec mention du Conservatoire d'Amsterdam, où elle a étudié avec son mentor et source d'inspiration constante Arno Bornkamp.
+<br>
+<br>
+
+La même année, son duo Sax & Stix a remporté le Vriendenkrans, un prix prestigieux décerné chaque année à de jeunes musiciens prometteurs par la Société néerlandaise des amis du Concertgebouw et l'Orchestre royal du Concertgebouw. De nombreux prix et distinctions ont suivi.
+<br>
+<br>
+
+Récemment, Eva a reçu à la fois le prix du jury et le prix du public du Dutch Classical Talent Award 2013 avec le Quatuor de saxophones de Bergage.
+<br>
+<br>
+
+Le premier album de Sax & Stix ainsi que le premier enregistrement du Berlage Saxophone Quartet ont reçu des critiques enthousiastes tant de la presse musicale néerlandaise que internationale.
+Sa passion pour la musique de saxophone des années 1920 et 1930 l'a également conduit à des performances et des enregistrements d'albums avec le Dudok Quartet et le Café Dansant.
+<br>
+<br>
+
+Après une performance live réussie sur Radio 4 néerlandaise, elle a formé une nouvelle collaboration avec la pianiste Helena Basilova. Ils ont immédiatement élaboré de nombreux projets pour l'avenir, notamment une tournée au Danemark et un programme de concerts de musique française et russe.
+<br>
+<br>
+
+Son enthousiasme pour rapprocher les gens et la musique a également conduit à la fondation de l'Amsterdam Saxophone Orchestra. Cette compagnie est composée d'anciens élèves d'Arno Bornkamp et donne des concerts à l'initiative d'Eva ou sur demande lors d'occasions spéciales.
+<br>
+<br>
+
+Eva est une invitée bienvenue dans des festivals tels que le Grachtenfestival et le Delft Chamber Music Festival, où elle a travaillé avec Karin Strobos et Liza Ferschtman, entre autres. Elle s'est produite sur toutes les grandes scènes néerlandaises et a effectué des tournées de concerts dans de nombreux pays européens, en Chine et au Japon.
+<br>
+<br>
+
+En tant qu'artiste solo, Eva a récemment créé la Megumi Suite de Robin de Raaff avec le Doelen Ensemble. Elle a auparavant donné des concerts en solo avec des compagnies telles que l'Orchestre national des jeunes néerlandais et l'Amstel String Ensemble.
+<br>
+
+Eva s'est produite à de nombreuses reprises sur Radio 4 néerlandaise, NDR, WDR et Deutschlandfunk et est également apparue à la télévision pour Vrije Geluiden, le célèbre concert du Nouvel An NBE 2008 et le concert KCO & Armin van Buuren en l'honneur du couronnement du roi Guillaume-Alexandre.</p>
+<p>Pour tous renseignements  complémentaires, n'hésitez pas à contacter philippe Braquart à  l'adresse suivante : <a href="mailto:contact@univsax.com">contact@univsax.com</a></p></div></div></div></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal fade" id="modallars" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content ues-modal">
+<div class="modal-header">
+<h5 class="modal-title">Lars Mlekusch</h5>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Christian Wirth" class="img-fluid rounded-3 ues-modal-photo" src="images/lars_cv.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Reconnu internationalement comme chef d'orchestre, éducateur, saxophoniste et conservateur, Lars Mlekusch est reconnu pour son art réfléchi et son dévouement particulier à la musique du XXe siècle et contemporaine, qui conduit à des performances vibrantes. Ses collaborations étroites avec des compositeurs tels qu'Agata Zubel, Aureliano Cattaneo, Johanne Maria Staud, Laura Bowler, Sarah Nemtsov, Pierluigi Billone, Klaus Lang, Bernhard Lang et Wolfgang Mitterer ont donné lieu à de nombreuses créations mondiales.
+Il est un partenaire très recherché de certains des plus grands ensembles mondiaux, dont le Klangforum Wien, PHACE, l'Orchestre de chambre de Stuttgart, l'Orchestre de chambre géorgien, l'OENM, le Collegium Novum Zurich, la Neue Vocalsolisten Stuttgart, l'Orchestre symphonique de la Radio slovaque ou les musiciens principaux de l'Orchestre de la Tonhalle.<br>
+
+Ses prestations l'ont mené dans des festivals prestigieux et des salles de concert renommées dans le monde entier, telles que Wien Modern, Klangspuren Festival, Transart Festival, Huddersfield Contemporary Music Festival, Elbphilharmonie Sommer, Salzburg aspekte, Melos-Ethos à Bratislava, Musikverein Wien, Konzerthaus Wien, Elbphilharmonie Hamburg, Concertgebouw Amsterdam, Muziekgebouw Amsterdam, Casa da Música Porto, National Concert Hall Taipei ou le Centre des Arts du Spectacle Weiwuying Kaohsiung.</p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a></div></div></div></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal fade" id="modalGarcia" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content ues-modal">
+<div class="modal-header">
+<h5 class="modal-title">Mariano García</h5>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Mariano García" class="img-fluid rounded-3 ues-modal-photo" src="images/garcia_cv.jpg"/></div><div class="col-md-8"><div class="ues-modal-bio"><p>Passionné de saxophone, ses interprétations sont une recherche incessante de dépassement des limites de l'instrument, élargissant le répertoire, soit avec des transcriptions de la grande musique de chambre de tous les temps soit avec la musique contemporaine. Alliant sa carrière pédagogique à celle de concertiste, il se produit en Chine, aux USA et participe à des festivals importants à Andorre, au Portugal, en Autriche et en Italie, avec un répertoire adapté aux différentes situations et veille tout particulièrement au répertoire de notre temps ainsi qu'aux transcriptions. Au niveau pédagogique, il dispense de nombreux cours et master-classes en Espagne, notamment à l'Esmuc de Barcelone, au Conservatoire Supérieur de Salamanque et à l'Université Francisco de Vitoria de Madrid. Aux Etats-Unis, il est invité par différentes universités, comme North Carolina, South Carolina, Furman University, Shenandoah, Georgia University, Augusta… Depuis 2009, il est titulaire de la chaire de saxophone au Conservatoire Supérieur de Musique d'Aragon et actuellement l'un des professeurs les plus prisés de cet instrument. Son dernier enregistrement « Ritmo En El Espacio » avec la pianiste Aniana Jaime autour de compositeurs espagnols sous le label discographique IBS classical a reçu un accueil chaleureux de la critique spécialisée. Sollicité comme membre du jury de différents concours internationaux, il est, depuis 2010, artiste Selmer et membre du duo ÁniMa. www.marianogarciasax.com</p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a></div></div></div></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal fade" id="modalCompagnon" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content ues-modal">
+<div class="modal-header">
+<h5 class="modal-title">Sandro Compagnon</h5>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+  <div class="row g-4 align-items-start">
+    <div class="col-md-4">
+      <img src="images/compagnon_bio.jpg" class="img-fluid rounded ues-modal-photo" alt="Sandro Compagnon" loading="lazy">
+    </div>
+    <div class="col-md-8">
+      <div class="ues-modal-bio">
+        <p>Né à Nice en 1996, Sandro Compagnon commence le saxophone à 6 ans lorsqu'il déménage à Chamonix Mont-Blanc avec comme premier professeur, son père. Deux ans plus tard, il commence sa scolarité au CRR d'Annecy dans la classe de Christian Charnay puis de Fabrizio Mancuso. En 2006, il obtient le troisième prix au concours européen de Gap dans la catégorie des moins de 16 ans et en 2010 le troisième prix du concours européen de Valenciennes dans la catégorie soliste.</p><p>Après avoir obtenu un DEM de saxophone et de musique de chambre en 2011, il int��gre la classe de Jean-Denis Michat au CRR de Lyon en 2013. Parallèlement à ses études de musique classique, Sandro pratique beaucoup le jazz et se produit lors de nombreux concerts dans des festivals comme le festival de jazz de Vannes (invité par le Spok Frevo Orchestra) ou encore au Cosmo Jazz Festival de Chamonix d'André Manoukian. Il se produit régulièrement en concert avec ce dernier et a récemment enregistré pour l'un de ses albums.</p><p>Depuis le début de sa jeune carrière, Sandro Compagnon a eu l'occasion de se produire dans des salles et festivals de prestige, en France ainsi qu'à l'international (Philharmonie de Paris, Wigmore Hall de Londres, Festival Radio-France de Montpellier, salle Cortot, Izumi Hall d'Osaka, Topan Hall de Tokyo, Folles Journées de Nantes, maison de la radio, invité en soliste par l'orchestre de la Garde Républicaine…). Il joue régulièrement avec le pianiste Gaspard Dehaene. Ensemble, ils se sont notamment produits au prestigieux festival du Printemps des Arts de Monte-Carlo. Aussi, Sandro Compagnon collabore étroitement depuis plusieurs années avec le compositeur Bruno Mantovani. Il a fait la création de la version pour saxophone soprano de sa pièce pour flûte seule « Früh » à la Scala Paris en direct sur France Musique, a transcrit de nombreuses œuvres pour bois au saxophone et a récemment enregistré son premier disque solo, dédié à la musique du compositeur.</p><p>Il est diplômé de Master en saxophone et en musique de chambre au CNSMDP dans les classes de Claude Delangle et Michel Moraguès et, il suit le cursus d'improvisation générative auprès de Vincent LêQuang et Alexandros Markeas. En 2017, il remporte le 1er prix du concours international de musique de chambre d'Osaka avec le quatuor Zahir dont il était membre entre 2016 et 2021, en novembre 2019, le 3ème prix au concours international Adolphe Sax de Dinant en Belgique et en octobre 2021, le 1er prix au concours international Thomas Kuti à Thessalonique, en Grèce. Sandro est aussi, depuis mai 2021, lauréat de la Fondation Banque Populaire. Il vient d'être admis en Master Soliste à la ZHdK de Zürich (Suisse) dans la classe de Lars Mlekusch.</p>
+        <hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal fade" id="modalSumiya" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content ues-modal">
+<div class="modal-header">
+<h5 class="modal-title">Miho Sumiya</h5>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body"><div class="row g-4 align-items-start"><div class="col-md-4"><img alt="Miho Sumiya" class="img-fluid rounded-3 ues-modal-photo" src="images/63c10b4b4d6731.png"/></div><div class="col-md-8"><div class="ues-modal-bio"><p><strong>Sumiya</strong> est diplômée, major de sa promotion de l'Université des Arts de Tokyo.</p>
+<p>Elle a remporté la 1ère place et le Grand Prix au 6ème Concours de Musique Akiyoshidai et le premier prix au 9ème Concours International de Saxophone SAX GO (Slovénie).</p>
+<p>Elle a également reçu de nombreux autres prix comme la 2ème place au 34ème Concours japonais d'instruments à vent et à percussion, et récemment, le 5ème prix au Concours international Aeolus pour instruments à vent.</p>
+<p>Son premier album CD « Promenade » est sorti en 2018.
+          
+          Elle s'est produite en tant que soliste avec l'Orchestre Philharmonique de Tokyo, l'Orchestre Symphonique de Gunma, l'Orchestre Philharmonique du Kansai, l'Orchestre Symphonique de Tokyo, le New Japan Philharmonic, l'Orchestre Philharmonique de Geidai, l'Orchestre à Vent de Sienne et l'Orchestre de Chambre de Tokyo.</p>
+<p>Actuellement, elle est membre du Lumie Saxophone Quartet et du Panda Wind Orchestra et enseigne le saxophone au Showa Music College.<br/>
+<br/></p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a></div></div></div></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="modal fade" id="modalIto" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content ues-modal">
+<div class="modal-header">
+<h5 class="modal-title">Fumie Ito</h5>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p class="mb-0">Pianiste accompagnatrice de l'UES, elle participe aux activités pédagogiques (cours, accompagnement) et apparaît régulièrement sur les programmes des concerts.</p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a>
+</div>
+</div>
+</div>
+</div>
+
+<div aria-hidden="true" class="modal fade" id="modaliren" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content ues-modal">
+<div class="modal-header">
+<h5 class="modal-title">Iren Seleljo</h5>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p class="mb-0">Pianiste accompagnatrice de l'UES, elle participe aux activités pédagogiques (cours, accompagnement) et apparaît régulièrement sur les programmes des concerts.</p>
+<hr class="my-4"/>
+<a class="btn btn-outline-light btn-sm" href="#ues-concerts" rel="noopener" target="_blank">Voir les concerts 2026</a>
+</div>
+</div>
+</div>
+</div>
+
+<section id="ues-concerts" class="ues-section py-7">
+  <div class="container-xxl">
+    <div class="row align-items-start">
+      <!-- Text content (Left) -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <h2 class="ues-title text-uppercase">
+          <i class="bi bi-music-note"></i> <span class="">C</span>oncerts
+        </h2>
+        <p class="ues-subtitle">Du 13 au 23 juillet 2026</p>
+        <p class="ues-subtitle">Programme des Concerts (gratuits) :</p>
+        <div class="ues-concerts-list">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h4 class="card-title">
+                GAP, Chapelle des pénitents
+              </h4>
+              <ul class="list-group">
+                <li class="list-group-item"><strong>... </strong>: prochainement....</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Video and slideshow (Right) -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="d-flex flex-column align-items-center">
+          <!-- Video Placeholder -->
+          <div class="ues-video-placeholder border bg-white shadow-sm p-3 rounded text-center w-100 mb-4" style="max-width: 500px;">
+            <i class="bi bi-play-circle" style="font-size: 100px; color: grey"></i>
+            <p class="mt-3" align="center">Future concert video placeholder</p>
+          </div>
+          <!-- Slideshow Placeholder -->
+         
+            <!-- Slideshow Placeholder -->
+<div class="ues-slideshow-placeholder  shadow-sm p-3 rounded text-center w-100" style="max-width: 500px;">
+  <img src="assets/img/ues/concert_img1.jpg"
+       class="img-fluid rounded-3"
+       alt="Photo de concert UES"
+       loading="lazy">
+  <p class="mt-2 mb-0 small text-muted" align="center">Concerts des étudiants de l'UES</p>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- ============================
+         CONTACT
+         ============================ -->
+    <section id="contact" class="ues-contact py-7">
+  <div class="container-xxl ues-contact__wrap">
+
+    <!-- Titre gauche (style OIB) -->
+    <div class="ues-contact__head" data-aos="zoom-out">
+      <div class="ues-contact__kicker">MESSAGERIE</div>
+      <h2 class="ues-contact__title">Université Européenne de Saxophone</h2>
+    </div>
+
+    <div class="row g-4 mt-4">
+      <!-- Colonne infos -->
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="ues-contact__info">
+          <div class="ues-contact__item">
+            <span class="ues-contact__icon" aria-hidden="true">
+              <i class="bi bi-geo-alt"></i>
+            </span>
+            <div>
+              <h4>Adresse :</h4>
+              <p>14 chemin de Vigneaux<br>
+                Romette<br>05000 Gap FRANCE</p>
+            </div>
+          </div>
+
+          <div class="ues-contact__item">
+            <span class="ues-contact__icon" aria-hidden="true">
+              <i class="bi bi-telephone-inbound"></i>
+            </span>
+            <div>
+              <h4>Téléphone:</h4>
+              <p>+033 (0)4.92.45.06.48</p>
+            </div>
+          </div>
+          
+          <div class="ues-contact__item">
+            <span class="ues-contact__icon" aria-hidden="true">
+              <i class="bi bi-envelope"></i>
+            </span>
+            <div>
+              <h4>Email:</h4>
+              <p><a href="mailto:contact@univsax.com">contact@univsax.com</a></p>
+            </div>
+          </div>
+          
+          <div class="ues-contact__item">
+            <span class="ues-contact__icon" aria-hidden="true">
+              <i class="bi bi-house-check"></i>
+            </span>
+            <div>
+              <h4>Hébergement:</h4>
+              <p>Foyer Des Jeunes Travailleurs<br>
+73 Boulevard Georges Pompidou<br>
+05000 Gap FRANCE	 <br>
+<br>
+Tel : +033 (0)4 92 40 24 00</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Colonne formulaire -->
+      <div class="col-lg-8" data-aos="fade-left">
+        <div class="ues-contact__form">
+          <h3 class="ues-contact__formtitle">Envoyer un message</h3>
+
+          <div class="ajax">
+            #FORMULAIRE_CONTACT
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+<footer class="footer header2 ues-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="inner-content">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="single-footer f-about">
+                <div class="logo ues_logo"> <img src="assets/img/ues/ues_blc.png" alt="UES saxophone stage">
+                </div>
+                <h4 class="social-title">
+                  Suivez-nous :
+                  <a href="https://www.facebook.com/univsax/" target="_blank" rel="noopener">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </h4>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer f-link">
+                <h3>Menu</h3>
+                  <ul>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="index.php">Accueil</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="0">Présentation</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="spip.php?rubrique5">Inscription</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="1">Enseignement</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="2">Histoire</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-slides" data-bs-target="#uesCarousel" data-bs-slide-to="3">Une journée à l'UES</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#ues-concerts">Les concerts</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#part">Nos partenaires</a></li>
+                    <li class="nav-item"><i class="bi bi-check2-square"></i> <a href="#contact">Nous contacter</a></li>
+                  </ul>
+                </nav>
+                </B_nav>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-12">
+              <div class="single-footer f-link">
+                <h3>Espace étudiants</h3>
+                <ul>
+                  <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">Accueil</a></li>
+        <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">S'inscrire</a></li>
+        <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">Mon dossier</a></li>
+        <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">Téléchargement</a></li>
+      <li class="puce"><i class="bi bi-check2-square"></i> <a href="index.php">Chat UES</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer newsletter">
+                <h3>S'inscrire à la newsletter</h3>
+                <p>Recevez les dernières actualités, programmes des concerts et bien plus...</p>
+                #FORMULAIRE_NEWSLETTER_SUBSCRIBE
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright-area">
+      <div class="container">
+        <div class="inner-content">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+              <p class="copyright-text">© 2026 Université Européenne de Saxophone - Tous droits réservés</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <p class="copyright-owner">Designed and Developed by GD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Waves (DOIT rester DANS le footer) -->
+  <div class="ues-footer-waves" aria-hidden="true">
+    <svg class="ues-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+      <defs>
+        <path id="ues-gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"></path>
+      </defs>
+      <g class="ues-parallax">
+  <use href="#ues-gentle-wave" x="48" y="0"></use>
+  <use href="#ues-gentle-wave" x="48" y="4"></use>
+</g>
+
+    </svg>
+  </div>
+</footer>
+
+<!-- ======= Bandeau partenaires (EN DEHORS du footer, sous la vague) ======= -->
+<section id="cta" class="cta partenaire">
+  <div class="container">
+    <div class="row" data-aos="zoom-out">
+      <div class="col-lg-12">
+        <div class="ues-logo-strip__container">
+<div class="ues-logo-strip__row">
+<img alt="Henri SELMER Paris" class="ues-logo ues-logo--selmer" loading="lazy" src="assets/img/ues/Henri_Selmer_Paris_logo.svg"/>
+<img alt="Vandoren" class="ues-logo ues-logo--vandoren" loading="lazy" src="assets/img/ues/vandoren.svg"/>
+<img alt="Hautes-Alpes — le département" class="ues-logo ues-logo--hautes-alpes" loading="lazy" src="assets/img/ues/Logo_Hautes_Alpes.svg"/>
+<img alt="Ville de Gap" class="ues-logo ues-logo--gap" loading="lazy" src="assets/img/ues/Logo_ville_de_Gap.svg"/>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+  #INSERT_FOOTER
+  
+  <!-- SCRIPT BLOCK UNIQUE ET OPTIMISÉ -->
+    <!-- SCRIPT UES (carousel + folio) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // -------- Folio (mini slider maison, sans Bootstrap Carousel) --------
+  (function initFolio(){
+    var folioEl = document.getElementById("uesFolio");
+    if (!folioEl) return;
+
+    // Mets ici les fichiers présents dans assets/img/folio
+    var folioImages = [
+      "image-1.jpg",
+      "image-2.jpg",
+      "image-3.jpg",
+      "image-4.jpg",
+      "image-5.jpg",
+      "image-6.jpg",
+      "image-7.jpg",
+      "image-8.jpg",
+      "image-9.jpg"
+    ];
+
+    var takeCount = Math.min(6, folioImages.length);
+
+    function shuffle(arr) {
+      var a = arr.slice();
+      for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+      }
+      return a;
+    }
+
+    var chosen = shuffle(folioImages).slice(0, takeCount);
+    var viewport = folioEl.querySelector(".ues-folio__viewport");
+    var dots = folioEl.querySelector(".ues-folio__dots");
+    var prevBtn = folioEl.querySelector(".ues-folio__prev");
+    var nextBtn = folioEl.querySelector(".ues-folio__next");
+
+    if (!viewport || !dots || !prevBtn || !nextBtn || chosen.length === 0) return;
+
+    // Construire DOM
+    chosen.forEach(function (file, idx) {
+      var item = document.createElement("div");
+      item.className = "ues-folio__item" + (idx === 0 ? " is-active" : "");
+      item.hidden = idx !== 0;
+      item.innerHTML =
+        '<img src="assets/img/folio/' + file + '" class="ues-folio__img" alt="Folio ' + (idx + 1) + '" loading="lazy" />';
+      viewport.appendChild(item);
+
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "ues-folio__dot" + (idx === 0 ? " is-active" : "");
+      dot.setAttribute("aria-label", "Folio " + (idx + 1));
+      dot.addEventListener("click", function () { go(idx); });
+      dots.appendChild(dot);
+    });
+
+    var items = Array.prototype.slice.call(folioEl.querySelectorAll(".ues-folio__item"));
+    var dotEls = Array.prototype.slice.call(folioEl.querySelectorAll(".ues-folio__dot"));
+    var current = 0;
+
+    function go(n) {
+      if (n === current) return;
+      items[current].classList.remove("is-active");
+      items[current].hidden = true;
+      dotEls[current].classList.remove("is-active");
+
+      current = (n + items.length) % items.length;
+
+      items[current].hidden = false;
+      items[current].classList.add("is-active");
+      dotEls[current].classList.add("is-active");
+    }
+
+    function next() { go(current + 1); }
+    function prev() { go(current - 1); }
+
+    nextBtn.addEventListener("click", next);
+    prevBtn.addEventListener("click", prev);
+
+    // Auto-rotation (pause au survol / focus)
+    var intervalMs = 4000;
+    var timer = setInterval(next, intervalMs);
+
+    function stop() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+    function start() {
+      if (!timer && items.length > 1) timer = setInterval(next, intervalMs);
+    }
+
+    folioEl.addEventListener("mouseenter", stop);
+    folioEl.addEventListener("mouseleave", start);
+    folioEl.addEventListener("focusin", stop);
+    folioEl.addEventListener("focusout", start);
+  })();
+
+  // -------- UES Carousel (Bootstrap) --------
+  function ensureBootstrap(ready) {
+    if (window.bootstrap && window.bootstrap.Carousel) return ready();
+
+    var existing = document.querySelector('script[data-ues-bootstrap="1"]');
+    if (existing) {
+      existing.addEventListener("load", ready, { once: true });
+      return;
+    }
+
+    var script = document.createElement("script");
+    script.src = "assets/vendor/bootstrap/js/bootstrap.bundle.min.js";
+    script.setAttribute("data-ues-bootstrap", "1");
+    script.addEventListener("load", ready, { once: true });
+    document.body.appendChild(script);
+  }
+
+  function initUesCarousel() {
+    var carouselEl = document.getElementById("uesCarousel");
+    if (!carouselEl || !window.bootstrap || !bootstrap.Carousel) return;
+
+    var carousel = bootstrap.Carousel.getOrCreateInstance(carouselEl, {
+      interval: false,
+      touch: true
+    });
+
+    var buttons = carouselEl.querySelectorAll(".ues-slide-nav .ues-tabbtn");
+
+    function updateButtons(activeIndex) {
+      buttons.forEach(function (btn) {
+        btn.classList.remove("active", "btn-dark");
+        btn.classList.add("btn-light");
+      });
+
+      var activeButtons = carouselEl.querySelectorAll('.ues-slide-nav .ues-tabbtn[data-bs-slide-to="' + activeIndex + '"]');
+      activeButtons.forEach(function (btn) {
+        btn.classList.remove("btn-light");
+        btn.classList.add("active", "btn-dark");
+      });
+    }
+
+    // Si tu cliques sur un bouton, on pilote explicitement le carousel
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation(); // évite le double déclenchement via le data-API
+        var index = parseInt(btn.getAttribute("data-bs-slide-to"), 10);
+        carousel.to(index);
+      });
+    });
+
+    // Liens externes (Quicklinks, footer, etc.)
+    var links = document.querySelectorAll('a[data-bs-target="#uesCarousel"][data-bs-slide-to]');
+    links.forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var index = parseInt(link.getAttribute("data-bs-slide-to"), 10);
+        carousel.to(index);
+        var anchor = document.getElementById("ues-slides");
+        if (anchor) anchor.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    carouselEl.addEventListener("slid.bs.carousel", function (e) {
+      updateButtons(e.to);
+    });
+
+    updateButtons(0);
+  }
+
+  ensureBootstrap(initUesCarousel);
+});
+</script>
+<script>
+  // Script pour gérer l'apparence du menu au scroll
+  document.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    if (window.scrollY > 100) {
+      header.classList.add('ues-header--compact');
+    } else {
+      header.classList.remove('ues-header--compact');
+    }
+  });
+</script>
+</body>
+</html>

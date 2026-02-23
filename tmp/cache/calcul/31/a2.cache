@@ -1,0 +1,43 @@
+a:2:{s:9:"nom_cache";s:38:"31a25db3d7541812ccaf4b604b4e4708.cache";s:6:"valeur";a:12:{s:9:"squelette";s:37:"html_65429caad56cbc86781cbef88ccb9164";s:6:"source";s:30:"squelettes/inc-ues-header.html";s:11:"process_ins";s:4:"html";s:11:"invalideurs";a:1:{s:5:"cache";s:38:"31a25db3d7541812ccaf4b604b4e4708.cache";}s:7:"entetes";a:1:{s:12:"X-Spip-Cache";i:86400;}s:5:"duree";i:0;s:5:"texte";s:2099:"<header class="header fixed-top ues-header ues-header--compact" id="header">
+  <button id="backToTop" class="btn-back-to-top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <div class="ues-topbar">
+    <div class="container-xxl ues-topbar-inner">
+      <div class="ues-topbar-title">Université Européenne de Saxophone - Edition 2026</div>
+      <div class="ues-topbar-actions">
+        <a href="https://www.facebook.com/univsax/" title="Facebook UES" target="_blank" class="ues-social" rel="noopener" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <div aria-label="Langue" class="ues-lang-pill" role="group">
+          <a class="ues-lang-pill-btn is-active" href="#">FR</a>
+          <a class="ues-lang-pill-btn" href="#">ENG</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-xl ues-nav ues-nav--compact">
+    <div class="container-xxl ues-nav-inner">
+      <a aria-label="Université Européenne de Saxophone" class="navbar-brand ues-brand" href="https://www.univsax.com">
+        <img alt="Université Européenne de Saxophone" src="assets/img/ues/logo_ues.png"/>
+      </a>
+
+      <button aria-controls="uesNav" aria-expanded="false" aria-label="Ouvrir le menu"
+              class="navbar-toggler ues-toggler" data-bs-target="#uesNav" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="uesNav">
+        <ul class="navbar-nav ms-auto ues-menu">
+          <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
+          <li class="nav-item"><a href="index.php#ues-slides" class="nav-link">Présentation</a></li>
+          <li class="nav-item active"><a class="nav-link" href="spip.php?rubrique5">Inscriptions 2026</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cta">Partenaires</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>";s:5:"notes";s:0:"";s:8:"contexte";a:5:{s:4:"lang";s:2:"fr";s:4:"date";s:19:"2026-02-23 00:51:12";s:12:"date_default";b:1;s:10:"date_redac";s:19:"2026-02-23 00:51:12";s:18:"date_redac_default";b:1;}s:12:"lastmodified";i:1771804272;s:2:"gz";b:0;s:3:"sig";i:3167990760;}}

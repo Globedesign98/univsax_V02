@@ -1,0 +1,357 @@
+/* ==========================================================================
+   MENU OVERRIDE — UES
+   (Ce fichier est chargé en dernier : overrides finaux)
+   ========================================================================== */
+
+/* --- Navbar (inchangé) --------------------------------------------------- */
+.ues-nav, .navbar.ues-nav, .ues-header .ues-nav{
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+body.scrolled .ues-nav, body.scrolled .navbar.ues-nav, body.scrolled .ues-header .ues-nav{
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ==========================================================================
+   UES — CONTACT (objectif : proche de "Contact OIB" + tes couleurs)
+   IMPORTANT : on neutralise toutes les contraintes de largeur/alignement
+   qui peuvent réduire le bloc (effet "50%")
+   ========================================================================== */
+
+#contact.ues-contact{
+  background:#fff !important;
+}
+
+/* Layout global : limiter l'étalement (comme OIB) */
+#contact.ues-contact .ues-contact__wrap{
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ✅ RESET CRITIQUE : si un CSS met la colonne droite en flex/center,
+   le formulaire peut "shrink" et donner l'impression de 50% */
+#contact.ues-contact .col-lg-8{
+  display: block !important;
+  justify-content: initial !important;
+  align-items: initial !important;
+}
+
+/* ✅ RESET CRITIQUE : les wrappers AJAX peuvent être en flex/inline-flex */
+#contact.ues-contact .ajax-form-container,
+#contact.ues-contact .ajax-form-container .ajax,
+#contact.ues-contact .formulaire_spip,
+#contact.ues-contact .formulaire_spip form,
+#contact.ues-contact .formulaire_spip fieldset,
+#contact.ues-contact .formulaire_spip .editer-groupe{
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Pas d'effet "carte" : rendu flat */
+#contact.ues-contact .ues-contact__info,
+#contact.ues-contact .ues-contact__form{
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* --------- TITRES (kicker + ligne) -------------------------------------- */
+#contact.ues-contact .ues-contact__kicker{
+  display:flex;
+  align-items:center;
+  gap: 18px;
+  font-size: .78rem;
+  letter-spacing: .18em;
+  font-weight: 700;
+  color: rgba(0,0,0,.55);
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+#contact.ues-contact .ues-contact__kicker::after{
+  content:"";
+  height: 2px;
+  width: 90px;
+  background: #2b445c;
+  border-radius: 999px;
+  display:block;
+}
+#contact.ues-contact .ues-contact__title{
+  margin: 0 !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: #2b445c !important;
+}
+
+/* --------- COLONNE GAUCHE (adresse / email) ------------------------------ */
+#contact.ues-contact .ues-contact__item{
+  display:grid !important;
+  grid-template-columns: 52px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 18px 0;
+  border: 0 !important;
+}
+#contact.ues-contact .ues-contact__icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display:grid;
+  place-items:center;
+  background: #8b2f2f;
+  color: #fff;
+}
+#contact.ues-contact .ues-contact__item i{
+  font-size: 1.05rem;
+  color: #fff !important;
+  padding: 0 !important;
+}
+#contact.ues-contact .ues-contact__item h4{
+  margin: 2px 0 6px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2b445c;
+  text-transform: none;
+  letter-spacing: 0;
+}
+#contact.ues-contact .ues-contact__item p{
+  margin: 0;
+  color: rgba(0,0,0,.70);
+  line-height: 1.35;
+  font-size: .95rem;
+  text-align: left;
+}
+#contact.ues-contact .ues-contact__item a{
+  color: rgba(0,0,0,.70);
+  text-decoration: none;
+  font-weight: normal;
+}
+#contact.ues-contact .ues-contact__item a:hover{ text-decoration: underline; }
+
+/* --------- COLONNE DROITE : titre + formulaire --------------------------- */
+#contact.ues-contact .ues-contact__formtitle{
+  text-align: left !important;
+  font-weight: 800;
+  color: #2b445c;
+  margin: 0 0 14px !important;
+  font-size: 1.4rem;
+}
+
+/* On cache le legend SPIP (tu as déjà le H3 "Envoyer un message") */
+#contact.ues-contact .formulaire_spip legend{ display:none !important; }
+
+/* Sécurité : le champ texte avait été masqué dans ues.css */
+#contact.ues-contact .formulaire_spip .editer_texte{
+  display:block !important;
+}
+
+/* --------- GRILLE 2 colonnes (structure SPIP : .editer-groupe) ----------- */
+#contact.ues-contact .formulaire_spip .editer-groupe{
+  display:grid !important;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr) !important;
+  gap: 14px 28px !important;
+  align-items:start;
+}
+
+/* Par défaut : un champ = une colonne */
+#contact.ues-contact .formulaire_spip .editer{
+  grid-column: auto;
+  min-width: 0; /* évite les champs qui forcent la colonne à rétrécir */
+}
+
+/* Pleine largeur : destinataire (1er bloc), mail, sujet, texte, pièces jointes, boutons */
+#contact.ues-contact .formulaire_spip .editer-groupe > .editer.obligatoire:first-child,
+#contact.ues-contact .formulaire_spip .editer_mail,
+#contact.ues-contact .formulaire_spip .editer_sujet,
+#contact.ues-contact .formulaire_spip .editer_texte,
+#contact.ues-contact .formulaire_spip .pieces_jointes,
+#contact.ues-contact .formulaire_spip .boutons{
+  grid-column: 1 / -1 !important;
+}
+
+/* Prénom et Nom restent en 2 colonnes */
+#contact.ues-contact .formulaire_spip .editer_prenom,
+#contact.ues-contact .formulaire_spip .editer_nom{
+  grid-column: auto !important;
+}
+
+/* --------- Champs : style simple (comme OIB) ----------------------------- */
+#contact.ues-contact .formulaire_spip label{
+  display:block;
+  font-size: .86rem;
+  font-weight: 700;
+  color: rgba(0,0,0,.70);
+  margin: 0 0 6px;
+}
+
+#contact.ues-contact .formulaire_spip input[type="text"],
+#contact.ues-contact .formulaire_spip select,
+#contact.ues-contact .formulaire_spip textarea{
+  width: 100% !important;
+  max-width: none !important;
+  border: 1px solid #cfcfcf !important;
+  border-radius: 4px !important;
+  padding: 10px 10px !important;
+  background:#fff !important;
+  color:#111 !important;
+  outline:none;
+  box-shadow:none !important;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+#contact.ues-contact .formulaire_spip textarea{
+  min-height: 240px !important;
+  resize: vertical;
+}
+
+/* Destinataire : barre pleine (ta couleur) */
+#contact.ues-contact .formulaire_spip #destinataire{
+  background: #2b445c !important;
+  color: #fff !important;
+  border-color: #2b445c !important;
+  border-radius: 10px !important;
+  padding: 11px 14px !important;
+  font-weight: 800;
+}
+
+/* Pièce jointe : proche du rendu OIB */
+#contact.ues-contact .formulaire_spip .pieces_jointes ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 6px 0 0;
+}
+#contact.ues-contact .formulaire_spip .pieces_jointes li{ margin: 0; }
+
+/* Bouton envoyer : en bas à droite (surtout PAS fixed) */
+#contact.ues-contact .formulaire_spip .boutons{
+  display:flex !important;
+  justify-content:flex-end !important;
+  position: static !important;
+  margin-top: 6px !important;
+}
+#contact.ues-contact .formulaire_spip .boutons .submit,
+#contact.ues-contact .formulaire_spip input[type="submit"]{
+  position: static !important;
+  float: none !important;
+  background: #2b445c !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  padding: 10px 18px !important;
+  font-weight: 800 !important;
+  box-shadow: 0 10px 18px rgba(0,0,0,.18) !important;
+}
+
+/* Responsive */
+@media (max-width: 991.98px){
+  #contact.ues-contact .formulaire_spip .editer-groupe{
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+/* =========================================================
+   OIB — Footer + wave + bandeau partenaires (rendu comme ta capture)
+   À mettre en FIN de menu-override.css
+   ========================================================= */
+
+:root{
+  --oib-teal: #2f7d8d;      /* fond footer */
+  --oib-teal-mid: #3f8fa0;  /* pan 1 */
+  --oib-teal-light:#6aa9b5; /* pan 2 */
+}
+
+/* ---- FOOTER couleur OIB + réserve wave ---- */
+footer.ues-footer{
+  background: var(--oib-teal) !important;
+  color: #fff !important;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 120px !important; /* hauteur wave */
+}
+
+footer.ues-footer a{ color:#fff !important; }
+footer.ues-footer a:hover{ opacity:.9; }
+
+/* contenu au-dessus */
+footer.ues-footer .footer-top,
+footer.ues-footer .copyright-area{
+  position: relative;
+  z-index: 5;
+}
+
+/* ---- "pans" bleus comme sur ta photo ---- */
+footer.ues-footer::before,
+footer.ues-footer::after{
+  content:"";
+  position:absolute;
+  left:-8%;
+  width:116%;
+  pointer-events:none;
+  z-index: 2; /* sous la wave blanche */
+}
+
+/* pan clair (en bas) */
+footer.ues-footer::before{
+  height: 90px;
+  bottom: 55px;
+  background: var(--oib-teal-light);
+  clip-path: polygon(0 70%, 55% 35%, 100% 70%, 100% 100%, 0 100%);
+}
+
+/* pan moyen (par-dessus) */
+footer.ues-footer::after{
+  height: 85px;
+  bottom: 40px;
+  background: var(--oib-teal-mid);
+  clip-path: polygon(0 78%, 60% 48%, 100% 78%, 100% 100%, 0 100%);
+}
+
+
+html, body{
+  background: #fff !important;
+}
+
+
+/* Sécurité : si le keyframes n'est pas pris (override), on le redéclare */
+@keyframes footer-waves-move{
+  0%   { transform: translate3d(-90px,0,0); }
+  100% { transform: translate3d(85px,0,0); }
+}
+/* ===== WAVE (OIB) : animation OK + valeurs valides ===== */
+footer.ues-footer .ues-footer-waves .ues-parallax > use{
+  fill: rgba(255,255,255,.35) !important;
+  animation: footer-waves-move 25s cubic-bezier(.55,.5,.45,.5) infinite !important;
+  will-change: transform;
+}
+
+/* 4 couches => mouvement visible */
+footer.ues-footer .ues-footer-waves .ues-parallax > use:nth-child(1){
+  opacity: .60 !important; animation-duration: 10s !important; animation-delay: -2s !important;
+}
+footer.ues-footer .ues-footer-waves .ues-parallax > use:nth-child(2){
+  opacity: .40 !important; animation-duration: 14s !important; animation-delay: -3s !important;
+}
+footer.ues-footer .ues-footer-waves .ues-parallax > use:nth-child(3){
+  opacity: .20 !important; animation-duration: 18s !important; animation-delay: -4s !important;
+}
+footer.ues-footer .ues-footer-waves .ues-parallax > use:nth-child(4){
+  opacity: .10 !important; animation-duration: 22s !important; animation-delay: -5s !important;
+}
+
+/* Keyframes (si pas déjà présent ailleurs) */
+@keyframes footer-waves-move{
+  0%   { transform: translate3d(-90px,0,0); }
+  100% { transform: translate3d(85px,0,0); }
+}
+

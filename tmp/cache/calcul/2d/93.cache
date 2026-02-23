@@ -1,0 +1,95 @@
+a:2:{s:9:"nom_cache";s:38:"2d93019cf782ea45fe44768560effe40.cache";s:6:"valeur";a:12:{s:9:"squelette";s:37:"html_ce4772f5fc8d3cde925c7c524e77f1b7";s:6:"source";s:29:"squelettes/inc-checklist.html";s:11:"process_ins";s:4:"html";s:11:"invalideurs";a:2:{s:5:"cache";s:38:"6cd4f1cf50ca3ed2686ab654701cdc14.cache";s:7:"session";s:8:"c30f5dbd";}s:7:"entetes";a:1:{s:12:"X-Spip-Cache";i:86400;}s:5:"duree";i:0;s:5:"texte";s:2416:"{#ENV{lang}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+<div class="border border-light border-opacity-25 rounded-3 overflow-hidden text-white ues-checklist">
+
+  <div class="bg-light bg-opacity-10 px-3 py-2 d-flex align-items-center gap-2">
+    <i class="bi bi-check2-circle"></i>
+    <span class="fw-semibold">Checklist</span>
+  </div>
+
+  <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+    <div class="ues-checkline">
+      <i class="bi bi-1-circle mt-1"></i>
+      <div class="ues-checktext">Formulaire complété et <strong>envoyé</strong></div>
+      <span class="ues-step-dot " aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+    <div class="ues-checkline">
+      <i class="bi bi-2-circle mt-1"></i>
+      <div class="ues-checktext">Photo d'identité</div>
+      <span class="ues-step-dot  is-done" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+    <div class="ues-checkline">
+      <i class="bi bi-3-circle mt-1"></i>
+      <div class="ues-checktext">Formulaire <strong>validé</strong> par l'administration</div>
+      <span class="ues-step-dot " aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+    <div class="ues-checkline">
+      <i class="bi bi-4-circle mt-1"></i>
+      <div class="ues-checktext">Copie <strong>signée</strong> envoyée (pièce jointe)</div>
+      <span class="ues-step-dot " aria-hidden="true"></span>
+    </div>
+  </div>
+  
+  <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+    <div class="ues-checkline">
+      <i class="bi bi-5-circle mt-1"></i>
+      <div class="ues-checktext">Paiement effectué</div>
+      <span class="ues-step-dot  is-done" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="px-3 py-2 border-top border-light border-opacity-25 text-white-50 small">
+    <div class="ues-checkline">
+      <i class="bi bi-6-circle mt-1"></i>
+      <div class="ues-checktext">Inscription <strong>validée et confirmée</strong> par l'UES</div>
+      <span class="ues-step-dot " aria-hidden="true"></span>
+    </div>
+  </div>
+
+</div>
+
+";s:5:"notes";s:0:"";s:8:"contexte";a:8:{s:10:"id_article";s:4:"1434";s:6:"statut";s:5:"prepa";s:9:"with_help";s:3:"non";s:4:"lang";s:2:"fr";s:4:"date";s:19:"2026-02-23 00:50:46";s:12:"date_default";b:1;s:10:"date_redac";s:19:"2026-02-23 00:50:46";s:18:"date_redac_default";b:1;}s:12:"lastmodified";i:1771804246;s:2:"gz";b:0;s:3:"sig";i:919453934;}}

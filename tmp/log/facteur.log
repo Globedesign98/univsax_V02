@@ -1,0 +1,177 @@
+2026-01-31 23:23:09 127.0.0.1 (pid 16880) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-01-31 23:23:09 127.0.0.1 (pid 16880) :Pub:!INFO: Mail archivé pour un nouvel essai dans 600s : tmp/facteur/retry/1-a5888bf38577b8e084623e9c7f338853.json
+2026-01-31 23:23:57 127.0.0.1 (pid 16880) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-01-31 23:23:57 127.0.0.1 (pid 16880) :Pub:!INFO: Mail archivé pour un nouvel essai dans 600s : tmp/facteur/retry/1-f2c671abf1ad6bdd243dab755083514e.json
+2026-01-31 23:33:23 127.0.0.1 (pid 16880) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/1-a5888bf38577b8e084623e9c7f338853 via facteur_envoyer_mail()
+2026-01-31 23:33:25 127.0.0.1 (pid 16880) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-01-31 23:33:25 127.0.0.1 (pid 16880) :Pub:!INFO: Mail archivé pour un nouvel essai dans 3600s : tmp/facteur/retry/2-a5888bf38577b8e084623e9c7f338853.json
+2026-01-31 23:34:13 127.0.0.1 (pid 16880) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/1-f2c671abf1ad6bdd243dab755083514e via facteur_envoyer_mail()
+2026-01-31 23:34:15 127.0.0.1 (pid 16880) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-01-31 23:34:15 127.0.0.1 (pid 16880) :Pub:!INFO: Mail archivé pour un nouvel essai dans 3600s : tmp/facteur/retry/2-f2c671abf1ad6bdd243dab755083514e.json
+2026-02-01 00:34:59 127.0.0.1 (pid 16880) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/2-a5888bf38577b8e084623e9c7f338853 via facteur_envoyer_mail()
+2026-02-01 00:35:00 127.0.0.1 (pid 16880) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/2-f2c671abf1ad6bdd243dab755083514e via facteur_envoyer_mail()
+2026-02-01 00:35:01 127.0.0.1 (pid 16880) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-01 00:35:01 127.0.0.1 (pid 16880) :Pub:!INFO: Mail archivé pour un nouvel essai dans 10800s : tmp/facteur/retry/3-a5888bf38577b8e084623e9c7f338853.json
+2026-02-01 00:35:02 127.0.0.1 (pid 16880) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-01 00:35:02 127.0.0.1 (pid 16880) :Pub:!INFO: Mail archivé pour un nouvel essai dans 10800s : tmp/facteur/retry/3-f2c671abf1ad6bdd243dab755083514e.json
+2026-02-01 21:43:37 127.0.0.1 (pid 16880) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/3-a5888bf38577b8e084623e9c7f338853 via facteur_envoyer_mail()
+2026-02-01 21:43:38 127.0.0.1 (pid 16880) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/3-f2c671abf1ad6bdd243dab755083514e via facteur_envoyer_mail()
+2026-02-01 21:43:39 127.0.0.1 (pid 16880) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-01 21:43:39 127.0.0.1 (pid 16880) :Pub:!INFO: Mail archivé pour un nouvel essai dans 43200s : tmp/facteur/retry/4-a5888bf38577b8e084623e9c7f338853.json
+2026-02-01 21:43:40 127.0.0.1 (pid 16880) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-01 21:43:40 127.0.0.1 (pid 16880) :Pub:!INFO: Mail archivé pour un nouvel essai dans 43200s : tmp/facteur/retry/4-f2c671abf1ad6bdd243dab755083514e.json
+2026-02-02 21:44:29 127.0.0.1 (pid 19752) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/4-a5888bf38577b8e084623e9c7f338853 via facteur_envoyer_mail()
+2026-02-02 21:44:29 127.0.0.1 (pid 19752) :Pub:info: mail
+C:\xampp\htdocs\univsax\ecrire\inc\queue.php L267 [facteur_retry_envoyer_mail(),queue_start_job(),queue_schedule(),inc_genie_dist(),cron(),action_cron(),traiter_appels_actions(),include()]
+Sent by SPIP\Facteur\FacteurMail
+Date: Mon, 2 Feb 2026 21:44:29 +0100
+From: =?utf-8?Q?Universit=C3=A9_Europ=C3=A9enne_de_Saxophone?= &lt;contact@globedesign.org>
+Message-ID: &lt;@127.0.0.1>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+To: globetriber@hotmail.com
+Subject: [Université Européenne de Saxophone] : Identifiants personnels
+Message: Body(6054c) AltBody(256c)
+2026-02-02 21:44:29 127.0.0.1 (pid 19752) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/4-f2c671abf1ad6bdd243dab755083514e via facteur_envoyer_mail()
+2026-02-02 21:44:29 127.0.0.1 (pid 19752) :Pub:info: mail
+C:\xampp\htdocs\univsax\ecrire\inc\queue.php L267 [facteur_retry_envoyer_mail(),queue_start_job(),queue_schedule(),inc_genie_dist(),cron(),action_cron(),traiter_appels_actions(),include()]
+Sent by SPIP\Facteur\FacteurMail
+Date: Mon, 2 Feb 2026 21:44:29 +0100
+From: =?utf-8?Q?Universit=C3=A9_Europ=C3=A9enne_de_Saxophone?= &lt;contact@globedesign.org>
+Message-ID: &lt;@127.0.0.1>
+X-Mailer: PHPMailer 6.9.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+To: contact@fermegaia.nc
+Subject: [Université Européenne de Saxophone] : Identifiants personnels
+Message: Body(6056c) AltBody(258c)
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:!INFO: Mail en echec archivé dans : tmp/facteur/failed/a5888bf38577b8e084623e9c7f338853.json
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-02 21:44:31 127.0.0.1 (pid 19752) :Pub:!INFO: Mail en echec archivé dans : tmp/facteur/failed/f2c671abf1ad6bdd243dab755083514e.json
+2026-02-06 22:59:23 127.0.0.1 (pid 5332) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-06 22:59:23 127.0.0.1 (pid 5332) :Pub:!INFO: Mail archivé pour un nouvel essai dans 600s : tmp/facteur/retry/1-6c61eb4fc8aa67e89c20d4393deb51c6.json
+2026-02-06 23:11:17 127.0.0.1 (pid 5332) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/1-6c61eb4fc8aa67e89c20d4393deb51c6 via facteur_envoyer_mail()
+2026-02-06 23:11:19 127.0.0.1 (pid 5332) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-06 23:11:19 127.0.0.1 (pid 5332) :Pub:!INFO: Mail archivé pour un nouvel essai dans 3600s : tmp/facteur/retry/2-6c61eb4fc8aa67e89c20d4393deb51c6.json
+2026-02-06 23:44:21 127.0.0.1 (pid 5332) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-06 23:44:21 127.0.0.1 (pid 5332) :Pub:!INFO: Mail archivé pour un nouvel essai dans 600s : tmp/facteur/retry/1-e1f1d95e21a022d8515044cc45e5f077.json
+2026-02-07 00:05:19 127.0.0.1 (pid 5332) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/1-e1f1d95e21a022d8515044cc45e5f077 via facteur_envoyer_mail()
+2026-02-07 00:05:21 127.0.0.1 (pid 5332) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-07 00:05:21 127.0.0.1 (pid 5332) :Pub:!INFO: Mail archivé pour un nouvel essai dans 3600s : tmp/facteur/retry/2-e1f1d95e21a022d8515044cc45e5f077.json
+2026-02-07 00:12:30 127.0.0.1 (pid 5332) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/2-6c61eb4fc8aa67e89c20d4393deb51c6 via facteur_envoyer_mail()
+2026-02-07 00:12:32 127.0.0.1 (pid 5332) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-07 00:12:32 127.0.0.1 (pid 5332) :Pub:!INFO: Mail archivé pour un nouvel essai dans 10800s : tmp/facteur/retry/3-6c61eb4fc8aa67e89c20d4393deb51c6.json
+2026-02-08 23:33:35 127.0.0.1 (pid 5332) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/2-e1f1d95e21a022d8515044cc45e5f077 via facteur_envoyer_mail()
+2026-02-08 23:33:36 127.0.0.1 (pid 5332) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/3-6c61eb4fc8aa67e89c20d4393deb51c6 via facteur_envoyer_mail()
+2026-02-08 23:33:37 127.0.0.1 (pid 5332) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-08 23:33:37 127.0.0.1 (pid 5332) :Pub:!INFO: Mail archivé pour un nouvel essai dans 10800s : tmp/facteur/retry/3-e1f1d95e21a022d8515044cc45e5f077.json
+2026-02-08 23:33:38 127.0.0.1 (pid 5332) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-08 23:33:38 127.0.0.1 (pid 5332) :Pub:!INFO: Mail archivé pour un nouvel essai dans 43200s : tmp/facteur/retry/4-6c61eb4fc8aa67e89c20d4393deb51c6.json
+2026-02-09 00:10:09 127.0.0.1 (pid 5332) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-09 00:10:09 127.0.0.1 (pid 5332) :Pub:!INFO: Mail archivé pour un nouvel essai dans 600s : tmp/facteur/retry/1-0bd57eff70436383843a23bff63b4ca9.json
+2026-02-09 01:12:53 127.0.0.1 (pid 5332) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/1-0bd57eff70436383843a23bff63b4ca9 via facteur_envoyer_mail()
+2026-02-09 01:12:55 127.0.0.1 (pid 5332) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-09 01:12:55 127.0.0.1 (pid 5332) :Pub:!INFO: Mail archivé pour un nouvel essai dans 3600s : tmp/facteur/retry/2-0bd57eff70436383843a23bff63b4ca9.json
+2026-02-09 01:13:53 127.0.0.1 (pid 5332) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-09 01:13:53 127.0.0.1 (pid 5332) :Pub:!INFO: Mail archivé pour un nouvel essai dans 600s : tmp/facteur/retry/1-bf2ed0a96ac871596890fc0a62cc04b3.json
+2026-02-09 01:29:58 127.0.0.1 (pid 5332) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/1-bf2ed0a96ac871596890fc0a62cc04b3 via facteur_envoyer_mail()
+2026-02-09 01:30:00 127.0.0.1 (pid 5332) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-09 01:30:00 127.0.0.1 (pid 5332) :Pub:!INFO: Mail archivé pour un nouvel essai dans 3600s : tmp/facteur/retry/2-bf2ed0a96ac871596890fc0a62cc04b3.json
+2026-02-09 01:30:47 127.0.0.1 (pid 5332) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-09 01:30:47 127.0.0.1 (pid 5332) :Pub:!INFO: Mail archivé pour un nouvel essai dans 600s : tmp/facteur/retry/1-0f47da15d529e2767e64172c3ed82130.json
+2026-02-09 22:57:54 127.0.0.1 (pid 2152) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/1-0f47da15d529e2767e64172c3ed82130 via facteur_envoyer_mail()
+2026-02-09 22:57:55 127.0.0.1 (pid 2152) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/2-0bd57eff70436383843a23bff63b4ca9 via facteur_envoyer_mail()
+2026-02-09 22:57:56 127.0.0.1 (pid 2152) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-09 22:57:56 127.0.0.1 (pid 2152) :Pub:!INFO: Mail archivé pour un nouvel essai dans 3600s : tmp/facteur/retry/2-0f47da15d529e2767e64172c3ed82130.json
+2026-02-09 22:57:56 127.0.0.1 (pid 2152) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/2-bf2ed0a96ac871596890fc0a62cc04b3 via facteur_envoyer_mail()
+2026-02-09 22:57:57 127.0.0.1 (pid 2152) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-09 22:57:57 127.0.0.1 (pid 2152) :Pub:!INFO: Mail archivé pour un nouvel essai dans 10800s : tmp/facteur/retry/3-0bd57eff70436383843a23bff63b4ca9.json
+2026-02-09 22:57:57 127.0.0.1 (pid 2152) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/3-e1f1d95e21a022d8515044cc45e5f077 via facteur_envoyer_mail()
+2026-02-09 22:57:58 127.0.0.1 (pid 2152) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-09 22:57:58 127.0.0.1 (pid 2152) :Pub:!INFO: Mail archivé pour un nouvel essai dans 10800s : tmp/facteur/retry/3-bf2ed0a96ac871596890fc0a62cc04b3.json
+2026-02-09 22:57:59 127.0.0.1 (pid 2152) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-09 22:57:59 127.0.0.1 (pid 2152) :Pub:!INFO: Mail archivé pour un nouvel essai dans 43200s : tmp/facteur/retry/4-e1f1d95e21a022d8515044cc45e5f077.json
+2026-02-09 22:57:59 127.0.0.1 (pid 2152) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/4-6c61eb4fc8aa67e89c20d4393deb51c6 via facteur_envoyer_mail()
+2026-02-09 22:58:01 127.0.0.1 (pid 2152) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-09 22:58:01 127.0.0.1 (pid 2152) :Pub:!INFO: Mail en echec archivé dans : tmp/facteur/failed/6c61eb4fc8aa67e89c20d4393deb51c6.json
+2026-02-10 22:50:14 127.0.0.1 (pid 2152) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/2-0f47da15d529e2767e64172c3ed82130 via facteur_envoyer_mail()
+2026-02-10 22:50:14 127.0.0.1 (pid 2152) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/3-0bd57eff70436383843a23bff63b4ca9 via facteur_envoyer_mail()
+2026-02-10 22:50:16 127.0.0.1 (pid 2152) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/3-bf2ed0a96ac871596890fc0a62cc04b3 via facteur_envoyer_mail()
+2026-02-10 22:50:16 127.0.0.1 (pid 2152) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-10 22:50:16 127.0.0.1 (pid 2152) :Pub:!INFO: Mail archivé pour un nouvel essai dans 10800s : tmp/facteur/retry/3-0f47da15d529e2767e64172c3ed82130.json
+2026-02-10 22:50:16 127.0.0.1 (pid 2152) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-10 22:50:16 127.0.0.1 (pid 2152) :Pub:!INFO: Mail archivé pour un nouvel essai dans 43200s : tmp/facteur/retry/4-0bd57eff70436383843a23bff63b4ca9.json
+2026-02-10 22:50:16 127.0.0.1 (pid 2152) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/4-e1f1d95e21a022d8515044cc45e5f077 via facteur_envoyer_mail()
+2026-02-10 22:50:18 127.0.0.1 (pid 2152) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-10 22:50:18 127.0.0.1 (pid 2152) :Pub:!INFO: Mail archivé pour un nouvel essai dans 43200s : tmp/facteur/retry/4-bf2ed0a96ac871596890fc0a62cc04b3.json
+2026-02-10 22:50:18 127.0.0.1 (pid 2152) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-10 22:50:18 127.0.0.1 (pid 2152) :Pub:!INFO: Mail en echec archivé dans : tmp/facteur/failed/e1f1d95e21a022d8515044cc45e5f077.json
+2026-02-11 01:57:50 127.0.0.1 (pid 2152) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/3-0f47da15d529e2767e64172c3ed82130 via facteur_envoyer_mail()
+2026-02-11 01:57:52 127.0.0.1 (pid 2152) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-11 01:57:52 127.0.0.1 (pid 2152) :Pub:!INFO: Mail archivé pour un nouvel essai dans 43200s : tmp/facteur/retry/4-0f47da15d529e2767e64172c3ed82130.json
+2026-02-13 19:27:12 127.0.0.1 (pid 15260) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/4-0bd57eff70436383843a23bff63b4ca9 via facteur_envoyer_mail()
+2026-02-13 19:27:15 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-13 19:27:15 127.0.0.1 (pid 15260) :Pub:!INFO: Mail en echec archivé dans : tmp/facteur/failed/0bd57eff70436383843a23bff63b4ca9.json
+2026-02-13 19:27:15 127.0.0.1 (pid 15260) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/4-bf2ed0a96ac871596890fc0a62cc04b3 via facteur_envoyer_mail()
+2026-02-13 19:27:15 127.0.0.1 (pid 15260) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/4-0f47da15d529e2767e64172c3ed82130 via facteur_envoyer_mail()
+2026-02-13 19:27:17 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-13 19:27:17 127.0.0.1 (pid 15260) :Pub:!INFO: Mail en echec archivé dans : tmp/facteur/failed/bf2ed0a96ac871596890fc0a62cc04b3.json
+2026-02-13 19:27:17 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-13 19:27:17 127.0.0.1 (pid 15260) :Pub:!INFO: Mail en echec archivé dans : tmp/facteur/failed/0f47da15d529e2767e64172c3ed82130.json
+2026-02-13 19:27:24 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-13 19:27:24 127.0.0.1 (pid 15260) :Pub:!INFO: Mail archivé pour un nouvel essai dans 600s : tmp/facteur/retry/1-4e52ffb1c0479dfe430d66de70266782.json
+2026-02-13 19:37:31 127.0.0.1 (pid 15260) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/1-4e52ffb1c0479dfe430d66de70266782 via facteur_envoyer_mail()
+2026-02-13 19:37:33 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-13 19:37:33 127.0.0.1 (pid 15260) :Pub:!INFO: Mail archivé pour un nouvel essai dans 3600s : tmp/facteur/retry/2-4e52ffb1c0479dfe430d66de70266782.json
+2026-02-13 20:38:20 127.0.0.1 (pid 15260) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/2-4e52ffb1c0479dfe430d66de70266782 via facteur_envoyer_mail()
+2026-02-13 20:38:22 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-13 20:38:22 127.0.0.1 (pid 15260) :Pub:!INFO: Mail archivé pour un nouvel essai dans 10800s : tmp/facteur/retry/3-4e52ffb1c0479dfe430d66de70266782.json
+2026-02-13 22:41:58 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-13 22:41:58 127.0.0.1 (pid 15260) :Pub:!INFO: Mail archivé pour un nouvel essai dans 600s : tmp/facteur/retry/1-935da1cb31a9bf199c0bf095bb064d50.json
+2026-02-13 22:50:12 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-13 22:50:12 127.0.0.1 (pid 15260) :Pub:!INFO: Mail archivé pour un nouvel essai dans 600s : tmp/facteur/retry/1-d1e6c88ba50385863d2026db88e02c80.json
+2026-02-13 23:02:15 127.0.0.1 (pid 15260) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/1-935da1cb31a9bf199c0bf095bb064d50 via facteur_envoyer_mail()
+2026-02-13 23:02:16 127.0.0.1 (pid 15260) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/1-d1e6c88ba50385863d2026db88e02c80 via facteur_envoyer_mail()
+2026-02-13 23:02:17 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-13 23:02:17 127.0.0.1 (pid 15260) :Pub:!INFO: Mail archivé pour un nouvel essai dans 3600s : tmp/facteur/retry/2-935da1cb31a9bf199c0bf095bb064d50.json
+2026-02-13 23:02:18 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-13 23:02:18 127.0.0.1 (pid 15260) :Pub:!INFO: Mail archivé pour un nouvel essai dans 3600s : tmp/facteur/retry/2-d1e6c88ba50385863d2026db88e02c80.json
+2026-02-16 07:18:17 127.0.0.1 (pid 15260) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/3-4e52ffb1c0479dfe430d66de70266782 via facteur_envoyer_mail()
+2026-02-16 07:18:18 127.0.0.1 (pid 15260) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/2-935da1cb31a9bf199c0bf095bb064d50 via facteur_envoyer_mail()
+2026-02-16 07:18:18 127.0.0.1 (pid 15260) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/2-d1e6c88ba50385863d2026db88e02c80 via facteur_envoyer_mail()
+2026-02-16 07:18:20 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-16 07:18:20 127.0.0.1 (pid 15260) :Pub:!INFO: Mail archivé pour un nouvel essai dans 43200s : tmp/facteur/retry/4-4e52ffb1c0479dfe430d66de70266782.json
+2026-02-16 07:18:20 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-16 07:18:20 127.0.0.1 (pid 15260) :Pub:!INFO: Mail archivé pour un nouvel essai dans 10800s : tmp/facteur/retry/3-935da1cb31a9bf199c0bf095bb064d50.json
+2026-02-16 07:18:20 127.0.0.1 (pid 15260) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-16 07:18:20 127.0.0.1 (pid 15260) :Pub:!INFO: Mail archivé pour un nouvel essai dans 10800s : tmp/facteur/retry/3-d1e6c88ba50385863d2026db88e02c80.json
+2026-02-16 23:24:21 127.0.0.1 (pid 18780) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/3-935da1cb31a9bf199c0bf095bb064d50 via facteur_envoyer_mail()
+2026-02-16 23:24:21 127.0.0.1 (pid 18780) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/3-d1e6c88ba50385863d2026db88e02c80 via facteur_envoyer_mail()
+2026-02-16 23:24:23 127.0.0.1 (pid 18780) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-16 23:24:23 127.0.0.1 (pid 18780) :Pub:!INFO: Mail archivé pour un nouvel essai dans 43200s : tmp/facteur/retry/4-935da1cb31a9bf199c0bf095bb064d50.json
+2026-02-16 23:24:23 127.0.0.1 (pid 18780) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/4-4e52ffb1c0479dfe430d66de70266782 via facteur_envoyer_mail()
+2026-02-16 23:24:23 127.0.0.1 (pid 18780) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-16 23:24:23 127.0.0.1 (pid 18780) :Pub:!INFO: Mail archivé pour un nouvel essai dans 43200s : tmp/facteur/retry/4-d1e6c88ba50385863d2026db88e02c80.json
+2026-02-16 23:24:25 127.0.0.1 (pid 18780) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-16 23:24:25 127.0.0.1 (pid 18780) :Pub:!INFO: Mail en echec archivé dans : tmp/facteur/failed/4e52ffb1c0479dfe430d66de70266782.json
+2026-02-18 06:01:33 127.0.0.1 (pid 2912) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/4-935da1cb31a9bf199c0bf095bb064d50 via facteur_envoyer_mail()
+2026-02-18 06:01:34 127.0.0.1 (pid 2912) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/4-d1e6c88ba50385863d2026db88e02c80 via facteur_envoyer_mail()
+2026-02-18 06:01:35 127.0.0.1 (pid 2912) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-18 06:01:35 127.0.0.1 (pid 2912) :Pub:!INFO: Mail en echec archivé dans : tmp/facteur/failed/935da1cb31a9bf199c0bf095bb064d50.json
+2026-02-18 06:01:36 127.0.0.1 (pid 2912) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-18 06:01:36 127.0.0.1 (pid 2912) :Pub:!INFO: Mail en echec archivé dans : tmp/facteur/failed/d1e6c88ba50385863d2026db88e02c80.json
+2026-02-18 06:05:17 127.0.0.1 (pid 2912) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-18 06:05:17 127.0.0.1 (pid 2912) :Pub:!INFO: Mail archivé pour un nouvel essai dans 600s : tmp/facteur/retry/1-fb964dca9937deccacfd9b88c4f67335.json
+2026-02-18 06:22:35 127.0.0.1 (pid 2912) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/1-fb964dca9937deccacfd9b88c4f67335 via facteur_envoyer_mail()
+2026-02-18 06:22:37 127.0.0.1 (pid 2912) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-18 06:22:37 127.0.0.1 (pid 2912) :Pub:!INFO: Mail archivé pour un nouvel essai dans 3600s : tmp/facteur/retry/2-fb964dca9937deccacfd9b88c4f67335.json
+2026-02-18 22:30:37 127.0.0.1 (pid 2912) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/2-fb964dca9937deccacfd9b88c4f67335 via facteur_envoyer_mail()
+2026-02-18 22:30:39 127.0.0.1 (pid 2912) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-18 22:30:39 127.0.0.1 (pid 2912) :Pub:!INFO: Mail archivé pour un nouvel essai dans 10800s : tmp/facteur/retry/3-fb964dca9937deccacfd9b88c4f67335.json
+2026-02-19 01:42:07 127.0.0.1 (pid 2912) :Pub:!INFO: facteur_retry_envoyer_mail: Nouvel essai pour l'envoi du mail retry/3-fb964dca9937deccacfd9b88c4f67335 via facteur_envoyer_mail()
+2026-02-19 01:42:09 127.0.0.1 (pid 2912) :Pub:ERREUR: SPIP\Facteur\FacteurMail: PHPMailer\PHPMailer\PHPMailer::Send() : Could not instantiate mail function.
+2026-02-19 01:42:09 127.0.0.1 (pid 2912) :Pub:!INFO: Mail archivé pour un nouvel essai dans 43200s : tmp/facteur/retry/4-fb964dca9937deccacfd9b88c4f67335.json

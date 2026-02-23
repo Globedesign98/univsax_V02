@@ -1,0 +1,11 @@
+a:18:{s:7:"hauteur";i:1024;s:7:"largeur";i:1024;s:12:"largeur_dest";i:40;s:12:"hauteur_dest";i:40;s:24:"fonction_imagecreatefrom";s:20:"_imagecreatefromwebp";s:7:"fichier";s:27:"../IMG/logo/person-m-3.webp";s:14:"fonction_image";s:16:"_image_imagewebp";s:12:"fichier_dest";s:54:"../local/cache-vignettes/L40xH40/person-m-3-dd73a.webp";s:13:"format_source";s:4:"webp";s:11:"format_dest";s:4:"webp";s:8:"date_src";i:1771462328;s:5:"creer";b:1;s:5:"class";s:9:"spip_logo";s:3:"alt";s:0:"";s:5:"style";N;s:3:"tag";s:108:"<img
+	src="../IMG/logo/person-m-3.webp?1771462328"
+	class="spip_logo"
+	width="1024"
+	height="1024"
+	alt=""/>";s:14:"reconstruction";a:2:{i:0;s:19:"image_passe_partout";i:1;a:3:{i:0;s:108:"<img
+	src="../IMG/logo/person-m-3.webp?1771462328"
+	class="spip_logo"
+	width="1024"
+	height="1024"
+	alt=""/>";i:1;i:40;i:2;i:40;}}s:4:"date";i:1771463102;}

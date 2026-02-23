@@ -1,0 +1,18 @@
+[(#REM) Formulaire minimal : un bouton qui envoie un email HTML à l'auteur de l'article ]
+[(#ENV**{message_ok}|oui)
+  <div class="alert alert-success mb-2">Email envoyé.</div>
+]
+[(#ENV**{message_erreur}|oui)
+  <div class="alert alert-danger mb-2">#ENV**{message_erreur}</div>
+]
+
+<form method="post" action="#ENV{action}">
+  #ACTION_FORMULAIRE{#ENV{action}}
+
+  <input type="hidden" name="id_article" value="[(#ENV{id_article}|intval)]" />
+  <input type="hidden" name="type_mail" value="[(#ENV{type_mail}|textebrut)]" />
+
+  <button type="submit" class="btn btn-sm [(#ENV{btn_class}|sinon{btn-outline-primary})]">
+    [(#ENV{btn_label}|sinon{Envoyer l'email})]
+  </button>
+</form>

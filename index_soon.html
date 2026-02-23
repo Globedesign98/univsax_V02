@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Université Européenne de Saxophone — Édition 2026. Le nouveau site arrive bientôt." />
+  <meta name="theme-color" content="#0b2b5b" />
+
+  <!-- Open Graph (aperçu réseaux) -->
+  <meta property="og:title" content="Université Européenne de Saxophone — Édition 2026" />
+  <meta property="og:description" content="Le nouveau site arrive bientôt. Gap, Hautes-Alpes — 13 au 24 juillet 2026." />
+  <meta property="og:image" content="affiche-2026.jpg" />
+  <meta property="og:type" content="website" />
+
+  <title>Université Européenne de Saxophone — Édition 2026 | Prochainement</title>
+
+  <style>
+    :root{
+      --bg: #071a33;
+      --bg2:#0b2b5b;
+      --txt:#eaf2ff;
+      --muted: rgba(234,242,255,.78);
+      --card: rgba(255,255,255,.08);
+      --card2: rgba(255,255,255,.12);
+      --line: rgba(255,255,255,.16);
+      --accent:#ffd54a;
+      --accent2:#4fd1c5;
+      --shadow: 0 22px 70px rgba(0,0,0,.45);
+      --radius: 22px;
+      --max: 1100px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--txt);
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(79,209,197,.18), transparent 60%),
+        radial-gradient(900px 600px at 90% 15%, rgba(255,213,74,.14), transparent 55%),
+        linear-gradient(135deg, var(--bg), var(--bg2));
+      overflow-x:hidden;
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 28px 18px 40px;
+      position:relative;
+      isolation:isolate;
+    }
+
+    /* Fond affiche (très léger) */
+    .wrap::before{
+      content:"";
+      position:absolute;
+      inset:-60px;
+      background: url("affiche-2026.jpg") center/cover no-repeat;
+      opacity:.10;
+      filter: blur(2px) saturate(1.05);
+      z-index:-2;
+      transform: scale(1.03);
+    }
+    .wrap::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(7,26,51,.80), rgba(11,43,91,.86));
+      z-index:-1;
+    }
+
+    .container{
+      width:100%;
+      max-width: var(--max);
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+      align-items:stretch;
+    }
+
+    .card{
+      background: linear-gradient(180deg, var(--card), rgba(255,255,255,.05));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      overflow:hidden;
+    }
+
+    .hero{
+      padding: 30px 30px 28px;
+      position:relative;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom: 18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width: 0;
+    }
+
+    .logo{
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      flex: 0 0 auto;
+    }
+    .logo img{
+      width: 82%;
+      height:auto;
+      display:block;
+    }
+
+    .brand h1{
+      font-size: 18px;
+      line-height:1.1;
+      margin:0;
+      letter-spacing:.2px;
+      font-weight: 680;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .brand p{
+      margin:6px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,213,74,.10);
+      border: 1px solid rgba(255,213,74,.35);
+      color: rgba(255,213,74,.95);
+      font-weight: 650;
+      font-size: 13px;
+      letter-spacing:.2px;
+      flex:0 0 auto;
+    }
+
+    .title{
+      margin: 10px 0 8px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -0.6px;
+      font-weight: 780;
+    }
+    .subtitle{
+      margin: 0 0 18px;
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--muted);
+      max-width: 54ch;
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin: 18px 0 0;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      font-size: 13px;
+      color: rgba(234,242,255,.90);
+    }
+    .dot{
+      width:8px;height:8px;border-radius:99px;background: var(--accent2);
+      box-shadow: 0 0 0 5px rgba(79,209,197,.12);
+      flex:0 0 auto;
+    }
+
+    .cta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top: 18px;
+    }
+    .btn{
+      appearance:none;
+      border: 1px solid rgba(255,255,255,.20);
+      background: rgba(255,255,255,.10);
+      color: var(--txt);
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-weight: 650;
+      font-size: 14px;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.28); }
+    .btn.primary{
+      background: rgba(255,213,74,.14);
+      border-color: rgba(255,213,74,.40);
+      color: rgba(255,213,74,.98);
+    }
+    .btn.primary:hover{ background: rgba(255,213,74,.18); border-color: rgba(255,213,74,.52); }
+    .btn:focus{ outline: 3px solid rgba(79,209,197,.35); outline-offset: 2px; }
+
+    /* Colonne droite */
+    .side{
+      padding: 26px;
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+    }
+    .side h2{
+      margin:0;
+      font-size: 16px;
+      letter-spacing:.2px;
+      font-weight: 720;
+    }
+    .kpi{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .kpi .box{
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      padding: 14px;
+      min-height: 92px;
+    }
+    .kpi .label{
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0 0 8px;
+    }
+    .kpi .value{
+      font-size: 26px;
+      font-weight: 820;
+      letter-spacing:-.3px;
+      margin:0;
+    }
+
+    .note{
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      padding: 14px;
+      color: rgba(234,242,255,.88);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .fine{
+      margin-top:auto;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color: rgba(234,242,255,.70);
+      font-size: 12px;
+    }
+    .fine a{ color: rgba(234,242,255,.85); text-decoration:none; border-bottom: 1px dashed rgba(234,242,255,.35); }
+    .fine a:hover{ border-bottom-color: rgba(234,242,255,.65); }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .container{ grid-template-columns: 1fr; }
+      .badge{ order:2; }
+      .topbar{ flex-wrap:wrap; }
+    }
+
+    /* Accessibilité: réduire les animations */
+    @media (prefers-reduced-motion: reduce){
+      .btn{ transition:none }
+      .btn:hover{ transform:none }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap" role="main">
+    <section class="container" aria-label="Page d'attente — Université Européenne de Saxophone">
+
+      <!-- Bloc principal -->
+      <article class="card hero">
+        <header class="topbar">
+          <div class="brand">
+            <div class="logo" aria-hidden="true">
+
+
+
+            </div>
+            <div style="min-width:0">
+              <h1>Université Européenne de Saxophone</h1>
+              <p>Édition 2026 — Gap, Hautes-Alpes</p>
+            </div>
+          </div>
+
+          <div class="badge" title="Nouveau site en préparation">
+            <span aria-hidden="true">⏳</span>
+            Prochainement
+          </div>
+        </header>
+
+        <h2 class="title">Le nouveau site arrive bientôt.</h2>
+        <p class="subtitle">
+          Nous finalisons actuellement la plateforme d'information et d'inscription de l'<strong>Université Européenne de Saxophone</strong>.
+          Retrouvez ici les éléments essentiels en attendant l'ouverture officielle.
+        </p>
+
+        <div class="meta" aria-label="Informations clés">
+          <div class="pill"><span class="dot" aria-hidden="true"></span><strong>Dates :</strong>&nbsp;13 → 23 juillet 2026</div>
+          <div class="pill"><span class="dot" aria-hidden="true"></span><strong>Ville :</strong>&nbsp;Gap (France)</div>
+          <div class="pill"><span class="dot" aria-hidden="true"></span><strong>Inscriptions :</strong>&nbsp;prochainement</div>
+          <div class="pill"><span class="dot" aria-hidden="true"></span><strong>Clôture :</strong>&nbsp;15 mai 2026</div>
+        </div>
+
+        <div class="cta" aria-label="Actions">
+          <!-- Remplace l'adresse email ci-dessous par la tienne si besoin -->
+          <a class="btn primary" href="mailto:contact@univsax.com?subject=Université%20Européenne%20de%20Saxophone%202026%20—%20Prévenez-moi%20à%20l'ouverture&body=Bonjour,%0D%0A%0D%0AMerci%20de%20me%20prévenir%20lorsque%20le%20site%20et%20les%20inscriptions%20seront%20ouverts.%0D%0A%0D%0ANom%20:%20%0D%0AInstrument%20:%20%0D%0AVille%20:%20%0D%0A%0D%0AMerci%20!" rel="noopener">
+            Être informé·e de l'ouverture
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <a class="btn" href="affiche-2026.jpg" target="_blank" rel="noopener">
+            Voir l'affiche 2026
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </div>
+      </article>
+
+      <!-- Bloc latéral -->
+      <aside class="card side" aria-label="Compte à rebours et informations">
+        <h2>Ouverture des inscriptions</h2>
+
+        <div class="note">
+          <strong>À retenir :</strong><br />
+          • Masterclasses, ateliers, concerts et rencontres.<br />
+          • Informations pratiques et modalités d'inscription mises en ligne très prochainement.
+        </div>
+
+        <div class="fine">
+          <span>© <span id="year"></span> Université Européenne de Saxophone</span>
+          <span><a href="affiche-2026.jpg" target="_blank" rel="noopener">Programme & visuel 2026</a></span>
+        </div>
+      </aside>
+
+    </section>
+  </main>
+
+  <script>
+    // Réglage de la date d'ouverture des inscriptions (1er février 2026, 09:00 heure locale)
+    const target = new Date(2026, 1, 1, 9, 0, 0); // mois: 0=janvier, 1=février
+
+    const $d = document.getElementById("d");
+    const $h = document.getElementById("h");
+    const $m = document.getElementById("m");
+    const $s = document.getElementById("s");
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function pad(n){ return String(n).padStart(2, "0"); }
+
+    function tick(){
+      const now = new Date();
+      let diff = target - now;
+
+      if (diff <= 0){
+        $d.textContent = "0";
+        $h.textContent = "00";
+        $m.textContent = "00";
+        $s.textContent = "00";
+        return;
+      }
+
+      const sec = Math.floor(diff / 1000);
+      const days = Math.floor(sec / 86400);
+      const hours = Math.floor((sec % 86400) / 3600);
+      const mins = Math.floor((sec % 3600) / 60);
+      const secs = sec % 60;
+
+      $d.textContent = String(days);
+      $h.textContent = pad(hours);
+      $m.textContent = pad(mins);
+      $s.textContent = pad(secs);
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  </script>
+</body>
+</html>

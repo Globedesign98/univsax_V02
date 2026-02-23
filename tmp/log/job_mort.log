@@ -24,3 +24,42 @@
     [status] => 0
 )
 
+2026-01-30 23:32:07 127.0.0.1 (pid 16880) :Pub:ERREUR: queue_close_job car _JQ_PENDING depuis +180s : Array
+(
+    [id_job] => 331852
+    [descriptif] => Tâche CRON svp_actualiser_depots (toutes les 21600 s)
+    [fonction] => svp_actualiser_depots
+    [args] => a:1:{i:0;i:1769744719;}
+    [md5args] => 2366b9dbfc29e4be78b8ac996ddbc493
+    [inclure] => genie/
+    [priorite] => 0
+    [date] => 2026-01-30 23:12:34
+    [status] => 0
+)
+
+2026-02-09 00:05:55 127.0.0.1 (pid 5332) :Pub:ERREUR: queue_close_job car _JQ_PENDING depuis +180s : Array
+(
+    [id_job] => 332105
+    [descriptif] => Tâche CRON svp_actualiser_depots (toutes les 21600 s)
+    [fonction] => svp_actualiser_depots
+    [args] => a:1:{i:0;i:1770414879;}
+    [md5args] => a11f7e058ce57118067d3024c9108808
+    [inclure] => genie/
+    [priorite] => 0
+    [date] => 2026-02-08 23:33:37
+    [status] => 0
+)
+
+2026-02-09 00:05:55 127.0.0.1 (pid 5332) :Pub:ERREUR: queue_close_job car _JQ_PENDING depuis +180s : Array
+(
+    [id_job] => 332109
+    [descriptif] => Tâche CRON inscription3_taches_generales (toutes les 86400 s)
+    [fonction] => inscription3_taches_generales
+    [args] => a:1:{i:0;i:1770415435;}
+    [md5args] => 4f763ac03e471d5ef95fd0ca30374f1d
+    [inclure] => genie/
+    [priorite] => 0
+    [date] => 2026-02-08 23:33:38
+    [status] => 0
+)
+

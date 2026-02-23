@@ -1,0 +1,17 @@
+<paquet
+	prefix="spout"
+	categorie="outil"
+	version="1.4.1"
+	etat="stable"
+	compatibilite="[4.3.0;4.*]"
+	logo="img_pack/spout-48.png"
+	documentation="https://contrib.spip.net/5223"
+>
+	<nom>Spout</nom>
+	<!-- Une lib pour lire et écrire des XLSX, ODS et CSV -->
+	<auteur lien="https://contrib.spip.net/RealET">RealET</auteur>
+	<copyright>2025</copyright>
+	<licence lien="http://www.gnu.org/licenses/gpl-3.0.html">GPL 3</licence>
+	<necessite nom="php:zip" compatibilite="[0.0.0;]" />
+	<necessite nom="php:xmlreader" compatibilite="[0.0.0;]" />
+</paquet>

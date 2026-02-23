@@ -190,8 +190,8 @@ $valeurs_validees = array(
 
 // Attention, les surcharges sur les define(), les autorisations spécifiques ou les globales ne sont pas spécifiées ici
 
-$GLOBALS['cs_installer']['Pack 27/01/26'] =	'cs_0e093c8bdc021586e3fd7ad2d0c1a44e';
-function cs_0e093c8bdc021586e3fd7ad2d0c1a44e() { return array(
+$GLOBALS['cs_installer']['Pack 23/02/26'] =	'cs_bc7ad103edfc12befdd5663d8f258b77';
+function cs_bc7ad103edfc12befdd5663d8f258b77() { return array(
 	// Installation des outils par défaut
 	'outils' =>
 		'',
@@ -200,5 +200,5 @@ function cs_0e093c8bdc021586e3fd7ad2d0c1a44e() { return array(
 	'variables' => array(
 	
 	)
-);} # Pack 27/01/26 #
+);} # Pack 23/02/26 #
 ?>

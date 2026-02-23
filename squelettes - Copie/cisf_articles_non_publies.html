@@ -1,0 +1,386 @@
+#CACHE{0}
+[(#HTTP_HEADER{Content-type: text/html[; charset=(#CHARSET)]})]
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html dir="#LANG_DIR" lang="#LANG">
+<head>
+<INCLURE{fond=noisettes/cisf_head}{lang}>
+
+[(#SPIP_VERSION|>={3}|oui)
+<INCLURE{fond=prive/squelettes/head/dist}>
+]
+
+[(#SPIP_VERSION|>={3}|non)
+#INSERT_HEAD
+[(#LANG|cisf_style_non_publie)]
+]
+
+<style type="text/css">
+<!-- 
+#contenu { font-size: 16px; }
+#contenu { float: none; margin-left: 3px; width: 98%; }
+.puce_article_popup {width: 70px}
+-->
+</style>
+
+
+
+#SET{cisession,'non'}
+[(#SESSION{id_auteur}|!={''}|oui)
+	[(#SESSION{statut}|!={6forum}|oui)
+	#SET{cisession,'oui'}
+	]
+]
+
+#SET{ci_id_auteur,0}
+[(#GET{cisession}|=={oui}|oui)
+	[(#AUTORISER{creerarticledans,rubrique,#ENV{id_rubrique}})
+	#SET{ci_id_auteur,#SESSION{id_auteur}}
+	]
+]
+
+#SET{cipostdate,'9000-01-01'}
+[(#CONFIG{post_dates}|=={non}|et{#SESSION{statut}|=={0minirezo}|oui})
+	#SET{cipostdate,#DATE|affdate{'Y-m-d H:i:s'}}
+]
+
+
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}{statut IN (prive,publie,new)}>
+<title>[(#NOM_SITE_SPIP|textebrut) - ][(#TITRE|supprimer_numero)]</title>
+<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
+<meta name="DC.Title" content="[(#TITRE|supprimer_numero)]">
+<meta name="DC.Format" content="text/html">
+<meta name="DC.Language" content="#LANG">
+
+#SET{ci_publierdans,''}
+[(#GET{ci_id_auteur}|>{0}|oui)
+	[(#AUTORISER{publierdans,rubrique,#ID_RUBRIQUE})
+		#SET{ci_publierdans,'oui'}
+	]
+]
+</head>
+
+<body>
+<div id="pageNonPublie">
+<div id="milieu">
+	<div id="ext-main">
+		 
+		<div class="main">
+			<div id="gauche">
+			</div>
+
+  			<div id="contenu">
+			<div class="main-content">
+			
+[(#SESSION{id_auteur}|?{'',' '})
+	[(#REM) <!-- Auteur non connecte -->]
+	<div id="contenu">
+			[(#SESSION{id_auteur}|?{' '})<h2><:info_acces_interdit:></h2><div class="texte">]
+			[(#SESSION{id_auteur}|?{'',' '})<h2><:cisf:eq_page_protegee:></h2>
+			<div class="texte"><:cisf:eq_page_protegee_texte1:></div>
+			<div class="texte"><:cisf:eq_page_protegee_texte2:></div>
+			<div class="texte"><a href="[(#URL_PAGE{login}|parametre_url{url,#SELF})]" rel="nofollow" title="<:cisf:eq_authentification:>"><:cisf:eq_authentification:></a>]
+  			
+			
+			<a href="[(#URL_PAGE{sommaire})]" title="<:cisf:eq_retour_accueil:>"><:cisf:eq_retour_accueil:></a>
+			</div>
+  			
+			<div class='clearer'>&nbsp;</div>	
+	</div>
+]
+			
+			
+			#SET{ci_previsu_rub,'preview'}
+			<BOUCLE_rub_previsu(RUBRIQUES){id_rubrique}{statut=publie}>
+			#SET{ci_previsu_rub,''}
+			</BOUCLE_rub_previsu>
+			
+				<h1 class="invisible"><:cisf:eq_contenu:></h1>
+				<div id="boxnavpath"><div id="navpath">
+					[(#GET{ci_id_auteur}|>{0}|oui)<a href="[(#URL_PAGE{sommaire}|parametre_url{var_mode,#GET{ci_previsu_rub}})]"><:cisf:eq_accueil:></a>]
+					<BOUCLE_chem_nav(HIERARCHIE){id_rubrique}>
+					[(#GET{ci_id_auteur}|>{0}|oui)&gt; <a href="[(#URL_RUBRIQUE|parametre_url{var_mode,#GET{ci_previsu_rub}})]">[(#TITRE|supprimer_numero)]</a>]
+					</BOUCLE_chem_nav>
+					[(#GET{ci_id_auteur}|>{0}|oui)&gt; <a href="[(#URL_RUBRIQUE|parametre_url{var_mode,#GET{ci_previsu_rub}})]">[(#TITRE|supprimer_numero)]</a>]
+				</div></div>
+				<div id="boxcentrale"><div class="innercentrale">
+
+				[(#GET{ci_id_auteur}|>{0}|oui)
+				<h2>INSCRIPTION UES 2020
+				</h2><div class="retour"><a href="#URL_RUBRIQUE" title="<:icone_retour:>"><:icone_retour:></a></div>
+                <div class="nom">Nom de l'étudiant(e)</div>
+
+				<div class="titreaction">
+[(#SPIP_VERSION|>={3}|oui)
+				<a href="[(#URL_PAGE{cisf_article}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><img height="24" width="24" alt="<:icone_ecrire_article:>" src="prive/themes/spip/images/article-add-24.png"></a>
+]
+[(#SPIP_VERSION|>={3}|non)
+				<a href="[(#URL_PAGE{cisf_article}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><img height="24" width="24" style="background: url('prive/images/article-24.gif') no-repeat scroll center center transparent;" alt="<:icone_ecrire_article:>" src="prive/images/creer.gif"></a>
+]
+
+				<a href="[(#URL_PAGE{cisf_article}|parametre_url{id_rubrique,#ID_RUBRIQUE})]"><:icone_ecrire_article:></a>
+				</div>
+				]
+
+				<B_postdate>
+				<div class='cadre-liste'>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+				<div class='titrem'><:info_article_a_paraitre:></div>
+				]
+				<div>
+				<table summary="<:info_article_a_paraitre:>"  width='100%' cellpadding='2' cellspacing='0' border='0'>
+					<thead style="display:none;">
+					<tr>
+						<th id="col1" width="14px">illustration</th>
+						<th id="col2" ><:info_article:></th>
+						<th id="col3" width="80px"><:info_auteurs:></th>
+						<th id="col4" width="100px"><:texte_date_publication_article:></th>
+						<th id="col5" width="50px"><:info_numero_article:></th>
+					</tr>
+					</thead>
+				<BOUCLE_postdate(ARTICLES){id_rubrique}{statut=publie}{date>#GET{cipostdate}}{par date}{inverse}>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+					<tr class='tr_liste'>
+					<td headers="col1" class="col col1">[(#ID_ARTICLE|cisf_puce_article{'publie',#ID_RUBRIQUE})]</td>
+					<td headers="col2" class="col col2"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+					<td headers="col3" class="col col3">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+					<td headers="col4" class="col col4">[(#DATE|affdate{'d/m/Y'})]</td>
+					<td headers="col5" class="col col5">N&deg;&nbsp;[(#ID_ARTICLE)]</td>
+					</tr>
+				]
+				</BOUCLE_postdate>
+				</table>
+				</div>
+				</div>
+				</B_postdate>
+
+
+				<B_prop>
+				<div class='cadre-liste'>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+				<div class='titrem'><:info_articles_proposes:></div>
+				]
+				<div>
+				<table summary="<:info_articles_proposes:>"  width='100%' cellpadding='2' cellspacing='0' border='0'>
+					<thead style="display:none;">
+					<tr>
+						<th id="col1" class="col col1">illustration</th>
+						<th id="col2" class="col col2"><:info_article:></th>
+						<th id="col3" class="col col3"><:info_auteurs:></th>
+						<th id="col4" class="col col4"><:texte_date_creation_article:></th>
+						<th id="col5" class="col col5"><:info_numero_article:></th>
+					</tr>
+					</thead>
+				<BOUCLE_prop(ARTICLES){id_rubrique}{statut=prop}{par date}{inverse}>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+					<tr class='tr_liste'>
+					<td headers="col1" class="col col1">[(#ID_ARTICLE|cisf_puce_article{'prop',#ID_RUBRIQUE})]</td>
+					<td headers="col2" class="col col2"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+
+					<td headers="col3" class="col col3">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+					<td headers="col4" class="col col4">[(#DATE|affdate{'d/m/Y'})]</td>
+					<td headers="col5" class="col col5">N&deg;&nbsp;[(#ID_ARTICLE)]</td>
+					</tr>
+				]
+				</BOUCLE_prop>
+				</table>
+				</div>
+				</div>
+				</B_prop>
+
+				
+				<B_prep>
+				<div class='cadre-liste'>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+				<div class='titrem'><:articles:> <:texte_statut_en_cours_redaction:></div>
+				]
+				<div>
+				<table summary="<:texte_statut_en_cours_redaction:>"  width='100%' cellpadding='2' cellspacing='0' border='0'>
+					<thead style="display:none;">
+					<tr>
+						<th id="col1" width="14px">illustration</th>
+						<th id="col2" ><:info_article:></th>
+						<th id="col3" width="80px"><:info_auteurs:></th>
+						<th id="col4" width="100px"><:texte_date_creation_article:></th>
+						<th id="col5" width="50px"><:info_numero_article:></th>
+					</tr>
+					</thead>
+				<BOUCLE_prep(ARTICLES){id_rubrique}{statut=prepa}{par date}{inverse}>
+				#SET{ciok,''}
+				[(#GET{ci_publierdans}|oui)
+					#SET{ciok,'oui'}
+				]
+				[(#GET{ci_publierdans}|non)
+					[(#GET{ci_id_auteur}|cisf_auteur_article{#ID_ARTICLE}|oui)
+						#SET{ciok,'oui'}
+					]
+				]
+				[(#GET{ciok}|non)
+					[(#PLUGIN{cirr}|oui)
+						[(#AUTORISER{modifier,article,#ID_ARTICLE})
+							#SET{ciok,'oui'}
+						]
+					]
+				]
+				[(#GET{ciok}|oui)
+					<tr class='tr_liste'>
+					<td headers="col1" class="col col1">[(#ID_ARTICLE|cisf_puce_article{'prepa',#ID_RUBRIQUE})]</td>
+					<td headers="col2" class="col col2"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+					<td headers="col3" class="col col3">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+					<td headers="col4" class="col col4">[(#DATE|affdate{'d/m/Y'})]</td>
+					<td headers="col5" class="col col5">N&deg;&nbsp;[(#ID_ARTICLE)]</td>
+					</tr>
+				]
+				</BOUCLE_prep>
+				</table>
+				</div>
+				</div>
+				</B_prep>
+				
+				
+				<B_publie>
+				<div class='cadre-liste'>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+				<div class='titrem'><:articles:> <:texte_statut_publies:></div>
+				]
+				<div>
+				<table summary="<:texte_statut_publies:>"  width='100%' cellpadding='2' cellspacing='0' border='0'>
+					<thead style="display:none;">
+					<tr>
+						<th id="col1" width="14px">illustration</th>
+						<th id="col2" ><:info_article:></th>
+						<th id="col3" width="80px"><:info_auteurs:></th>
+						<th id="col4" width="100px"><:texte_date_publication_article:></th>
+						<th id="col5" width="50px"><:info_numero_article:></th>
+					</tr>
+					</thead>
+				<BOUCLE_publie(ARTICLES){id_rubrique}{statut=publie}{date<=#GET{cipostdate}}{par date}{inverse}>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+					<tr class='tr_liste'>
+					<td headers="col1" class="col col1">[(#ID_ARTICLE|cisf_puce_article{'publie',#ID_RUBRIQUE})]</td>
+					<td headers="col2" class="col col2"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+					<td headers="col3" class="col col3">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+					<td headers="col4" class="col col4">[(#DATE|affdate{'d/m/Y'})]</td>
+					<td headers="col5" class="col col5">N&deg;&nbsp;[(#ID_ARTICLE)]</td>
+					</tr>
+				]
+				</BOUCLE_publie>
+				</table>
+				</div>
+				</div>
+				</B_publie>
+
+
+				<B_refuse>
+				<div class='cadre-liste'>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+				<div class='titrem'><:articles:> <:texte_statut_refuses:></div>
+				]
+				<div>
+				<table summary="<:texte_statut_refuses:>"  width='100%' cellpadding='2' cellspacing='0' border='0'>
+					<thead style="display:none;">
+					<tr>
+						<th id="col1" width="14px">illustration</th>
+						<th id="col2" ><:info_article:></th>
+						<th id="col3" width="80px"><:info_auteurs:></th>
+						<th id="col4" width="100px"><:texte_date_publication_article:></th>
+						<th id="col5" width="50px"><:info_numero_article:></th>
+					</tr>
+					</thead>
+				<BOUCLE_refuse(ARTICLES){id_rubrique}{statut=refuse}{par date}{inverse}>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+					<tr class='tr_liste'>
+					<td headers="col1" class="col col1">[(#ID_ARTICLE|cisf_puce_article{'refuse',#ID_RUBRIQUE})]</td>
+					<td headers="col2" class="col col2"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+					<td headers="col3" class="col col3">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+					<td headers="col4" class="col col4">[(#DATE|affdate{'d/m/Y'})]</td>
+					<td headers="col5" class="col col5">N&deg;&nbsp;[(#ID_ARTICLE)]</td>
+					</tr>
+				]
+				</BOUCLE_refuse>
+				</table>
+				</div>
+				</div>
+				</B_refuse>
+				
+
+				
+				<B_poub>
+				<div class='cadre-liste'>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+				<div class='titrem'><:articles:> <:texte_statut_poubelle:></div>
+				]
+				<div>
+				<table summary="<:texte_statut_poubelle:>"  width='100%' cellpadding='2' cellspacing='0' border='0'>
+					<thead style="display:none;">
+					<tr>
+						<th id="col1" width="14px">illustration</th>
+						<th id="col2" ><:info_article:></th>
+						<th id="col3" width="80px"><:info_auteurs:></th>
+						<th id="col4" width="100px"><:texte_date_publication_article:></th>
+						<th id="col5" width="50px"><:info_numero_article:></th>
+					</tr>
+					</thead>
+				<BOUCLE_poub(ARTICLES){id_rubrique}{statut=poubelle}{par date}{inverse}>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+					<tr class='tr_liste'>
+					<td headers="col1" class="col col1">[(#ID_ARTICLE|cisf_puce_article{'poubelle',#ID_RUBRIQUE})]</td>
+					<td headers="col2" class="col col2"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+					<td headers="col3" class="col col3">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+					<td headers="col4" class="col col4">[(#DATE|affdate{'d/m/Y'})]</td>
+					<td headers="col5" class="col col5">N&deg;&nbsp;[(#ID_ARTICLE)]</td>
+					</tr>
+				]
+				</BOUCLE_poub>
+				</table>
+				</div>
+				</div>
+				</B_poub>
+
+				<B_arch>
+				<div class='cadre-liste'>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+				<div class='titrem'><:articles:> <:cisf:texte_statut_archive:></div>
+				]
+				<div>
+				<table summary="<:cisf:texte_statut_archive:>"  width='100%' cellpadding='2' cellspacing='0' border='0'>
+					<thead style="display:none;">
+					<tr>
+						<th id="col1" width="14px">illustration</th>
+						<th id="col2" ><:info_article:></th>
+						<th id="col3" width="80px"><:info_auteurs:></th>
+						<th id="col4" width="100px"><:texte_date_publication_article:></th>
+						<th id="col5" width="50px"><:info_numero_article:></th>
+					</tr>
+					</thead>
+				<BOUCLE_arch(ARTICLES){id_rubrique}{statut=archive}{par date}{inverse}>
+				[(#GET{ci_id_auteur}|>{0}|oui)
+					<tr class='tr_liste'>
+					<td headers="col1" class="col col1">[(#ID_ARTICLE|cisf_puce_article{'archive',#ID_RUBRIQUE})]</td>
+					<td headers="col2" class="col col2"><div><a href='[(#URL_PAGE{cisf_article}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{id_rubrique,#ID_RUBRIQUE})]'>[(#TITRE)]</a></div></td>
+					<td headers="col3" class="col col3">[(#ID_ARTICLE|cisf_liste_auteurs_article)]</td>
+					<td headers="col4" class="col col4">[(#DATE|affdate{'d/m/Y'})]</td>
+					<td headers="col5" class="col col5">N&deg;&nbsp;[(#ID_ARTICLE)]</td>
+					</tr>
+				]
+				</BOUCLE_arch>
+				</table>
+				</div>
+				</div>
+				</B_arch>
+				
+				
+				</div></div>
+			</div>
+			</div>
+			<div class='clearer'>&nbsp;</div>	
+		</div>
+		
+	</div>
+</div>
+<div id="pied">
+<h1 class="invisible"><:cisf:eq_pied_page:></h1>
+
+	<div id="outils">
+	<INCLURE{fond=cisf_pied}{self=#SELF}{lang}>
+
+</BOUCLE_rubrique>

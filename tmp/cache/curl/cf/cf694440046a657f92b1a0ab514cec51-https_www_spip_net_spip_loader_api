@@ -1,0 +1,16 @@
+a:8:{s:6:"status";i:304;s:7:"headers";s:563:"Date: Sun, 22 Feb 2026 23:40:49 GMT
+Server: Apache
+Vary: Cookie,Accept-Encoding,User-Agent
+Composed-By: SPIP 4.4.9 @ www.spip.net + https://www.spip.net/local/config.txt
+Access-Control-Allow-Origin: *
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: spip_lang=fr; path=/; secure; SameSite=Lax
+Strict-Transport-Security: max-age=63072000
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Upgrade: h2
+Connection: Upgrade, close
+Last-Modified: Wed, 18 Feb 2026 09:34:00 GMT
+Cache-Control: max-age=0
+Expires: Sun, 22 Feb 2026 23:40:49 GMT
+";s:4:"page";s:0:"";s:6:"length";i:0;s:13:"last_modified";i:1771407240;s:8:"location";s:0:"";s:3:"url";s:36:"https://www.spip.net/spip_loader.api";s:14:"content_length";i:0;}

@@ -98,3 +98,183 @@
 2026-01-27 05:42:22 127.0.0.1 (pid 4132) :Pri:!INFO: base_inserer_copie : 0 insertions au lieu de 64. On retente 1 par 1
 2026-01-27 05:42:22 127.0.0.1 (pid 4132) :Pri:ERREUR: base_inserer_copie : 63 insertions au lieu de 64 apres insertion 1 par 1
 2026-01-27 05:42:22 127.0.0.1 (pid 4132) :Pri:ERREUR: Erreur fatale dans base_inserer_copie table spip_auteurs
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:!INFO: Copier 36 tables de '' vers 'dump'
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_articles' sur serveur 'dump'
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_articles 400
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_articles 800
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_articles 1104
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_auteurs_liens' sur serveur 'dump'
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_auteurs_liens 170
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_breves' sur serveur 'dump'
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_depots' sur serveur 'dump'
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_depots 1
+2026-01-30 23:14:32 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_depots_plugins' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_depots_plugins 400
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_depots_plugins 736
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_documents' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_documents 144
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_documents_liens' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_documents_liens 156
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_forum' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_forum 195
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_groupes_mots' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_jobs' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_jobs 10
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_jobs_liens' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_mailsubscribers' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_mailsubscribinglists' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_mailsubscriptions' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_mailsubscriptions_optins' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_messages' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_mots' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_mots_liens' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_paquets' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_paquets 400
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_paquets 800
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_paquets 1103
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_petitions' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_plugins' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_plugins 400
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_plugins 756
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_referers' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_referers_articles' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_rubriques' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_rubriques 14
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_signatures' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_syndic' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_syndic_articles' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_transactions' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_types_documents' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_types_documents 173
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_urls' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_urls 400
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_urls 800
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_urls 1200
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_urls 1527
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_versions' sur serveur 'dump'
+2026-01-30 23:14:33 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions 400
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions 800
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions 1013
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_versions_fragments' sur serveur 'dump'
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 400
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 800
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 1200
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 1600
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 2000
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 2400
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 2800
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 3200
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 3600
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 4000
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 4400
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 4800
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 5200
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_versions_fragments 5353
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_visites' sur serveur 'dump'
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_visites_articles' sur serveur 'dump'
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_auteurs' sur serveur 'dump'
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_auteurs 64
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: creation 'spip_meta' sur serveur 'dump'
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: recopie spip_meta 125
+2026-01-30 23:14:34 127.0.0.1 (pid 16880) :Pri:!INFO: Pas de destruction copieur sur serveur 'dump'
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:!INFO: Copier 36 tables de '' vers 'dump'
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:info: Tables a copier :spip_articles, spip_auteurs_liens, spip_breves, spip_depots, spip_depots_plugins, spip_documents, spip_documents_liens, spip_forum, spip_groupes_mots, spip_jobs, spip_jobs_liens, spip_mailsubscribers, spip_mailsubscribinglists, spip_mailsubscriptions, spip_mailsubscriptions_optins, spip_messages, spip_mots, spip_mots_liens, spip_paquets, spip_petitions, spip_plugins, spip_referers, spip_referers_articles, spip_rubriques, spip_signatures, spip_syndic, spip_syndic_articles, spip_transactions, spip_types_documents, spip_urls, spip_versions, spip_versions_fragments, spip_visites, spip_visites_articles, spip_auteurs, spip_meta
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_articles' sur serveur 'dump'
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_articles 400
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_articles 800
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_articles 1118
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles
+2026-02-04 05:33:41 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_auteurs_liens' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_auteurs_liens 184
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_breves' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_depots' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_depots 1
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_depots_plugins' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_depots_plugins 400
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_depots_plugins 738
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_documents' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_documents 147
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_documents_liens' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_documents_liens 159
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_forum' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_forum 195
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_groupes_mots' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_jobs' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_jobs 10
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_jobs_liens' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_mailsubscribers' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_mailsubscribinglists' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_mailsubscriptions' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_mailsubscriptions_optins' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_messages' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_mots' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_mots_liens' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_paquets' sur serveur 'dump'
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_paquets 400
+2026-02-04 05:33:42 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_paquets 800
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_paquets 1105
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_petitions' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets,spip_petitions
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_plugins' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_plugins 400
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_plugins 758
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets,spip_petitions,spip_plugins
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_referers' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets,spip_petitions,spip_plugins,spip_referers
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_referers_articles' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets,spip_petitions,spip_plugins,spip_referers,spip_referers_articles
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_rubriques' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_rubriques 14
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets,spip_petitions,spip_plugins,spip_referers,spip_referers_articles,spip_rubriques
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_signatures' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets,spip_petitions,spip_plugins,spip_referers,spip_referers_articles,spip_rubriques,spip_signatures
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_syndic' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets,spip_petitions,spip_plugins,spip_referers,spip_referers_articles,spip_rubriques,spip_signatures,spip_syndic
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_syndic_articles' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets,spip_petitions,spip_plugins,spip_referers,spip_referers_articles,spip_rubriques,spip_signatures,spip_syndic,spip_syndic_articles
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_transactions' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets,spip_petitions,spip_plugins,spip_referers,spip_referers_articles,spip_rubriques,spip_signatures,spip_syndic,spip_syndic_articles,spip_transactions
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_types_documents' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_types_documents 173
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets,spip_petitions,spip_plugins,spip_referers,spip_referers_articles,spip_rubriques,spip_signatures,spip_syndic,spip_syndic_articles,spip_transactions,spip_types_documents
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_urls' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_urls 400
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_urls 800
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_urls 1200
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_urls 1527
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets,spip_petitions,spip_plugins,spip_referers,spip_referers_articles,spip_rubriques,spip_signatures,spip_syndic,spip_syndic_articles,spip_transactions,spip_types_documents,spip_urls
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_versions' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions 400
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions 800
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions 1013
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:info: tables_recopiees spip_articles,spip_auteurs_liens,spip_breves,spip_depots,spip_depots_plugins,spip_documents,spip_documents_liens,spip_forum,spip_groupes_mots,spip_jobs,spip_jobs_liens,spip_mailsubscribers,spip_mailsubscribinglists,spip_mailsubscriptions,spip_mailsubscriptions_optins,spip_messages,spip_mots,spip_mots_liens,spip_paquets,spip_petitions,spip_plugins,spip_referers,spip_referers_articles,spip_rubriques,spip_signatures,spip_syndic,spip_syndic_articles,spip_transactions,spip_types_documents,spip_urls,spip_versions
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: creation 'spip_versions_fragments' sur serveur 'dump'
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions_fragments 400
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions_fragments 800
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions_fragments 1200
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions_fragments 1600
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions_fragments 2000
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions_fragments 2400
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions_fragments 2800
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions_fragments 3200
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions_fragments 3600
+2026-02-04 05:33:43 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions_fragments 4000
+2026-02-04 05:33:44 127.0.0.1 (pid 13600) :Pri:!INFO: recopie spip_versions_fragments 4400

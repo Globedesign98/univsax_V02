@@ -1,0 +1,7 @@
+<paquet prefix="export_articles_xlsx" categorie="outil" version="0.1.4" etat="test" compatibilite="[4.0.0;4.5.*]">
+	<nom>Export articles XLSX</nom>
+	<auteur>Votre équipe</auteur>
+	<licence>GPL</licence>
+
+	<traduire module="export_articles_xlsx" reference="fr" />
+</paquet>

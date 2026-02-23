@@ -1,4 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+.index-page .spip-admin-float {
+    /*position: absolute;
+    right: 20px;
+    top: 87px;
+    background-color: #FFFFFF;
+    z-index: 100;*/
+	display:none;
+}
 
 body {
 
@@ -30,9 +39,7 @@ body {
   color: transparent;
   font-size: 0;
 }
-.spip-admin-float {
-  display: none;
-}
+
 .editer-label.label {
   font-weight: normal;
   text-transform: initial;
@@ -1160,6 +1167,11 @@ h2 {margin:0; padding:0;}
 h1 {margin:0; padding:0; color:#FFF; font-size:18px; text-transform:uppercase;}
 h1.roboto {
     margin: 0 0 25px;
+	    font-size: 1.1rem;
+}
+.bi-facebook::before {
+    content: "\f344";
+    font-size: 25px;
 }
 .cadre_color {
 
@@ -1441,8 +1453,9 @@ img.ues-logo.ues-logo--vandoren {
     max-height: 170px;
 }
 /* Le "bloc" qui contient le titre + le bandeau */
-.ues-logo-strip-wrap{
+.ues-logo-strip-wrap {
   width: 100%;
+  background-color: #000;
 }
 
 /* Titre AU-DESSUS du bandeau blanc, aligné à gauche,
@@ -1623,4 +1636,215 @@ outline-offset: 2px;
 /* 5) Si ton CSS précédent masquait des H3/legend et que SPIP mettait
       le label "Texte..." dans un legend (cas rare), on ne touche pas aux labels.
       -> rien à faire ici, juste un rappel : ne jamais cacher label/editer. */
+.bi-arrow-right-circle-fill::before {
+    content: "\f133";
+    font-size: 25px;
+    padding-right: 7px;
+    color: #FFF;
+}
+.ues-cta { display: inline-flex; align-items: center; gap: 6px; /* espace entre l'icône et le texte */ }
+@keyframes footer-waves-move {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
 
+.ues-footer-waves .ues-parallax > use {
+  animation: wave-move 25s cubic-bezier(.55, .5, .45, .5) infinite !important;
+  fill: rgba(255, 255, 255, .35) !important; /* Assurez que la couleur est cohérente ici */
+}
+
+.ues-footer-waves .ues-parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 10s;
+}
+.ues-footer-waves .ues-parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 14s;
+}
+.ues-footer-waves .ues-parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 18s;
+}
+.ues-footer-waves .ues-parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 24s;
+}
+
+/* Animation définie */
+@keyframes wave-move {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+.ues-footer-waves {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120px; /* Assurez-vous que la hauteur est cohérente */
+  pointer-events: none; /* La vague doit être décorative seulement */
+  overflow: hidden; /* Eviter le décalage si des morceaux dépassent */
+}
+
+.ues-footer-waves svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ues-footer-waves .ues-parallax > use {
+    animation: none;
+  }
+}
+nav .nav-item {
+  list-style: none;
+}
+footer h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  position: relative;
+  font-family: Poppins, sans-serif;
+  text-align: left;
+  padding: 0px;
+  margin: 45px 0px 15px;
+}
+footer ul {
+  padding: 0 0 0 0;
+}
+
+
+/* ==========================
+   UES — Formulaire SPIP (slide 4)
+   ========================== */
+
+/* Surface claire à l'intérieur de la carte sombre (améliore la lisibilité) */
+#ues-slides .ues-form-surface{
+  background: background: #bed0e3;
+  color: #0b1b2a;
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 14px;
+  padding: 18px 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.18);
+}
+
+/* Neutralise les règles globales (ex: .carousel-item.active p {color:#fff}) */
+#ues-slides .ues-form-surface,
+#ues-slides .ues-form-surface *{
+  color: inherit;
+}
+#ues-slides .ues-form-surface p{
+  color: inherit !important;
+}
+
+/* Liens */
+#ues-slides .ues-form-surface a{
+  color: #0d6efd;
+  text-decoration: none;
+}
+#ues-slides .ues-form-surface a:hover{
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+/* Structure SPIP */
+#ues-slides .ues-form-surface .formulaire_spip ul,
+#ues-slides .ues-form-surface .formulaire_spip ol{
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+#ues-slides .ues-form-surface .formulaire_spip li.editer{
+  margin-bottom: 14px;
+}
+
+/* Titres / labels */
+#ues-slides .ues-form-surface .formulaire_spip label,
+#ues-slides .ues-form-surface .formulaire_spip .editer-label,
+#ues-slides .ues-form-surface .formulaire_spip legend{
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+/* Champs (style Bootstrap-like) */
+#ues-slides .ues-form-surface .formulaire_spip input[type="text"],
+#ues-slides .ues-form-surface .formulaire_spip input[type="email"],
+#ues-slides .ues-form-surface .formulaire_spip input[type="tel"],
+#ues-slides .ues-form-surface .formulaire_spip input[type="number"],
+#ues-slides .ues-form-surface .formulaire_spip input[type="password"],
+#ues-slides .ues-form-surface .formulaire_spip select,
+#ues-slides .ues-form-surface .formulaire_spip textarea{
+  width: 100% !important;
+  background: #fff !important;
+  color: #0b1b2a !important;
+  border: 1px solid #ced4da !important;
+  border-radius: 10px !important;
+  padding: .55rem .75rem !important;
+  box-shadow: none !important;
+}
+
+#ues-slides .ues-form-surface .formulaire_spip textarea{
+  min-height: 120px;
+  resize: vertical;
+}
+
+#ues-slides .ues-form-surface .formulaire_spip input:focus,
+#ues-slides .ues-form-surface .formulaire_spip select:focus,
+#ues-slides .ues-form-surface .formulaire_spip textarea:focus{
+  border-color: rgba(13,110,253,.6) !important;
+  box-shadow: 0 0 0 .2rem rgba(13,110,253,.15) !important;
+  outline: none !important;
+}
+
+/* Radios/checkbox */
+#ues-slides .ues-form-surface .formulaire_spip input[type="radio"],
+#ues-slides .ues-form-surface .formulaire_spip input[type="checkbox"]{
+  width: auto !important;
+  margin-right: .35rem;
+}
+
+/* Aides / erreurs */
+#ues-slides .ues-form-surface .formulaire_spip .explication{
+  color: rgba(11,27,42,.75) !important;
+  font-size: .92rem;
+}
+#ues-slides .ues-form-surface .formulaire_spip .erreur_message,
+#ues-slides .ues-form-surface .formulaire_spip .erreur{
+  color: #b02a37 !important;
+  font-weight: 600;
+}
+
+/* Zone boutons (souvent .boutons .submit dans SPIP) */
+#ues-slides .ues-form-surface .formulaire_spip .boutons{
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#ues-slides .ues-form-surface .formulaire_spip .boutons .submit
+ {
+    border: 0 !important;
+    border-radius: 10px !important;
+    padding: .65rem 1rem !important;
+    background: #0d6efd !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    width: 100%;
+    height: 80px;
+    font-size: 1.5rem;
+}
+
+#ues-slides .ues-form-surface .formulaire_spip .boutons .submit:hover{
+  background: #0b5ed7 !important;
+}

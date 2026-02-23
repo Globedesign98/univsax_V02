@@ -1,0 +1,783 @@
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser afficher_prive porteplume  (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_porteplume_afficher_prive_dist(afficher_prive, porteplume, , Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser afficher_prive porteplume  (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_porteplume_afficher_prive_dist(afficher_prive, porteplume, , Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menugrandeentree _menu_accueil 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuaccueil, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menugrandeentree _menu_edition 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuedition, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _auteurs 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir _auteurs 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_auteurs_voir_dist(voir, auteurs, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_auteurs_menu_dist(menu, auteurs, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _rubriques 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir _rubriques 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_rubriques_voir_dist(voir, rubriques, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_rubriques_menu_dist(menu, rubriques, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _articles 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir _articles 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_articles_voir_dist(voir, articles, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_articles_menu_dist(menu, articles, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menugrandeentree _menu_publication 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menupublication, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _suivi_edito 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_suiviedito_menu_dist(menu, suiviedito, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _synchro 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_synchro_menu_dist(menu, synchro, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menugrandeentree _menu_activite 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuactivite, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _visiteurs 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_visiteurs_menu_dist(menu, visiteurs, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menugrandeentree _menu_squelette 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menusquelette, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menugrandeentree _menu_administration 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuadministration, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _admin_vider 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_defaut_dist(menu, adminvider, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _admin_maintenir 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_defaut_dist(menu, adminmaintenir, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _job_queue 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_defaut_dist(menu, jobqueue, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _phpinfos 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_phpinfos_dist(menu, phpinfos, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menugrandeentree _menu_configuration 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuconfiguration, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _configurer_identite 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_defaut_dist(menu, configureridentite, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _configurer_langue 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser configurer _langue 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurer_dist(configurer, langue, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurerlangue_menu_dist(menu, configurerlangue, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _configurer_multilinguisme 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser configurer _multilinguisme 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurer_dist(configurer, multilinguisme, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurermultilinguisme_menu_dist(menu, configurermultilinguisme, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _configurer_contenu 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser configurer _contenu 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurer_dist(configurer, contenu, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurercontenu_menu_dist(menu, configurercontenu, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _configurer_interactions 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser configurer _interactions 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurer_dist(configurer, interactions, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurerinteractions_menu_dist(menu, configurerinteractions, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _configurer_avancees 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser configurer _avancees 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurer_dist(configurer, avancees, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configureravancees_menu_dist(menu, configureravancees, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _admin_plugin 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser configurer _plugins 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurer_dist(configurer, plugins, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_adminplugin_menu_dist(menu, adminplugin, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menugrandeentree _menu_developpement 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_menudeveloppement_menugrandeentree_dist(menugrandeentree, menudeveloppement, 0, Admin GD) : niet
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menugrandeentree _outils_collaboratifs 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, outilscollaboratifs, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menugrandeentree _outils_rapides 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, outilsrapides, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _rubrique_creer 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_defaut_dist(menu, rubriquecreer, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _article_creer 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_articlecreer_menu_dist(menu, articlecreer, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _auteur_creer 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser creer auteur 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_auteur_creer_dist(creer, auteur, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_auteurcreer_menu_dist(menu, auteurcreer, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _sauvegarder 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_sauvegarder_dist(menu, sauvegarder, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _restaurer 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_defaut_dist(menu, restaurer, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _forum_reactions 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser publierdans rubrique  (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_rubrique_publierdans_dist(publierdans, rubrique, , Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_forumreactions_menu_dist(menu, forumreactions, 0, Admin GD) : OK
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser menu _configurer_forum 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser configurer forum 0 (Admin GD) ?
+2026-02-05 05:14:16 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurer_dist(configurer, forum, 0, Admin GD) : OK
+2026-02-05 05:14:17 51.158.253.189 (pid 77061) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:14:17 51.158.253.189 (pid 77061) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:14:17 51.158.253.189 (pid 77061) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:14:17 51.158.253.189 (pid 77061) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:14:17 51.158.253.189 (pid 76266) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:14:17 51.158.253.189 (pid 76266) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:14:17 51.158.253.189 (pid 76266) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:14:17 51.158.253.189 (pid 76266) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:14:20 51.158.253.189 (pid 77061) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:14:20 51.158.253.189 (pid 77061) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:14:20 51.158.253.189 (pid 77061) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:14:20 51.158.253.189 (pid 77061) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:14:21 51.158.253.189 (pid 89497) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:14:21 51.158.253.189 (pid 89497) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:14:21 51.158.253.189 (pid 89497) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:14:21 51.158.253.189 (pid 89497) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:14:21 51.158.253.189 (pid 89497) :Pri:debug: autoriser configurer _admin_vider  (Admin GD) ?
+2026-02-05 05:14:21 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurer_dist(configurer, adminvider, , Admin GD) : OK
+2026-02-05 05:14:22 51.158.253.189 (pid 76266) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:14:22 51.158.253.189 (pid 76266) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:14:22 51.158.253.189 (pid 76266) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:14:22 51.158.253.189 (pid 76266) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:14:24 51.158.253.189 (pid 89497) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:14:24 51.158.253.189 (pid 89497) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:14:24 51.158.253.189 (pid 89497) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:14:24 51.158.253.189 (pid 89497) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:14:24 51.158.253.189 (pid 89497) :Pri:debug: autoriser afficher_prive porteplume  (Admin GD) ?
+2026-02-05 05:14:24 51.158.253.189 (pid 89497) :Pri:debug: autoriser_porteplume_afficher_prive_dist(afficher_prive, porteplume, , Admin GD) : OK
+2026-02-05 05:14:24 51.158.253.189 (pid 89497) :Pri:debug: autoriser afficher_prive porteplume  (Admin GD) ?
+2026-02-05 05:14:24 51.158.253.189 (pid 89497) :Pri:debug: autoriser_porteplume_afficher_prive_dist(afficher_prive, porteplume, , Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menugrandeentree _menu_accueil 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuaccueil, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menugrandeentree _menu_edition 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuedition, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _auteurs 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir _auteurs 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_auteurs_voir_dist(voir, auteurs, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_auteurs_menu_dist(menu, auteurs, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _rubriques 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir _rubriques 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_rubriques_voir_dist(voir, rubriques, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_rubriques_menu_dist(menu, rubriques, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _articles 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir _articles 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_articles_voir_dist(voir, articles, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_articles_menu_dist(menu, articles, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menugrandeentree _menu_publication 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menupublication, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _suivi_edito 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_suiviedito_menu_dist(menu, suiviedito, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _synchro 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_synchro_menu_dist(menu, synchro, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menugrandeentree _menu_activite 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuactivite, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _visiteurs 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_visiteurs_menu_dist(menu, visiteurs, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menugrandeentree _menu_squelette 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menusquelette, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menugrandeentree _menu_administration 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuadministration, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _admin_vider 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_defaut_dist(menu, adminvider, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _admin_maintenir 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_defaut_dist(menu, adminmaintenir, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _job_queue 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_defaut_dist(menu, jobqueue, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _phpinfos 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_phpinfos_dist(menu, phpinfos, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menugrandeentree _menu_configuration 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuconfiguration, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _configurer_identite 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_defaut_dist(menu, configureridentite, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _configurer_langue 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser configurer _langue 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurer_dist(configurer, langue, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurerlangue_menu_dist(menu, configurerlangue, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _configurer_multilinguisme 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser configurer _multilinguisme 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurer_dist(configurer, multilinguisme, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurermultilinguisme_menu_dist(menu, configurermultilinguisme, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _configurer_contenu 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser configurer _contenu 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurer_dist(configurer, contenu, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurercontenu_menu_dist(menu, configurercontenu, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _configurer_interactions 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser configurer _interactions 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurer_dist(configurer, interactions, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurerinteractions_menu_dist(menu, configurerinteractions, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _configurer_avancees 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser configurer _avancees 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurer_dist(configurer, avancees, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configureravancees_menu_dist(menu, configureravancees, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _admin_plugin 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser configurer _plugins 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurer_dist(configurer, plugins, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_adminplugin_menu_dist(menu, adminplugin, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menugrandeentree _menu_developpement 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_menudeveloppement_menugrandeentree_dist(menugrandeentree, menudeveloppement, 0, Admin GD) : niet
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menugrandeentree _outils_collaboratifs 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, outilscollaboratifs, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menugrandeentree _outils_rapides 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, outilsrapides, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _rubrique_creer 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_defaut_dist(menu, rubriquecreer, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _article_creer 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_articlecreer_menu_dist(menu, articlecreer, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _auteur_creer 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser creer auteur 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_auteur_creer_dist(creer, auteur, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_auteurcreer_menu_dist(menu, auteurcreer, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _sauvegarder 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_sauvegarder_dist(menu, sauvegarder, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _restaurer 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_defaut_dist(menu, restaurer, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _forum_reactions 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser publierdans rubrique  (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_rubrique_publierdans_dist(publierdans, rubrique, , Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_forumreactions_menu_dist(menu, forumreactions, 0, Admin GD) : OK
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser menu _configurer_forum 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser configurer forum 0 (Admin GD) ?
+2026-02-05 05:14:25 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurer_dist(configurer, forum, 0, Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser configurer _facteur  (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurer_dist(configurer, facteur, , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser configurer _facteur  (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_configurer_dist(configurer, facteur, , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:14:34 51.158.253.189 (pid 76266) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 151 (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 151, Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 150 (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 150, Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 72 (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 72, Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 3 (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 3, Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 151 (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 151, Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 150 (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 150, Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 72 (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 72, Admin GD) : OK
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:14:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 151 (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 151, Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 150 (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 150, Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 72 (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 72, Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 3 (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 3, Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 151 (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 151, Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 150 (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 150, Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 72 (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 72, Admin GD) : OK
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:00 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser afficher_prive porteplume  (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_porteplume_afficher_prive_dist(afficher_prive, porteplume, , Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser afficher_prive porteplume  (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_porteplume_afficher_prive_dist(afficher_prive, porteplume, , Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_accueil 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuaccueil, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_edition 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuedition, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _auteurs 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir _auteurs 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_auteurs_voir_dist(voir, auteurs, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_auteurs_menu_dist(menu, auteurs, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _rubriques 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir _rubriques 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_rubriques_voir_dist(voir, rubriques, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_rubriques_menu_dist(menu, rubriques, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _articles 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir _articles 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_articles_voir_dist(voir, articles, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_articles_menu_dist(menu, articles, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_publication 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menupublication, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _suivi_edito 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_suiviedito_menu_dist(menu, suiviedito, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _synchro 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_synchro_menu_dist(menu, synchro, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_activite 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuactivite, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _visiteurs 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_visiteurs_menu_dist(menu, visiteurs, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_squelette 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menusquelette, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_administration 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuadministration, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _admin_vider 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, adminvider, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _admin_maintenir 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, adminmaintenir, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _job_queue 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, jobqueue, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _phpinfos 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_phpinfos_dist(menu, phpinfos, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_configuration 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuconfiguration, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_identite 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, configureridentite, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_langue 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _langue 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, langue, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurerlangue_menu_dist(menu, configurerlangue, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_multilinguisme 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _multilinguisme 0 (Admin GD) ?
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, multilinguisme, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurermultilinguisme_menu_dist(menu, configurermultilinguisme, 0, Admin GD) : OK
+2026-02-05 05:15:42 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_contenu 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _contenu 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, contenu, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurercontenu_menu_dist(menu, configurercontenu, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_interactions 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _interactions 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, interactions, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurerinteractions_menu_dist(menu, configurerinteractions, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_avancees 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _avancees 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, avancees, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configureravancees_menu_dist(menu, configureravancees, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _admin_plugin 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _plugins 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, plugins, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_adminplugin_menu_dist(menu, adminplugin, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_developpement 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menudeveloppement_menugrandeentree_dist(menugrandeentree, menudeveloppement, 0, Admin GD) : niet
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _outils_collaboratifs 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, outilscollaboratifs, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _outils_rapides 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, outilsrapides, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _rubrique_creer 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, rubriquecreer, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _article_creer 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_articlecreer_menu_dist(menu, articlecreer, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _auteur_creer 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser creer auteur 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_auteur_creer_dist(creer, auteur, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_auteurcreer_menu_dist(menu, auteurcreer, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _sauvegarder 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_sauvegarder_dist(menu, sauvegarder, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _restaurer 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, restaurer, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _forum_reactions 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser publierdans rubrique  (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_rubrique_publierdans_dist(publierdans, rubrique, , Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_forumreactions_menu_dist(menu, forumreactions, 0, Admin GD) : OK
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_forum 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer forum 0 (Admin GD) ?
+2026-02-05 05:15:43 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, forum, 0, Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document 151 (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, 151, Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document 150 (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, 150, Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document 72 (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, 72, Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document 3 (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, 3, Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document 151 (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, 151, Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document 150 (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, 150, Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document 72 (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, 72, Admin GD) : OK
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:15:45 51.158.253.189 (pid 89497) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:16:27 51.158.253.189 (pid 77061) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:16:27 51.158.253.189 (pid 77061) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:16:27 51.158.253.189 (pid 77061) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:16:27 51.158.253.189 (pid 77061) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser afficher_prive porteplume  (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_porteplume_afficher_prive_dist(afficher_prive, porteplume, , Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser afficher_prive porteplume  (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_porteplume_afficher_prive_dist(afficher_prive, porteplume, , Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_accueil 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuaccueil, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_edition 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuedition, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _auteurs 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir _auteurs 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_auteurs_voir_dist(voir, auteurs, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_auteurs_menu_dist(menu, auteurs, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _rubriques 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir _rubriques 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_rubriques_voir_dist(voir, rubriques, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_rubriques_menu_dist(menu, rubriques, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _articles 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir _articles 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_articles_voir_dist(voir, articles, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_articles_menu_dist(menu, articles, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_publication 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menupublication, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _suivi_edito 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_suiviedito_menu_dist(menu, suiviedito, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _synchro 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_synchro_menu_dist(menu, synchro, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_activite 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuactivite, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _visiteurs 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_visiteurs_menu_dist(menu, visiteurs, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_squelette 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menusquelette, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_administration 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuadministration, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _admin_vider 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, adminvider, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _admin_maintenir 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, adminmaintenir, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _job_queue 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, jobqueue, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _phpinfos 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_phpinfos_dist(menu, phpinfos, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_configuration 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuconfiguration, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_identite 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, configureridentite, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_langue 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _langue 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, langue, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurerlangue_menu_dist(menu, configurerlangue, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_multilinguisme 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _multilinguisme 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, multilinguisme, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurermultilinguisme_menu_dist(menu, configurermultilinguisme, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_contenu 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _contenu 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, contenu, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurercontenu_menu_dist(menu, configurercontenu, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_interactions 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _interactions 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, interactions, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurerinteractions_menu_dist(menu, configurerinteractions, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_avancees 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _avancees 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, avancees, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configureravancees_menu_dist(menu, configureravancees, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _admin_plugin 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _plugins 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, plugins, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_adminplugin_menu_dist(menu, adminplugin, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_developpement 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menudeveloppement_menugrandeentree_dist(menugrandeentree, menudeveloppement, 0, Admin GD) : niet
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _outils_collaboratifs 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, outilscollaboratifs, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _outils_rapides 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, outilsrapides, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _rubrique_creer 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, rubriquecreer, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _article_creer 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_articlecreer_menu_dist(menu, articlecreer, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _auteur_creer 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser creer auteur 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_auteur_creer_dist(creer, auteur, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_auteurcreer_menu_dist(menu, auteurcreer, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _sauvegarder 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_sauvegarder_dist(menu, sauvegarder, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _restaurer 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, restaurer, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _forum_reactions 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser publierdans rubrique  (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_rubrique_publierdans_dist(publierdans, rubrique, , Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_forumreactions_menu_dist(menu, forumreactions, 0, Admin GD) : OK
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_forum 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer forum 0 (Admin GD) ?
+2026-02-05 05:16:28 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, forum, 0, Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser configurer _facteur  (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurer_dist(configurer, facteur, , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser configurer _facteur  (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurer_dist(configurer, facteur, , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:16:30 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 151 (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 151, Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 150 (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 150, Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 72 (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 72, Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 3 (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 3, Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 151 (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 151, Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 150 (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 150, Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document 72 (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, 72, Admin GD) : OK
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:16:33 51.158.253.189 (pid 77061) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:17:46 51.158.253.189 (pid 77061) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:17:46 51.158.253.189 (pid 77061) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:17:46 51.158.253.189 (pid 77061) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:17:46 51.158.253.189 (pid 77061) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:17:46 51.158.253.189 (pid 77061) :Pri:debug: autoriser afficher_prive porteplume  (Admin GD) ?
+2026-02-05 05:17:46 51.158.253.189 (pid 77061) :Pri:debug: autoriser_porteplume_afficher_prive_dist(afficher_prive, porteplume, , Admin GD) : OK
+2026-02-05 05:17:46 51.158.253.189 (pid 77061) :Pri:debug: autoriser afficher_prive porteplume  (Admin GD) ?
+2026-02-05 05:17:46 51.158.253.189 (pid 77061) :Pri:debug: autoriser_porteplume_afficher_prive_dist(afficher_prive, porteplume, , Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_accueil 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuaccueil, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_edition 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuedition, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _auteurs 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir _auteurs 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_auteurs_voir_dist(voir, auteurs, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_auteurs_menu_dist(menu, auteurs, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _rubriques 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir _rubriques 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_rubriques_voir_dist(voir, rubriques, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_rubriques_menu_dist(menu, rubriques, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _articles 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser voir _articles 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_articles_voir_dist(voir, articles, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_articles_menu_dist(menu, articles, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_publication 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menupublication, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _suivi_edito 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_suiviedito_menu_dist(menu, suiviedito, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _synchro 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_synchro_menu_dist(menu, synchro, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_activite 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuactivite, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _visiteurs 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_visiteurs_menu_dist(menu, visiteurs, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_squelette 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menusquelette, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_administration 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuadministration, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _admin_vider 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, adminvider, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _admin_maintenir 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, adminmaintenir, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _job_queue 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, jobqueue, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _phpinfos 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_phpinfos_dist(menu, phpinfos, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_configuration 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, menuconfiguration, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_identite 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, configureridentite, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_langue 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _langue 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, langue, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurerlangue_menu_dist(menu, configurerlangue, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_multilinguisme 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _multilinguisme 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, multilinguisme, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurermultilinguisme_menu_dist(menu, configurermultilinguisme, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_contenu 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _contenu 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, contenu, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurercontenu_menu_dist(menu, configurercontenu, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_interactions 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _interactions 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, interactions, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurerinteractions_menu_dist(menu, configurerinteractions, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_avancees 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _avancees 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, avancees, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configureravancees_menu_dist(menu, configureravancees, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _admin_plugin 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer _plugins 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, plugins, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_adminplugin_menu_dist(menu, adminplugin, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _menu_developpement 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menudeveloppement_menugrandeentree_dist(menugrandeentree, menudeveloppement, 0, Admin GD) : niet
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _outils_collaboratifs 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, outilscollaboratifs, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menugrandeentree _outils_rapides 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_menugrandeentree_dist(menugrandeentree, outilsrapides, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _rubrique_creer 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, rubriquecreer, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _article_creer 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_articlecreer_menu_dist(menu, articlecreer, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _auteur_creer 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser creer auteur 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_auteur_creer_dist(creer, auteur, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_auteurcreer_menu_dist(menu, auteurcreer, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _sauvegarder 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_sauvegarder_dist(menu, sauvegarder, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _restaurer 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_defaut_dist(menu, restaurer, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _forum_reactions 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser publierdans rubrique  (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_rubrique_publierdans_dist(publierdans, rubrique, , Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_forumreactions_menu_dist(menu, forumreactions, 0, Admin GD) : OK
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser menu _configurer_forum 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser configurer forum 0 (Admin GD) ?
+2026-02-05 05:17:47 51.158.253.189 (pid 77061) :Pri:debug: autoriser_configurer_dist(configurer, forum, 0, Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser configurer _facteur  (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurer_dist(configurer, facteur, , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser configurer _facteur  (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_configurer_dist(configurer, facteur, , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser webmestre   (Admin GD) ?
+2026-02-05 05:18:00 51.158.253.189 (pid 89497) :Pri:debug: autoriser_webmestre_dist(webmestre, , , Admin GD) : OK
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser loger  0 (Admin GD) ?
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser_loger_dist(loger, , 0, Admin GD) : OK
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser ecrire   (Admin GD) ?
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser_ecrire_dist(ecrire, , , Admin GD) : OK
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 151 (Admin GD) ?
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 151, Admin GD) : OK
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 150 (Admin GD) ?
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 150, Admin GD) : OK
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 72 (Admin GD) ?
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 72, Admin GD) : OK
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 3 (Admin GD) ?
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 3, Admin GD) : OK
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:18:05 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 151 (Admin GD) ?
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 151, Admin GD) : OK
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 150 (Admin GD) ?
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 150, Admin GD) : OK
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document 72 (Admin GD) ?
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, 72, Admin GD) : OK
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: autoriser voir document  (Admin GD) ?
+2026-02-05 05:18:06 51.158.253.189 (pid 76266) :Pri:debug: autoriser_document_voir_dist(voir, document, , Admin GD) : OK

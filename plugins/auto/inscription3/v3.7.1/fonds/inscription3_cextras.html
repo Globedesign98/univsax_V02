@@ -1,0 +1,34 @@
+#SET{test_objets,false}
+<BOUCLE_test_objets(DATA){si #PLUGIN{cextras}|oui}{source tableau,#VAL{spip_auteurs}|champs_extras_objet}>
+[(#VALEUR{source}|!={inscription3}|oui)
+#SET{test_objets,true}
+]
+</BOUCLE_test_objets>
+<B_objets>
+<li class="fieldset" id="cextras">
+	<fieldset>
+		<legend><:inscription3:legende_cextras:></legend>
+		<ul>
+			<li>
+				<p class="explication"><:inscription3:info_cextras_desc:></p>
+			</li>
+			<li class="sans_padding">
+				<table class="inscription3">
+					<thead>
+						<tr>
+							<th class="label">&nbsp;</th>
+							<th><:inscription3:thead_form:> </th>
+							<th> <:inscription3:thead_fiche:> </th>
+							<th class="i3_table"> <:inscription3:thead_table:> </th>
+							<th> <:inscription3:thead_obligatoire:></th>
+						</tr>
+					</thead>
+					<BOUCLE_objets(DATA){si #GET{test_objets}|=={true}|oui}{source tableau,#VAL{spip_auteurs}|champs_extras_objet}>
+                        <INCLURE{fond=fonds/inscription3_cextras_valeur,valeur=#VALEUR,env}>
+					</BOUCLE_objets>
+				</table>
+			</li>
+		</ul>
+	</fieldset>
+</li>
+</B_objets>

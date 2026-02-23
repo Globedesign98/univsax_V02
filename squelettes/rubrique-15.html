@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>[(#NOM_SITE_SPIP)] — Espace privé</title>
+  <meta content="[(#DESCRIPTIF_SITE_SPIP|textebrut)]" name="description"/>
+
+  <link href="assets/img/favicon.ico" rel="icon"/>
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;family=Lato:wght@100;300;400;700;900&amp;display=swap" rel="stylesheet"/>
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"/>
+
+  <link href="assets/css/main.css" rel="stylesheet"/>
+  <link href="assets/css/univsax.css" rel="stylesheet"/>
+  <link href="assets/css/ues.css" rel="stylesheet"/>
+  <link href="assets/css/menu-override.css" rel="stylesheet"/>
+
+  #INSERT_HEAD
+
+  <style>
+    .ues-card-dark{
+      background: rgba(0,0,0,.22);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 16px;
+      box-shadow: 0 14px 32px rgba(0,0,0,.25);
+      backdrop-filter: blur(6px);
+    }
+    .ues-private-title{ font-weight: 900; letter-spacing: .02em; margin: 0; }
+    .ues-private-sub{ opacity: .85; margin: 0; }
+
+    .ues-post-link{
+      display:block;
+      padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 12px;
+      background: rgba(255,255,255,.03);
+      text-decoration: none;
+      color: #fff;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .ues-post-link:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.22);
+      color: #fff;
+    }
+
+    @media (min-width: 992px){
+      .ues-sticky-viewer{ position: sticky; top: 140px; }
+      .ues-right-scroll{ max-height: calc(100vh - 220px); overflow: auto; padding-right: 6px; }
+    }
+  </style>
+</head>
+
+<body class="index-page ues-page rub only">
+
+<header class="header fixed-top ues-header ues-header--compact" id="header">
+  <div class="ues-topbar">
+    <div class="container-xxl ues-topbar-inner">
+      <div class="ues-topbar-title">Université Européenne de Saxophone - Edition 2026</div>
+      <div class="ues-topbar-actions">
+        <a href="https://www.facebook.com/univsax/" title="Facebook UES" target="_blank" class="ues-social" rel="noopener" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <div aria-label="Langue" class="ues-lang-pill" role="group">
+          <a class="ues-lang-pill-btn is-active" href="#">FR</a>
+          <a class="ues-lang-pill-btn" href="#">ENG</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-xl ues-nav ues-nav--compact">
+    <div class="container-xxl ues-nav-inner">
+      <a aria-label="Université Européenne de Saxophone" class="navbar-brand ues-brand" href="#URL_SITE_SPIP">
+        <img alt="Université Européenne de Saxophone" src="assets/img/ues/logo_ues.png"/>
+      </a>
+
+      <button aria-controls="uesNav" aria-expanded="false" aria-label="Ouvrir le menu" class="navbar-toggler ues-toggler"
+              data-bs-target="#uesNav" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="uesNav">
+        <ul class="navbar-nav ms-auto ues-menu">
+          <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php#ues-slides">Présentation</a></li>
+          <li class="nav-item"><a class="nav-link" href="spip.php?rubrique5">Inscriptions 2026</a></li>
+          <li class="nav-item"><a class="nav-link active" href="spip.php?rubrique15">Espace privé</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cta">Partenaires</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="main ues-main">
+  <div class="container-xxl py-3">
+
+    [(#SESSION{id_auteur}|oui)
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <div class="text-white-50 small">
+          <i class="bi bi-person-circle me-1" aria-hidden="true"></i>
+          <strong class="text-white">Bonjour</strong>
+          [(#SESSION{nom}|typo)] [(#SESSION{prenom}|typo)]
+        </div>
+
+        <div class="d-flex align-items-center ms-auto gap-2">
+          <div id="uesDate" class="text-white-50 small"></div>
+          <a class="btn btn-sm btn-outline-light" href="[(#URL_LOGOUT{#SELF})]">
+            <i class="bi bi-box-arrow-right me-1" aria-hidden="true"></i>
+            Se déconnecter
+          </a>
+        </div>
+      </div>
+    ]
+
+    <div class="mt-4 d-flex align-items-center gap-3">
+      <i class="bi bi-chat-left-dots text-white-50" aria-hidden="true" style="font-size:1.6rem;"></i>
+      <div>
+        <h1 class="h3 text-white ues-private-title">ESPACE PRIVÉ</h1>
+        <p class="text-white-50 ues-private-sub">Infos • Questions/FAQ • Ressources</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container-xxl pb-5">
+
+    [(#SESSION{id_auteur}|non)
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="ues-card-dark p-4 text-white">
+            <h2 class="h5 mb-2"><i class="bi bi-person-lock me-2"></i>Connexion requise</h2>
+            <p class="text-white-50 mb-3">
+              Connectez-vous pour accéder à l'Espace privé.
+            </p>
+            <div class="ues-form-surface p-3 rounded-3 border border-light border-opacity-25">
+              [(#FORMULAIRE_LOGIN{#SELF|parametre_url{focus,''}})]
+            </div>
+          </div>
+        </div>
+      </div>
+    ]
+
+    [(#SESSION{id_auteur}|oui)
+
+      [(#SET{ep_id_article, #ENV{id_article}})]
+
+      <!-- Si rien sélectionné, prendre le dernier article publié des rubriques 16/17/18 -->
+      [(#GET{ep_id_article}|non)
+        <BOUCLE_ep_default(ARTICLES){id_rubrique IN 16,17,18}{statut=publie}{par date}{inverse}{0,1}>
+          [(#SET{ep_id_article,#ID_ARTICLE})]
+        </BOUCLE_ep_default>
+      ]
+
+      <div class="row g-4">
+
+        <!-- COLONNE GAUCHE : viewer AJAX -->
+        <div class="col-lg-7">
+          <div class="ues-sticky-viewer">
+            <div class="ajax" id="ep-viewer">
+              #INCLURE{fond=inc-ep-viewer, ajax, id_article=#GET{ep_id_article}}
+            </div>
+          </div>
+        </div>
+
+        <!-- COLONNE DROITE : listes -->
+        <div class="col-lg-5">
+          <div class="ues-right-scroll">
+
+            <!-- 10 derniers posts (mix) -->
+            <div class="ues-card-dark p-4 text-white mb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <h2 class="h6 mb-0"><i class="bi bi-clock-history me-2"></i>Derniers contenus</h2>
+              </div>
+
+              <div class="vstack gap-2 mt-3">
+                <BOUCLE_last10(ARTICLES){id_rubrique IN 16,17,18}{statut=publie}{par date}{inverse}{0,10}>
+                  <a class="ues-post-link ajax"
+                     href="[(#SELF|parametre_url{id_article,#ID_ARTICLE}|ancre_url{ep-viewer})]">
+                    <div class="fw-semibold">#TITRE</div>
+                    <div class="text-white-50 small mt-1">
+                      <i class="bi bi-calendar3 me-1"></i>[(#DATE|affdate)]
+                      <span class="mx-2">•</span>
+                      [(#ID_RUBRIQUE|=={16}|oui) Informations pratiques]
+                      [(#ID_RUBRIQUE|=={17}|oui) Questions / FAQ]
+                      [(#ID_RUBRIQUE|=={18}|oui) Ressources pédagogiques]
+                    </div>
+                  </a>
+                </BOUCLE_last10>
+              </div>
+            </div>
+
+            <!-- 3 blocs (5 derniers) -->
+            <div class="ues-card-dark p-4 text-white mb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <h3 class="h6 mb-0"><i class="bi bi-pin-angle me-2"></i>Informations pratiques</h3>
+                <a class="btn btn-sm btn-outline-light" href="spip.php?rubrique16">Tout</a>
+              </div>
+              <div class="vstack gap-2 mt-3">
+                <BOUCLE_infos5(ARTICLES){id_rubrique=16}{statut=publie}{par date}{inverse}{0,5}>
+                  <a class="ues-post-link ajax"
+                     href="[(#SELF|parametre_url{id_article,#ID_ARTICLE}|ancre_url{ep-viewer})]">
+                    <div class="fw-semibold">#TITRE</div>
+                    <div class="text-white-50 small mt-1"><i class="bi bi-calendar3 me-1"></i>[(#DATE|affdate)]</div>
+                  </a>
+                </BOUCLE_infos5>
+              </div>
+            </div>
+
+            <div class="ues-card-dark p-4 text-white mb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <h3 class="h6 mb-0"><i class="bi bi-question-circle me-2"></i>Questions / FAQ</h3>
+                <a class="btn btn-sm btn-outline-light" href="spip.php?rubrique17">Tout</a>
+              </div>
+              <div class="vstack gap-2 mt-3">
+                <BOUCLE_faq5(ARTICLES){id_rubrique=17}{statut=publie}{par date}{inverse}{0,5}>
+                  <a class="ues-post-link ajax"
+                     href="[(#SELF|parametre_url{id_article,#ID_ARTICLE}|ancre_url{ep-viewer})]">
+                    <div class="fw-semibold">#TITRE</div>
+                    <div class="text-white-50 small mt-1">
+                      <i class="bi bi-chat-dots me-1"></i>
+                      <BOUCLE_nb_forum_faq(FORUMS){id_article} />
+                      #TOTAL_BOUCLE réponse(s)
+                      <//B_nb_forum_faq>
+                      <span class="mx-2">•</span>
+                      <i class="bi bi-calendar3 me-1"></i>[(#DATE|affdate)]
+                    </div>
+                  </a>
+                </BOUCLE_faq5>
+              </div>
+            </div>
+
+            <div class="ues-card-dark p-4 text-white mb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <h3 class="h6 mb-0"><i class="bi bi-folder2-open me-2"></i>Ressources pédagogiques</h3>
+                <a class="btn btn-sm btn-outline-light" href="spip.php?rubrique18">Tout</a>
+              </div>
+              <div class="vstack gap-2 mt-3">
+                <BOUCLE_ress5(ARTICLES){id_rubrique=18}{statut=publie}{par date}{inverse}{0,5}>
+                  <a class="ues-post-link ajax"
+                     href="[(#SELF|parametre_url{id_article,#ID_ARTICLE}|ancre_url{ep-viewer})]">
+                    <div class="fw-semibold">#TITRE</div>
+                    <div class="text-white-50 small mt-1"><i class="bi bi-calendar3 me-1"></i>[(#DATE|affdate)]</div>
+                  </a>
+                </BOUCLE_ress5>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+    ]
+  </div>
+
+</main>
+
+<footer class="footer header2 ues-footer">
+  <div class="copyright-area">
+    <div class="container">
+      <div class="inner-content">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12">
+            <p class="copyright-text">© 2026 Université Européenne de Saxophone - Tous droits réservés</p>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12">
+            <p class="copyright-owner">Designed and Developed by GD</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+#INSERT_FOOTER
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.getElementById("uesDate");
+  if(!el) return;
+  const today = new Date();
+  const jours = ["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
+  const mois  = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+  const d = String(today.getDate()).padStart(2,"0");
+  el.textContent = `${jours[today.getDay()]} ${d} ${mois[today.getMonth()]} ${today.getFullYear()}`;
+});
+</script>
+
+</body>
+</html>

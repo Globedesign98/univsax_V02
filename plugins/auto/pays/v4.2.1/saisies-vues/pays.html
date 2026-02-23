@@ -1,0 +1,19 @@
+[(#ENV{champ_pays}|non)
+	[(#ENV{code_pays,non}|=={oui}|?{#SET{champ_pays,code},#SET{champ_pays,id_pays}})]
+]
+[(#ENV{champ_pays}|oui)
+	#SET{champ_pays,#ENV{champ_pays}}
+]
+#SET{in,#ENV*{valeur}|is_array|?{#ENV*{valeur},#LISTE{#ENV*{valeur}}}}
+<BOUCLE_pays_id(PAYS){si #GET{champ_pays}|=={id_pays}} {id_pays IN #GET{in}}{', '}>
+		#NOM
+</BOUCLE_pays_id>
+<BOUCLE_pays_code(PAYS){si #GET{champ_pays}|=={code}} {code IN #GET{in}}{', '}>
+		#NOM
+</BOUCLE_pays_code>
+<BOUCLE_pays_code_alpha3(PAYS){si #GET{champ_pays}|=={code_alpha3}} {code_alpha3 IN #GET{in}}{', '}>
+		#NOM
+</BOUCLE_pays_code_alpha3>
+<BOUCLE_pays_code_num(PAYS){si #GET{champ_pays}|=={code_num}} {code_num IN #GET{in}}{', '}>
+		#NOM
+</BOUCLE_pays_code_num>
